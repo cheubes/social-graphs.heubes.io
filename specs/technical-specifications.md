@@ -11,5 +11,3 @@
 ## Accessibilité
 
 ## SEO
-
-## Frontière avec le modèle de données
