@@ -148,12 +148,13 @@ exclude:
   - specs/
   - scripts/
   - CLAUDE.md
+  - BUILD-PLAN.md
   - README.md
   - Gemfile
   - Gemfile.lock
 ```
 
-`specs/`, `scripts/` et `CLAUDE.md` doivent être exclus du build : ce sont des fichiers de travail du dépôt, pas du contenu du site, et Jekyll les publierait sinon tels quels sous `_site/`.
+`specs/`, `scripts/`, `CLAUDE.md` et `BUILD-PLAN.md` doivent être exclus du build : ce sont des fichiers de travail du dépôt, pas du contenu du site, et Jekyll les publierait sinon tels quels sous `_site/`.
 
 ---
 
