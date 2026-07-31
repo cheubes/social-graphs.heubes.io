@@ -4,7 +4,7 @@ A site presenting "universes" (the characters of a novel, a TV series, a histori
 
 ## Status
 
-This project is at the specification stage: everything is documented in [`specs/`](specs/), no implementation exists yet.
+Specifications are complete in [`specs/`](specs/); implementation is underway following [`BUILD-PLAN.md`](BUILD-PLAN.md)'s incremental steps (✅ 1/11 — Jekyll skeleton and common chrome).
 
 - [`CLAUDE.md`](CLAUDE.md) — how the specs are organized and how to use them.
 - [`BUILD-PLAN.md`](BUILD-PLAN.md) — the incremental implementation plan, with a ready-to-use prompt per step.

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% assign lang = page.lang | default: site.lang %}
+<html lang="{{ lang }}">
+{% include head.html %}
+<body>
+  {% include header.html %}
+  <main class="container py-4">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>
+</html>

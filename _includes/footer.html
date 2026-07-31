@@ -1,0 +1,20 @@
+<footer class="sg-footer">
+  <div class="container-fluid d-flex align-items-center justify-content-between h-100">
+    <div class="sg-footer-cc">
+      <a class="sg-footer-cc-link d-inline-flex align-items-center gap-2 text-decoration-none"
+        href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.{{ lang }}"
+        target="_blank" rel="license noopener">
+        <i class="fa-brands fa-creative-commons" aria-hidden="true"></i>
+        <i class="fa-brands fa-creative-commons-by" aria-hidden="true"></i>
+        <i class="fa-brands fa-creative-commons-nc-eu" aria-hidden="true"></i>
+        <i class="fa-brands fa-creative-commons-sa" aria-hidden="true"></i>
+        <span>CC BY-NC-SA 4.0</span>
+      </a>
+    </div>
+    {% assign ui_key = "ui" | append: lang %}
+    {% assign ui = site.data[ui_key] %}
+    <div class="sg-footer-credit">
+      {{ ui["footer-credit"] }} <a class="text-decoration-none" href="https://christophe.heubes.org" target="_blank" rel="noopener">Christophe Heubès</a>
+    </div>
+  </div>
+</footer>

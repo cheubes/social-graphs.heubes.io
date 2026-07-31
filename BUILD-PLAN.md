@@ -4,7 +4,7 @@ Onze étapes, chacune démontrable dans un navigateur avant de passer à la suiv
 
 Chaque étape a un prompt prêt à l'emploi pour la démarrer.
 
-## 1. Squelette Jekyll + chrome commun
+## 1. Squelette Jekyll + chrome commun ✅
 
 `_config.yml`, `Gemfile`, layout `default.html` avec en-tête collant et pied de page fixe (couleurs, police, badge CC, sélecteur de langue en emoji) sur une page vide quelconque. Voir `technical-specifications.md` (Structure des fichiers, Configuration) et `style-guide.md` (En-tête, Pied de page).
 

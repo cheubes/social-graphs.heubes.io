@@ -1,0 +1,77 @@
+:root {
+  --sg-blue: #2C374C;
+  --sg-gold: #C7B299;
+  --sg-light-grey: #ACB2B8;
+  --sg-grey: #666666;
+  --sg-dark-grey: #444444;
+  --sg-white: #FFFFFF;
+  --sg-footer-height: 4rem;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  color: var(--sg-grey);
+  background-color: var(--sg-white);
+  min-height: 100vh;
+  padding-bottom: var(--sg-footer-height);
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: var(--sg-dark-grey);
+}
+
+h4, h5, h6 {
+  font-weight: 500;
+  color: var(--sg-dark-grey);
+}
+
+small {
+  font-weight: 300;
+  color: var(--sg-grey);
+}
+
+/* En-tête */
+
+.sg-header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background-color: var(--sg-blue);
+  color: var(--sg-white);
+  padding: 0.75rem 0;
+}
+
+.sg-header-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--sg-white);
+}
+
+.sg-lang-flag {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+/* Pied de page */
+
+.sg-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--sg-footer-height);
+  background-color: var(--sg-dark-grey);
+  color: var(--sg-white);
+  z-index: 1020;
+  font-size: 0.9rem;
+}
+
+.sg-footer a {
+  color: var(--sg-white);
+}
+
+.sg-footer a:hover {
+  color: var(--sg-gold);
+}
