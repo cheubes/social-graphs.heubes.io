@@ -27,6 +27,12 @@ Le projet en est au stade des spécifications : tout est documenté dans `specs/
 - **En cas de doute ou de silence des specs** sur un point nécessaire à l'implémentation, demander plutôt que de supposer : ce sont des choix de conception, pas des détails d'implémentation libres.
 - **En cas de contradiction** entre le code (existant ou en cours d'écriture) et une spec, la spec fait foi ; si l'implémentation révèle qu'une spec doit changer, mettre à jour la spec et expliquer pourquoi, plutôt que de s'en écarter silencieusement dans le code.
 
+## Avant chaque commit
+
+L'ensemble des fichiers de `specs/` doit être vérifié pour cohérence avant chaque commit, pas seulement les fichiers directement modifiés par ce commit.
+
+Si cette vérification montre qu'une ou plusieurs specs doivent être ajustées (pour rester cohérentes entre elles, ou avec le changement en cours), **le commit doit être bloqué** : proposer les mises à jour nécessaires et attendre validation avant de les appliquer, puis de committer.
+
 ## Conventions établies
 
 - Le contenu des specs, et plus généralement toute prose ou documentation, est en français.
