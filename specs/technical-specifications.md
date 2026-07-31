@@ -137,23 +137,23 @@ Le site est entièrement statique, généré au build par Jekyll. Aucun rendu dy
 
 ### Structure des URLs
 
-- `/` : accueil du site (français, langue par défaut)
-- `/en/` : accueil du site (anglais)
-- `/<slug-universe>/` : Vue Mosaïque d'un univers (FR)
-- `/en/<slug-universe>/` : Vue Mosaïque (EN)
-- `/<slug-universe>/graph/` : Vue Graphe d'un univers (FR)
-- `/en/<slug-universe>/graph/` : Vue Graphe (EN)
-- `/<slug-universe>/characters/<slug-character>/` : fiche personnage, pour l'accès direct (FR)
-- `/en/<slug-universe>/characters/<slug-character>/` : idem (EN)
+- `/` : accueil du site (anglais, langue par défaut)
+- `/fr/` : accueil du site (français)
+- `/<slug-universe>/` : Vue Mosaïque d'un univers (EN)
+- `/fr/<slug-universe>/` : Vue Mosaïque (FR)
+- `/<slug-universe>/graph/` : Vue Graphe d'un univers (EN)
+- `/fr/<slug-universe>/graph/` : Vue Graphe (FR)
+- `/<slug-universe>/characters/<slug-character>/` : fiche personnage, pour l'accès direct (EN)
+- `/fr/<slug-universe>/characters/<slug-character>/` : idem (FR)
 
-Le français, langue par défaut, n'a pas de préfixe ; l'anglais est préfixé par `/en/`.
+L'anglais, langue par défaut, n'a pas de préfixe ; le français est préfixé par `/fr/`.
 
 ### Génération des pages
 
 Chaque univers vit dans son propre dossier à la racine du site (`/<slug-universe>/`) et ses pages sont des pages Jekyll classiques (pas de collection), chacune avec un permalink explicite en frontmatter pour appliquer le préfixe de langue.
 
-- `mosaic.fr.md` / `mosaic.en.md` génèrent la Vue Mosaïque (`/<slug-universe>/` en FR, `/en/<slug-universe>/` en EN).
-- `graph.fr.md` / `graph.en.md` génèrent la Vue Graphe (`/<slug-universe>/graph/` en FR, `/en/<slug-universe>/graph/` en EN). Leur layout réutilise les données de présentation du `mosaic.*.md` du même dossier (même `lang`) plutôt que de les dupliquer.
+- `mosaic.fr.md` / `mosaic.en.md` génèrent la Vue Mosaïque (`/fr/<slug-universe>/` en FR, `/<slug-universe>/` en EN).
+- `graph.fr.md` / `graph.en.md` génèrent la Vue Graphe (`/fr/<slug-universe>/graph/` en FR, `/<slug-universe>/graph/` en EN). Leur layout réutilise les données de présentation du `mosaic.*.md` du même dossier (même `lang`) plutôt que de les dupliquer.
 - Chaque fichier de `characters/<slug-character>.fr.md` / `.en.md` génère la page de fiche personnage (`/<slug-universe>/characters/<slug-character>/`) ; son layout affiche la Vue Mosaïque de son univers avec la modale de ce personnage ouverte au chargement (voir `character-sheet.md`).
 - Un univers ou personnage non traduit dans une langue n'a tout simplement pas de fichier pour cette langue, donc pas de page générée à cette URL.
 
@@ -169,7 +169,7 @@ L'accès direct à l'URL d'une fiche personnage (lien partagé, ou rechargement 
 
 ### Contenu non traduit ("message d'indisponibilité")
 
-Puisqu'une langue sans traduction ne génère pas de page, l'accès à une URL non traduite (univers ou personnage) déclenche le mécanisme de 404 natif de GitHub Pages. Un fichier `404.md` personnalisé, à la racine du site, sert de "message d'indisponibilité" (voir "Multilingue" dans `functional-specifications.md`) : il détecte la langue depuis le préfixe de l'URL demandée (`/en/...` ou non) pour afficher le message dans la bonne langue, plutôt que la page 404 générique de GitHub Pages.
+Puisqu'une langue sans traduction ne génère pas de page, l'accès à une URL non traduite (univers ou personnage) déclenche le mécanisme de 404 natif de GitHub Pages. Un fichier `404.md` personnalisé, à la racine du site, sert de "message d'indisponibilité" (voir "Multilingue" dans `functional-specifications.md`) : il détecte la langue depuis le préfixe de l'URL demandée (`/fr/...` ou non) pour afficher le message dans la bonne langue, plutôt que la page 404 générique de GitHub Pages.
 
 ### Textes d'interface
 

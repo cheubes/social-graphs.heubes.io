@@ -38,7 +38,7 @@ Le contenu (univers, personnages, relations) est produit par l'auteur du site di
 ### Multilingue
 
 - Le site est disponible en français et en anglais.
-- Au premier accès, la langue est déterminée par celle du navigateur ; si le navigateur indique une autre langue que le français ou l'anglais, le site démarre en français. Un changement manuel de langue via le sélecteur est mémorisé pour les visites suivantes.
+- Au premier accès, la langue est déterminée par celle du navigateur ; si le navigateur indique une autre langue que le français ou l'anglais, le site démarre en anglais. Un changement manuel de langue via le sélecteur est mémorisé pour les visites suivantes.
 - Un sélecteur de langue, accessible depuis toutes les pages, permet de basculer d'une langue à l'autre. Il conserve le contexte de navigation quand le contenu existe dans l'autre langue ; sinon, la page affiche un message indiquant que ce contenu n'est pas encore disponible dans cette langue.
 - Un univers non traduit dans la langue courante n'apparaît pas dans la mosaïque d'accueil de cette langue.
 - Un personnage non traduit dans la langue courante n'apparaît pas dans le graphe, les listes ni la recherche de cette langue ; les relations qui le concernent sont masquées avec lui.
