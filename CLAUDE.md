@@ -29,9 +29,10 @@ Le projet en est au stade des spécifications : tout est documenté dans `specs/
 
 ## Avant chaque commit
 
-L'ensemble des fichiers de `specs/` doit être vérifié pour cohérence avant chaque commit, pas seulement les fichiers directement modifiés par ce commit.
-
-Si cette vérification montre qu'une ou plusieurs specs doivent être ajustées (pour rester cohérentes entre elles, ou avec le changement en cours), **le commit doit être bloqué** : proposer les mises à jour nécessaires et attendre validation avant de les appliquer, puis de committer.
+- **Vérifier l'ensemble des fichiers de `specs/`** pour cohérence, pas seulement ceux directement modifiés par ce commit.
+- **Si une ou plusieurs specs doivent être ajustées** (pour rester cohérentes entre elles, ou avec le changement en cours), bloquer le commit : proposer les mises à jour nécessaires et attendre validation avant de les appliquer, puis de committer.
+- **Mettre à jour `BUILD-PLAN.md`** si nécessaire (état d'avancement).
+- **Mettre à jour `README.md`** si nécessaire.
 
 ## Conventions établies
 
