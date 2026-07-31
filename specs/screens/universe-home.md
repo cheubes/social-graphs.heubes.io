@@ -6,7 +6,7 @@ Présenter l'univers au visiteur (de quoi s'agit-il, quel est son contexte), et 
 
 ## Contenu et structure
 
-- En-tête : identité du site, sélecteur de langue, lien de retour vers l'accueil du site.
+- En-tête : logo et `title` de l'univers courant, sélecteur de langue, lien de retour vers l'accueil du site (voir `style-guide.md`).
 - Image de couverture de l'univers.
 - `title` et `description` de l'univers (voir `data-model.md`).
 - `source-type`, affiché comme indication de contexte (ex : "période historique").
@@ -17,6 +17,7 @@ Présenter l'univers au visiteur (de quoi s'agit-il, quel est son contexte), et 
   - Le portrait se charge en lazy loading, même principe que pour l'image de couverture des univers sur `home.md`.
   - Tri par nombre de relations décroissant (le nombre de relations d'un personnage, entrantes et sortantes confondues, est calculé à partir de `relations.yaml`, ce n'est pas un attribut stocké). À nombre égal, tri secondaire par `name` alphabétique, pour un ordre stable. Ce tri reste basé sur l'ensemble des relations du personnage, indépendamment de la recherche ou des filtres actifs (voir `search-filter.md`).
 - Le contenu principal de la Vue Graphe est documenté dans `graph-view.md`.
+- Pied de page : badge Creative Commons et mention de réalisation, communs à toutes les pages (voir `style-guide.md`).
 
 ## Interactions
 

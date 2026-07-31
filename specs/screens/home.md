@@ -6,12 +6,13 @@ Permettre au visiteur de découvrir les univers disponibles et d'accéder à cel
 
 ## Contenu et structure
 
-- En-tête : identité du site, sélecteur de langue (voir `functional-specifications.md`).
+- En-tête : logo et tagline du site, sélecteur de langue (voir `functional-specifications.md` et `style-guide.md`).
 - Mosaïque de tuiles, une tuile par univers disponible dans la langue courante (un univers non traduit dans cette langue n'apparaît pas, voir "Multilingue" dans `functional-specifications.md`).
 - Chaque tuile affiche l'image de couverture, le `title` et la `description` de l'univers (voir `data-model.md`).
   - La `description` est tronquée (avec une marque de troncature, ex : "...") au-delà d'une certaine longueur ; la valeur précise relève du design (voir `style-guide.md`).
   - L'image de couverture se charge en lazy loading (chargée uniquement à l'approche de la zone visible de l'écran), pour limiter le poids initial de la page ; son traitement précis relève de `technical-specifications.md`.
 - Les tuiles sont triées par ordre alphabétique de `title`, dans la langue courante.
+- Pied de page : badge Creative Commons et mention de réalisation, communs à toutes les pages (voir `style-guide.md`).
 
 ## Interactions
 

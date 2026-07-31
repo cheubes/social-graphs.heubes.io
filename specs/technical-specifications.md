@@ -10,7 +10,7 @@
 ### CSS / UI
 
 - **Bootstrap 5.3** (CDN jsDelivr, version figée) : grille, cartes (tuiles), modale (fiche personnage), composants de formulaire (recherche/filtre).
-- **Font Awesome Free 7.3** (CDN jsDelivr, version figée) : icônes (fermeture de modale, recherche, sélecteur de langue). Saut de version majeure par rapport à la 6.x ; à vérifier lors de l'implémentation que les icônes utilisées existent toujours sous le même nom.
+- **Font Awesome Free 7.3** (CDN jsDelivr, version figée) : icônes (fermeture de modale, recherche, badge Creative Commons). Saut de version majeure par rapport à la 6.x ; à vérifier lors de l'implémentation que les icônes utilisées existent toujours sous le même nom. Le sélecteur de langue utilise des emoji drapeaux, pas d'icône Font Awesome (voir `style-guide.md`).
 - CSS natif avec variables custom (pas de SASS, pas de LESS).
 - Les valeurs de design (couleurs, typographie, espacements) sont définies dans `style-guide.md`, pas ici.
 
@@ -191,6 +191,7 @@ Les textes d'interface (labels, messages dont le message d'indisponibilité, pla
 ## Accessibilité
 
 - **Navigateurs cibles :** dernières versions stables de Chrome, Firefox, Safari, Edge. Pas de support IE.
+- Couples texte/fond conformes au contraste WCAG AA (4,5:1 pour le texte courant, 3:1 pour le grand texte et les éléments d'UI), y compris pour les couples de la palette de marque : c'est pour cette raison que `--sg-light-grey` est réservé aux bordures dans `style-guide.md`, son contraste sur blanc ne le permettant pas comme texte.
 - Modale (fiche personnage) : focus piégé à l'intérieur pendant son ouverture, fermeture au clavier (touche Échap, voir `character-sheet.md`), attributs ARIA de dialogue (`role="dialog"`, `aria-modal`), portés nativement par le composant modale de Bootstrap.
 - Texte alternatif sur les images (portraits, couvertures).
 - HTML sémantique pour la structure des pages et des listes (mosaïques, listes de relations).

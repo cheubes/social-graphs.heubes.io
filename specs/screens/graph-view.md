@@ -6,13 +6,14 @@ Permettre au visiteur d'explorer visuellement le réseau de personnages d'un uni
 
 ## Contenu et structure
 
-Cette vue partage l'en-tête, la présentation de l'univers et le switcher "Vue Mosaïque" / "Vue Graphe" avec `universe-home.md` ; seul le contenu principal ci-dessous lui est propre.
+Cette vue partage l'en-tête, la présentation de l'univers, le switcher "Vue Mosaïque" / "Vue Graphe" et le pied de page avec `universe-home.md` ; seul le contenu principal ci-dessous lui est propre.
 
 - Graphe interactif :
   - Un nœud par personnage disponible dans la langue courante (même règle de masquage que pour les univers non traduits, voir "Multilingue" dans `functional-specifications.md`), affichant son portrait et son `name`.
   - Une arête par relation entre deux personnages affichés. Quand deux personnages sont liés par plusieurs relations de types différents, chacune est une arête distincte.
   - Une arête d'un type dirigé est représentée avec un sens visuel (ex : flèche) ; une arête d'un type non dirigé n'en a pas.
   - Chaque type de relation a une couleur distincte, définie dans `style-guide.md` (ce n'est pas un attribut de données, voir `data-model.md`).
+- Légende couleur → type de relation, affichée en permanence à côté du graphe (voir `style-guide.md` : la distinction par couleur seule n'est pas garantie au-delà de trois types affichés simultanément). Chaque entrée affiche la couleur du type et son `label`. Elle ne duplique pas les filtres de type de relation de `search-filter.md` : c'est la même liste, chaque filtre affichant déjà la couleur de son type (voir `style-guide.md`).
 - Barre de recherche/filtre, persistante sur cette vue et sur la Vue Mosaïque (voir `search-filter.md` pour son contenu et son comportement détaillés). Sur cette vue, elle met en évidence ou masque les nœuds et arêtes correspondants.
 
 ## Interactions
@@ -33,4 +34,4 @@ Cette vue partage l'en-tête, la présentation de l'univers et le switcher "Vue 
 
 ## Responsive
 
-Le graphe reste utilisable au doigt sur petit écran (zoom, déplacement, sélection d'un nœud ou d'une arête) ; la barre de recherche/filtre et le switcher restent accessibles sans recouvrir le graphe.
+Le graphe reste utilisable au doigt sur petit écran (zoom, déplacement, sélection d'un nœud ou d'une arête) ; la barre de recherche/filtre (dont la légende, voir ci-dessus), le switcher et le pied de page fixe (voir `style-guide.md`) restent accessibles sans recouvrir le graphe.
