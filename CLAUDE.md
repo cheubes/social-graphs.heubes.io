@@ -35,6 +35,6 @@ Si cette vérification montre qu'une ou plusieurs specs doivent être ajustées 
 
 ## Conventions établies
 
-- Le contenu des specs, et plus généralement toute prose ou documentation, est en français.
+- Le contenu des specs (`specs/`, `BUILD-PLAN.md`, ce fichier) est en français : ce sont des documents de conception, pas de la documentation au sens des règles globales. `README.md` reste en anglais, comme toute documentation générique de dépôt.
 - Les noms de fichiers, dossiers, attributs de données, classes CSS et identifiants techniques sont en anglais, en kebab-case (ex : `source-type`, `additional-relation-types.yml`, `.sg-card`).
 - Les couleurs et composants de la charte graphique sont définis une seule fois, dans `style-guide.md` : ne pas introduire de nouvelles valeurs de couleur ou de nouveaux styles de composants ailleurs sans les y ajouter d'abord.
