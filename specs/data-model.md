@@ -4,11 +4,12 @@
 
 ### Univers
 
-Un univers regroupe un ensemble de personnages et les relations qui les lient. Il correspond à un sous-dossier du site (`/univers-x/`).
+Un univers regroupe un ensemble de personnages et les relations qui les lient. Il correspond à une URL dédiée du site (`/univers-x/`).
 
 | Attribut | Localisé | Description |
 |---|---|---|
-| `slug` | Non | Identifiant unique, construit à partir du nom anglais, utilisé comme nom de dossier et dans l'URL (ex : `renaissance-artists`) |
+| `slug` | Non | Identifiant unique, construit à partir du nom anglais, utilisé dans l'URL (ex : `renaissance-artists`) |
+| `lang` | Non | Langue de ce document (`fr` ou `en`) ; permet d'associer les deux documents d'un même univers |
 | `title` | Oui | Nom affiché de l'univers |
 | `description` | Oui | Texte de présentation, affiché sur la tuile d'accueil et la page d'accueil de l'univers |
 | `source-type` | Oui | Catégorie libre indicative (roman, série, période historique, autre) |
@@ -23,6 +24,7 @@ L'image de couverture n'est pas un attribut : elle est associée à l'univers pa
 | Attribut | Localisé | Description |
 |---|---|---|
 | `slug` | Non | Identifiant unique au sein de l'univers, construit à partir du nom anglais, utilisé dans l'URL de la fiche personnage (peut être réutilisé d'un univers à l'autre) |
+| `lang` | Non | Langue de ce document (`fr` ou `en`) ; permet d'associer les deux documents d'un même personnage |
 | `name` | Oui | Nom affiché |
 | `description` | Oui | Texte biographique court, affiché sur la fiche personnage |
 | `metadata` | Selon le champ | Champs libres optionnels selon l'univers (ex : dates de naissance/mort pour un personnage historique) |
@@ -73,42 +75,43 @@ Exemples de types communs (liste à affiner, donnée ici à titre d'illustration
 
 - Les noms d'attributs (clés de frontmatter et de fichiers YAML) sont en anglais.
 - Les clés utilisent des tirets (`-`) plutôt que des underscores (`_`) : kebab-case.
+- Les fichiers YAML utilisent l'extension `.yml`.
 - Les slugs (identifiants d'univers, de personnage, de type de relation) sont construits à partir du nom anglais de l'entité.
 - Un slug est en minuscules ASCII, sans accents ni espaces, mots séparés par des tirets (ex : `renaissance-artists`, pas `Renaissance_Artists` ni `renaissance artists`).
 - Le site est multilingue (français et anglais pour commencer). Le `slug` d'une entité est partagé entre les langues : seule sa traduction varie, pas son URL.
 
 ### Images
 
-Les images ne sont pas portées par des attributs : elles sont associées à leur entité par convention de nommage plutôt que référencées dans un frontmatter.
+Les images ne sont pas portées par des attributs : elles sont associées à leur entité par convention de nommage et d'emplacement, aux côtés des fichiers de contenu, plutôt que référencées dans un frontmatter.
 
-- Image de couverture d'un univers : `cover.jpg`, à la racine du dossier de l'univers.
-- Portrait d'un personnage : `characters/<slug>.jpg`, `<slug>` étant celui du personnage.
+- Image de couverture d'un univers : `<slug-universe>/cover.jpg`.
+- Portrait d'un personnage : `<slug-universe>/characters/<slug-character>.jpg`.
 
 Un seul fichier image par entité, partagé par toutes ses langues (pas de déclinaison par locale).
 
-### Structure par univers
+### Organisation des fichiers
 
-Chaque univers correspond à un sous-dossier du site (`/univers-x/`), contenant :
+Le site est généré avec Jekyll (voir `technical-specifications.md`). Chaque univers a son propre dossier à la racine du site (`/<slug-universe>/`), qui regroupe l'ensemble de son contenu textuel et de ses images ; les données structurées (YAML) vivent à part, dans `_data/`.
 
-- Un fichier markdown par langue décrivant l'univers (ex : `index.en.md`, `index.fr.md`) : les attributs localisés (`title`, `description`, `source-type`) propres à chaque fichier.
-- Une image de couverture (voir "Images").
-- Un fichier YAML optionnel, `additional-relation-types.yaml`, déclarant les types de relations additionnels de l'univers, avec la même structure que la taxonomie commune (clés imbriquées par langue pour `label` et `reverse-label`, voir "Type de relation").
-- Un sous-dossier `characters/`, contenant pour chaque personnage : un fichier markdown par langue (ex : `characters/jane-doe.en.md`, `characters/jane-doe.fr.md`, le nom de fichier hors suffixe de langue faisant office de `slug`) avec les attributs localisés (`name`, `description`, `external-link`) propres à chaque fichier et l'attribut `metadata` (champs non localisés identiques dans chaque fichier, champs localisés propres à chaque fichier), ainsi que son portrait (voir "Images").
-- Un fichier YAML listant l'ensemble des relations de l'univers (`relations.yaml`) : le champ localisé (`description`) est porté par des clés imbriquées par langue au sein du même fichier, plutôt que par des fichiers séparés.
-
-Un fichier partagé, `/relation-types.yaml` à la racine du site, porte la taxonomie de base des types de relations (le `label` de chaque type étant porté par des clés imbriquées par langue) ; les types additionnels propres à un univers sont déclarés de la même façon dans son propre `additional-relation-types.yaml`.
+- `/<slug-universe>/mosaic.fr.md`, `mosaic.en.md` : présentation de l'univers (Vue Mosaïque), un fichier par langue. Frontmatter : `lang`, `title`, `source-type`. Corps de texte : `description`.
+- `/<slug-universe>/graph.fr.md`, `graph.en.md` : Vue Graphe, un fichier par langue. Réutilise les données de présentation du `mosaic.*.md` du même dossier plutôt que de les dupliquer.
+- `/<slug-universe>/cover.jpg` : image de couverture (voir "Images").
+- `/<slug-universe>/characters/` : un sous-dossier contenant, pour chaque personnage, `<slug-character>.fr.md`, `<slug-character>.en.md` (frontmatter : `lang`, `name`, `metadata`, `external-link` ; corps de texte : `description`) et son portrait `<slug-character>.jpg` (voir "Images"). Le sous-dossier lui-même associe chaque personnage à son univers ; aucun attribut ne porte cette référence.
+- `_data/<slug-universe>/relations.yml` : l'ensemble des relations de l'univers ; le champ localisé (`description`) y est porté par des clés imbriquées par langue, plutôt que par des fichiers séparés.
+- `_data/<slug-universe>/additional-relation-types.yml`, optionnel : les types de relations additionnels propres à l'univers, avec la même structure que la taxonomie commune (clés imbriquées par langue pour `label` et `reverse-label`, voir "Type de relation").
+- `_data/relation-types.yml` : la taxonomie de base des types de relations, partagée par tous les univers.
 
 ### Exemples
 
-**Structure de dossier** :
+**Structure de dossier** (extrait) :
 
 ```
-/french-renaissance-aristocracy/
-  index.en.md
-  index.fr.md
+french-renaissance-aristocracy/
+  mosaic.en.md
+  mosaic.fr.md
+  graph.en.md
+  graph.fr.md
   cover.jpg
-  relations.yaml
-  additional-relation-types.yaml
   characters/
     catherine-de-medici.en.md
     catherine-de-medici.fr.md
@@ -116,12 +119,18 @@ Un fichier partagé, `/relation-types.yaml` à la racine du site, porte la taxon
     henri-iii.en.md
     henri-iii.fr.md
     henri-iii.jpg
+_data/
+  relation-types.yml
+  french-renaissance-aristocracy/
+    relations.yml
+    additional-relation-types.yml
 ```
 
-**Univers** (`/french-renaissance-aristocracy/index.fr.md`) :
+**Univers** (`french-renaissance-aristocracy/mosaic.fr.md`) :
 
 ```yaml
 ---
+lang: fr
 title: "Les aristocrates français du vivant de Catherine de Médicis"
 source-type: "période historique"
 ---
@@ -129,7 +138,7 @@ source-type: "période historique"
 À la cour des Valois, alliances, rivalités et intrigues nouent les grandes familles du royaume de France sous le règne de Catherine de Médicis.
 ```
 
-**Types de relations additionnels** (`/french-renaissance-aristocracy/additional-relation-types.yaml`) :
+**Types de relations additionnels** (`_data/french-renaissance-aristocracy/additional-relation-types.yml`) :
 
 ```yaml
 - slug: vassal-of
@@ -142,10 +151,11 @@ source-type: "période historique"
   directed: true
 ```
 
-**Personnage** (`/french-renaissance-aristocracy/characters/catherine-de-medici.fr.md`) :
+**Personnage** (`french-renaissance-aristocracy/characters/catherine-de-medici.fr.md`) :
 
 ```yaml
 ---
+lang: fr
 name: "Catherine de Médicis"
 metadata:
   birth: "1519"
@@ -156,7 +166,7 @@ external-link: "https://fr.wikipedia.org/wiki/Catherine_de_M%C3%A9dicis"
 Reine de France par son mariage avec Henri II, elle exerce une influence considérable sur la politique du royaume comme régente puis reine mère.
 ```
 
-**Relations** (`/french-renaissance-aristocracy/relations.yaml`) :
+**Relations** (`_data/french-renaissance-aristocracy/relations.yml`) :
 
 ```yaml
 relations:
@@ -168,7 +178,7 @@ relations:
       en: "Catherine de Médicis is Henri III's mother."
 ```
 
-**Taxonomie des types de relation** (`/relation-types.yaml`, fichier partagé) :
+**Taxonomie des types de relation** (`_data/relation-types.yml`) :
 
 ```yaml
 - slug: parent-of
@@ -183,13 +193,14 @@ relations:
 
 ### Workflow d'ajout d'un univers
 
-1. Créer le dossier de l'univers, nommé d'après son `slug` (construit à partir du nom anglais de l'univers).
-2. Créer le fichier markdown décrivant l'univers pour chaque langue.
-3. Déclarer, si besoin, les types de relations additionnels de l'univers dans `additional-relation-types.yaml`.
-4. Créer, dans le dossier `characters/`, un fichier markdown par personnage et par langue, nommé d'après le `slug` du personnage (construit à partir de son nom anglais).
-5. Lister les relations dans le fichier YAML, avec leurs descriptions localisées, en réutilisant les types communs ou les types additionnels déclarés.
-6. Valider les données (voir les contraintes du modèle de données).
-7. Publier.
+1. Choisir le `slug` de l'univers (construit à partir de son nom anglais) et créer son dossier `/<slug>/`.
+2. Créer `mosaic.fr.md` et `mosaic.en.md`, puis `graph.fr.md` et `graph.en.md`.
+3. Ajouter l'image de couverture (`cover.jpg`).
+4. Déclarer, si besoin, les types de relations additionnels dans `_data/<slug>/additional-relation-types.yml`.
+5. Créer, dans `characters/`, les fichiers de chaque personnage (markdown et portrait) pour chaque langue.
+6. Lister les relations dans `_data/<slug>/relations.yml`, avec leurs descriptions localisées, en réutilisant les types communs ou les types additionnels déclarés.
+7. Valider les données (voir les contraintes du modèle de données).
+8. Publier.
 
 ## Contraintes et règles de validation
 
@@ -202,3 +213,5 @@ relations:
 - Un type de relation dirigé (`directed: true`) doit définir un `reverse-label` ; un type non dirigé n'en définit pas.
 - Deux personnages ne peuvent pas être reliés deux fois par le même type de relation (mais peuvent l'être par plusieurs types différents, ex : "frère de" et "rival de"). Pour un type non dirigé, `(A, B, type)` et `(B, A, type)` comptent comme la même relation et ne peuvent pas coexister.
 - Les champs non localisés de `metadata` doivent avoir la même valeur dans tous les fichiers de langue d'un personnage ; ses champs explicitement localisés peuvent différer.
+- L'attribut `lang` d'un fichier d'univers ou de personnage doit correspondre au suffixe de langue de son nom de fichier (`.fr.md` → `fr`, `.en.md` → `en`).
+- Pour une langue donnée, `mosaic.<lang>.md` et `graph.<lang>.md` existent ensemble ou pas du tout : un univers ne peut pas être disponible, dans une langue, sur une seule de ses deux vues.
