@@ -111,6 +111,17 @@ Pas de grille ni d'échelle d'espacement custom : la grille et les classes utili
 - Primaire : fond `--sg-blue`, texte `--sg-white` ; au survol, fond `--sg-gold` et texte `--sg-blue` (`--sg-white` sur `--sg-gold` ne passe pas le contraste minimal : 2,05:1, vérifié).
 - Secondaire : bordure `--sg-grey`, texte `--sg-dark-grey`, fond transparent.
 
+## Images
+
+Format `.jpg` (voir `data-model.md`). Dimensions et ratios recommandés à l'ajout de contenu ; `object-fit: cover` en CSS pour absorber les écarts plutôt que d'imposer un recadrage strict.
+
+| Image | Ratio | Dimensions minimales |
+|---|---|---|
+| Couverture d'univers | 16:9 | 1200 × 675 px |
+| Portrait de personnage | 1:1 (carré) | 600 × 600 px |
+
+Le portrait est carré pour rester correct une fois recadré en cercle (nœud du graphe, voir `graph-view.md`), en tuile (voir `universe-home.md`) ou dans la modale (voir `character-sheet.md`), sans traitement différent selon le contexte d'affichage.
+
 ## Iconographie
 
 - Font Awesome Free 7.3 (voir `technical-specifications.md`), sous-ensemble Brands pour les icônes Creative Commons.

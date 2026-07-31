@@ -6,6 +6,7 @@
 
 - **Jekyll** : layouts, includes, front matter, `_data/`, pages (pas de collections, voir "Architecture").
 - Pas de plugins Jekyll non supportés par GitHub Pages.
+- **Ruby** : en plus de Jekyll, utilisé pour `scripts/validate.rb` (voir "Validation des données"). Aucun toolchain supplémentaire (pas de Node.js, pas de Python) pour ce script.
 
 ### CSS / UI
 
@@ -116,16 +117,43 @@ Versions vérifiées comme les dernières stables disponibles sur jsDelivr à la
 │       ├── <slug-character>.en.md
 │       └── <slug-character>.jpg
 │
-└── assets/
-    ├── css/
-    │   └── main.css
-    ├── js/
-    │   ├── main.js                # sélecteur de langue, utilitaires partagés
-    │   ├── graph.js               # rendu D3 du graphe interactif
-    │   ├── character-modal.js     # ouverture/fermeture de la modale, synchronisation d'URL
-    │   └── search-filter.js       # recherche et filtres
-    └── img/                       # images pour l'interface (pas le contenu des univers)
+├── assets/
+│   ├── css/
+│   │   └── main.css
+│   ├── js/
+│   │   ├── main.js                # sélecteur de langue, utilitaires partagés
+│   │   ├── graph.js               # rendu D3 du graphe interactif
+│   │   ├── character-modal.js     # ouverture/fermeture de la modale, synchronisation d'URL
+│   │   └── search-filter.js       # recherche et filtres
+│   └── img/                       # images pour l'interface (pas le contenu des univers)
+│
+└── scripts/
+    └── validate.rb                # validation du contenu, voir "Validation des données"
 ```
+
+### Configuration (`_config.yml`)
+
+```yaml
+title: "Social Graphs"          # à ajuster avec la tagline retenue (voir "En-tête" dans style-guide.md)
+description: "Explore the characters of a universe and their relationships as an interactive graph."
+url: "https://social-graphs.heubes.io"
+baseurl: ""
+lang: en                        # valeur de repli ; chaque page définit son propre lang (voir data-model.md), qui prime dans le layout
+markdown: kramdown
+permalink: pretty                # filet de sécurité ; en pratique, chaque page a son propre permalink explicite (voir "Génération des pages")
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+exclude:
+  - specs/
+  - scripts/
+  - CLAUDE.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+```
+
+`specs/`, `scripts/` et `CLAUDE.md` doivent être exclus du build : ce sont des fichiers de travail du dépôt, pas du contenu du site, et Jekyll les publierait sinon tels quels sous `_site/`.
 
 ---
 
@@ -174,6 +202,32 @@ Puisqu'une langue sans traduction ne génère pas de page, l'accès à une URL n
 ### Textes d'interface
 
 Les textes d'interface (labels, messages dont le message d'indisponibilité, placeholder de recherche) sont centralisés dans `_data/ui.fr.yml` et `_data/ui.en.yml`. Ils sont distincts du contenu des univers et personnages, qui suit le format documenté dans `data-model.md`.
+
+---
+
+## Validation des données
+
+Un script vérifie, avant publication, que le contenu de tous les univers respecte les contraintes de validation de `data-model.md`. Il ne modifie rien : il rapporte les problèmes trouvés et échoue s'il y a au moins une erreur.
+
+- **Langage :** Ruby, déjà une dépendance du projet via Jekyll (pas de nouveau toolchain), et son parseur YAML natif (`require 'yaml'`, aucune gem supplémentaire).
+- **Emplacement :** `scripts/validate.rb`, exclu du build Jekyll (voir "Configuration").
+- **Invocation manuelle :** `ruby scripts/validate.rb`.
+- **Invocation en CI :** un workflow GitHub Actions (`.github/workflows/validate.yml`), déclenché sur chaque push et pull request, exécute le script et fait échouer la CI en cas d'erreur. Il ne remplace ni ne modifie le déploiement GitHub Pages natif (voir "Hébergement et déploiement"), qui reste inchangé : cette CI ne sert qu'à la validation.
+- **Sortie :** liste des problèmes trouvés (fichier concerné, règle, détail), classés en erreurs et avertissements. Code de sortie non nul s'il y a au moins une erreur ; les avertissements seuls ne le font pas échouer.
+
+Règles vérifiées, dans l'ordre de "Contraintes et règles de validation" de `data-model.md`, plus une règle de format issue de ses "Conventions générales" :
+
+- *Format d'un slug* (Conventions générales) : erreur si un `slug` (nom de dossier d'univers, de fichier personnage ou de type de relation) contient autre chose que des minuscules ASCII et des tirets.
+- *Slug identique pour toutes les traductions d'une entité* et *slug de personnage unique au sein de son univers* : rien à vérifier, garanti par construction (le slug est le nom de fichier ; deux fichiers ne peuvent pas porter le même nom dans le même dossier).
+- *Slug de type de relation unique globalement* : erreur si un même slug apparaît plus d'une fois entre `_data/relation-types.yml` et l'ensemble des `_data/<slug-universe>/additional-relation-types.yml`.
+- *Relation référence deux personnages existants du même univers* : erreur si `source-character` ou `target-character` ne correspond à aucun fichier de `characters/` dans cet univers.
+- *Personnage pas en relation avec lui-même* : erreur si `source-character` = `target-character`.
+- *Type de relation existant* : erreur si le `type` d'une relation n'est ni dans `relation-types.yml` ni dans le `additional-relation-types.yml` de l'univers.
+- *`reverse-label` cohérent avec `directed`* : erreur si absent alors que `directed: true`, ou présent alors que `directed: false`.
+- *Pas de relation dupliquée* : erreur si deux entrées partagent le même triplet (source, cible, type) ; pour un type non dirigé, `(A, B)` et `(B, A)` comptent comme la même paire.
+- *`lang` cohérent avec le nom de fichier* : erreur si `.fr.md` ne porte pas `lang: fr`, ou `.en.md` `lang: en`.
+- *`mosaic`/`graph` présents ensemble par langue* : erreur si l'un existe sans l'autre, pour une langue donnée d'un univers.
+- *Champs non localisés de `metadata` identiques entre langues* : limite connue, `metadata` étant libre (voir `data-model.md`), le script ne peut pas savoir quels champs sont censés être localisés. Toute clé dont la valeur diffère entre les fichiers `fr`/`en` d'un personnage est donc un **avertissement**, à confirmer manuellement plutôt qu'une erreur bloquante.
 
 ---
 

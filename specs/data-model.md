@@ -87,7 +87,7 @@ Les images ne sont pas portées par des attributs : elles sont associées à leu
 - Image de couverture d'un univers : `<slug-universe>/cover.jpg`.
 - Portrait d'un personnage : `<slug-universe>/characters/<slug-character>.jpg`.
 
-Un seul fichier image par entité, partagé par toutes ses langues (pas de déclinaison par locale).
+Un seul fichier image par entité, partagé par toutes ses langues (pas de déclinaison par locale). Format, dimensions et ratios recommandés : voir "Images" dans `style-guide.md`.
 
 ### Organisation des fichiers
 
