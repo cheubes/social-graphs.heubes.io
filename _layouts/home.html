@@ -1,0 +1,34 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: site.lang %}
+{% assign ui_key = "ui" | append: lang %}
+{% assign ui = site.data[ui_key] %}
+
+<section class="sg-home">
+  <h1 class="sg-home-title">{{ ui["home-title"] }}</h1>
+
+  {{ content }}
+
+  {% assign all_universes = site.pages | where_exp: "p", "p.name contains 'mosaic.'" %}
+  {% assign universes = all_universes | where: "lang", lang | sort: "title" %}
+
+  {% if universes.size > 0 %}
+    {% assign placeholder_src = "/assets/img/cover-placeholder.svg" | relative_url %}
+    <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 list-unstyled sg-home-grid">
+      {% for universe in universes %}
+        <li class="col">
+          {% include universe-card.html universe=universe placeholder_src=placeholder_src %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="sg-home-empty">
+      {% if all_universes.size > 0 %}
+        {{ ui["home-empty-other-lang"] }}
+      {% else %}
+        {{ ui["home-empty"] }}
+      {% endif %}
+    </p>
+  {% endif %}
+</section>

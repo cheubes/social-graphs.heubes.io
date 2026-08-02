@@ -60,6 +60,54 @@ small {
   line-height: 1;
 }
 
+.sg-header-tagline {
+  font-weight: 300;
+  font-size: 0.85rem;
+  color: var(--sg-white);
+}
+
+/* Accueil */
+
+.sg-home-title {
+  margin-bottom: 1.5rem;
+}
+
+.sg-home-empty {
+  color: var(--sg-grey);
+}
+
+/* Tuiles (mosaïques) */
+
+.sg-card-link {
+  display: block;
+  color: inherit;
+}
+
+.sg-card {
+  background-color: var(--sg-white);
+  border-color: var(--sg-light-grey);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.sg-card-link:hover .sg-card,
+.sg-card-link:focus .sg-card {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-color: var(--sg-gold);
+}
+
+.sg-card-img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.sg-card-title {
+  color: var(--sg-dark-grey);
+}
+
+.sg-card-text {
+  color: var(--sg-grey);
+}
+
 /* Pied de page */
 
 .sg-footer {

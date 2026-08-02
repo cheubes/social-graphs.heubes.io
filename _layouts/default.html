@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 {% assign lang = page.lang | default: site.lang %}
+{% assign ui_key = "ui" | append: lang %}
+{% assign ui = site.data[ui_key] %}
 <html lang="{{ lang }}">
 {% include head.html %}
 <body>

@@ -50,7 +50,7 @@ Critère de fin : le script passe sans erreur sur ce contenu ; introduis une err
 (ex : un type de relation inexistant) et vérifie que le script la détecte, puis retire-la.
 ```
 
-## 3. Accueil du site
+## 3. Accueil du site ✅
 
 Mosaïque d'univers, juste le nôtre pour l'instant : tri alphabétique, lazy loading, états vide/erreur. Voir `screens/home.md`.
 
