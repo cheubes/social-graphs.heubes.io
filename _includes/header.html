@@ -1,9 +1,10 @@
 <header class="sg-header">
   <div class="container-fluid d-flex align-items-center justify-content-between">
-    <div class="sg-header-brand">
+    <div class="sg-header-brand d-flex align-items-center gap-2">
+      <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="" class="sg-header-logo">
       <span class="sg-header-title">{{ site.title }}</span>
     </div>
-    <div class="sg-lang-switcher d-flex gap-2">
+    <div class="sg-lang-switcher d-flex flex-column gap-2">
       <a href="#" class="sg-lang-flag text-decoration-none" aria-label="Français">🇫🇷</a>
       <a href="#" class="sg-lang-flag text-decoration-none" aria-label="English">🇬🇧</a>
     </div>

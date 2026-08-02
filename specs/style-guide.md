@@ -74,9 +74,9 @@ Pas de grille ni d'échelle d'espacement custom : la grille et les classes utili
 
 ### En-tête
 
-- **Gauche** : logo, puis tagline du site sur l'accueil, ou `title` de l'univers courant sur une page d'univers.
+- **Gauche** : logo (`assets/img/logo.png`, voir "Images"), puis tagline du site sur l'accueil, ou `title` de l'univers courant sur une page d'univers.
 - **Droite** : sélecteur de langue, deux drapeaux 🇫🇷 / 🇬🇧, chacun avec un `aria-label` explicite ("Français" / "English") puisqu'un emoji seul n'est pas toujours annoncé de façon fiable par un lecteur d'écran.
-- Fond `--sg-blue`, texte `--sg-white`.
+- Fond `--sg-blue`, texte `--sg-white`, bordure basse `--sg-gold`.
 - En-tête collant (`position: sticky`) en haut de page, pour rester accessible sur les pages longues (Vue Mosaïque, Vue Graphe), en écho au pied de page fixe.
 
 ### Pied de page
@@ -84,7 +84,7 @@ Pas de grille ni d'échelle d'espacement custom : la grille et les classes utili
 - Fixe (`position: fixed`, bas de l'écran) : une hauteur doit donc être réservée en bas de chaque page pour ne rien recouvrir, y compris la Vue Graphe (voir `graph-view.md`). Hauteur portée par une variable, ex. `--sg-footer-height`.
 - **Gauche** : badge Creative Commons. Quatre icônes Font Awesome Brands (`fa-creative-commons`, `fa-creative-commons-by`, `fa-creative-commons-nc-eu`, `fa-creative-commons-sa`) suivies du texte "CC BY-NC-SA 4.0", lien vers `https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr` ou `.../deed.en` selon la langue courante.
 - **Droite** : mention "Réalisée par Christophe Heubès" (FR) / "Created by Christophe Heubès" (EN), le nom en lien vers `https://christophe.heubes.org`.
-- Fond `--sg-dark-grey`, texte `--sg-white`, liens en `--sg-gold` au survol.
+- Fond `--sg-dark-grey`, texte `--sg-white`, bordure haute `--sg-light-grey`, liens en `--sg-gold` au survol.
 
 ### Tuiles (mosaïques)
 
@@ -113,7 +113,7 @@ Pas de grille ni d'échelle d'espacement custom : la grille et les classes utili
 
 ## Images
 
-Format `.jpg` (voir `data-model.md`). Dimensions et ratios recommandés à l'ajout de contenu ; `object-fit: cover` en CSS pour absorber les écarts plutôt que d'imposer un recadrage strict.
+Format `.jpg` (voir `data-model.md`) pour les images de contenu (couvertures, portraits). Dimensions et ratios recommandés à l'ajout de contenu ; `object-fit: cover` en CSS pour absorber les écarts plutôt que d'imposer un recadrage strict.
 
 | Image | Ratio | Dimensions minimales |
 |---|---|---|
@@ -121,6 +121,8 @@ Format `.jpg` (voir `data-model.md`). Dimensions et ratios recommandés à l'ajo
 | Portrait de personnage | 1:1 (carré) | 600 × 600 px |
 
 Le portrait est carré pour rester correct une fois recadré en cercle (nœud du graphe, voir `graph-view.md`), en tuile (voir `universe-home.md`) ou dans la modale (voir `character-sheet.md`), sans traitement différent selon le contexte d'affichage.
+
+Le logo du site (`assets/img/logo.png`, PNG, 256 × 256 px) est un asset d'interface distinct du contenu des univers : affiché à 48px de haut dans l'en-tête, et réutilisé tel quel comme favicon (pas de génération de variantes ni de format `.ico`).
 
 ## Iconographie
 
