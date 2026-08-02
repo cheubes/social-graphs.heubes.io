@@ -3,3 +3,8 @@ tagline: "Explore the characters of a universe and their relationships as an int
 home-title: "Available universes"
 home-empty: "No universe is currently available at the moment."
 home-empty-other-lang: "No universe is currently available in English yet. Try switching to French using the language selector."
+view-switcher-label: "Switch between Mosaic View and Graph View"
+view-mosaic: "Mosaic View"
+view-graph: "Graph View"
+universe-empty: "No character is currently available at the moment."
+universe-empty-other-lang: "No character is currently available in English yet. Try switching to French using the language selector."

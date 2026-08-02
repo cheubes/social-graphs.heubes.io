@@ -1,4 +1,6 @@
 ---
+layout: universe
+permalink: /fr/french-renaissance-aristocracy/
 lang: fr
 title: "Les aristocrates français du vivant de Catherine de Médicis"
 source-type: "période historique"

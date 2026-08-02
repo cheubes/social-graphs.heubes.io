@@ -25,12 +25,13 @@ L'image de couverture n'est pas un attribut : elle est associée à l'univers pa
 |---|---|---|
 | `slug` | Non | Identifiant unique au sein de l'univers, construit à partir du nom anglais, utilisé dans l'URL de la fiche personnage (peut être réutilisé d'un univers à l'autre) |
 | `lang` | Non | Langue de ce document (`fr` ou `en`) ; permet d'associer les deux documents d'un même personnage |
-| `name` | Oui | Nom affiché |
+| `character-name` | Oui | Nom affiché. Nommé `character-name` plutôt que `name` : ce dernier est un attribut réservé de la classe `Page` de Jekyll (au même titre que `content`, `dir`, `excerpt`, `path`, `url`), toujours réécrit par Jekyll avant l'accès en template, ce qui rend un attribut de front matter du même nom illisible depuis Liquid (vérifié empiriquement) |
 | `description` | Oui | Texte biographique court, affiché sur la fiche personnage |
 | `metadata` | Selon le champ | Champs libres optionnels selon l'univers (ex : dates de naissance/mort pour un personnage historique) |
 | `external-link` | Oui | URL optionnelle, peut différer par langue (ex : page Wikipédia FR ou EN) |
+| `portrait-source` | Oui | URL optionnelle vers la source du portrait (ex : page Wikipédia de l'image), peut différer par langue. Distinct d'`external-link` : la source du portrait n'est pas nécessairement la même page que le lien externe du personnage |
 
-Le portrait n'est pas un attribut : il est associé au personnage par convention de nommage (voir "Images").
+Le portrait (l'image) n'est pas un attribut : il est associé au personnage par convention de nommage (voir "Images"). Sa source, si renseignée, est portée par l'attribut `portrait-source`.
 
 ### Relation
 
@@ -96,7 +97,7 @@ Le site est généré avec Jekyll (voir `technical-specifications.md`). Chaque u
 - `/<slug-universe>/mosaic.fr.md`, `mosaic.en.md` : présentation de l'univers (Vue Mosaïque), un fichier par langue. Frontmatter : `lang`, `title`, `source-type`. Corps de texte : `description`.
 - `/<slug-universe>/graph.fr.md`, `graph.en.md` : Vue Graphe, un fichier par langue. Réutilise les données de présentation du `mosaic.*.md` du même dossier plutôt que de les dupliquer.
 - `/<slug-universe>/cover.jpg` : image de couverture (voir "Images").
-- `/<slug-universe>/characters/` : un sous-dossier contenant, pour chaque personnage, `<slug-character>.fr.md`, `<slug-character>.en.md` (frontmatter : `lang`, `name`, `metadata`, `external-link` ; corps de texte : `description`) et son portrait `<slug-character>.jpg` (voir "Images"). Le sous-dossier lui-même associe chaque personnage à son univers ; aucun attribut ne porte cette référence.
+- `/<slug-universe>/characters/` : un sous-dossier contenant, pour chaque personnage, `<slug-character>.fr.md`, `<slug-character>.en.md` (frontmatter : `lang`, `character-name`, `metadata`, `external-link`, `portrait-source` ; corps de texte : `description`) et son portrait `<slug-character>.jpg` (voir "Images"). Le sous-dossier lui-même associe chaque personnage à son univers ; aucun attribut ne porte cette référence.
 - `_data/<slug-universe>/relations.yml` : l'ensemble des relations de l'univers ; le champ localisé (`description`) y est porté par des clés imbriquées par langue, plutôt que par des fichiers séparés.
 - `_data/<slug-universe>/additional-relation-types.yml`, optionnel : les types de relations additionnels propres à l'univers, avec la même structure que la taxonomie commune (clés imbriquées par langue pour `label` et `reverse-label`, voir "Type de relation").
 - `_data/relation-types.yml` : la taxonomie de base des types de relations, partagée par tous les univers.
@@ -156,11 +157,12 @@ source-type: "période historique"
 ```yaml
 ---
 lang: fr
-name: "Catherine de Médicis"
+character-name: "Catherine de Médicis"
 metadata:
   birth: "1519"
   death: "1589"
 external-link: "https://fr.wikipedia.org/wiki/Catherine_de_M%C3%A9dicis"
+portrait-source: "https://fr.wikipedia.org/wiki/Catherine_de_M%C3%A9dicis"
 ---
 
 Reine de France par son mariage avec Henri II, elle exerce une influence considérable sur la politique du royaume comme régente puis reine mère.

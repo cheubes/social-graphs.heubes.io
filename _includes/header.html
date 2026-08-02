@@ -10,6 +10,8 @@
         <span class="sg-header-title">{{ site.title }}</span>
         {% if page.layout == "home" %}
           <span class="sg-header-tagline">{{ ui["tagline"] }}</span>
+        {% elsif page.layout == "universe" %}
+          <span class="sg-header-tagline">{{ page.title }}</span>
         {% endif %}
       </span>
     </a>

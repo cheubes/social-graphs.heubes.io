@@ -68,7 +68,7 @@ Critère de fin : la tuile de l'univers de test s'affiche à l'accueil (dans les
 et mène à sa page.
 ```
 
-## 4. Vue Mosaïque d'un univers
+## 4. Vue Mosaïque d'un univers ✅
 
 Présentation de l'univers et mosaïque de personnages triée par nombre de relations. Le switcher est visible mais peut pointer vers une Vue Graphe qui n'existe pas encore. Voir `screens/universe-home.md`.
 

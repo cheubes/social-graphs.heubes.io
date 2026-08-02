@@ -76,6 +76,42 @@ small {
   color: var(--sg-grey);
 }
 
+/* Univers */
+
+.sg-universe-cover {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.375rem;
+}
+
+.sg-universe-source-type {
+  color: var(--sg-grey);
+}
+
+.sg-universe-description {
+  color: var(--sg-grey);
+}
+
+.sg-universe-empty {
+  color: var(--sg-grey);
+}
+
+/* Switcher Vue Mosaïque / Vue Graphe */
+
+.sg-view-switcher-btn {
+  color: var(--sg-grey);
+  background-color: transparent;
+  border-color: var(--sg-light-grey);
+}
+
+.sg-view-switcher-btn.active {
+  background-color: var(--sg-blue);
+  color: var(--sg-white);
+  border-color: var(--sg-blue);
+}
+
 /* Tuiles (mosaïques) */
 
 .sg-card-link {
@@ -89,7 +125,7 @@ small {
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.sg-card-link:hover .sg-card,
+.sg-card:hover,
 .sg-card-link:focus .sg-card {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   border-color: var(--sg-gold);
@@ -97,6 +133,11 @@ small {
 
 .sg-card-img {
   aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.sg-character-portrait {
+  aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 

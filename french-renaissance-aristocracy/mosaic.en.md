@@ -1,4 +1,6 @@
 ---
+layout: universe
+permalink: /french-renaissance-aristocracy/
 lang: en
 title: "French Aristocrats in the Time of Catherine de' Medici"
 source-type: "historical period"

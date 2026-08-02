@@ -8,11 +8,12 @@ Présenter le détail d'un personnage (biographie, informations complémentaires
 
 Modale superposée à la Vue Mosaïque ou à la Vue Graphe (voir `universe-home.md` et `graph-view.md`), qui reste visible en arrière-plan.
 
-- Portrait et `name` du personnage.
+- Portrait et `character-name` du personnage.
+- `portrait-source`, si renseigné : mention de la source du portrait, en légende sous l'image (voir `style-guide.md`).
 - `description` (texte biographique).
 - `metadata`, si renseigné : affiché en liste clé/valeur ; les clés sont des champs libres définis par l'auteur du contenu (voir `data-model.md`), affichées telles quelles faute de dictionnaire de traduction dédié.
 - `external-link`, si renseigné : lien sortant vers une source externe.
-- Liste des relations de ce personnage : pour chacune, le libellé dans le bon sens (`label` si ce personnage est la source, `reverse-label` s'il est la cible, ou le `label` du type non dirigé, voir "Type de relation" dans `data-model.md`), le nom du personnage lié, et la `description` de la relation si renseignée. Triée par ordre alphabétique du `name` du personnage lié. Cette liste est complète : elle n'est pas affectée par la recherche ou les filtres actifs de la vue sous-jacente (voir `search-filter.md`).
+- Liste des relations de ce personnage : pour chacune, le libellé dans le bon sens (`label` si ce personnage est la source, `reverse-label` s'il est la cible, ou le `label` du type non dirigé, voir "Type de relation" dans `data-model.md`), le nom du personnage lié, et la `description` de la relation si renseignée. Triée par ordre alphabétique du `character-name` du personnage lié. Cette liste est complète : elle n'est pas affectée par la recherche ou les filtres actifs de la vue sous-jacente (voir `search-filter.md`).
 - Bouton de fermeture.
 
 L'ouverture de la modale, quelle que soit son origine (clic sur une tuile, un nœud, ou accès direct), met à jour l'URL pour refléter le personnage affiché ; cette URL reste partageable telle quelle (voir le parcours "lien partagé" dans `functional-specifications.md`).

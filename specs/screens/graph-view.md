@@ -9,7 +9,7 @@ Permettre au visiteur d'explorer visuellement le réseau de personnages d'un uni
 Cette vue partage l'en-tête, la présentation de l'univers, le switcher "Vue Mosaïque" / "Vue Graphe" et le pied de page avec `universe-home.md` ; seul le contenu principal ci-dessous lui est propre.
 
 - Graphe interactif :
-  - Un nœud par personnage disponible dans la langue courante (même règle de masquage que pour les univers non traduits, voir "Multilingue" dans `functional-specifications.md`), affichant son portrait et son `name`.
+  - Un nœud par personnage disponible dans la langue courante (même règle de masquage que pour les univers non traduits, voir "Multilingue" dans `functional-specifications.md`), affichant son portrait et son `character-name`.
   - Une arête par relation entre deux personnages affichés. Quand deux personnages sont liés par plusieurs relations de types différents, chacune est une arête distincte.
   - Une arête d'un type dirigé est représentée avec un sens visuel (ex : flèche) ; une arête d'un type non dirigé n'en a pas.
   - Chaque type de relation a une couleur distincte, définie dans `style-guide.md` (ce n'est pas un attribut de données, voir `data-model.md`).

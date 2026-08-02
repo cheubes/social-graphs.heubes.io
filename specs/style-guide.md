@@ -88,13 +88,14 @@ Pas de grille ni d'échelle d'espacement custom : la grille et les classes utili
 
 ### Tuiles (mosaïques)
 
-- Carte Bootstrap : image (couverture ou portrait) en lazy loading (voir `home.md`, `universe-home.md`), `title`/`name` en titre, `description` tronquée en corps.
+- Carte Bootstrap : image (couverture ou portrait) en lazy loading (voir `home.md`, `universe-home.md`), `title`/`character-name` en titre, `description` tronquée en corps.
 - Fond `--sg-white`, titre `--sg-dark-grey`, texte `--sg-grey`, bordure `--sg-light-grey`.
 - Survol : légère élévation (ombre) et bordure `--sg-gold`.
 
 ### Modale (fiche personnage)
 
-- Modale Bootstrap standard. Fond `--sg-white`, `name` en titre `--sg-dark-grey`, corps `--sg-grey`, libellés de relation `--sg-blue`.
+- Modale Bootstrap standard. Fond `--sg-white`, `character-name` en titre `--sg-dark-grey`, corps `--sg-grey`, libellés de relation `--sg-blue`.
+- Légende de portrait (`portrait-source`, si renseigné) : texte secondaire sous l'image (graisse 300, `--sg-grey`, voir "Typographie"), lien en `--sg-gold` au survol.
 - Bouton de fermeture : icône Font Awesome (`fa-xmark`).
 
 ### Switcher Vue Mosaïque / Vue Graphe

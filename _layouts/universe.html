@@ -1,0 +1,63 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: site.lang %}
+{% assign ui_key = "ui" | append: lang %}
+{% assign ui = site.data[ui_key] %}
+{% assign universe_slug = page.path | split: "/" | first %}
+{% assign cover_src = "/" | append: universe_slug | append: "/cover.jpg" | relative_url %}
+{% assign placeholder_src = "/assets/img/cover-placeholder.svg" | relative_url %}
+{% assign graph_url = page.url | append: "graph/" | relative_url %}
+
+<section class="sg-universe">
+  <div class="sg-universe-header d-flex flex-column flex-md-row gap-4 mb-4">
+    <img src="{{ cover_src }}"
+      class="sg-universe-cover"
+      alt="{{ page.title }}"
+      loading="lazy"
+      onerror="this.onerror=null; this.src='{{ placeholder_src }}';">
+    <div class="sg-universe-info">
+      <h1 class="sg-universe-title mb-1">{{ page.title }}</h1>
+      <p class="sg-universe-source-type"><small>{{ page["source-type"] }}</small></p>
+      <div class="sg-universe-description">{{ content }}</div>
+    </div>
+  </div>
+
+  <div class="btn-group sg-view-switcher mb-4" role="group" aria-label="{{ ui["view-switcher-label"] }}">
+    <a href="{{ page.url | relative_url }}" class="btn sg-view-switcher-btn active">{{ ui["view-mosaic"] }}</a>
+    <a href="{{ graph_url }}" class="btn sg-view-switcher-btn">{{ ui["view-graph"] }}</a>
+  </div>
+
+  {% assign character_prefix = universe_slug | append: "/characters/" %}
+  {% assign universe_characters = site.pages | where_exp: "p", "p.path contains character_prefix" %}
+  {% assign characters = universe_characters | where: "lang", lang %}
+
+  {% if characters.size > 0 %}
+    {% assign universe_data = site.data[universe_slug] %}
+    {% assign relations = universe_data["relations"]["relations"] %}
+    {% capture sort_blob %}{% for character in characters %}{% assign char_slug = character.path | split: "/" | last | split: "." | first %}{% assign source_count = relations | where: "source-character", char_slug | size %}{% assign target_count = relations | where: "target-character", char_slug | size %}{% assign relation_count = source_count | plus: target_count %}{% assign sort_rank = 100000 | minus: relation_count %}{% assign padded_rank = sort_rank | prepend: "000000" | slice: -6, 6 %}{{ padded_rank }}_{{ character["character-name"] }}_{{ char_slug }}|||{% endfor %}{% endcapture %}
+    {% assign sorted_entries = sort_blob | split: "|||" | sort %}
+
+    <ul class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 list-unstyled sg-character-grid">
+      {% for entry in sorted_entries %}
+        {% unless entry == "" %}
+          {% assign entry_parts = entry | split: "_" %}
+          {% assign char_slug = entry_parts | last %}
+          {% assign expected_path = universe_slug | append: "/characters/" | append: char_slug | append: "." | append: lang | append: ".md" %}
+          {% assign character = characters | where_exp: "c", "c.path == expected_path" | first %}
+          <li class="col">
+            {% include character-card.html character=character universe_slug=universe_slug placeholder_src=placeholder_src %}
+          </li>
+        {% endunless %}
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="sg-universe-empty">
+      {% if universe_characters.size > 0 %}
+        {{ ui["universe-empty-other-lang"] }}
+      {% else %}
+        {{ ui["universe-empty"] }}
+      {% endif %}
+    </p>
+  {% endif %}
+</section>

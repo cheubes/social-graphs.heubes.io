@@ -1,10 +1,11 @@
 ---
 lang: fr
-name: "Anne de Montmorency"
+character-name: "Anne de Montmorency"
 metadata:
   birth: "1493"
   death: "1567"
 external-link: "https://fr.wikipedia.org/wiki/Anne_de_Montmorency_(1493-1567)"
+portrait-source: "https://fr.wikipedia.org/wiki/Anne_de_Montmorency_(1493-1567)"
 ---
 
 Connétable de France et l'un des personnages les plus puissants de la Renaissance française, il forme avec les Guise le triumvirat catholique opposé aux protestants.
