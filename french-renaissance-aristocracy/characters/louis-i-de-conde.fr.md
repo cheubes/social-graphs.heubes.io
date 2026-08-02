@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /fr/french-renaissance-aristocracy/characters/louis-i-de-conde/
 lang: fr
 character-name: "Louis Ier de Bourbon-Condé"
 metadata:

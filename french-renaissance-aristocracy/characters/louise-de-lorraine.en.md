@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /french-renaissance-aristocracy/characters/louise-de-lorraine/
 lang: en
 character-name: "Louise of Lorraine"
 metadata:

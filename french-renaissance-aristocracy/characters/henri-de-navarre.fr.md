@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /fr/french-renaissance-aristocracy/characters/henri-de-navarre/
 lang: fr
 character-name: "Henri de Navarre"
 metadata:

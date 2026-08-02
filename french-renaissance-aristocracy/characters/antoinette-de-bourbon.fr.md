@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /fr/french-renaissance-aristocracy/characters/antoinette-de-bourbon/
 lang: fr
 character-name: "Antoinette de Bourbon"
 metadata:

@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /french-renaissance-aristocracy/characters/catherine-de-medici/
 lang: en
 character-name: "Catherine de' Medici"
 metadata:

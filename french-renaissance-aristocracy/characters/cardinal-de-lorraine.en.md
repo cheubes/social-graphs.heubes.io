@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /french-renaissance-aristocracy/characters/cardinal-de-lorraine/
 lang: en
 character-name: "Charles, Cardinal of Lorraine"
 metadata:

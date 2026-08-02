@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /french-renaissance-aristocracy/characters/jeanne-d-albret/
 lang: en
 character-name: "Jeanne d'Albret"
 metadata:

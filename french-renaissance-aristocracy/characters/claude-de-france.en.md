@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /french-renaissance-aristocracy/characters/claude-de-france/
 lang: en
 character-name: "Claude of Valois"
 metadata:

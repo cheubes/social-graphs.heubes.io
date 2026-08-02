@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /fr/french-renaissance-aristocracy/characters/henri-de-guise/
 lang: fr
 character-name: "Henri de Guise"
 metadata:

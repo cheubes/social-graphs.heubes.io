@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /fr/french-renaissance-aristocracy/characters/claude-de-france/
 lang: fr
 character-name: "Claude de France"
 metadata:

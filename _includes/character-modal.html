@@ -1,0 +1,96 @@
+{% assign character = include.character %}
+{% assign all_characters = include.all_characters %}
+{% assign view_url = include.view_url | relative_url %}
+
+<div class="modal sg-character-modal" id="sg-character-modal" tabindex="-1"
+  aria-hidden="true" aria-labelledby="sg-character-modal-title"
+  data-view-url="{{ view_url }}"
+  data-open="{{ include.open }}"
+  data-loading-text="{{ ui['modal-loading'] }}"
+  data-error-text="{{ ui['modal-error'] }}">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen-sm-down">
+    <div class="modal-content">
+      <button type="button" class="sg-character-modal-close" data-bs-dismiss="modal" aria-label="{{ ui['modal-close'] }}">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <div class="modal-body" id="sg-character-modal-content">
+        {% if character %}
+          {% assign character_slug = character.path | split: "/" | last | split: "." | first %}
+          {% assign portrait_src = "/" | append: universe_slug | append: "/characters/" | append: character_slug | append: ".jpg" | relative_url %}
+
+          <figure class="sg-character-modal-portrait-wrap">
+            <img src="{{ portrait_src }}"
+              alt="{{ character['character-name'] }}"
+              class="sg-character-modal-portrait"
+              loading="lazy"
+              onerror="this.onerror=null; this.src='{{ placeholder_src }}';">
+            {% if character["portrait-source"] %}
+              <figcaption class="sg-character-modal-portrait-caption">
+                <a href="{{ character['portrait-source'] }}" target="_blank" rel="noopener">{{ ui["portrait-source-label"] }}</a>
+              </figcaption>
+            {% endif %}
+          </figure>
+
+          <h2 id="sg-character-modal-title" class="sg-character-modal-title">{{ character["character-name"] }}</h2>
+
+          <div class="sg-character-modal-description">{{ character.content }}</div>
+
+          {% if character.metadata %}
+            <dl class="sg-character-modal-metadata">
+              {% for pair in character.metadata %}
+                <dt>{{ pair[0] }}</dt>
+                <dd>{{ pair[1] }}</dd>
+              {% endfor %}
+            </dl>
+          {% endif %}
+
+          {% if character["external-link"] %}
+            <p class="sg-character-modal-external-link">
+              <a href="{{ character['external-link'] }}" target="_blank" rel="noopener">{{ ui["external-link-label"] }}</a>
+            </p>
+          {% endif %}
+
+          {% assign relation_count = 0 %}
+          {% capture relation_blob %}{% for relation in relations %}{% assign direction = "" %}{% if relation["source-character"] == character_slug %}{% assign direction = "s" %}{% assign related_slug = relation["target-character"] %}{% elsif relation["target-character"] == character_slug %}{% assign direction = "t" %}{% assign related_slug = relation["source-character"] %}{% endif %}{% if direction != "" %}{% assign expected_path = universe_slug | append: "/characters/" | append: related_slug | append: "." | append: lang | append: ".md" %}{% assign related_character = all_characters | where_exp: "c", "c.path == expected_path" | first %}{% if related_character %}{% assign relation_count = relation_count | plus: 1 %}{{ related_character["character-name"] }}_{{ direction }}_{{ relation.type }}_{{ related_slug }}_{{ related_character.url | relative_url }}|||{% endif %}{% endif %}{% endfor %}{% endcapture %}
+
+          {% if relation_count > 0 %}
+            {% assign relation_entries = relation_blob | split: "|||" | sort %}
+            <h3 class="sg-character-modal-relations-heading">{{ ui["character-relations-heading"] }}</h3>
+            <ul class="list-unstyled sg-character-modal-relations">
+              {% for entry in relation_entries %}
+                {% unless entry == "" %}
+                  {% assign parts = entry | split: "_" %}
+                  {% assign related_url = parts[-1] %}
+                  {% assign related_slug = parts[-2] %}
+                  {% assign type_slug = parts[-3] %}
+                  {% assign direction = parts[-4] %}
+                  {% assign related_name = parts[0] %}
+                  {% assign rel_type = relation_types | where: "slug", type_slug | first %}
+                  {% if direction == "s" %}
+                    {% assign relation_label = rel_type["label"][lang] %}
+                    {% assign matching_relation = relations | where: "source-character", character_slug | where: "target-character", related_slug | where: "type", type_slug | first %}
+                  {% else %}
+                    {% if rel_type["directed"] %}
+                      {% assign relation_label = rel_type["reverse-label"][lang] %}
+                    {% else %}
+                      {% assign relation_label = rel_type["label"][lang] %}
+                    {% endif %}
+                    {% assign matching_relation = relations | where: "source-character", related_slug | where: "target-character", character_slug | where: "type", type_slug | first %}
+                  {% endif %}
+                  <li class="sg-character-modal-relation">
+                    <a href="{{ related_url }}" class="sg-character-link">
+                      <span class="sg-relation-label">{{ relation_label }}</span> {{ related_name }}
+                    </a>
+                    {% if matching_relation["description"][lang] %}
+                      <p class="sg-relation-description">{{ matching_relation["description"][lang] }}</p>
+                    {% endif %}
+                  </li>
+                {% endunless %}
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /fr/french-renaissance-aristocracy/characters/henri-ii/
 lang: fr
 character-name: "Henri II"
 metadata:

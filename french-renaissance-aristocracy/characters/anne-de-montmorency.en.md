@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /french-renaissance-aristocracy/characters/anne-de-montmorency/
 lang: en
 character-name: "Anne de Montmorency"
 metadata:

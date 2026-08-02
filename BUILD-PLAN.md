@@ -86,7 +86,7 @@ visible (peut pointer vers une Vue Graphe qui n'existe pas encore à ce stade).
 Critère de fin : les tuiles de personnages de l'univers de test s'affichent, dans le bon ordre.
 ```
 
-## 5. Fiche personnage en modale
+## 5. Fiche personnage en modale ✅
 
 Modale Bootstrap, `fetch()` de la page personnage déjà générée, synchronisation d'URL, navigation entre personnages liés. Voir `screens/character-sheet.md`.
 

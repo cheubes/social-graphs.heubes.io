@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /fr/french-renaissance-aristocracy/characters/claude-de-lorraine-aumale/
 lang: fr
 character-name: "Claude de Lorraine, duc d'Aumale"
 metadata:

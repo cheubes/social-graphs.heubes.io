@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /french-renaissance-aristocracy/characters/diane-de-poitiers/
 lang: en
 character-name: "Diane de Poitiers"
 metadata:

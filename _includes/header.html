@@ -12,6 +12,9 @@
           <span class="sg-header-tagline">{{ ui["tagline"] }}</span>
         {% elsif page.layout == "universe" %}
           <span class="sg-header-tagline">{{ page.title }}</span>
+        {% elsif page.layout == "character" %}
+          {% include resolve-mosaic-page.html %}
+          <span class="sg-header-tagline">{{ mosaic_page.title }}</span>
         {% endif %}
       </span>
     </a>

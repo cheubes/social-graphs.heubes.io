@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /fr/french-renaissance-aristocracy/characters/gaspard-de-coligny/
 lang: fr
 character-name: "Gaspard de Coligny"
 metadata:

@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /french-renaissance-aristocracy/characters/francois-de-france/
 lang: en
 character-name: "Francis, Duke of Anjou"
 metadata:

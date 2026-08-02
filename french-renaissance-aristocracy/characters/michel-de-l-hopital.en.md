@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /french-renaissance-aristocracy/characters/michel-de-l-hopital/
 lang: en
 character-name: "Michel de l'Hôpital"
 metadata:

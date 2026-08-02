@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /french-renaissance-aristocracy/characters/charles-de-bourbon/
 lang: en
 character-name: "Charles, Cardinal de Bourbon"
 metadata:

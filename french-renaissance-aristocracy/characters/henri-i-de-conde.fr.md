@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /fr/french-renaissance-aristocracy/characters/henri-i-de-conde/
 lang: fr
 character-name: "Henri Ier de Bourbon-Condé"
 metadata:

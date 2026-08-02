@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /french-renaissance-aristocracy/characters/henri-i-de-conde/
 lang: en
 character-name: "Henry I, Prince of Condé"
 metadata:

@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /french-renaissance-aristocracy/characters/henri-de-guise/
 lang: en
 character-name: "Henry I, Duke of Guise"
 metadata:

@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /french-renaissance-aristocracy/characters/francois-ii/
 lang: en
 character-name: "Francis II"
 metadata:

@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /fr/french-renaissance-aristocracy/characters/francois-de-france/
 lang: fr
 character-name: "François de France"
 metadata:

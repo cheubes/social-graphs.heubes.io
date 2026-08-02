@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /fr/french-renaissance-aristocracy/characters/charles-ix/
 lang: fr
 character-name: "Charles IX"
 metadata:

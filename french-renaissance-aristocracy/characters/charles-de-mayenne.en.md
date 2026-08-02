@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /french-renaissance-aristocracy/characters/charles-de-mayenne/
 lang: en
 character-name: "Charles, Duke of Mayenne"
 metadata:

@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /french-renaissance-aristocracy/characters/philippe-ii/
 lang: en
 character-name: "Philip II of Spain"
 metadata:

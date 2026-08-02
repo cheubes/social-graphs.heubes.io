@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /fr/french-renaissance-aristocracy/characters/marie-stuart/
 lang: fr
 character-name: "Marie Stuart"
 metadata:

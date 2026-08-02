@@ -171,3 +171,132 @@ small {
 .sg-footer a:hover {
   color: var(--sg-gold);
 }
+
+/* Modale (fiche personnage) */
+
+.sg-character-modal .modal-content {
+  background-color: var(--sg-white);
+  position: relative;
+}
+
+.sg-character-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 5;
+  background: transparent;
+  border: none;
+  color: var(--sg-grey);
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0.5rem;
+}
+
+.sg-character-modal-close:hover {
+  color: var(--sg-dark-grey);
+}
+
+.sg-character-modal-portrait-wrap {
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+.sg-character-modal-portrait {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.sg-character-modal-portrait-caption {
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: var(--sg-grey);
+  margin-top: 0.5rem;
+}
+
+.sg-character-modal-portrait-caption a {
+  color: var(--sg-grey);
+  text-decoration: none;
+}
+
+.sg-character-modal-portrait-caption a:hover {
+  color: var(--sg-gold);
+}
+
+.sg-character-modal-title {
+  color: var(--sg-dark-grey);
+  text-align: center;
+}
+
+.sg-character-modal-description {
+  color: var(--sg-grey);
+}
+
+.sg-character-modal-metadata {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 0.75rem;
+  color: var(--sg-grey);
+  margin-top: 1rem;
+}
+
+.sg-character-modal-metadata dt {
+  font-weight: 500;
+  color: var(--sg-dark-grey);
+}
+
+.sg-character-modal-metadata dd {
+  margin: 0;
+}
+
+.sg-character-modal-external-link {
+  margin-top: 1rem;
+}
+
+.sg-character-modal-external-link a,
+.sg-character-modal-relation a {
+  color: var(--sg-blue);
+  text-decoration: none;
+}
+
+.sg-character-modal-external-link a:hover,
+.sg-character-modal-relation a:hover {
+  text-decoration: underline;
+}
+
+.sg-character-modal-relations-heading {
+  margin-top: 1.5rem;
+}
+
+.sg-character-modal-relations {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sg-relation-label {
+  color: var(--sg-blue);
+  font-weight: 500;
+}
+
+.sg-relation-description {
+  color: var(--sg-grey);
+  font-size: 0.85rem;
+  margin: 0.15rem 0 0;
+}
+
+.sg-character-modal-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 2rem 0;
+  color: var(--sg-grey);
+}
+
+.sg-character-modal-error {
+  color: var(--sg-grey);
+  text-align: center;
+  padding: 2rem 0;
+}

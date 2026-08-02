@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /fr/french-renaissance-aristocracy/characters/elisabeth-d-autriche/
 lang: fr
 character-name: "Élisabeth d'Autriche"
 metadata:

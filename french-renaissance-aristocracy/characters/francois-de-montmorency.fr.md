@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /fr/french-renaissance-aristocracy/characters/francois-de-montmorency/
 lang: fr
 character-name: "François de Montmorency"
 metadata:

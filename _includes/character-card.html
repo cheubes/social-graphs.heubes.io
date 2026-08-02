@@ -1,13 +1,15 @@
 {% assign character_slug = character.path | split: "/" | last | split: "." | first %}
 {% assign portrait_src = "/" | append: universe_slug | append: "/characters/" | append: character_slug | append: ".jpg" | relative_url %}
-<div class="card sg-card h-100">
-  <img src="{{ portrait_src }}"
-    class="card-img-top sg-character-portrait"
-    alt="{{ character["character-name"] }}"
-    loading="lazy"
-    onerror="this.onerror=null; this.src='{{ placeholder_src }}';">
-  <div class="card-body">
-    <h2 class="card-title h5 sg-card-title">{{ character["character-name"] }}</h2>
-    <p class="card-text sg-card-text">{{ character.content | strip_html | truncate: 150 }}</p>
+<a href="{{ character.url | relative_url }}" class="sg-card-link sg-character-link text-decoration-none">
+  <div class="card sg-card h-100">
+    <img src="{{ portrait_src }}"
+      class="card-img-top sg-character-portrait"
+      alt="{{ character["character-name"] }}"
+      loading="lazy"
+      onerror="this.onerror=null; this.src='{{ placeholder_src }}';">
+    <div class="card-body">
+      <h2 class="card-title h5 sg-card-title">{{ character["character-name"] }}</h2>
+      <p class="card-text sg-card-text">{{ character.content | strip_html | truncate: 150 }}</p>
+    </div>
   </div>
-</div>
+</a>

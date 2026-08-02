@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /french-renaissance-aristocracy/characters/henri-de-montmorency-damville/
 lang: en
 character-name: "Henri I de Montmorency"
 metadata:

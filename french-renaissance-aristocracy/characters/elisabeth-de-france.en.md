@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /french-renaissance-aristocracy/characters/elisabeth-de-france/
 lang: en
 character-name: "Elisabeth of Valois"
 metadata:

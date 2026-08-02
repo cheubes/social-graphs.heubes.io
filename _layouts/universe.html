@@ -4,37 +4,49 @@ layout: default
 {% assign lang = page.lang | default: site.lang %}
 {% assign ui_key = "ui" | append: lang %}
 {% assign ui = site.data[ui_key] %}
-{% assign universe_slug = page.path | split: "/" | first %}
+{% include resolve-mosaic-page.html %}
 {% assign cover_src = "/" | append: universe_slug | append: "/cover.jpg" | relative_url %}
 {% assign placeholder_src = "/assets/img/cover-placeholder.svg" | relative_url %}
-{% assign graph_url = page.url | append: "graph/" | relative_url %}
+{% assign graph_url = mosaic_page.url | append: "graph/" | relative_url %}
+{% assign is_character_page = false %}
+{% assign modal_character = nil %}
+{% if page.layout == "character" %}
+  {% assign is_character_page = true %}
+  {% assign modal_character = page %}
+{% endif %}
 
 <section class="sg-universe">
   <div class="sg-universe-header d-flex flex-column flex-md-row gap-4 mb-4">
     <img src="{{ cover_src }}"
       class="sg-universe-cover"
-      alt="{{ page.title }}"
+      alt="{{ mosaic_page.title }}"
       loading="lazy"
       onerror="this.onerror=null; this.src='{{ placeholder_src }}';">
     <div class="sg-universe-info">
-      <h1 class="sg-universe-title mb-1">{{ page.title }}</h1>
-      <p class="sg-universe-source-type"><small>{{ page["source-type"] }}</small></p>
-      <div class="sg-universe-description">{{ content }}</div>
+      <h1 class="sg-universe-title mb-1">{{ mosaic_page.title }}</h1>
+      <p class="sg-universe-source-type"><small>{{ mosaic_page["source-type"] }}</small></p>
+      <div class="sg-universe-description">{{ mosaic_page.content }}</div>
     </div>
   </div>
 
   <div class="btn-group sg-view-switcher mb-4" role="group" aria-label="{{ ui["view-switcher-label"] }}">
-    <a href="{{ page.url | relative_url }}" class="btn sg-view-switcher-btn active">{{ ui["view-mosaic"] }}</a>
+    <a href="{{ mosaic_page.url | relative_url }}" class="btn sg-view-switcher-btn active">{{ ui["view-mosaic"] }}</a>
     <a href="{{ graph_url }}" class="btn sg-view-switcher-btn">{{ ui["view-graph"] }}</a>
   </div>
 
   {% assign character_prefix = universe_slug | append: "/characters/" %}
   {% assign universe_characters = site.pages | where_exp: "p", "p.path contains character_prefix" %}
   {% assign characters = universe_characters | where: "lang", lang %}
+  {% assign universe_data = site.data[universe_slug] %}
+  {% assign relations = universe_data["relations"]["relations"] %}
+  {% assign additional_relation_types = universe_data["additional-relation-types"] %}
+  {% if additional_relation_types %}
+    {% assign relation_types = site.data["relation-types"] | concat: additional_relation_types %}
+  {% else %}
+    {% assign relation_types = site.data["relation-types"] %}
+  {% endif %}
 
   {% if characters.size > 0 %}
-    {% assign universe_data = site.data[universe_slug] %}
-    {% assign relations = universe_data["relations"]["relations"] %}
     {% capture sort_blob %}{% for character in characters %}{% assign char_slug = character.path | split: "/" | last | split: "." | first %}{% assign source_count = relations | where: "source-character", char_slug | size %}{% assign target_count = relations | where: "target-character", char_slug | size %}{% assign relation_count = source_count | plus: target_count %}{% assign sort_rank = 100000 | minus: relation_count %}{% assign padded_rank = sort_rank | prepend: "000000" | slice: -6, 6 %}{{ padded_rank }}_{{ character["character-name"] }}_{{ char_slug }}|||{% endfor %}{% endcapture %}
     {% assign sorted_entries = sort_blob | split: "|||" | sort %}
 
@@ -61,3 +73,7 @@ layout: default
     </p>
   {% endif %}
 </section>
+
+{% include character-modal.html character=modal_character open=is_character_page universe_slug=universe_slug lang=lang ui=ui placeholder_src=placeholder_src all_characters=characters relations=relations relation_types=relation_types view_url=mosaic_page.url %}
+
+<script src="{{ '/assets/js/character-modal.js' | relative_url }}" defer></script>

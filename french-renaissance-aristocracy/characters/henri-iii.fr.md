@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /fr/french-renaissance-aristocracy/characters/henri-iii/
 lang: fr
 character-name: "Henri III"
 metadata:

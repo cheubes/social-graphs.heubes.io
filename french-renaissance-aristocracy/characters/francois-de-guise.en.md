@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /french-renaissance-aristocracy/characters/francois-de-guise/
 lang: en
 character-name: "Francis, Duke of Guise"
 metadata:

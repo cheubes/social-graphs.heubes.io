@@ -1,4 +1,6 @@
 ---
+layout: character
+permalink: /french-renaissance-aristocracy/characters/marguerite-de-france/
 lang: en
 character-name: "Margaret of Valois"
 metadata:

@@ -1,0 +1,7 @@
+{% assign universe_slug = page.path | split: "/" | first %}
+{% if page.layout == "universe" %}
+  {% assign mosaic_page = page %}
+{% else %}
+  {% assign mosaic_path = universe_slug | append: "/mosaic." | append: lang | append: ".md" %}
+  {% assign mosaic_page = site.pages | where_exp: "p", "p.path == mosaic_path" | first %}
+{% endif %}
