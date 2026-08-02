@@ -27,7 +27,7 @@ Critère de fin : bundle exec jekyll serve tourne, l'en-tête et le pied de page
 correctement aux couleurs de la charte sur cette page de test.
 ```
 
-## 2. Premier univers de contenu + script de validation
+## 2. Premier univers de contenu + script de validation ✅
 
 Créer l'univers "french-renaissance-aristocracy" (déjà l'exemple illustratif de `data-model.md`) avec deux ou trois personnages et quelques relations, en suivant le format documenté à la lettre. Écrire `scripts/validate.rb` en parallèle, en le testant contre ce contenu réel. Voir `data-model.md` (Organisation des fichiers, Exemples) et `technical-specifications.md` (Validation des données).
 

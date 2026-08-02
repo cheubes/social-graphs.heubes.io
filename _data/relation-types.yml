@@ -1,0 +1,53 @@
+- slug: parent-of
+  label:
+    fr: "Parent de"
+    en: "Parent of"
+  reverse-label:
+    fr: "Enfant de"
+    en: "Child of"
+  directed: true
+
+- slug: married-to
+  label:
+    fr: "Marié à"
+    en: "Married to"
+  directed: false
+
+- slug: friend-of
+  label:
+    fr: "Ami de"
+    en: "Friend of"
+  directed: false
+
+- slug: rival-of
+  label:
+    fr: "Rival de"
+    en: "Rival of"
+  directed: false
+
+- slug: ally-of
+  label:
+    fr: "Allié de"
+    en: "Ally of"
+  directed: false
+
+- slug: uncle-or-aunt-of
+  label:
+    fr: "Oncle ou tante de"
+    en: "Uncle or aunt of"
+  reverse-label:
+    fr: "Neveu ou nièce de"
+    en: "Nephew or niece of"
+  directed: true
+
+- slug: sibling-of
+  label:
+    fr: "Frère ou sœur de"
+    en: "Sibling of"
+  directed: false
+
+- slug: cousin-of
+  label:
+    fr: "Cousin ou cousine de"
+    en: "Cousin of"
+  directed: false

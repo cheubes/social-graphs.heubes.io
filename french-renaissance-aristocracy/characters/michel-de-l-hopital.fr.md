@@ -1,0 +1,10 @@
+---
+lang: fr
+name: "Michel de l'Hôpital"
+metadata:
+  birth: "1507"
+  death: "1573"
+external-link: "https://fr.wikipedia.org/wiki/Michel_de_l%27Hospital"
+---
+
+Chancelier de France de 1560 à 1573, il mène une politique de tolérance religieuse envers les protestants, notamment par l'édit de janvier 1562, dans une tentative de prévenir la guerre civile.

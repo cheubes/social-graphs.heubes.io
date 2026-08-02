@@ -1,0 +1,511 @@
+relations:
+  - source-character: francois-ii
+    target-character: elisabeth-de-france
+    type: sibling-of
+    description:
+      fr: "François II est le frère d'Élisabeth de France."
+      en: "Francis II is Élisabeth de France's brother."
+
+  - source-character: francois-ii
+    target-character: claude-de-france
+    type: sibling-of
+    description:
+      fr: "François II est le frère de Claude de France."
+      en: "Francis II is Claude de France's brother."
+
+  - source-character: francois-ii
+    target-character: charles-ix
+    type: sibling-of
+    description:
+      fr: "François II est le frère de Charles IX."
+      en: "Francis II is Charles IX's brother."
+
+  - source-character: francois-ii
+    target-character: henri-iii
+    type: sibling-of
+    description:
+      fr: "François II est le frère d'Henri III."
+      en: "Francis II is Henri III's brother."
+
+  - source-character: francois-ii
+    target-character: marguerite-de-france
+    type: sibling-of
+    description:
+      fr: "François II est le frère de Marguerite de France."
+      en: "Francis II is Marguerite de France's brother."
+
+  - source-character: francois-ii
+    target-character: francois-de-france
+    type: sibling-of
+    description:
+      fr: "François II est le frère de François de France."
+      en: "Francis II is François de France's brother."
+
+  - source-character: elisabeth-de-france
+    target-character: claude-de-france
+    type: sibling-of
+    description:
+      fr: "Élisabeth de France est la sœur de Claude de France."
+      en: "Élisabeth de France is Claude de France's sister."
+
+  - source-character: elisabeth-de-france
+    target-character: charles-ix
+    type: sibling-of
+    description:
+      fr: "Élisabeth de France est la sœur de Charles IX."
+      en: "Élisabeth de France is Charles IX's sister."
+
+  - source-character: elisabeth-de-france
+    target-character: henri-iii
+    type: sibling-of
+    description:
+      fr: "Élisabeth de France est la sœur d'Henri III."
+      en: "Élisabeth de France is Henri III's sister."
+
+  - source-character: elisabeth-de-france
+    target-character: marguerite-de-france
+    type: sibling-of
+    description:
+      fr: "Élisabeth de France est la sœur de Marguerite de France."
+      en: "Élisabeth de France is Marguerite de France's sister."
+
+  - source-character: elisabeth-de-france
+    target-character: francois-de-france
+    type: sibling-of
+    description:
+      fr: "Élisabeth de France est la sœur de François de France."
+      en: "Élisabeth de France is François de France's sister."
+
+  - source-character: claude-de-france
+    target-character: charles-ix
+    type: sibling-of
+    description:
+      fr: "Claude de France est la sœur de Charles IX."
+      en: "Claude de France is Charles IX's sister."
+
+  - source-character: claude-de-france
+    target-character: henri-iii
+    type: sibling-of
+    description:
+      fr: "Claude de France est la sœur d'Henri III."
+      en: "Claude de France is Henri III's sister."
+
+  - source-character: claude-de-france
+    target-character: marguerite-de-france
+    type: sibling-of
+    description:
+      fr: "Claude de France est la sœur de Marguerite de France."
+      en: "Claude de France is Marguerite de France's sister."
+
+  - source-character: claude-de-france
+    target-character: francois-de-france
+    type: sibling-of
+    description:
+      fr: "Claude de France est la sœur de François de France."
+      en: "Claude de France is François de France's sister."
+
+  - source-character: charles-ix
+    target-character: henri-iii
+    type: sibling-of
+    description:
+      fr: "Charles IX est le frère d'Henri III."
+      en: "Charles IX is Henri III's brother."
+
+  - source-character: charles-ix
+    target-character: marguerite-de-france
+    type: sibling-of
+    description:
+      fr: "Charles IX est le frère de Marguerite de France."
+      en: "Charles IX is Marguerite de France's brother."
+
+  - source-character: charles-ix
+    target-character: francois-de-france
+    type: sibling-of
+    description:
+      fr: "Charles IX est le frère de François de France."
+      en: "Charles IX is François de France's brother."
+
+  - source-character: henri-iii
+    target-character: marguerite-de-france
+    type: sibling-of
+    description:
+      fr: "Henri III est le frère de Marguerite de France."
+      en: "Henri III is Marguerite de France's brother."
+
+  - source-character: henri-iii
+    target-character: francois-de-france
+    type: sibling-of
+    description:
+      fr: "Henri III est le frère de François de France."
+      en: "Henri III is François de France's brother."
+
+  - source-character: marguerite-de-france
+    target-character: francois-de-france
+    type: sibling-of
+    description:
+      fr: "Marguerite de France est la sœur de François de France."
+      en: "Marguerite de France is François de France's sister."
+
+  - source-character: francois-de-guise
+    target-character: cardinal-de-lorraine
+    type: sibling-of
+    description:
+      fr: "François de Guise est le frère du cardinal de Lorraine."
+      en: "François de Guise is the Cardinal of Lorraine's brother."
+
+  - source-character: francois-de-guise
+    target-character: claude-de-lorraine-aumale
+    type: sibling-of
+    description:
+      fr: "François de Guise est le frère de Claude de Lorraine, duc d'Aumale."
+      en: "François de Guise is Claude, Duke of Aumale's brother."
+
+  - source-character: cardinal-de-lorraine
+    target-character: claude-de-lorraine-aumale
+    type: sibling-of
+    description:
+      fr: "Le cardinal de Lorraine est le frère de Claude de Lorraine, duc d'Aumale."
+      en: "The Cardinal of Lorraine is Claude, Duke of Aumale's brother."
+
+  - source-character: henri-de-guise
+    target-character: charles-de-mayenne
+    type: sibling-of
+    description:
+      fr: "Henri de Guise est le frère de Charles de Mayenne."
+      en: "Henri de Guise is Charles de Mayenne's brother."
+
+  - source-character: antoine-de-bourbon
+    target-character: charles-de-bourbon
+    type: sibling-of
+    description:
+      fr: "Antoine de Bourbon est le frère du cardinal Charles de Bourbon."
+      en: "Antoine de Bourbon is Cardinal Charles de Bourbon's brother."
+
+  - source-character: antoine-de-bourbon
+    target-character: louis-i-de-conde
+    type: sibling-of
+    description:
+      fr: "Antoine de Bourbon est le frère de Louis Ier de Condé."
+      en: "Antoine de Bourbon is Louis I of Condé's brother."
+
+  - source-character: charles-de-bourbon
+    target-character: louis-i-de-conde
+    type: sibling-of
+    description:
+      fr: "Le cardinal Charles de Bourbon est le frère de Louis Ier de Condé."
+      en: "Cardinal Charles de Bourbon is Louis I of Condé's brother."
+
+  - source-character: francois-de-montmorency
+    target-character: henri-de-montmorency-damville
+    type: sibling-of
+    description:
+      fr: "François de Montmorency est le frère d'Henri Ier de Montmorency-Damville."
+      en: "François de Montmorency is Henri de Montmorency-Damville's brother."
+
+  - source-character: cardinal-de-lorraine
+    target-character: henri-de-guise
+    type: uncle-or-aunt-of
+    description:
+      fr: "Le cardinal de Lorraine est l'oncle d'Henri de Guise."
+      en: "The Cardinal of Lorraine is Henri de Guise's uncle."
+
+  - source-character: cardinal-de-lorraine
+    target-character: charles-de-mayenne
+    type: uncle-or-aunt-of
+    description:
+      fr: "Le cardinal de Lorraine est l'oncle de Charles de Mayenne."
+      en: "The Cardinal of Lorraine is Charles de Mayenne's uncle."
+
+  - source-character: claude-de-lorraine-aumale
+    target-character: henri-de-guise
+    type: uncle-or-aunt-of
+    description:
+      fr: "Claude de Lorraine, duc d'Aumale, est l'oncle d'Henri de Guise."
+      en: "Claude, Duke of Aumale, is Henri de Guise's uncle."
+
+  - source-character: claude-de-lorraine-aumale
+    target-character: charles-de-mayenne
+    type: uncle-or-aunt-of
+    description:
+      fr: "Claude de Lorraine, duc d'Aumale, est l'oncle de Charles de Mayenne."
+      en: "Claude, Duke of Aumale, is Charles de Mayenne's uncle."
+
+  - source-character: charles-de-bourbon
+    target-character: henri-de-navarre
+    type: uncle-or-aunt-of
+    description:
+      fr: "Le cardinal Charles de Bourbon est l'oncle d'Henri de Navarre."
+      en: "Cardinal Charles de Bourbon is Henri de Navarre's uncle."
+
+  - source-character: louis-i-de-conde
+    target-character: henri-de-navarre
+    type: uncle-or-aunt-of
+    description:
+      fr: "Louis Ier de Condé est l'oncle d'Henri de Navarre."
+      en: "Louis I of Condé is Henri de Navarre's uncle."
+
+  - source-character: antoine-de-bourbon
+    target-character: henri-i-de-conde
+    type: uncle-or-aunt-of
+    description:
+      fr: "Antoine de Bourbon est l'oncle d'Henri Ier de Condé."
+      en: "Antoine de Bourbon is Henry I of Condé's uncle."
+
+  - source-character: charles-de-bourbon
+    target-character: henri-i-de-conde
+    type: uncle-or-aunt-of
+    description:
+      fr: "Le cardinal Charles de Bourbon est l'oncle d'Henri Ier de Condé."
+      en: "Cardinal Charles de Bourbon is Henry I of Condé's uncle."
+
+  - source-character: henri-i-de-conde
+    target-character: henri-de-navarre
+    type: cousin-of
+    description:
+      fr: "Henri Ier de Condé et Henri de Navarre sont cousins germains, fils de deux frères."
+      en: "Henri I of Condé and Henri de Navarre are first cousins, sons of two brothers."
+
+  - source-character: diane-de-poitiers
+    target-character: catherine-de-medici
+    type: rival-of
+    description:
+      fr: "Diane de Poitiers, favorite d'Henri II, est la grande rivale de Catherine de Médicis à la cour."
+      en: "Diane de Poitiers, Henri II's favourite, was Catherine de' Medici's great rival at court."
+
+  - source-character: antoine-de-bourbon
+    target-character: jeanne-d-albret
+    type: married-to
+    description:
+      fr: "Antoine de Bourbon épouse Jeanne d'Albret en 1548, devenant roi de Navarre."
+      en: "Antoine de Bourbon married Jeanne d'Albret in 1548, becoming King of Navarre."
+
+  - source-character: antoine-de-bourbon
+    target-character: henri-de-navarre
+    type: parent-of
+    description:
+      fr: "Antoine de Bourbon est le père d'Henri de Navarre."
+      en: "Antoine de Bourbon is Henri de Navarre's father."
+
+  - source-character: louise-de-lorraine
+    target-character: henri-iii
+    type: married-to
+    description:
+      fr: "Louise de Lorraine épouse Henri III en 1575 et devient reine de France."
+      en: "Louise de Lorraine married Henri III in 1575 and became Queen of France."
+
+  - source-character: marie-stuart
+    target-character: francois-ii
+    type: married-to
+    description:
+      fr: "Marie Stuart épouse le dauphin François, futur François II, en 1558."
+      en: "Mary, Queen of Scots married the Dauphin Francis, later Francis II, in 1558."
+
+  - source-character: elisabeth-d-autriche
+    target-character: charles-ix
+    type: married-to
+    description:
+      fr: "Élisabeth d'Autriche épouse Charles IX en 1570 et devient reine de France."
+      en: "Elisabeth of Austria married Charles IX in 1570 and became Queen of France."
+
+  - source-character: anne-de-montmorency
+    target-character: francois-de-montmorency
+    type: parent-of
+    description:
+      fr: "Anne de Montmorency est le père de François de Montmorency."
+      en: "Anne de Montmorency is François de Montmorency's father."
+
+  - source-character: anne-de-montmorency
+    target-character: henri-de-montmorency-damville
+    type: parent-of
+    description:
+      fr: "Anne de Montmorency est le père d'Henri Ier de Montmorency-Damville."
+      en: "Anne de Montmorency is Henri de Montmorency-Damville's father."
+
+  - source-character: louis-i-de-conde
+    target-character: henri-i-de-conde
+    type: parent-of
+    description:
+      fr: "Louis Ier de Condé est le père d'Henri Ier de Condé."
+      en: "Louis I of Condé is Henry I of Condé's father."
+
+  - source-character: antoinette-de-bourbon
+    target-character: francois-de-guise
+    type: parent-of
+    description:
+      fr: "Antoinette de Bourbon est la mère de François de Guise."
+      en: "Antoinette de Bourbon is François de Guise's mother."
+
+  - source-character: antoinette-de-bourbon
+    target-character: cardinal-de-lorraine
+    type: parent-of
+    description:
+      fr: "Antoinette de Bourbon est la mère du cardinal de Lorraine."
+      en: "Antoinette de Bourbon is the Cardinal of Lorraine's mother."
+
+  - source-character: antoinette-de-bourbon
+    target-character: claude-de-lorraine-aumale
+    type: parent-of
+    description:
+      fr: "Antoinette de Bourbon est la mère de Claude de Lorraine, duc d'Aumale."
+      en: "Antoinette de Bourbon is Claude, Duke of Aumale's mother."
+
+  - source-character: henri-ii
+    target-character: catherine-de-medici
+    type: married-to
+    description:
+      fr: "Henri II épouse Catherine de Médicis en 1533."
+      en: "Henri II married Catherine de' Medici in 1533."
+
+  - source-character: henri-ii
+    target-character: henri-iii
+    type: parent-of
+    description:
+      fr: "Henri II est le père d'Henri III."
+      en: "Henri II is Henri III's father."
+
+  - source-character: henri-ii
+    target-character: francois-ii
+    type: parent-of
+    description:
+      fr: "Henri II est le père de François II."
+      en: "Henri II is Francis II's father."
+
+  - source-character: henri-ii
+    target-character: charles-ix
+    type: parent-of
+    description:
+      fr: "Henri II est le père de Charles IX."
+      en: "Henri II is Charles IX's father."
+
+  - source-character: henri-ii
+    target-character: marguerite-de-france
+    type: parent-of
+    description:
+      fr: "Henri II est le père de Marguerite de France."
+      en: "Henri II is Marguerite de France's father."
+
+  - source-character: henri-ii
+    target-character: elisabeth-de-france
+    type: parent-of
+    description:
+      fr: "Henri II est le père d'Élisabeth de France."
+      en: "Henri II is Élisabeth de France's father."
+
+  - source-character: henri-ii
+    target-character: claude-de-france
+    type: parent-of
+    description:
+      fr: "Henri II est le père de Claude de France."
+      en: "Henri II is Claude de France's father."
+
+  - source-character: henri-ii
+    target-character: francois-de-france
+    type: parent-of
+    description:
+      fr: "Henri II est le père de François de France."
+      en: "Henri II is François de France's father."
+
+  - source-character: catherine-de-medici
+    target-character: henri-iii
+    type: parent-of
+    description:
+      fr: "Catherine de Médicis est la mère d'Henri III."
+      en: "Catherine de Médicis is Henri III's mother."
+
+  - source-character: catherine-de-medici
+    target-character: francois-ii
+    type: parent-of
+    description:
+      fr: "Catherine de Médicis est la mère de François II."
+      en: "Catherine de Médicis is Francis II's mother."
+
+  - source-character: catherine-de-medici
+    target-character: charles-ix
+    type: parent-of
+    description:
+      fr: "Catherine de Médicis est la mère de Charles IX."
+      en: "Catherine de Médicis is Charles IX's mother."
+
+  - source-character: catherine-de-medici
+    target-character: marguerite-de-france
+    type: parent-of
+    description:
+      fr: "Catherine de Médicis est la mère de Marguerite de France."
+      en: "Catherine de Médicis is Marguerite de France's mother."
+
+  - source-character: catherine-de-medici
+    target-character: elisabeth-de-france
+    type: parent-of
+    description:
+      fr: "Catherine de Médicis est la mère d'Élisabeth de France."
+      en: "Catherine de Médicis is Élisabeth de France's mother."
+
+  - source-character: catherine-de-medici
+    target-character: claude-de-france
+    type: parent-of
+    description:
+      fr: "Catherine de Médicis est la mère de Claude de France."
+      en: "Catherine de Médicis is Claude de France's mother."
+
+  - source-character: catherine-de-medici
+    target-character: francois-de-france
+    type: parent-of
+    description:
+      fr: "Catherine de Médicis est la mère de François de France."
+      en: "Catherine de Médicis is François de France's mother."
+
+  - source-character: henri-iii
+    target-character: henri-de-guise
+    type: rival-of
+    description:
+      fr: "Henri III et Henri de Guise s'affrontent pour le contrôle du royaume pendant les guerres de Religion."
+      en: "Henri III and Henri de Guise struggle for control of the kingdom during the French Wars of Religion."
+
+  - source-character: henri-de-guise
+    target-character: henri-iii
+    type: vassal-of
+    description:
+      fr: "En tant que duc de Guise, Henri de Guise est théoriquement vassal du roi Henri III."
+      en: "As Duke of Guise, Henri de Guise is theoretically a vassal of King Henri III."
+
+  - source-character: henri-de-navarre
+    target-character: marguerite-de-france
+    type: married-to
+    description:
+      fr: "Henri de Navarre épouse Marguerite de France en 1572, quelques jours avant le massacre de la Saint-Barthélemy."
+      en: "Henri de Navarre married Marguerite de France in 1572, days before the St Bartholomew's Day Massacre."
+
+  - source-character: philippe-ii
+    target-character: elisabeth-de-france
+    type: married-to
+    description:
+      fr: "Philippe II d'Espagne épouse Élisabeth de France en 1559, scellant le traité du Cateau-Cambrésis."
+      en: "Philip II of Spain married Élisabeth de France in 1559, sealing the Treaty of Cateau-Cambrésis."
+
+  - source-character: jeanne-d-albret
+    target-character: henri-de-navarre
+    type: parent-of
+    description:
+      fr: "Jeanne d'Albret est la mère d'Henri de Navarre."
+      en: "Jeanne d'Albret is Henri de Navarre's mother."
+
+  - source-character: francois-de-guise
+    target-character: henri-de-guise
+    type: parent-of
+    description:
+      fr: "François de Guise est le père d'Henri de Guise."
+      en: "François de Guise is Henri de Guise's father."
+
+  - source-character: francois-de-guise
+    target-character: charles-de-mayenne
+    type: parent-of
+    description:
+      fr: "François de Guise est le père de Charles de Mayenne."
+      en: "François de Guise is Charles de Mayenne's father."
+
+  - source-character: henri-de-guise
+    target-character: gaspard-de-coligny
+    type: rival-of
+    description:
+      fr: "Henri de Guise fait assassiner Gaspard de Coligny en 1572, le tenant pour responsable de la mort de son père."
+      en: "Henri de Guise had Gaspard de Coligny assassinated in 1572, holding him responsible for his father's death."
