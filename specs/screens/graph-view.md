@@ -6,7 +6,7 @@ Permettre au visiteur d'explorer visuellement le réseau de personnages d'un uni
 
 ## Contenu et structure
 
-Cette vue partage l'en-tête, la présentation de l'univers, le switcher "Vue Mosaïque" / "Vue Graphe" et le pied de page avec `universe-home.md` ; seul le contenu principal ci-dessous lui est propre.
+Cette vue partage l'en-tête (dont le switcher "Vue Mosaïque" / "Vue Graphe", voir `style-guide.md`) et le pied de page avec `universe-home.md` ; seul le contenu principal ci-dessous lui est propre.
 
 - Graphe interactif :
   - Un nœud par personnage disponible dans la langue courante (même règle de masquage que pour les univers non traduits, voir "Multilingue" dans `functional-specifications.md`), affichant son portrait et son `character-name`.
@@ -22,7 +22,7 @@ Cette vue partage l'en-tête, la présentation de l'univers, le switcher "Vue Mo
 - Survol ou clic sur une arête : affiche le détail de la relation (le libellé dans le bon sens selon l'extrémité concernée, et sa `description` si renseignée ; voir "Type de relation" dans `data-model.md`).
 - Zoom et déplacement (pan) dans le graphe.
 - Recherche/filtre : met en évidence ou masque les éléments correspondants (détail dans `search-filter.md`).
-- Clic sur le switcher "Vue Mosaïque" : retourne à la vue mosaïque de cet univers (voir `universe-home.md`), en-tête et présentation de l'univers inchangés.
+- Clic sur le switcher "Vue Mosaïque" : retourne à la vue mosaïque de cet univers (voir `universe-home.md`), seul l'état actif du switcher change dans l'en-tête, le reste restant inchangé.
 - Changement de langue via le sélecteur : réaffiche la vue dans la langue choisie si elle existe (voir "Multilingue" dans `functional-specifications.md`), sinon affiche le message d'indisponibilité.
 
 ## États (chargement, erreur, vide, indisponible)

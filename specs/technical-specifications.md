@@ -90,7 +90,7 @@ Versions vérifiées comme les dernières stables disponibles sur jsDelivr à la
 │
 ├── _includes/
 │   ├── head.html
-│   ├── header.html               # identité du site, sélecteur de langue
+│   ├── header.html               # identité du site ou de l'univers, switcher, sélecteur de langue
 │   ├── footer.html
 │   ├── universe-card.html        # tuile univers (accueil du site)
 │   ├── character-card.html       # tuile personnage (Vue Mosaïque)
@@ -188,7 +188,7 @@ Chaque univers vit dans son propre dossier à la racine du site (`/<slug-univers
 
 ### Switcher Vue Mosaïque / Vue Graphe
 
-Le switcher (voir `universe-home.md`, `graph-view.md`) est un lien entre deux pages statiques distinctes, pas une bascule en JavaScript sans rechargement : chaque clic est une navigation complète, cohérente avec le choix de deux pages séparées. La structure de page identique entre les deux vues (même en-tête, même présentation de l'univers) limite le changement visuel perçu au rechargement.
+Le switcher (voir `universe-home.md`, `graph-view.md`) est un lien entre deux pages statiques distinctes, pas une bascule en JavaScript sans rechargement : chaque clic est une navigation complète, cohérente avec le choix de deux pages séparées. La structure de page identique entre les deux vues (même en-tête) limite le changement visuel perçu au rechargement.
 
 ### Modale fiche personnage et synchronisation d'URL
 

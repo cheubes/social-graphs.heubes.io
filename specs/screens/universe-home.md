@@ -6,11 +6,8 @@ Présenter l'univers au visiteur (de quoi s'agit-il, quel est son contexte), et 
 
 ## Contenu et structure
 
-- En-tête : logo et `title` de l'univers courant, sélecteur de langue, lien de retour vers l'accueil du site (voir `style-guide.md`).
-- Image de couverture de l'univers.
-- `title` et `description` de l'univers (voir `data-model.md`).
-- `source-type`, affiché comme indication de contexte (ex : "période historique").
-- Switcher "Vue Mosaïque" / "Vue Graphe" : bascule le contenu principal ci-dessous entre les deux vues, sans changer l'en-tête ni la présentation de l'univers au-dessus. Présent et identique dans les deux vues ; chaque vue reste une page à part entière, l'URL diffère entre les deux (voir `technical-specifications.md`), mais la bascule se comporte comme un changement d'onglet plutôt que comme une navigation vers un contenu différent.
+- En-tête : couverture et `title` de l'univers courant (voir `data-model.md`), switcher "Vue Mosaïque" / "Vue Graphe" sous le titre, logo du site en lien de retour vers l'accueil, sélecteur de langue (voir `style-guide.md`). Ni `source-type` ni `description` de l'univers n'y sont affichés.
+- Switcher "Vue Mosaïque" / "Vue Graphe" : bascule le contenu principal ci-dessous entre les deux vues, sans changer le reste de l'en-tête (couverture, titre, logo, sélecteur de langue). Présent et identique dans les deux vues, seul son état actif diffère ; chaque vue reste une page à part entière, l'URL diffère entre les deux (voir `technical-specifications.md`), mais la bascule se comporte comme un changement d'onglet plutôt que comme une navigation vers un contenu différent.
 - Barre de recherche, présente sur les deux vues ; les filtres de type de relation s'y ajoutent uniquement en Vue Graphe (voir `search-filter.md` pour son contenu et son comportement détaillés).
 - Contenu principal, en Vue Mosaïque : mosaïque des personnages de l'univers, une tuile par personnage disponible dans la langue courante (même règle de masquage que pour les univers non traduits, voir "Multilingue" dans `functional-specifications.md`). Chaque tuile affiche le portrait, le `character-name` et la `description` du personnage.
   - La `description` est tronquée (avec une marque de troncature, ex : "...") au-delà d'une certaine longueur ; la valeur précise relève du design (voir `style-guide.md`).
@@ -21,7 +18,7 @@ Présenter l'univers au visiteur (de quoi s'agit-il, quel est son contexte), et 
 
 ## Interactions
 
-- Clic sur le switcher "Vue Graphe" : bascule vers la vue graphe interactif de cet univers (voir `graph-view.md`), l'en-tête et la présentation de l'univers restant inchangés.
+- Clic sur le switcher "Vue Graphe" : bascule vers la vue graphe interactif de cet univers (voir `graph-view.md`), seul l'état actif du switcher change dans l'en-tête, le reste restant inchangé.
 - Clic sur une tuile de personnage : ouvre la fiche de ce personnage en modale, superposée à la vue courante, sans navigation vers une nouvelle page (voir `character-sheet.md`).
 - Changement de langue via le sélecteur : réaffiche la page dans la langue choisie si elle existe (voir "Multilingue" dans `functional-specifications.md`), sinon affiche le message d'indisponibilité.
 - Clic sur le lien de retour : navigue vers l'accueil du site.
@@ -35,4 +32,4 @@ Présenter l'univers au visiteur (de quoi s'agit-il, quel est son contexte), et 
 
 ## Responsive
 
-Le contenu (image, titre, description, switcher) s'empile verticalement sur les petits écrans. La mosaïque de personnages s'adapte à la largeur de l'écran (une colonne sur mobile, plusieurs colonnes au-delà), comme celle des univers sur l'accueil du site.
+Le comportement responsive de l'en-tête (couverture, titre, switcher, logo, sélecteur de langue) est défini dans `style-guide.md`. Le contenu principal (mosaïque de personnages) s'adapte à la largeur de l'écran (une colonne sur mobile, plusieurs colonnes au-delà), comme celle des univers sur l'accueil du site.

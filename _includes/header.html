@@ -3,24 +3,51 @@
   {% assign en_home = "/" | relative_url %}
   {% assign home_url = en_home %}
   {% if lang == "fr" %}{% assign home_url = fr_home %}{% endif %}
-  <div class="container-fluid d-flex align-items-center justify-content-between">
-    <a href="{{ home_url }}" class="sg-header-brand d-flex align-items-center gap-2 text-decoration-none">
-      <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="" class="sg-header-logo">
-      <span class="d-flex flex-column">
-        <span class="sg-header-title">{{ site.title }}</span>
-        {% if page.layout == "home" %}
-          <span class="sg-header-tagline">{{ ui["tagline"] }}</span>
-        {% elsif page.layout == "universe" %}
-          <span class="sg-header-tagline">{{ page.title }}</span>
-        {% elsif page.layout == "universe-graph" or page.layout == "character" %}
-          {% include resolve-mosaic-page.html %}
-          <span class="sg-header-tagline">{{ mosaic_page.title }}</span>
-        {% endif %}
-      </span>
-    </a>
-    <div class="sg-lang-switcher d-flex flex-column gap-2">
-      <a href="{{ fr_home }}" class="sg-lang-flag text-decoration-none" data-lang="fr" aria-label="Français">🇫🇷</a>
-      <a href="{{ en_home }}" class="sg-lang-flag text-decoration-none" data-lang="en" aria-label="English">🇬🇧</a>
+  {% assign is_universe_page = false %}
+  {% if page.layout == "universe" or page.layout == "universe-graph" or page.layout == "character" %}
+    {% assign is_universe_page = true %}
+  {% endif %}
+  <div class="container-fluid d-flex align-items-center justify-content-between gap-3">
+    {% if is_universe_page %}
+      {% include resolve-mosaic-page.html %}
+      {% assign cover_src = "/" | append: universe_slug | append: "/cover.jpg" | relative_url %}
+      {% assign placeholder_src = "/assets/img/cover-placeholder.svg" | relative_url %}
+      {% assign mosaic_url = mosaic_page.url | relative_url %}
+      {% assign graph_url = mosaic_page.url | append: "graph/" | relative_url %}
+      {% assign switcher_active = "mosaic" %}
+      {% if page.layout == "universe-graph" %}{% assign switcher_active = "graph" %}{% endif %}
+      <div class="sg-header-universe d-flex align-items-center gap-3">
+        <img src="{{ cover_src }}"
+          class="sg-header-cover"
+          alt=""
+          loading="lazy"
+          onerror="this.onerror=null; this.src='{{ placeholder_src }}';">
+        <div class="sg-header-universe-info d-flex flex-column justify-content-center gap-1">
+          <span class="sg-header-universe-title text-truncate">{{ mosaic_page.title }}</span>
+          {% include view-switcher.html active=switcher_active mosaic_url=mosaic_url graph_url=graph_url ui=ui %}
+        </div>
+      </div>
+    {% else %}
+      <a href="{{ home_url }}" class="sg-header-brand d-flex align-items-center gap-2 text-decoration-none">
+        <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="" class="sg-header-logo">
+        <span class="d-flex flex-column">
+          <span class="sg-header-title">{{ site.title }}</span>
+          {% if page.layout == "home" %}
+            <span class="sg-header-tagline">{{ ui["tagline"] }}</span>
+          {% endif %}
+        </span>
+      </a>
+    {% endif %}
+    <div class="sg-header-actions d-flex align-items-center gap-3">
+      {% if is_universe_page %}
+        <a href="{{ home_url }}" class="sg-header-home-link" aria-label="{{ site.title }}">
+          <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="" class="sg-header-logo">
+        </a>
+      {% endif %}
+      <div class="sg-lang-switcher d-flex flex-column gap-2">
+        <a href="{{ fr_home }}" class="sg-lang-flag text-decoration-none" data-lang="fr" aria-label="Français">🇫🇷</a>
+        <a href="{{ en_home }}" class="sg-lang-flag text-decoration-none" data-lang="en" aria-label="English">🇬🇧</a>
+      </div>
     </div>
   </div>
 </header>

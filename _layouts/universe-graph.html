@@ -5,16 +5,9 @@ layout: default
 {% assign ui_key = "ui" | append: lang %}
 {% assign ui = site.data[ui_key] %}
 {% include resolve-mosaic-page.html %}
-{% assign cover_src = "/" | append: universe_slug | append: "/cover.jpg" | relative_url %}
 {% assign placeholder_src = "/assets/img/cover-placeholder.svg" | relative_url %}
-{% assign mosaic_url = mosaic_page.url | relative_url %}
-{% assign graph_url = page.url | relative_url %}
 
 <section class="sg-universe">
-  {% include universe-header.html %}
-
-  {% include view-switcher.html active="graph" mosaic_url=mosaic_url graph_url=graph_url ui=ui %}
-
   {% include resolve-universe-characters.html %}
   {% assign sorted_relation_types = relation_types | sort: "slug" %}
 

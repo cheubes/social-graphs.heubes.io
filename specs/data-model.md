@@ -11,7 +11,7 @@ Un univers regroupe un ensemble de personnages et les relations qui les lient. I
 | `slug` | Non | Identifiant unique, construit à partir du nom anglais, utilisé dans l'URL (ex : `renaissance-artists`) |
 | `lang` | Non | Langue de ce document (`fr` ou `en`) ; permet d'associer les deux documents d'un même univers |
 | `title` | Oui | Nom affiché de l'univers |
-| `description` | Oui | Texte de présentation, affiché sur la tuile d'accueil et la page d'accueil de l'univers |
+| `description` | Oui | Texte de présentation, affiché sur la tuile d'accueil (voir `home.md`) ; non affiché sur les pages de l'univers lui-même (voir `universe-home.md`) |
 | `source-type` | Oui | Catégorie libre indicative (roman, série, période historique, autre) |
 | `characters` | — | Liste des personnages de l'univers |
 | `relations` | — | Liste des relations entre ces personnages |

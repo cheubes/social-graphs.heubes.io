@@ -5,9 +5,7 @@ layout: default
 {% assign ui_key = "ui" | append: lang %}
 {% assign ui = site.data[ui_key] %}
 {% include resolve-mosaic-page.html %}
-{% assign cover_src = "/" | append: universe_slug | append: "/cover.jpg" | relative_url %}
 {% assign placeholder_src = "/assets/img/cover-placeholder.svg" | relative_url %}
-{% assign graph_url = mosaic_page.url | append: "graph/" | relative_url %}
 {% assign is_character_page = false %}
 {% assign modal_character = nil %}
 {% if page.layout == "character" %}
@@ -16,11 +14,6 @@ layout: default
 {% endif %}
 
 <section class="sg-universe">
-  {% include universe-header.html %}
-
-  {% assign mosaic_url = mosaic_page.url | relative_url %}
-  {% include view-switcher.html active="mosaic" mosaic_url=mosaic_url graph_url=graph_url ui=ui %}
-
   {% include resolve-universe-characters.html %}
 
   {% if characters.size > 0 %}

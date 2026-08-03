@@ -74,8 +74,13 @@ Pas de grille ni d'échelle d'espacement custom : la grille et les classes utili
 
 ### En-tête
 
-- **Gauche** : logo (`assets/img/logo.png`, voir "Images"), puis tagline du site sur l'accueil, ou `title` de l'univers courant sur une page d'univers.
-- **Droite** : sélecteur de langue, deux drapeaux 🇫🇷 / 🇬🇧, chacun avec un `aria-label` explicite ("Français" / "English") puisqu'un emoji seul n'est pas toujours annoncé de façon fiable par un lecteur d'écran.
+- **Accueil et pages génériques** (ex : message d'indisponibilité) :
+  - **Gauche** : logo (`assets/img/logo.png`, voir "Images"), puis tagline du site sur l'accueil.
+  - **Droite** : sélecteur de langue.
+- **Pages univers** (Vue Mosaïque, Vue Graphe, fiche personnage) :
+  - **Gauche** : couverture de l'univers courant (coins arrondis, voir "Images"), puis son `title` avec le switcher Vue Mosaïque / Vue Graphe (voir ci-dessous) juste en dessous. Ni `source-type` ni `description` de l'univers ne sont repris dans l'en-tête.
+  - **Droite** : logo du site, en lien vers l'accueil, puis sélecteur de langue.
+- Sélecteur de langue : deux drapeaux 🇫🇷 / 🇬🇧, chacun avec un `aria-label` explicite ("Français" / "English") puisqu'un emoji seul n'est pas toujours annoncé de façon fiable par un lecteur d'écran.
 - Fond `--sg-blue`, texte `--sg-white`, bordure basse `--sg-gold`.
 - En-tête collant (`position: sticky`) en haut de page, pour rester accessible sur les pages longues (Vue Mosaïque, Vue Graphe), en écho au pied de page fixe.
 - Reste au-dessus de la modale fiche personnage (voir `character-sheet.md`) dans l'empilement visuel, pour que le sélecteur de langue reste utilisable modale ouverte.
@@ -101,7 +106,7 @@ Pas de grille ni d'échelle d'espacement custom : la grille et les classes utili
 
 ### Switcher Vue Mosaïque / Vue Graphe
 
-- Groupe de deux boutons (`btn-group` Bootstrap). Vue active : fond `--sg-blue`, texte `--sg-white`. Vue inactive : texte `--sg-grey`, fond transparent.
+- Groupe de deux boutons (`btn-group` Bootstrap), logé dans l'en-tête sous le `title` de l'univers (voir "En-tête" ci-dessus) : ses couleurs sont donc pensées pour le fond `--sg-blue` de l'en-tête, pas pour un fond blanc. Vue active : fond `--sg-gold`, texte `--sg-blue`. Vue inactive : texte `--sg-white`, fond transparent, bordure blanche atténuée ; au survol, texte et bordure `--sg-gold`.
 
 ### Barre de recherche / filtres
 
