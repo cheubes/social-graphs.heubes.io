@@ -11,7 +11,7 @@ Présenter l'univers au visiteur (de quoi s'agit-il, quel est son contexte), et 
 - `title` et `description` de l'univers (voir `data-model.md`).
 - `source-type`, affiché comme indication de contexte (ex : "période historique").
 - Switcher "Vue Mosaïque" / "Vue Graphe" : bascule le contenu principal ci-dessous entre les deux vues, sans changer l'en-tête ni la présentation de l'univers au-dessus. Présent et identique dans les deux vues ; chaque vue reste une page à part entière, l'URL diffère entre les deux (voir `technical-specifications.md`), mais la bascule se comporte comme un changement d'onglet plutôt que comme une navigation vers un contenu différent.
-- Barre de recherche/filtre, présente et identique dans les deux vues (voir `search-filter.md` pour son contenu et son comportement détaillés).
+- Barre de recherche, présente sur les deux vues ; les filtres de type de relation s'y ajoutent uniquement en Vue Graphe (voir `search-filter.md` pour son contenu et son comportement détaillés).
 - Contenu principal, en Vue Mosaïque : mosaïque des personnages de l'univers, une tuile par personnage disponible dans la langue courante (même règle de masquage que pour les univers non traduits, voir "Multilingue" dans `functional-specifications.md`). Chaque tuile affiche le portrait, le `character-name` et la `description` du personnage.
   - La `description` est tronquée (avec une marque de troncature, ex : "...") au-delà d'une certaine longueur ; la valeur précise relève du design (voir `style-guide.md`).
   - Le portrait se charge en lazy loading, même principe que pour l'image de couverture des univers sur `home.md`.

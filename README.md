@@ -4,7 +4,7 @@ A site presenting "universes" (the characters of a novel, a TV series, a histori
 
 ## Status
 
-Specifications are complete in [`specs/`](specs/); implementation is underway following [`BUILD-PLAN.md`](BUILD-PLAN.md)'s incremental steps (✅ 6/11 — graph view).
+Specifications are complete in [`specs/`](specs/); implementation is underway following [`BUILD-PLAN.md`](BUILD-PLAN.md)'s incremental steps (✅ 7/11 — search and filter).
 
 - [`CLAUDE.md`](CLAUDE.md) — how the specs are organized and how to use them.
 - [`BUILD-PLAN.md`](BUILD-PLAN.md) — the incremental implementation plan, with a ready-to-use prompt per step.

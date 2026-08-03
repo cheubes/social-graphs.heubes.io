@@ -1,6 +1,7 @@
 {% assign character_slug = character.path | split: "/" | last | split: "." | first %}
 {% assign portrait_src = "/" | append: universe_slug | append: "/characters/" | append: character_slug | append: ".jpg" | relative_url %}
-<a href="{{ character.url | relative_url }}" class="sg-card-link sg-character-link text-decoration-none">
+<a href="{{ character.url | relative_url }}" class="sg-card-link sg-character-link text-decoration-none"
+  data-character-name="{{ character["character-name"] }}">
   <div class="card sg-card h-100">
     <img src="{{ portrait_src }}"
       class="card-img-top sg-character-portrait"

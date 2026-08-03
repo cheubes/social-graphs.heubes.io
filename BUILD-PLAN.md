@@ -126,7 +126,7 @@ Critère de fin : le switcher Vue Mosaïque / Vue Graphe fonctionne dans les deu
 graphe de l'univers de test se lit correctement (nœuds, arêtes, couleurs, sens des flèches).
 ```
 
-## 7. Recherche et filtre
+## 7. Recherche et filtre ✅
 
 Barre de recherche et filtres par type sur les deux vues, légende du graphe qui en découle. Voir `screens/search-filter.md`.
 

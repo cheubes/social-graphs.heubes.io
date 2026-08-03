@@ -35,13 +35,15 @@ layout: default
     {% endfor %}
 
     {% comment %}
-      Arêtes et légende, construites ensemble : la couleur d'un type est son rang alphabétique
-      de slug dans la taxonomie disponible pour cet univers (commune + extensions), voir
-      style-guide.md ; la légende ne retient que les types ayant au moins une arête affichée.
+      Arêtes : la couleur d'un type est son rang alphabétique de slug dans la taxonomie
+      disponible pour cet univers (commune + extensions), voir style-guide.md. Cette boucle
+      calcule aussi used_type_slugs (jetons espacés des types ayant au moins une arête
+      rendue), transmis à search-filter.html pour ses filtres/légende (voir graph-view.md)
+      plutôt que de lui faire refaire cette même résolution personnage par personnage.
     {% endcomment %}
     {% assign edges_json = "" %}
     {% assign edge_count = 0 %}
-    {% assign legend_json = "" %}
+    {% assign used_type_slugs = " " %}
     {% for rel_type in sorted_relation_types %}
       {% assign color_num = forloop.index0 | modulo: 8 | plus: 1 %}
       {% assign color_var = "var(--sg-graph-color-" | append: color_num | append: ")" %}
@@ -50,7 +52,6 @@ layout: default
       {% include json-escape.html value=rel_label_raw %}
       {% assign rel_label = json_escaped %}
       {% assign type_relations = relations | where: "type", rel_type.slug %}
-      {% assign type_rendered_count = 0 %}
       {% for relation in type_relations %}
         {% assign src_slug = relation["source-character"] %}
         {% assign tgt_slug = relation["target-character"] %}
@@ -59,7 +60,6 @@ layout: default
         {% assign src_char = characters | where_exp: "c", "c.path == src_path" | first %}
         {% assign tgt_char = characters | where_exp: "c", "c.path == tgt_path" | first %}
         {% if src_char and tgt_char %}
-          {% assign type_rendered_count = type_rendered_count | plus: 1 %}
           {% assign rel_desc_raw = relation.description[lang] %}
           {% include json-escape.html value=rel_desc_raw %}
           {% assign rel_desc = json_escaped %}
@@ -67,37 +67,30 @@ layout: default
           {% if edge_count > 0 %}{% assign edges_json = edges_json | append: "," %}{% endif %}
           {% assign edges_json = edges_json | append: edge_entry %}
           {% assign edge_count = edge_count | plus: 1 %}
+          {% assign used_type_slugs = used_type_slugs | append: rel_type.slug | append: " " %}
         {% endif %}
       {% endfor %}
-      {% if type_rendered_count > 0 %}
-        {% capture legend_entry %}{"type":"{{ rel_type.slug }}","label":"{{ rel_label }}","color":"{{ color_var }}"}{% endcapture %}
-        {% if legend_json != "" %}{% assign legend_json = legend_json | append: "," %}{% endif %}
-        {% assign legend_json = legend_json | append: legend_entry %}
-      {% endif %}
     {% endfor %}
 
-    {% assign graph_data_json = '{"nodes":[' | append: nodes_json | append: '],"edges":[' | append: edges_json | append: '],"legend":[' | append: legend_json | append: '],"placeholder":"' | append: placeholder_src | append: '"}' %}
+    {% assign graph_data_json = '{"nodes":[' | append: nodes_json | append: '],"edges":[' | append: edges_json | append: '],"placeholder":"' | append: placeholder_src | append: '"}' %}
 
-    <div class="sg-graph-layout">
-      <div class="sg-graph-container">
-        <div class="sg-graph-zoom-controls">
-          <button type="button" class="btn sg-graph-zoom-btn" id="sg-graph-zoom-in" aria-label="{{ ui['graph-zoom-in-label'] }}">
-            <i class="fa-solid fa-plus" aria-hidden="true"></i>
-          </button>
-          <button type="button" class="btn sg-graph-zoom-btn" id="sg-graph-zoom-out" aria-label="{{ ui['graph-zoom-out-label'] }}">
-            <i class="fa-solid fa-minus" aria-hidden="true"></i>
-          </button>
-        </div>
-        <div id="sg-graph" class="sg-graph" data-empty-text="{{ ui['graph-empty'] }}">
-          <div class="sg-graph-loading" role="status">
-            <div class="spinner-border" aria-hidden="true"></div>
-            <span class="visually-hidden">{{ ui["modal-loading"] }}</span>
-          </div>
+    {% include search-filter.html ui=ui show_filters=true used_type_slugs=used_type_slugs %}
+
+    <div class="sg-graph-container">
+      <div class="sg-graph-zoom-controls">
+        <button type="button" class="btn sg-graph-zoom-btn sg-btn-outline-neutral" id="sg-graph-zoom-in" aria-label="{{ ui['graph-zoom-in-label'] }}">
+          <i class="fa-solid fa-plus" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="btn sg-graph-zoom-btn sg-btn-outline-neutral" id="sg-graph-zoom-out" aria-label="{{ ui['graph-zoom-out-label'] }}">
+          <i class="fa-solid fa-minus" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div id="sg-graph" class="sg-graph" data-empty-text="{{ ui['graph-empty'] }}">
+        <div class="sg-graph-loading" role="status">
+          <div class="spinner-border" aria-hidden="true"></div>
+          <span class="visually-hidden">{{ ui["modal-loading"] }}</span>
         </div>
       </div>
-      <aside class="sg-graph-legend" aria-label="{{ ui['graph-legend-title'] }}">
-        <ul class="list-unstyled sg-legend-list" id="sg-graph-legend-list"></ul>
-      </aside>
     </div>
 
     <script id="sg-graph-data" type="application/json">{{ graph_data_json }}</script>
@@ -118,4 +111,5 @@ layout: default
 {% if characters.size > 0 %}
   <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" defer></script>
   <script src="{{ '/assets/js/graph.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/search-filter.js' | relative_url }}" defer></script>
 {% endif %}

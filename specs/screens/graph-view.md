@@ -13,8 +13,8 @@ Cette vue partage l'en-tête, la présentation de l'univers, le switcher "Vue Mo
   - Une arête par relation entre deux personnages affichés. Quand deux personnages sont liés par plusieurs relations de types différents, chacune est une arête distincte.
   - Une arête d'un type dirigé est représentée avec un sens visuel (ex : flèche) ; une arête d'un type non dirigé n'en a pas.
   - Chaque type de relation a une couleur distincte, définie dans `style-guide.md` (ce n'est pas un attribut de données, voir `data-model.md`).
-- Légende couleur → type de relation, affichée en permanence sous le graphe (voir `style-guide.md` : la distinction par couleur seule n'est pas garantie au-delà de trois types affichés simultanément). Chaque entrée affiche la couleur du type et son `label`. Elle ne duplique pas les filtres de type de relation de `search-filter.md` : c'est la même liste, chaque filtre affichant déjà la couleur de son type (voir `style-guide.md`).
-- Barre de recherche/filtre, persistante sur cette vue et sur la Vue Mosaïque (voir `search-filter.md` pour son contenu et son comportement détaillés). Sur cette vue, elle met en évidence ou masque les nœuds et arêtes correspondants.
+- Légende couleur → type de relation, affichée en permanence sur cette vue (voir `style-guide.md` : la distinction par couleur seule n'est pas garantie au-delà de trois types affichés simultanément). Chaque entrée affiche la couleur du type et son `label`. Elle ne duplique pas les filtres de type de relation de `search-filter.md` : c'est la même liste, au même emplacement (entre le switcher et le graphe, voir `universe-home.md`), chaque filtre affichant déjà la couleur de son type (voir `style-guide.md`).
+- Barre de recherche (persistante sur cette vue et sur la Vue Mosaïque) et filtres de type de relation, propres à cette vue (voir `search-filter.md` pour leur contenu et leur comportement détaillés). Sur cette vue, la recherche met en évidence ou masque les nœuds correspondants, et les filtres masquent les arêtes des types désactivés.
 
 ## Interactions
 

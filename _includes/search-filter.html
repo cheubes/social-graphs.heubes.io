@@ -1,0 +1,61 @@
+{% assign ui = include.ui %}
+{% assign show_filters = include.show_filters %}
+{% assign used_type_slugs = include.used_type_slugs %}
+{% assign filter_items = "" %}
+{% assign filter_count = 0 %}
+{% if show_filters %}
+  {% assign sorted_relation_types = relation_types | sort: "slug" %}
+  {% for rel_type in sorted_relation_types %}
+    {% assign type_token = " " | append: rel_type.slug | append: " " %}
+    {% if used_type_slugs contains type_token %}
+      {% assign color_num = forloop.index0 | modulo: 8 | plus: 1 %}
+      {% assign color_var = "var(--sg-graph-color-" | append: color_num | append: ")" %}
+      {% assign filter_count = filter_count | plus: 1 %}
+      {% capture filter_item %}
+        <li class="sg-legend-item">
+          <label class="sg-filter-label d-flex align-items-center gap-2 mb-0">
+            <input type="checkbox" class="form-check-input sg-filter-checkbox" value="{{ rel_type.slug }}" checked>
+            <span class="sg-legend-swatch" style="background-color: {{ color_var }};" aria-hidden="true"></span>
+            <span>{{ rel_type.label[lang] }}</span>
+          </label>
+        </li>
+      {% endcapture %}
+      {% assign filter_items = filter_items | append: filter_item %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% assign toggle_label = ui["search-toggle"] %}
+{% if filter_count > 0 %}
+  {% assign toggle_label = ui["search-filter-toggle"] %}
+{% endif %}
+
+<div class="sg-search-filter" id="sg-search-filter" data-universe="{{ universe_slug }}">
+  <button type="button" class="btn sg-search-filter-toggle sg-btn-outline-neutral d-lg-none"
+    data-bs-toggle="collapse" data-bs-target="#sg-search-filter-panel"
+    aria-expanded="false" aria-controls="sg-search-filter-panel">
+    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+    {{ toggle_label }}
+  </button>
+
+  <div class="collapse d-lg-block sg-search-filter-panel" id="sg-search-filter-panel">
+    <label for="sg-search-input" class="visually-hidden">{{ ui["search-label"] }}</label>
+    <div class="input-group sg-search-input-group">
+      <span class="input-group-text sg-search-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></span>
+      <input type="search" class="form-control sg-search-input" id="sg-search-input"
+        placeholder="{{ ui['search-placeholder'] }}" autocomplete="off">
+    </div>
+
+    {% if filter_count > 0 %}
+      <ul class="list-unstyled sg-legend-list" aria-label="{{ ui['filter-types-label'] }}">
+        {{ filter_items }}
+      </ul>
+    {% endif %}
+
+    <button type="button" class="btn btn-sm sg-search-filter-reset sg-btn-outline-neutral" id="sg-search-filter-reset">
+      {{ ui["filter-reset"] }}
+    </button>
+  </div>
+
+  <p class="sg-search-filter-empty" id="sg-search-filter-empty" hidden>{{ ui["filter-empty"] }}</p>
+</div>

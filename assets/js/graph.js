@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   computeParallelEdgeOffsets(edgesData);
 
-  renderLegend(graphData.legend);
   if (edgesData.length === 0) {
     showEmptyMessage();
   }
@@ -99,6 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .join("path")
     .attr("class", "sg-graph-link")
     .attr("data-color-index", (d) => d.colorIndex)
+    .attr("data-type", (d) => d.type)
     .style("stroke", (d) => d.color)
     .attr("marker-end", (d) => (d.directed ? `url(#sg-graph-arrow-${d.colorIndex})` : null))
     .on("mouseenter", (event, d) => {
@@ -120,6 +120,8 @@ document.addEventListener("DOMContentLoaded", () => {
     .data(nodesData)
     .join("g")
     .attr("class", "sg-graph-node")
+    .attr("data-slug", (d) => d.slug)
+    .attr("data-name", (d) => d.name)
     .call(drag(simulation))
     .on("click", (event, d) => {
       event.stopPropagation();
@@ -316,26 +318,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function hideTooltip() {
     tooltip.hidden = true;
-  }
-
-  function renderLegend(legend) {
-    const list = document.getElementById("sg-graph-legend-list");
-    if (!list) return;
-    legend.forEach((entry) => {
-      const item = document.createElement("li");
-      item.className = "sg-legend-item";
-
-      const swatch = document.createElement("span");
-      swatch.className = "sg-legend-swatch";
-      swatch.style.backgroundColor = entry.color;
-
-      const label = document.createElement("span");
-      label.textContent = entry.label;
-
-      item.appendChild(swatch);
-      item.appendChild(label);
-      list.appendChild(item);
-    });
   }
 
   function showEmptyMessage() {

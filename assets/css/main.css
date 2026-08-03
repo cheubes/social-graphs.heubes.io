@@ -311,13 +311,62 @@ small {
   padding: 2rem 0;
 }
 
-/* Vue Graphe */
+/* Bouton "outline" neutre : zoom du graphe, contrôles de recherche/filtre */
 
-.sg-graph-layout {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.sg-btn-outline-neutral {
+  border-color: var(--sg-grey);
+  color: var(--sg-dark-grey);
 }
+
+.sg-btn-outline-neutral:hover,
+.sg-btn-outline-neutral:focus {
+  border-color: var(--sg-gold);
+  color: var(--sg-blue);
+}
+
+/* Recherche / filtres (barre partagée Vue Mosaïque et Vue Graphe, sert aussi de légende
+   couleur -> type de relation en Vue Graphe, voir search-filter.md et graph-view.md) */
+
+.sg-search-filter {
+  margin-bottom: 1.5rem;
+}
+
+.sg-search-filter-toggle {
+  margin-bottom: 0.75rem;
+}
+
+.sg-search-filter-panel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+}
+
+.sg-search-input-group {
+  max-width: 320px;
+}
+
+.sg-search-icon {
+  background-color: var(--sg-white);
+  color: var(--sg-grey);
+  border-color: var(--sg-light-grey);
+}
+
+.sg-search-input {
+  border-color: var(--sg-light-grey);
+}
+
+.sg-filter-label {
+  color: var(--sg-dark-grey);
+  cursor: pointer;
+}
+
+.sg-search-filter-empty {
+  color: var(--sg-grey);
+  margin-top: 0.75rem;
+}
+
+/* Vue Graphe */
 
 .sg-graph-container {
   position: relative;
@@ -341,14 +390,6 @@ small {
   align-items: center;
   justify-content: center;
   background-color: var(--sg-white);
-  border: 1px solid var(--sg-grey);
-  color: var(--sg-dark-grey);
-}
-
-.sg-graph-zoom-btn:hover,
-.sg-graph-zoom-btn:focus {
-  border-color: var(--sg-gold);
-  color: var(--sg-blue);
 }
 
 .sg-graph {
@@ -388,6 +429,10 @@ small {
   stroke-width: 1.5px;
 }
 
+.sg-graph-link-filtered {
+  display: none;
+}
+
 /* Compense un contraste plus faible sur fond blanc pour ces trois teintes (voir style-guide.md) */
 .sg-graph-link[data-color-index="3"],
 .sg-graph-link[data-color-index="4"],
@@ -397,6 +442,11 @@ small {
 
 .sg-graph-node {
   cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.sg-graph-node-dimmed {
+  opacity: 0.2;
 }
 
 .sg-graph-node-ring {

@@ -24,6 +24,8 @@ layout: default
   {% include resolve-universe-characters.html %}
 
   {% if characters.size > 0 %}
+    {% include search-filter.html ui=ui show_filters=false %}
+
     {% capture sort_blob %}{% for character in characters %}{% assign char_slug = character.path | split: "/" | last | split: "." | first %}{% assign source_count = relations | where: "source-character", char_slug | size %}{% assign target_count = relations | where: "target-character", char_slug | size %}{% assign relation_count = source_count | plus: target_count %}{% assign sort_rank = 100000 | minus: relation_count %}{% assign padded_rank = sort_rank | prepend: "000000" | slice: -6, 6 %}{{ padded_rank }}_{{ character["character-name"] }}_{{ char_slug }}|||{% endfor %}{% endcapture %}
     {% assign sorted_entries = sort_blob | split: "|||" | sort %}
 
@@ -54,3 +56,6 @@ layout: default
 {% include character-modal.html character=modal_character open=is_character_page universe_slug=universe_slug lang=lang ui=ui placeholder_src=placeholder_src all_characters=characters relations=relations relation_types=relation_types view_url=mosaic_page.url %}
 
 <script src="{{ '/assets/js/character-modal.js' | relative_url }}" defer></script>
+{% if characters.size > 0 %}
+  <script src="{{ '/assets/js/search-filter.js' | relative_url }}" defer></script>
+{% endif %}
