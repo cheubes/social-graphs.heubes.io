@@ -1,0 +1,11 @@
+{% assign character_prefix = universe_slug | append: "/characters/" %}
+{% assign universe_characters = site.pages | where_exp: "p", "p.path contains character_prefix" %}
+{% assign characters = universe_characters | where: "lang", lang %}
+{% assign universe_data = site.data[universe_slug] %}
+{% assign relations = universe_data["relations"]["relations"] %}
+{% assign additional_relation_types = universe_data["additional-relation-types"] %}
+{% if additional_relation_types %}
+  {% assign relation_types = site.data["relation-types"] | concat: additional_relation_types %}
+{% else %}
+  {% assign relation_types = site.data["relation-types"] %}
+{% endif %}

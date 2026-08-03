@@ -78,4 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (modalEl.dataset.open === "true") {
     modal.show();
   }
+
+  window.sgCharacterModal = { open: openCharacter };
 });

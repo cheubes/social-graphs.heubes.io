@@ -107,7 +107,7 @@ rechargement, l'URL se met à jour, et visiter cette URL directement ouvre la mo
 par-dessus la Vue Mosaïque.
 ```
 
-## 6. Vue Graphe
+## 6. Vue Graphe ✅
 
 Rendu D3 (nœuds, arêtes colorées, flèches pour les types dirigés, zoom/déplacement), clic sur un nœud réutilisant la modale de l'étape 5. Voir `screens/graph-view.md`.
 
