@@ -78,6 +78,7 @@ Pas de grille ni d'échelle d'espacement custom : la grille et les classes utili
 - **Droite** : sélecteur de langue, deux drapeaux 🇫🇷 / 🇬🇧, chacun avec un `aria-label` explicite ("Français" / "English") puisqu'un emoji seul n'est pas toujours annoncé de façon fiable par un lecteur d'écran.
 - Fond `--sg-blue`, texte `--sg-white`, bordure basse `--sg-gold`.
 - En-tête collant (`position: sticky`) en haut de page, pour rester accessible sur les pages longues (Vue Mosaïque, Vue Graphe), en écho au pied de page fixe.
+- Reste au-dessus de la modale fiche personnage (voir `character-sheet.md`) dans l'empilement visuel, pour que le sélecteur de langue reste utilisable modale ouverte.
 
 ### Pied de page
 

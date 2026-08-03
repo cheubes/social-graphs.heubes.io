@@ -52,6 +52,7 @@ layout: default
       {% include json-escape.html value=rel_label_raw %}
       {% assign rel_label = json_escaped %}
       {% assign type_relations = relations | where: "type", rel_type.slug %}
+      {% assign type_edge_count = 0 %}
       {% for relation in type_relations %}
         {% assign src_slug = relation["source-character"] %}
         {% assign tgt_slug = relation["target-character"] %}
@@ -67,9 +68,12 @@ layout: default
           {% if edge_count > 0 %}{% assign edges_json = edges_json | append: "," %}{% endif %}
           {% assign edges_json = edges_json | append: edge_entry %}
           {% assign edge_count = edge_count | plus: 1 %}
-          {% assign used_type_slugs = used_type_slugs | append: rel_type.slug | append: " " %}
+          {% assign type_edge_count = type_edge_count | plus: 1 %}
         {% endif %}
       {% endfor %}
+      {% if type_edge_count > 0 %}
+        {% assign used_type_slugs = used_type_slugs | append: rel_type.slug | append: " " %}
+      {% endif %}
     {% endfor %}
 
     {% assign graph_data_json = '{"nodes":[' | append: nodes_json | append: '],"edges":[' | append: edges_json | append: '],"placeholder":"' | append: placeholder_src | append: '"}' %}

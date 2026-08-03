@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.title = extracted.title;
         if (pushState) {
           history.pushState({}, "", url);
+          window.dispatchEvent(new CustomEvent("sg:urlchange"));
         }
       })
       .catch(() => {
@@ -63,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
   modalEl.addEventListener("hidden.bs.modal", () => {
     if (window.location.href !== viewUrl) {
       history.pushState({}, "", viewUrl);
+      window.dispatchEvent(new CustomEvent("sg:urlchange"));
     }
     document.title = baseTitle;
   });

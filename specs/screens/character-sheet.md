@@ -34,4 +34,4 @@ L'ouverture de la modale, quelle que soit son origine (clic sur une tuile, un n�
 
 ## Responsive
 
-Sur petit écran, la modale occupe l'ensemble de l'écran plutôt qu'une fenêtre superposée partielle.
+Sur petit écran, la modale occupe l'écran sous l'en-tête, qui reste visible et accessible (notamment pour le sélecteur de langue, voir `style-guide.md`), plutôt qu'une fenêtre superposée partielle.

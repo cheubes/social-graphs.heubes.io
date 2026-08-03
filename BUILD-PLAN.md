@@ -145,7 +145,7 @@ Critère de fin : taper un nom masque/isole les bons éléments dans les deux vu
 un type de relation masque les bonnes arêtes en Vue Graphe et les bonnes tuiles en Vue Mosaïque.
 ```
 
-## 8. Multilingue complet
+## 8. Multilingue complet ✅
 
 Détection de langue au premier accès, mémorisation `localStorage`, préfixe `/fr/`, message d'indisponibilité (`404.md`), traduction du contenu de test. Voir "Multilingue" dans `functional-specifications.md` et "Architecture" dans `technical-specifications.md`.
 

@@ -6,6 +6,7 @@
   --sg-dark-grey: #444444;
   --sg-white: #FFFFFF;
   --sg-footer-height: 2.5rem;
+  --sg-header-height: 4.75rem;
 
   /* Palette catégorielle du graphe : ordre fixe requis pour la lisibilité en daltonisme (voir style-guide.md) */
   --sg-graph-color-1: #2a78d6;
@@ -47,7 +48,7 @@ small {
 .sg-header {
   position: sticky;
   top: 0;
-  z-index: 1030;
+  z-index: 1060;
   background-color: var(--sg-blue);
   color: var(--sg-white);
   padding: 0.75rem 0;
@@ -184,6 +185,11 @@ small {
 
 /* Modale (fiche personnage) */
 
+.modal.sg-character-modal {
+  top: var(--sg-header-height);
+  height: calc(100% - var(--sg-header-height));
+}
+
 .sg-character-modal .modal-content {
   background-color: var(--sg-white);
   position: relative;
@@ -305,7 +311,8 @@ small {
   color: var(--sg-grey);
 }
 
-.sg-character-modal-error {
+.sg-character-modal-error,
+.sg-not-available {
   color: var(--sg-grey);
   text-align: center;
   padding: 2rem 0;
@@ -357,13 +364,7 @@ small {
 }
 
 .sg-filter-label {
-  color: var(--sg-dark-grey);
   cursor: pointer;
-}
-
-.sg-search-filter-empty {
-  color: var(--sg-grey);
-  margin-top: 0.75rem;
 }
 
 /* Vue Graphe */
@@ -413,7 +414,8 @@ small {
   color: var(--sg-grey);
 }
 
-.sg-graph-empty {
+.sg-graph-empty,
+.sg-search-filter-empty {
   color: var(--sg-grey);
   margin-top: 0.75rem;
 }
@@ -525,3 +527,5 @@ small {
   border-radius: 50%;
   flex: 0 0 auto;
 }
+
+/* Message d'indisponibilité (404) : voir .sg-character-modal-error ci-dessus */

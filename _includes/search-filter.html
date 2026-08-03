@@ -4,7 +4,6 @@
 {% assign filter_items = "" %}
 {% assign filter_count = 0 %}
 {% if show_filters %}
-  {% assign sorted_relation_types = relation_types | sort: "slug" %}
   {% for rel_type in sorted_relation_types %}
     {% assign type_token = " " | append: rel_type.slug | append: " " %}
     {% if used_type_slugs contains type_token %}
