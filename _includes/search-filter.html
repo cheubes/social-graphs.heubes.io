@@ -24,20 +24,8 @@
   {% endfor %}
 {% endif %}
 
-{% assign toggle_label = ui["search-toggle"] %}
-{% if filter_count > 0 %}
-  {% assign toggle_label = ui["search-filter-toggle"] %}
-{% endif %}
-
 <div class="sg-search-filter" id="sg-search-filter" data-universe="{{ universe_slug }}">
-  <button type="button" class="btn sg-search-filter-toggle sg-btn-outline-neutral d-lg-none"
-    data-bs-toggle="collapse" data-bs-target="#sg-search-filter-panel"
-    aria-expanded="false" aria-controls="sg-search-filter-panel">
-    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-    {{ toggle_label }}
-  </button>
-
-  <div class="collapse d-lg-block sg-search-filter-panel" id="sg-search-filter-panel">
+  <div class="sg-search-filter-row">
     <label for="sg-search-input" class="visually-hidden">{{ ui["search-label"] }}</label>
     <div class="input-group sg-search-input-group">
       <span class="input-group-text sg-search-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></span>
@@ -50,10 +38,6 @@
         {{ filter_items }}
       </ul>
     {% endif %}
-
-    <button type="button" class="btn btn-sm sg-search-filter-reset sg-btn-outline-neutral" id="sg-search-filter-reset">
-      {{ ui["filter-reset"] }}
-    </button>
   </div>
 
   <p class="sg-search-filter-empty" id="sg-search-filter-empty" hidden>{{ ui["filter-empty"] }}</p>

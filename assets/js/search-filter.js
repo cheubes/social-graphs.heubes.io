@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const storageKey = "sg-search-filter:" + (root.dataset.universe || "");
   const searchInput = document.getElementById("sg-search-input");
   const checkboxes = Array.from(document.querySelectorAll(".sg-filter-checkbox"));
-  const resetButton = document.getElementById("sg-search-filter-reset");
   const emptyMessage = document.getElementById("sg-search-filter-empty");
   const characterGrid = document.querySelector(".sg-character-grid");
   const graphContainer = document.getElementById("sg-graph");
@@ -92,13 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   searchInput.addEventListener("input", applyFilters);
   checkboxes.forEach((checkbox) => checkbox.addEventListener("change", applyFilters));
-  if (resetButton) {
-    resetButton.addEventListener("click", () => {
-      searchInput.value = "";
-      checkboxes.forEach((checkbox) => (checkbox.checked = true));
-      applyFilters();
-    });
-  }
 
   applyFilters();
 });

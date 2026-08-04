@@ -112,6 +112,8 @@ Pas de grille ni d'échelle d'espacement custom : la grille et les classes utili
 
 - Champ de recherche Bootstrap standard, icône `fa-magnifying-glass`.
 - Filtres de type de relation : cases à cocher ou "chips" à fond neutre (`--sg-white`) et texte `--sg-grey`/`--sg-dark-grey`, chacun précédé d'une pastille de la couleur de son type dans la palette du graphe (voir ci-dessus). La couleur reste un repère visuel à côté du texte, jamais le fond du texte : aucune couleur de texte unique ne passe le contraste AA sur les huit teintes de cette palette à la fois (vérifié).
+- Disposition : filtres alignés directement à droite du champ de recherche, sur une même ligne qui se replie (un ou plusieurs filtres passent à la ligne suivante) si l'espace manque, plutôt que le bloc de filtres dans son ensemble.
+- Pas de bouton de réinitialisation dédié : vider le champ de recherche et recocher les cases se fait directement sur ces contrôles.
 
 ### Boutons
 
