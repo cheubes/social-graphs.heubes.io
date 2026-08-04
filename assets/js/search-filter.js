@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const characterGrid = document.querySelector(".sg-character-grid");
   const graphContainer = document.getElementById("sg-graph");
 
-  // Ensembles statiques (rendu Jekyll pour la Mosaïque, rendu D3 déjà terminé pour le
-  // Graphe puisque graph.js s'exécute avant ce script) : seules des classes sont
-  // togglées dessus par la suite, aucun élément n'est ajouté ou retiré.
+  // Static sets (Jekyll-rendered for Mosaic view, D3 rendering already done for
+  // Graph view since graph.js runs before this script): only classes get toggled
+  // on them afterward, no element is ever added or removed.
   const characterCards = characterGrid ? Array.from(characterGrid.querySelectorAll(".sg-character-link")) : [];
   const graphNodes = graphContainer ? Array.from(graphContainer.querySelectorAll(".sg-graph-node")) : [];
   const graphLinks = graphContainer ? Array.from(graphContainer.querySelectorAll(".sg-graph-link")) : [];
@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       sessionStorage.setItem(storageKey, JSON.stringify({ query, disabledTypes }));
     } catch (error) {
-      // sessionStorage indisponible (navigation privée, etc.) : le filtrage reste
-      // fonctionnel, seule la persistance entre les deux vues est perdue.
+      // sessionStorage unavailable (private browsing, etc.): filtering stays
+      // functional, only persistence between the two views is lost.
     }
   }
 
@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
     return checkboxes.filter((checkbox) => !checkbox.checked).map((checkbox) => checkbox.value);
   }
 
-  // Vue Mosaïque : masque les tuiles dont le character-name ne correspond pas à la
-  // recherche. Pas de filtre par type ici : les tuiles n'affichent aucune relation,
-  // un filtre par type n'y aurait pas d'effet visuellement justifié (voir search-filter.md).
+  // Mosaic view: hides cards whose character-name doesn't match the search query.
+  // No type filter here: cards don't display any relation, so a type filter
+  // wouldn't have a visually justified effect (see search-filter.md).
   function applyMosaicFilters(query) {
     let visibleCount = 0;
     characterCards.forEach((card) => {
@@ -53,10 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
     return visibleCount;
   }
 
-  // Vue Graphe : la recherche met en évidence/atténue les nœuds sans en retirer aucun ;
-  // le filtre de type masque les arêtes du type désactivé, les nœuds restant affichés.
-  // Retourne null quand la recherche est vide : l'état "vide" ne s'applique alors pas,
-  // faute de recherche active à ne satisfaire.
+  // Graph view: the search highlights/dims nodes without removing any of them;
+  // the type filter hides edges of the disabled type, nodes stay displayed.
+  // Returns null when the search is empty: the "empty" state doesn't apply then,
+  // since there's no active search to fail to match.
   function applyGraphFilters(query, disabledTypes) {
     let matchCount = 0;
     graphNodes.forEach((node) => {

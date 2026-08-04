@@ -8,7 +8,7 @@
   --sg-footer-height: 2.5rem;
   --sg-header-height: 5.5rem;
 
-  /* Palette catégorielle du graphe : ordre fixe requis pour la lisibilité en daltonisme (voir style-guide.md) */
+  /* Categorical graph palette: fixed order required for colorblind readability (see style-guide.md) */
   --sg-graph-color-1: #2a78d6;
   --sg-graph-color-2: #eb6834;
   --sg-graph-color-3: #1baf7a;
@@ -43,7 +43,7 @@ small {
   color: var(--sg-grey);
 }
 
-/* En-tête */
+/* Header */
 
 .sg-header {
   position: sticky;
@@ -106,7 +106,7 @@ small {
   color: var(--sg-white);
 }
 
-/* Accueil */
+/* Home */
 
 .sg-home-title {
   margin-bottom: 1.5rem;
@@ -116,13 +116,13 @@ small {
   color: var(--sg-grey);
 }
 
-/* Univers */
+/* Universe */
 
 .sg-universe-empty {
   color: var(--sg-grey);
 }
 
-/* Switcher Vue Mosaïque / Vue Graphe (dans l'en-tête, voir style-guide.md) */
+/* Mosaic view / Graph view switcher (in the header, see style-guide.md) */
 
 .sg-view-switcher-btn {
   color: var(--sg-white);
@@ -142,7 +142,7 @@ small {
   border-color: var(--sg-gold);
 }
 
-/* Tuiles (mosaïques) */
+/* Cards (mosaics) */
 
 .sg-card-link {
   display: block;
@@ -179,7 +179,7 @@ small {
   color: var(--sg-grey);
 }
 
-/* Pied de page */
+/* Footer */
 
 .sg-footer {
   position: fixed;
@@ -202,7 +202,7 @@ small {
   color: var(--sg-gold);
 }
 
-/* Modale (fiche personnage) */
+/* Modal (character sheet) */
 
 .modal.sg-character-modal {
   top: var(--sg-header-height);
@@ -337,7 +337,7 @@ small {
   padding: 2rem 0;
 }
 
-/* Bouton "outline" neutre : zoom du graphe, contrôles de recherche/filtre */
+/* Neutral "outline" button: graph zoom, search/filter controls */
 
 .sg-btn-outline-neutral {
   border-color: var(--sg-grey);
@@ -350,8 +350,8 @@ small {
   color: var(--sg-blue);
 }
 
-/* Recherche / filtres (barre partagée Vue Mosaïque et Vue Graphe, sert aussi de légende
-   couleur -> type de relation en Vue Graphe, voir search-filter.md et graph-view.md) */
+/* Search / filters (bar shared by Mosaic view and Graph view, also serves as the
+   color -> relation type legend in Graph view, see search-filter.md and graph-view.md) */
 
 .sg-search-filter {
   margin-bottom: 1.5rem;
@@ -382,7 +382,7 @@ small {
   cursor: pointer;
 }
 
-/* Vue Graphe */
+/* Graph view */
 
 .sg-graph-container {
   position: relative;
@@ -450,7 +450,7 @@ small {
   display: none;
 }
 
-/* Compense un contraste plus faible sur fond blanc pour ces trois teintes (voir style-guide.md) */
+/* Compensates for lower contrast on white background for these three hues (see style-guide.md) */
 .sg-graph-link[data-color-index="3"],
 .sg-graph-link[data-color-index="4"],
 .sg-graph-link[data-color-index="5"] {
@@ -472,8 +472,8 @@ small {
   transition: opacity 0.15s ease;
 }
 
-/* Le fill (opaque) du ring reste inchangé pour continuer à masquer le départ des liens
-   sous le nœud ; seuls le contour et le portrait s'atténuent (voir search-filter.md). */
+/* The ring's (opaque) fill stays unchanged so it keeps masking where links start
+   under the node; only the stroke and the portrait dim (see search-filter.md). */
 .sg-graph-node-dimmed .sg-graph-node-ring {
   stroke-opacity: 0.2;
 }
@@ -531,7 +531,7 @@ small {
 }
 
 .sg-legend-list {
-  /* Chaque filtre rejoint le flex-wrap de .sg-search-filter-row, à côté du champ de recherche. */
+  /* Each filter joins the flex-wrap of .sg-search-filter-row, next to the search field. */
   display: contents;
 }
 
@@ -549,4 +549,4 @@ small {
   flex: 0 0 auto;
 }
 
-/* Message d'indisponibilité (404) : voir .sg-character-modal-error ci-dessus */
+/* Unavailability message (404): see .sg-character-modal-error above */

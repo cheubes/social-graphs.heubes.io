@@ -13,7 +13,7 @@ layout: default
 
   {% if characters.size > 0 %}
     {% comment %}
-      Nœuds : un par personnage disponible dans la langue courante.
+      Nodes: one per character available in the current language.
     {% endcomment %}
     {% assign nodes_json = "" %}
     {% for character in characters %}
@@ -28,11 +28,11 @@ layout: default
     {% endfor %}
 
     {% comment %}
-      Arêtes : la couleur d'un type est son rang alphabétique de slug dans la taxonomie
-      disponible pour cet univers (commune + extensions), voir style-guide.md. Cette boucle
-      calcule aussi used_type_slugs (jetons espacés des types ayant au moins une arête
-      rendue), transmis à search-filter.html pour ses filtres/légende (voir graph-view.md)
-      plutôt que de lui faire refaire cette même résolution personnage par personnage.
+      Edges: a type's color is its slug's alphabetical rank in the taxonomy available
+      for this universe (common + extensions), see style-guide.md. This loop also computes
+      used_type_slugs (space-separated tokens for types with at least one rendered edge),
+      passed to search-filter.html for its filters/legend (see graph-view.md) instead of
+      making it redo that same character-by-character resolution.
     {% endcomment %}
     {% assign edges_json = "" %}
     {% assign edge_count = 0 %}

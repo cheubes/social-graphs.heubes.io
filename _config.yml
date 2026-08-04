@@ -1,10 +1,10 @@
-title: "Social Graphs"          # à ajuster avec la tagline retenue (voir "En-tête" dans style-guide.md)
+title: "Social Graphs"          # to adjust with the chosen tagline (see "En-tête" in style-guide.md)
 description: "Explore the characters of a universe and their relationships as an interactive graph."
 url: "https://social-graphs.heubes.io"
 baseurl: ""
-lang: en                        # valeur de repli ; chaque page définit son propre lang (voir data-model.md), qui prime dans le layout
+lang: en                        # fallback value; each page defines its own lang (see data-model.md), which takes precedence in the layout
 markdown: kramdown
-permalink: pretty                # filet de sécurité ; en pratique, chaque page a son propre permalink explicite (voir "Génération des pages")
+permalink: pretty                # safety net; in practice, each page has its own explicit permalink (see "Génération des pages")
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
