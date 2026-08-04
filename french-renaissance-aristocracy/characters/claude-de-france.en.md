@@ -3,6 +3,7 @@ layout: character
 permalink: /french-renaissance-aristocracy/characters/claude-de-france/
 lang: en
 character-name: "Claude of Valois"
+gender: feminine
 metadata:
   birth: "1547"
   death: "1575"

@@ -3,6 +3,7 @@ layout: character
 permalink: /french-renaissance-aristocracy/characters/henri-de-guise/
 lang: en
 character-name: "Henry I, Duke of Guise"
+gender: masculine
 metadata:
   birth: "1550"
   death: "1588"

@@ -3,6 +3,7 @@ layout: character
 permalink: /french-renaissance-aristocracy/characters/anne-de-montmorency/
 lang: en
 character-name: "Anne de Montmorency"
+gender: masculine
 metadata:
   birth: "1493"
   death: "1567"

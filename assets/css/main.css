@@ -250,15 +250,6 @@ small {
   margin-top: 0.5rem;
 }
 
-.sg-character-modal-portrait-caption a {
-  color: var(--sg-grey);
-  text-decoration: none;
-}
-
-.sg-character-modal-portrait-caption a:hover {
-  color: var(--sg-gold);
-}
-
 .sg-character-modal-title {
   color: var(--sg-dark-grey);
   text-align: center;
@@ -289,30 +280,47 @@ small {
   margin-top: 1rem;
 }
 
-.sg-character-modal-external-link a,
-.sg-character-modal-relation a {
-  color: var(--sg-blue);
+.sg-character-modal-portrait-caption a,
+.sg-character-modal-relation a,
+.sg-character-modal-external-link a {
+  color: var(--sg-gold);
   text-decoration: none;
 }
 
-.sg-character-modal-external-link a:hover,
-.sg-character-modal-relation a:hover {
-  text-decoration: underline;
+.sg-character-modal-portrait-caption a:hover,
+.sg-character-modal-relation a:hover,
+.sg-character-modal-external-link a:hover {
+  color: var(--sg-grey);
+  text-decoration: none;
 }
 
 .sg-character-modal-relations-heading {
   margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .sg-character-modal-relations {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
-.sg-relation-label {
+.sg-relation-group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0;
+}
+
+.sg-character-modal-relation::marker {
+  font-size: 1.4em;
+}
+
+.sg-relation-group-heading {
   color: var(--sg-blue);
   font-weight: 500;
+  font-size: 1rem;
+  margin: 0;
 }
 
 .sg-relation-description {

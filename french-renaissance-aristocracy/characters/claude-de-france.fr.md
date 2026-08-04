@@ -3,6 +3,7 @@ layout: character
 permalink: /fr/french-renaissance-aristocracy/characters/claude-de-france/
 lang: fr
 character-name: "Claude de France"
+gender: feminine
 metadata:
   birth: "1547"
   death: "1575"

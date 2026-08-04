@@ -26,6 +26,7 @@ L'image de couverture n'est pas un attribut : elle est associée à l'univers pa
 | `slug` | Non | Identifiant unique au sein de l'univers, construit à partir du nom anglais, utilisé dans l'URL de la fiche personnage (peut être réutilisé d'un univers à l'autre) |
 | `lang` | Non | Langue de ce document (`fr` ou `en`) ; permet d'associer les deux documents d'un même personnage |
 | `character-name` | Oui | Nom affiché. Nommé `character-name` plutôt que `name` : ce dernier est un attribut réservé de la classe `Page` de Jekyll (au même titre que `content`, `dir`, `excerpt`, `path`, `url`), toujours réécrit par Jekyll avant l'accès en template, ce qui rend un attribut de front matter du même nom illisible depuis Liquid (vérifié empiriquement) |
+| `gender` | Non | Genre grammatical du personnage : `masculine` ou `feminine`. Utilisé pour accorder les libellés de relation à l'affichage (voir "Type de relation"). Optionnel : en son absence, les libellés retombent sur leur forme `masculine` |
 | `description` | Oui | Texte biographique court, affiché sur la fiche personnage |
 | `metadata` | Selon le champ | Champs libres optionnels selon l'univers (ex : dates de naissance/mort pour un personnage historique) |
 | `external-link` | Oui | URL optionnelle, peut différer par langue (ex : page Wikipédia FR ou EN) |
@@ -51,24 +52,28 @@ Le caractère dirigé ou non de la relation n'est pas porté par la relation ell
 | Attribut | Localisé | Description |
 |---|---|---|
 | `slug` | Non | Identifiant stable du type de relation, construit à partir de son nom anglais, référencé depuis l'attribut `type` d'une relation |
-| `label` | Oui | Libellé affiché quand le personnage décrit est la source de la relation |
-| `reverse-label` | Oui | Libellé affiché quand le personnage décrit est la cible de la relation ; renseigné uniquement si `directed` est vrai |
+| `label` | Oui | Libellé affiché quand le personnage décrit est la source de la relation, décliné en deux formes grammaticales par langue, `masculine` et `feminine` (voir "Accord de genre" ci-dessous) |
+| `reverse-label` | Oui | Libellé affiché quand le personnage décrit est la cible de la relation, décliné de la même façon ; renseigné uniquement si `directed` est vrai |
 | `directed` | Non | Indique si le lien est dirigé (source → cible) ou non dirigé (symétrique) |
 
-Une relation n'est saisie qu'une fois, dans un seul sens (voir `Relation`). Pour un type dirigé, le sens retour (ex : "Enfant de" à partir de "Parent de") n'est pas une relation distincte : il est dérivé automatiquement du `reverse-label` du type au moment de l'affichage, quand le personnage décrit est la cible plutôt que la source. Pour un type non dirigé, le `label` est utilisé dans les deux sens et `reverse-label` n'est pas renseigné.
+Une relation n'est saisie qu'une fois, dans un seul sens (voir `Relation`). Pour un type dirigé, le sens retour (ex : "Fille de" à partir de "Père de"/"Mère de") n'est pas une relation distincte : il est dérivé automatiquement du `reverse-label` du type au moment de l'affichage, quand le personnage décrit est la cible plutôt que la source. Pour un type non dirigé, le `label` est utilisé dans les deux sens et `reverse-label` n'est pas renseigné.
+
+**Accord de genre.** Le libellé affiché sur la fiche d'un personnage (`label` s'il est la source, `reverse-label` s'il est la cible, ou `label` pour un type non dirigé) est accordé au genre de ce personnage, celui dont on décrit la fiche, jamais à celui de l'autre personnage de la relation. Ainsi, à la fiche d'Henri III, la relation avec Catherine de Médicis affiche "Fils de" (accordé au genre d'Henri III, la cible) et non une forme accordée à Catherine. Si le personnage décrit n'a pas de `gender` renseigné, la forme `masculine` est utilisée par défaut. Dans un contexte qui n'est rattaché à aucun personnage particulier (légende de la Vue Graphe, filtres, voir `graph-view.md` et `search-filter.md`), c'est également la forme `masculine` qui sert de forme générique.
 
 Un socle de types communs est partagé par tous les univers ; un univers peut déclarer des types additionnels propres à son contexte.
 
 Exemples de types communs (liste à affiner, donnée ici à titre d'illustration) :
 
-| Slug | Label (FR) | Label (EN) | Sens inverse (FR) | Sens inverse (EN) | Dirigé | Exemple |
+| Slug | Label FR (masc. / fém.) | Label EN (masc. / fém.) | Sens inverse FR (masc. / fém.) | Sens inverse EN (masc. / fém.) | Dirigé | Exemple |
 |---|---|---|---|---|---|---|
-| `parent-of` | Parent de | Parent of | Enfant de | Child of | Oui | Catherine de Médicis → Henri III |
-| `married-to` | Marié à | Married to | — | — | Non | Henri III ↔ Louise de Lorraine |
-| `friend-of` | Ami de | Friend of | — | — | Non | — |
-| `rival-of` | Rival de | Rival of | — | — | Non | — |
-| `superior-of` | Supérieur hiérarchique de | Superior of | Subalterne de | Subordinate of | Oui | — |
-| `ally-of` | Allié de | Ally of | — | — | Non | — |
+| `parent-of` | Père de / Mère de | Father of / Mother of | Fils de / Fille de | Son of / Daughter of | Oui | Catherine de Médicis → Henri III |
+| `married-to` | Marié à / Mariée à | Married to | — | — | Non | Henri III ↔ Louise de Lorraine |
+| `friend-of` | Ami de / Amie de | Friend of | — | — | Non | — |
+| `rival-of` | Rival de / Rivale de | Rival of | — | — | Non | — |
+| `superior-of` | Supérieur hiérarchique de / Supérieure hiérarchique de | Superior of | Subalterne de / Subalterne de | Subordinate of | Oui | — |
+| `ally-of` | Allié de / Alliée de | Ally of | — | — | Non | — |
+
+En anglais, les deux formes sont le plus souvent identiques ; elles sont néanmoins répétées telles quelles dans le fichier de données (voir "Formats et conventions des fichiers de données" ci-dessous), la structure `masculine`/`feminine` par langue étant systématique.
 
 ## Formats et conventions des fichiers de données
 
@@ -99,7 +104,7 @@ Le site est généré avec Jekyll (voir `technical-specifications.md`). Chaque u
 - `/<slug-universe>/cover.jpg` : image de couverture (voir "Images").
 - `/<slug-universe>/characters/` : un sous-dossier contenant, pour chaque personnage, `<slug-character>.fr.md`, `<slug-character>.en.md` (frontmatter : `lang`, `character-name`, `metadata`, `external-link`, `portrait-source` ; corps de texte : `description`) et son portrait `<slug-character>.jpg` (voir "Images"). Le sous-dossier lui-même associe chaque personnage à son univers ; aucun attribut ne porte cette référence.
 - `_data/<slug-universe>/relations.yml` : l'ensemble des relations de l'univers ; le champ localisé (`description`) y est porté par des clés imbriquées par langue, plutôt que par des fichiers séparés.
-- `_data/<slug-universe>/additional-relation-types.yml`, optionnel : les types de relations additionnels propres à l'univers, avec la même structure que la taxonomie commune (clés imbriquées par langue pour `label` et `reverse-label`, voir "Type de relation").
+- `_data/<slug-universe>/additional-relation-types.yml`, optionnel : les types de relations additionnels propres à l'univers, avec la même structure que la taxonomie commune (clés imbriquées par langue puis par genre grammatical pour `label` et `reverse-label`, voir "Type de relation").
 - `_data/relation-types.yml` : la taxonomie de base des types de relations, partagée par tous les univers.
 
 ### Exemples
@@ -144,11 +149,19 @@ source-type: "période historique"
 ```yaml
 - slug: vassal-of
   label:
-    fr: "Vassal de"
-    en: "Vassal of"
+    fr:
+      masculine: "Vassal de"
+      feminine: "Vassale de"
+    en:
+      masculine: "Vassal of"
+      feminine: "Vassal of"
   reverse-label:
-    fr: "Suzerain de"
-    en: "Overlord of"
+    fr:
+      masculine: "Suzerain de"
+      feminine: "Suzeraine de"
+    en:
+      masculine: "Overlord of"
+      feminine: "Overlord of"
   directed: true
 ```
 
@@ -158,6 +171,7 @@ source-type: "période historique"
 ---
 lang: fr
 character-name: "Catherine de Médicis"
+gender: feminine
 metadata:
   birth: "1519"
   death: "1589"
@@ -185,11 +199,19 @@ relations:
 ```yaml
 - slug: parent-of
   label:
-    fr: "Parent de"
-    en: "Parent of"
+    fr:
+      masculine: "Père de"
+      feminine: "Mère de"
+    en:
+      masculine: "Father of"
+      feminine: "Mother of"
   reverse-label:
-    fr: "Enfant de"
-    en: "Child of"
+    fr:
+      masculine: "Fils de"
+      feminine: "Fille de"
+    en:
+      masculine: "Son of"
+      feminine: "Daughter of"
   directed: true
 ```
 
@@ -213,7 +235,9 @@ relations:
 - Un personnage ne peut pas être en relation avec lui-même.
 - Le `type` d'une relation doit exister dans la taxonomie commune ou dans les extensions déclarées par l'univers.
 - Un type de relation dirigé (`directed: true`) doit définir un `reverse-label` ; un type non dirigé n'en définit pas.
-- Deux personnages ne peuvent pas être reliés deux fois par le même type de relation (mais peuvent l'être par plusieurs types différents, ex : "frère de" et "rival de"). Pour un type non dirigé, `(A, B, type)` et `(B, A, type)` comptent comme la même relation et ne peuvent pas coexister.
+- Un `label` et un `reverse-label`, quand ils sont renseignés, déclinent les deux formes `masculine` et `feminine` pour chaque langue du site, même quand les deux formes sont identiques (voir "Accord de genre" dans "Type de relation").
+- Deux personnages ne peuvent pas être reliés deux fois par le même type de relation (mais peuvent l'être par plusieurs types différents, ex : "ami de" et "rival de"). Pour un type non dirigé, `(A, B, type)` et `(B, A, type)` comptent comme la même relation et ne peuvent pas coexister.
 - Les champs non localisés de `metadata` doivent avoir la même valeur dans tous les fichiers de langue d'un personnage ; ses champs explicitement localisés peuvent différer.
+- L'attribut `gender` d'un personnage, quand il est renseigné, vaut `masculine` ou `feminine`, et a la même valeur dans tous ses fichiers de langue.
 - L'attribut `lang` d'un fichier d'univers ou de personnage doit correspondre au suffixe de langue de son nom de fichier (`.fr.md` → `fr`, `.en.md` → `en`).
 - Pour une langue donnée, `mosaic.<lang>.md` et `graph.<lang>.md` existent ensemble ou pas du tout : un univers ne peut pas être disponible, dans une langue, sur une seule de ses deux vues.

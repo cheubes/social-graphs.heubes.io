@@ -1,8 +1,16 @@
 - slug: vassal-of
   label:
-    fr: "Vassal de"
-    en: "Vassal of"
+    fr:
+      masculine: "Vassal de"
+      feminine: "Vassale de"
+    en:
+      masculine: "Vassal of"
+      feminine: "Vassal of"
   reverse-label:
-    fr: "Suzerain de"
-    en: "Overlord of"
+    fr:
+      masculine: "Suzerain de"
+      feminine: "Suzeraine de"
+    en:
+      masculine: "Overlord of"
+      feminine: "Overlord of"
   directed: true

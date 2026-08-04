@@ -3,6 +3,7 @@ layout: character
 permalink: /french-renaissance-aristocracy/characters/francois-de-france/
 lang: en
 character-name: "Francis, Duke of Anjou"
+gender: masculine
 metadata:
   birth: "1555"
   death: "1584"

@@ -3,6 +3,7 @@ layout: character
 permalink: /fr/french-renaissance-aristocracy/characters/henri-de-navarre/
 lang: fr
 character-name: "Henri de Navarre"
+gender: masculine
 metadata:
   birth: "1553"
   death: "1610"

@@ -3,6 +3,7 @@ layout: character
 permalink: /french-renaissance-aristocracy/characters/charles-ix/
 lang: en
 character-name: "Charles IX"
+gender: masculine
 metadata:
   birth: "1550"
   death: "1574"

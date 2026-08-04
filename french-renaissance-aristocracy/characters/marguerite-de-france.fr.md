@@ -3,6 +3,7 @@ layout: character
 permalink: /fr/french-renaissance-aristocracy/characters/marguerite-de-france/
 lang: fr
 character-name: "Marguerite de France"
+gender: feminine
 metadata:
   birth: "1553"
   death: "1615"

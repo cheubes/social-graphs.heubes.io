@@ -3,6 +3,7 @@ layout: character
 permalink: /fr/french-renaissance-aristocracy/characters/francois-de-guise/
 lang: fr
 character-name: "François de Guise"
+gender: masculine
 metadata:
   birth: "1519"
   death: "1563"

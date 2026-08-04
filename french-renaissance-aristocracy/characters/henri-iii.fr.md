@@ -3,6 +3,7 @@ layout: character
 permalink: /fr/french-renaissance-aristocracy/characters/henri-iii/
 lang: fr
 character-name: "Henri III"
+gender: masculine
 metadata:
   birth: "1551"
   death: "1589"

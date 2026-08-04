@@ -3,6 +3,7 @@ layout: character
 permalink: /french-renaissance-aristocracy/characters/elisabeth-d-autriche/
 lang: en
 character-name: "Elisabeth of Austria"
+gender: feminine
 metadata:
   birth: "1554"
   death: "1592"

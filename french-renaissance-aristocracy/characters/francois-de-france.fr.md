@@ -3,6 +3,7 @@ layout: character
 permalink: /fr/french-renaissance-aristocracy/characters/francois-de-france/
 lang: fr
 character-name: "François de France"
+gender: masculine
 metadata:
   birth: "1555"
   death: "1584"

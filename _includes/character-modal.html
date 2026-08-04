@@ -46,17 +46,21 @@
 
           {% if character["external-link"] %}
             <p class="sg-character-modal-external-link">
-              <a href="{{ character['external-link'] }}" target="_blank" rel="noopener">{{ ui["external-link-label"] }}</a>
+              <a href="{{ character['external-link'] }}" target="_blank" rel="noopener">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> {{ ui["external-link-label"] }}
+              </a>
             </p>
           {% endif %}
 
+          {% assign viewer_gender = character["gender"] | default: "masculine" %}
           {% assign relation_count = 0 %}
-          {% capture relation_blob %}{% for relation in relations %}{% assign direction = "" %}{% if relation["source-character"] == character_slug %}{% assign direction = "s" %}{% assign related_slug = relation["target-character"] %}{% elsif relation["target-character"] == character_slug %}{% assign direction = "t" %}{% assign related_slug = relation["source-character"] %}{% endif %}{% if direction != "" %}{% assign expected_path = universe_slug | append: "/characters/" | append: related_slug | append: "." | append: lang | append: ".md" %}{% assign related_character = all_characters | where_exp: "c", "c.path == expected_path" | first %}{% if related_character %}{% assign relation_count = relation_count | plus: 1 %}{{ related_character["character-name"] }}_{{ direction }}_{{ relation.type }}_{{ related_slug }}_{{ related_character.url | relative_url }}|||{% endif %}{% endif %}{% endfor %}{% endcapture %}
+          {% capture relation_blob %}{% for relation in relations %}{% assign direction = "" %}{% if relation["source-character"] == character_slug %}{% assign direction = "s" %}{% assign related_slug = relation["target-character"] %}{% elsif relation["target-character"] == character_slug %}{% assign direction = "t" %}{% assign related_slug = relation["source-character"] %}{% endif %}{% if direction != "" %}{% assign expected_path = universe_slug | append: "/characters/" | append: related_slug | append: "." | append: lang | append: ".md" %}{% assign related_character = all_characters | where_exp: "c", "c.path == expected_path" | first %}{% if related_character %}{% assign relation_count = relation_count | plus: 1 %}{% assign rel_type = relation_types | where: "slug", relation.type | first %}{% assign type_index = 0 %}{% for t in relation_types %}{% if t.slug == relation.type %}{% assign type_index = forloop.index0 %}{% endif %}{% endfor %}{% assign group_rank = type_index | plus: 1000 %}{% assign group_role = 0 %}{% if rel_type["directed"] and direction == "t" %}{% assign group_role = 1 %}{% endif %}{{ group_rank }}{{ group_role }}_{{ related_character["character-name"] }}_{{ direction }}_{{ relation.type }}_{{ related_slug }}_{{ related_character.url | relative_url }}|||{% endif %}{% endif %}{% endfor %}{% endcapture %}
 
           {% if relation_count > 0 %}
             {% assign relation_entries = relation_blob | split: "|||" | sort %}
             <h3 class="sg-character-modal-relations-heading">{{ ui["character-relations-heading"] }}</h3>
-            <ul class="list-unstyled sg-character-modal-relations">
+            <div class="sg-character-modal-relations">
+              {% assign prev_group = "" %}
               {% for entry in relation_entries %}
                 {% unless entry == "" %}
                   {% assign parts = entry | split: "_" %}
@@ -64,30 +68,39 @@
                   {% assign related_slug = parts[-2] %}
                   {% assign type_slug = parts[-3] %}
                   {% assign direction = parts[-4] %}
-                  {% assign related_name = parts[0] %}
-                  {% assign rel_type = relation_types | where: "slug", type_slug | first %}
+                  {% assign related_name = parts[1] %}
+                  {% assign group_key = parts[0] %}
+                  {% if group_key != prev_group %}
+                    {% unless prev_group == "" %}</ul>{% endunless %}
+                    {% assign rel_type = relation_types | where: "slug", type_slug | first %}
+                    {% if direction == "s" %}
+                      {% assign relation_label = rel_type["label"][lang][viewer_gender] %}
+                    {% else %}
+                      {% if rel_type["directed"] %}
+                        {% assign relation_label = rel_type["reverse-label"][lang][viewer_gender] %}
+                      {% else %}
+                        {% assign relation_label = rel_type["label"][lang][viewer_gender] %}
+                      {% endif %}
+                    {% endif %}
+                    <h4 class="sg-relation-group-heading">{{ relation_label }}</h4>
+                    <ul class="sg-relation-group-list">
+                    {% assign prev_group = group_key %}
+                  {% endif %}
                   {% if direction == "s" %}
-                    {% assign relation_label = rel_type["label"][lang] %}
                     {% assign matching_relation = relations | where: "source-character", character_slug | where: "target-character", related_slug | where: "type", type_slug | first %}
                   {% else %}
-                    {% if rel_type["directed"] %}
-                      {% assign relation_label = rel_type["reverse-label"][lang] %}
-                    {% else %}
-                      {% assign relation_label = rel_type["label"][lang] %}
-                    {% endif %}
                     {% assign matching_relation = relations | where: "source-character", related_slug | where: "target-character", character_slug | where: "type", type_slug | first %}
                   {% endif %}
                   <li class="sg-character-modal-relation">
-                    <a href="{{ related_url }}" class="sg-character-link">
-                      <span class="sg-relation-label">{{ relation_label }}</span> {{ related_name }}
-                    </a>
+                    <a href="{{ related_url }}" class="sg-character-link">{{ related_name }}</a>
                     {% if matching_relation["description"][lang] %}
                       <p class="sg-relation-description">{{ matching_relation["description"][lang] }}</p>
                     {% endif %}
                   </li>
                 {% endunless %}
               {% endfor %}
-            </ul>
+              {% unless prev_group == "" %}</ul>{% endunless %}
+            </div>
           {% endif %}
         {% endif %}
       </div>

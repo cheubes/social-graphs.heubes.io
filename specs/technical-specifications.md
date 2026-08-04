@@ -225,10 +225,12 @@ Règles vérifiées, dans l'ordre de "Contraintes et règles de validation" de `
 - *Personnage pas en relation avec lui-même* : erreur si `source-character` = `target-character`.
 - *Type de relation existant* : erreur si le `type` d'une relation n'est ni dans `relation-types.yml` ni dans le `additional-relation-types.yml` de l'univers.
 - *`reverse-label` cohérent avec `directed`* : erreur si absent alors que `directed: true`, ou présent alors que `directed: false`.
+- *Formes `masculine`/`feminine` complètes* : erreur si un `label` ou `reverse-label` (taxonomie commune ou extension locale) ne définit pas les deux formes pour une langue déclarée.
 - *Pas de relation dupliquée* : erreur si deux entrées partagent le même triplet (source, cible, type) ; pour un type non dirigé, `(A, B)` et `(B, A)` comptent comme la même paire.
 - *`lang` cohérent avec le nom de fichier* : erreur si `.fr.md` ne porte pas `lang: fr`, ou `.en.md` `lang: en`.
 - *`mosaic`/`graph` présents ensemble par langue* : erreur si l'un existe sans l'autre, pour une langue donnée d'un univers.
 - *Champs non localisés de `metadata` identiques entre langues* : limite connue, `metadata` étant libre (voir `data-model.md`), le script ne peut pas savoir quels champs sont censés être localisés. Toute clé dont la valeur diffère entre les fichiers `fr`/`en` d'un personnage est donc un **avertissement**, à confirmer manuellement plutôt qu'une erreur bloquante.
+- *`gender` valide et cohérent entre langues* : erreur si l'attribut `gender` d'un personnage, quand il est renseigné, n'est ni `masculine` ni `feminine`, ou si ses fichiers de langue déclarent des valeurs différentes.
 
 ---
 

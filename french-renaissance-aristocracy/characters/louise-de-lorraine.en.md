@@ -3,6 +3,7 @@ layout: character
 permalink: /french-renaissance-aristocracy/characters/louise-de-lorraine/
 lang: en
 character-name: "Louise of Lorraine"
+gender: feminine
 metadata:
   birth: "1553"
   death: "1601"

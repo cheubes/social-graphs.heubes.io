@@ -15,7 +15,7 @@
           <label class="sg-filter-label d-flex align-items-center gap-2 mb-0">
             <input type="checkbox" class="form-check-input sg-filter-checkbox" value="{{ rel_type.slug }}" checked>
             <span class="sg-legend-swatch" style="background-color: {{ color_var }};" aria-hidden="true"></span>
-            <span>{{ rel_type.label[lang] }}</span>
+            <span>{{ rel_type.label[lang]["masculine"] }}</span>
           </label>
         </li>
       {% endcapture %}

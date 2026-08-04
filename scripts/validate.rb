@@ -7,6 +7,7 @@ ROOT = File.expand_path('..', __dir__)
 DATA_DIR = File.join(ROOT, '_data')
 SLUG_PATTERN = /\A[a-z]+(-[a-z]+)*\z/.freeze
 LANGUAGES = %w[fr en].freeze
+VALID_GENDERS = %w[masculine feminine].freeze
 
 Issue = Struct.new(:severity, :file, :rule, :detail)
 
@@ -78,6 +79,21 @@ def check_relation_type(type, file)
     error(file, 'reverse-label-consistency', "type '#{slug}' is directed but defines no reverse-label")
   elsif !directed && has_reverse
     error(file, 'reverse-label-consistency', "type '#{slug}' is not directed but defines a reverse-label")
+  end
+
+  check_gendered_label(type['label'], 'label', slug, file)
+  check_gendered_label(type['reverse-label'], 'reverse-label', slug, file)
+end
+
+def check_gendered_label(label, field_name, slug, file)
+  return unless label
+
+  LANGUAGES.each do |lang|
+    forms = label[lang]
+    next if forms.is_a?(Hash) && !forms['masculine'].nil? && !forms['feminine'].nil?
+
+    error(file, 'gendered-label-incomplete',
+          "type '#{slug}' #{field_name} for lang '#{lang}' must define both 'masculine' and 'feminine' forms")
   end
 end
 
@@ -182,6 +198,28 @@ universe_slugs.each do |uslug|
 
     char_data[cslug] ||= {}
     char_data[cslug][lang] = fm
+  end
+
+  # gender: must be masculine/feminine when present, and identical across languages
+  char_data.each do |cslug, langs|
+    langs.each do |lang, fm|
+      next unless fm.key?('gender')
+
+      gender = fm['gender']
+      next if VALID_GENDERS.include?(gender)
+
+      error("#{uslug}/characters/#{cslug}.#{lang}.md", 'invalid-gender',
+            "gender #{gender.inspect} must be 'masculine' or 'feminine'")
+    end
+
+    next unless langs['fr'] && langs['en']
+
+    gender_fr = langs['fr']['gender']
+    gender_en = langs['en']['gender']
+    next if gender_fr == gender_en
+
+    error("#{uslug}/characters/#{cslug}.{fr,en}.md", 'gender-locale-consistency',
+          "gender differs between languages (fr: #{gender_fr.inspect}, en: #{gender_en.inspect})")
   end
 
   # metadata: non-localized fields should match across languages (warning only)

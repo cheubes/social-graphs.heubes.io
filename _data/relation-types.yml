@@ -1,32 +1,56 @@
 - slug: parent-of
   label:
-    fr: "Parent de"
-    en: "Parent of"
+    fr:
+      masculine: "Père de"
+      feminine: "Mère de"
+    en:
+      masculine: "Father of"
+      feminine: "Mother of"
   reverse-label:
-    fr: "Enfant de"
-    en: "Child of"
+    fr:
+      masculine: "Fils de"
+      feminine: "Fille de"
+    en:
+      masculine: "Son of"
+      feminine: "Daughter of"
   directed: true
 
 - slug: married-to
   label:
-    fr: "Marié à"
-    en: "Married to"
+    fr:
+      masculine: "Marié à"
+      feminine: "Mariée à"
+    en:
+      masculine: "Married to"
+      feminine: "Married to"
   directed: false
 
 - slug: friend-of
   label:
-    fr: "Ami de"
-    en: "Friend of"
+    fr:
+      masculine: "Ami de"
+      feminine: "Amie de"
+    en:
+      masculine: "Friend of"
+      feminine: "Friend of"
   directed: false
 
 - slug: rival-of
   label:
-    fr: "Rival de"
-    en: "Rival of"
+    fr:
+      masculine: "Rival de"
+      feminine: "Rivale de"
+    en:
+      masculine: "Rival of"
+      feminine: "Rival of"
   directed: false
 
 - slug: ally-of
   label:
-    fr: "Allié de"
-    en: "Ally of"
+    fr:
+      masculine: "Allié de"
+      feminine: "Alliée de"
+    en:
+      masculine: "Ally of"
+      feminine: "Ally of"
   directed: false

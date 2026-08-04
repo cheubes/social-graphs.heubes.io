@@ -3,6 +3,7 @@ layout: character
 permalink: /french-renaissance-aristocracy/characters/henri-ii/
 lang: en
 character-name: "Henry II"
+gender: masculine
 metadata:
   birth: "1519"
   death: "1559"

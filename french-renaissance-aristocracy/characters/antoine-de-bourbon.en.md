@@ -3,6 +3,7 @@ layout: character
 permalink: /french-renaissance-aristocracy/characters/antoine-de-bourbon/
 lang: en
 character-name: "Antoine of Navarre"
+gender: masculine
 metadata:
   birth: "1518"
   death: "1562"

@@ -41,7 +41,7 @@ layout: default
       {% assign color_num = forloop.index0 | modulo: 8 | plus: 1 %}
       {% assign color_var = "var(--sg-graph-color-" | append: color_num | append: ")" %}
       {% assign rel_directed = rel_type.directed | default: false %}
-      {% assign rel_label_raw = rel_type.label[lang] %}
+      {% assign rel_label_raw = rel_type.label[lang]["masculine"] %}
       {% include json-escape.html value=rel_label_raw %}
       {% assign rel_label = json_escaped %}
       {% assign type_relations = relations | where: "type", rel_type.slug %}

@@ -3,6 +3,7 @@ layout: character
 permalink: /fr/french-renaissance-aristocracy/characters/diane-de-poitiers/
 lang: fr
 character-name: "Diane de Poitiers"
+gender: feminine
 metadata:
   birth: "1499"
   death: "1566"

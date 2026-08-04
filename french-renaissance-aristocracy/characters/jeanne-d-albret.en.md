@@ -3,6 +3,7 @@ layout: character
 permalink: /french-renaissance-aristocracy/characters/jeanne-d-albret/
 lang: en
 character-name: "Jeanne d'Albret"
+gender: feminine
 metadata:
   birth: "1528"
   death: "1572"

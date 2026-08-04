@@ -3,6 +3,7 @@ layout: character
 permalink: /fr/french-renaissance-aristocracy/characters/philippe-ii/
 lang: fr
 character-name: "Philippe II d'Espagne"
+gender: masculine
 metadata:
   birth: "1527"
   death: "1598"

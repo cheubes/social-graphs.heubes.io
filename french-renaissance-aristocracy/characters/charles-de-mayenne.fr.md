@@ -3,6 +3,7 @@ layout: character
 permalink: /fr/french-renaissance-aristocracy/characters/charles-de-mayenne/
 lang: fr
 character-name: "Charles de Lorraine, duc de Mayenne"
+gender: masculine
 metadata:
   birth: "1554"
   death: "1611"

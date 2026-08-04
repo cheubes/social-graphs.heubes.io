@@ -3,6 +3,7 @@ layout: character
 permalink: /french-renaissance-aristocracy/characters/francois-ii/
 lang: en
 character-name: "Francis II"
+gender: masculine
 metadata:
   birth: "1544"
   death: "1560"

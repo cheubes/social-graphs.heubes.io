@@ -3,6 +3,7 @@ layout: character
 permalink: /fr/french-renaissance-aristocracy/characters/catherine-de-medici/
 lang: fr
 character-name: "Catherine de Médicis"
+gender: feminine
 metadata:
   birth: "1519"
   death: "1589"

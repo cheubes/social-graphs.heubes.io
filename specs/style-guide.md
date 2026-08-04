@@ -101,7 +101,8 @@ Pas de grille ni d'échelle d'espacement custom : la grille et les classes utili
 ### Modale (fiche personnage)
 
 - Modale Bootstrap standard. Fond `--sg-white`, `character-name` en titre `--sg-dark-grey`, corps `--sg-grey`, libellés de relation `--sg-blue`.
-- Légende de portrait (`portrait-source`, si renseigné) : texte secondaire sous l'image (graisse 300, `--sg-grey`, voir "Typographie"), lien en `--sg-gold` au survol.
+- Liens de la fiche (personnage lié, lien externe, source du portrait) : `--sg-gold` de base, `--sg-grey` au survol, jamais soulignés. Le lien externe inclut son icône (voir "Iconographie").
+- Légende de portrait (`portrait-source`, si renseigné) : texte secondaire sous l'image (graisse 300, `--sg-grey`, voir "Typographie") ; son lien suit la règle ci-dessus.
 - Bouton de fermeture : icône Font Awesome (`fa-xmark`).
 
 ### Switcher Vue Mosaïque / Vue Graphe
@@ -139,4 +140,5 @@ Le logo du site (`assets/img/logo.png`, PNG, 256 × 256 px) est un asset d'inter
 - Sélecteur de langue : emoji drapeaux 🇫🇷 / 🇬🇧, pas d'icône Font Awesome.
 - Fermeture de modale : `fa-xmark`.
 - Recherche : `fa-magnifying-glass`.
+- Lien externe (`external-link` d'un personnage) : `fa-arrow-up-right-from-square`, devant le libellé.
 - Creative Commons : `fa-creative-commons`, `fa-creative-commons-by`, `fa-creative-commons-nc-eu`, `fa-creative-commons-sa`.

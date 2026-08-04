@@ -3,6 +3,7 @@ layout: character
 permalink: /fr/french-renaissance-aristocracy/characters/elisabeth-de-france/
 lang: fr
 character-name: "Élisabeth de France"
+gender: feminine
 metadata:
   birth: "1545"
   death: "1568"
