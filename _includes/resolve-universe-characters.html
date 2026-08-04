@@ -9,3 +9,9 @@
 {% else %}
   {% assign relation_types = site.data["relation-types"] %}
 {% endif %}
+{% assign additional_metadata_keys = universe_data["additional-metadata-keys"] %}
+{% if additional_metadata_keys %}
+  {% assign metadata_keys = site.data["metadata-keys"] | concat: additional_metadata_keys %}
+{% else %}
+  {% assign metadata_keys = site.data["metadata-keys"] %}
+{% endif %}

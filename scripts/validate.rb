@@ -102,6 +102,38 @@ def record_relation_type(registry, type, file)
   check_relation_type(type, file)
 end
 
+def check_metadata_key(key, file)
+  slug = key['slug']
+  if slug.nil?
+    error(file, 'metadata-key-slug-missing', 'metadata key entry has no slug')
+    return
+  end
+
+  unless valid_slug?(slug)
+    error(file, 'slug-format', "metadata key slug '#{slug}' must contain only lowercase ASCII letters and hyphens")
+  end
+
+  check_metadata_label(key['label'], slug, file)
+end
+
+def check_metadata_label(label, slug, file)
+  if label.nil?
+    error(file, 'metadata-key-label-missing', "metadata key '#{slug}' has no label")
+    return
+  end
+
+  LANGUAGES.each do |lang|
+    next unless label[lang].nil?
+
+    error(file, 'metadata-key-label-incomplete', "metadata key '#{slug}' label for lang '#{lang}' is missing")
+  end
+end
+
+def record_metadata_key(registry, key, file)
+  register_type(registry, key, file)
+  check_metadata_key(key, file)
+end
+
 # --- Universe discovery -----------------------------------------------
 # A universe is identified by its `_data/<slug>/` directory.
 
@@ -148,6 +180,44 @@ end
 type_registry.each do |slug, files|
   if files.size > 1
     error(files.uniq.join(', '), 'relation-type-slug-unique', "relation type slug '#{slug}' is declared more than once")
+  end
+end
+
+# --- Metadata keys (common + per-universe additional) --------------------
+
+common_metadata_keys_path = File.join(DATA_DIR, 'metadata-keys.yml')
+common_metadata_keys_file_rel = relative(common_metadata_keys_path)
+common_metadata_keys = []
+if File.exist?(common_metadata_keys_path)
+  common_metadata_keys = load_yaml(common_metadata_keys_path) || []
+else
+  error(common_metadata_keys_file_rel, 'missing-file', 'common metadata keys file not found')
+end
+
+metadata_key_registry = {}
+common_metadata_keys.each { |key| record_metadata_key(metadata_key_registry, key, common_metadata_keys_file_rel) }
+
+common_known_metadata_keys = {}
+common_metadata_keys.each { |k| common_known_metadata_keys[k['slug']] = k if k['slug'] }
+
+universe_additional_metadata_keys = {}
+universe_slugs.each do |uslug|
+  additional_path = File.join(DATA_DIR, uslug, 'additional-metadata-keys.yml')
+  next unless File.exist?(additional_path)
+
+  file_rel = "_data/#{uslug}/additional-metadata-keys.yml"
+  keys = load_yaml(additional_path) || []
+  local_keys = {}
+  keys.each do |key|
+    record_metadata_key(metadata_key_registry, key, file_rel)
+    local_keys[key['slug']] = key if key['slug']
+  end
+  universe_additional_metadata_keys[uslug] = local_keys
+end
+
+metadata_key_registry.each do |slug, files|
+  if files.size > 1
+    error(files.uniq.join(', '), 'metadata-key-slug-unique', "metadata key slug '#{slug}' is declared more than once")
   end
 end
 
@@ -233,6 +303,19 @@ universe_slugs.each do |uslug|
 
       warning("#{uslug}/characters/#{cslug}.{fr,en}.md", 'metadata-locale-consistency',
               "metadata key '#{key}' differs between languages (fr: #{meta_fr[key].inspect}, en: #{meta_en[key].inspect})")
+    end
+  end
+
+  # metadata: keys used by a character must exist in the taxonomy
+  known_metadata_keys = common_known_metadata_keys.merge(universe_additional_metadata_keys[uslug] || {})
+  char_data.each do |cslug, langs|
+    langs.each do |lang, fm|
+      (fm['metadata'] || {}).each_key do |key|
+        next if known_metadata_keys.key?(key)
+
+        error("#{uslug}/characters/#{cslug}.#{lang}.md", 'unknown-metadata-key',
+              "metadata key '#{key}' is not defined in metadata-keys.yml or additional-metadata-keys.yml")
+      end
     end
   end
 

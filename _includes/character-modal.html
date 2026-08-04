@@ -38,7 +38,8 @@
           {% if character.metadata %}
             <dl class="sg-character-modal-metadata">
               {% for pair in character.metadata %}
-                <dt>{{ pair[0] }}</dt>
+                {% assign metadata_key = metadata_keys | where: "slug", pair[0] | first %}
+                <dt>{{ metadata_key["label"][lang] }}</dt>
                 <dd>{{ pair[1] }}</dd>
               {% endfor %}
             </dl>

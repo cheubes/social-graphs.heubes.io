@@ -46,7 +46,7 @@ layout: default
   {% endif %}
 </section>
 
-{% include character-modal.html character=modal_character open=is_character_page universe_slug=universe_slug lang=lang ui=ui placeholder_src=placeholder_src all_characters=characters relations=relations relation_types=relation_types view_url=mosaic_page.url %}
+{% include character-modal.html character=modal_character open=is_character_page universe_slug=universe_slug lang=lang ui=ui placeholder_src=placeholder_src all_characters=characters relations=relations relation_types=relation_types metadata_keys=metadata_keys view_url=mosaic_page.url %}
 
 <script src="{{ '/assets/js/character-modal.js' | relative_url }}" defer></script>
 {% if characters.size > 0 %}

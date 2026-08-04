@@ -1,0 +1,9 @@
+- slug: birth
+  label:
+    fr: "Naissance"
+    en: "Born"
+
+- slug: death
+  label:
+    fr: "Décès"
+    en: "Died"

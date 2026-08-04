@@ -230,6 +230,9 @@ Règles vérifiées, dans l'ordre de "Contraintes et règles de validation" de `
 - *`lang` cohérent avec le nom de fichier* : erreur si `.fr.md` ne porte pas `lang: fr`, ou `.en.md` `lang: en`.
 - *`mosaic`/`graph` présents ensemble par langue* : erreur si l'un existe sans l'autre, pour une langue donnée d'un univers.
 - *Champs non localisés de `metadata` identiques entre langues* : limite connue, `metadata` étant libre (voir `data-model.md`), le script ne peut pas savoir quels champs sont censés être localisés. Toute clé dont la valeur diffère entre les fichiers `fr`/`en` d'un personnage est donc un **avertissement**, à confirmer manuellement plutôt qu'une erreur bloquante.
+- *Slug de clé de metadata unique globalement* : erreur si un même slug apparaît plus d'une fois entre `_data/metadata-keys.yml` et l'ensemble des `_data/<slug-universe>/additional-metadata-keys.yml`.
+- *Clé de metadata existante* : erreur si une clé de l'attribut `metadata` d'un personnage n'est ni dans `metadata-keys.yml` ni dans le `additional-metadata-keys.yml` de l'univers.
+- *`label` complet pour une clé de metadata* : erreur si le `label` d'une clé de metadata (taxonomie commune ou extension locale) ne définit pas de valeur pour une langue déclarée.
 - *`gender` valide et cohérent entre langues* : erreur si l'attribut `gender` d'un personnage, quand il est renseigné, n'est ni `masculine` ni `feminine`, ou si ses fichiers de langue déclarent des valeurs différentes.
 
 ---
