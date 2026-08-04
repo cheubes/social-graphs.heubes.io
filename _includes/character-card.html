@@ -1,14 +1,22 @@
 {% assign character_slug = character.path | split: "/" | last | split: "." | first %}
 {% assign portrait_src = "/" | append: universe_slug | append: "/characters/" | append: character_slug | append: ".jpg" | relative_url %}
+{% assign character_group = groups | where: "slug", character["group"] | first %}
 <a href="{{ character.url | relative_url }}" class="sg-card-link sg-character-link text-decoration-none"
-  data-character-name="{{ character["character-name"] }}">
-  <div class="card sg-card h-100">
-    <img src="{{ portrait_src }}"
-      class="card-img-top sg-character-portrait"
-      alt="{{ character["character-name"] }}"
-      loading="lazy"
-      onerror="this.onerror=null; this.src='{{ placeholder_src }}';">
-    <div class="card-body">
+  data-character-name="{{ character["character-name"] }}" data-group="{{ character["group"] }}">
+  <div class="card sg-card sg-character-card h-100">
+    <div class="sg-character-portrait-wrap">
+      <img src="{{ portrait_src }}"
+        class="card-img-top sg-character-portrait"
+        alt="{{ character["character-name"] }}"
+        loading="lazy"
+        onerror="this.onerror=null; this.src='{{ placeholder_src }}';">
+      {% if character_group %}
+        {% assign group_logo_src = "/" | append: universe_slug | append: "/groups/" | append: character_group.slug | append: ".png" | relative_url %}
+        <img src="{{ group_logo_src }}" class="sg-character-card-group-logo" alt="{{ character_group.name[lang] }}">
+      {% endif %}
+    </div>
+    <div class="card-body"
+      {% if character_group %}style="border-top-color: {{ character_group.color }};"{% endif %}>
       <h2 class="card-title h5 sg-card-title">{{ character["character-name"] }}</h2>
       <p class="card-text sg-card-text">{{ character.content | strip_html | truncate: 150 }}</p>
     </div>

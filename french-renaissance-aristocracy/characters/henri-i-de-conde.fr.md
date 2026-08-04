@@ -4,6 +4,7 @@ permalink: /fr/french-renaissance-aristocracy/characters/henri-i-de-conde/
 lang: fr
 character-name: "Henri Ier de Bourbon-Condé"
 gender: masculine
+group: house-of-bourbon
 metadata:
   birth: "1552"
   death: "1588"

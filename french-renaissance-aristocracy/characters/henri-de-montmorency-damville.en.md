@@ -4,6 +4,7 @@ permalink: /french-renaissance-aristocracy/characters/henri-de-montmorency-damvi
 lang: en
 character-name: "Henri I de Montmorency"
 gender: masculine
+group: house-of-montmorency
 metadata:
   birth: "1534"
   death: "1614"

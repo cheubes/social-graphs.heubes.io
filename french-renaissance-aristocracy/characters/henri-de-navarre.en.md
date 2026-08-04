@@ -4,6 +4,7 @@ permalink: /french-renaissance-aristocracy/characters/henri-de-navarre/
 lang: en
 character-name: "Henry of Navarre"
 gender: masculine
+group: house-of-bourbon
 metadata:
   birth: "1553"
   death: "1610"

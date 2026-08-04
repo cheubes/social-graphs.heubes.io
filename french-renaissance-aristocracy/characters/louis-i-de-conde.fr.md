@@ -4,6 +4,7 @@ permalink: /fr/french-renaissance-aristocracy/characters/louis-i-de-conde/
 lang: fr
 character-name: "Louis Ier de Bourbon-Condé"
 gender: masculine
+group: house-of-bourbon
 metadata:
   birth: "1530"
   death: "1569"

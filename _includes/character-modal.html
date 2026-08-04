@@ -17,6 +17,13 @@
         {% if character %}
           {% assign character_slug = character.path | split: "/" | last | split: "." | first %}
           {% assign portrait_src = "/" | append: universe_slug | append: "/characters/" | append: character_slug | append: ".jpg" | relative_url %}
+          {% assign character_group = groups | where: "slug", character["group"] | first %}
+
+          <div class="sg-character-modal-group-bar"{% if character_group %} style="background-color: {{ character_group.color }};"{% endif %}></div>
+          {% if character_group %}
+            {% assign group_logo_src = "/" | append: universe_slug | append: "/groups/" | append: character_group.slug | append: ".png" | relative_url %}
+            <img src="{{ group_logo_src }}" class="sg-character-modal-group-logo" alt="{{ character_group.name[lang] }}">
+          {% endif %}
 
           <figure class="sg-character-modal-portrait-wrap">
             <img src="{{ portrait_src }}"

@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   const NODE_RADIUS = 24;
+  const GROUP_LOGO_RADIUS = 9;
+  const GROUP_LOGO_OFFSET = NODE_RADIUS * 0.62;
   const CURVE_SPACING = 24;
   const MIN_ZOOM = 0.2;
   const MAX_ZOOM = 4;
@@ -56,6 +58,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const directedColorIndices = [...new Set(edgesData.filter((edge) => edge.directed).map((edge) => edge.colorIndex))];
 
   const defs = svg.append("defs");
+
+  // Shared by every node's group logo badge (see below): the same fixed circle,
+  // not one per node, since GROUP_LOGO_OFFSET/RADIUS never vary between nodes.
+  defs
+    .append("clipPath")
+    .attr("id", "sg-graph-group-clip")
+    .append("circle")
+    .attr("cx", GROUP_LOGO_OFFSET)
+    .attr("cy", GROUP_LOGO_OFFSET)
+    .attr("r", GROUP_LOGO_RADIUS);
+
   directedColorIndices.forEach((colorIndex) => {
     defs
       .append("marker")
@@ -99,6 +112,8 @@ document.addEventListener("DOMContentLoaded", () => {
     .attr("class", "sg-graph-link")
     .attr("data-color-index", (d) => d.colorIndex)
     .attr("data-type", (d) => d.type)
+    .attr("data-source", (d) => d.source.slug)
+    .attr("data-target", (d) => d.target.slug)
     .style("stroke", (d) => d.color)
     .attr("marker-end", (d) => (d.directed ? `url(#sg-graph-arrow-${d.colorIndex})` : null))
     .on("mouseenter", (event, d) => {
@@ -122,7 +137,9 @@ document.addEventListener("DOMContentLoaded", () => {
     .attr("class", "sg-graph-node")
     .attr("data-slug", (d) => d.slug)
     .attr("data-name", (d) => d.name)
+    .attr("data-group", (d) => d.group || "")
     .call(drag(simulation))
+    .style("--sg-node-ring-color", (d) => d.groupColor || null)
     .on("click", (event, d) => {
       event.stopPropagation();
       pinned = false;
@@ -156,6 +173,37 @@ document.addEventListener("DOMContentLoaded", () => {
     .on("error", function () {
       d3.select(this).attr("href", placeholderSrc);
     });
+
+  // Visible group-color border, drawn on top of the portrait (unlike
+  // .sg-graph-node-ring below it, which stays an opaque white backdrop masking
+  // link start-points under the node): white when the character has no group
+  // (see "Groupe" in data-model.md and graph-view.md).
+  node
+    .append("circle")
+    .attr("class", "sg-graph-node-border")
+    .attr("r", NODE_RADIUS);
+
+  // Group logo badge, bottom-right of the node (see "Groupe" in data-model.md and
+  // graph-view.md): only for nodes whose character belongs to a group.
+  const groupNode = node.filter((d) => d.groupLogo);
+
+  groupNode
+    .append("circle")
+    .attr("class", "sg-graph-node-group-badge-bg")
+    .attr("cx", GROUP_LOGO_OFFSET)
+    .attr("cy", GROUP_LOGO_OFFSET)
+    .attr("r", GROUP_LOGO_RADIUS + 2);
+
+  groupNode
+    .append("image")
+    .attr("class", "sg-graph-node-group-logo")
+    .attr("x", GROUP_LOGO_OFFSET - GROUP_LOGO_RADIUS)
+    .attr("y", GROUP_LOGO_OFFSET - GROUP_LOGO_RADIUS)
+    .attr("width", GROUP_LOGO_RADIUS * 2)
+    .attr("height", GROUP_LOGO_RADIUS * 2)
+    .attr("preserveAspectRatio", "xMidYMid slice")
+    .attr("clip-path", "url(#sg-graph-group-clip)")
+    .attr("href", (d) => d.groupLogo);
 
   const label = node.append("g").attr("class", "sg-graph-node-label");
 

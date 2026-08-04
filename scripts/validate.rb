@@ -117,15 +117,23 @@ def check_metadata_key(key, file)
 end
 
 def check_metadata_label(label, slug, file)
-  if label.nil?
-    error(file, 'metadata-key-label-missing', "metadata key '#{slug}' has no label")
+  check_localized_field(label, 'metadata key', 'label', slug, file,
+                         'metadata-key-label-missing', 'metadata-key-label-incomplete')
+end
+
+# Shared by check_metadata_label above and the group `name` check below: both are
+# a simple "present for every declared language" field, unlike a relation type's
+# label/reverse-label, which also declines masculine/feminine (see check_gendered_label).
+def check_localized_field(value, entity_label, field_name, slug, file, missing_rule, incomplete_rule)
+  if value.nil?
+    error(file, missing_rule, "#{entity_label} '#{slug}' has no #{field_name}")
     return
   end
 
   LANGUAGES.each do |lang|
-    next unless label[lang].nil?
+    next unless value[lang].nil?
 
-    error(file, 'metadata-key-label-incomplete', "metadata key '#{slug}' label for lang '#{lang}' is missing")
+    error(file, incomplete_rule, "#{entity_label} '#{slug}' #{field_name} for lang '#{lang}' is missing")
   end
 end
 
@@ -316,6 +324,47 @@ universe_slugs.each do |uslug|
         error("#{uslug}/characters/#{cslug}.#{lang}.md", 'unknown-metadata-key',
               "metadata key '#{key}' is not defined in metadata-keys.yml or additional-metadata-keys.yml")
       end
+    end
+  end
+
+  # groups: no common taxonomy (see "Groupe" in data-model.md), so slug uniqueness
+  # is checked within this universe's own groups.yml only, not globally.
+  groups_path = File.join(DATA_DIR, uslug, 'groups.yml')
+  known_groups = {}
+  if File.exist?(groups_path)
+    groups_file_rel = "_data/#{uslug}/groups.yml"
+    groups = load_yaml(groups_path) || []
+
+    groups.each do |group|
+      slug = group['slug']
+      if slug.nil?
+        error(groups_file_rel, 'group-slug-missing', 'group entry has no slug')
+        next
+      end
+
+      unless valid_slug?(slug)
+        error(groups_file_rel, 'slug-format', "group slug '#{slug}' must contain only lowercase ASCII letters and hyphens")
+      end
+
+      if known_groups.key?(slug)
+        error(groups_file_rel, 'group-slug-unique', "group slug '#{slug}' is declared more than once")
+      end
+      known_groups[slug] = group
+
+      check_localized_field(group['name'], 'group', 'name', slug, groups_file_rel,
+                             'group-name-missing', 'group-name-incomplete')
+    end
+  end
+
+  # group: a character's group attribute, when present, must reference a group of its own universe
+  char_data.each do |cslug, langs|
+    langs.each do |lang, fm|
+      group = fm['group']
+      next if group.nil?
+      next if known_groups.key?(group)
+
+      error("#{uslug}/characters/#{cslug}.#{lang}.md", 'unknown-group',
+            "group '#{group}' is not defined in _data/#{uslug}/groups.yml")
     end
   end
 

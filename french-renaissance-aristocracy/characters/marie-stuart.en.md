@@ -4,6 +4,7 @@ permalink: /french-renaissance-aristocracy/characters/marie-stuart/
 lang: en
 character-name: "Mary, Queen of Scots"
 gender: feminine
+group: house-of-guise
 metadata:
   birth: "1542"
   death: "1587"

@@ -4,6 +4,7 @@ permalink: /french-renaissance-aristocracy/characters/louis-i-de-conde/
 lang: en
 character-name: "Louis I, Prince of Condé"
 gender: masculine
+group: house-of-bourbon
 metadata:
   birth: "1530"
   death: "1569"

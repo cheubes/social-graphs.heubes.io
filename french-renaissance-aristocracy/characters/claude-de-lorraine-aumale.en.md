@@ -4,6 +4,7 @@ permalink: /french-renaissance-aristocracy/characters/claude-de-lorraine-aumale/
 lang: en
 character-name: "Claude, Duke of Aumale"
 gender: masculine
+group: house-of-guise
 metadata:
   birth: "1526"
   death: "1573"

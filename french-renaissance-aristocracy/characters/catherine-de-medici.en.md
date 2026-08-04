@@ -4,6 +4,7 @@ permalink: /french-renaissance-aristocracy/characters/catherine-de-medici/
 lang: en
 character-name: "Catherine de' Medici"
 gender: feminine
+group: house-of-valois
 metadata:
   birth: "1519"
   death: "1589"

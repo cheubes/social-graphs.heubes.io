@@ -4,6 +4,7 @@ permalink: /french-renaissance-aristocracy/characters/henri-iii/
 lang: en
 character-name: "Henry III"
 gender: masculine
+group: house-of-valois
 metadata:
   birth: "1551"
   death: "1589"

@@ -4,6 +4,7 @@ permalink: /fr/french-renaissance-aristocracy/characters/gaspard-de-coligny/
 lang: fr
 character-name: "Gaspard de Coligny"
 gender: masculine
+group: house-of-montmorency
 metadata:
   birth: "1519"
   death: "1572"

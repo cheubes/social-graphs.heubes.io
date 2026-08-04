@@ -1,0 +1,23 @@
+- slug: house-of-valois
+  name:
+    fr: "Maison de Valois"
+    en: "House of Valois"
+  color: "#7a1f3d"
+
+- slug: house-of-guise
+  name:
+    fr: "Maison de Guise"
+    en: "House of Guise"
+  color: "#1f5c3a"
+
+- slug: house-of-bourbon
+  name:
+    fr: "Maison de Bourbon"
+    en: "House of Bourbon"
+  color: "#2c5f8a"
+
+- slug: house-of-montmorency
+  name:
+    fr: "Maison de Montmorency"
+    en: "House of Montmorency"
+  color: "#8a5a1f"

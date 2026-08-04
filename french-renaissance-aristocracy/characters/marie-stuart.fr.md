@@ -4,6 +4,7 @@ permalink: /fr/french-renaissance-aristocracy/characters/marie-stuart/
 lang: fr
 character-name: "Marie Stuart"
 gender: feminine
+group: house-of-guise
 metadata:
   birth: "1542"
   death: "1587"

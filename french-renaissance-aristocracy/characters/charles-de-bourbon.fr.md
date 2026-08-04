@@ -4,6 +4,7 @@ permalink: /fr/french-renaissance-aristocracy/characters/charles-de-bourbon/
 lang: fr
 character-name: "Charles de Bourbon, cardinal de Bourbon"
 gender: masculine
+group: house-of-bourbon
 metadata:
   birth: "1523"
   death: "1590"

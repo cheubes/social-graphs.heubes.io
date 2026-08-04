@@ -4,6 +4,7 @@ permalink: /fr/french-renaissance-aristocracy/characters/cardinal-de-lorraine/
 lang: fr
 character-name: "Charles de Lorraine, cardinal de Lorraine"
 gender: masculine
+group: house-of-guise
 metadata:
   birth: "1524"
   death: "1574"

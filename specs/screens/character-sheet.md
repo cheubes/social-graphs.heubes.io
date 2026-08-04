@@ -9,6 +9,7 @@ Présenter le détail d'un personnage (biographie, informations complémentaires
 Modale superposée à la Vue Mosaïque ou à la Vue Graphe (voir `universe-home.md` et `graph-view.md`), qui reste visible en arrière-plan.
 
 - Portrait et `character-name` du personnage.
+- Logo du groupe d'appartenance du personnage, si renseigné, affiché dans le coin en haut à gauche de la modale ; bordure haute de la modale de la couleur de ce groupe, blanche sinon (voir "Groupe" dans `data-model.md` et `style-guide.md`).
 - `portrait-source`, si renseigné : mention de la source du portrait, en légende sous l'image (voir `style-guide.md`).
 - `description` (texte biographique).
 - `metadata`, si renseigné : affiché en liste clé/valeur ; chaque clé affiche son libellé localisé (voir "Clé de metadata" dans `data-model.md`), pas la clé brute.

@@ -4,6 +4,7 @@ permalink: /french-renaissance-aristocracy/characters/henri-ii/
 lang: en
 character-name: "Henry II"
 gender: masculine
+group: house-of-valois
 metadata:
   birth: "1519"
   death: "1559"

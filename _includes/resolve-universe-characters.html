@@ -15,3 +15,12 @@
 {% else %}
   {% assign metadata_keys = site.data["metadata-keys"] %}
 {% endif %}
+{% assign groups = universe_data["groups"] %}
+{% assign used_group_slugs = " " %}
+{% if groups %}
+  {% for character in characters %}
+    {% if character["group"] %}
+      {% assign used_group_slugs = used_group_slugs | append: character["group"] | append: " " %}
+    {% endif %}
+  {% endfor %}
+{% endif %}

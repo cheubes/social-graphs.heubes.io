@@ -4,6 +4,7 @@ permalink: /french-renaissance-aristocracy/characters/francois-de-montmorency/
 lang: en
 character-name: "François de Montmorency"
 gender: masculine
+group: house-of-montmorency
 metadata:
   birth: "1530"
   death: "1579"

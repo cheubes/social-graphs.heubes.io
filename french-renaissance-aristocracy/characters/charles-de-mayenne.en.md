@@ -4,6 +4,7 @@ permalink: /french-renaissance-aristocracy/characters/charles-de-mayenne/
 lang: en
 character-name: "Charles, Duke of Mayenne"
 gender: masculine
+group: house-of-guise
 metadata:
   birth: "1554"
   death: "1611"

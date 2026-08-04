@@ -4,6 +4,7 @@ permalink: /french-renaissance-aristocracy/characters/antoinette-de-bourbon/
 lang: en
 character-name: "Antoinette of Bourbon"
 gender: feminine
+group: house-of-guise
 metadata:
   birth: "1494"
   death: "1583"

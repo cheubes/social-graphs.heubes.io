@@ -4,6 +4,7 @@ permalink: /french-renaissance-aristocracy/characters/francois-ii/
 lang: en
 character-name: "Francis II"
 gender: masculine
+group: house-of-valois
 metadata:
   birth: "1544"
   death: "1560"

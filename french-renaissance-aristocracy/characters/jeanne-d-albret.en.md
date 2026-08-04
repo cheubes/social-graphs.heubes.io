@@ -4,6 +4,7 @@ permalink: /french-renaissance-aristocracy/characters/jeanne-d-albret/
 lang: en
 character-name: "Jeanne d'Albret"
 gender: feminine
+group: house-of-bourbon
 metadata:
   birth: "1528"
   death: "1572"

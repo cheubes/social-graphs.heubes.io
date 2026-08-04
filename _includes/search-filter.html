@@ -1,6 +1,30 @@
 {% assign ui = include.ui %}
 {% assign show_filters = include.show_filters %}
 {% assign used_type_slugs = include.used_type_slugs %}
+{% assign groups = include.groups %}
+{% assign used_group_slugs = include.used_group_slugs %}
+
+{% assign group_filter_items = "" %}
+{% assign group_filter_count = 0 %}
+{% assign sorted_groups = groups | sort: "slug" %}
+{% for group in sorted_groups %}
+  {% assign group_token = " " | append: group.slug | append: " " %}
+  {% if used_group_slugs contains group_token %}
+    {% assign group_filter_count = group_filter_count | plus: 1 %}
+    {% assign group_logo_src = "/" | append: universe_slug | append: "/groups/" | append: group.slug | append: ".png" | relative_url %}
+    {% capture filter_item %}
+      <li class="sg-legend-item">
+        <label class="sg-filter-label d-flex align-items-center gap-2 mb-0">
+          <input type="checkbox" class="form-check-input sg-group-filter-checkbox" value="{{ group.slug }}" checked>
+          <img src="{{ group_logo_src }}" class="sg-legend-logo" alt="" aria-hidden="true">
+          <span>{{ group.name[lang] }}</span>
+        </label>
+      </li>
+    {% endcapture %}
+    {% assign group_filter_items = group_filter_items | append: filter_item %}
+  {% endif %}
+{% endfor %}
+
 {% assign filter_items = "" %}
 {% assign filter_count = 0 %}
 {% if show_filters %}
@@ -39,6 +63,14 @@
       </ul>
     {% endif %}
   </div>
+
+  {% if group_filter_count > 0 %}
+    <div class="sg-search-filter-row sg-search-filter-row-groups">
+      <ul class="list-unstyled sg-legend-list" aria-label="{{ ui['filter-groups-label'] }}">
+        {{ group_filter_items }}
+      </ul>
+    </div>
+  {% endif %}
 
   <p class="sg-search-filter-empty" id="sg-search-filter-empty" hidden>{{ ui["filter-empty"] }}</p>
 </div>

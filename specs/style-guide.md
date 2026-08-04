@@ -52,6 +52,10 @@ Cette palette est validée pour la lecture en daltonisme quand les couleurs appa
 
 Chiffres établis avec la méthode et la palette de référence du skill dataviz (surface `#fcfcfb`). Vérifié sur notre fond `#FFFFFF` : le turquoise, le jaune et le magenta (teintes 3, 4, 5) tombent sous 3:1 comme simple trait fin sur blanc, contre une surface plus grise où ils passaient. Un trait un peu plus épais que la normale pour ces trois teintes en particulier compense en partie ; la légende et le survol (ci-dessus) restent la garantie principale de lisibilité, indépendamment de l'épaisseur du trait.
 
+### Couleur de groupe
+
+La couleur d'un groupe de personnages (voir "Groupe" dans `data-model.md`) est une donnée de contenu, pas un ingrédient de la charte graphique : comme les images, elle est choisie librement à l'ajout du contenu, propre à chaque groupe, sans palette imposée ni contrainte de contraste garantie. Elle sert uniquement de bordure décorative (tuile, nœud du graphe, modale ; voir "Tuiles" et "Modale" ci-dessous), jamais de fond de texte.
+
 ## Typographie
 
 - **Police** : Ubuntu (Google Fonts), graisses 300 / 400 / 500 / 700.
@@ -97,12 +101,14 @@ Pas de grille ni d'échelle d'espacement custom : la grille et les classes utili
 - Carte Bootstrap : image (couverture ou portrait) en lazy loading (voir `home.md`, `universe-home.md`), `title`/`character-name` en titre, `description` tronquée en corps.
 - Fond `--sg-white`, titre `--sg-dark-grey`, texte `--sg-grey`, bordure `--sg-light-grey`.
 - Survol : légère élévation (ombre) et bordure `--sg-gold`.
+- Tuile personnage (voir `universe-home.md`) uniquement : bordure de 10px entre le portrait et le corps de la tuile (nom, description), de la couleur du groupe d'appartenance du personnage si renseigné (voir "Groupe" dans `data-model.md`), blanche sinon ; logo de ce groupe, si renseigné, affiché dans le coin en bas à droite de la tuile.
 
 ### Modale (fiche personnage)
 
 - Modale Bootstrap standard. Fond `--sg-white`, `character-name` en titre `--sg-dark-grey`, corps `--sg-grey`, libellés de relation `--sg-blue`.
 - Liens de la fiche (personnage lié, lien externe, source du portrait) : `--sg-gold` de base, `--sg-grey` au survol, jamais soulignés. Le lien externe inclut son icône (voir "Iconographie").
 - Légende de portrait (`portrait-source`, si renseigné) : texte secondaire sous l'image (graisse 300, `--sg-grey`, voir "Typographie") ; son lien suit la règle ci-dessus.
+- Bordure haute de 10px, de la couleur du groupe d'appartenance du personnage si renseigné (voir "Groupe" dans `data-model.md`), blanche sinon ; logo de ce groupe, si renseigné, affiché dans le coin en haut à gauche de la modale.
 - Bouton de fermeture : icône Font Awesome (`fa-xmark`).
 
 ### Switcher Vue Mosaïque / Vue Graphe
@@ -112,8 +118,9 @@ Pas de grille ni d'échelle d'espacement custom : la grille et les classes utili
 ### Barre de recherche / filtres
 
 - Champ de recherche Bootstrap standard, icône `fa-magnifying-glass`.
-- Filtres de type de relation : cases à cocher ou "chips" à fond neutre (`--sg-white`) et texte `--sg-grey`/`--sg-dark-grey`, chacun précédé d'une pastille de la couleur de son type dans la palette du graphe (voir ci-dessus). La couleur reste un repère visuel à côté du texte, jamais le fond du texte : aucune couleur de texte unique ne passe le contraste AA sur les huit teintes de cette palette à la fois (vérifié).
-- Disposition : filtres alignés directement à droite du champ de recherche, sur une même ligne qui se replie (un ou plusieurs filtres passent à la ligne suivante) si l'espace manque, plutôt que le bloc de filtres dans son ensemble.
+- Filtres de groupe : cases à cocher ou "chips" à fond neutre (`--sg-white`) et texte `--sg-grey`/`--sg-dark-grey`, chacun précédé du logo du groupe plutôt que d'une pastille de couleur, celui-ci étant déjà l'identifiant visuel du groupe (voir "Groupe" dans `data-model.md`).
+- Filtres de type de relation : même principe, chacun précédé d'une pastille de la couleur de son type dans la palette du graphe (voir ci-dessus). La couleur reste un repère visuel à côté du texte, jamais le fond du texte : aucune couleur de texte unique ne passe le contraste AA sur les huit teintes de cette palette à la fois (vérifié).
+- Disposition : filtres de type de relation alignés directement à droite du champ de recherche, sur une ligne qui se replie (un ou plusieurs filtres passent à la ligne suivante) si l'espace manque, plutôt que le bloc de filtres dans son ensemble ; filtres de groupe sur leur propre ligne, en dessous.
 - Pas de bouton de réinitialisation dédié : vider le champ de recherche et recocher les cases se fait directement sur ces contrôles.
 
 ### Boutons
@@ -129,8 +136,11 @@ Format `.jpg` (voir `data-model.md`) pour les images de contenu (couvertures, po
 |---|---|---|
 | Couverture d'univers | 16:9 | 1200 × 675 px |
 | Portrait de personnage | 1:1 (carré) | 600 × 600 px |
+| Logo de groupe | 1:1 (carré) | 128 × 128 px |
 
 Le portrait est carré pour rester correct une fois recadré en cercle (nœud du graphe, voir `graph-view.md`), en tuile (voir `universe-home.md`) ou dans la modale (voir `character-sheet.md`), sans traitement différent selon le contexte d'affichage.
+
+Le logo d'un groupe est au format PNG plutôt que `.jpg`, pour conserver la transparence : il est superposé à d'autres éléments (tuile, nœud du graphe, modale) plutôt qu'affiché seul (voir "Images" dans `data-model.md`).
 
 Le logo du site (`assets/img/logo.png`, PNG, 256 × 256 px) est un asset d'interface distinct du contenu des univers : affiché à 48px de haut dans l'en-tête, et réutilisé tel quel comme favicon (pas de génération de variantes ni de format `.ico`).
 

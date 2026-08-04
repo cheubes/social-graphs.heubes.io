@@ -104,7 +104,8 @@ Versions vérifiées comme les dernières stables disponibles sur jsDelivr à la
 │   ├── ui.en.yml                 # textes d'interface en EN (labels, messages, dont le message d'indisponibilité)
 │   └── <slug-universe>/
 │       ├── relations.yml
-│       └── additional-relation-types.yml   # optionnel
+│       ├── additional-relation-types.yml   # optionnel
+│       └── groups.yml                      # optionnel
 │
 ├── <slug-universe>/
 │   ├── cover.jpg
@@ -112,6 +113,8 @@ Versions vérifiées comme les dernières stables disponibles sur jsDelivr à la
 │   ├── mosaic.en.md
 │   ├── graph.fr.md               # Vue Graphe
 │   ├── graph.en.md
+│   ├── groups/                   # logos des groupes, optionnel
+│   │   └── <slug-group>.png
 │   └── characters/               # fiches personnage
 │       ├── <slug-character>.fr.md
 │       ├── <slug-character>.en.md
@@ -234,6 +237,9 @@ Règles vérifiées, dans l'ordre de "Contraintes et règles de validation" de `
 - *Clé de metadata existante* : erreur si une clé de l'attribut `metadata` d'un personnage n'est ni dans `metadata-keys.yml` ni dans le `additional-metadata-keys.yml` de l'univers.
 - *`label` complet pour une clé de metadata* : erreur si le `label` d'une clé de metadata (taxonomie commune ou extension locale) ne définit pas de valeur pour une langue déclarée.
 - *`gender` valide et cohérent entre langues* : erreur si l'attribut `gender` d'un personnage, quand il est renseigné, n'est ni `masculine` ni `feminine`, ou si ses fichiers de langue déclarent des valeurs différentes.
+- *Slug de groupe unique au sein de l'univers* : erreur si un même slug apparaît plus d'une fois dans `_data/<slug-universe>/groups.yml`.
+- *Groupe existant* : erreur si l'attribut `group` d'un personnage ne correspond à aucun slug déclaré dans le `groups.yml` de son univers.
+- *`name` complet pour un groupe* : erreur si le `name` d'un groupe ne définit pas de valeur pour une langue déclarée par l'univers.
 
 ---
 

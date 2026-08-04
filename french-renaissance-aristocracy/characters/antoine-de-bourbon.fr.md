@@ -4,6 +4,7 @@ permalink: /fr/french-renaissance-aristocracy/characters/antoine-de-bourbon/
 lang: fr
 character-name: "Antoine de Bourbon"
 gender: masculine
+group: house-of-bourbon
 metadata:
   birth: "1518"
   death: "1562"

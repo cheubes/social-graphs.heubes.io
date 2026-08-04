@@ -1,6 +1,6 @@
 # Plan de construction incrémental
 
-Onze étapes, chacune démontrable dans un navigateur avant de passer à la suivante. Voir `CLAUDE.md` pour la structure de `specs/` et les règles d'usage des spécifications.
+Douze étapes, chacune démontrable dans un navigateur avant de passer à la suivante. Voir `CLAUDE.md` pour la structure de `specs/` et les règles d'usage des spécifications.
 
 Chaque étape a un prompt prêt à l'emploi pour la démarrer.
 
@@ -165,7 +165,39 @@ Critère de fin : changer de langue via le sélecteur conserve le contexte de na
 la traduction existe, affiche le message d'indisponibilité sinon.
 ```
 
-## 9. CI de validation
+## 9. Groupes de personnages ✅
+
+Ajoute la notion de groupe (faction, nationalité, espèce...) au modèle de données, avec son
+traitement visuel sur les trois écrans concernés (bordure et logo sur la tuile, le nœud du
+graphe et la modale) et ses filtres sur les deux vues. Voir "Groupe" dans `data-model.md`,
+les sections "Tuiles", "Modale" et "Barre de recherche / filtres" de `style-guide.md`, ainsi
+que `universe-home.md`, `graph-view.md`, `character-sheet.md` et `search-filter.md`.
+
+**Critère :** un personnage d'un groupe donné a la bonne bordure et le bon logo sur ses trois
+représentations (tuile, nœud, modale) ; décocher un filtre de groupe masque les bons éléments
+dans les deux vues.
+
+**Prompt :**
+```
+Implémente l'étape 9 du plan de construction (BUILD-PLAN.md) : groupes de personnages.
+
+Ajoute des groupes à french-renaissance-aristocracy (_data/french-renaissance-aristocracy/groups.yml,
+logos dans french-renaissance-aristocracy/groups/), en suivant "Groupe" dans data-model.md, et
+assigne un groupe à une partie des personnages de test. Applique le traitement visuel sur les
+trois écrans concernés (bordure haute 5px + logo bas droite sur la tuile character-card.html ;
+bordure + logo bas droite sur le nœud dans graph.js ; bordure haute 5px + logo haut gauche dans
+la modale character-modal.html), en suivant les sections "Tuiles", "Modale" et "Images" de
+style-guide.md, universe-home.md, graph-view.md et character-sheet.md. Ajoute les filtres de
+groupe dans search-filter.html / search-filter.js, présents sur les deux vues, en suivant
+search-filter.md.
+
+Critère de fin : sur l'univers de test, un personnage d'un groupe affiche la bonne bordure et
+le bon logo sur sa tuile, son nœud et sa modale ; un personnage sans groupe affiche une bordure
+blanche et aucun logo ; décocher un filtre de groupe masque les bonnes tuiles en Vue Mosaïque et
+les bons nœuds (et leurs arêtes) en Vue Graphe.
+```
+
+## 10. CI de validation
 
 Workflow GitHub Actions exécutant `scripts/validate.rb` sur chaque push/PR, sans toucher au déploiement GitHub Pages natif. Voir "Validation des données" dans `technical-specifications.md`.
 
@@ -173,7 +205,7 @@ Workflow GitHub Actions exécutant `scripts/validate.rb` sur chaque push/PR, san
 
 **Prompt :**
 ```
-Implémente l'étape 9 du plan de construction (BUILD-PLAN.md) : CI de validation.
+Implémente l'étape 10 du plan de construction (BUILD-PLAN.md) : CI de validation.
 
 Crée .github/workflows/validate.yml, qui exécute scripts/validate.rb sur chaque push et
 pull request, en suivant "Validation des données" dans technical-specifications.md. Ne
@@ -183,13 +215,13 @@ Critère de fin : la CI échoue sur une erreur de contenu volontairement introdu
 une fois corrigée.
 ```
 
-## 10. SEO et polish
+## 11. SEO et polish
 
 `jekyll-seo-tag`, `jekyll-sitemap`, hreflang, puis vérification manuelle (clavier, lecteur d'écran, contraste réel à l'écran, pas juste les valeurs calculées dans `style-guide.md`). Voir "SEO" et "Accessibilité" dans `technical-specifications.md`.
 
 **Prompt :**
 ```
-Implémente l'étape 10 du plan de construction (BUILD-PLAN.md) : SEO et polish.
+Implémente l'étape 11 du plan de construction (BUILD-PLAN.md) : SEO et polish.
 
 Active jekyll-seo-tag et jekyll-sitemap, ajoute les liens hreflang entre versions FR/EN
 d'une même page, en suivant "SEO" dans technical-specifications.md. Fais ensuite une
@@ -201,13 +233,13 @@ Critère de fin : sitemap.xml généré, balises meta présentes, la modale se f
 rouvre correctement au clavier.
 ```
 
-## 11. Deuxième univers
+## 12. Deuxième univers
 
 Un univers réellement différent du premier, sans modification de code : la meilleure preuve que rien n'est codé en dur pour un seul cas.
 
 **Prompt :**
 ```
-Implémente l'étape 11 du plan de construction (BUILD-PLAN.md) : deuxième univers.
+Implémente l'étape 12 du plan de construction (BUILD-PLAN.md) : deuxième univers.
 
 Ajoute un univers réellement différent du premier (pas une simple copie), en suivant le
 workflow de data-model.md ("Workflow d'ajout d'un univers"), sans modifier le code des

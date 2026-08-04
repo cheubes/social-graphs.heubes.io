@@ -4,6 +4,7 @@ permalink: /fr/french-renaissance-aristocracy/characters/henri-de-guise/
 lang: fr
 character-name: "Henri de Guise"
 gender: masculine
+group: house-of-guise
 metadata:
   birth: "1550"
   death: "1588"
