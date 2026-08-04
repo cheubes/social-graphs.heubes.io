@@ -459,17 +459,27 @@ small {
 
 .sg-graph-node {
   cursor: pointer;
-  transition: opacity 0.15s ease;
-}
-
-.sg-graph-node-dimmed {
-  opacity: 0.2;
 }
 
 .sg-graph-node-ring {
   fill: var(--sg-white);
   stroke: var(--sg-light-grey);
   stroke-width: 2px;
+  transition: stroke-opacity 0.15s ease;
+}
+
+.sg-graph-node-portrait {
+  transition: opacity 0.15s ease;
+}
+
+/* Le fill (opaque) du ring reste inchangé pour continuer à masquer le départ des liens
+   sous le nœud ; seuls le contour et le portrait s'atténuent (voir search-filter.md). */
+.sg-graph-node-dimmed .sg-graph-node-ring {
+  stroke-opacity: 0.2;
+}
+
+.sg-graph-node-dimmed .sg-graph-node-portrait {
+  opacity: 0.2;
 }
 
 .sg-graph-node:hover .sg-graph-node-ring,
