@@ -1,0 +1,33 @@
+---
+---
+<?xml version="1.0" encoding="UTF-8"?>
+{%- comment -%}
+  Overrides jekyll-sitemap's own template (skipped automatically once a sitemap.xml
+  exists in the source, see the plugin's file_exists? check) to add xhtml:link hreflang
+  alternates per URL, on top of the <head> hreflang tags from _includes/hreflang.html
+  (see "SEO" in technical-specifications.md).
+{%- endcomment %}
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- assign pages = site.html_pages | where_exp:'doc','doc.sitemap != false' | where_exp:'doc','doc.url != "/404.html"' -%}
+{%- for page in pages %}
+  <url>
+    <loc>{{ page.url | replace:'/index.html','/' | absolute_url | xml_escape }}</loc>
+    {%- if page.last_modified_at %}
+    <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
+    {%- endif -%}
+    {%- include resolve-lang-alternate.html pages=pages -%}
+    {%- if counterpart %}
+    <xhtml:link rel="alternate" hreflang="en" href="{{ en_url | absolute_url | xml_escape }}"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="{{ fr_url | absolute_url | xml_escape }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ en_url | absolute_url | xml_escape }}"/>
+    {%- endif %}
+  </url>
+{%- endfor %}
+{%- assign static_files = page.static_files | where_exp:'page','page.sitemap != false' | where_exp:'page','page.name != "404.html"' -%}
+{%- for file in static_files %}
+  <url>
+    <loc>{{ file.path | replace:'/index.html','/' | absolute_url | xml_escape }}</loc>
+    <lastmod>{{ file.modified_time | date_to_xmlschema }}</lastmod>
+  </url>
+{%- endfor %}
+</urlset>

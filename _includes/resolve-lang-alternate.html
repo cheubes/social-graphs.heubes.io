@@ -1,0 +1,22 @@
+{%- comment -%}
+  Resolves the current page's FR/EN counterpart URL: same path, "/fr/" prefixed (see
+  "Structure des URLs" in technical-specifications.md). `include.pages` scopes the lookup
+  to a specific page collection (e.g. the sitemap's own filtered list, so pages excluded
+  from it aren't offered as alternates); defaults to the full `site.pages`.
+  Assigns `en_url`, `fr_url`, and `counterpart` (the matching page in the other language,
+  or nil if untranslated, see "Génération des pages").
+{%- endcomment -%}
+{%- assign lookup_pages = include.pages | default: site.pages -%}
+{%- assign lang_prefix = page.url | slice: 0, 4 -%}
+{%- if lang_prefix == "/fr/" -%}
+  {%- assign canonical_path = page.url | remove_first: "/fr" -%}
+{%- else -%}
+  {%- assign canonical_path = page.url -%}
+{%- endif -%}
+{%- assign en_url = canonical_path -%}
+{%- assign fr_url = "/fr" | append: canonical_path -%}
+{%- if page.url == en_url -%}
+  {%- assign counterpart = lookup_pages | where: "url", fr_url | first -%}
+{%- else -%}
+  {%- assign counterpart = lookup_pages | where: "url", en_url | first -%}
+{%- endif -%}

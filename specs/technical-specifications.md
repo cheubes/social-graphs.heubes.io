@@ -271,7 +271,7 @@ Règles vérifiées, dans l'ordre de "Contraintes et règles de validation" de `
 - Chaque univers et chaque personnage a sa propre URL indexable (voir "Structure des URLs").
 - Liens `hreflang` / alternate entre les versions FR et EN d'une même page.
 - `jekyll-seo-tag` (plugin supporté nativement par GitHub Pages) pour les balises meta et Open Graph de base.
-- `jekyll-sitemap` (plugin supporté nativement par GitHub Pages) pour un `sitemap.xml` généré automatiquement, utile vu le nombre de pages générées (univers, personnages, deux langues).
+- `jekyll-sitemap` (plugin supporté nativement par GitHub Pages) pour un `sitemap.xml` généré automatiquement, utile vu le nombre de pages générées (univers, personnages, deux langues). Le plugin ne permettant pas d'y ajouter les alternates `hreflang` par URL, un `sitemap.xml` propre au projet (racine du dépôt) remplace celui du plugin (mécanisme natif du plugin, qui ne génère le sien qu'en l'absence d'un fichier existant) pour les y inclure ; le plugin reste actif pour `robots.txt`.
 
 ---
 

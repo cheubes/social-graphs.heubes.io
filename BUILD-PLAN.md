@@ -197,7 +197,7 @@ blanche et aucun logo ; décocher un filtre de groupe masque les bonnes tuiles e
 les bons nœuds (et leurs arêtes) en Vue Graphe.
 ```
 
-## 10. SEO et polish
+## 10. SEO et polish ✅
 
 `jekyll-seo-tag`, `jekyll-sitemap`, hreflang, puis vérification manuelle (clavier, lecteur d'écran, contraste réel à l'écran, pas juste les valeurs calculées dans `style-guide.md`). Voir "SEO" et "Accessibilité" dans `technical-specifications.md`.
 

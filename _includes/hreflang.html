@@ -1,0 +1,12 @@
+{% comment %}
+  FR/EN alternate links for the current page. Only rendered when both language versions
+  actually exist (untranslated content has no file, hence no page, for that language,
+  see "Génération des pages" in technical-specifications.md).
+{% endcomment %}
+{% include resolve-lang-alternate.html %}
+
+{% if counterpart %}
+  <link rel="alternate" hreflang="en" href="{{ en_url | absolute_url }}">
+  <link rel="alternate" hreflang="fr" href="{{ fr_url | absolute_url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ en_url | absolute_url }}">
+{% endif %}
