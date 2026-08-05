@@ -197,31 +197,13 @@ blanche et aucun logo ; décocher un filtre de groupe masque les bonnes tuiles e
 les bons nœuds (et leurs arêtes) en Vue Graphe.
 ```
 
-## 10. CI de validation
-
-Workflow GitHub Actions exécutant `scripts/validate.rb` sur chaque push/PR, sans toucher au déploiement GitHub Pages natif. Voir "Validation des données" dans `technical-specifications.md`.
-
-**Critère :** CI rouge sur une erreur volontaire, verte sinon.
-
-**Prompt :**
-```
-Implémente l'étape 10 du plan de construction (BUILD-PLAN.md) : CI de validation.
-
-Crée .github/workflows/validate.yml, qui exécute scripts/validate.rb sur chaque push et
-pull request, en suivant "Validation des données" dans technical-specifications.md. Ne
-touche pas au déploiement GitHub Pages natif.
-
-Critère de fin : la CI échoue sur une erreur de contenu volontairement introduite, et passe
-une fois corrigée.
-```
-
-## 11. SEO et polish
+## 10. SEO et polish
 
 `jekyll-seo-tag`, `jekyll-sitemap`, hreflang, puis vérification manuelle (clavier, lecteur d'écran, contraste réel à l'écran, pas juste les valeurs calculées dans `style-guide.md`). Voir "SEO" et "Accessibilité" dans `technical-specifications.md`.
 
 **Prompt :**
 ```
-Implémente l'étape 11 du plan de construction (BUILD-PLAN.md) : SEO et polish.
+Implémente l'étape 10 du plan de construction (BUILD-PLAN.md) : SEO et polish.
 
 Active jekyll-seo-tag et jekyll-sitemap, ajoute les liens hreflang entre versions FR/EN
 d'une même page, en suivant "SEO" dans technical-specifications.md. Fais ensuite une
@@ -233,13 +215,13 @@ Critère de fin : sitemap.xml généré, balises meta présentes, la modale se f
 rouvre correctement au clavier.
 ```
 
-## 12. Deuxième univers
+## 11. Deuxième univers
 
 Un univers réellement différent du premier, sans modification de code : la meilleure preuve que rien n'est codé en dur pour un seul cas.
 
 **Prompt :**
 ```
-Implémente l'étape 12 du plan de construction (BUILD-PLAN.md) : deuxième univers.
+Implémente l'étape 11 du plan de construction (BUILD-PLAN.md) : deuxième univers.
 
 Ajoute un univers réellement différent du premier (pas une simple copie), en suivant le
 workflow de data-model.md ("Workflow d'ajout d'un univers"), sans modifier le code des
@@ -249,6 +231,24 @@ Critère de fin : le nouvel univers fonctionne de bout en bout (accueil, Vue Mos
 Graphe, fiche personnage, recherche/filtre) uniquement par ajout de contenu, sans changement
 de code. Si ce n'est pas le cas, c'est qu'une étape précédente a codé en dur des hypothèses
 propres au premier univers : à corriger avant de continuer.
+```
+
+## 12. CI de validation
+
+Workflow GitHub Actions exécutant `scripts/validate.rb` sur chaque push/PR, sans toucher au déploiement GitHub Pages natif. Voir "Validation des données" dans `technical-specifications.md`.
+
+**Critère :** CI rouge sur une erreur volontaire, verte sinon.
+
+**Prompt :**
+```
+Implémente l'étape 12 du plan de construction (BUILD-PLAN.md) : CI de validation.
+
+Crée .github/workflows/validate.yml, qui exécute scripts/validate.rb sur chaque push et
+pull request, en suivant "Validation des données" dans technical-specifications.md. Ne
+touche pas au déploiement GitHub Pages natif.
+
+Critère de fin : la CI échoue sur une erreur de contenu volontairement introduite, et passe
+une fois corrigée.
 ```
 
 ---
