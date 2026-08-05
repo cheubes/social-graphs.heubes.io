@@ -90,7 +90,7 @@ layout: default
 
     {% assign graph_data_json = '{"nodes":[' | append: nodes_json | append: '],"edges":[' | append: edges_json | append: '],"placeholder":"' | append: placeholder_src | append: '"}' %}
 
-    {% include search-filter.html ui=ui show_filters=true used_type_slugs=used_type_slugs groups=groups used_group_slugs=used_group_slugs %}
+    {% include search-filter.html ui=ui groups=groups used_group_slugs=used_group_slugs %}
 
     <div class="sg-graph-container">
       <div class="sg-graph-zoom-controls">
@@ -108,6 +108,8 @@ layout: default
         </div>
       </div>
     </div>
+
+    {% include relation-type-filter.html ui=ui used_type_slugs=used_type_slugs %}
 
     <script id="sg-graph-data" type="application/json">{{ graph_data_json }}</script>
   {% else %}

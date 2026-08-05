@@ -17,7 +17,7 @@ layout: default
   {% include resolve-universe-characters.html %}
 
   {% if characters.size > 0 %}
-    {% include search-filter.html ui=ui show_filters=false groups=groups used_group_slugs=used_group_slugs %}
+    {% include search-filter.html ui=ui groups=groups used_group_slugs=used_group_slugs %}
 
     {% capture sort_blob %}{% for character in characters %}{% assign char_slug = character.path | split: "/" | last | split: "." | first %}{% assign source_count = relations | where: "source-character", char_slug | size %}{% assign target_count = relations | where: "target-character", char_slug | size %}{% assign relation_count = source_count | plus: target_count %}{% assign sort_rank = 100000 | minus: relation_count %}{% assign padded_rank = sort_rank | prepend: "000000" | slice: -6, 6 %}{{ padded_rank }}_{{ character["character-name"] }}_{{ char_slug }}|||{% endfor %}{% endcapture %}
     {% assign sorted_entries = sort_blob | split: "|||" | sort %}

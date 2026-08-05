@@ -120,7 +120,7 @@ Pas de grille ni d'échelle d'espacement custom : la grille et les classes utili
 - Champ de recherche Bootstrap standard, icône `fa-magnifying-glass`.
 - Filtres de groupe : cases à cocher ou "chips" à fond neutre (`--sg-white`) et texte `--sg-grey`/`--sg-dark-grey`, chacun précédé du logo du groupe plutôt que d'une pastille de couleur, celui-ci étant déjà l'identifiant visuel du groupe (voir "Groupe" dans `data-model.md`).
 - Filtres de type de relation : même principe, chacun précédé d'une pastille de la couleur de son type dans la palette du graphe (voir ci-dessus). La couleur reste un repère visuel à côté du texte, jamais le fond du texte : aucune couleur de texte unique ne passe le contraste AA sur les huit teintes de cette palette à la fois (vérifié).
-- Disposition : filtres de type de relation alignés directement à droite du champ de recherche, sur une ligne qui se replie (un ou plusieurs filtres passent à la ligne suivante) si l'espace manque, plutôt que le bloc de filtres dans son ensemble ; filtres de groupe sur leur propre ligne, en dessous.
+- Disposition : filtres de groupe sur leur propre ligne, en dessous du champ de recherche, sur les deux vues. En Vue Graphe, les filtres de type de relation forment un bloc séparé sous le graphe plutôt que d'accompagner le champ de recherche (voir emplacement exact dans `graph-view.md`) ; comme les filtres de groupe, ils se replient sur plusieurs lignes (un ou plusieurs filtres passent à la ligne suivante) si l'espace manque, plutôt que le bloc dans son ensemble.
 - Pas de bouton de réinitialisation dédié : vider le champ de recherche et recocher les cases se fait directement sur ces contrôles.
 
 ### Boutons
