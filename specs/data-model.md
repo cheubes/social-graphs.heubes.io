@@ -66,28 +66,27 @@ Le caractère dirigé ou non de la relation n'est pas porté par la relation ell
 | Attribut | Localisé | Description |
 |---|---|---|
 | `slug` | Non | Identifiant stable du type de relation, construit à partir de son nom anglais, référencé depuis l'attribut `type` d'une relation |
-| `label` | Oui | Libellé affiché quand le personnage décrit est la source de la relation, décliné en deux formes grammaticales par langue, `masculine` et `feminine` (voir "Accord de genre" ci-dessous) |
-| `reverse-label` | Oui | Libellé affiché quand le personnage décrit est la cible de la relation, décliné de la même façon ; renseigné uniquement si `directed` est vrai |
+| `label` | Oui | Libellé affiché quand le personnage décrit est la source de la relation, décliné en trois formes par langue : `masculine` et `feminine`, accordées au genre du personnage (voir "Accord de genre" ci-dessous), et `neutral`, utilisée hors contexte de personnage |
+| `reverse-label` | Oui | Libellé affiché quand le personnage décrit est la cible de la relation, décliné en deux formes par langue, `masculine` et `feminine` ; renseigné uniquement si `directed` est vrai |
 | `directed` | Non | Indique si le lien est dirigé (source → cible) ou non dirigé (symétrique) |
 
 Une relation n'est saisie qu'une fois, dans un seul sens (voir `Relation`). Pour un type dirigé, le sens retour (ex : "Fille de" à partir de "Père de"/"Mère de") n'est pas une relation distincte : il est dérivé automatiquement du `reverse-label` du type au moment de l'affichage, quand le personnage décrit est la cible plutôt que la source. Pour un type non dirigé, le `label` est utilisé dans les deux sens et `reverse-label` n'est pas renseigné.
 
-**Accord de genre.** Le libellé affiché sur la fiche d'un personnage (`label` s'il est la source, `reverse-label` s'il est la cible, ou `label` pour un type non dirigé) est accordé au genre de ce personnage, celui dont on décrit la fiche, jamais à celui de l'autre personnage de la relation. Ainsi, à la fiche d'Henri III, la relation avec Catherine de Médicis affiche "Fils de" (accordé au genre d'Henri III, la cible) et non une forme accordée à Catherine. Si le personnage décrit n'a pas de `gender` renseigné, la forme `masculine` est utilisée par défaut. Dans un contexte qui n'est rattaché à aucun personnage particulier (légende de la Vue Graphe, filtres, voir `graph-view.md` et `search-filter.md`), c'est également la forme `masculine` qui sert de forme générique.
+**Accord de genre.** Le libellé affiché sur la fiche d'un personnage (`label` s'il est la source, `reverse-label` s'il est la cible, ou `label` pour un type non dirigé) est accordé au genre de ce personnage, celui dont on décrit la fiche, jamais à celui de l'autre personnage de la relation. Ainsi, à la fiche d'Henri III, la relation avec Catherine de Médicis affiche "Fils de" (accordé au genre d'Henri III, la cible) et non une forme accordée à Catherine. Si le personnage décrit n'a pas de `gender` renseigné, la forme `masculine` est utilisée par défaut. Dans un contexte qui n'est rattaché à aucun personnage particulier (légende de la Vue Graphe, filtres, voir `graph-view.md` et `search-filter.md`), c'est la forme `neutral` du `label` qui est utilisée. Cette forme neutre n'existe que pour `label` : `reverse-label` n'apparaît jamais hors contexte de personnage, et n'a donc pas besoin d'en définir une.
 
 Un socle de types communs est partagé par tous les univers ; un univers peut déclarer des types additionnels propres à son contexte.
 
 Exemples de types communs (liste à affiner, donnée ici à titre d'illustration) :
 
-| Slug | Label FR (masc. / fém.) | Label EN (masc. / fém.) | Sens inverse FR (masc. / fém.) | Sens inverse EN (masc. / fém.) | Dirigé | Exemple |
+| Slug | Label FR (masc. / fém. / neutre) | Label EN (masc. / fém. / neutre) | Sens inverse FR (masc. / fém.) | Sens inverse EN (masc. / fém.) | Dirigé | Exemple |
 |---|---|---|---|---|---|---|
-| `parent-of` | Père de / Mère de | Father of / Mother of | Fils de / Fille de | Son of / Daughter of | Oui | Catherine de Médicis → Henri III |
-| `married-to` | Marié à / Mariée à | Married to | — | — | Non | Henri III ↔ Louise de Lorraine |
-| `friend-of` | Ami de / Amie de | Friend of | — | — | Non | — |
-| `rival-of` | Rival de / Rivale de | Rival of | — | — | Non | — |
-| `superior-of` | Supérieur hiérarchique de / Supérieure hiérarchique de | Superior of | Subalterne de / Subalterne de | Subordinate of | Oui | — |
-| `ally-of` | Allié de / Alliée de | Ally of | — | — | Non | — |
+| `parent-of` | Père de / Mère de / Parent de | Father of / Mother of / Parent of | Fils de / Fille de | Son of / Daughter of | Oui | Catherine de Médicis → Henri III |
+| `married-to` | Marié à / Mariée à / Marié•e à | Married to | — | — | Non | Henri III ↔ Louise de Lorraine |
+| `friend-of` | Ami de / Amie de / Ami•e de | Friend of | — | — | Non | — |
+| `rival-of` | Rival de / Rivale de / Rival•e de | Rival of | — | — | Non | — |
+| `ally-of` | Allié de / Alliée de / Allié•e de | Ally of | — | — | Non | — |
 
-En anglais, les deux formes sont le plus souvent identiques ; elles sont néanmoins répétées telles quelles dans le fichier de données (voir "Formats et conventions des fichiers de données" ci-dessous), la structure `masculine`/`feminine` par langue étant systématique.
+En anglais, les formes `masculine` et `feminine` sont le plus souvent identiques, et `neutral` reprend alors la même valeur ; elles sont néanmoins toutes répétées telles quelles dans le fichier de données (voir "Formats et conventions des fichiers de données" ci-dessous), la structure par langue étant systématique.
 
 ### Clé de metadata
 
@@ -190,9 +189,11 @@ source-type: "période historique"
     fr:
       masculine: "Vassal de"
       feminine: "Vassale de"
+      neutral: "Vassal•e de"
     en:
       masculine: "Vassal of"
       feminine: "Vassal of"
+      neutral: "Vassal of"
   reverse-label:
     fr:
       masculine: "Suzerain de"
@@ -200,6 +201,25 @@ source-type: "période historique"
     en:
       masculine: "Overlord of"
       feminine: "Overlord of"
+  directed: true
+
+- slug: superior-of
+  label:
+    fr:
+      masculine: "Supérieur hiérarchique de"
+      feminine: "Supérieure hiérarchique de"
+      neutral: "Supérieur•e hiérarchique de"
+    en:
+      masculine: "Superior of"
+      feminine: "Superior of"
+      neutral: "Superior of"
+  reverse-label:
+    fr:
+      masculine: "Subalterne de"
+      feminine: "Subalterne de"
+    en:
+      masculine: "Subordinate of"
+      feminine: "Subordinate of"
   directed: true
 ```
 
@@ -253,9 +273,11 @@ relations:
     fr:
       masculine: "Père de"
       feminine: "Mère de"
+      neutral: "Parent de"
     en:
       masculine: "Father of"
       feminine: "Mother of"
+      neutral: "Parent of"
   reverse-label:
     fr:
       masculine: "Fils de"
@@ -295,7 +317,7 @@ relations:
 - Un personnage ne peut pas être en relation avec lui-même.
 - Le `type` d'une relation doit exister dans la taxonomie commune ou dans les extensions déclarées par l'univers.
 - Un type de relation dirigé (`directed: true`) doit définir un `reverse-label` ; un type non dirigé n'en définit pas.
-- Un `label` et un `reverse-label`, quand ils sont renseignés, déclinent les deux formes `masculine` et `feminine` pour chaque langue du site, même quand les deux formes sont identiques (voir "Accord de genre" dans "Type de relation").
+- Un `label`, quand il est renseigné, décline les trois formes `masculine`, `feminine` et `neutral` pour chaque langue du site, même quand certaines formes sont identiques ; un `reverse-label` décline les deux formes `masculine` et `feminine` (voir "Accord de genre" dans "Type de relation").
 - Deux personnages ne peuvent pas être reliés deux fois par le même type de relation (mais peuvent l'être par plusieurs types différents, ex : "ami de" et "rival de"). Pour un type non dirigé, `(A, B, type)` et `(B, A, type)` comptent comme la même relation et ne peuvent pas coexister.
 - Les champs non localisés de `metadata` doivent avoir la même valeur dans tous les fichiers de langue d'un personnage ; ses champs explicitement localisés peuvent différer.
 - Un slug de clé de metadata est unique globalement : un univers ne peut pas déclarer une clé additionnelle dont le slug existe déjà dans la taxonomie commune ou dans les extensions d'un autre univers.

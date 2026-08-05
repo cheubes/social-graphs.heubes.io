@@ -8,6 +8,8 @@ DATA_DIR = File.join(ROOT, '_data')
 SLUG_PATTERN = /\A[a-z]+(-[a-z]+)*\z/.freeze
 LANGUAGES = %w[fr en].freeze
 VALID_GENDERS = %w[masculine feminine].freeze
+LABEL_FORMS = %w[masculine feminine neutral].freeze
+REVERSE_LABEL_FORMS = %w[masculine feminine].freeze
 
 Issue = Struct.new(:severity, :file, :rule, :detail)
 
@@ -81,19 +83,19 @@ def check_relation_type(type, file)
     error(file, 'reverse-label-consistency', "type '#{slug}' is not directed but defines a reverse-label")
   end
 
-  check_gendered_label(type['label'], 'label', slug, file)
-  check_gendered_label(type['reverse-label'], 'reverse-label', slug, file)
+  check_gendered_label(type['label'], 'label', slug, file, LABEL_FORMS)
+  check_gendered_label(type['reverse-label'], 'reverse-label', slug, file, REVERSE_LABEL_FORMS)
 end
 
-def check_gendered_label(label, field_name, slug, file)
+def check_gendered_label(label, field_name, slug, file, required_forms)
   return unless label
 
   LANGUAGES.each do |lang|
     forms = label[lang]
-    next if forms.is_a?(Hash) && !forms['masculine'].nil? && !forms['feminine'].nil?
+    next if forms.is_a?(Hash) && required_forms.all? { |form| !forms[form].nil? }
 
     error(file, 'gendered-label-incomplete',
-          "type '#{slug}' #{field_name} for lang '#{lang}' must define both 'masculine' and 'feminine' forms")
+          "type '#{slug}' #{field_name} for lang '#{lang}' must define #{required_forms.map { |f| "'#{f}'" }.join(', ')} forms")
   end
 end
 

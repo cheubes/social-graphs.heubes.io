@@ -3,9 +3,11 @@
     fr:
       masculine: "Père de"
       feminine: "Mère de"
+      neutral: "Parent de"
     en:
       masculine: "Father of"
       feminine: "Mother of"
+      neutral: "Parent of"
   reverse-label:
     fr:
       masculine: "Fils de"
@@ -20,9 +22,11 @@
     fr:
       masculine: "Marié à"
       feminine: "Mariée à"
+      neutral: "Marié•e à"
     en:
       masculine: "Married to"
       feminine: "Married to"
+      neutral: "Married to"
   directed: false
 
 - slug: friend-of
@@ -30,9 +34,11 @@
     fr:
       masculine: "Ami de"
       feminine: "Amie de"
+      neutral: "Ami•e de"
     en:
       masculine: "Friend of"
       feminine: "Friend of"
+      neutral: "Friend of"
   directed: false
 
 - slug: rival-of
@@ -40,9 +46,11 @@
     fr:
       masculine: "Rival de"
       feminine: "Rivale de"
+      neutral: "Rival•e de"
     en:
       masculine: "Rival of"
       feminine: "Rival of"
+      neutral: "Rival of"
   directed: false
 
 - slug: ally-of
@@ -50,7 +58,9 @@
     fr:
       masculine: "Allié de"
       feminine: "Alliée de"
+      neutral: "Allié•e de"
     en:
       masculine: "Ally of"
       feminine: "Ally of"
+      neutral: "Ally of"
   directed: false

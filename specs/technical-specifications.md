@@ -228,7 +228,7 @@ Règles vérifiées, dans l'ordre de "Contraintes et règles de validation" de `
 - *Personnage pas en relation avec lui-même* : erreur si `source-character` = `target-character`.
 - *Type de relation existant* : erreur si le `type` d'une relation n'est ni dans `relation-types.yml` ni dans le `additional-relation-types.yml` de l'univers.
 - *`reverse-label` cohérent avec `directed`* : erreur si absent alors que `directed: true`, ou présent alors que `directed: false`.
-- *Formes `masculine`/`feminine` complètes* : erreur si un `label` ou `reverse-label` (taxonomie commune ou extension locale) ne définit pas les deux formes pour une langue déclarée.
+- *Formes de `label`/`reverse-label` complètes* : erreur si un `label` (taxonomie commune ou extension locale) ne définit pas ses trois formes (`masculine`, `feminine`, `neutral`) pour une langue déclarée, ou si un `reverse-label` ne définit pas ses deux formes (`masculine`, `feminine`).
 - *Pas de relation dupliquée* : erreur si deux entrées partagent le même triplet (source, cible, type) ; pour un type non dirigé, `(A, B)` et `(B, A)` comptent comme la même paire.
 - *`lang` cohérent avec le nom de fichier* : erreur si `.fr.md` ne porte pas `lang: fr`, ou `.en.md` `lang: en`.
 - *`mosaic`/`graph` présents ensemble par langue* : erreur si l'un existe sans l'autre, pour une langue donnée d'un univers.
