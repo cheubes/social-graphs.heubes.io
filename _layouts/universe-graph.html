@@ -49,9 +49,6 @@ layout: default
       {% assign color_num = forloop.index0 | modulo: 8 | plus: 1 %}
       {% assign color_var = "var(--sg-graph-color-" | append: color_num | append: ")" %}
       {% assign rel_directed = rel_type.directed | default: false %}
-      {% assign rel_label_raw = rel_type.label[lang]["masculine"] %}
-      {% include json-escape.html value=rel_label_raw %}
-      {% assign rel_label = json_escaped %}
       {% assign type_relations = relations | where: "type", rel_type.slug %}
       {% assign type_edge_count = 0 %}
       {% for relation in type_relations %}
@@ -62,6 +59,20 @@ layout: default
         {% assign src_char = characters | where_exp: "c", "c.path == src_path" | first %}
         {% assign tgt_char = characters | where_exp: "c", "c.path == tgt_path" | first %}
         {% if src_char and tgt_char %}
+          {% comment %}
+            Edge label is read source → target (see graph.js's showEdgeTooltip), so it's
+            accorded to the source character's own gender, same rule as the "source" case
+            of "Accord de genre" in data-model.md. Lowercased on first letter: unlike the
+            character sheet's heading use of this same label, here it sits mid-sentence
+            ("X {label} Y").
+          {% endcomment %}
+          {% assign src_gender = src_char["gender"] | default: "masculine" %}
+          {% assign rel_label_raw = rel_type.label[lang][src_gender] %}
+          {% assign rel_label_first_char = rel_label_raw | slice: 0, 1 | downcase %}
+          {% assign rel_label_remainder = rel_label_raw | slice: 1, 999 %}
+          {% assign rel_label_raw = rel_label_first_char | append: rel_label_remainder %}
+          {% include json-escape.html value=rel_label_raw %}
+          {% assign rel_label = json_escaped %}
           {% assign rel_desc_raw = relation.description[lang] %}
           {% include json-escape.html value=rel_desc_raw %}
           {% assign rel_desc = json_escaped %}
