@@ -3,9 +3,11 @@
     fr:
       masculine: "Vassal de"
       feminine: "Vassale de"
+      neutral: "Vassal•e de"
     en:
       masculine: "Vassal of"
       feminine: "Vassal of"
+      neutral: "Vassal of"
   reverse-label:
     fr:
       masculine: "Suzerain de"
@@ -13,4 +15,23 @@
     en:
       masculine: "Overlord of"
       feminine: "Overlord of"
+  directed: true
+
+- slug: superior-of
+  label:
+    fr:
+      masculine: "Supérieur hiérarchique de"
+      feminine: "Supérieure hiérarchique de"
+      neutral: "Supérieur•e de"
+    en:
+      masculine: "Superior of"
+      feminine: "Superior of"
+      neutral: "Superior of"
+  reverse-label:
+    fr:
+      masculine: "Subalterne de"
+      feminine: "Subalterne de"
+    en:
+      masculine: "Subordinate of"
+      feminine: "Subordinate of"
   directed: true

@@ -243,3 +243,73 @@ relations:
     description:
       fr: "Henri de Guise fait assassiner Gaspard de Coligny en 1572, le tenant pour responsable de la mort de son père."
       en: "Henri de Guise had Gaspard de Coligny assassinated in 1572, holding him responsible for his father's death."
+
+  - source-character: anne-de-montmorency
+    target-character: francois-de-guise
+    type: rival-of
+    description:
+      fr: "Anne de Montmorency et François de Guise se disputent l'influence sur Henri II et la direction de la politique du royaume."
+      en: "Anne de Montmorency and François de Guise vied for influence over Henri II and control of the kingdom's policy."
+
+  - source-character: anne-de-montmorency
+    target-character: henri-ii
+    type: vassal-of
+    description:
+      fr: "En tant que connétable de France, Anne de Montmorency est le premier officier du royaume et vassal du roi Henri II."
+      en: "As Constable of France, Anne de Montmorency is the kingdom's chief officer and a vassal of King Henri II."
+
+  - source-character: louis-i-de-conde
+    target-character: francois-de-guise
+    type: rival-of
+    description:
+      fr: "Louis Ier de Condé et François de Guise s'affrontent à la tête de leurs armées à la bataille de Dreux en 1562, où Condé est fait prisonnier."
+      en: "Louis I of Condé and François de Guise clashed at the head of their armies at the Battle of Dreux in 1562, where Condé was taken prisoner."
+
+  - source-character: charles-de-bourbon
+    target-character: henri-de-navarre
+    type: rival-of
+    description:
+      fr: "Après l'assassinat d'Henri III en 1589, la Ligue catholique proclame le cardinal de Bourbon roi sous le nom de Charles X, contestant les droits d'Henri de Navarre à la couronne."
+      en: "After Henri III's assassination in 1589, the Catholic League proclaimed the Cardinal de Bourbon king under the name Charles X, contesting Henri de Navarre's claim to the throne."
+
+  - source-character: charles-de-bourbon
+    target-character: henri-de-guise
+    type: ally-of
+    description:
+      fr: "Le cardinal de Bourbon devient la figure de proue catholique choisie par Henri de Guise pour porter la cause de la Ligue."
+      en: "The Cardinal de Bourbon became the Catholic figurehead chosen by Henri de Guise to carry the cause of the Catholic League."
+
+  - source-character: catherine-de-medici
+    target-character: michel-de-l-hopital
+    type: superior-of
+    description:
+      fr: "Catherine de Médicis nomme Michel de l'Hôpital chancelier de France en 1560 et s'appuie sur lui durant sa régence."
+      en: "Catherine de' Medici appointed Michel de l'Hôpital Chancellor of France in 1560 and relied on him throughout her regency."
+
+  - source-character: michel-de-l-hopital
+    target-character: cardinal-de-lorraine
+    type: rival-of
+    description:
+      fr: "La politique de tolérance religieuse défendue par Michel de l'Hôpital s'oppose à la ligne intransigeante du cardinal de Lorraine, qui obtient sa disgrâce en 1568."
+      en: "The policy of religious tolerance championed by Michel de l'Hôpital clashed with the Cardinal de Lorraine's hardline stance, which led to his fall from favour in 1568."
+
+  - source-character: gaspard-de-coligny
+    target-character: louis-i-de-conde
+    type: ally-of
+    description:
+      fr: "Gaspard de Coligny et Louis Ier de Condé dirigent ensemble le parti huguenot pendant les trois premières guerres de Religion."
+      en: "Gaspard de Coligny and Louis I of Condé jointly led the Huguenot party through the first three Wars of Religion."
+
+  - source-character: henri-i-de-conde
+    target-character: henri-de-navarre
+    type: ally-of
+    description:
+      fr: "Cousins et compagnons d'armes, Henri Ier de Condé et Henri de Navarre commandent ensemble les troupes protestantes à la bataille de Coutras en 1587."
+      en: "Cousins and companions in arms, Henri I of Condé and Henri de Navarre jointly commanded the Protestant forces at the Battle of Coutras in 1587."
+
+  - source-character: jeanne-d-albret
+    target-character: louis-i-de-conde
+    type: ally-of
+    description:
+      fr: "Jeanne d'Albret apporte un soutien politique et financier décisif à la cause huguenote menée par Louis Ier de Condé."
+      en: "Jeanne d'Albret provided decisive political and financial support to the Huguenot cause led by Louis I of Condé."
