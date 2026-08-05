@@ -59,16 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const defs = svg.append("defs");
 
-  // Shared by every node's group logo badge (see below): the same fixed circle,
-  // not one per node, since GROUP_LOGO_OFFSET/RADIUS never vary between nodes.
-  defs
-    .append("clipPath")
-    .attr("id", "sg-graph-group-clip")
-    .append("circle")
-    .attr("cx", GROUP_LOGO_OFFSET)
-    .attr("cy", GROUP_LOGO_OFFSET)
-    .attr("r", GROUP_LOGO_RADIUS);
-
   directedColorIndices.forEach((colorIndex) => {
     defs
       .append("marker")
@@ -184,15 +174,9 @@ document.addEventListener("DOMContentLoaded", () => {
     .attr("r", NODE_RADIUS);
 
   // Group logo badge, bottom-right of the node (see "Groupe" in data-model.md and
-  // graph-view.md): only for nodes whose character belongs to a group.
+  // graph-view.md): only for nodes whose character belongs to a group. Overlaid
+  // directly on the portrait, no backdrop shape behind it (see style-guide.md).
   const groupNode = node.filter((d) => d.groupLogo);
-
-  groupNode
-    .append("circle")
-    .attr("class", "sg-graph-node-group-badge-bg")
-    .attr("cx", GROUP_LOGO_OFFSET)
-    .attr("cy", GROUP_LOGO_OFFSET)
-    .attr("r", GROUP_LOGO_RADIUS + 2);
 
   groupNode
     .append("image")
@@ -201,8 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .attr("y", GROUP_LOGO_OFFSET - GROUP_LOGO_RADIUS)
     .attr("width", GROUP_LOGO_RADIUS * 2)
     .attr("height", GROUP_LOGO_RADIUS * 2)
-    .attr("preserveAspectRatio", "xMidYMid slice")
-    .attr("clip-path", "url(#sg-graph-group-clip)")
+    .attr("preserveAspectRatio", "xMidYMid meet")
     .attr("href", (d) => d.groupLogo);
 
   const label = node.append("g").attr("class", "sg-graph-node-label");

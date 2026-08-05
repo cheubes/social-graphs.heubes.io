@@ -188,10 +188,7 @@ small {
   bottom: 0.5rem;
   width: 2rem;
   height: 2rem;
-  border-radius: 50%;
-  background-color: var(--sg-white);
-  box-shadow: 0 0 0 2px var(--sg-white);
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .sg-card-title {
@@ -258,8 +255,7 @@ small {
   left: 0.75rem;
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
   z-index: 4;
 }
 
@@ -524,12 +520,10 @@ small {
   cursor: pointer;
 }
 
-/* Opaque white backdrop: masks link start-points under the node, transparent
-   portrait corners, and (for the smaller badge circle) the portrait behind the
-   group logo. The visible group border is a separate circle drawn on top of
-   the portrait, see .sg-graph-node-border below. */
-.sg-graph-node-ring,
-.sg-graph-node-group-badge-bg {
+/* Opaque white backdrop only: masks link start-points under the node and any
+   transparent corners of the portrait. The visible group border is a separate
+   circle drawn on top of the portrait, see .sg-graph-node-border below. */
+.sg-graph-node-ring {
   fill: var(--sg-white);
 }
 
@@ -629,13 +623,13 @@ small {
 
 .sg-legend-swatch,
 .sg-legend-logo {
-  border-radius: 50%;
   flex: 0 0 auto;
 }
 
 .sg-legend-swatch {
   width: 0.85rem;
   height: 0.85rem;
+  border-radius: 50%;
 }
 
 /* Group filters use the group's own logo as their visual identifier instead of a
@@ -643,7 +637,7 @@ small {
 .sg-legend-logo {
   width: 1.1rem;
   height: 1.1rem;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* Unavailability message (404): see .sg-character-modal-error above */
