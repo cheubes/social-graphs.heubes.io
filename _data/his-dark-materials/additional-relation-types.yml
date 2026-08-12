@@ -1,0 +1,68 @@
+- slug: daemon-of
+  label:
+    fr:
+      masculine: "Dæmon de"
+      feminine: "Dæmon de"
+      neutral: "Dæmon de"
+    en:
+      masculine: "Daemon of"
+      feminine: "Daemon of"
+      neutral: "Daemon of"
+  reverse-label:
+    fr:
+      masculine: "A pour dæmon"
+      feminine: "A pour dæmon"
+    en:
+      masculine: "Has daemon"
+      feminine: "Has daemon"
+  directed: true
+
+- slug: leader-of
+  label:
+    fr:
+      masculine: "Chef de"
+      feminine: "Cheffe de"
+      neutral: "Chef•fe de"
+    en:
+      masculine: "Leader of"
+      feminine: "Leader of"
+      neutral: "Leader of"
+  reverse-label:
+    fr:
+      masculine: "Subordonné à"
+      feminine: "Subordonnée à"
+    en:
+      masculine: "Subordinate to"
+      feminine: "Subordinate to"
+  directed: true
+
+- slug: protector-of
+  label:
+    fr:
+      masculine: "Protecteur de"
+      feminine: "Protectrice de"
+      neutral: "Protecteur•rice de"
+    en:
+      masculine: "Protector of"
+      feminine: "Protector of"
+      neutral: "Protector of"
+  reverse-label:
+    fr:
+      masculine: "Protégé de"
+      feminine: "Protégée de"
+    en:
+      masculine: "Protégé of"
+      feminine: "Protégé of"
+  directed: true
+
+- slug: lover-of
+  label:
+    fr:
+      masculine: "Amant de"
+      feminine: "Amante de"
+      neutral: "Amant•e de"
+    en:
+      masculine: "Lover of"
+      feminine: "Lover of"
+      neutral: "Lover of"
+  directed: false

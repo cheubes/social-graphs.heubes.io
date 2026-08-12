@@ -215,7 +215,7 @@ Critère de fin : sitemap.xml généré, balises meta présentes, la modale se f
 rouvre correctement au clavier.
 ```
 
-## 11. Deuxième univers
+## 11. Deuxième univers ✅
 
 Un univers réellement différent du premier, sans modification de code : la meilleure preuve que rien n'est codé en dur pour un seul cas.
 

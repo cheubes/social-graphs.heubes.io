@@ -1,0 +1,406 @@
+relations:
+  - source-character: pantalaimon
+    target-character: lyra-belacqua
+    type: daemon-of
+    description:
+      fr: "Pantalaimon est le dæmon de Lyra."
+      en: "Pantalaimon is Lyra's dæmon."
+
+  - source-character: stelmaria
+    target-character: asriel-belacqua
+    type: daemon-of
+    description:
+      fr: "Stelmaria est le dæmon de Lord Asriel."
+      en: "Stelmaria is Lord Asriel's dæmon."
+
+  - source-character: the-golden-monkey
+    target-character: marisa-coulter
+    type: daemon-of
+    description:
+      fr: "Le Singe doré est le dæmon de Mrs Coulter."
+      en: "The Golden Monkey is Mrs Coulter's dæmon."
+
+  - source-character: hester
+    target-character: lee-scoresby
+    type: daemon-of
+    description:
+      fr: "Hester est le dæmon de Lee Scoresby."
+      en: "Hester is Lee Scoresby's dæmon."
+
+  - source-character: kaisa
+    target-character: serafina-pekkala
+    type: daemon-of
+    description:
+      fr: "Kaisa est le dæmon de Serafina Pekkala."
+      en: "Kaisa is Serafina Pekkala's dæmon."
+
+  - source-character: sophonax
+    target-character: farder-coram
+    type: daemon-of
+    description:
+      fr: "Sophonax est le dæmon de Farder Coram."
+      en: "Sophonax is Farder Coram's dæmon."
+
+  - source-character: ratter
+    target-character: tony-makarios
+    type: daemon-of
+    description:
+      fr: "Ratter est le dæmon de Tony Makarios."
+      en: "Ratter is Tony Makarios's dæmon."
+
+  - source-character: salcilia
+    target-character: roger-parslow
+    type: daemon-of
+    description:
+      fr: "Salcilia est le dæmon de Roger Parslow."
+      en: "Salcilia is Roger Parslow's dæmon."
+
+  - source-character: asriel-belacqua
+    target-character: lyra-belacqua
+    type: parent-of
+    description:
+      fr: "Lord Asriel est le père biologique de Lyra, tenu secret jusqu'à la fin du roman."
+      en: "Lord Asriel is Lyra's biological father, kept secret until the end of the novel."
+
+  - source-character: marisa-coulter
+    target-character: lyra-belacqua
+    type: parent-of
+    description:
+      fr: "Mrs Coulter est la mère biologique de Lyra, tenue secrète jusqu'à la fin du roman."
+      en: "Mrs Coulter is Lyra's biological mother, kept secret until the end of the novel."
+
+  - source-character: ma-costa
+    target-character: tony-costa
+    type: parent-of
+    description:
+      fr: "Ma Costa est la mère de Tony Costa."
+      en: "Ma Costa is Tony Costa's mother."
+
+  - source-character: ma-costa
+    target-character: billy-costa
+    type: parent-of
+    description:
+      fr: "Ma Costa est la mère de Billy Costa."
+      en: "Ma Costa is Billy Costa's mother."
+
+  - source-character: asriel-belacqua
+    target-character: marisa-coulter
+    type: lover-of
+    description:
+      fr: "Leur liaison passée est à l'origine de la naissance de Lyra."
+      en: "Their past affair is the origin of Lyra's birth."
+
+  - source-character: farder-coram
+    target-character: serafina-pekkala
+    type: lover-of
+    description:
+      fr: "Ils se sont aimés il y a plus de cinquante ans ; un fils commun, aujourd'hui mort, est né de cette liaison."
+      en: "They were lovers more than fifty years ago; a son born of that affair has since died."
+
+  - source-character: carlo-boreal
+    target-character: marisa-coulter
+    type: lover-of
+    description:
+      fr: "Une liaison passée entre les deux, évoquée lors de la réception londonienne de Mrs Coulter."
+      en: "A past affair between the two, mentioned at Mrs Coulter's London reception."
+
+  - source-character: carlo-boreal
+    target-character: marisa-coulter
+    type: ally-of
+    description:
+      fr: "Tous deux évoluent dans les mêmes cercles liés au General Oblation Board."
+      en: "Both move in the same circles connected to the General Oblation Board."
+
+  - source-character: dr-carne
+    target-character: charles
+    type: friend-of
+    description:
+      fr: "Vieux amis, ils sont complices dans la tentative manquée d'empoisonner Lord Asriel."
+      en: "Old friends, they conspire together in the failed attempt to poison Lord Asriel."
+
+  - source-character: dr-carne
+    target-character: asriel-belacqua
+    type: rival-of
+    description:
+      fr: "Le Recteur tente d'empoisonner le vin de Lord Asriel lors de sa visite à Jordan College, craignant les conséquences de ses recherches."
+      en: "The Master attempts to poison Lord Asriel's wine during his visit to Jordan College, fearing the consequences of his research."
+
+  - source-character: chaplain
+    target-character: asriel-belacqua
+    type: friend-of
+    description:
+      fr: "L'aumônier de Jordan College est un ami personnel de Lord Asriel."
+      en: "The Chaplain of Jordan College is a personal friend of Lord Asriel."
+
+  - source-character: dr-carne
+    target-character: lyra-belacqua
+    type: protector-of
+    description:
+      fr: "Le Recteur élève Lyra depuis son enfance et lui confie l'alethiomètre."
+      en: "The Master raises Lyra from infancy and entrusts her with the alethiometer."
+
+  - source-character: dr-carne
+    target-character: bursar
+    type: leader-of
+    description:
+      fr: "L'économe fait partie du personnel de Jordan College placé sous l'autorité du Recteur."
+      en: "The Bursar is part of Jordan College's staff, under the Master's authority."
+
+  - source-character: dr-carne
+    target-character: sub-rector
+    type: leader-of
+    description:
+      fr: "Le vice-recteur fait partie du personnel de Jordan College placé sous l'autorité du Recteur."
+      en: "The Sub-Rector is part of Jordan College's staff, under the Master's authority."
+
+  - source-character: dr-carne
+    target-character: mrs-lonsdale
+    type: leader-of
+    description:
+      fr: "La gouvernante de Jordan College est elle aussi placée sous l'autorité du Recteur."
+      en: "The housekeeper of Jordan College is likewise under the Master's authority."
+
+  - source-character: lyra-belacqua
+    target-character: roger-parslow
+    type: friend-of
+    description:
+      fr: "Meilleurs amis, duo central du roman."
+      en: "Best friends, the novel's central duo."
+
+  - source-character: john-faa
+    target-character: farder-coram
+    type: friend-of
+    description:
+      fr: "John Faa tient Farder Coram pour son conseiller le plus sûr."
+      en: "John Faa regards Farder Coram as his most trusted advisor."
+
+  - source-character: john-faa
+    target-character: michael-canzona
+    type: leader-of
+    description:
+      fr: "Canzona est désigné second de l'expédition par John Faa."
+      en: "Canzona is appointed second-in-command of the expedition by John Faa."
+
+  - source-character: john-faa
+    target-character: adam-stefanski
+    type: leader-of
+    description:
+      fr: "Stefanski dirige les armes et le combat sous l'autorité de John Faa."
+      en: "Stefanski takes charge of weapons and fighting under John Faa's authority."
+
+  - source-character: john-faa
+    target-character: nicholas-rokeby
+    type: leader-of
+    description:
+      fr: "Rokeby procure le navire de l'expédition sur ordre de John Faa."
+      en: "Rokeby provides the expedition's ship under John Faa's orders."
+
+  - source-character: john-faa
+    target-character: simon-hartmann
+    type: leader-of
+    description:
+      fr: "Hartmann tient les comptes de l'expédition sous l'autorité de John Faa."
+      en: "Hartmann keeps the expedition's accounts under John Faa's authority."
+
+  - source-character: john-faa
+    target-character: benjamin-de-ruyter
+    type: leader-of
+    description:
+      fr: "De Ruyter dirige le renseignement gitan sous l'autorité de John Faa."
+      en: "De Ruyter leads gyptian intelligence under John Faa's authority."
+
+  - source-character: john-faa
+    target-character: bernie-johansen
+    type: leader-of
+    description:
+      fr: "Johansen est chargé par John Faa de surveiller Lyra depuis son enfance."
+      en: "Johansen is tasked by John Faa with watching over Lyra since her infancy."
+
+  - source-character: benjamin-de-ruyter
+    target-character: gerard-hook
+    type: leader-of
+    description:
+      fr: "Hook appartient au réseau d'espionnage dirigé par de Ruyter."
+      en: "Hook belongs to the spy network led by de Ruyter."
+
+  - source-character: benjamin-de-ruyter
+    target-character: jacob-huismans
+    type: leader-of
+    description:
+      fr: "Huismans appartient au réseau d'espionnage dirigé par de Ruyter."
+      en: "Huismans belongs to the spy network led by de Ruyter."
+
+  - source-character: gerard-hook
+    target-character: jacob-huismans
+    type: ally-of
+    description:
+      fr: "Coéquipiers dans la même mission d'espionnage."
+      en: "Fellow agents on the same spying mission."
+
+  - source-character: ma-costa
+    target-character: lyra-belacqua
+    type: protector-of
+    description:
+      fr: "Ma Costa a nourri Lyra bébé et la protège de nouveau dans les Royaumes du Nord."
+      en: "Ma Costa nursed Lyra as a baby and shelters her again in Northern Lights."
+
+  - source-character: john-faa
+    target-character: lyra-belacqua
+    type: protector-of
+    description:
+      fr: "John Faa prend officiellement Lyra en charge pour l'expédition."
+      en: "John Faa formally takes Lyra into his care for the expedition."
+
+  - source-character: farder-coram
+    target-character: lyra-belacqua
+    type: protector-of
+    description:
+      fr: "Farder Coram enseigne à Lyra les rudiments de la lecture de l'alethiomètre."
+      en: "Farder Coram teaches Lyra the rudiments of reading the alethiometer."
+
+  - source-character: tony-costa
+    target-character: lyra-belacqua
+    type: friend-of
+    description:
+      fr: "Farouchement protecteur envers elle, il l'aide à se libérer des marchands d'esclaves turcs."
+      en: "Fiercely protective of her, he helps free her from Turk slave traders."
+
+  - source-character: billy-costa
+    target-character: lyra-belacqua
+    type: friend-of
+    description:
+      fr: "Camarade de jeu au sein de la communauté gitane."
+      en: "Playmate within the gyptian community."
+
+  - source-character: john-faa
+    target-character: lee-scoresby
+    type: ally-of
+    description:
+      fr: "John Faa engage Lee Scoresby pour l'expédition vers le Nord."
+      en: "John Faa hires Lee Scoresby for the expedition to the North."
+
+  - source-character: lyra-belacqua
+    target-character: lee-scoresby
+    type: friend-of
+    description:
+      fr: "Lee Scoresby devient un compagnon de route fidèle de Lyra."
+      en: "Lee Scoresby becomes a loyal travelling companion to Lyra."
+
+  - source-character: iorek-byrnison
+    target-character: iofur-raknison
+    type: rival-of
+    description:
+      fr: "Rivalité directe pour le trône de Svalbard, tranchée par un duel."
+      en: "A direct rivalry for the throne of Svalbard, settled by a duel."
+
+  - source-character: iofur-raknison
+    target-character: marisa-coulter
+    type: ally-of
+    description:
+      fr: "Mrs Coulter soutient les ambitions d'Iofur Raknison en échange de la garde de Lord Asriel, retenu prisonnier à Svalbard."
+      en: "Mrs Coulter supports Iofur Raknison's ambitions in exchange for custody of Lord Asriel, held prisoner at Svalbard."
+
+  - source-character: iorek-byrnison
+    target-character: lee-scoresby
+    type: friend-of
+    description:
+      fr: "Ils ont combattu ensemble lors d'une précédente guerre contre les Tartares."
+      en: "They fought together in an earlier war against the Tartars."
+
+  - source-character: iorek-byrnison
+    target-character: lyra-belacqua
+    type: ally-of
+    description:
+      fr: "Une alliance naît après qu'elle l'aide à récupérer son armure ; il la surnomme Silvertongue."
+      en: "An alliance forms after she helps him reclaim his armour; he nicknames her Silvertongue."
+
+  - source-character: serafina-pekkala
+    target-character: lyra-belacqua
+    type: ally-of
+    description:
+      fr: "Serafina Pekkala vient en aide à Lyra tout au long du roman."
+      en: "Serafina Pekkala comes to Lyra's aid throughout the novel."
+
+  - source-character: serafina-pekkala
+    target-character: john-faa
+    type: ally-of
+    description:
+      fr: "Le clan de Serafina Pekkala apporte un appui aérien à l'expédition gitane."
+      en: "Serafina Pekkala's clan provides aerial support to the gyptian expedition."
+
+  - source-character: martin-lanselius
+    target-character: farder-coram
+    type: ally-of
+    description:
+      fr: "Lanselius fournit à Farder Coram des renseignements décisifs sur les sorcières."
+      en: "Lanselius provides Farder Coram with crucial information about the witches."
+
+  - source-character: martin-lanselius
+    target-character: lyra-belacqua
+    type: ally-of
+    description:
+      fr: "Lanselius reconnaît l'importance de Lyra et l'oriente dans sa quête."
+      en: "Lanselius recognises Lyra's significance and guides her on her quest."
+
+  - source-character: marisa-coulter
+    target-character: dr-cooper
+    type: leader-of
+    description:
+      fr: "Mrs Coulter dirige les recherches de Bolvangar, dont celles de Dr Cooper."
+      en: "Mrs Coulter oversees Bolvangar's research, including Dr Cooper's."
+
+  - source-character: marisa-coulter
+    target-character: sister-clara
+    type: leader-of
+    description:
+      fr: "Bolvangar est l'établissement de Mrs Coulter."
+      en: "Bolvangar is Mrs Coulter's institution."
+
+  - source-character: marisa-coulter
+    target-character: sister-betty
+    type: leader-of
+    description:
+      fr: "Bolvangar est l'établissement de Mrs Coulter."
+      en: "Bolvangar is Mrs Coulter's institution."
+
+  - source-character: marisa-coulter
+    target-character: john-faa
+    type: rival-of
+    description:
+      fr: "Leurs camps s'affrontent directement lors de l'assaut de l'expédition gitane contre Bolvangar."
+      en: "Their sides clash directly when the gyptian expedition storms Bolvangar."
+
+  - source-character: marisa-coulter
+    target-character: serafina-pekkala
+    type: rival-of
+    description:
+      fr: "Le clan de Serafina Pekkala s'oppose activement aux opérations du General Oblation Board lors du sauvetage des enfants de Bolvangar."
+      en: "Serafina Pekkala's clan actively opposes the General Oblation Board's operations during the rescue of the children at Bolvangar."
+
+  - source-character: marisa-coulter
+    target-character: iorek-byrnison
+    type: rival-of
+    description:
+      fr: "Iorek Byrnison combat les forces de Mrs Coulter lors de l'assaut sur Bolvangar."
+      en: "Iorek Byrnison fights Mrs Coulter's forces during the assault on Bolvangar."
+
+  - source-character: marisa-coulter
+    target-character: lee-scoresby
+    type: rival-of
+    description:
+      fr: "Lee Scoresby combat lui aussi les forces de Mrs Coulter lors de l'assaut sur Bolvangar."
+      en: "Lee Scoresby also fights Mrs Coulter's forces during the assault on Bolvangar."
+
+  - source-character: lyra-belacqua
+    target-character: tony-makarios
+    type: friend-of
+    description:
+      fr: "Lyra le trouve errant après son intercision et le réconforte jusqu'à sa mort."
+      en: "Lyra finds him wandering after his intercision and comforts him until his death."
+
+  - source-character: asriel-belacqua
+    target-character: thorold
+    type: leader-of
+    description:
+      fr: "Thorold est le valet de Lord Asriel, qui lui voue une loyauté farouche."
+      en: "Thorold is Lord Asriel's manservant, fiercely loyal to him."

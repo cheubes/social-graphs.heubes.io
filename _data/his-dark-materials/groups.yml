@@ -1,0 +1,29 @@
+- slug: jordan-college-oxford-university
+  name:
+    fr: "Jordan College et l'université d'Oxford"
+    en: "Jordan College & Oxford University"
+  color: "#2c3e6b"
+
+- slug: the-magisterium
+  name:
+    fr: "Le Magisterium"
+    en: "The Magisterium"
+  color: "#6b1f2b"
+
+- slug: the-gyptians
+  name:
+    fr: "Les Gitans"
+    en: "The Gyptians"
+  color: "#8a5a2c"
+
+- slug: armored-bears
+  name:
+    fr: "Les Ours cuirassés"
+    en: "Armored Bears"
+  color: "#4a5560"
+
+- slug: witches-and-allies
+  name:
+    fr: "Les Sorcières et leurs alliés"
+    en: "Witches & Their Allies"
+  color: "#4a2f6b"
