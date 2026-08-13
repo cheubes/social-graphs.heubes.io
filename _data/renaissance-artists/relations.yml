@@ -1,0 +1,672 @@
+relations:
+  - source-character: leonardo-da-vinci
+    target-character: andrea-del-verrocchio
+    type: student-of
+    description:
+      fr: "Léonard de Vinci entre très jeune dans l'atelier de Verrocchio, où il collabore à plusieurs tableaux avant de voler de ses propres ailes."
+      en: "Leonardo da Vinci entered Verrocchio's workshop at a young age, contributing to several paintings there before striking out on his own."
+
+  - source-character: michelangelo
+    target-character: domenico-ghirlandaio
+    type: student-of
+    description:
+      fr: "Michel-Ange fait un bref apprentissage dans l'atelier de Ghirlandaio avant d'être remarqué par Laurent de Médicis."
+      en: "Michelangelo briefly trained in Ghirlandaio's workshop before being noticed by Lorenzo de' Medici."
+
+  - source-character: raphael
+    target-character: pietro-perugino
+    type: student-of
+    description:
+      fr: "Raphaël se forme dans l'atelier du Pérugin, dont il assimile la clarté et l'équilibre avant de les dépasser."
+      en: "Raphael trained in Perugino's workshop, absorbing his clarity and balance before going beyond them."
+
+  - source-character: sandro-botticelli
+    target-character: fra-filippo-lippi
+    type: student-of
+    description:
+      fr: "Sandro Botticelli fait son apprentissage auprès de Fra Filippo Lippi, dont il hérite le sens de la ligne et de la grâce."
+      en: "Sandro Botticelli trained under Fra Filippo Lippi, inheriting his sense of line and grace."
+
+  - source-character: filippino-lippi
+    target-character: sandro-botticelli
+    type: student-of
+    description:
+      fr: "Après la mort de son père, Filippino Lippi achève sa formation dans l'atelier de Botticelli."
+      en: "After his father's death, Filippino Lippi completed his training in Botticelli's workshop."
+
+  - source-character: luca-signorelli
+    target-character: piero-della-francesca
+    type: student-of
+    description:
+      fr: "Luca Signorelli se forme auprès de Piero della Francesca, dont il retient la rigueur de la construction avant de durcir les formes."
+      en: "Luca Signorelli trained under Piero della Francesca, adopting his rigorous construction before hardening the forms further."
+
+  - source-character: pietro-perugino
+    target-character: andrea-del-verrocchio
+    type: student-of
+    description:
+      fr: "Le Pérugin se forme dans l'atelier florentin de Verrocchio, aux côtés du jeune Léonard de Vinci."
+      en: "Perugino trained in Verrocchio's Florentine workshop, alongside the young Leonardo da Vinci."
+
+  - source-character: giulio-romano
+    target-character: raphael
+    type: student-of
+    description:
+      fr: "Giulio Romano devient l'élève puis le principal assistant de Raphaël, avant d'hériter de son atelier romain."
+      en: "Giulio Romano became Raphael's pupil and then his chief assistant, later inheriting his Roman workshop."
+
+  - source-character: andrea-della-robbia
+    target-character: luca-della-robbia
+    type: student-of
+    description:
+      fr: "Andrea della Robbia se forme auprès de son oncle Luca, dont il perpétue la technique de terre cuite émaillée."
+      en: "Andrea della Robbia trained under his uncle Luca, carrying on his glazed terracotta technique."
+
+  - source-character: luca-della-robbia
+    target-character: donatello
+    type: influenced-by
+    description:
+      fr: "Le naturalisme de Luca della Robbia doit beaucoup à celui de Donatello, figure dominante de la sculpture florentine de sa génération."
+      en: "Luca della Robbia's naturalism owes much to that of Donatello, the dominant figure in Florentine sculpture of his generation."
+
+  - source-character: antonio-da-sangallo-the-younger
+    target-character: donato-bramante
+    type: student-of
+    description:
+      fr: "Antonio da Sangallo le Jeune se forme à Rome dans l'entourage de Bramante, dont il poursuit le chantier de Saint-Pierre."
+      en: "Antonio da Sangallo the Younger trained in Rome under Bramante, later continuing his work on St Peter's."
+
+  - source-character: titian
+    target-character: giovanni-bellini
+    type: student-of
+    description:
+      fr: "Titien se forme dans l'atelier de Giovanni Bellini, alors peintre officiel de la République de Venise."
+      en: "Titian trained in Giovanni Bellini's workshop, at the time the official painter of the Venetian Republic."
+
+  - source-character: giorgione
+    target-character: giovanni-bellini
+    type: student-of
+    description:
+      fr: "Giorgione se forme lui aussi auprès de Giovanni Bellini, avant d'ouvrir la voie à une peinture de paysage plus poétique."
+      en: "Giorgione also trained under Giovanni Bellini, before pioneering a more poetic form of landscape painting."
+
+  - source-character: giotto
+    target-character: cimabue
+    type: student-of
+    description:
+      fr: "Selon la légende rapportée par Vasari, Cimabue découvre le jeune Giotto en train de dessiner ses moutons et le prend pour élève."
+      en: "According to the legend recorded by Vasari, Cimabue discovered the young Giotto drawing his sheep and took him on as a pupil."
+
+  - source-character: masaccio
+    target-character: giotto
+    type: influenced-by
+    description:
+      fr: "Masaccio redécouvre et prolonge, un siècle plus tard, le naturalisme et le sens du volume déjà présents chez Giotto."
+      en: "A century later, Masaccio rediscovered and extended the naturalism and sense of volume already present in Giotto's work."
+
+  - source-character: fra-angelico
+    target-character: masaccio
+    type: influenced-by
+    description:
+      fr: "Fra Angelico retient de Masaccio le sens du volume et de l'espace, qu'il met au service d'une peinture spirituelle."
+      en: "Fra Angelico absorbed Masaccio's sense of volume and space, putting it to the service of a more spiritual painting."
+
+  - source-character: piero-della-francesca
+    target-character: masaccio
+    type: influenced-by
+    description:
+      fr: "Piero della Francesca s'inspire du naturalisme monumental de Masaccio pour construire ses propres recherches sur la perspective."
+      en: "Piero della Francesca drew on Masaccio's monumental naturalism to develop his own research into perspective."
+
+  - source-character: tintoretto
+    target-character: titian
+    type: influenced-by
+    description:
+      fr: "Selon la légende, Tintoret aurait affiché dans son atelier la devise « le dessin de Michel-Ange et la couleur de Titien »."
+      en: "Legend has it that Tintoretto displayed in his studio the motto \"the drawing of Michelangelo and the colour of Titian\"."
+
+  - source-character: paolo-veronese
+    target-character: titian
+    type: influenced-by
+    description:
+      fr: "Arrivé à Venise, Véronèse s'inspire de la couleur éclatante de Titien, alors peintre dominant de la lagune."
+      en: "On arriving in Venice, Veronese drew on the brilliant colour of Titian, then the dominant painter of the lagoon."
+
+  - source-character: vittore-carpaccio
+    target-character: giovanni-bellini
+    type: influenced-by
+    description:
+      fr: "Vittore Carpaccio se forme dans le sillage de Giovanni Bellini, dont il retient le sens de la couleur et de la lumière."
+      en: "Vittore Carpaccio worked in the orbit of Giovanni Bellini, absorbing his sense of colour and light."
+
+  - source-character: correggio
+    target-character: leonardo-da-vinci
+    type: influenced-by
+    description:
+      fr: "Le sfumato et les effets de clair-obscur de Corrège doivent beaucoup aux recherches picturales de Léonard de Vinci."
+      en: "Correggio's sfumato and chiaroscuro effects owe much to Leonardo da Vinci's pictorial research."
+
+  - source-character: sandro-botticelli
+    target-character: marsilio-ficino
+    type: influenced-by
+    description:
+      fr: "La mythologie néoplatonicienne développée par Marsile Ficin nourrit directement des tableaux de Botticelli comme Le Printemps."
+      en: "The Neoplatonic mythology developed by Marsilio Ficino directly informed Botticelli's paintings such as Primavera."
+
+  - source-character: sandro-botticelli
+    target-character: angelo-poliziano
+    type: influenced-by
+    description:
+      fr: "Les poèmes d'Ange Politien inspirent directement l'iconographie de La Naissance de Vénus de Botticelli."
+      en: "Angelo Poliziano's poetry directly inspired the iconography of Botticelli's The Birth of Venus."
+
+  - source-character: pico-della-mirandola
+    target-character: marsilio-ficino
+    type: influenced-by
+    description:
+      fr: "Pic de la Mirandole se forme au contact de Marsile Ficin et de sa lecture néoplatonicienne de Platon."
+      en: "Pico della Mirandola developed under the influence of Marsilio Ficino and his Neoplatonic reading of Plato."
+
+  - source-character: lorenzo-de-medici
+    target-character: sandro-botticelli
+    type: patron-of
+    description:
+      fr: "Laurent de Médicis compte parmi les principaux commanditaires de Botticelli, dont Le Printemps est probablement peint pour un membre de sa famille."
+      en: "Lorenzo de' Medici was one of Botticelli's principal patrons; Primavera was likely painted for a member of his family."
+
+  - source-character: lorenzo-de-medici
+    target-character: domenico-ghirlandaio
+    type: patron-of
+    description:
+      fr: "Ghirlandaio travaille régulièrement pour les Médicis, qui lui confient plusieurs cycles de fresques à Florence."
+      en: "Ghirlandaio worked regularly for the Medici, who entrusted him with several fresco cycles in Florence."
+
+  - source-character: lorenzo-de-medici
+    target-character: michelangelo
+    type: patron-of
+    description:
+      fr: "Laurent de Médicis remarque le jeune Michel-Ange et l'accueille dans son propre palais, où il grandit aux côtés de ses enfants."
+      en: "Lorenzo de' Medici noticed the young Michelangelo and welcomed him into his own palace, where he grew up alongside his children."
+
+  - source-character: lorenzo-de-medici
+    target-character: marsilio-ficino
+    type: patron-of
+    description:
+      fr: "Laurent de Médicis soutient Marsile Ficin et son Académie platonicienne, qu'il installe dans une villa familiale."
+      en: "Lorenzo de' Medici supported Marsilio Ficino and his Platonic Academy, which he housed in a family villa."
+
+  - source-character: lorenzo-de-medici
+    target-character: angelo-poliziano
+    type: patron-of
+    description:
+      fr: "Laurent de Médicis confie à Ange Politien l'éducation de ses enfants et en fait l'un des piliers de sa cour lettrée."
+      en: "Lorenzo de' Medici entrusted Angelo Poliziano with the education of his children, making him a pillar of his learned court."
+
+  - source-character: lorenzo-de-medici
+    target-character: pico-della-mirandola
+    type: patron-of
+    description:
+      fr: "Laurent de Médicis protège Pic de la Mirandole, notamment lorsque ses thèses lui valent les foudres de la papauté."
+      en: "Lorenzo de' Medici protected Pico della Mirandola, notably when his theses drew the wrath of the papacy."
+
+  - source-character: cosimo-de-medici
+    target-character: donatello
+    type: patron-of
+    description:
+      fr: "Cosme de Médicis soutient Donatello tout au long de sa carrière et continue de subvenir à ses besoins dans sa vieillesse."
+      en: "Cosimo de' Medici supported Donatello throughout his career and continued to provide for him in his old age."
+
+  - source-character: cosimo-de-medici
+    target-character: fra-angelico
+    type: patron-of
+    description:
+      fr: "Cosme de Médicis finance le couvent de San Marco, où Fra Angelico peint son grand cycle de fresques."
+      en: "Cosimo de' Medici funded the convent of San Marco, where Fra Angelico painted his great fresco cycle."
+
+  - source-character: cosimo-de-medici
+    target-character: filippo-brunelleschi
+    type: patron-of
+    description:
+      fr: "Cosme de Médicis soutient plusieurs des grands chantiers d'architecture de Brunelleschi à Florence."
+      en: "Cosimo de' Medici supported several of Brunelleschi's major architectural projects in Florence."
+
+  - source-character: pope-julius-ii
+    target-character: michelangelo
+    type: patron-of
+    description:
+      fr: "Jules II commande à Michel-Ange son propre tombeau puis les fresques de la voûte de la chapelle Sixtine."
+      en: "Julius II commissioned his own tomb from Michelangelo, then the ceiling frescoes of the Sistine Chapel."
+
+  - source-character: pope-julius-ii
+    target-character: raphael
+    type: patron-of
+    description:
+      fr: "Jules II confie à Raphaël la décoration des appartements pontificaux, dont la Chambre de la Signature et L'École d'Athènes."
+      en: "Julius II entrusted Raphael with the decoration of the papal apartments, including the Stanza della Segnatura and The School of Athens."
+
+  - source-character: pope-julius-ii
+    target-character: donato-bramante
+    type: patron-of
+    description:
+      fr: "Jules II charge Bramante de la reconstruction de la basilique Saint-Pierre, dont il devient le premier maître d'œuvre."
+      en: "Julius II commissioned Bramante to rebuild St Peter's Basilica, making him its first chief architect."
+
+  - source-character: pope-leo-x
+    target-character: raphael
+    type: patron-of
+    description:
+      fr: "Devenu pape, Léon X maintient Raphaël à la tête des grands chantiers artistiques du Vatican."
+      en: "Once elected pope, Leo X kept Raphael at the head of the Vatican's major artistic projects."
+
+  - source-character: pope-leo-x
+    target-character: michelangelo
+    type: patron-of
+    description:
+      fr: "Léon X commande à Michel-Ange la façade de l'église San Lorenzo, projet resté finalement sans suite."
+      en: "Leo X commissioned Michelangelo to design the façade of the church of San Lorenzo, a project that was ultimately never completed."
+
+  - source-character: ludovico-sforza
+    target-character: leonardo-da-vinci
+    type: patron-of
+    description:
+      fr: "Ludovic Sforza attire Léonard de Vinci à Milan, où l'artiste peint La Cène et travaille au projet inachevé de son cheval de bronze."
+      en: "Ludovico Sforza drew Leonardo da Vinci to Milan, where the artist painted The Last Supper and worked on the unfinished project for his bronze horse."
+
+  - source-character: isabella-d-este
+    target-character: pietro-perugino
+    type: patron-of
+    description:
+      fr: "Isabelle d'Este commande au Pérugin une allégorie pour son studiolo de Mantoue."
+      en: "Isabella d'Este commissioned an allegorical painting from Perugino for her studiolo in Mantua."
+
+  - source-character: federico-da-montefeltro
+    target-character: piero-della-francesca
+    type: patron-of
+    description:
+      fr: "Frédéric de Montefeltro commande à Piero della Francesca son célèbre diptyque en double portrait avec son épouse."
+      en: "Federico da Montefeltro commissioned from Piero della Francesca his famous double portrait diptych with his wife."
+
+  - source-character: andrea-del-verrocchio
+    target-character: leonardo-da-vinci
+    type: collaborator-of
+    description:
+      fr: "Léonard de Vinci peint l'un des anges du Baptême du Christ de Verrocchio, qui aurait renoncé à la peinture après avoir vu le résultat."
+      en: "Leonardo da Vinci painted one of the angels in Verrocchio's Baptism of Christ, after which Verrocchio is said to have given up painting."
+
+  - source-character: sandro-botticelli
+    target-character: domenico-ghirlandaio
+    type: collaborator-of
+    description:
+      fr: "Botticelli et Ghirlandaio travaillent côte à côte sur les fresques murales de la chapelle Sixtine en 1481-1482."
+      en: "Botticelli and Ghirlandaio worked side by side on the Sistine Chapel wall frescoes in 1481-1482."
+
+  - source-character: sandro-botticelli
+    target-character: pietro-perugino
+    type: collaborator-of
+    description:
+      fr: "Botticelli et Le Pérugin font partie de la même équipe de peintres réunie par Sixte IV pour la chapelle Sixtine."
+      en: "Botticelli and Perugino were both part of the team of painters assembled by Sixtus IV for the Sistine Chapel."
+
+  - source-character: domenico-ghirlandaio
+    target-character: pietro-perugino
+    type: collaborator-of
+    description:
+      fr: "Ghirlandaio et Le Pérugin peignent ensemble certaines des scènes murales de la chapelle Sixtine."
+      en: "Ghirlandaio and Perugino together painted some of the Sistine Chapel's wall scenes."
+
+  - source-character: pietro-perugino
+    target-character: luca-signorelli
+    type: collaborator-of
+    description:
+      fr: "Le Pérugin et Luca Signorelli travaillent tous deux au chantier de la chapelle Sixtine, où leurs scènes se répondent."
+      en: "Perugino and Luca Signorelli both worked on the Sistine Chapel, their scenes echoing one another."
+
+  - source-character: baldassare-peruzzi
+    target-character: antonio-da-sangallo-the-younger
+    type: collaborator-of
+    description:
+      fr: "Peruzzi et Antonio da Sangallo le Jeune se succèdent et collaborent au chantier de la basilique Saint-Pierre."
+      en: "Peruzzi and Antonio da Sangallo the Younger worked together, and in succession, on the construction of St Peter's Basilica."
+
+  - source-character: baldassare-peruzzi
+    target-character: donato-bramante
+    type: collaborator-of
+    description:
+      fr: "Peruzzi seconde Bramante sur le chantier de la nouvelle basilique Saint-Pierre."
+      en: "Peruzzi assisted Bramante on the construction site of the new St Peter's Basilica."
+
+  - source-character: michelangelo
+    target-character: leonardo-da-vinci
+    type: rival-of
+    description:
+      fr: "Michel-Ange et Léonard de Vinci s'affrontent par fresques interposées lorsque Florence leur commande à chacun une bataille pour le Palazzo Vecchio."
+      en: "Michelangelo and Leonardo da Vinci clashed through rival frescoes when Florence commissioned each of them to paint a battle scene for the Palazzo Vecchio."
+
+  - source-character: michelangelo
+    target-character: raphael
+    type: rival-of
+    description:
+      fr: "Michel-Ange et Raphaël, actifs au même moment dans la Rome pontificale, entretiennent une rivalité artistique restée célèbre."
+      en: "Michelangelo and Raphael, both active in papal Rome at the same time, maintained a famously bitter artistic rivalry."
+
+  - source-character: filippo-brunelleschi
+    target-character: lorenzo-ghiberti
+    type: rival-of
+    description:
+      fr: "Brunelleschi et Ghiberti s'affrontent en 1401 lors du concours pour les portes du baptistère de Florence, remporté par Ghiberti."
+      en: "Brunelleschi and Ghiberti competed against each other in 1401 for the commission of the Florence Baptistery doors, which Ghiberti won."
+
+  - source-character: titian
+    target-character: michelangelo
+    type: rival-of
+    description:
+      fr: "Lors de son passage à Rome en 1545-1546, Titien reçoit dans son atelier la visite de Michel-Ange, qui salue sa couleur tout en critiquant son manque de dessin, épisode emblématique de la rivalité entre coloris vénitien et disegno florentin."
+      en: "During his stay in Rome in 1545-1546, Titian was visited in his studio by Michelangelo, who praised his colour while criticising his lack of drawing, an episode emblematic of the rivalry between Venetian colore and Florentine disegno."
+
+  - source-character: cosimo-de-medici
+    target-character: donatello
+    type: friend-of
+    description:
+      fr: "Au-delà du mécénat, Cosme de Médicis et Donatello entretiennent une relation personnelle proche, rare entre un prince et un artiste."
+      en: "Beyond patronage, Cosimo de' Medici and Donatello maintained a close personal relationship, unusual between a ruler and an artist."
+
+  - source-character: filippo-brunelleschi
+    target-character: donatello
+    type: friend-of
+    description:
+      fr: "Brunelleschi et Donatello, amis de longue date, voyagent ensemble à Rome pour y étudier les vestiges antiques."
+      en: "Longtime friends, Brunelleschi and Donatello travelled together to Rome to study its ancient ruins."
+
+  - source-character: marsilio-ficino
+    target-character: angelo-poliziano
+    type: friend-of
+    description:
+      fr: "Marsile Ficin et Ange Politien se côtoient au sein du cercle humaniste réuni par les Médicis."
+      en: "Marsilio Ficino and Angelo Poliziano moved in the same humanist circle gathered by the Medici."
+
+  - source-character: pico-della-mirandola
+    target-character: angelo-poliziano
+    type: friend-of
+    description:
+      fr: "Pic de la Mirandole et Ange Politien sont proches jusqu'à leur mort, la même année, et reposent l'un près de l'autre à San Marco."
+      en: "Pico della Mirandola and Angelo Poliziano remained close until their deaths in the same year, and are buried near one another at San Marco."
+
+  - source-character: fra-filippo-lippi
+    target-character: filippino-lippi
+    type: parent-of
+    description:
+      fr: "Fra Filippo Lippi est le père de Filippino Lippi, qu'il initie très tôt à la peinture."
+      en: "Fra Filippo Lippi was Filippino Lippi's father, and introduced him to painting at an early age."
+
+  - source-character: paolo-uccello
+    target-character: lorenzo-ghiberti
+    type: student-of
+    description:
+      fr: "Jeune, Paolo Uccello se forme dans l'atelier de Lorenzo Ghiberti, alors occupé par le chantier des portes du baptistère."
+      en: "As a young man, Paolo Uccello trained in Lorenzo Ghiberti's workshop, then busy with the Baptistery doors."
+
+  - source-character: paolo-uccello
+    target-character: filippo-brunelleschi
+    type: influenced-by
+    description:
+      fr: "Les recherches de Brunelleschi sur la perspective linéaire nourrissent l'obsession géométrique de Paolo Uccello."
+      en: "Brunelleschi's research into linear perspective fed Paolo Uccello's geometric obsession."
+
+  - source-character: antonio-del-pollaiuolo
+    target-character: donatello
+    type: influenced-by
+    description:
+      fr: "Le traitement dynamique du corps en mouvement chez Antonio del Pollaiuolo prolonge directement les innovations de Donatello."
+      en: "Antonio del Pollaiuolo's dynamic treatment of the body in motion directly extends Donatello's innovations."
+
+  - source-character: benozzo-gozzoli
+    target-character: fra-angelico
+    type: student-of
+    description:
+      fr: "Benozzo Gozzoli est l'assistant de Fra Angelico avant de développer un style narratif et coloré qui lui est propre."
+      en: "Benozzo Gozzoli assisted Fra Angelico before developing his own colourful, narrative style."
+
+  - source-character: pope-sixtus-iv
+    target-character: sandro-botticelli
+    type: patron-of
+    description:
+      fr: "Sixte IV réunit Botticelli avec plusieurs de ses confrères pour décorer les murs de la chapelle qui porte son nom."
+      en: "Sixtus IV brought Botticelli together with several fellow painters to decorate the walls of the chapel that bears his name."
+
+  - source-character: pope-sixtus-iv
+    target-character: domenico-ghirlandaio
+    type: patron-of
+    description:
+      fr: "Sixte IV confie à Ghirlandaio, aux côtés d'autres peintres toscans, la décoration des murs de la chapelle Sixtine."
+      en: "Sixtus IV entrusted Ghirlandaio, alongside other Tuscan painters, with the decoration of the Sistine Chapel walls."
+
+  - source-character: pope-sixtus-iv
+    target-character: pietro-perugino
+    type: patron-of
+    description:
+      fr: "Sixte IV place Le Pérugin à la tête de l'équipe chargée de peindre les murs de la chapelle Sixtine."
+      en: "Sixtus IV placed Perugino at the head of the team commissioned to paint the walls of the Sistine Chapel."
+
+  - source-character: pope-sixtus-iv
+    target-character: luca-signorelli
+    type: patron-of
+    description:
+      fr: "Sixte IV fait appel à Luca Signorelli pour compléter l'équipe de peintres de la chapelle Sixtine."
+      en: "Sixtus IV called on Luca Signorelli to complete the team of painters working on the Sistine Chapel."
+
+  - source-character: pope-sixtus-iv
+    target-character: cosimo-rosselli
+    type: patron-of
+    description:
+      fr: "Sixte IV inclut Cosimo Rosselli dans l'équipe de peintres toscans réunie pour la chapelle Sixtine."
+      en: "Sixtus IV included Cosimo Rosselli in the team of Tuscan painters gathered for the Sistine Chapel."
+
+  - source-character: cosimo-rosselli
+    target-character: pietro-perugino
+    type: collaborator-of
+    description:
+      fr: "Cosimo Rosselli peint aux côtés du Pérugin sur les murs de la chapelle Sixtine."
+      en: "Cosimo Rosselli painted alongside Perugino on the walls of the Sistine Chapel."
+
+  - source-character: pope-alexander-vi
+    target-character: pinturicchio
+    type: patron-of
+    description:
+      fr: "Alexandre VI commande au Pinturicchio la décoration fastueuse de son appartement du Vatican."
+      en: "Alexander VI commissioned Pinturicchio to lavishly decorate his Vatican apartment."
+
+  - source-character: pinturicchio
+    target-character: pietro-perugino
+    type: collaborator-of
+    description:
+      fr: "Le Pinturicchio travaille aux côtés du Pérugin, dont il partage un temps l'atelier et le chantier de la chapelle Sixtine."
+      en: "Pinturicchio worked alongside Perugino, sharing his workshop for a time as well as the Sistine Chapel commission."
+
+  - source-character: alfonso-i-d-este
+    target-character: titian
+    type: patron-of
+    description:
+      fr: "Alphonse Ier d'Este commande à Titien une série de tableaux mythologiques pour son camerino d'alabastro à Ferrare."
+      en: "Alfonso I d'Este commissioned from Titian a series of mythological paintings for his camerino d'alabastro in Ferrara."
+
+  - source-character: alfonso-i-d-este
+    target-character: isabella-d-este
+    type: ally-of
+    description:
+      fr: "Alphonse Ier d'Este et sa sœur Isabelle d'Este restent des alliés politiques proches, liant les cours de Ferrare et de Mantoue."
+      en: "Alfonso I d'Este and his sister Isabella d'Este remained close political allies, linking the courts of Ferrara and Mantua."
+
+  - source-character: giovanni-bellini
+    target-character: andrea-mantegna
+    type: influenced-by
+    description:
+      fr: "Le jeune Giovanni Bellini, beau-frère de Mantegna, reprend d'abord ses compositions avant de développer une couleur qui lui est propre."
+      en: "The young Giovanni Bellini, Mantegna's brother-in-law, initially followed his compositions before developing a colour sense of his own."
+
+  - source-character: isabella-d-este
+    target-character: andrea-mantegna
+    type: patron-of
+    description:
+      fr: "Isabelle d'Este fait de Mantegna le peintre attitré de son studiolo, pour lequel il peint le Parnasse."
+      en: "Isabella d'Este made Mantegna the official painter of her studiolo, for which he painted Parnassus."
+
+  - source-character: correggio
+    target-character: andrea-mantegna
+    type: influenced-by
+    description:
+      fr: "L'illusion architecturale en plongée de la Chambre des Époux de Mantegna inspire directement les coupoles en trompe-l'œil peintes par Corrège à Parme."
+      en: "The plunging architectural illusion of Mantegna's Camera degli Sposi directly inspired the trompe-l'œil domes Correggio painted in Parma."
+
+  - source-character: piero-della-francesca
+    target-character: domenico-veneziano
+    type: student-of
+    description:
+      fr: "Piero della Francesca travaille comme assistant de Domenico Veneziano sur les fresques de Sant'Egidio à Florence."
+      en: "Piero della Francesca worked as Domenico Veneziano's assistant on the frescoes of Sant'Egidio in Florence."
+
+  - source-character: leon-battista-alberti
+    target-character: filippo-brunelleschi
+    type: friend-of
+    description:
+      fr: "Alberti dédie à Brunelleschi la version italienne de son traité Della pittura, en hommage à son ami et à ses prouesses architecturales."
+      en: "Alberti dedicated the Italian version of his treatise Della pittura to Brunelleschi, in tribute to his friend and his architectural achievements."
+
+  - source-character: michelozzo
+    target-character: donatello
+    type: collaborator-of
+    description:
+      fr: "Michelozzo et Donatello s'associent pendant plus d'une décennie dans un atelier commun de sculpture."
+      en: "Michelozzo and Donatello were partners for over a decade in a joint sculpture workshop."
+
+  - source-character: cosimo-de-medici
+    target-character: michelozzo
+    type: patron-of
+    description:
+      fr: "Cosme de Médicis fait de Michelozzo son architecte attitré, qui lui construit son palais florentin."
+      en: "Cosimo de' Medici made Michelozzo his house architect, who built his Florentine palace for him."
+
+  - source-character: vittoria-colonna
+    target-character: michelangelo
+    type: friend-of
+    description:
+      fr: "Vittoria Colonna et Michel-Ange entretiennent à la fin de leurs vies une profonde amitié, nourrie de lettres, de poèmes et de dessins échangés."
+      en: "In their later years, Vittoria Colonna and Michelangelo shared a deep friendship, nourished by an exchange of letters, poems and drawings."
+
+  - source-character: pietro-aretino
+    target-character: titian
+    type: friend-of
+    description:
+      fr: "Installé à Venise, Pietro Aretino devient l'ami intime de Titien et le principal artisan de sa renommée dans toute l'Europe."
+      en: "Settled in Venice, Pietro Aretino became Titian's intimate friend and the chief architect of his fame across Europe."
+
+  - source-character: pietro-aretino
+    target-character: michelangelo
+    type: rival-of
+    description:
+      fr: "Pietro Aretino attaque publiquement Michel-Ange dans une lettre restée célèbre, critiquant les nudités du Jugement dernier."
+      en: "Pietro Aretino publicly attacked Michelangelo in a now-famous letter criticising the nudity of the Last Judgement."
+
+  - source-character: properzia-de-rossi
+    target-character: alfonso-lombardi
+    type: collaborator-of
+    description:
+      fr: "Properzia de' Rossi et Alfonso Lombardi sculptent ensemble les reliefs du portail de la basilique San Petronio à Bologne dans les années 1520."
+      en: "Properzia de' Rossi and Alfonso Lombardi together sculpted the portal reliefs of the Basilica of San Petronio in Bologna in the 1520s."
+
+  - source-character: alfonso-i-d-este
+    target-character: alfonso-lombardi
+    type: patron-of
+    description:
+      fr: "Alphonse Ier d'Este attire Alfonso Lombardi à la cour de Ferrare, où il devient l'un de ses sculpteurs attitrés."
+      en: "Alfonso I d'Este drew Alfonso Lombardi to the court of Ferrara, where he became one of his official sculptors."
+
+  - source-character: beatrice-d-este
+    target-character: ludovico-sforza
+    type: married-to
+    description:
+      fr: "Béatrice d'Este épouse Ludovic Sforza en 1491, devenant duchesse de Milan."
+      en: "Beatrice d'Este married Ludovico Sforza in 1491, becoming Duchess of Milan."
+
+  - source-character: ambrogio-de-predis
+    target-character: leonardo-da-vinci
+    type: collaborator-of
+    description:
+      fr: "Ambrogio de Predis réalise avec Léonard de Vinci La Vierge aux rochers pour une confrérie milanaise, dans le cadre d'un contrat qui donne lieu à un long litige sur le paiement."
+      en: "Ambrogio de Predis worked with Leonardo da Vinci on The Virgin of the Rocks for a Milanese confraternity, under a contract that led to a long-running payment dispute."
+
+  - source-character: giovanni-ii-bentivoglio
+    target-character: pope-julius-ii
+    type: rival-of
+    description:
+      fr: "Jules II chasse Giovanni II Bentivoglio de Bologne en 1506 pour rattacher la ville aux États pontificaux."
+      en: "Julius II drove Giovanni II Bentivoglio out of Bologna in 1506 to bring the city under direct papal rule."
+
+  - source-character: giovanni-ii-bentivoglio
+    target-character: francesco-francia
+    type: patron-of
+    description:
+      fr: "Francesco Francia est le peintre attitré de la cour de Giovanni II Bentivoglio à Bologne."
+      en: "Francesco Francia was the official painter of Giovanni II Bentivoglio's court in Bologna."
+
+  - source-character: francesco-francia
+    target-character: raphael
+    type: influenced-by
+    description:
+      fr: "La grâce plus classique du style tardif de Francesco Francia doit beaucoup à Raphaël, dont Vasari raconte qu'une toile envoyée à Bologne l'aurait bouleversé au point d'en mourir."
+      en: "The more classical grace of Francesco Francia's late style owes much to Raphael, whom Vasari claims so overwhelmed Francia with a painting sent to Bologna that he died of the shock."
+
+  - source-character: baldassare-castiglione
+    target-character: raphael
+    type: friend-of
+    description:
+      fr: "Raphaël peint l'un de ses portraits les plus célèbres de son ami Baldassare Castiglione, rencontré à la cour d'Urbino où le peintre a grandi."
+      en: "Raphael painted one of his most famous portraits of his friend Baldassare Castiglione, whom he had met at the court of Urbino where the painter grew up."
+
+  - source-character: michelangelo
+    target-character: antonio-del-pollaiuolo
+    type: influenced-by
+    description:
+      fr: "Michel-Ange étudie et copie La Bataille des dix hommes nus d'Antonio Pollaiuolo, référence pour ses propres études du corps en mouvement."
+      en: "Michelangelo studied and copied Antonio Pollaiuolo's Battle of the Ten Nudes, a reference for his own studies of the body in motion."
+
+  - source-character: benozzo-gozzoli
+    target-character: lorenzo-ghiberti
+    type: student-of
+    description:
+      fr: "Avant de devenir peintre, Benozzo Gozzoli est apprenti orfèvre dans l'atelier de Lorenzo Ghiberti, sur le chantier des portes du baptistère de Florence."
+      en: "Before becoming a painter, Benozzo Gozzoli trained as a goldsmith's apprentice in Lorenzo Ghiberti's workshop, on the Florence Baptistery doors."
+
+  - source-character: andrea-della-robbia
+    target-character: filippo-brunelleschi
+    type: collaborator-of
+    description:
+      fr: "Les médaillons en terre cuite émaillée d'Andrea della Robbia ornent la façade de l'Ospedale degli Innocenti, bâti par Brunelleschi."
+      en: "Andrea della Robbia's glazed terracotta roundels adorn the façade of the Ospedale degli Innocenti, built by Brunelleschi."
+
+  - source-character: giorgione
+    target-character: titian
+    type: collaborator-of
+    description:
+      fr: "Giorgione et Titien peignent ensemble les fresques, aujourd'hui disparues, de la façade du Fondaco dei Tedeschi à Venise en 1508."
+      en: "Giorgione and Titian together painted the now-lost façade frescoes of the Fondaco dei Tedeschi in Venice in 1508."
+
+  - source-character: tintoretto
+    target-character: paolo-veronese
+    type: rival-of
+    description:
+      fr: "Le Tintoret et Véronèse se disputent les grandes commandes de décoration du palais des Doges dans la seconde moitié du seizième siècle."
+      en: "Tintoretto and Veronese competed for the major decoration commissions of the Doge's Palace in the second half of the sixteenth century."
+
+  - source-character: pope-alexander-vi
+    target-character: pope-julius-ii
+    type: rival-of
+    description:
+      fr: "Le cardinal della Rovere, futur Jules II, s'oppose farouchement à Alexandre VI durant tout son pontificat, avant de lui succéder."
+      en: "Cardinal della Rovere, the future Julius II, fiercely opposed Alexander VI throughout his pontificate, before succeeding him."
+
+  - source-character: federico-da-montefeltro
+    target-character: pope-sixtus-iv
+    type: ally-of
+    description:
+      fr: "Sixte IV élève Federico da Montefeltro au rang de duc d'Urbino en 1474, scellant une alliance étroite entre les deux hommes."
+      en: "Sixtus IV raised Federico da Montefeltro to the rank of Duke of Urbino in 1474, sealing a close alliance between the two men."

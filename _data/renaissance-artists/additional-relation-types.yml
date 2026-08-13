@@ -1,0 +1,68 @@
+- slug: student-of
+  label:
+    fr:
+      masculine: "Élève de"
+      feminine: "Élève de"
+      neutral: "Élève de"
+    en:
+      masculine: "Student of"
+      feminine: "Student of"
+      neutral: "Student of"
+  reverse-label:
+    fr:
+      masculine: "Maître de"
+      feminine: "Maîtresse de"
+    en:
+      masculine: "Teacher of"
+      feminine: "Teacher of"
+  directed: true
+
+- slug: influenced-by
+  label:
+    fr:
+      masculine: "Influencé par"
+      feminine: "Influencée par"
+      neutral: "Influencé•e par"
+    en:
+      masculine: "Influenced by"
+      feminine: "Influenced by"
+      neutral: "Influenced by"
+  reverse-label:
+    fr:
+      masculine: "A influencé"
+      feminine: "A influencé"
+    en:
+      masculine: "Influenced"
+      feminine: "Influenced"
+  directed: true
+
+- slug: patron-of
+  label:
+    fr:
+      masculine: "Mécène de"
+      feminine: "Mécène de"
+      neutral: "Mécène de"
+    en:
+      masculine: "Patron of"
+      feminine: "Patron of"
+      neutral: "Patron of"
+  reverse-label:
+    fr:
+      masculine: "Protégé de"
+      feminine: "Protégée de"
+    en:
+      masculine: "Protégé of"
+      feminine: "Protégée of"
+  directed: true
+
+- slug: collaborator-of
+  label:
+    fr:
+      masculine: "Collaborateur de"
+      feminine: "Collaboratrice de"
+      neutral: "Collaborateur·rice de"
+    en:
+      masculine: "Collaborator of"
+      feminine: "Collaborator of"
+      neutral: "Collaborator of"
+  directed: false

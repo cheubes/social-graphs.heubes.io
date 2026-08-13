@@ -1,0 +1,41 @@
+- slug: florence
+  name:
+    fr: "Florence"
+    en: "Florence"
+  color: "#b3382c"
+
+- slug: rome
+  name:
+    fr: "Rome"
+    en: "Rome"
+  color: "#b8860b"
+
+- slug: venice
+  name:
+    fr: "Venise"
+    en: "Venice"
+  color: "#7a1f3d"
+
+- slug: ferrara-mantua
+  name:
+    fr: "Ferrare et Mantoue"
+    en: "Ferrara and Mantua"
+  color: "#1c3f6e"
+
+- slug: milan
+  name:
+    fr: "Milan"
+    en: "Milan"
+  color: "#2f6b4f"
+
+- slug: urbino
+  name:
+    fr: "Urbino"
+    en: "Urbino"
+  color: "#5b4636"
+
+- slug: bologna
+  name:
+    fr: "Bologne"
+    en: "Bologna"
+  color: "#5c3a6e"

@@ -4,7 +4,10 @@
 
 {% assign group_filter_items = "" %}
 {% assign group_filter_count = 0 %}
-{% assign sorted_groups = groups | sort: "slug" %}
+{% assign sorted_groups = groups %}
+{% if sorted_groups %}
+  {% assign sorted_groups = sorted_groups | sort: "slug" %}
+{% endif %}
 {% for group in sorted_groups %}
   {% assign group_token = " " | append: group.slug | append: " " %}
   {% if used_group_slugs contains group_token %}
