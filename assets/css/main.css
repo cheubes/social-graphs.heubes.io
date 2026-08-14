@@ -112,6 +112,14 @@ small {
   margin-bottom: 1.5rem;
 }
 
+.sg-home-section + .sg-home-section {
+  margin-top: 3rem;
+}
+
+.sg-home-section-title {
+  margin-bottom: 1.5rem;
+}
+
 .sg-home-empty {
   color: var(--sg-grey);
 }

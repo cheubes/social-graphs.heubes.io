@@ -15,13 +15,28 @@ layout: default
 
   {% if universes.size > 0 %}
     {% assign placeholder_src = "/assets/img/cover-placeholder.svg" | relative_url %}
-    <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 list-unstyled sg-home-grid">
-      {% for universe in universes %}
-        <li class="col">
-          {% include universe-card.html universe=universe placeholder_src=placeholder_src %}
-        </li>
-      {% endfor %}
-    </ul>
+    {% for source_type in site.data["source-types"] %}
+      {% capture section_items %}
+        {% for universe in universes %}
+          {% assign universe_slug = universe.path | split: "/" | first %}
+          {% assign universe_source_type = site.data[universe_slug]["universe"]["source-type"] %}
+          {% if universe_source_type == source_type.slug %}
+            <li class="col">
+              {% include universe-card.html universe=universe placeholder_src=placeholder_src %}
+            </li>
+          {% endif %}
+        {% endfor %}
+      {% endcapture %}
+      {% assign section_items = section_items | strip %}
+      {% if section_items != "" %}
+        <section class="sg-home-section">
+          <h2 class="sg-home-section-title">{{ source_type.label[lang] }}</h2>
+          <ul class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 list-unstyled sg-home-grid">
+            {{ section_items }}
+          </ul>
+        </section>
+      {% endif %}
+    {% endfor %}
   {% else %}
     <p class="sg-home-empty">
       {% if all_universes.size > 0 %}

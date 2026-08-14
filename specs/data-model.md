@@ -12,13 +12,24 @@ Un univers regroupe un ensemble de personnages et les relations qui les lient. I
 | `lang` | Non | Langue de ce document (`fr` ou `en`) ; permet d'associer les deux documents d'un même univers |
 | `title` | Oui | Nom affiché de l'univers |
 | `description` | Oui | Texte de présentation, affiché sur la tuile d'accueil (voir `home.md`) ; non affiché sur les pages de l'univers lui-même (voir `universe-home.md`) |
-| `source-type` | Oui | Catégorie libre indicative (roman, série, période historique, autre) |
+| `source-type` | Non | slug référençant un type de source (voir "Type de source" ci-dessous), utilisé pour regrouper les univers sur l'accueil du site (voir `home.md`). Ne varie pas d'une langue à l'autre : comme `gender`, `group` et `portrait-source` pour un personnage, il n'est pas porté par le frontmatter de `mosaic.fr.md`/`mosaic.en.md` mais par `_data/<slug-universe>/universe.yml` (voir "Organisation des fichiers") |
 | `characters` | — | Liste des personnages de l'univers |
 | `relations` | — | Liste des relations entre ces personnages |
 | `additional-relation-types` | — | Extensions locales à la taxonomie commune (voir "Type de relation") |
 | `groups` | — | Liste des groupes de personnages de l'univers, facultatif (voir "Groupe") |
 
 L'image de couverture n'est pas un attribut : elle est associée à l'univers par convention de nommage (voir "Images").
+
+### Type de source
+
+Catégorie indicative d'un univers (histoire, fiction, autre), utilisée pour regrouper les univers sur l'accueil du site (voir `home.md`). Contrairement au Groupe, un socle commun est partagé par tous les univers, sans extension locale : le nombre de catégories reste volontairement restreint.
+
+| Attribut | Localisé | Description |
+|---|---|---|
+| `slug` | Non | Identifiant stable, référencé depuis l'attribut `source-type` d'un univers |
+| `label` | Oui | Libellé affiché, notamment en titre de section sur l'accueil du site (voir `home.md`) |
+
+Porté par `_data/source-types.yml` (voir "Organisation des fichiers"). L'ordre de déclaration dans ce fichier détermine l'ordre des sections sur l'accueil du site (voir `home.md`), pas un tri alphabétique.
 
 ### Personnage
 
@@ -132,11 +143,12 @@ Un seul fichier image par entité, partagé par toutes ses langues (pas de décl
 
 Le site est généré avec Jekyll (voir `technical-specifications.md`). Chaque univers a son propre dossier à la racine du site (`/<slug-universe>/`), qui regroupe l'ensemble de son contenu textuel et de ses images ; les données structurées (YAML) vivent à part, dans `_data/`.
 
-- `/<slug-universe>/mosaic.fr.md`, `mosaic.en.md` : présentation de l'univers (Vue Mosaïque), un fichier par langue. Frontmatter : `lang`, `title`, `source-type`. Corps de texte : `description`.
+- `/<slug-universe>/mosaic.fr.md`, `mosaic.en.md` : présentation de l'univers (Vue Mosaïque), un fichier par langue. Frontmatter : `lang`, `title`. Corps de texte : `description`.
 - `/<slug-universe>/graph.fr.md`, `graph.en.md` : Vue Graphe, un fichier par langue. Réutilise les données de présentation du `mosaic.*.md` du même dossier plutôt que de les dupliquer.
 - `/<slug-universe>/cover.jpg` : image de couverture (voir "Images").
 - `/<slug-universe>/groups/`, optionnel : un sous-dossier contenant le logo de chaque groupe déclaré par l'univers (`<slug-group>.png`, voir "Images").
 - `/<slug-universe>/characters/` : un sous-dossier contenant, pour chaque personnage, `<slug-character>.fr.md`, `<slug-character>.en.md` (frontmatter : `lang`, `character-name`, `external-link`, et les clés de `metadata` explicitement localisées le cas échéant ; corps de texte : `description`) et son portrait `<slug-character>.jpg` (voir "Images"). Le sous-dossier lui-même associe chaque personnage à son univers ; aucun attribut ne porte cette référence.
+- `_data/<slug-universe>/universe.yml` : l'attribut non localisé propre à l'univers lui-même (`source-type`), sur le même principe que `characters.yml` pour les attributs non localisés d'un personnage.
 - `_data/<slug-universe>/characters.yml` : les attributs non localisés de chaque personnage de l'univers (`gender`, `group`, `portrait-source`, et les clés de `metadata` non explicitement localisées), une entrée par personnage identifiée par son `slug`.
 - `_data/<slug-universe>/relations.yml` : l'ensemble des relations de l'univers ; le champ localisé (`description`) y est porté par des clés imbriquées par langue, plutôt que par des fichiers séparés.
 - `_data/<slug-universe>/additional-relation-types.yml`, optionnel : les types de relations additionnels propres à l'univers, avec la même structure que la taxonomie commune (clés imbriquées par langue puis par genre grammatical pour `label` et `reverse-label`, voir "Type de relation").
@@ -144,6 +156,7 @@ Le site est généré avec Jekyll (voir `technical-specifications.md`). Chaque u
 - `_data/<slug-universe>/additional-metadata-keys.yml`, optionnel : les clés de metadata additionnelles propres à l'univers, avec la même structure que la taxonomie commune (clés imbriquées par langue pour `label`, voir "Clé de metadata").
 - `_data/metadata-keys.yml` : la taxonomie de base des clés de metadata, partagée par tous les univers.
 - `_data/<slug-universe>/groups.yml`, optionnel : les groupes de personnages propres à l'univers, avec leur `name` localisé (clés imbriquées par langue) et leur `color` (voir "Groupe"). Contrairement aux types de relation et aux clés de metadata, il n'existe pas de fichier de taxonomie commune : les groupes sont toujours propres à un univers.
+- `_data/source-types.yml` : la taxonomie des types de source (voir "Type de source"), avec leur `label` localisé, partagée par tous les univers, sans extension locale possible.
 
 ### Exemples
 
@@ -167,7 +180,9 @@ french-renaissance-aristocracy/
     henri-iii.jpg
 _data/
   relation-types.yml
+  source-types.yml
   french-renaissance-aristocracy/
+    universe.yml
     characters.yml
     relations.yml
     additional-relation-types.yml
@@ -180,10 +195,15 @@ _data/
 ---
 lang: fr
 title: "Les aristocrates français à l'époque de Catherine de Médicis"
-source-type: "période historique"
 ---
 
 À la cour des Valois, alliances, rivalités et intrigues nouent les grandes familles du royaume de France.
+```
+
+**Univers, attribut non localisé** (`_data/french-renaissance-aristocracy/universe.yml`) :
+
+```yaml
+source-type: history
 ```
 
 **Types de relations additionnels** (`_data/french-renaissance-aristocracy/additional-relation-types.yml`) :
@@ -308,10 +328,29 @@ relations:
     en: "Born"
 ```
 
+**Taxonomie des types de source** (`_data/source-types.yml`) :
+
+```yaml
+- slug: history
+  label:
+    fr: "Histoire"
+    en: "History"
+
+- slug: fiction
+  label:
+    fr: "Fiction"
+    en: "Fiction"
+
+- slug: other
+  label:
+    fr: "Autre"
+    en: "Other"
+```
+
 ### Workflow d'ajout d'un univers
 
 1. Choisir le `slug` de l'univers (construit à partir de son nom anglais) et créer son dossier `/<slug>/`.
-2. Créer `mosaic.fr.md` et `mosaic.en.md`, puis `graph.fr.md` et `graph.en.md`.
+2. Créer `mosaic.fr.md` et `mosaic.en.md`, puis `graph.fr.md` et `graph.en.md`, et déclarer son `source-type` dans `_data/<slug>/universe.yml` (voir "Type de source").
 3. Ajouter l'image de couverture (`cover.jpg`).
 4. Déclarer, si besoin, les types de relations et les clés de metadata additionnels (`_data/<slug>/additional-relation-types.yml`, `_data/<slug>/additional-metadata-keys.yml`), ainsi que les groupes de l'univers (`_data/<slug>/groups.yml` et leurs logos dans `<slug>/groups/`).
 5. Créer, dans `characters/`, les fichiers de chaque personnage (markdown et portrait) pour chaque langue, et déclarer leurs attributs non localisés dans `_data/<slug>/characters.yml`.
@@ -340,3 +379,6 @@ relations:
 - Un `slug` de groupe est unique au sein de son univers (deux univers différents peuvent réutiliser le même slug de groupe, à la différence des types de relation et des clés de metadata).
 - L'attribut `group` d'un personnage, dans `characters.yml`, quand il est renseigné, doit référencer un groupe existant dans `groups.yml` de son univers.
 - Le `name` d'un groupe définit une valeur pour chaque langue déclarée par l'univers.
+- Un `slug` de type de source est unique dans `_data/source-types.yml` (pas d'extension locale par univers, à la différence des types de relation et des clés de metadata).
+- Le `source-type` d'un univers, dans `_data/<slug-universe>/universe.yml`, doit référencer un type de source existant dans `_data/source-types.yml`.
+- Le `label` d'un type de source définit une valeur pour chaque langue déclarée par le site.

@@ -1,0 +1,14 @@
+- slug: history
+  label:
+    fr: "Histoire"
+    en: "History"
+
+- slug: fiction
+  label:
+    fr: "Fiction"
+    en: "Fiction"
+
+- slug: other
+  label:
+    fr: "Autre"
+    en: "Other"

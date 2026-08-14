@@ -96,6 +96,11 @@ Pas de grille ni d'échelle d'espacement custom : la grille et les classes utili
 - **Droite** : mention "Réalisée par Christophe Heubès" (FR) / "Created by Christophe Heubès" (EN), le nom en lien vers `https://christophe.heubes.org`.
 - Fond `--sg-dark-grey`, texte `--sg-white`, bordure haute `--sg-light-grey`, liens en `--sg-gold` au survol.
 
+### Titre de section (accueil)
+
+- Un titre par section de l'accueil (voir "Type de source" dans `data-model.md` et `home.md`), au-dessus de la mosaïque de tuiles du type de source correspondant.
+- `h2`, style repris de l'échelle typographique standard (voir "Typographie" ci-dessus), sans surcharge de couleur ou de graisse propre.
+
 ### Tuiles (mosaïques)
 
 - Carte Bootstrap : image (couverture ou portrait) en lazy loading (voir `home.md`, `universe-home.md`), `title`/`character-name` en titre, `description` tronquée en corps.

@@ -52,7 +52,7 @@ Critère de fin : le script passe sans erreur sur ce contenu ; introduis une err
 
 ## 3. Accueil du site ✅
 
-Mosaïque d'univers, juste le nôtre pour l'instant : tri alphabétique, lazy loading, états vide/erreur. Voir `screens/home.md`.
+Mosaïque d'univers, regroupée par type de source, tri alphabétique au sein de chaque section, lazy loading, états vide/erreur. Voir `screens/home.md` et "Type de source" dans `data-model.md`.
 
 **Critère :** la tuile de l'univers de test s'affiche et mène à sa page.
 

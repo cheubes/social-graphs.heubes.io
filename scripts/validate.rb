@@ -256,6 +256,43 @@ metadata_key_registry.each do |slug, files|
   end
 end
 
+# --- Source types (common only, no per-universe extension) ---------------
+
+common_source_types_path = File.join(DATA_DIR, 'source-types.yml')
+common_source_types_file_rel = relative(common_source_types_path)
+common_source_types = []
+if File.exist?(common_source_types_path)
+  common_source_types = load_yaml(common_source_types_path) || []
+else
+  error(common_source_types_file_rel, 'missing-file', 'common source types file not found')
+end
+
+known_source_types = {}
+source_type_registry = {}
+common_source_types.each do |source_type|
+  slug = source_type['slug']
+  if slug.nil?
+    error(common_source_types_file_rel, 'source-type-slug-missing', 'source type entry has no slug')
+    next
+  end
+
+  unless valid_slug?(slug)
+    error(common_source_types_file_rel, 'slug-format', "source type slug '#{slug}' must contain only lowercase ASCII letters and hyphens")
+  end
+
+  (source_type_registry[slug] ||= []) << common_source_types_file_rel
+  known_source_types[slug] = source_type
+
+  check_localized_field(source_type['label'], 'source type', 'label', slug, common_source_types_file_rel,
+                         'source-type-label-missing', 'source-type-label-incomplete')
+end
+
+source_type_registry.each do |slug, files|
+  if files.size > 1
+    error(files.uniq.join(', '), 'source-type-slug-unique', "source type slug '#{slug}' is declared more than once")
+  end
+end
+
 # --- Per-universe content ------------------------------------------------
 
 universe_slugs.each do |uslug|
@@ -263,6 +300,21 @@ universe_slugs.each do |uslug|
   unless Dir.exist?(universe_dir)
     error("#{uslug}/", 'missing-universe-directory', "no content directory found for universe '#{uslug}' (declared via _data/#{uslug}/)")
     next
+  end
+
+  # universe.yml: the universe's own non-localized attribute (source-type)
+  universe_yml_path = File.join(DATA_DIR, uslug, 'universe.yml')
+  universe_yml_file_rel = "_data/#{uslug}/universe.yml"
+  if File.exist?(universe_yml_path)
+    universe_data = load_yaml(universe_yml_path) || {}
+    source_type = universe_data['source-type']
+    if source_type.nil?
+      error(universe_yml_file_rel, 'source-type-missing', 'universe has no source-type')
+    elsif !known_source_types.key?(source_type)
+      error(universe_yml_file_rel, 'unknown-source-type', "source-type '#{source_type}' is not defined in source-types.yml")
+    end
+  else
+    error(universe_yml_file_rel, 'missing-file', 'universe.yml not found')
   end
 
   # mosaic/graph presence pairing and lang consistency, per language

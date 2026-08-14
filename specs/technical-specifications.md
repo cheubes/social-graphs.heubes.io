@@ -100,9 +100,11 @@ Versions vérifiées comme les dernières stables disponibles sur jsDelivr à la
 │
 ├── _data/
 │   ├── relation-types.yml        # taxonomie commune des types de relation
+│   ├── source-types.yml          # taxonomie commune des types de source
 │   ├── ui.fr.yml                 # textes d'interface en FR (labels, messages, dont le message d'indisponibilité)
 │   ├── ui.en.yml                 # textes d'interface en EN (labels, messages, dont le message d'indisponibilité)
 │   └── <slug-universe>/
+│       ├── universe.yml                    # attribut non localisé de l'univers (source-type)
 │       ├── characters.yml                  # attributs non localisés des personnages
 │       ├── relations.yml
 │       ├── additional-relation-types.yml   # optionnel
@@ -242,6 +244,9 @@ Règles vérifiées, dans l'ordre de "Contraintes et règles de validation" de `
 - *Slug de groupe unique au sein de l'univers* : erreur si un même slug apparaît plus d'une fois dans `_data/<slug-universe>/groups.yml`.
 - *Groupe existant* : erreur si l'attribut `group` d'un personnage, dans `characters.yml`, ne correspond à aucun slug déclaré dans le `groups.yml` de son univers.
 - *`name` complet pour un groupe* : erreur si le `name` d'un groupe ne définit pas de valeur pour une langue déclarée par l'univers.
+- *Slug de type de source unique* : erreur si un même slug apparaît plus d'une fois dans `_data/source-types.yml`.
+- *`source-type` existant* : erreur si le `source-type` d'un univers, dans `_data/<slug-universe>/universe.yml`, ne correspond à aucun slug déclaré dans `_data/source-types.yml`.
+- *`label` complet pour un type de source* : erreur si le `label` d'un type de source ne définit pas de valeur pour une langue déclarée par le site.
 
 ---
 
