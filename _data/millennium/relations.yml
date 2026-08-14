@@ -1,0 +1,666 @@
+relations:
+  - source-character: mikael-blomkvist
+    target-character: lisbeth-salander
+    type: lover-of
+    description:
+      fr: "Mikael Blomkvist et Lisbeth Salander ont une brève liaison amoureuse après leur rencontre lors de l'enquête sur la disparition de Harriet Vanger."
+      en: "Mikael Blomkvist and Lisbeth Salander have a brief affair after they meet during the investigation into Harriet Vanger's disappearance."
+
+  - source-character: mikael-blomkvist
+    target-character: lisbeth-salander
+    type: ally-of
+    description:
+      fr: "Mikael Blomkvist et Lisbeth Salander forment un duo d'enquêteurs récurrent, unissant leurs compétences respectives à travers la trilogie."
+      en: "Mikael Blomkvist and Lisbeth Salander form a recurring investigative duo, combining their respective skills throughout the trilogy."
+
+  - source-character: mikael-blomkvist
+    target-character: erika-berger
+    type: lover-of
+    description:
+      fr: "Mikael Blomkvist et Erika Berger entretiennent une liaison de longue date, en parallèle de leur association à la tête de Millénium."
+      en: "Mikael Blomkvist and Erika Berger have carried on a long-standing affair alongside their partnership running Millénium."
+
+  - source-character: mikael-blomkvist
+    target-character: christer-malm
+    type: friend-of
+    description:
+      fr: "Mikael Blomkvist et Christer Malm sont des amis proches depuis les débuts de Millénium."
+      en: "Mikael Blomkvist and Christer Malm have been close friends since Millénium's earliest days."
+
+  - source-character: erika-berger
+    target-character: malin-eriksson
+    type: employer-of
+    description:
+      fr: "Erika Berger emploie Malin Eriksson comme secrétaire de rédaction à Millénium."
+      en: "Erika Berger employs Malin Eriksson as managing editor at Millénium."
+
+  - source-character: erika-berger
+    target-character: henry-cortez
+    type: employer-of
+    description:
+      fr: "Erika Berger emploie Henry Cortez comme journaliste à Millénium."
+      en: "Erika Berger employs Henry Cortez as a journalist at Millénium."
+
+  - source-character: malin-eriksson
+    target-character: henry-cortez
+    type: ally-of
+    description:
+      fr: "Malin Eriksson et Henry Cortez travaillent en étroite collaboration au sein de la rédaction de Millénium."
+      en: "Malin Eriksson and Henry Cortez work in close collaboration within the Millénium newsroom."
+
+  - source-character: mikael-blomkvist
+    target-character: malin-eriksson
+    type: ally-of
+    description:
+      fr: "Mikael Blomkvist s'appuie sur Malin Eriksson pour la bonne marche du magazine pendant ses absences."
+      en: "Mikael Blomkvist relies on Malin Eriksson to keep the magazine running during his absences."
+
+  - source-character: mikael-blomkvist
+    target-character: henry-cortez
+    type: ally-of
+    description:
+      fr: "Mikael Blomkvist encadre Henry Cortez et le fait progressivement participer aux enquêtes du magazine."
+      en: "Mikael Blomkvist mentors Henry Cortez, gradually bringing him into the magazine's investigations."
+
+  - source-character: mikael-blomkvist
+    target-character: dragan-armanskij
+    type: ally-of
+    description:
+      fr: "Mikael Blomkvist et Dragan Armanskij collaborent à plusieurs reprises pour soutenir et protéger Lisbeth Salander."
+      en: "Mikael Blomkvist and Dragan Armanskij repeatedly work together to support and protect Lisbeth Salander."
+
+  - source-character: dragan-armanskij
+    target-character: lisbeth-salander
+    type: employer-of
+    description:
+      fr: "Dragan Armanskij emploie Lisbeth Salander comme enquêtrice à Milton Security."
+      en: "Dragan Armanskij employs Lisbeth Salander as an investigator at Milton Security."
+
+  - source-character: holger-palmgren
+    target-character: lisbeth-salander
+    type: guardian-of
+    description:
+      fr: "Holger Palmgren a été le tuteur légal de Lisbeth Salander jusqu'à ce que la maladie l'écarte de cette fonction."
+      en: "Holger Palmgren was Lisbeth Salander's legal guardian until illness forced him to step down."
+
+  - source-character: holger-palmgren
+    target-character: mikael-blomkvist
+    type: ally-of
+    description:
+      fr: "Holger Palmgren apporte son témoignage et son soutien à Mikael Blomkvist dans le combat pour réhabiliter Lisbeth Salander."
+      en: "Holger Palmgren lends his testimony and support to Mikael Blomkvist in the fight to clear Lisbeth Salander's name."
+
+  - source-character: nils-bjurman
+    target-character: lisbeth-salander
+    type: guardian-of
+    description:
+      fr: "Nils Bjurman est désigné tuteur légal de Lisbeth Salander après le retrait de Holger Palmgren, une position dont il abuse gravement."
+      en: "Nils Bjurman is appointed Lisbeth Salander's legal guardian after Holger Palmgren steps down, a position he gravely abuses."
+
+  - source-character: alexander-zalachenko
+    target-character: lisbeth-salander
+    type: parent-of
+    description:
+      fr: "Alexander Zalachenko est le père de Lisbeth Salander, un lien que la Section s'est employée à dissimuler pendant des années."
+      en: "Alexander Zalachenko is Lisbeth Salander's father, a link the Section worked for years to keep hidden."
+
+  - source-character: alexander-zalachenko
+    target-character: camilla-salander
+    type: parent-of
+    description:
+      fr: "Alexander Zalachenko est le père de Camilla Salander."
+      en: "Alexander Zalachenko is Camilla Salander's father."
+
+  - source-character: agneta-salander
+    target-character: lisbeth-salander
+    type: parent-of
+    description:
+      fr: "Agneta Salander est la mère de Lisbeth Salander."
+      en: "Agneta Salander is Lisbeth Salander's mother."
+
+  - source-character: agneta-salander
+    target-character: camilla-salander
+    type: parent-of
+    description:
+      fr: "Agneta Salander est la mère de Camilla Salander."
+      en: "Agneta Salander is Camilla Salander's mother."
+
+  - source-character: alexander-zalachenko
+    target-character: agneta-salander
+    type: lover-of
+    description:
+      fr: "Alexander Zalachenko et Agneta Salander ont vécu ensemble en Suède, une relation marquée par les violences répétées qu'il lui inflige."
+      en: "Alexander Zalachenko and Agneta Salander lived together in Sweden, a relationship marked by the repeated violence he inflicts on her."
+
+  - source-character: alexander-zalachenko
+    target-character: ronald-niedermann
+    type: parent-of
+    description:
+      fr: "Alexander Zalachenko est le père de Ronald Niedermann, né d'une précédente liaison, qu'il emploie comme homme de main."
+      en: "Alexander Zalachenko is Ronald Niedermann's father, born of an earlier liaison, whom he employs as his enforcer."
+
+  - source-character: lisbeth-salander
+    target-character: camilla-salander
+    type: rival-of
+    description:
+      fr: "Sœurs jumelles, Lisbeth et Camilla Salander se sont profondément éloignées l'une de l'autre après avoir pris des partis opposés à l'égard de leur père."
+      en: "Twin sisters, Lisbeth and Camilla Salander have grown deeply estranged after taking opposite sides regarding their father."
+
+  - source-character: peter-teleborian
+    target-character: lisbeth-salander
+    type: rival-of
+    description:
+      fr: "Peter Teleborian a fait interner de force Lisbeth Salander enfant sur la base d'un diagnostic fabriqué, et reste l'un des artisans de la conspiration visant à la faire à nouveau déclarer folle."
+      en: "Peter Teleborian had Lisbeth Salander forcibly institutionalised as a child on the basis of a fabricated diagnosis, and remains one of the architects of the conspiracy to have her declared insane once again."
+
+  - source-character: gunnar-bjorck
+    target-character: alexander-zalachenko
+    type: handler-of
+    description:
+      fr: "Gunnar Björck est, dans les années 1990, l'officier traitant de Zalachenko au sein de la Säpo, et rédige le rapport qui couvre son internement abusif de Lisbeth Salander."
+      en: "In the 1990s, Gunnar Björck acts as Zalachenko's handler within the Säpo, and writes the report that covers up his unlawful institutionalisation of Lisbeth Salander."
+
+  - source-character: gunnar-bjorck
+    target-character: peter-teleborian
+    type: ally-of
+    description:
+      fr: "Gunnar Björck et Peter Teleborian s'entendent en 1991 pour faire interner Lisbeth Salander et étouffer ce qu'elle sait sur son père."
+      en: "Gunnar Björck and Peter Teleborian conspire in 1991 to have Lisbeth Salander institutionalised and suppress what she knows about her father."
+
+  - source-character: henrik-vanger
+    target-character: mikael-blomkvist
+    type: employer-of
+    description:
+      fr: "Henrik Vanger engage Mikael Blomkvist pour reprendre l'enquête sur la disparition de Harriet, une collaboration qui se mue peu à peu en amitié véritable."
+      en: "Henrik Vanger hires Mikael Blomkvist to take up the investigation into Harriet's disappearance, a working relationship that gradually grows into genuine friendship."
+
+  - source-character: henrik-vanger
+    target-character: harriet-vanger
+    type: ally-of
+    description:
+      fr: "Henrik Vanger voue une affection sans limite à sa petite-nièce Harriet, dont il consacre sa vie à retrouver la trace après sa disparition."
+      en: "Henrik Vanger holds boundless affection for his great-niece Harriet, devoting his life to finding out what became of her after her disappearance."
+
+  - source-character: gottfried-vanger
+    target-character: martin-vanger
+    type: parent-of
+    description:
+      fr: "Gottfried Vanger est le père de Martin Vanger, à qui il transmet en secret ses pulsions meurtrières."
+      en: "Gottfried Vanger is Martin Vanger's father, to whom he secretly passes on his murderous impulses."
+
+  - source-character: gottfried-vanger
+    target-character: harriet-vanger
+    type: parent-of
+    description:
+      fr: "Gottfried Vanger est le père de Harriet Vanger."
+      en: "Gottfried Vanger is Harriet Vanger's father."
+
+  - source-character: isabella-vanger
+    target-character: martin-vanger
+    type: parent-of
+    description:
+      fr: "Isabella Vanger est la mère de Martin Vanger."
+      en: "Isabella Vanger is Martin Vanger's mother."
+
+  - source-character: isabella-vanger
+    target-character: harriet-vanger
+    type: parent-of
+    description:
+      fr: "Isabella Vanger est la mère de Harriet Vanger, avec qui elle entretenait une relation froide et distante."
+      en: "Isabella Vanger is Harriet Vanger's mother, with whom she had a cold and distant relationship."
+
+  - source-character: martin-vanger
+    target-character: mikael-blomkvist
+    type: rival-of
+    description:
+      fr: "Martin Vanger affronte Mikael Blomkvist lorsque celui-ci découvre les meurtres qu'il perpétue en secret."
+      en: "Martin Vanger confronts Mikael Blomkvist once he uncovers the murders Martin has been secretly committing."
+
+  - source-character: cecilia-vanger
+    target-character: mikael-blomkvist
+    type: lover-of
+    description:
+      fr: "Cecilia Vanger et Mikael Blomkvist ont une liaison pendant le séjour de celui-ci sur l'île des Vanger."
+      en: "Cecilia Vanger and Mikael Blomkvist have an affair during his stay on the Vanger island."
+
+  - source-character: cecilia-vanger
+    target-character: anita-vanger
+    type: ally-of
+    description:
+      fr: "Cecilia et Anita Vanger, sœurs, ont ensemble aidé Harriet à disparaître le soir de sa fuite."
+      en: "Sisters Cecilia and Anita Vanger together helped Harriet disappear on the night of her flight."
+
+  - source-character: anita-vanger
+    target-character: harriet-vanger
+    type: ally-of
+    description:
+      fr: "Anita Vanger a aidé sa cousine Harriet à quitter l'île sans laisser de trace, un secret gardé pendant près de quarante ans."
+      en: "Anita Vanger helped her cousin Harriet leave the island without a trace, a secret kept for nearly forty years."
+
+  - source-character: dirch-frode
+    target-character: henrik-vanger
+    type: ally-of
+    description:
+      fr: "Dirch Frode est l'avocat et l'homme de confiance de Henrik Vanger depuis des décennies."
+      en: "Dirch Frode has been Henrik Vanger's lawyer and trusted confidant for decades."
+
+  - source-character: dirch-frode
+    target-character: mikael-blomkvist
+    type: ally-of
+    description:
+      fr: "Dirch Frode sert d'intermédiaire entre Henrik Vanger et Mikael Blomkvist pour organiser l'enquête sur la disparition de Harriet."
+      en: "Dirch Frode acts as the go-between for Henrik Vanger and Mikael Blomkvist in setting up the investigation into Harriet's disappearance."
+
+  - source-character: hans-erik-wennerstrom
+    target-character: mikael-blomkvist
+    type: rival-of
+    description:
+      fr: "Mikael Blomkvist dénonce les malversations financières de Hans-Erik Wennerström, ce qui lui vaut une condamnation pour diffamation avant que ce dernier ne soit à son tour discrédité."
+      en: "Mikael Blomkvist exposes Hans-Erik Wennerström's financial wrongdoing, which earns him a libel conviction before Wennerström is in turn discredited."
+
+  - source-character: jan-bublanski
+    target-character: sonja-modig
+    type: ally-of
+    description:
+      fr: "Sonja Modig fait partie de l'équipe d'enquêteurs dirigée par Jan Bublanski."
+      en: "Sonja Modig is part of the team of investigators led by Jan Bublanski."
+
+  - source-character: jan-bublanski
+    target-character: jerker-holmberg
+    type: ally-of
+    description:
+      fr: "Jerker Holmberg fait partie de l'équipe d'enquêteurs dirigée par Jan Bublanski."
+      en: "Jerker Holmberg is part of the team of investigators led by Jan Bublanski."
+
+  - source-character: jan-bublanski
+    target-character: curt-bolinder
+    type: ally-of
+    description:
+      fr: "Curt Bolinder fait partie de l'équipe d'enquêteurs dirigée par Jan Bublanski."
+      en: "Curt Bolinder is part of the team of investigators led by Jan Bublanski."
+
+  - source-character: jan-bublanski
+    target-character: hans-faste
+    type: rival-of
+    description:
+      fr: "Hans Faste, également sous les ordres de Jan Bublanski, entre régulièrement en conflit avec lui sur la manière de mener l'enquête."
+      en: "Hans Faste, also under Jan Bublanski's command, regularly clashes with him over how the investigation should be run."
+
+  - source-character: jan-bublanski
+    target-character: richard-ekstrom
+    type: rival-of
+    description:
+      fr: "Jan Bublanski et le procureur Richard Ekström s'opposent régulièrement sur la conduite de l'enquête, ce dernier privilégiant la communication à la presse."
+      en: "Jan Bublanski repeatedly clashes with prosecutor Richard Ekström over the conduct of the investigation, as Ekström favours feeding the press over careful police work."
+
+  - source-character: richard-ekstrom
+    target-character: mikael-blomkvist
+    type: rival-of
+    description:
+      fr: "Le procureur Richard Ekström voit en Mikael Blomkvist un adversaire gênant, dont les révélations viennent régulièrement contrarier ses versions officielles."
+      en: "Prosecutor Richard Ekström regards Mikael Blomkvist as an inconvenient adversary, whose revelations repeatedly undercut his official version of events."
+
+  - source-character: mikael-blomkvist
+    target-character: annika-giannini
+    type: ally-of
+    description:
+      fr: "Mikael Blomkvist et Annika Giannini, frère et sœur, unissent leurs efforts pour défendre Lisbeth Salander, l'un par ses articles, l'autre devant le tribunal."
+      en: "Brother and sister Mikael Blomkvist and Annika Giannini join forces to defend Lisbeth Salander, he through his reporting, she in the courtroom."
+
+  - source-character: annika-giannini
+    target-character: lisbeth-salander
+    type: ally-of
+    description:
+      fr: "Annika Giannini assure la défense de Lisbeth Salander lors de son procès."
+      en: "Annika Giannini serves as Lisbeth Salander's defence lawyer at her trial."
+
+  - source-character: annika-giannini
+    target-character: richard-ekstrom
+    type: rival-of
+    description:
+      fr: "Annika Giannini affronte le procureur Richard Ekström au procès de Lisbeth Salander."
+      en: "Annika Giannini faces off against prosecutor Richard Ekström at Lisbeth Salander's trial."
+
+  - source-character: lisbeth-salander
+    target-character: richard-ekstrom
+    type: rival-of
+    description:
+      fr: "Richard Ekström mène les poursuites contre Lisbeth Salander, sans savoir qu'il est instrumentalisé par la Section pour orienter le procès."
+      en: "Richard Ekström leads the prosecution against Lisbeth Salander, unaware that the Section is using him to steer the trial."
+
+  - source-character: fredrik-clinton
+    target-character: birger-wadensjoo
+    type: rival-of
+    description:
+      fr: "Fredrik Clinton et Birger Wadensjöö, tous deux dirigeants de la Section, s'opposent sur la stratégie à adopter face à la crise ouverte par le retour de Zalachenko."
+      en: "Fredrik Clinton and Birger Wadensjöö, both leaders within the Section, clash over what strategy to adopt in the crisis triggered by Zalachenko's return."
+
+  - source-character: fredrik-clinton
+    target-character: jonas-sandberg
+    type: employer-of
+    description:
+      fr: "Fredrik Clinton dirige les opérations de Jonas Sandberg au sein de la Section."
+      en: "Fredrik Clinton directs Jonas Sandberg's operations within the Section."
+
+  - source-character: fredrik-clinton
+    target-character: evert-gullberg
+    type: ally-of
+    description:
+      fr: "Fredrik Clinton et Evert Gullberg, artisans historiques de la Section, œuvrent ensemble depuis des décennies à la protection de ses secrets."
+      en: "Fredrik Clinton and Evert Gullberg, longtime architects of the Section, have worked together for decades to protect its secrets."
+
+  - source-character: evert-gullberg
+    target-character: alexander-zalachenko
+    type: handler-of
+    description:
+      fr: "Evert Gullberg est, depuis la défection de Zalachenko dans les années 1970, l'artisan historique de sa protection par la Section."
+      en: "Ever since Zalachenko's defection in the 1970s, Evert Gullberg has been the historical architect of his protection by the Section."
+
+  - source-character: torsten-edklinth
+    target-character: monica-figuerola
+    type: employer-of
+    description:
+      fr: "Torsten Edklinth confie à Monica Figuerola l'enquête interne sur la Section."
+      en: "Torsten Edklinth entrusts Monica Figuerola with the internal investigation into the Section."
+
+  - source-character: torsten-edklinth
+    target-character: mikael-blomkvist
+    type: ally-of
+    description:
+      fr: "Torsten Edklinth s'appuie sur les informations apportées par Mikael Blomkvist pour mener l'enquête interne contre la Section."
+      en: "Torsten Edklinth relies on information brought to him by Mikael Blomkvist to lead the internal investigation against the Section."
+
+  - source-character: monica-figuerola
+    target-character: mikael-blomkvist
+    type: lover-of
+    description:
+      fr: "Monica Figuerola se rapproche de Mikael Blomkvist au fil de leur collaboration contre la Section."
+      en: "Monica Figuerola grows close to Mikael Blomkvist over the course of their collaboration against the Section."
+
+  - source-character: torsten-edklinth
+    target-character: fredrik-clinton
+    type: rival-of
+    description:
+      fr: "Torsten Edklinth dirige l'enquête qui aboutit au démantèlement de la Section dirigée par Fredrik Clinton."
+      en: "Torsten Edklinth leads the investigation that results in the dismantling of the Section led by Fredrik Clinton."
+
+  - source-character: peter-teleborian
+    target-character: fredrik-clinton
+    type: ally-of
+    description:
+      fr: "Peter Teleborian agit comme l'un des instruments de la Section, sur instruction de Fredrik Clinton, pour discréditer Lisbeth Salander."
+      en: "Peter Teleborian acts as one of the Section's instruments, on Fredrik Clinton's instructions, to discredit Lisbeth Salander."
+
+  - source-character: dag-svensson
+    target-character: mia-bergman
+    type: lover-of
+    description:
+      fr: "Dag Svensson et Mia Bergman forment un couple, tous deux investis dans l'enquête sur le réseau de traite que Dag prépare de publier dans Millénium."
+      en: "Dag Svensson and Mia Bergman are a couple, both invested in the investigation into the trafficking ring that Dag is preparing to publish in Millénium."
+
+  - source-character: dag-svensson
+    target-character: mikael-blomkvist
+    type: ally-of
+    description:
+      fr: "Dag Svensson collabore avec Mikael Blomkvist et Millénium pour publier son enquête sur le réseau de traite."
+      en: "Dag Svensson works with Mikael Blomkvist and Millénium to publish his investigation into the trafficking ring."
+
+  - source-character: lisbeth-salander
+    target-character: miriam-wu
+    type: lover-of
+    description:
+      fr: "Lisbeth Salander et Miriam Wu, à qui elle sous-loue son appartement, sont amantes occasionnelles."
+      en: "Lisbeth Salander and Miriam Wu, to whom she sublets her apartment, are occasional lovers."
+
+  - source-character: lisbeth-salander
+    target-character: paolo-roberto
+    type: friend-of
+    description:
+      fr: "Paolo Roberto a appris la boxe à Lisbeth Salander, et les deux sont restés amis depuis."
+      en: "Paolo Roberto taught Lisbeth Salander to box, and the two have remained friends ever since."
+
+  - source-character: paolo-roberto
+    target-character: ronald-niedermann
+    type: rival-of
+    description:
+      fr: "Paolo Roberto affronte Ronald Niedermann dans un combat resté mémorable pour porter secours à Lisbeth Salander et Miriam Wu."
+      en: "Paolo Roberto faces off against Ronald Niedermann in a memorably brutal fight to rescue Lisbeth Salander and Miriam Wu."
+
+  - source-character: lisbeth-salander
+    target-character: plague
+    type: friend-of
+    description:
+      fr: "Plague, ami de longue date de Lisbeth Salander au sein de la République des hackeurs, l'assiste régulièrement sur le plan technique."
+      en: "Plague, a longtime friend of Lisbeth Salander within the Hacker Republic, regularly assists her on the technical side."
+
+  - source-character: plague
+    target-character: trinity
+    type: ally-of
+    description:
+      fr: "Plague et Trinity appartiennent tous deux à la République des hackeurs et collaborent à l'occasion."
+      en: "Plague and Trinity both belong to the Hacker Republic and occasionally work together."
+
+  - source-character: lisbeth-salander
+    target-character: trinity
+    type: ally-of
+    description:
+      fr: "Trinity prête main-forte à Lisbeth Salander pour des opérations de surveillance contre la Section."
+      en: "Trinity lends her skills to Lisbeth Salander for surveillance operations against the Section."
+
+  - source-character: mikael-blomkvist
+    target-character: plague
+    type: ally-of
+    description:
+      fr: "Plague assiste Mikael Blomkvist sur le plan technique dans sa collaboration avec Lisbeth Salander contre la Section."
+      en: "Plague provides Mikael Blomkvist with technical support in his collaboration with Lisbeth Salander against the Section."
+
+  - source-character: nils-bjurman
+    target-character: alexander-zalachenko
+    type: ally-of
+    description:
+      fr: "Acculé par le chantage exercé sur lui par Lisbeth Salander, Nils Bjurman cherche l'appui du réseau de Zalachenko pour se débarrasser d'elle, avant d'être éliminé par Ronald Niedermann pour effacer les traces de cette alliance."
+      en: "Cornered by Lisbeth Salander's hold over him, Nils Bjurman seeks help from Zalachenko's network to get rid of her, before being eliminated by Ronald Niedermann to erase the traces of this alliance."
+
+  - source-character: erika-berger
+    target-character: christer-malm
+    type: friend-of
+    description:
+      fr: "Erika Berger et Christer Malm sont des amis proches depuis les débuts de Millénium."
+      en: "Erika Berger and Christer Malm have been close friends since Millénium's earliest days."
+
+  - source-character: ronald-niedermann
+    target-character: nils-bjurman
+    type: rival-of
+    description:
+      fr: "Ronald Niedermann tue Nils Bjurman sur ordre de Zalachenko, pour effacer les traces de son alliance avec lui contre Lisbeth Salander."
+      en: "Ronald Niedermann kills Nils Bjurman on Zalachenko's orders, to erase the traces of his alliance with him against Lisbeth Salander."
+
+  - source-character: ronald-niedermann
+    target-character: dag-svensson
+    type: rival-of
+    description:
+      fr: "Ronald Niedermann assassine Dag Svensson, dont l'enquête menace de mettre au jour les activités du réseau de Zalachenko."
+      en: "Ronald Niedermann murders Dag Svensson, whose investigation threatens to expose the activities of Zalachenko's network."
+
+  - source-character: ronald-niedermann
+    target-character: mia-bergman
+    type: rival-of
+    description:
+      fr: "Ronald Niedermann assassine Mia Bergman en même temps que Dag Svensson."
+      en: "Ronald Niedermann murders Mia Bergman alongside Dag Svensson."
+
+  - source-character: ronald-niedermann
+    target-character: miriam-wu
+    type: rival-of
+    description:
+      fr: "Ronald Niedermann s'en prend à Miriam Wu, qu'il croit détentrice d'informations sur Lisbeth Salander ; elle survit de justesse à son agression."
+      en: "Ronald Niedermann attacks Miriam Wu, believing she holds information about Lisbeth Salander; she narrowly survives the assault."
+
+  - source-character: hans-faste
+    target-character: lisbeth-salander
+    type: rival-of
+    description:
+      fr: "Hans Faste se montre convaincu, sans nuance, de la culpabilité de Lisbeth Salander tout au long de l'enquête."
+      en: "Hans Faste remains convinced, without nuance, of Lisbeth Salander's guilt throughout the investigation."
+
+  - source-character: martin-vanger
+    target-character: harriet-vanger
+    type: rival-of
+    description:
+      fr: "Harriet Vanger vit dans la peur de son cousin Martin, dont elle redoute qu'il ait hérité des pulsions meurtrières de leur père, une crainte qui pousse en partie sa fuite."
+      en: "Harriet Vanger lives in fear of her cousin Martin, dreading that he has inherited their father's murderous impulses, a fear that partly drives her flight."
+
+  - source-character: paolo-roberto
+    target-character: miriam-wu
+    type: ally-of
+    description:
+      fr: "Paolo Roberto intervient pour porter secours à Miriam Wu, agressée par Ronald Niedermann."
+      en: "Paolo Roberto steps in to rescue Miriam Wu from Ronald Niedermann's attack."
+
+  - source-character: mikael-blomkvist
+    target-character: pernilla-abrahamsson
+    type: parent-of
+    description:
+      fr: "Mikael Blomkvist est le père de Pernilla Abrahamsson."
+      en: "Mikael Blomkvist is Pernilla Abrahamsson's father."
+
+  - source-character: monica-abrahamsson
+    target-character: pernilla-abrahamsson
+    type: parent-of
+    description:
+      fr: "Monica Abrahamsson est la mère de Pernilla Abrahamsson."
+      en: "Monica Abrahamsson is Pernilla Abrahamsson's mother."
+
+  - source-character: mikael-blomkvist
+    target-character: monica-abrahamsson
+    type: lover-of
+    description:
+      fr: "Mikael Blomkvist et Monica Abrahamsson ont eu une relation dont est née leur fille Pernilla, sans lien romantique depuis."
+      en: "Mikael Blomkvist and Monica Abrahamsson had a relationship that produced their daughter Pernilla, with no romantic tie since."
+
+  - source-character: erika-berger
+    target-character: greger-beckman
+    type: married-to
+    description:
+      fr: "Erika Berger est mariée à Greger Beckman, dans un couple ouvert qui accommode sa liaison durable avec Mikael Blomkvist."
+      en: "Erika Berger is married to Greger Beckman, in an open marriage that accommodates her long-standing affair with Mikael Blomkvist."
+
+  - source-character: harald-vanger
+    target-character: henrik-vanger
+    type: rival-of
+    description:
+      fr: "Harald et Henrik Vanger, frères, sont brouillés depuis des décennies."
+      en: "Harald and Henrik Vanger, brothers, have been estranged for decades."
+
+  - source-character: harald-vanger
+    target-character: mikael-blomkvist
+    type: rival-of
+    description:
+      fr: "Harald Vanger accueille avec une franche hostilité les tentatives de Mikael Blomkvist pour l'interroger sur la disparition de Harriet."
+      en: "Harald Vanger reacts with open hostility to Mikael Blomkvist's attempts to question him about Harriet's disappearance."
+
+  - source-character: birger-vanger
+    target-character: cecilia-vanger
+    type: ally-of
+    description:
+      fr: "Birger Vanger est le frère de Cecilia et Anita Vanger."
+      en: "Birger Vanger is the brother of Cecilia and Anita Vanger."
+
+  - source-character: henrik-vanger
+    target-character: anna-nilsson
+    type: employer-of
+    description:
+      fr: "Henrik Vanger emploie Anna Nilsson comme gouvernante sur l'île."
+      en: "Henrik Vanger employs Anna Nilsson as his housekeeper on the island."
+
+  - source-character: harriet-vanger
+    target-character: spencer-cochran
+    type: married-to
+    description:
+      fr: "Harriet Vanger a épousé Spencer Cochran en Australie, sous sa nouvelle identité."
+      en: "Harriet Vanger married Spencer Cochran in Australia, under her new identity."
+
+  - source-character: harriet-vanger
+    target-character: jeff-cochran
+    type: parent-of
+    description:
+      fr: "Harriet Vanger est la mère de Jeff Cochran."
+      en: "Harriet Vanger is Jeff Cochran's mother."
+
+  - source-character: spencer-cochran
+    target-character: jeff-cochran
+    type: parent-of
+    description:
+      fr: "Spencer Cochran est le père de Jeff Cochran."
+      en: "Spencer Cochran is Jeff Cochran's father."
+
+  - source-character: lisbeth-salander
+    target-character: george-bland
+    type: lover-of
+    description:
+      fr: "Lisbeth Salander a une brève liaison avec George Bland pendant son séjour à la Grenade."
+      en: "Lisbeth Salander has a brief affair with George Bland during her stay in Grenada."
+
+  - source-character: carl-magnus-lundin
+    target-character: ronald-niedermann
+    type: ally-of
+    description:
+      fr: "Carl-Magnus Lundin met les ressources du Svavelsjö MC au service des activités criminelles de Ronald Niedermann."
+      en: "Carl-Magnus Lundin puts the Svavelsjö MC's resources at the service of Ronald Niedermann's criminal activities."
+
+  - source-character: carl-magnus-lundin
+    target-character: sonny-nieminen
+    type: ally-of
+    description:
+      fr: "Carl-Magnus Lundin et Sonny Nieminen appartiennent tous deux au gang de motards Svavelsjö MC."
+      en: "Carl-Magnus Lundin and Sonny Nieminen both belong to the Svavelsjö MC biker gang."
+
+  - source-character: marcus-erlander
+    target-character: jan-bublanski
+    type: ally-of
+    description:
+      fr: "Marcus Erlander coordonne avec Jan Bublanski la traque de Ronald Niedermann entre les polices de Göteborg et de Stockholm."
+      en: "Marcus Erlander coordinates with Jan Bublanski on the hunt for Ronald Niedermann between the Gothenburg and Stockholm police."
+
+  - source-character: marcus-erlander
+    target-character: ronald-niedermann
+    type: rival-of
+    description:
+      fr: "Marcus Erlander dirige la traque de Ronald Niedermann après la fusillade de Gosseberga."
+      en: "Marcus Erlander leads the manhunt for Ronald Niedermann after the shooting at Gosseberga."
+
+  - source-character: anders-jonasson
+    target-character: lisbeth-salander
+    type: ally-of
+    description:
+      fr: "Anders Jonasson soigne Lisbeth Salander après la fusillade de Gosseberga et veille discrètement sur elle à l'hôpital."
+      en: "Anders Jonasson treats Lisbeth Salander after the shooting at Gosseberga and quietly looks out for her at the hospital."
+
+  - source-character: anders-jonasson
+    target-character: mikael-blomkvist
+    type: ally-of
+    description:
+      fr: "Anders Jonasson tient Mikael Blomkvist informé de l'état de Lisbeth Salander pendant son hospitalisation."
+      en: "Anders Jonasson keeps Mikael Blomkvist informed of Lisbeth Salander's condition during her hospitalisation."
+
+  - source-character: dragan-armanskij
+    target-character: susanne-linder
+    type: employer-of
+    description:
+      fr: "Dragan Armanskij emploie Susanne Linder comme agente de Milton Security."
+      en: "Dragan Armanskij employs Susanne Linder as a Milton Security operative."
+
+  - source-character: susanne-linder
+    target-character: erika-berger
+    type: ally-of
+    description:
+      fr: "Susanne Linder est chargée de protéger Erika Berger lorsque celle-ci est prise pour cible par un harceleur."
+      en: "Susanne Linder is assigned to protect Erika Berger when she becomes the target of a stalker."
+
+  - source-character: nils-bjurman
+    target-character: gunnar-bjorck
+    type: ally-of
+    description:
+      fr: "Nils Bjurman et Gunnar Björck étaient tous deux présents lors de la défection de Zalachenko, et Bjurman a par la suite travaillé occasionnellement pour la Section."
+      en: "Nils Bjurman and Gunnar Björck were both present at Zalachenko's defection, and Bjurman later did occasional work for the Section."
+

@@ -54,15 +54,3 @@
       masculine: "Protégé of"
       feminine: "Protégé of"
   directed: true
-
-- slug: lover-of
-  label:
-    fr:
-      masculine: "Amant de"
-      feminine: "Amante de"
-      neutral: "Amant•e de"
-    en:
-      masculine: "Lover of"
-      feminine: "Lover of"
-      neutral: "Lover of"
-  directed: false

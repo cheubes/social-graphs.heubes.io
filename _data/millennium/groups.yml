@@ -1,0 +1,41 @@
+- slug: millennium-editorial-team
+  name:
+    fr: "Rédaction de Millénium"
+    en: "Millennium editorial team"
+  color: "#a3231f"
+
+- slug: vanger-clan
+  name:
+    fr: "Clan Vanger"
+    en: "Vanger clan"
+  color: "#2d4a3a"
+
+- slug: law-enforcement
+  name:
+    fr: "Forces de l'ordre"
+    en: "Law Enforcement"
+  color: "#33475b"
+
+- slug: the-section
+  name:
+    fr: "Section et affiliés"
+    en: "Section and Affiliates"
+  color: "#1e1a24"
+
+- slug: zalachenko-network
+  name:
+    fr: "Réseau Zalachenko"
+    en: "Zalachenko network"
+  color: "#8a4a1f"
+
+- slug: hacker-republic
+  name:
+    fr: "République des hackeurs"
+    en: "Hacker Republic"
+  color: "#1f6b6b"
+
+- slug: unaffiliated
+  name:
+    fr: "Non affiliés"
+    en: "Unaffiliated"
+  color: "#6e6e6e"

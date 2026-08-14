@@ -1,0 +1,56 @@
+- slug: guardian-of
+  label:
+    fr:
+      masculine: "Tuteur légal de"
+      feminine: "Tutrice légale de"
+      neutral: "Tuteur•rice légal•e de"
+    en:
+      masculine: "Legal guardian of"
+      feminine: "Legal guardian of"
+      neutral: "Legal guardian of"
+  reverse-label:
+    fr:
+      masculine: "Pupille de"
+      feminine: "Pupille de"
+    en:
+      masculine: "Ward of"
+      feminine: "Ward of"
+  directed: true
+
+- slug: handler-of
+  label:
+    fr:
+      masculine: "Officier traitant de"
+      feminine: "Officière traitante de"
+      neutral: "Officier•ère traitant•e de"
+    en:
+      masculine: "Handler of"
+      feminine: "Handler of"
+      neutral: "Handler of"
+  reverse-label:
+    fr:
+      masculine: "Informateur de"
+      feminine: "Informatrice de"
+    en:
+      masculine: "Informant of"
+      feminine: "Informant of"
+  directed: true
+
+- slug: employer-of
+  label:
+    fr:
+      masculine: "Employeur de"
+      feminine: "Employeuse de"
+      neutral: "Employeur•euse de"
+    en:
+      masculine: "Employer of"
+      feminine: "Employer of"
+      neutral: "Employer of"
+  reverse-label:
+    fr:
+      masculine: "Employé de"
+      feminine: "Employée de"
+    en:
+      masculine: "Employee of"
+      feminine: "Employee of"
+  directed: true
