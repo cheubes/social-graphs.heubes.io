@@ -139,6 +139,31 @@ def check_localized_field(value, entity_label, field_name, slug, file, missing_r
   end
 end
 
+# Shared by the two character metadata-locality checks below (characters.yml entries expect
+# localized: false, front matter entries expect localized: true): same rule, checked from
+# both directions against the same taxonomy. `subject`, when given, prefixes messages with
+# the character they're about (needed for characters.yml, a single file shared by every
+# character; front matter files don't need it, their own filename already says which one).
+def check_metadata_locality(metadata, known_metadata_keys, file, expected_localized, subject: nil)
+  prefix = subject ? "#{subject} " : ''
+  (metadata || {}).each_key do |key|
+    taxonomy_key = known_metadata_keys[key]
+    unless taxonomy_key
+      error(file, 'unknown-metadata-key',
+            "#{prefix}metadata key '#{key}' is not defined in metadata-keys.yml or additional-metadata-keys.yml")
+      next
+    end
+
+    actual_localized = !!taxonomy_key['localized']
+    next if actual_localized == expected_localized
+
+    current_location = expected_localized ? 'the front matter' : 'characters.yml'
+    correct_location = expected_localized ? 'characters.yml' : 'the front matter'
+    error(file, 'metadata-key-locality-mismatch',
+          "#{prefix}metadata key '#{key}' is declared localized: #{actual_localized} and must be in #{correct_location}, not #{current_location}")
+  end
+end
+
 def record_metadata_key(registry, key, file)
   register_type(registry, key, file)
   check_metadata_key(key, file)
@@ -280,52 +305,68 @@ universe_slugs.each do |uslug|
     char_data[cslug][lang] = fm
   end
 
-  # gender: must be masculine/feminine when present, and identical across languages
-  char_data.each do |cslug, langs|
-    langs.each do |lang, fm|
-      next unless fm.key?('gender')
-
-      gender = fm['gender']
-      next if VALID_GENDERS.include?(gender)
-
-      error("#{uslug}/characters/#{cslug}.#{lang}.md", 'invalid-gender',
-            "gender #{gender.inspect} must be 'masculine' or 'feminine'")
-    end
-
-    next unless langs['fr'] && langs['en']
-
-    gender_fr = langs['fr']['gender']
-    gender_en = langs['en']['gender']
-    next if gender_fr == gender_en
-
-    error("#{uslug}/characters/#{cslug}.{fr,en}.md", 'gender-locale-consistency',
-          "gender differs between languages (fr: #{gender_fr.inspect}, en: #{gender_en.inspect})")
-  end
-
-  # metadata: non-localized fields should match across languages (warning only)
-  char_data.each do |cslug, langs|
-    next unless langs['fr'] && langs['en']
-
-    meta_fr = langs['fr']['metadata'] || {}
-    meta_en = langs['en']['metadata'] || {}
-    (meta_fr.keys & meta_en.keys).each do |key|
-      next if meta_fr[key] == meta_en[key]
-
-      warning("#{uslug}/characters/#{cslug}.{fr,en}.md", 'metadata-locale-consistency',
-              "metadata key '#{key}' differs between languages (fr: #{meta_fr[key].inspect}, en: #{meta_en[key].inspect})")
-    end
-  end
-
-  # metadata: keys used by a character must exist in the taxonomy
-  known_metadata_keys = common_known_metadata_keys.merge(universe_additional_metadata_keys[uslug] || {})
-  char_data.each do |cslug, langs|
-    langs.each do |lang, fm|
-      (fm['metadata'] || {}).each_key do |key|
-        next if known_metadata_keys.key?(key)
-
-        error("#{uslug}/characters/#{cslug}.#{lang}.md", 'unknown-metadata-key',
-              "metadata key '#{key}' is not defined in metadata-keys.yml or additional-metadata-keys.yml")
+  # characters.yml: non-localized attributes (gender, group, portrait-source, non-localized
+  # metadata), one entry per character, cross-checked against the character files found above.
+  characters_yml_path = File.join(DATA_DIR, uslug, 'characters.yml')
+  characters_yml_file_rel = "_data/#{uslug}/characters.yml"
+  shared_data = {} # slug => entry
+  if File.exist?(characters_yml_path)
+    entries = load_yaml(characters_yml_path) || []
+    entries.each do |entry|
+      slug = entry['slug']
+      if slug.nil?
+        error(characters_yml_file_rel, 'character-slug-missing', 'character entry has no slug')
+        next
       end
+
+      unless valid_slug?(slug)
+        error(characters_yml_file_rel, 'slug-format', "character slug '#{slug}' must contain only lowercase ASCII letters and hyphens")
+      end
+
+      if shared_data.key?(slug)
+        error(characters_yml_file_rel, 'character-slug-unique', "character slug '#{slug}' is declared more than once")
+      end
+      shared_data[slug] = entry
+
+      unless char_data.key?(slug)
+        error(characters_yml_file_rel, 'unknown-character', "character '#{slug}' has no characters/#{slug}.*.md file")
+      end
+    end
+  elsif !char_data.empty?
+    error(characters_yml_file_rel, 'missing-file', 'characters.yml not found')
+  end
+
+  char_data.each_key do |cslug|
+    next if shared_data.key?(cslug)
+
+    error("#{uslug}/characters/#{cslug}.*.md", 'missing-characters-yml-entry',
+          "character '#{cslug}' has no entry in #{characters_yml_file_rel}")
+  end
+
+  # gender: must be masculine/feminine when present (single value, in characters.yml)
+  shared_data.each do |cslug, entry|
+    next unless entry.key?('gender')
+
+    gender = entry['gender']
+    next if VALID_GENDERS.include?(gender)
+
+    error(characters_yml_file_rel, 'invalid-gender',
+          "character '#{cslug}' gender #{gender.inspect} must be 'masculine' or 'feminine'")
+  end
+
+  # metadata: keys used by a character (in characters.yml or front matter) must exist in the
+  # taxonomy, and must be declared in the location matching their `localized` flag.
+  known_metadata_keys = common_known_metadata_keys.merge(universe_additional_metadata_keys[uslug] || {})
+
+  shared_data.each do |cslug, entry|
+    check_metadata_locality(entry['metadata'], known_metadata_keys, characters_yml_file_rel, false,
+                             subject: "character '#{cslug}'")
+  end
+
+  char_data.each do |cslug, langs|
+    langs.each do |lang, fm|
+      file_ref = "#{uslug}/characters/#{cslug}.#{lang}.md"
+      check_metadata_locality(fm['metadata'], known_metadata_keys, file_ref, true)
     end
   end
 
@@ -358,16 +399,15 @@ universe_slugs.each do |uslug|
     end
   end
 
-  # group: a character's group attribute, when present, must reference a group of its own universe
-  char_data.each do |cslug, langs|
-    langs.each do |lang, fm|
-      group = fm['group']
-      next if group.nil?
-      next if known_groups.key?(group)
+  # group: a character's group attribute (in characters.yml), when present, must reference
+  # a group of its own universe
+  shared_data.each do |cslug, entry|
+    group = entry['group']
+    next if group.nil?
+    next if known_groups.key?(group)
 
-      error("#{uslug}/characters/#{cslug}.#{lang}.md", 'unknown-group',
-            "group '#{group}' is not defined in _data/#{uslug}/groups.yml")
-    end
+    error(characters_yml_file_rel, 'unknown-group',
+          "character '#{cslug}' group '#{group}' is not defined in _data/#{uslug}/groups.yml")
   end
 
   # relations

@@ -27,14 +27,16 @@ L'image de couverture n'est pas un attribut : elle est associée à l'univers pa
 | `slug` | Non | Identifiant unique au sein de l'univers, construit à partir du nom anglais, utilisé dans l'URL de la fiche personnage (peut être réutilisé d'un univers à l'autre) |
 | `lang` | Non | Langue de ce document (`fr` ou `en`) ; permet d'associer les deux documents d'un même personnage |
 | `character-name` | Oui | Nom affiché. Nommé `character-name` plutôt que `name` : ce dernier est un attribut réservé de la classe `Page` de Jekyll (au même titre que `content`, `dir`, `excerpt`, `path`, `url`), toujours réécrit par Jekyll avant l'accès en template, ce qui rend un attribut de front matter du même nom illisible depuis Liquid (vérifié empiriquement) |
-| `gender` | Non | Genre grammatical du personnage : `masculine` ou `feminine`. Utilisé pour accorder les libellés de relation à l'affichage (voir "Type de relation"). Optionnel : en son absence, les libellés retombent sur leur forme `masculine` |
-| `group` | Non | slug optionnel du groupe d'appartenance du personnage au sein de l'univers (voir "Groupe" ci-dessous) ; facultatif, un personnage n'appartient qu'à un seul groupe au plus |
+| `gender` | Non | Genre grammatical du personnage : `masculine` ou `feminine`. Utilisé pour accorder les libellés de relation à l'affichage (voir "Type de relation"). Optionnel : en son absence, les libellés retombent sur leur forme `masculine`. Porté par `_data/<slug-universe>/characters.yml`, pas par le front matter (voir "Organisation des fichiers") |
+| `group` | Non | slug optionnel du groupe d'appartenance du personnage au sein de l'univers (voir "Groupe" ci-dessous) ; facultatif, un personnage n'appartient qu'à un seul groupe au plus. Porté par `_data/<slug-universe>/characters.yml` |
 | `description` | Oui | Texte biographique court, affiché sur la fiche personnage |
-| `metadata` | Selon le champ | Champs libres optionnels selon l'univers (ex : dates de naissance/mort pour un personnage historique). Chaque clé utilisée doit être déclarée dans la taxonomie des clés de metadata (voir "Clé de metadata"), qui porte son libellé affiché |
+| `metadata` | Selon le champ | Champs libres optionnels selon l'univers (ex : dates de naissance/mort pour un personnage historique). Chaque clé utilisée doit être déclarée dans la taxonomie des clés de metadata (voir "Clé de metadata"), qui porte son libellé affiché et indique si la clé est localisée. La valeur d'une clé non localisée (le cas par défaut) est portée par `_data/<slug-universe>/characters.yml` ; celle d'une clé explicitement localisée reste dans le front matter du personnage |
 | `external-link` | Oui | URL optionnelle, peut différer par langue (ex : page Wikipédia FR ou EN) |
-| `portrait-source` | Oui | URL optionnelle vers la source du portrait (ex : page Wikipédia de l'image), peut différer par langue. Distinct d'`external-link` : la source du portrait n'est pas nécessairement la même page que le lien externe du personnage |
+| `portrait-source` | Non | URL optionnelle vers la source du portrait (ex : page Wikipédia de l'image). Le portrait étant un fichier unique partagé par toutes les langues (voir "Images"), sa source ne varie pas non plus : valeur unique, portée par `_data/<slug-universe>/characters.yml`. Distinct d'`external-link` : la source du portrait n'est pas nécessairement la même page que le lien externe du personnage |
 
 Le portrait (l'image) n'est pas un attribut : il est associé au personnage par convention de nommage (voir "Images"). Sa source, si renseignée, est portée par l'attribut `portrait-source`.
+
+Les attributs `gender`, `group`, `portrait-source` et les clés non localisées de `metadata` ne varient pas d'une langue à l'autre pour un même personnage : plutôt que d'être répétés à l'identique dans `.fr.md` et `.en.md`, ils sont portés une seule fois par `_data/<slug-universe>/characters.yml` (voir "Organisation des fichiers"). Le front matter d'un personnage ne porte donc que ses attributs réellement localisés (`character-name`, `external-link`) et, le cas échéant, ses clés de metadata explicitement localisées.
 
 ### Groupe
 
@@ -94,6 +96,7 @@ En anglais, les formes `masculine` et `feminine` sont le plus souvent identiques
 |---|---|---|
 | `slug` | Non | Identifiant stable de la clé, référencé depuis les clés de l'attribut `metadata` d'un personnage |
 | `label` | Oui | Libellé affiché en regard de la valeur, sur la fiche personnage |
+| `localized` | Non | Indique si la valeur de cette clé, pour un personnage donné, peut différer d'une langue à l'autre. `false` par défaut (attribut omis) : la valeur est alors unique, portée par `_data/<slug-universe>/characters.yml` (voir "Organisation des fichiers"). À `true`, elle est portée par le front matter de chaque fichier de langue du personnage, comme ses autres attributs localisés |
 
 Un socle de clés communes est partagé par tous les univers ; un univers peut déclarer des clés additionnelles propres à son contexte. Contrairement au `label` d'un type de relation, celui d'une clé de metadata n'est pas décliné par genre : ce sont des noms de champs (ex : "Naissance"), qui ne s'accordent pas au genre du personnage.
 
@@ -133,7 +136,8 @@ Le site est généré avec Jekyll (voir `technical-specifications.md`). Chaque u
 - `/<slug-universe>/graph.fr.md`, `graph.en.md` : Vue Graphe, un fichier par langue. Réutilise les données de présentation du `mosaic.*.md` du même dossier plutôt que de les dupliquer.
 - `/<slug-universe>/cover.jpg` : image de couverture (voir "Images").
 - `/<slug-universe>/groups/`, optionnel : un sous-dossier contenant le logo de chaque groupe déclaré par l'univers (`<slug-group>.png`, voir "Images").
-- `/<slug-universe>/characters/` : un sous-dossier contenant, pour chaque personnage, `<slug-character>.fr.md`, `<slug-character>.en.md` (frontmatter : `lang`, `character-name`, `gender`, `group`, `metadata`, `external-link`, `portrait-source` ; corps de texte : `description`) et son portrait `<slug-character>.jpg` (voir "Images"). Le sous-dossier lui-même associe chaque personnage à son univers ; aucun attribut ne porte cette référence.
+- `/<slug-universe>/characters/` : un sous-dossier contenant, pour chaque personnage, `<slug-character>.fr.md`, `<slug-character>.en.md` (frontmatter : `lang`, `character-name`, `external-link`, et les clés de `metadata` explicitement localisées le cas échéant ; corps de texte : `description`) et son portrait `<slug-character>.jpg` (voir "Images"). Le sous-dossier lui-même associe chaque personnage à son univers ; aucun attribut ne porte cette référence.
+- `_data/<slug-universe>/characters.yml` : les attributs non localisés de chaque personnage de l'univers (`gender`, `group`, `portrait-source`, et les clés de `metadata` non explicitement localisées), une entrée par personnage identifiée par son `slug`.
 - `_data/<slug-universe>/relations.yml` : l'ensemble des relations de l'univers ; le champ localisé (`description`) y est porté par des clés imbriquées par langue, plutôt que par des fichiers séparés.
 - `_data/<slug-universe>/additional-relation-types.yml`, optionnel : les types de relations additionnels propres à l'univers, avec la même structure que la taxonomie commune (clés imbriquées par langue puis par genre grammatical pour `label` et `reverse-label`, voir "Type de relation").
 - `_data/relation-types.yml` : la taxonomie de base des types de relations, partagée par tous les univers.
@@ -164,6 +168,7 @@ french-renaissance-aristocracy/
 _data/
   relation-types.yml
   french-renaissance-aristocracy/
+    characters.yml
     relations.yml
     additional-relation-types.yml
     groups.yml
@@ -241,16 +246,22 @@ Le logo de ce groupe est son image associée par convention de nommage : `french
 ---
 lang: fr
 character-name: "Catherine de Médicis"
-gender: feminine
-group: house-of-valois
-metadata:
-  birth: "1519"
-  death: "1589"
 external-link: "https://fr.wikipedia.org/wiki/Catherine_de_M%C3%A9dicis"
-portrait-source: "https://fr.wikipedia.org/wiki/Catherine_de_M%C3%A9dicis"
 ---
 
 Reine de France par son mariage avec Henri II, elle exerce une influence considérable sur la politique du royaume comme régente puis reine mère.
+```
+
+**Personnage, attributs non localisés** (`_data/french-renaissance-aristocracy/characters.yml`) :
+
+```yaml
+- slug: catherine-de-medici
+  gender: feminine
+  group: house-of-valois
+  portrait-source: "https://en.wikipedia.org/wiki/Catherine_de%27_Medici"
+  metadata:
+    birth: "1519"
+    death: "1589"
 ```
 
 **Relations** (`_data/french-renaissance-aristocracy/relations.yml`) :
@@ -303,7 +314,7 @@ relations:
 2. Créer `mosaic.fr.md` et `mosaic.en.md`, puis `graph.fr.md` et `graph.en.md`.
 3. Ajouter l'image de couverture (`cover.jpg`).
 4. Déclarer, si besoin, les types de relations et les clés de metadata additionnels (`_data/<slug>/additional-relation-types.yml`, `_data/<slug>/additional-metadata-keys.yml`), ainsi que les groupes de l'univers (`_data/<slug>/groups.yml` et leurs logos dans `<slug>/groups/`).
-5. Créer, dans `characters/`, les fichiers de chaque personnage (markdown et portrait) pour chaque langue.
+5. Créer, dans `characters/`, les fichiers de chaque personnage (markdown et portrait) pour chaque langue, et déclarer leurs attributs non localisés dans `_data/<slug>/characters.yml`.
 6. Lister les relations dans `_data/<slug>/relations.yml`, avec leurs descriptions localisées, en réutilisant les types communs ou les types additionnels déclarés.
 7. Valider les données (voir les contraintes du modèle de données).
 8. Publier.
@@ -312,6 +323,7 @@ relations:
 
 - Le `slug` d'une entité (univers, personnage, type de relation) est identique pour toutes ses traductions.
 - Un `slug` de personnage est unique au sein de son univers (il peut être réutilisé d'un univers à l'autre).
+- Chaque personnage a exactement une entrée dans `characters.yml` de son univers, identifiée par son `slug`, qui doit correspondre à un personnage existant (fichiers `characters/<slug>.*.md`).
 - Un `slug` de type de relation est unique globalement : un univers ne peut pas déclarer un type additionnel dont le slug existe déjà dans la taxonomie commune ou dans les extensions d'un autre univers.
 - Une relation référence deux personnages existants du même univers (pas de relation inter-univers).
 - Un personnage ne peut pas être en relation avec lui-même.
@@ -319,12 +331,12 @@ relations:
 - Un type de relation dirigé (`directed: true`) doit définir un `reverse-label` ; un type non dirigé n'en définit pas.
 - Un `label`, quand il est renseigné, décline les trois formes `masculine`, `feminine` et `neutral` pour chaque langue du site, même quand certaines formes sont identiques ; un `reverse-label` décline les deux formes `masculine` et `feminine` (voir "Accord de genre" dans "Type de relation").
 - Deux personnages ne peuvent pas être reliés deux fois par le même type de relation (mais peuvent l'être par plusieurs types différents, ex : "ami de" et "rival de"). Pour un type non dirigé, `(A, B, type)` et `(B, A, type)` comptent comme la même relation et ne peuvent pas coexister.
-- Les champs non localisés de `metadata` doivent avoir la même valeur dans tous les fichiers de langue d'un personnage ; ses champs explicitement localisés peuvent différer.
+- Une clé de `metadata` renseignée dans le front matter d'un personnage doit être déclarée `localized: true` dans la taxonomie (commune ou extension locale) ; une clé non localisée (`localized` absent ou `false`) ne doit apparaître que dans `characters.yml`, jamais dans le front matter.
 - Un slug de clé de metadata est unique globalement : un univers ne peut pas déclarer une clé additionnelle dont le slug existe déjà dans la taxonomie commune ou dans les extensions d'un autre univers.
-- Chaque clé de l'attribut `metadata` d'un personnage doit exister dans la taxonomie commune des clés de metadata ou dans les extensions déclarées par l'univers.
-- L'attribut `gender` d'un personnage, quand il est renseigné, vaut `masculine` ou `feminine`, et a la même valeur dans tous ses fichiers de langue.
+- Chaque clé de l'attribut `metadata` d'un personnage (dans `characters.yml` ou dans le front matter, selon son `localized`) doit exister dans la taxonomie commune des clés de metadata ou dans les extensions déclarées par l'univers.
+- L'attribut `gender` d'un personnage, dans `characters.yml`, quand il est renseigné, vaut `masculine` ou `feminine`.
 - L'attribut `lang` d'un fichier d'univers ou de personnage doit correspondre au suffixe de langue de son nom de fichier (`.fr.md` → `fr`, `.en.md` → `en`).
 - Pour une langue donnée, `mosaic.<lang>.md` et `graph.<lang>.md` existent ensemble ou pas du tout : un univers ne peut pas être disponible, dans une langue, sur une seule de ses deux vues.
 - Un `slug` de groupe est unique au sein de son univers (deux univers différents peuvent réutiliser le même slug de groupe, à la différence des types de relation et des clés de metadata).
-- L'attribut `group` d'un personnage, quand il est renseigné, doit référencer un groupe existant dans `groups.yml` de son univers.
+- L'attribut `group` d'un personnage, dans `characters.yml`, quand il est renseigné, doit référencer un groupe existant dans `groups.yml` de son univers.
 - Le `name` d'un groupe définit une valeur pour chaque langue déclarée par l'univers.

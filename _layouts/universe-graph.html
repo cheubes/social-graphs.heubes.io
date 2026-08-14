@@ -24,13 +24,14 @@ layout: default
       {% assign char_name_raw = character["character-name"] %}
       {% include json-escape.html value=char_name_raw %}
       {% assign char_name = json_escaped %}
-      {% assign character_group = groups | where: "slug", character["group"] | first %}
+      {% assign char_data = characters_data | where: "slug", char_slug | first %}
+      {% assign character_group = groups | where: "slug", char_data["group"] | first %}
       {% assign group_color = character_group.color %}
       {% assign group_logo = "" %}
       {% if character_group %}
         {% assign group_logo = "/" | append: universe_slug | append: "/groups/" | append: character_group.slug | append: ".png" | relative_url %}
       {% endif %}
-      {% capture node_entry %}{"slug":"{{ char_slug }}","name":"{{ char_name }}","url":"{{ character.url | relative_url }}","portrait":"{{ portrait_src }}","group":"{{ character["group"] }}","groupColor":"{{ group_color }}","groupLogo":"{{ group_logo }}"}{% endcapture %}
+      {% capture node_entry %}{"slug":"{{ char_slug }}","name":"{{ char_name }}","url":"{{ character.url | relative_url }}","portrait":"{{ portrait_src }}","group":"{{ char_data["group"] }}","groupColor":"{{ group_color }}","groupLogo":"{{ group_logo }}"}{% endcapture %}
       {% unless forloop.first %}{% assign nodes_json = nodes_json | append: "," %}{% endunless %}
       {% assign nodes_json = nodes_json | append: node_entry %}
     {% endfor %}
@@ -66,7 +67,8 @@ layout: default
             character sheet's heading use of this same label, here it sits mid-sentence
             ("X {label} Y").
           {% endcomment %}
-          {% assign src_gender = src_char["gender"] | default: "masculine" %}
+          {% assign src_char_data = characters_data | where: "slug", src_slug | first %}
+          {% assign src_gender = src_char_data["gender"] | default: "masculine" %}
           {% assign rel_label_raw = rel_type.label[lang][src_gender] %}
           {% assign rel_label_first_char = rel_label_raw | slice: 0, 1 | downcase %}
           {% assign rel_label_remainder = rel_label_raw | slice: 1, 999 %}
@@ -123,7 +125,7 @@ layout: default
   {% endif %}
 </section>
 
-{% include character-modal.html character=nil open=false universe_slug=universe_slug lang=lang ui=ui placeholder_src=placeholder_src all_characters=characters relations=relations relation_types=relation_types metadata_keys=metadata_keys groups=groups view_url=mosaic_page.url %}
+{% include character-modal.html character=nil open=false universe_slug=universe_slug lang=lang ui=ui placeholder_src=placeholder_src all_characters=characters relations=relations relation_types=relation_types metadata_keys=metadata_keys groups=groups characters_data=characters_data view_url=mosaic_page.url %}
 
 <script src="{{ '/assets/js/character-modal.js' | relative_url }}" defer></script>
 {% if characters.size > 0 %}

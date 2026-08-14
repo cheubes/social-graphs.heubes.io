@@ -30,7 +30,7 @@ layout: default
           {% assign expected_path = universe_slug | append: "/characters/" | append: char_slug | append: "." | append: lang | append: ".md" %}
           {% assign character = characters | where_exp: "c", "c.path == expected_path" | first %}
           <li class="col">
-            {% include character-card.html character=character universe_slug=universe_slug placeholder_src=placeholder_src groups=groups %}
+            {% include character-card.html character=character universe_slug=universe_slug placeholder_src=placeholder_src groups=groups characters_data=characters_data %}
           </li>
         {% endunless %}
       {% endfor %}
@@ -46,7 +46,7 @@ layout: default
   {% endif %}
 </section>
 
-{% include character-modal.html character=modal_character open=is_character_page universe_slug=universe_slug lang=lang ui=ui placeholder_src=placeholder_src all_characters=characters relations=relations relation_types=relation_types metadata_keys=metadata_keys groups=groups view_url=mosaic_page.url %}
+{% include character-modal.html character=modal_character open=is_character_page universe_slug=universe_slug lang=lang ui=ui placeholder_src=placeholder_src all_characters=characters relations=relations relation_types=relation_types metadata_keys=metadata_keys groups=groups characters_data=characters_data view_url=mosaic_page.url %}
 
 <script src="{{ '/assets/js/character-modal.js' | relative_url }}" defer></script>
 {% if characters.size > 0 %}

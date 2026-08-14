@@ -103,6 +103,7 @@ Versions vérifiées comme les dernières stables disponibles sur jsDelivr à la
 │   ├── ui.fr.yml                 # textes d'interface en FR (labels, messages, dont le message d'indisponibilité)
 │   ├── ui.en.yml                 # textes d'interface en EN (labels, messages, dont le message d'indisponibilité)
 │   └── <slug-universe>/
+│       ├── characters.yml                  # attributs non localisés des personnages
 │       ├── relations.yml
 │       ├── additional-relation-types.yml   # optionnel
 │       └── groups.yml                      # optionnel
@@ -223,6 +224,7 @@ Règles vérifiées, dans l'ordre de "Contraintes et règles de validation" de `
 
 - *Format d'un slug* (Conventions générales) : erreur si un `slug` (nom de dossier d'univers, de fichier personnage ou de type de relation) contient autre chose que des minuscules ASCII et des tirets.
 - *Slug identique pour toutes les traductions d'une entité* et *slug de personnage unique au sein de son univers* : rien à vérifier, garanti par construction (le slug est le nom de fichier ; deux fichiers ne peuvent pas porter le même nom dans le même dossier).
+- *Personnage présent dans `characters.yml`* : erreur si un personnage (fichiers `characters/<slug>.*.md`) n'a pas d'entrée correspondante dans le `characters.yml` de son univers, ou si `characters.yml` contient une entrée dont le slug ne correspond à aucun personnage.
 - *Slug de type de relation unique globalement* : erreur si un même slug apparaît plus d'une fois entre `_data/relation-types.yml` et l'ensemble des `_data/<slug-universe>/additional-relation-types.yml`.
 - *Relation référence deux personnages existants du même univers* : erreur si `source-character` ou `target-character` ne correspond à aucun fichier de `characters/` dans cet univers.
 - *Personnage pas en relation avec lui-même* : erreur si `source-character` = `target-character`.
@@ -232,13 +234,13 @@ Règles vérifiées, dans l'ordre de "Contraintes et règles de validation" de `
 - *Pas de relation dupliquée* : erreur si deux entrées partagent le même triplet (source, cible, type) ; pour un type non dirigé, `(A, B)` et `(B, A)` comptent comme la même paire.
 - *`lang` cohérent avec le nom de fichier* : erreur si `.fr.md` ne porte pas `lang: fr`, ou `.en.md` `lang: en`.
 - *`mosaic`/`graph` présents ensemble par langue* : erreur si l'un existe sans l'autre, pour une langue donnée d'un univers.
-- *Champs non localisés de `metadata` identiques entre langues* : limite connue, `metadata` étant libre (voir `data-model.md`), le script ne peut pas savoir quels champs sont censés être localisés. Toute clé dont la valeur diffère entre les fichiers `fr`/`en` d'un personnage est donc un **avertissement**, à confirmer manuellement plutôt qu'une erreur bloquante.
+- *Localisation de `metadata` cohérente avec la taxonomie* : erreur si une clé du front matter d'un personnage n'est pas déclarée `localized: true` dans `metadata-keys.yml` ou le `additional-metadata-keys.yml` de l'univers, ou si une clé déclarée `localized: true` apparaît dans `characters.yml` au lieu du front matter (et réciproquement pour une clé non localisée).
 - *Slug de clé de metadata unique globalement* : erreur si un même slug apparaît plus d'une fois entre `_data/metadata-keys.yml` et l'ensemble des `_data/<slug-universe>/additional-metadata-keys.yml`.
-- *Clé de metadata existante* : erreur si une clé de l'attribut `metadata` d'un personnage n'est ni dans `metadata-keys.yml` ni dans le `additional-metadata-keys.yml` de l'univers.
+- *Clé de metadata existante* : erreur si une clé de l'attribut `metadata` d'un personnage (dans `characters.yml` ou le front matter) n'est ni dans `metadata-keys.yml` ni dans le `additional-metadata-keys.yml` de l'univers.
 - *`label` complet pour une clé de metadata* : erreur si le `label` d'une clé de metadata (taxonomie commune ou extension locale) ne définit pas de valeur pour une langue déclarée.
-- *`gender` valide et cohérent entre langues* : erreur si l'attribut `gender` d'un personnage, quand il est renseigné, n'est ni `masculine` ni `feminine`, ou si ses fichiers de langue déclarent des valeurs différentes.
+- *`gender` valide* : erreur si l'attribut `gender` d'un personnage, dans `characters.yml`, quand il est renseigné, n'est ni `masculine` ni `feminine`.
 - *Slug de groupe unique au sein de l'univers* : erreur si un même slug apparaît plus d'une fois dans `_data/<slug-universe>/groups.yml`.
-- *Groupe existant* : erreur si l'attribut `group` d'un personnage ne correspond à aucun slug déclaré dans le `groups.yml` de son univers.
+- *Groupe existant* : erreur si l'attribut `group` d'un personnage, dans `characters.yml`, ne correspond à aucun slug déclaré dans le `groups.yml` de son univers.
 - *`name` complet pour un groupe* : erreur si le `name` d'un groupe ne définit pas de valeur pour une langue déclarée par l'univers.
 
 ---

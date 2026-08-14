@@ -1,0 +1,494 @@
+- slug: alfonso-i-d-este
+  gender: masculine
+  group: ferrara-mantua
+  portrait-source: "https://en.wikipedia.org/wiki/Alfonso_I_d'Este"
+  metadata:
+    birth: "1476"
+    death: "1534"
+
+- slug: alfonso-lombardi
+  gender: masculine
+  group: bologna
+  portrait-source: "https://en.wikipedia.org/wiki/Alfonso_Lombardi"
+  metadata:
+    birth: "1497"
+    death: "1537"
+
+- slug: ambrogio-de-predis
+  gender: masculine
+  group: milan
+  metadata:
+    birth: "~1455"
+    death: ">1508"
+
+- slug: andrea-del-verrocchio
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Andrea_del_Verrocchio"
+  metadata:
+    birth: "1435"
+    death: "1488"
+
+- slug: andrea-della-robbia
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Andrea_della_Robbia"
+  metadata:
+    birth: "1435"
+    death: "1525"
+
+- slug: andrea-mantegna
+  gender: masculine
+  group: ferrara-mantua
+  portrait-source: "https://en.wikipedia.org/wiki/Andrea_Mantegna"
+  metadata:
+    birth: "1431"
+    death: "1506"
+
+- slug: angelo-poliziano
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Poliziano"
+  metadata:
+    birth: "1454"
+    death: "1494"
+
+- slug: antonio-da-sangallo-the-younger
+  gender: masculine
+  group: rome
+  portrait-source: "https://en.wikipedia.org/wiki/Antonio_da_Sangallo_the_Younger"
+  metadata:
+    birth: "1484"
+    death: "1546"
+
+- slug: antonio-del-pollaiuolo
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Antonio_del_Pollaiuolo"
+  metadata:
+    birth: "1429"
+    death: "1498"
+
+- slug: baldassare-castiglione
+  gender: masculine
+  group: urbino
+  portrait-source: "https://en.wikipedia.org/wiki/Baldassare_Castiglione"
+  metadata:
+    birth: "1478"
+    death: "1529"
+
+- slug: baldassare-peruzzi
+  gender: masculine
+  group: rome
+  portrait-source: "https://en.wikipedia.org/wiki/Baldassare_Peruzzi"
+  metadata:
+    birth: "1481"
+    death: "1536"
+
+- slug: beatrice-d-este
+  gender: feminine
+  group: milan
+  portrait-source: "https://en.wikipedia.org/wiki/Beatrice_d'Este"
+  metadata:
+    birth: "1475"
+    death: "1497"
+
+- slug: benozzo-gozzoli
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Benozzo_Gozzoli"
+  metadata:
+    birth: "1421"
+    death: "1497"
+
+- slug: cimabue
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Cimabue"
+  metadata:
+    birth: "~1240"
+    death: "~1302"
+
+- slug: correggio
+  gender: masculine
+  group: ferrara-mantua
+  portrait-source: "https://en.wikipedia.org/wiki/Antonio_da_Correggio"
+  metadata:
+    birth: "1489"
+    death: "1534"
+
+- slug: cosimo-de-medici
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Cosimo_de'_Medici"
+  metadata:
+    birth: "1389"
+    death: "1464"
+
+- slug: cosimo-rosselli
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Cosimo_Rosselli"
+  metadata:
+    birth: "1439"
+    death: "1507"
+
+- slug: domenico-ghirlandaio
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Domenico_Ghirlandaio"
+  metadata:
+    birth: "1448"
+    death: "1494"
+
+- slug: domenico-veneziano
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Domenico_Veneziano"
+  metadata:
+    birth: "~1410"
+    death: "1461"
+
+- slug: donatello
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Donatello"
+  metadata:
+    birth: "1386"
+    death: "1466"
+
+- slug: donato-bramante
+  gender: masculine
+  group: rome
+  portrait-source: "https://en.wikipedia.org/wiki/Donato_Bramante"
+  metadata:
+    birth: "1444"
+    death: "1514"
+
+- slug: federico-da-montefeltro
+  gender: masculine
+  group: urbino
+  portrait-source: "https://en.wikipedia.org/wiki/Federico_da_Montefeltro"
+  metadata:
+    birth: "1422"
+    death: "1482"
+
+- slug: filippino-lippi
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Filippino_Lippi"
+  metadata:
+    birth: "1457"
+    death: "1504"
+
+- slug: filippo-brunelleschi
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Filippo_Brunelleschi"
+  metadata:
+    birth: "1377"
+    death: "1446"
+
+- slug: fra-angelico
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Fra_Angelico"
+  metadata:
+    birth: "1395"
+    death: "1455"
+
+- slug: fra-filippo-lippi
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Filippo_Lippi"
+  metadata:
+    birth: "1406"
+    death: "1469"
+
+- slug: francesco-francia
+  gender: masculine
+  group: bologna
+  portrait-source: "https://en.wikipedia.org/wiki/Francesco_Francia"
+  metadata:
+    birth: "1447"
+    death: "1517"
+
+- slug: giorgione
+  gender: masculine
+  group: venice
+  portrait-source: "https://en.wikipedia.org/wiki/Giorgione"
+  metadata:
+    birth: "~1477"
+    death: "1510"
+
+- slug: giotto
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Giotto"
+  metadata:
+    birth: "~1267"
+    death: "1337"
+
+- slug: giovanni-bellini
+  gender: masculine
+  group: venice
+  portrait-source: "https://en.wikipedia.org/wiki/Giovanni_Bellini"
+  metadata:
+    birth: "~1430"
+    death: "1516"
+
+- slug: giovanni-ii-bentivoglio
+  gender: masculine
+  group: bologna
+  portrait-source: "https://en.wikipedia.org/wiki/Giovanni_II_Bentivoglio"
+  metadata:
+    birth: "1443"
+    death: "1508"
+
+- slug: giulio-romano
+  gender: masculine
+  group: rome
+  portrait-source: "https://en.wikipedia.org/wiki/Giulio_Romano"
+  metadata:
+    birth: "1499"
+    death: "1546"
+
+- slug: isabella-d-este
+  gender: feminine
+  group: ferrara-mantua
+  portrait-source: "https://en.wikipedia.org/wiki/Isabella_d'Este"
+  metadata:
+    birth: "1474"
+    death: "1539"
+
+- slug: leon-battista-alberti
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Leon_Battista_Alberti"
+  metadata:
+    birth: "1404"
+    death: "1472"
+
+- slug: leonardo-da-vinci
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Leonardo_da_Vinci"
+  metadata:
+    birth: "1452"
+    death: "1519"
+
+- slug: lorenzo-de-medici
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Lorenzo_de'_Medici"
+  metadata:
+    birth: "1449"
+    death: "1492"
+
+- slug: lorenzo-ghiberti
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Lorenzo_Ghiberti"
+  metadata:
+    birth: "1378"
+    death: "1455"
+
+- slug: luca-della-robbia
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Luca_della_Robbia"
+  metadata:
+    birth: "1400"
+    death: "1482"
+
+- slug: luca-signorelli
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Luca_Signorelli"
+  metadata:
+    birth: "1441"
+    death: "1523"
+
+- slug: ludovico-sforza
+  gender: masculine
+  group: milan
+  portrait-source: "https://en.wikipedia.org/wiki/Ludovico_Sforza"
+  metadata:
+    birth: "1452"
+    death: "1508"
+
+- slug: marsilio-ficino
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Marsilio_Ficino"
+  metadata:
+    birth: "1433"
+    death: "1499"
+
+- slug: masaccio
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Masaccio"
+  metadata:
+    birth: "1401"
+    death: "1428"
+
+- slug: michelangelo
+  gender: masculine
+  group: rome
+  portrait-source: "https://en.wikipedia.org/wiki/Michelangelo"
+  metadata:
+    birth: "1475"
+    death: "1564"
+
+- slug: michelozzo
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Michelozzo"
+  metadata:
+    birth: "1396"
+    death: "1472"
+
+- slug: paolo-uccello
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Paolo_Uccello"
+  metadata:
+    birth: "1397"
+    death: "1475"
+
+- slug: paolo-veronese
+  gender: masculine
+  group: venice
+  portrait-source: "https://en.wikipedia.org/wiki/Paolo_Veronese"
+  metadata:
+    birth: "1528"
+    death: "1588"
+
+- slug: pico-della-mirandola
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Giovanni_Pico_della_Mirandola"
+  metadata:
+    birth: "1463"
+    death: "1494"
+
+- slug: piero-della-francesca
+  gender: masculine
+  group: urbino
+  portrait-source: "https://en.wikipedia.org/wiki/Piero_della_Francesca"
+  metadata:
+    birth: "1415"
+    death: "1492"
+
+- slug: pietro-aretino
+  gender: masculine
+  group: venice
+  portrait-source: "https://en.wikipedia.org/wiki/Pietro_Aretino"
+  metadata:
+    birth: "1492"
+    death: "1556"
+
+- slug: pietro-perugino
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Pietro_Perugino"
+  metadata:
+    birth: "1446"
+    death: "1523"
+
+- slug: pinturicchio
+  gender: masculine
+  group: rome
+  portrait-source: "https://en.wikipedia.org/wiki/Pinturicchio"
+  metadata:
+    birth: "1454"
+    death: "1513"
+
+- slug: pope-alexander-vi
+  gender: masculine
+  group: rome
+  portrait-source: "https://en.wikipedia.org/wiki/Pope_Alexander_VI"
+  metadata:
+    birth: "1431"
+    death: "1503"
+
+- slug: pope-julius-ii
+  gender: masculine
+  group: rome
+  portrait-source: "https://en.wikipedia.org/wiki/Pope_Julius_II"
+  metadata:
+    birth: "1443"
+    death: "1513"
+
+- slug: pope-leo-x
+  gender: masculine
+  group: rome
+  portrait-source: "https://en.wikipedia.org/wiki/Pope_Leo_X"
+  metadata:
+    birth: "1475"
+    death: "1521"
+
+- slug: pope-sixtus-iv
+  gender: masculine
+  group: rome
+  portrait-source: "https://en.wikipedia.org/wiki/Pope_Sixtus_IV"
+  metadata:
+    birth: "1414"
+    death: "1484"
+
+- slug: properzia-de-rossi
+  gender: feminine
+  group: bologna
+  portrait-source: "https://en.wikipedia.org/wiki/Properzia_de'_Rossi"
+  metadata:
+    birth: "1490"
+    death: "1530"
+
+- slug: raphael
+  gender: masculine
+  group: rome
+  portrait-source: "https://en.wikipedia.org/wiki/Raphael"
+  metadata:
+    birth: "1483"
+    death: "1520"
+
+- slug: sandro-botticelli
+  gender: masculine
+  group: florence
+  portrait-source: "https://en.wikipedia.org/wiki/Sandro_Botticelli"
+  metadata:
+    birth: "1445"
+    death: "1510"
+
+- slug: tintoretto
+  gender: masculine
+  group: venice
+  portrait-source: "https://en.wikipedia.org/wiki/Tintoretto"
+  metadata:
+    birth: "1518"
+    death: "1594"
+
+- slug: titian
+  gender: masculine
+  group: venice
+  portrait-source: "https://en.wikipedia.org/wiki/Titian"
+  metadata:
+    birth: "~1488"
+    death: "1576"
+
+- slug: vittore-carpaccio
+  gender: masculine
+  group: venice
+  portrait-source: "https://en.wikipedia.org/wiki/Vittore_Carpaccio"
+  metadata:
+    birth: "~1465"
+    death: "~1525"
+
+- slug: vittoria-colonna
+  gender: feminine
+  group: rome
+  portrait-source: "https://en.wikipedia.org/wiki/Vittoria_Colonna"
+  metadata:
+    birth: "1490"
+    death: "1547"
