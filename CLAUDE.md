@@ -4,7 +4,7 @@ Site présentant des "univers" (les personnages d'une œuvre, un groupe historiq
 
 ## État du projet
 
-Le projet en est au stade des spécifications : tout est documenté dans `specs/`, aucune implémentation n'existe encore. Avant d'écrire du code, lire les fichiers de specs concernés par la tâche, ainsi que `BUILD-PLAN.md`, qui définit l'ordre d'implémentation en étapes incrémentales.
+L'implémentation suit `BUILD-PLAN.md`, qui définit l'ordre en étapes incrémentales. `specs/` reste la source de vérité pour toute décision de conception : avant d'écrire ou de modifier du code, lire les fichiers de specs concernés par la tâche.
 
 ## Structure de `specs/`
 
