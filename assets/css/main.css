@@ -182,8 +182,15 @@ small {
 
 /* Character card only (see style-guide.md, Tuiles): border between the portrait
    and the card body, and bottom-right badge for the character's group, white/
-   absent when the character has no group. */
+   absent when the character has no group. Fixed-height text zone, same
+   principle as .sg-universe-card below, but the description is truncated
+   (truncatewords in character-card.html) rather than scrollable, so excess
+   is clipped instead of scrolled. flex: 0 0 auto keeps the height fixed
+   regardless of Bootstrap's card-body flex-grow. */
 .sg-character-card .card-body {
+  flex: 0 0 auto;
+  height: 11rem;
+  overflow: hidden;
   border-top: 10px solid var(--sg-white);
 }
 

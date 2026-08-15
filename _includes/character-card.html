@@ -19,7 +19,7 @@
     <div class="card-body"
       {% if character_group %}style="border-top-color: {{ character_group.color }};"{% endif %}>
       <h2 class="card-title h5 sg-card-title">{{ character["character-name"] }}</h2>
-      <p class="card-text sg-card-text">{{ character.content | strip_html | truncate: 150 }}</p>
+      <p class="card-text sg-card-text">{{ character.content | strip_html | truncatewords: 15, "&nbsp;..." }}</p>
     </div>
   </div>
 </a>
