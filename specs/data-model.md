@@ -13,12 +13,13 @@ Un univers regroupe un ensemble de personnages et les relations qui les lient. I
 | `title` | Oui | Nom affiché de l'univers |
 | `description` | Oui | Texte de présentation, affiché sur la tuile d'accueil (voir `home.md`) ; non affiché sur les pages de l'univers lui-même (voir `universe-home.md`) |
 | `source-type` | Non | slug référençant un type de source (voir "Type de source" ci-dessous), utilisé pour regrouper les univers sur l'accueil du site (voir `home.md`). Ne varie pas d'une langue à l'autre : comme `gender`, `group` et `portrait-source` pour un personnage, il n'est pas porté par le frontmatter de `mosaic.fr.md`/`mosaic.en.md` mais par `_data/<slug-universe>/universe.yml` (voir "Organisation des fichiers") |
+| `cover-source` | Non | URL optionnelle vers la source de l'image de couverture (ex : page Wikipédia de l'image), affichée en crédit sur la tuile d'accueil (voir `home.md`). Distincte de `source-type` malgré la proximité de nom : l'une est la catégorie de l'univers, l'autre la source de son image. Comme `source-type`, ne varie pas d'une langue à l'autre : portée par `_data/<slug-universe>/universe.yml`, pas par le frontmatter |
 | `characters` | — | Liste des personnages de l'univers |
 | `relations` | — | Liste des relations entre ces personnages |
 | `additional-relation-types` | — | Extensions locales à la taxonomie commune (voir "Type de relation") |
 | `groups` | — | Liste des groupes de personnages de l'univers, facultatif (voir "Groupe") |
 
-L'image de couverture n'est pas un attribut : elle est associée à l'univers par convention de nommage (voir "Images").
+L'image de couverture n'est pas un attribut : elle est associée à l'univers par convention de nommage (voir "Images"). Sa source, si renseignée, est portée par l'attribut `cover-source`.
 
 ### Type de source
 
@@ -148,7 +149,7 @@ Le site est généré avec Jekyll (voir `technical-specifications.md`). Chaque u
 - `/<slug-universe>/cover.jpg` : image de couverture (voir "Images").
 - `/<slug-universe>/groups/`, optionnel : un sous-dossier contenant le logo de chaque groupe déclaré par l'univers (`<slug-group>.png`, voir "Images").
 - `/<slug-universe>/characters/` : un sous-dossier contenant, pour chaque personnage, `<slug-character>.fr.md`, `<slug-character>.en.md` (frontmatter : `lang`, `character-name`, `external-link`, et les clés de `metadata` explicitement localisées le cas échéant ; corps de texte : `description`) et son portrait `<slug-character>.jpg` (voir "Images"). Le sous-dossier lui-même associe chaque personnage à son univers ; aucun attribut ne porte cette référence.
-- `_data/<slug-universe>/universe.yml` : l'attribut non localisé propre à l'univers lui-même (`source-type`), sur le même principe que `characters.yml` pour les attributs non localisés d'un personnage.
+- `_data/<slug-universe>/universe.yml` : les attributs non localisés propres à l'univers lui-même (`source-type`, `cover-source`), sur le même principe que `characters.yml` pour les attributs non localisés d'un personnage.
 - `_data/<slug-universe>/characters.yml` : les attributs non localisés de chaque personnage de l'univers (`gender`, `group`, `portrait-source`, et les clés de `metadata` non explicitement localisées), une entrée par personnage identifiée par son `slug`.
 - `_data/<slug-universe>/relations.yml` : l'ensemble des relations de l'univers ; le champ localisé (`description`) y est porté par des clés imbriquées par langue, plutôt que par des fichiers séparés.
 - `_data/<slug-universe>/additional-relation-types.yml`, optionnel : les types de relations additionnels propres à l'univers, avec la même structure que la taxonomie commune (clés imbriquées par langue puis par genre grammatical pour `label` et `reverse-label`, voir "Type de relation").
@@ -200,10 +201,11 @@ title: "Les aristocrates français à l'époque de Catherine de Médicis"
 À la cour des Valois, alliances, rivalités et intrigues nouent les grandes familles du royaume de France.
 ```
 
-**Univers, attribut non localisé** (`_data/french-renaissance-aristocracy/universe.yml`) :
+**Univers, attributs non localisés** (`_data/french-renaissance-aristocracy/universe.yml`) :
 
 ```yaml
 source-type: history
+cover-source: "https://commons.wikimedia.org/wiki/File:Cour_des_Valois.jpg"
 ```
 
 **Types de relations additionnels** (`_data/french-renaissance-aristocracy/additional-relation-types.yml`) :

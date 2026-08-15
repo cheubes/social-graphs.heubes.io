@@ -103,9 +103,10 @@ Pas de grille ni d'échelle d'espacement custom : la grille et les classes utili
 
 ### Tuiles (mosaïques)
 
-- Carte Bootstrap : image (couverture ou portrait) en lazy loading (voir `home.md`, `universe-home.md`), `title`/`character-name` en titre, `description` tronquée en corps.
+- Carte Bootstrap : image (couverture ou portrait) en lazy loading (voir `home.md`, `universe-home.md`), `title`/`character-name` en titre, `description` en corps (tronquée, sauf tuile univers de l'accueil, voir ci-dessous).
 - Fond `--sg-white`, titre `--sg-dark-grey`, texte `--sg-grey`, bordure `--sg-light-grey`.
 - Survol : légère élévation (ombre) et bordure `--sg-gold`.
+- Tuile univers (accueil, voir `home.md`) uniquement : hauteur fixe, identique pour toutes les tuiles (couverture proportionnée à son ratio fixe, voir "Images", suivie d'une zone de texte à hauteur fixe pour le `title` et la `description`). Cette zone de texte n'est pas tronquée : si son contenu dépasse la hauteur disponible, elle devient défilable (`overflow-y: auto`), la couverture au-dessus restant fixe, hors du défilement. Mention de crédit de la couverture (`cover-source`, si renseigné, voir `data-model.md`) : badge circulaire en surimpression dans le coin en bas à droite de la tuile (icône Font Awesome `fa-circle-info`, fond `--sg-dark-grey` semi-transparent, icône `--sg-white`), sur le même principe d'emplacement que le logo de groupe d'une tuile personnage ci-dessous ; lien vers `cover-source`, ouvert dans un nouvel onglet.
 - Tuile personnage (voir `universe-home.md`) uniquement : bordure de 10px entre le portrait et le corps de la tuile (nom, description), de la couleur du groupe d'appartenance du personnage si renseigné (voir "Groupe" dans `data-model.md`), blanche sinon ; logo de ce groupe, si renseigné, affiché dans le coin en bas à droite de la tuile.
 
 ### Modale (fiche personnage)

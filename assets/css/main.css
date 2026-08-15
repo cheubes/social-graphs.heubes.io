@@ -164,7 +164,8 @@ small {
 }
 
 .sg-card:hover,
-.sg-card-link:focus .sg-card {
+.sg-card-link:focus .sg-card,
+.sg-card:focus-within {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   border-color: var(--sg-gold);
 }
@@ -197,6 +198,45 @@ small {
   width: 2rem;
   height: 2rem;
   object-fit: contain;
+}
+
+/* Universe card only (home page, see style-guide.md, Tuiles): fixed-height,
+   scrollable text zone below a fixed cover, and a corner cover-source credit
+   badge. Keeps every tile the same height regardless of description length. */
+.sg-universe-card-cover-wrap {
+  position: relative;
+}
+
+.sg-universe-card-cover-credit {
+  position: absolute;
+  z-index: 2;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(68, 68, 68, 0.7);
+  color: var(--sg-white);
+  font-size: 0.9rem;
+}
+
+.sg-universe-card-cover-credit:hover,
+.sg-universe-card-cover-credit:focus {
+  background-color: var(--sg-dark-grey);
+  color: var(--sg-gold);
+}
+
+/* flex: 0 0 auto so this fixed height is never overridden by flex-grow
+   (see .card-body's flex: 1 1 auto in Bootstrap), keeping every tile the
+   same height regardless of description length; overflow-y scrolls the
+   excess instead of growing the tile or clipping it silently. */
+.sg-universe-card .card-body {
+  flex: 0 0 auto;
+  height: 9rem;
+  overflow-y: auto;
 }
 
 .sg-card-title {

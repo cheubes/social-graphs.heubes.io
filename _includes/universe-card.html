@@ -1,15 +1,28 @@
 {% assign universe_slug = universe.path | split: "/" | first %}
 {% assign cover_src = "/" | append: universe_slug | append: "/cover.jpg" | relative_url %}
-<a href="{{ universe.url | relative_url }}" class="sg-card-link text-decoration-none">
-  <div class="card sg-card h-100">
-    <img src="{{ cover_src }}"
-      class="card-img-top sg-card-img"
-      alt="{{ universe.title }}"
-      loading="lazy"
-      onerror="this.onerror=null; this.src='{{ placeholder_src }}';">
-    <div class="card-body">
-      <h2 class="card-title h5 sg-card-title">{{ universe.title }}</h2>
-      <p class="card-text sg-card-text">{{ universe.content | strip_html | truncate: 150 }}</p>
-    </div>
+{% assign universe_data = site.data[universe_slug]["universe"] %}
+<div class="card sg-card sg-universe-card">
+  <div class="sg-universe-card-cover-wrap">
+    <a href="{{ universe.url | relative_url }}" class="sg-card-link text-decoration-none">
+      <img src="{{ cover_src }}"
+        class="card-img-top sg-card-img"
+        alt="{{ universe.title }}"
+        loading="lazy"
+        onerror="this.onerror=null; this.src='{{ placeholder_src }}';">
+    </a>
+    {% if universe_data["cover-source"] %}
+      <a href="{{ universe_data['cover-source'] }}"
+        class="sg-universe-card-cover-credit"
+        target="_blank" rel="noopener"
+        aria-label="{{ ui['cover-source-label'] }}" title="{{ ui['cover-source-label'] }}">
+        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+      </a>
+    {% endif %}
   </div>
-</a>
+  <div class="card-body">
+    <h2 class="card-title h5 sg-card-title">
+      <a href="{{ universe.url | relative_url }}" class="sg-card-link text-decoration-none">{{ universe.title }}</a>
+    </h2>
+    <p class="card-text sg-card-text">{{ universe.content | strip_html }}</p>
+  </div>
+</div>
