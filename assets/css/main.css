@@ -208,32 +208,20 @@ small {
 }
 
 /* Universe card only (home page, see style-guide.md, Tuiles): fixed-height,
-   scrollable text zone below a fixed cover, and a corner cover-source credit
-   badge. Keeps every tile the same height regardless of description length. */
+   scrollable text zone below a fixed cover. Keeps every tile the same height
+   regardless of description length. */
 .sg-universe-card-cover-wrap {
   position: relative;
 }
 
-.sg-universe-card-cover-credit {
-  position: absolute;
-  z-index: 2;
-  right: 0.5rem;
-  bottom: 0.5rem;
-  width: 1.75rem;
-  height: 1.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: rgba(68, 68, 68, 0.7);
-  color: var(--sg-white);
-  font-size: 0.9rem;
-}
-
-.sg-universe-card-cover-credit:hover,
-.sg-universe-card-cover-credit:focus {
-  background-color: var(--sg-dark-grey);
-  color: var(--sg-gold);
+.sg-universe-card-cover-caption {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 0.8rem;
+  color: var(--sg-grey);
+  text-align: right;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
 }
 
 /* flex: 0 0 auto so this fixed height is never overridden by flex-grow
@@ -345,9 +333,12 @@ small {
 
 .sg-character-modal-portrait-caption {
   font-weight: 300;
+  font-style: italic;
   font-size: 0.8rem;
   color: var(--sg-grey);
-  margin-top: 0.5rem;
+  text-align: right;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }
 
 .sg-character-modal-title {
@@ -382,14 +373,16 @@ small {
 
 .sg-character-modal-portrait-caption a,
 .sg-character-modal-relation a,
-.sg-character-modal-external-link a {
+.sg-character-modal-external-link a,
+.sg-universe-card-cover-caption a {
   color: var(--sg-gold);
   text-decoration: none;
 }
 
 .sg-character-modal-portrait-caption a:hover,
 .sg-character-modal-relation a:hover,
-.sg-character-modal-external-link a:hover {
+.sg-character-modal-external-link a:hover,
+.sg-universe-card-cover-caption a:hover {
   color: var(--sg-grey);
   text-decoration: none;
 }

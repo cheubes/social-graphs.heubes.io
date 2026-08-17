@@ -10,11 +10,11 @@ Modale superposée à la Vue Mosaïque ou à la Vue Graphe (voir `universe-home.
 
 - Portrait et `character-name` du personnage.
 - Logo du groupe d'appartenance du personnage, si renseigné, affiché dans le coin en haut à gauche de la modale ; bordure haute de la modale de la couleur de ce groupe, blanche sinon (voir "Groupe" dans `data-model.md` et `style-guide.md`).
-- `portrait-source`, si renseigné : mention de la source du portrait, en légende sous l'image (voir `style-guide.md`).
 - `description` (texte biographique).
 - `metadata`, si renseigné : affiché en liste clé/valeur ; chaque clé affiche son libellé localisé (voir "Clé de metadata" dans `data-model.md`), pas la clé brute.
 - `external-link`, si renseigné : lien sortant vers une source externe.
 - Liste des relations de ce personnage, regroupées par type : chaque groupe est identifié par le libellé accordé au genre de ce personnage (`label` si ce personnage est la source, `reverse-label` s'il est la cible, ou `label` pour un type non dirigé ; voir "Accord de genre" dans "Type de relation" de `data-model.md`). Un type dirigé pour lequel ce personnage est à la fois source de certaines relations et cible d'autres forme deux groupes distincts, l'un sous `label`, l'autre sous `reverse-label`. Les groupes sont ordonnés selon l'ordre de déclaration de leur type dans la taxonomie (types communs de `relation-types.yml`, puis extensions locales de l'univers) plutôt qu'alphabétiquement : le libellé variant avec le genre du personnage affiché, un tri alphabétique changerait d'ordre d'un personnage à l'autre. Dans chaque groupe, un personnage lié par ligne, triés par ordre alphabétique de leur `character-name`, avec la `description` de la relation si renseignée. Cette liste est complète : elle n'est pas affectée par la recherche ou les filtres actifs de la vue sous-jacente (voir `search-filter.md`).
+- `portrait-source`, si renseigné : mention de la source du portrait (ou, pour la valeur spéciale `ai-generated`, mention indiquant que le portrait est généré par IA), en fin de fiche alignée à droite (voir `style-guide.md` et "Personnage" dans `data-model.md`).
 - Bouton de fermeture.
 
 L'ouverture de la modale, quelle que soit son origine (clic sur une tuile, un nœud, ou accès direct), met à jour l'URL pour refléter le personnage affiché ; cette URL reste partageable telle quelle (voir le parcours "lien partagé" dans `functional-specifications.md`).

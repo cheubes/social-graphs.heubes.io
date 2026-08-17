@@ -13,7 +13,7 @@ Un univers regroupe un ensemble de personnages et les relations qui les lient. I
 | `title` | Oui | Nom affiché de l'univers |
 | `description` | Oui | Texte de présentation, affiché sur la tuile d'accueil (voir `home.md`) ; non affiché sur les pages de l'univers lui-même (voir `universe-home.md`) |
 | `source-type` | Non | slug référençant un type de source (voir "Type de source" ci-dessous), utilisé pour regrouper les univers sur l'accueil du site (voir `home.md`). Ne varie pas d'une langue à l'autre : comme `gender`, `group` et `portrait-source` pour un personnage, il n'est pas porté par le frontmatter de `mosaic.fr.md`/`mosaic.en.md` mais par `_data/<slug-universe>/universe.yml` (voir "Organisation des fichiers") |
-| `cover-source` | Non | URL optionnelle vers la source de l'image de couverture (ex : page Wikipédia de l'image), affichée en crédit sur la tuile d'accueil (voir `home.md`). Distincte de `source-type` malgré la proximité de nom : l'une est la catégorie de l'univers, l'autre la source de son image. Comme `source-type`, ne varie pas d'une langue à l'autre : portée par `_data/<slug-universe>/universe.yml`, pas par le frontmatter |
+| `cover-source` | Non | Soit une URL optionnelle vers la source de l'image de couverture (ex : page Wikipédia de l'image), soit la valeur spéciale `ai-generated` quand la couverture est générée par IA faute de source réelle à créditer ; affichée en crédit sur la tuile d'accueil (voir `home.md`). Distincte de `source-type` malgré la proximité de nom : l'une est la catégorie de l'univers, l'autre la source de son image. Comme `source-type`, ne varie pas d'une langue à l'autre : portée par `_data/<slug-universe>/universe.yml`, pas par le frontmatter |
 | `characters` | — | Liste des personnages de l'univers |
 | `relations` | — | Liste des relations entre ces personnages |
 | `additional-relation-types` | — | Extensions locales à la taxonomie commune (voir "Type de relation") |
@@ -44,7 +44,7 @@ Porté par `_data/source-types.yml` (voir "Organisation des fichiers"). L'ordre 
 | `description` | Oui | Texte biographique court, affiché sur la fiche personnage |
 | `metadata` | Selon le champ | Champs libres optionnels selon l'univers (ex : dates de naissance/mort pour un personnage historique). Chaque clé utilisée doit être déclarée dans la taxonomie des clés de metadata (voir "Clé de metadata"), qui porte son libellé affiché et indique si la clé est localisée. La valeur d'une clé non localisée (le cas par défaut) est portée par `_data/<slug-universe>/characters.yml` ; celle d'une clé explicitement localisée reste dans le front matter du personnage |
 | `external-link` | Oui | URL optionnelle, peut différer par langue (ex : page Wikipédia FR ou EN) |
-| `portrait-source` | Non | URL optionnelle vers la source du portrait (ex : page Wikipédia de l'image). Le portrait étant un fichier unique partagé par toutes les langues (voir "Images"), sa source ne varie pas non plus : valeur unique, portée par `_data/<slug-universe>/characters.yml`. Distinct d'`external-link` : la source du portrait n'est pas nécessairement la même page que le lien externe du personnage |
+| `portrait-source` | Non | Soit une URL optionnelle vers la source du portrait (ex : page Wikipédia de l'image), soit la valeur spéciale `ai-generated` quand le portrait est généré par IA faute de source réelle à créditer (voir "Légende de portrait" dans `style-guide.md`). Le portrait étant un fichier unique partagé par toutes les langues (voir "Images"), sa source ne varie pas non plus : valeur unique, portée par `_data/<slug-universe>/characters.yml`. Distinct d'`external-link` : la source du portrait n'est pas nécessairement la même page que le lien externe du personnage |
 
 Le portrait (l'image) n'est pas un attribut : il est associé au personnage par convention de nommage (voir "Images"). Sa source, si renseignée, est portée par l'attribut `portrait-source`.
 
@@ -205,7 +205,7 @@ title: "Les aristocrates français à l'époque de Catherine de Médicis"
 
 ```yaml
 source-type: history
-cover-source: "https://commons.wikimedia.org/wiki/File:Cour_des_Valois.jpg"
+cover-source: ai-generated
 ```
 
 **Types de relations additionnels** (`_data/french-renaissance-aristocracy/additional-relation-types.yml`) :
@@ -376,6 +376,8 @@ relations:
 - Un slug de clé de metadata est unique globalement : un univers ne peut pas déclarer une clé additionnelle dont le slug existe déjà dans la taxonomie commune ou dans les extensions d'un autre univers.
 - Chaque clé de l'attribut `metadata` d'un personnage (dans `characters.yml` ou dans le front matter, selon son `localized`) doit exister dans la taxonomie commune des clés de metadata ou dans les extensions déclarées par l'univers.
 - L'attribut `gender` d'un personnage, dans `characters.yml`, quand il est renseigné, vaut `masculine` ou `feminine`.
+- L'attribut `portrait-source` d'un personnage, dans `characters.yml`, quand il est renseigné, vaut soit `ai-generated`, soit une URL.
+- L'attribut `cover-source` d'un univers, dans `universe.yml`, quand il est renseigné, vaut soit `ai-generated`, soit une URL.
 - L'attribut `lang` d'un fichier d'univers ou de personnage doit correspondre au suffixe de langue de son nom de fichier (`.fr.md` → `fr`, `.en.md` → `en`).
 - Pour une langue donnée, `mosaic.<lang>.md` et `graph.<lang>.md` existent ensemble ou pas du tout : un univers ne peut pas être disponible, dans une langue, sur une seule de ses deux vues.
 - Un `slug` de groupe est unique au sein de son univers (deux univers différents peuvent réutiliser le même slug de groupe, à la différence des types de relation et des clés de metadata).

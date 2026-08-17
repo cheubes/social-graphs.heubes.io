@@ -10,19 +10,18 @@
         loading="lazy"
         onerror="this.onerror=null; this.src='{{ placeholder_src }}';">
     </a>
-    {% if universe_data["cover-source"] %}
-      <a href="{{ universe_data['cover-source'] }}"
-        class="sg-universe-card-cover-credit"
-        target="_blank" rel="noopener"
-        aria-label="{{ ui['cover-source-label'] }}" title="{{ ui['cover-source-label'] }}">
-        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-      </a>
-    {% endif %}
   </div>
   <div class="card-body">
     <h2 class="card-title h5 sg-card-title">
       <a href="{{ universe.url | relative_url }}" class="sg-card-link text-decoration-none">{{ universe.title }}</a>
     </h2>
     <p class="card-text sg-card-text">{{ universe.content | strip_html }}</p>
+    {% if universe_data["cover-source"] == "ai-generated" %}
+      <p class="sg-universe-card-cover-caption">{{ ui["ai-generated-cover-label"] }}</p>
+    {% elsif universe_data["cover-source"] %}
+      <p class="sg-universe-card-cover-caption">
+        <a href="{{ universe_data['cover-source'] }}" target="_blank" rel="noopener">{{ ui["cover-source-label"] }}</a>
+      </p>
+    {% endif %}
   </div>
 </div>

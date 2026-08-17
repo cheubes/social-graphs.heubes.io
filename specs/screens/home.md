@@ -12,7 +12,7 @@ Permettre au visiteur de découvrir les univers disponibles et d'accéder à cel
   - À l'intérieur d'une section, mosaïque de tuiles, une tuile par univers de ce type de source disponible dans la langue courante (un univers non traduit dans cette langue n'apparaît pas, voir "Multilingue" dans `functional-specifications.md`).
 - Chaque tuile affiche l'image de couverture, le `title`, la `description` de l'univers, et une mention de crédit de la couverture si `cover-source` est renseigné (voir `data-model.md`).
   - Toutes les tuiles ont exactement la même hauteur (voir `style-guide.md`). Le `title` et la `description` ne sont pas tronqués : si leur contenu dépasse la hauteur disponible sous la couverture, cette zone devient défilable, la couverture restant fixe.
-  - Le crédit de la couverture, si renseigné, s'affiche en surimpression dans le coin en bas à droite de la tuile (voir `style-guide.md`) et ouvre `cover-source` dans un nouvel onglet.
+  - Le crédit de la couverture, si renseigné, s'affiche en fin de contenu de la tuile, aligné à droite (voir `style-guide.md`) : un lien qui ouvre `cover-source` dans un nouvel onglet si c'est une URL, ou une mention indiquant que la couverture est générée par IA si `cover-source` vaut `ai-generated` (voir "Univers" dans `data-model.md`).
   - L'image de couverture se charge en lazy loading (chargée uniquement à l'approche de la zone visible de l'écran), pour limiter le poids initial de la page ; son traitement précis relève de `technical-specifications.md`.
 - Dans chaque section, les tuiles sont triées par ordre alphabétique de `title`, dans la langue courante.
 - Pied de page : badge Creative Commons et mention de réalisation, communs à toutes les pages (voir `style-guide.md`).

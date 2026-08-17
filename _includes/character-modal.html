@@ -32,11 +32,6 @@
               class="sg-character-modal-portrait"
               loading="lazy"
               onerror="this.onerror=null; this.src='{{ placeholder_src }}';">
-            {% if char_data["portrait-source"] %}
-              <figcaption class="sg-character-modal-portrait-caption">
-                <a href="{{ char_data['portrait-source'] }}" target="_blank" rel="noopener">{{ ui["portrait-source-label"] }}</a>
-              </figcaption>
-            {% endif %}
           </figure>
 
           <h2 id="sg-character-modal-title" class="sg-character-modal-title">{{ character["character-name"] }}</h2>
@@ -114,6 +109,14 @@
               {% endfor %}
               {% unless prev_group == "" %}</ul>{% endunless %}
             </div>
+          {% endif %}
+
+          {% if char_data["portrait-source"] == "ai-generated" %}
+            <p class="sg-character-modal-portrait-caption">{{ ui["ai-generated-portrait-label"] }}</p>
+          {% elsif char_data["portrait-source"] %}
+            <p class="sg-character-modal-portrait-caption">
+              <a href="{{ char_data['portrait-source'] }}" target="_blank" rel="noopener">{{ ui["portrait-source-label"] }}</a>
+            </p>
           {% endif %}
         {% endif %}
       </div>
