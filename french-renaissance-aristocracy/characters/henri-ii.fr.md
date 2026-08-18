@@ -6,4 +6,4 @@ character-name: "Henri II"
 external-link: "https://fr.wikipedia.org/wiki/Henri_II_(roi_de_France)"
 ---
 
-Roi de France de 1547 à sa mort, il épouse Catherine de Médicis et poursuit les guerres d'Italie tout en luttant contre la Réforme protestante. Il meurt des suites d'une blessure reçue lors d'un tournoi, un éclat de lance de Gabriel de Montgommery lui perçant l'œil.
+Second fils de François Ier, il passe une partie de son enfance en otage en Espagne après la défaite de son père à Pavie, avant de devenir roi de France en 1547. Il poursuit les guerres d'Italie jusqu'au traité du Cateau-Cambrésis en 1559, qui met fin au conflit et scelle la paix par le mariage de sa fille Élisabeth avec Philippe II d'Espagne. Marié à Catherine de Médicis mais durablement attaché à sa favorite Diane de Poitiers, il lutte aussi contre la diffusion du protestantisme dans le royaume. Il meurt dix jours après avoir été blessé à l'œil par un éclat de lance lors d'un tournoi donné pour célébrer la paix, Gabriel de Montgommery n'ayant pu retenir son coup.

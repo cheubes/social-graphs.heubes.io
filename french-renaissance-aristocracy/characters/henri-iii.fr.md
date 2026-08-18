@@ -6,4 +6,4 @@ character-name: "Henri III"
 external-link: "https://fr.wikipedia.org/wiki/Henri_III_(roi_de_France)"
 ---
 
-Dernier fils de Catherine de Médicis à régner, il monte sur le trône de France en 1574 après avoir été élu roi de Pologne. Son règne est marqué par les guerres de Religion et s'achève par son assassinat.
+Fils préféré de Catherine de Médicis, il se distingue comme chef militaire dès dix-huit ans en remportant les batailles de Jarnac et de Moncontour contre les protestants en 1569. Élu roi de Pologne en 1573, il quitte précipitamment Cracovie l'année suivante à l'annonce de la mort de son frère Charles IX pour monter sur le trône de France. Marié à Louise de Lorraine en 1575, il gouverne un royaume déchiré entre la Ligue catholique et les protestants, et fait assassiner Henri de Guise et le cardinal de Lorraine au château de Blois en décembre 1588 pour reprendre la main. Rallié à Henri de Navarre contre la Ligue, il meurt assassiné par le moine Jacques Clément en août 1589, dernier roi de la dynastie des Valois.
