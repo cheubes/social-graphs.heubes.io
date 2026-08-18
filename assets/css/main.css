@@ -240,6 +240,7 @@ small {
 
 .sg-card-text {
   color: var(--sg-grey);
+  text-align: justify;
 }
 
 /* Footer */
@@ -348,6 +349,7 @@ small {
 
 .sg-character-modal-description {
   color: var(--sg-grey);
+  text-align: justify;
 }
 
 .sg-character-modal-metadata {

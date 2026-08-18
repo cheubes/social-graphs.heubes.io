@@ -104,14 +104,14 @@ Pas de grille ni d'échelle d'espacement custom : la grille et les classes utili
 ### Tuiles (mosaïques)
 
 - Carte Bootstrap : image (couverture ou portrait) en lazy loading (voir `home.md`, `universe-home.md`), `title`/`character-name` en titre, `description` en corps (tronquée, sauf tuile univers de l'accueil, voir ci-dessous).
-- Fond `--sg-white`, titre `--sg-dark-grey`, texte `--sg-grey`, bordure `--sg-light-grey`.
+- Fond `--sg-white`, titre `--sg-dark-grey`, texte `--sg-grey` justifié, bordure `--sg-light-grey`.
 - Survol : légère élévation (ombre) et bordure `--sg-gold`.
 - Tuile univers (accueil, voir `home.md`) uniquement : hauteur fixe, identique pour toutes les tuiles (couverture proportionnée à son ratio fixe, voir "Images", suivie d'une zone de texte à hauteur fixe pour le `title` et la `description`). Cette zone de texte n'est pas tronquée : si son contenu dépasse la hauteur disponible, elle devient défilable (`overflow-y: auto`), la couverture au-dessus restant fixe, hors du défilement. Mention de crédit de la couverture (`cover-source`, si renseigné, voir `data-model.md`) : texte secondaire italique en fin de contenu de cette zone, aligné à droite (même traitement que la mention de source du portrait de la fiche personnage, voir "Modale" ci-dessous) ; si c'est une URL, un lien suit la règle des liens de la modale ; si c'est la valeur spéciale `ai-generated`, texte simple sans lien.
 - Tuile personnage (voir `universe-home.md`) uniquement : hauteur fixe, identique pour toutes les tuiles (portrait proportionné à son ratio fixe, voir "Images", suivi d'une zone de texte à hauteur fixe pour le `character-name` et la `description`). Contrairement à la tuile univers ci-dessus, cette zone n'est pas défilable : la `description` y est tronquée dès que son contenu dépasse la hauteur disponible, à une limite de mot (jamais au milieu d'un mot), la marque de troncature ("...") étant précédée d'une espace insécable. Bordure de 10px entre le portrait et le corps de la tuile (nom, description), de la couleur du groupe d'appartenance du personnage si renseigné (voir "Groupe" dans `data-model.md`), blanche sinon ; logo de ce groupe, si renseigné, affiché dans le coin en bas à droite de la tuile.
 
 ### Modale (fiche personnage)
 
-- Modale Bootstrap standard. Fond `--sg-white`, `character-name` en titre `--sg-dark-grey`, corps `--sg-grey`, libellés de relation `--sg-blue`.
+- Modale Bootstrap standard. Fond `--sg-white`, `character-name` en titre `--sg-dark-grey`, corps `--sg-grey` justifié, libellés de relation `--sg-blue`.
 - Liens de la fiche (personnage lié, lien externe, source du portrait) : `--sg-gold` de base, `--sg-grey` au survol, jamais soulignés. Le lien externe inclut son icône (voir "Iconographie").
 - Mention de source du portrait (`portrait-source`, si renseigné) : texte secondaire italique en fin de fiche, aligné à droite (graisse 300, `--sg-grey`, voir "Typographie") ; si c'est une URL, un lien suit la règle ci-dessus ; si c'est la valeur spéciale `ai-generated` (voir `data-model.md`), texte simple sans lien.
 - Bordure haute de 10px, de la couleur du groupe d'appartenance du personnage si renseigné (voir "Groupe" dans `data-model.md`), blanche sinon ; logo de ce groupe, si renseigné, affiché dans le coin en haut à gauche de la modale.
