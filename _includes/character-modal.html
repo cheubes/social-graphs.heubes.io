@@ -36,7 +36,7 @@
 
           <h2 id="sg-character-modal-title" class="sg-character-modal-title">{{ character["character-name"] }}</h2>
 
-          <div class="sg-character-modal-description">{{ character.content }}</div>
+          <div class="sg-character-modal-description">{{ character.content | markdownify }}</div>
 
           {% assign local_metadata = character["metadata"] %}
           {% assign shared_metadata = char_data["metadata"] %}
