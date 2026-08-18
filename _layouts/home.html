@@ -4,6 +4,23 @@ layout: default
 {% assign lang = page.lang | default: site.lang %}
 {% assign ui_key = "ui" | append: lang %}
 {% assign ui = site.data[ui_key] %}
+{% assign json_ld_image_url = "/assets/img/logo.png" | absolute_url %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "contentUrl": {{ json_ld_image_url | jsonify }},
+  "url": {{ json_ld_image_url | jsonify }},
+  "name": {{ site.title | jsonify }},
+  "creator": {
+    "@type": "Person",
+    "name": "Christophe Heubès"
+  },
+  "creditText": "Christophe Heubès",
+  "copyrightNotice": "CC Christophe Heubès",
+  "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr"
+}
+</script>
 
 <section class="sg-home">
   <h1 class="sg-home-title">{{ ui["home-title"] }}</h1>

@@ -13,6 +13,34 @@ layout: default
   {% assign modal_character = page %}
 {% endif %}
 
+{% assign image_credits = site.data[universe_slug]["image-credits"] %}
+{% if is_character_page %}
+  {% assign char_slug = page.name | split: "." | first %}
+  {% assign json_ld_image_url = universe_slug | append: "/characters/" | append: char_slug | append: ".jpg" | absolute_url %}
+  {% assign json_ld_image_name = modal_character["character-name"] %}
+  {% assign json_ld_image_credit = image_credits[char_slug] %}
+{% else %}
+  {% assign json_ld_image_url = universe_slug | append: "/cover.jpg" | absolute_url %}
+  {% assign json_ld_image_name = mosaic_page.title %}
+  {% assign json_ld_image_credit = image_credits["cover"] %}
+{% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "contentUrl": {{ json_ld_image_url | jsonify }},
+  "url": {{ json_ld_image_url | jsonify }},
+  "name": {{ json_ld_image_name | jsonify }}{% if json_ld_image_credit %},
+  "creator": {
+    "@type": "Person",
+    "name": {{ json_ld_image_credit.creator | jsonify }}
+  },
+  "creditText": {{ json_ld_image_credit.credit | jsonify }},
+  "copyrightNotice": {{ json_ld_image_credit["copyright-notice"] | jsonify }},
+  "license": {{ json_ld_image_credit.license | jsonify }}{% endif %}
+}
+</script>
+
 <section class="sg-universe">
   {% include resolve-universe-characters.html %}
 
