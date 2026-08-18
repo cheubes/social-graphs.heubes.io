@@ -255,7 +255,7 @@ Règles vérifiées, dans l'ordre de "Contraintes et règles de validation" de `
 - Images de couverture et portraits en lazy loading (voir `home.md`, `universe-home.md`) via l'attribut natif `loading="lazy"`, sans bibliothèque dédiée.
 - D3.js chargé uniquement sur les pages Vue Graphe qui en ont besoin.
 - JavaScript non bloquant (`defer` sur tous les scripts).
-- Images optimisées (WebP si possible).
+- Images optimisées à l'ajout de contenu : JPEG encodé en 4:2:0 (sous-échantillonnage chroma standard web), qualité ~82, progressif, table de Huffman optimisée ; PNG recompressé sans perte. Dimensions au plus proche des minimums recommandés dans `style-guide.md` plutôt que livrées surdimensionnées par rapport à leur usage réel (ex : un logo de groupe n'est jamais affiché à plus de quelques dizaines de pixels). Pas de WebP : le format JPEG/PNG est imposé par `data-model.md` et `style-guide.md`.
 - `rel="preconnect"` sur Google Fonts, si une police externe est retenue dans `style-guide.md`.
 - Pas de cookies, pas de tracking, pas d'analytics.
 
@@ -279,6 +279,8 @@ Règles vérifiées, dans l'ordre de "Contraintes et règles de validation" de `
 - Liens `hreflang` / alternate entre les versions FR et EN d'une même page.
 - `jekyll-seo-tag` (plugin supporté nativement par GitHub Pages) pour les balises meta et Open Graph de base.
 - `jekyll-sitemap` (plugin supporté nativement par GitHub Pages) pour un `sitemap.xml` généré automatiquement, utile vu le nombre de pages générées (univers, personnages, deux langues). Le plugin ne permettant pas d'y ajouter les alternates `hreflang` par URL, un `sitemap.xml` propre au projet (racine du dépôt) remplace celui du plugin (mécanisme natif du plugin, qui ne génère le sien qu'en l'absence d'un fichier existant) pour les y inclure ; le plugin reste actif pour `robots.txt`.
+- Le sitemap inclut, via l'extension Google Image (`xmlns:image`), la couverture de chaque page Vue Mosaïque, le portrait de chaque fiche personnage, et le logo du site sur l'accueil. Les logos de groupe et le placeholder de couverture en sont exclus.
+- Un bloc JSON-LD `ImageObject` (distinct de celui généré par `jekyll-seo-tag`) est ajouté sur ces mêmes pages, enrichi de l'auteur, de la mention de crédit, du copyright et de la licence de l'image (voir `_data/<slug-universe>/image-credits.yml` dans `data-model.md`).
 
 ---
 
