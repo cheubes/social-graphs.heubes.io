@@ -17,6 +17,7 @@
 - slug: ambrogio-de-predis
   gender: masculine
   group: milan
+  portrait-source: ai-generated
   metadata:
     birth: "~1455"
     death: ">1508"
@@ -144,6 +145,7 @@
 - slug: domenico-veneziano
   gender: masculine
   group: florence
+  portrait-source: ai-generated
   metadata:
     birth: "~1410"
     death: "1461"
