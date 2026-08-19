@@ -1,0 +1,23 @@
+- slug: caesarians
+  name:
+    fr: "Césariens"
+    en: "Caesarians"
+  color: "#8a1f2b"
+
+- slug: optimates
+  name:
+    fr: "Optimates"
+    en: "Optimates"
+  color: "#5c4a8a"
+
+- slug: liberatores
+  name:
+    fr: "Liberatores"
+    en: "Liberatores"
+  color: "#3d4f5c"
+
+- slug: second-triumvirate
+  name:
+    fr: "Second triumvirat"
+    en: "Second Triumvirate"
+  color: "#a3742c"

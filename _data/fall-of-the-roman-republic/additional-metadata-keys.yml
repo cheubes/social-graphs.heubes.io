@@ -1,0 +1,29 @@
+- slug: birth-year
+  label:
+    fr: "Naissance"
+    en: "Born"
+  localized: true
+
+- slug: death-year
+  label:
+    fr: "Décès"
+    en: "Died"
+  localized: true
+
+- slug: magistracy
+  label:
+    fr: "Magistrature"
+    en: "Magistracy"
+  localized: true
+
+- slug: province
+  label:
+    fr: "Province gouvernée"
+    en: "Governed province"
+  localized: true
+
+- slug: cause-of-death
+  label:
+    fr: "Cause de la mort"
+    en: "Cause of death"
+  localized: true

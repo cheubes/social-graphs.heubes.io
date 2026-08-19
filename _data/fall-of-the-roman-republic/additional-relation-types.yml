@@ -1,0 +1,61 @@
+- slug: conspirator-of
+  label:
+    fr:
+      masculine: "Coconspirateur de"
+      feminine: "Coconspiratrice de"
+      neutral: "Coconspirateur•rice de"
+    en:
+      masculine: "Fellow conspirator of"
+      feminine: "Fellow conspirator of"
+      neutral: "Fellow conspirator of"
+  directed: false
+
+- slug: triumvir-with
+  label:
+    fr:
+      masculine: "Triumvir avec"
+      feminine: "Triumvir avec"
+      neutral: "Triumvir avec"
+    en:
+      masculine: "Fellow triumvir of"
+      feminine: "Fellow triumvir of"
+      neutral: "Fellow triumvir of"
+  directed: false
+
+- slug: betrayer-of
+  label:
+    fr:
+      masculine: "Traître envers"
+      feminine: "Traîtresse envers"
+      neutral: "Traître•esse envers"
+    en:
+      masculine: "Betrayer of"
+      feminine: "Betrayer of"
+      neutral: "Betrayer of"
+  reverse-label:
+    fr:
+      masculine: "Trahi par"
+      feminine: "Trahie par"
+    en:
+      masculine: "Betrayed by"
+      feminine: "Betrayed by"
+  directed: true
+
+- slug: successor-of
+  label:
+    fr:
+      masculine: "Successeur de"
+      feminine: "Successeure de"
+      neutral: "Successeur•e de"
+    en:
+      masculine: "Successor of"
+      feminine: "Successor of"
+      neutral: "Successor of"
+  reverse-label:
+    fr:
+      masculine: "Prédécesseur de"
+      feminine: "Prédécesseure de"
+    en:
+      masculine: "Predecessor of"
+      feminine: "Predecessor of"
+  directed: true

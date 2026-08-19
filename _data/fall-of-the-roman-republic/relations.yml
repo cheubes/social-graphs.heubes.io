@@ -1,0 +1,463 @@
+relations:
+  - source-character: augustus
+    target-character: julius-caesar
+    type: successor-of
+    description:
+      fr: "Adopté par testament par Jules César, Octave se présente comme son héritier et le vengeur de son assassinat, fondant sa légitimité politique sur cette filiation."
+      en: "Adopted by will by Julius Caesar, Octavian presented himself as his heir and avenger, founding his political legitimacy on this succession."
+  - source-character: augustus
+    target-character: livia-drusilla
+    type: married-to
+    description:
+      fr: "Octave épouse Livie en 38 av. J.-C., peu après qu'elle a divorcé de son premier mari alors qu'elle était enceinte ; leur union durera plus de cinquante ans."
+      en: "Octavian married Livia in 38 BC, shortly after she divorced her first husband while pregnant; their union would last more than fifty years."
+  - source-character: augustus
+    target-character: marcus-aemilius-lepidus
+    type: betrayer-of
+    description:
+      fr: "Après avoir utilisé Lépide pour vaincre Sextus Pompée en Sicile en 36 av. J.-C., Octave l'accuse de trahison et le dépouille de tous ses pouvoirs, ne lui laissant que le titre honorifique de grand pontife."
+      en: "After using Lepidus to defeat Sextus Pompey in Sicily in 36 BC, Octavian accused him of treason and stripped him of all his powers, leaving him only the honorary title of Pontifex Maximus."
+  - source-character: augustus
+    target-character: marcus-aemilius-lepidus
+    type: triumvir-with
+    description:
+      fr: "Antoine, Octave et Lépide forment en 43 av. J.-C. le second triumvirat, une magistrature d'exception qui leur donne des pouvoirs quasi absolus pour cinq ans, renouvelés une fois."
+      en: "In 43 BC, Antony, Octavian and Lepidus form the Second Triumvirate, an extraordinary magistracy granting them near-absolute powers for five years, later renewed once."
+  - source-character: cato-the-younger
+    target-character: pompey
+    type: ally-of
+    description:
+      fr: "Bien qu'il ait longtemps combattu son ambition personnelle, Caton se rallie à Pompée à l'approche de la guerre civile, jugeant son autorité moindre mal face à celle de César."
+      en: "Though he had long opposed his personal ambition, Cato rallied to Pompey as civil war approached, judging his authority the lesser evil compared to Caesar's."
+  - source-character: cato-the-younger
+    target-character: porcia
+    type: parent-of
+    description:
+      fr: "Caton marie sa fille Porcia à son allié Bibulus, puis, veuve, à son propre neveu Brutus, resserrant les liens entre les familles les plus attachées à la cause sénatoriale."
+      en: "Cato married his daughter Porcia to his ally Bibulus, then, once widowed, to his own nephew Brutus, tightening the bonds between the families most committed to the senatorial cause."
+  - source-character: cleopatra-vii
+    target-character: julius-caesar
+    type: lover-of
+    description:
+      fr: "Cléopâtre s'allie à Jules César lors de son séjour en Égypte et lui donne un fils, Césarion, dont la paternité ne sera jamais reconnue publiquement."
+      en: "Cleopatra allied herself with Julius Caesar during his stay in Egypt and bore him a son, Caesarion, whose paternity he never publicly acknowledged."
+  - source-character: cornelia-cinna
+    target-character: julia-caesaris
+    type: parent-of
+    description:
+      fr: "Cornelia donne naissance à Julia en 76 av. J.-C., peu avant sa propre mort."
+      en: "Cornelia gave birth to Julia in 76 BC, not long before her own death."
+  - source-character: decimus-junius-brutus-albinus
+    target-character: gaius-trebonius
+    type: conspirator-of
+    description:
+      fr: "Tous deux anciens généraux de César passés dans le camp des conjurés, ils mettent leur expérience militaire au service du complot."
+      en: "Both former Caesarian generals turned conspirators, they bring their military experience to the plot."
+  - source-character: fulvia
+    target-character: augustus
+    type: rival-of
+    description:
+      fr: "En l'absence d'Antoine, Fulvia s'oppose ouvertement à Octave et déclenche en 41 av. J.-C. la guerre de Pérouse, qui se solde par sa défaite et son exil."
+      en: "In Antony's absence, Fulvia openly opposed Octavian and triggered the Perusine War in 41 BC, which ended in her defeat and exile."
+  - source-character: fulvia
+    target-character: cleopatra-vii
+    type: rival-of
+    description:
+      fr: "Fulvia voit d'un mauvais œil la liaison de son mari avec Cléopâtre, une rivalité qui envenime ses relations avec Antoine jusqu'à sa mort en exil."
+      en: "Fulvia resented her husband's affair with Cleopatra, a rivalry that strained her relationship with Antony until her death in exile."
+  - source-character: gaius-asinius-pollio
+    target-character: julius-caesar
+    type: ally-of
+    description:
+      fr: "Pollion rejoint César dès le passage du Rubicon en 49 av. J.-C. et sert sous ses ordres en Afrique, en Illyrie puis en Espagne."
+      en: "Pollio joined Caesar as soon as he crossed the Rubicon in 49 BC and served under him in Africa, Illyria and Spain."
+  - source-character: gaius-asinius-pollio
+    target-character: mark-antony
+    type: ally-of
+    description:
+      fr: "Après l'assassinat de César, Pollion se range du côté de Marc Antoine, dont il gouverne un temps la Gaule cisalpine."
+      en: "After Caesar's assassination, Pollio sided with Mark Antony, for whom he governed Cisalpine Gaul for a time."
+  - source-character: gaius-cassius-longinus
+    target-character: gaius-trebonius
+    type: conspirator-of
+    description:
+      fr: "Cassius, considéré comme le véritable instigateur du complot, compte Trebonius parmi les premiers ralliés à sa cause."
+      en: "Cassius, regarded as the plot's true instigator, counts Trebonius among the first to join his cause."
+  - source-character: gaius-claudius-marcellus
+    target-character: cato-the-younger
+    type: ally-of
+    description:
+      fr: "Marcellus et Caton mènent de concert, au Sénat, l'offensive politique visant à priver César de son commandement en Gaule avant l'échéance légale."
+      en: "Marcellus and Cato jointly led the political offensive in the Senate aimed at stripping Caesar of his Gallic command before its legal expiry."
+  - source-character: gaius-claudius-marcellus
+    target-character: julius-caesar
+    type: rival-of
+    description:
+      fr: "Consul en 50 av. J.-C., Marcellus multiplie les manœuvres pour faire rappeler César de Gaule avant le terme légal de son commandement, contribuant à précipiter la rupture qui mène à la guerre civile."
+      en: "As consul in 50 BC, Marcellus repeatedly tried to have Caesar recalled from Gaul before the legal end of his command, helping to precipitate the break that led to civil war."
+  - source-character: gaius-maecenas
+    target-character: augustus
+    type: friend-of
+    description:
+      fr: "Conseiller et diplomate de confiance, Mécène négocie pour Octave le traité de Brindes en 40 av. J.-C. et administre Rome en son absence."
+      en: "A trusted adviser and diplomat, Maecenas negotiated the Treaty of Brundisium for Octavian in 40 BC and administered Rome in his absence."
+  - source-character: gaius-marius
+    target-character: lucius-cornelius-sulla
+    type: rival-of
+    description:
+      fr: "La rivalité entre Marius, chef des populares, et Sylla, chef des optimates, dégénère à partir de 88 av. J.-C. en guerre civile ouverte."
+      en: "The rivalry between Marius, leader of the populares, and Sulla, leader of the optimates, degenerated after 88 BC into open civil war."
+  - source-character: gaius-scribonius-curio
+    target-character: fulvia
+    type: married-to
+    description:
+      fr: "Curion épouse Fulvie, qui se remariera après sa mort avec Marc Antoine."
+      en: "Curio married Fulvia, who remarried Mark Antony after his death."
+  - source-character: gaius-scribonius-curio
+    target-character: julius-caesar
+    type: ally-of
+    description:
+      fr: "César paie les dettes de Curion en échange de son ralliement ; devenu tribun acquis à sa cause, Curion joue un rôle décisif dans la crise de 50-49 av. J.-C."
+      en: "Caesar paid off Curio's debts in exchange for his allegiance; as a tribune won over to his cause, Curio played a decisive part in the crisis of 50-49 BC."
+  - source-character: julia-caesaris
+    target-character: pompey
+    type: married-to
+    description:
+      fr: "César marie sa fille Julia à Pompée en 59 av. J.-C. pour sceller l'alliance du premier triumvirat ; le mariage se révèle heureux."
+      en: "Caesar married his daughter Julia to Pompey in 59 BC to seal the First Triumvirate's alliance; the marriage proved a happy one."
+  - source-character: julius-caesar
+    target-character: calpurnia-pisonis
+    type: married-to
+    description:
+      fr: "César épouse Calpurnia en 59 av. J.-C. ; elle reste sa femme jusqu'à son assassinat en 44 av. J.-C."
+      en: "Caesar married Calpurnia in 59 BC; she remained his wife until his assassination in 44 BC."
+  - source-character: julius-caesar
+    target-character: cato-the-younger
+    type: rival-of
+    description:
+      fr: "Chef de file des optimates, Caton d'Utique s'oppose sans relâche à César tout au long de sa carrière politique."
+      en: "As a leading figure of the optimates, Cato the Younger relentlessly opposed Caesar throughout his political career."
+  - source-character: julius-caesar
+    target-character: cornelia-cinna
+    type: married-to
+    description:
+      fr: "César épouse Cornelia en 84 av. J.-C. et refuse de la répudier sous la pression de Sylla, au péril de sa vie."
+      en: "Caesar married Cornelia in 84 BC and refused to divorce her under pressure from Sulla, at the risk of his life."
+  - source-character: julius-caesar
+    target-character: julia-caesaris
+    type: parent-of
+    description:
+      fr: "Julia est la fille unique de César et de sa première épouse Cornelia."
+      en: "Julia was Caesar's only child, born of his first wife, Cornelia."
+  - source-character: julius-caesar
+    target-character: marcus-licinius-crassus
+    type: triumvir-with
+    description:
+      fr: "Crassus finance en partie la carrière politique de César avant de s'associer à lui au sein du premier triumvirat."
+      en: "Crassus partly financed Caesar's early political career before joining him within the First Triumvirate."
+  - source-character: julius-caesar
+    target-character: pompey
+    type: triumvir-with
+    description:
+      fr: "César, Pompée et Crassus forment en 60 av. J.-C. une alliance politique informelle, le premier triumvirat, qui domine la vie politique romaine pendant plusieurs années."
+      en: "In 60 BC, Caesar, Pompey and Crassus form an informal political alliance, the First Triumvirate, which dominates Roman political life for several years."
+  - source-character: lucius-cornelius-cinna
+    target-character: cornelia-cinna
+    type: parent-of
+    description:
+      fr: "Cornelia est la fille de Cinna ; il la marie au jeune César en 84 av. J.-C."
+      en: "Cornelia was Cinna's daughter; he married her to the young Caesar in 84 BC."
+  - source-character: lucius-cornelius-cinna
+    target-character: gaius-marius
+    type: successor-of
+    description:
+      fr: "Cinna prend la tête du parti populaire à la mort de Marius, en 86 av. J.-C."
+      en: "Cinna took over leadership of the popular faction on Marius's death in 86 BC."
+  - source-character: lucius-cornelius-cinna
+    target-character: julius-caesar
+    type: ally-of
+    description:
+      fr: "Beau-père et protecteur politique du jeune César, Cinna l'associe durablement au camp populaire."
+      en: "As his father-in-law and political patron, Cinna tied the young Caesar lastingly to the popular cause."
+  - source-character: lucius-domitius-ahenobarbus
+    target-character: cato-the-younger
+    type: ally-of
+    description:
+      fr: "Marié à la sœur de Caton, Ahenobarbus est l'un de ses plus proches alliés au sein du noyau le plus intransigeant du parti sénatorial."
+      en: "Married to Cato's sister, Ahenobarbus was one of his closest allies within the most uncompromising core of the senatorial party."
+  - source-character: lucius-domitius-ahenobarbus
+    target-character: julius-caesar
+    type: rival-of
+    description:
+      fr: "Adversaire de longue date de César, qu'il tente en vain de faire remplacer à la tête des Gaules, Ahenobarbus défend seul Corfinium en 49 av. J.-C. avant d'être gracié puis de reprendre les armes jusqu'à sa mort à Pharsale."
+      en: "A long-standing opponent of Caesar, whom he vainly tried to have replaced as governor of Gaul, Ahenobarbus defended Corfinium alone in 49 BC before being pardoned and taking up arms again until his death at Pharsalus."
+  - source-character: lucius-tillius-cimber
+    target-character: gaius-cassius-longinus
+    type: conspirator-of
+    description:
+      fr: "Cimber rejoint le noyau de conjurés réuni autour de Cassius, qui lui promet le gouvernement de la Bithynie et du Pont."
+      en: "Cimber joins the core group of conspirators gathered around Cassius, who secures him the governorship of Bithynia and Pontus."
+  - source-character: marcus-calpurnius-bibulus
+    target-character: julius-caesar
+    type: rival-of
+    description:
+      fr: "Collègue consul de César en 59 av. J.-C., Bibulus s'oppose à toute sa législation par l'obstruction, jusqu'à être chassé du forum par les partisans de César et se retirer chez lui pour le reste de son mandat."
+      en: "Caesar's colleague as consul in 59 BC, Bibulus opposed his entire legislative programme through obstruction, until Caesar's supporters drove him from the forum and he withdrew to his house for the rest of his term."
+  - source-character: marcus-calpurnius-bibulus
+    target-character: porcia
+    type: married-to
+    description:
+      fr: "Bibulus épouse Porcia, fille de Caton, qui lui donne plusieurs fils avant de se remarier, après sa mort en 48 av. J.-C., avec Brutus."
+      en: "Bibulus married Porcia, Cato's daughter, who bore him several sons before remarrying, after his death in 48 BC, to Brutus."
+  - source-character: marcus-junius-brutus
+    target-character: decimus-junius-brutus-albinus
+    type: conspirator-of
+    description:
+      fr: "Les deux Brutus, sans lien de parenté proche malgré leur nom commun, comptent parmi les principaux instigateurs du complot ; c'est Decimus qui s'assure que César se rende bien au Sénat le jour fatal."
+      en: "The two Brutuses, not closely related despite sharing a name, are among the plot's principal instigators; it is Decimus who makes sure Caesar actually goes to the Senate on the fatal day."
+  - source-character: marcus-junius-brutus
+    target-character: gaius-cassius-longinus
+    type: conspirator-of
+    description:
+      fr: "Brutus et Cassius organisent ensemble le complot qui aboutit à l'assassinat de César aux ides de mars 44 av. J.-C., puis combattent côte à côte jusqu'à leur défaite commune à Philippes."
+      en: "Brutus and Cassius jointly organize the plot that leads to Caesar's assassination on the Ides of March 44 BC, then fight side by side until their shared defeat at Philippi."
+  - source-character: marcus-junius-brutus
+    target-character: julius-caesar
+    type: betrayer-of
+    description:
+      fr: "Épargné et comblé de faveurs par César après Pharsale, Brutus retourne contre lui son intégrité et son prestige en devenant la figure de proue du complot qui le tue aux ides de mars 44 av. J.-C."
+      en: "Spared and showered with favours by Caesar after Pharsalus, Brutus turns his integrity and prestige against him, becoming the figurehead of the plot that kills him on the Ides of March 44 BC."
+  - source-character: marcus-junius-brutus
+    target-character: porcia
+    type: married-to
+    description:
+      fr: "Brutus épouse sa cousine Porcia, fille de Caton d'Utique, en 45 av. J.-C., après avoir divorcé de Claudia."
+      en: "Brutus marries his cousin Porcia, daughter of Cato the Younger, in 45 BC, after divorcing Claudia."
+  - source-character: marcus-licinius-crassus
+    target-character: pompey
+    type: rival-of
+    description:
+      fr: "Consuls ensemble en 70 av. J.-C., Crassus et Pompée sont des rivaux dont l'antagonisme n'est apaisé que par leur alliance commune avec César."
+      en: "Co-consuls in 70 BC, Crassus and Pompey were rivals whose antagonism was only eased by their shared alliance with Caesar."
+  - source-character: marcus-licinius-crassus
+    target-character: pompey
+    type: triumvir-with
+    description:
+      fr: "Malgré une rivalité tenace, Crassus et Pompée s'associent à César en 60 av. J.-C. pour former le premier triumvirat."
+      en: "Despite a persistent rivalry, Crassus and Pompey joined Caesar in 60 BC to form the First Triumvirate."
+  - source-character: marcus-tullius-cicero
+    target-character: mark-antony
+    type: rival-of
+    description:
+      fr: "Dans les Philippiques, série de discours prononcés après l'assassinat de César, Cicéron attaque violemment Marc Antoine, qui le fait inscrire sur les listes de proscription et exécuter en 43 av. J.-C."
+      en: "In the Philippics, a series of speeches delivered after Caesar's assassination, Cicero fiercely attacked Mark Antony, who had him placed on the proscription lists and executed in 43 BC."
+  - source-character: marcus-tullius-cicero
+    target-character: pompey
+    type: ally-of
+    description:
+      fr: "Cicéron voit en Pompée le rempart légitime des institutions républicaines et choisit son camp au déclenchement de la guerre civile, non sans réserves sur ses talents de stratège."
+      en: "Cicero saw Pompey as the legitimate bulwark of republican institutions and sided with him at the outbreak of civil war, though not without reservations about his skills as a strategist."
+  - source-character: marcus-vipsanius-agrippa
+    target-character: augustus
+    type: friend-of
+    description:
+      fr: "Compagnons depuis leurs études communes à Apollonia, Agrippa reste jusqu'à sa mort le plus fidèle soutien militaire et politique d'Octave."
+      en: "Companions since their shared studies at Apollonia, Agrippa remained until his death Octavian's most loyal military and political supporter."
+  - source-character: marcus-vipsanius-agrippa
+    target-character: mark-antony
+    type: rival-of
+    description:
+      fr: "Commandant la flotte d'Octave, Agrippa inflige à Marc Antoine et Cléopâtre une défaite décisive à la bataille d'Actium en 31 av. J.-C."
+      en: "Commanding Octavian's fleet, Agrippa inflicted a decisive defeat on Mark Antony and Cleopatra at the Battle of Actium in 31 BC."
+  - source-character: marcus-vipsanius-agrippa
+    target-character: sextus-pompeius
+    type: rival-of
+    description:
+      fr: "Agrippa vainc la flotte de Sextus Pompée aux batailles de Mylae puis de Nauloque en 36 av. J.-C., mettant fin à sa résistance en Sicile."
+      en: "Agrippa defeated Sextus Pompey's fleet at the battles of Mylae and then Naulochus in 36 BC, ending his resistance in Sicily."
+  - source-character: mark-antony
+    target-character: augustus
+    type: triumvir-with
+    description:
+      fr: "Antoine, Octave et Lépide forment en 43 av. J.-C. le second triumvirat, une magistrature d'exception qui leur donne des pouvoirs quasi absolus pour cinq ans, renouvelés une fois."
+      en: "In 43 BC, Antony, Octavian and Lepidus form the Second Triumvirate, an extraordinary magistracy granting them near-absolute powers for five years, later renewed once."
+  - source-character: mark-antony
+    target-character: cleopatra-vii
+    type: lover-of
+    description:
+      fr: "Marc Antoine et Cléopâtre deviennent amants à partir de 41 av. J.-C., une liaison dont naissent trois enfants et qui scelle une alliance politique et militaire entre l'Égypte et l'Orient romain."
+      en: "Mark Antony and Cleopatra became lovers from 41 BC, a relationship that produced three children and sealed a political and military alliance between Egypt and the Roman East."
+  - source-character: mark-antony
+    target-character: fulvia
+    type: married-to
+    description:
+      fr: "Fulvia épouse Marc Antoine vers 47-46 av. J.-C., son troisième mari après Clodius et Curion, et s'implique activement dans sa carrière politique."
+      en: "Fulvia married Mark Antony around 47-46 BC, her third husband after Clodius and Curio, and was actively involved in his political career."
+  - source-character: mark-antony
+    target-character: marcus-aemilius-lepidus
+    type: triumvir-with
+    description:
+      fr: "Antoine, Octave et Lépide forment en 43 av. J.-C. le second triumvirat, une magistrature d'exception qui leur donne des pouvoirs quasi absolus pour cinq ans, renouvelés une fois."
+      en: "In 43 BC, Antony, Octavian and Lepidus form the Second Triumvirate, an extraordinary magistracy granting them near-absolute powers for five years, later renewed once."
+  - source-character: metellus-scipio
+    target-character: julius-caesar
+    type: rival-of
+    description:
+      fr: "Gouverneur de Syrie puis commandant en Afrique, Metellus Scipion poursuit la guerre contre César jusqu'à sa défaite à Thapsus, où il se donne la mort plutôt que de se rendre."
+      en: "As governor of Syria and later commander in Africa, Metellus Scipio continued the war against Caesar until his defeat at Thapsus, where he took his own life rather than surrender."
+  - source-character: metellus-scipio
+    target-character: pompey
+    type: ally-of
+    description:
+      fr: "Beau-père de Pompée par le mariage de sa fille Cornelia Metella, Metellus Scipion devient l'un de ses plus proches soutiens et commande le centre du dispositif pompéien à Pharsale."
+      en: "Pompey's father-in-law through the marriage of his daughter Cornelia Metella, Metellus Scipio became one of his closest supporters and commanded the centre of the Pompeian line at Pharsalus."
+  - source-character: octavia-minor
+    target-character: augustus
+    type: ally-of
+    description:
+      fr: "Octavie met son mariage avec Marc Antoine au service de la réconciliation avec son frère, obtenant notamment le traité de Tarente en 37 av. J.-C. qui prolonge leur fragile entente."
+      en: "Octavia put her marriage to Mark Antony in the service of reconciliation with her brother, notably securing the 37 BC Treaty of Tarentum, which extended their fragile understanding."
+  - source-character: octavia-minor
+    target-character: cleopatra-vii
+    type: rival-of
+    description:
+      fr: "Octavie et Cléopâtre se disputent l'attachement de Marc Antoine ; les donations d'Alexandrie de 34 av. J.-C., où Antoine distribue des titres royaux à ses enfants avec Cléopâtre, achèvent de discréditer publiquement Octavie."
+      en: "Octavia and Cleopatra vied for Mark Antony's attachment; the 34 BC Donations of Alexandria, in which Antony distributed royal titles to his children by Cleopatra, completed Octavia's public humiliation."
+  - source-character: octavia-minor
+    target-character: gaius-claudius-marcellus
+    type: married-to
+    description:
+      fr: "Octavie épouse Gaius Claudius Marcellus avant 54 av. J.-C. ; veuve à sa mort en 40 av. J.-C., elle lui donne trois enfants, dont le futur gendre et héritier désigné d'Auguste, Marcus Claudius Marcellus."
+      en: "Octavia married Gaius Claudius Marcellus before 54 BC; widowed at his death in 40 BC, she bore him three children, including Marcus Claudius Marcellus, Augustus's future son-in-law and designated heir."
+  - source-character: octavia-minor
+    target-character: mark-antony
+    type: married-to
+    description:
+      fr: "Le mariage d'Octavie avec Marc Antoine en 40 av. J.-C. scelle le traité de Brindes entre son frère et son mari ; Antoine la répudie vers 32 av. J.-C. pour Cléopâtre, offrant à Octave une arme de propagande décisive."
+      en: "Octavia's marriage to Mark Antony in 40 BC sealed the Treaty of Brundisium between her brother and her husband; Antony repudiated her around 32 BC for Cleopatra, handing Octavian a decisive propaganda weapon."
+  - source-character: pompey
+    target-character: julius-caesar
+    type: rival-of
+    description:
+      fr: "Alliés au sein du premier triumvirat, Pompée et César deviennent rivaux après la rupture de leur alliance familiale et politique, jusqu'à s'affronter dans la guerre civile qui s'achève par la défaite de Pompée à Pharsale."
+      en: "Allies within the First Triumvirate, Pompey and Caesar became rivals once their family and political alliance broke down, ultimately clashing in the civil war that ended with Pompey's defeat at Pharsalus."
+  - source-character: pompey
+    target-character: lucius-cornelius-sulla
+    type: successor-of
+    description:
+      fr: "Formé comme officier par Sylla, dont il reçoit le surnom de \"Magnus\", Pompée hérite après sa mort de l'ascendant du dictateur sur le parti sénatorial."
+      en: "Trained as an officer by Sulla, from whom he received the nickname \"Magnus\", Pompey inherited the dictator's ascendancy over the senatorial party after his death."
+  - source-character: ptolemy-xiii
+    target-character: cleopatra-vii
+    type: married-to
+    description:
+      fr: "Selon la coutume dynastique des Ptolémées, Ptolémée XIII épouse sa sœur aînée Cléopâtre VII à leur avènement conjoint en 51 av. J.-C., une union avant tout institutionnelle qui scelle leur corégence plutôt qu'un lien personnel."
+      en: "Following Ptolemaic dynastic custom, Ptolemy XIII married his elder sister Cleopatra VII when they jointly acceded to the throne in 51 BC, an institutional union sealing their co-regency rather than a personal bond."
+  - source-character: ptolemy-xiii
+    target-character: cleopatra-vii
+    type: rival-of
+    description:
+      fr: "Leur corégence tourne court : la cour de Ptolémée XIII chasse Cléopâtre en exil dès 48 av. J.-C., déclenchant un conflit dynastique que l'intervention de César tranche en faveur de cette dernière."
+      en: "Their co-regency quickly broke down: Ptolemy XIII's court drove Cleopatra into exile as early as 48 BC, triggering a dynastic conflict that Caesar's intervention resolved in her favour."
+  - source-character: ptolemy-xiii
+    target-character: julius-caesar
+    type: rival-of
+    description:
+      fr: "Ptolémée XIII et sa sœur Arsinoé IV se soulèvent contre César, venu arbitrer le conflit de succession égyptien en faveur de Cléopâtre, l'assiégeant dans le quartier du palais d'Alexandrie."
+      en: "Ptolemy XIII and his sister Arsinoe IV rose up against Caesar, who had come to arbitrate the Egyptian succession dispute in Cleopatra's favour, besieging him in the palace quarter of Alexandria."
+  - source-character: ptolemy-xiii
+    target-character: pompey
+    type: betrayer-of
+    description:
+      fr: "Cherchant à s'attirer les faveurs de César, la cour de Ptolémée XIII fait assassiner Pompée dès son arrivée en Égypte en 48 av. J.-C., alors qu'il venait y chercher refuge après sa défaite à Pharsale."
+      en: "Hoping to win Caesar's favour, Ptolemy XIII's court had Pompey assassinated upon his arrival in Egypt in 48 BC, where he had come seeking refuge after his defeat at Pharsalus."
+  - source-character: publius-clodius-pulcher
+    target-character: julius-caesar
+    type: ally-of
+    description:
+      fr: "César favorise l'adoption plébéienne de Clodius en 59 av. J.-C., lui permettant d'accéder au tribunat de la plèbe."
+      en: "Caesar facilitated Clodius's plebeian adoption in 59 BC, enabling him to stand for the tribunate of the plebs."
+  - source-character: publius-clodius-pulcher
+    target-character: marcus-tullius-cicero
+    type: rival-of
+    description:
+      fr: "Le témoignage de Cicéron contre Clodius lors du scandale de la Bona Dea inaugure une haine durable, qui culmine avec l'exil de Cicéron obtenu par Clodius en 58 av. J.-C."
+      en: "Cicero's testimony against Clodius during the Bona Dea scandal began a lasting enmity, which culminated in Clodius securing Cicero's exile in 58 BC."
+  - source-character: publius-clodius-pulcher
+    target-character: titus-annius-milo
+    type: rival-of
+    description:
+      fr: "Clodius et Milon s'affrontent par bandes armées interposées jusqu'à la mort de Clodius, tué par les hommes de Milon en 52 av. J.-C."
+      en: "Clodius and Milo fought each other through rival armed gangs until Clodius was killed by Milo's men in 52 BC."
+  - source-character: publius-cornelius-dolabella
+    target-character: gaius-cassius-longinus
+    type: rival-of
+    description:
+      fr: "Cassius assiège Dolabella dans Laodicée en 43 av. J.-C. ; sur le point d'être capturé, celui-ci se fait tuer par un de ses soldats."
+      en: "Cassius besieged Dolabella at Laodicea in 43 BC; about to be captured, Dolabella had one of his own soldiers kill him."
+  - source-character: publius-cornelius-dolabella
+    target-character: julius-caesar
+    type: ally-of
+    description:
+      fr: "Pressé par ses créanciers, Dolabella rejoint le camp de César en 49 av. J.-C. et combat à ses côtés en Afrique et en Espagne."
+      en: "Pressed by his creditors, Dolabella joined Caesar's camp in 49 BC and fought at his side in Africa and Spain."
+  - source-character: publius-servilius-casca
+    target-character: lucius-tillius-cimber
+    type: conspirator-of
+    description:
+      fr: "Leurs gestes s'enchaînent le 15 mars 44 av. J.-C. : Cimber donne le signal en tirant sur la toge de César, aussitôt frappé dans le dos par Casca."
+      en: "Their actions follow one another on 15 March 44 BC: Cimber gives the signal by pulling at Caesar's toga, and Casca immediately strikes him from behind."
+  - source-character: quintus-tullius-cicero
+    target-character: julius-caesar
+    type: ally-of
+    description:
+      fr: "Quintus sert comme légat de César pendant la guerre des Gaules, notamment lors de la seconde expédition de Bretagne et de la révolte d'Ambiorix, avant de recevoir son pardon après avoir combattu dans le camp pompéien."
+      en: "Quintus served as one of Caesar's legates during the Gallic Wars, including the second expedition to Britain and Ambiorix's uprising, before receiving Caesar's pardon after fighting on Pompey's side."
+  - source-character: servilia
+    target-character: julius-caesar
+    type: betrayer-of
+    description:
+      fr: "Malgré leur longue liaison, Servilia se range après coup du côté des assassins de César, à commencer par son propre fils Brutus."
+      en: "Despite their long affair, Servilia sides after the fact with Caesar's assassins, starting with her own son Brutus."
+  - source-character: servilia
+    target-character: julius-caesar
+    type: lover-of
+    description:
+      fr: "Servilia entretient une liaison durable avec César à partir de 59 av. J.-C. environ, la plus notoire de ses aventures aux yeux des sources antiques."
+      en: "Servilia carries on a lasting affair with Caesar from around 59 BC onward, the most notorious of his relationships in the eyes of ancient sources."
+  - source-character: servilia
+    target-character: marcus-junius-brutus
+    type: parent-of
+    description:
+      fr: "Servilia est la mère de Brutus, dont elle soutient la cause avec toute son influence après l'assassinat de César."
+      en: "Servilia is Brutus's mother, and she backs his cause with all her influence after Caesar's assassination."
+  - source-character: sextus-pompeius
+    target-character: augustus
+    type: rival-of
+    description:
+      fr: "Depuis la Sicile, Sextus Pompée bloque le ravitaillement de Rome et s'oppose militairement à Octave pendant près d'une décennie."
+      en: "From Sicily, Sextus Pompey blockaded Rome's grain supply and militarily opposed Octavian for nearly a decade."
+  - source-character: titus-annius-milo
+    target-character: pompey
+    type: ally-of
+    description:
+      fr: "Milon met ses bandes armées au service de Pompée et du parti sénatorial contre Clodius et César, sans empêcher Pompée de le laisser condamner après la mort de Clodius pour rétablir l'ordre."
+      en: "Milo placed his armed gangs at the service of Pompey and the senatorial party against Clodius and Caesar, though this did not stop Pompey from letting him be convicted after Clodius's death in order to restore order."
+  - source-character: titus-labienus
+    target-character: julius-caesar
+    type: betrayer-of
+    description:
+      fr: "Après avoir servi comme lieutenant de confiance de César pendant toute la guerre des Gaules, Labiénus rejoint le camp de Pompée au déclenchement de la guerre civile en 49 av. J.-C."
+      en: "After serving as Caesar's trusted lieutenant throughout the Gallic Wars, Labienus defected to Pompey's side when the civil war broke out in 49 BC."
+  - source-character: titus-labienus
+    target-character: pompey
+    type: ally-of
+    description:
+      fr: "Rallié à Pompée en 49 av. J.-C., Labiénus devient son commandant de cavalerie, combattant à Pharsale, Thapsus puis Munda où il trouve la mort."
+      en: "Having joined Pompey in 49 BC, Labienus became his cavalry commander, fighting at Pharsalus, Thapsus and finally Munda, where he was killed."
+  - source-character: vercingetorix
+    target-character: julius-caesar
+    type: rival-of
+    description:
+      fr: "Vercingétorix mène la coalition gauloise qui affronte César lors de la guerre des Gaules, jusqu'à sa défaite à Alésia en 52 av. J.-C."
+      en: "Vercingetorix led the Gallic coalition that fought Caesar during the Gallic Wars, until his defeat at Alesia in 52 BC."

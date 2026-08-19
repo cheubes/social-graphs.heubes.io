@@ -1,0 +1,199 @@
+- slug: augustus
+  gender: masculine
+  group: second-triumvirate
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Augustus_of_Prima_Porta.jpg"
+
+- slug: calpurnia-pisonis
+  gender: feminine
+  portrait-source: "ai-generated"
+
+- slug: cato-the-younger
+  gender: masculine
+  group: optimates
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Cat%C3%B3n_(52340687524).jpg"
+
+- slug: cleopatra-vii
+  gender: feminine
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Bust_of_Cleopatra_VII_-_Altes_Museum_-_Berlin_-_Germany_2017.jpg"
+
+- slug: cornelia-cinna
+  gender: feminine
+  portrait-source: "ai-generated"
+
+- slug: decimus-junius-brutus-albinus
+  gender: masculine
+  group: liberatores
+  portrait-source: "ai-generated"
+
+- slug: fulvia
+  gender: feminine
+  group: second-triumvirate
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Fulvia_Antonia.jpg"
+
+- slug: gaius-asinius-pollio
+  gender: masculine
+  group: caesarians
+  portrait-source: "ai-generated"
+
+- slug: gaius-cassius-longinus
+  gender: masculine
+  group: liberatores
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Pseudo-Corbulo_Musei_Capitolini_MC561.jpg"
+
+- slug: gaius-claudius-marcellus
+  gender: masculine
+  group: optimates
+  portrait-source: "ai-generated"
+
+- slug: gaius-maecenas
+  gender: masculine
+  group: second-triumvirate
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Gaius_Cilnius_Maecenas_Roman_Statesman.jpg"
+
+- slug: gaius-marius
+  gender: masculine
+  group: caesarians
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Bust_of_Marius_(GL_319)_-_Glyptothek_-_Munich_-_Germany_2017.jpg"
+
+- slug: gaius-scribonius-curio
+  gender: masculine
+  group: caesarians
+  portrait-source: "ai-generated"
+
+- slug: gaius-trebonius
+  gender: masculine
+  group: liberatores
+  portrait-source: "ai-generated"
+
+- slug: julia-caesaris
+  gender: feminine
+  portrait-source: "ai-generated"
+
+- slug: julius-caesar
+  gender: masculine
+  group: caesarians
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Retrato_de_Julio_C%C3%A9sar_(26724093101).jpg"
+
+- slug: livia-drusilla
+  gender: feminine
+  group: second-triumvirate
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Livia_Drusilla_Louvre_Ma1233.jpg"
+
+- slug: lucius-cornelius-cinna
+  gender: masculine
+  group: caesarians
+  portrait-source: "ai-generated"
+
+- slug: lucius-cornelius-sulla
+  gender: masculine
+  group: optimates
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Q._Pompeius_Rufus,_denarius,_54_BC,_RRC_434-1_(Sulla_only).jpg"
+
+- slug: lucius-domitius-ahenobarbus
+  gender: masculine
+  group: optimates
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Repubblica,_cn._domitius_aenobabus,_aureo,_41_a.c..JPG"
+
+- slug: lucius-tillius-cimber
+  gender: masculine
+  group: liberatores
+  portrait-source: "ai-generated"
+
+- slug: marcus-aemilius-lepidus
+  gender: masculine
+  group: second-triumvirate
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Marcus_Aemilius_Lepidus.jpg"
+
+- slug: marcus-calpurnius-bibulus
+  gender: masculine
+  group: optimates
+  portrait-source: "ai-generated"
+
+- slug: marcus-junius-brutus
+  gender: masculine
+  group: liberatores
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Portrait_Brutus_Massimo.jpg"
+
+- slug: marcus-licinius-crassus
+  gender: masculine
+  group: caesarians
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Bust_of_a_Roman,_Ny_Carlsberg_Glyptotek.jpg"
+
+- slug: marcus-tullius-cicero
+  gender: masculine
+  group: optimates
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Bust_of_Cicero_(1st-cent._BC)_-_Palazzo_Nuovo_-_Musei_Capitolini_-_Rome_2016.jpg"
+
+- slug: marcus-vipsanius-agrippa
+  gender: masculine
+  group: second-triumvirate
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Agrippa_Gabii_Louvre_Ma1208.jpg"
+
+- slug: mark-antony
+  gender: masculine
+  group: second-triumvirate
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Marble_bust_of_Mark_Antony_(Vatican_Museums).jpg"
+
+- slug: metellus-scipio
+  gender: masculine
+  group: optimates
+  portrait-source: "ai-generated"
+
+- slug: octavia-minor
+  gender: feminine
+  group: second-triumvirate
+  portrait-source: "https://commons.wikimedia.org/wiki/File:8106_-_Roma_-_Ara_Pacis_-_Ottavia_Minore_-_Foto_Giovanni_Dall%27Orto_-_30-Mar-2008.jpg"
+
+- slug: pompey
+  gender: masculine
+  group: optimates
+  portrait-source: "https://commons.wikimedia.org/wiki/File:(Venice)_Pompey_the_Great,_Museo_Archeologico_Nazionale.jpg"
+
+- slug: porcia
+  gender: feminine
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Elisabetta_Sirani_-_Portia_wounding_her_thigh.jpg"
+
+- slug: ptolemy-xiii
+  gender: masculine
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Ptol%C3%A9m%C3%A9e_XIII_(Torlonia).jpg"
+
+- slug: publius-clodius-pulcher
+  gender: masculine
+  group: caesarians
+  portrait-source: "ai-generated"
+
+- slug: publius-cornelius-dolabella
+  gender: masculine
+  group: caesarians
+  portrait-source: "ai-generated"
+
+- slug: publius-servilius-casca
+  gender: masculine
+  group: liberatores
+  portrait-source: "ai-generated"
+
+- slug: quintus-tullius-cicero
+  gender: masculine
+  portrait-source: "ai-generated"
+
+- slug: servilia
+  gender: feminine
+  portrait-source: "ai-generated"
+
+- slug: sextus-pompeius
+  gender: masculine
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Aureus_Sextus_Pompeius_42BC_Goldberg.JPG"
+
+- slug: titus-annius-milo
+  gender: masculine
+  group: optimates
+  portrait-source: "ai-generated"
+
+- slug: titus-labienus
+  gender: masculine
+  group: optimates
+  portrait-source: "ai-generated"
+
+- slug: vercingetorix
+  gender: masculine
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Lionel_Royer_-_Vercingetorix_Throwing_down_His_Weapons_at_the_feet_of_Julius_Caesar.jpg"
