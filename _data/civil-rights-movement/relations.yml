@@ -1,0 +1,567 @@
+relations:
+  - source-character: martin-luther-king-jr
+    target-character: coretta-scott-king
+    type: married-to
+    description:
+      fr: "Martin Luther King épouse Coretta Scott en 1953 ; elle reste à ses côtés jusqu'à son assassinat en 1968 et prend ensuite le relais de son combat."
+      en: "Martin Luther King married Coretta Scott in 1953; she stood by him until his assassination in 1968 and then carried his cause forward."
+
+  - source-character: medgar-evers
+    target-character: myrlie-evers-williams
+    type: married-to
+    description:
+      fr: "Medgar et Myrlie Evers se marient en 1951 et militent ensemble au sein du NAACP dans le Mississippi, jusqu'à l'assassinat de Medgar en 1963."
+      en: "Medgar and Myrlie Evers married in 1951 and worked together as NAACP activists in Mississippi, until Medgar's assassination in 1963."
+
+  - source-character: james-bevel
+    target-character: diane-nash
+    type: married-to
+    description:
+      fr: "James Bevel et Diane Nash se marient en 1961 et forment l'un des couples les plus influents de la stratégie d'action directe du mouvement."
+      en: "James Bevel and Diane Nash married in 1961 and formed one of the most influential couples in the movement's direct-action strategy."
+
+  - source-character: mamie-till-mobley
+    target-character: emmett-till
+    type: parent-of
+    description:
+      fr: "Mamie Till-Mobley est la mère d'Emmett Till, assassiné en 1955 alors qu'il n'a que quatorze ans."
+      en: "Mamie Till-Mobley was Emmett Till's mother; he was murdered in 1955 at just fourteen years old."
+
+  - source-character: ella-baker
+    target-character: john-lewis
+    type: mentor-of
+    description:
+      fr: "Ella Baker encourage et forme John Lewis dès ses débuts militants à Nashville, avant de le pousser vers la direction de la SNCC qu'elle a contribué à fonder."
+      en: "Ella Baker encouraged and mentored John Lewis from his earliest activism in Nashville, later pushing him toward leadership of the SNCC she had helped found."
+
+  - source-character: ella-baker
+    target-character: diane-nash
+    type: mentor-of
+    description:
+      fr: "Ella Baker soutient Diane Nash dès la conférence de Raleigh en 1960 et l'encourage dans son rôle de stratège de l'action directe."
+      en: "Ella Baker supported Diane Nash from the Raleigh conference in 1960 onward and encouraged her role as a direct-action strategist."
+
+  - source-character: ella-baker
+    target-character: stokely-carmichael
+    type: mentor-of
+    description:
+      fr: "Ella Baker conseille Stokely Carmichael au sein de la SNCC, dont la philosophie de leadership collectif influence durablement sa pensée politique."
+      en: "Ella Baker advised Stokely Carmichael within the SNCC, whose philosophy of collective leadership left a lasting mark on his political thinking."
+
+  - source-character: bayard-rustin
+    target-character: martin-luther-king-jr
+    type: mentor-of
+    description:
+      fr: "Bayard Rustin initie Martin Luther King à la désobéissance civile gandhienne dès le boycott de Montgomery, jouant un rôle déterminant dans la formation de sa doctrine non violente."
+      en: "Bayard Rustin introduced Martin Luther King to Gandhian civil disobedience as early as the Montgomery boycott, playing a decisive role in shaping his nonviolent doctrine."
+
+  - source-character: a-philip-randolph
+    target-character: bayard-rustin
+    type: mentor-of
+    description:
+      fr: "A. Philip Randolph prend Bayard Rustin sous son aile dans les mouvements syndicaux et pacifistes des années 1940, une relation qui culmine avec leur collaboration sur la marche sur Washington."
+      en: "A. Philip Randolph took Bayard Rustin under his wing in the labor and pacifist movements of the 1940s, a relationship that culminated in their collaboration on the March on Washington."
+
+  - source-character: elijah-muhammad
+    target-character: malcolm-x
+    type: mentor-of
+    description:
+      fr: "Elijah Muhammad forme Malcolm X en prison puis en fait le ministre le plus visible de la Nation of Islam, avant que leurs relations ne se rompent en 1964."
+      en: "Elijah Muhammad mentored Malcolm X in prison and then made him the Nation of Islam's most visible minister, before their relationship broke down in 1964."
+
+  - source-character: elijah-muhammad
+    target-character: louis-farrakhan
+    type: mentor-of
+    description:
+      fr: "Elijah Muhammad forme Louis Farrakhan et le place à la tête du temple de Harlem après le départ de Malcolm X."
+      en: "Elijah Muhammad mentored Louis Farrakhan and placed him at the head of the Harlem temple after Malcolm X's departure."
+
+  - source-character: thurgood-marshall
+    target-character: constance-baker-motley
+    type: mentor-of
+    description:
+      fr: "Thurgood Marshall forme Constance Baker Motley au sein du NAACP Legal Defense Fund, où elle devient l'une de ses plaideuses les plus efficaces."
+      en: "Thurgood Marshall trained Constance Baker Motley at the NAACP Legal Defense Fund, where she became one of his most effective litigators."
+
+  - source-character: bayard-rustin
+    target-character: a-philip-randolph
+    type: co-organizer-of
+    description:
+      fr: "Rustin et Randolph organisent ensemble la marche sur Washington de 1963, Randolph en étant l'initiateur et Rustin le maître d'œuvre logistique."
+      en: "Rustin and Randolph together organized the 1963 March on Washington, with Randolph as its initiator and Rustin as its logistical mastermind."
+
+  - source-character: martin-luther-king-jr
+    target-character: ralph-abernathy
+    type: co-organizer-of
+    description:
+      fr: "King et Abernathy organisent ensemble le boycott des bus de Montgomery puis cofondent la SCLC, dont ils restent les deux figures centrales pendant plus de dix ans."
+      en: "King and Abernathy jointly organized the Montgomery bus boycott and then co-founded the SCLC, remaining its two central figures for more than a decade."
+
+  - source-character: diane-nash
+    target-character: james-bevel
+    type: co-organizer-of
+    description:
+      fr: "Nash et Bevel conçoivent ensemble plusieurs campagnes majeures de la SCLC, dont la marche de Selma en 1965."
+      en: "Nash and Bevel jointly planned several of the SCLC's major campaigns, including the 1965 Selma march."
+
+  - source-character: john-lewis
+    target-character: james-forman
+    type: co-organizer-of
+    description:
+      fr: "Lewis et Forman organisent ensemble les Freedom Rides et les grandes campagnes de la SNCC au début des années 1960."
+      en: "Lewis and Forman jointly organized the Freedom Rides and the SNCC's major campaigns in the early 1960s."
+
+  - source-character: ella-baker
+    target-character: diane-nash
+    type: co-organizer-of
+    description:
+      fr: "Baker et Nash organisent ensemble la conférence de Raleigh en 1960 qui donne naissance à la SNCC."
+      en: "Baker and Nash together organized the 1960 Raleigh conference that gave birth to the SNCC."
+
+  - source-character: fred-shuttlesworth
+    target-character: martin-luther-king-jr
+    type: co-organizer-of
+    description:
+      fr: "Shuttlesworth convainc la SCLC de choisir Birmingham comme cible de sa campagne de 1963 et en coorganise le déroulement avec King."
+      en: "Shuttlesworth convinced the SCLC to choose Birmingham as the target of its 1963 campaign and co-organized it alongside King."
+
+  - source-character: hosea-williams
+    target-character: john-lewis
+    type: co-organizer-of
+    description:
+      fr: "Williams et Lewis mènent ensemble, en l'absence de King, la marche du 7 mars 1965 qui tourne au « Bloody Sunday »."
+      en: "Williams and Lewis together led the March 7, 1965 march, in King's absence, that became known as \"Bloody Sunday.\""
+
+  - source-character: james-farmer
+    target-character: john-lewis
+    type: co-organizer-of
+    description:
+      fr: "Farmer et Lewis organisent ensemble les Freedom Rides de 1961, le CORE et la SNCC se relayant après les violences de Birmingham et de l'Alabama."
+      en: "Farmer and Lewis jointly organized the 1961 Freedom Rides, with CORE and the SNCC taking turns after the violence in Birmingham and Alabama."
+
+  - source-character: rosa-parks
+    target-character: ralph-abernathy
+    type: co-organizer-of
+    description:
+      fr: "Parks et Abernathy participent ensemble à la structuration de la Montgomery Improvement Association qui organise le boycott des bus."
+      en: "Parks and Abernathy both helped structure the Montgomery Improvement Association that organized the bus boycott."
+
+  - source-character: daisy-bates
+    target-character: thurgood-marshall
+    type: co-organizer-of
+    description:
+      fr: "Bates coordonne sur le terrain l'intégration du lycée de Little Rock tandis que Marshall en assure la défense juridique devant les tribunaux fédéraux."
+      en: "Bates coordinated the Little Rock school integration on the ground while Marshall handled its legal defense in federal court."
+
+  - source-character: medgar-evers
+    target-character: james-meredith
+    type: co-organizer-of
+    description:
+      fr: "Evers soutient depuis le NAACP la candidature de Meredith à l'université du Mississippi, qu'il contribue à faire aboutir en 1962."
+      en: "Evers, through the NAACP, supported Meredith's application to the University of Mississippi, helping secure his admission in 1962."
+
+  - source-character: a-philip-randolph
+    target-character: roy-wilkins
+    type: co-organizer-of
+    description:
+      fr: "Randolph et Wilkins comptent parmi les « Big Six » qui organisent conjointement la marche sur Washington de 1963."
+      en: "Randolph and Wilkins were among the \"Big Six\" who jointly organized the 1963 March on Washington."
+
+  - source-character: john-lewis
+    target-character: a-philip-randolph
+    type: co-organizer-of
+    description:
+      fr: "Lewis, plus jeune orateur de la marche sur Washington, y participe aux côtés du vétéran Randolph, qui en est l'initiateur."
+      en: "Lewis, the youngest speaker at the March on Washington, took part alongside the veteran Randolph, who had first proposed it."
+
+  - source-character: james-farmer
+    target-character: a-philip-randolph
+    type: co-organizer-of
+    description:
+      fr: "Farmer et Randolph comptent tous deux parmi les « Big Six » qui organisent la marche sur Washington de 1963."
+      en: "Farmer and Randolph were both among the \"Big Six\" who organized the 1963 March on Washington."
+
+  - source-character: ct-vivian
+    target-character: james-bevel
+    type: co-organizer-of
+    description:
+      fr: "Vivian et Bevel, tous deux stratèges de l'action directe à la SCLC, organisent ensemble plusieurs volets de la campagne de Selma."
+      en: "Vivian and Bevel, both SCLC direct-action strategists, jointly organized several parts of the Selma campaign."
+
+  - source-character: ella-baker
+    target-character: fannie-lou-hamer
+    type: co-organizer-of
+    description:
+      fr: "Baker coordonne depuis Washington le soutien logistique et légal à la délégation du Mississippi Freedom Democratic Party que porte Hamer à la convention démocrate de 1964."
+      en: "Baker coordinated logistical and legal support from Washington for the Mississippi Freedom Democratic Party delegation that Hamer led to the 1964 Democratic convention."
+
+  - source-character: bob-moses
+    target-character: fannie-lou-hamer
+    type: co-organizer-of
+    description:
+      fr: "Moses et Hamer organisent ensemble l'inscription des électeurs noirs du Mississippi et la campagne du Mississippi Freedom Democratic Party."
+      en: "Moses and Hamer jointly organized Black voter registration in Mississippi and the Mississippi Freedom Democratic Party campaign."
+
+  - source-character: julian-bond
+    target-character: ella-baker
+    type: co-organizer-of
+    description:
+      fr: "Bond participe, aux côtés de Baker, à la conférence de Raleigh en 1960 qui fonde la SNCC."
+      en: "Bond took part, alongside Baker, in the 1960 Raleigh conference that founded the SNCC."
+
+  - source-character: james-meredith
+    target-character: stokely-carmichael
+    type: co-organizer-of
+    description:
+      fr: "Après que Meredith est blessé par balle au deuxième jour de sa marche solitaire de 1966, Carmichael et la SNCC en reprennent le parcours jusqu'à son terme."
+      en: "After Meredith was shot on the second day of his solo 1966 march, Carmichael and the SNCC took over and completed the route."
+
+  - source-character: malcolm-x
+    target-character: martin-luther-king-jr
+    type: ideological-rival-of
+    description:
+      fr: "Malcolm X et Martin Luther King incarnent deux stratégies opposées, l'autodéfense séparatiste contre l'intégration non violente, bien que leurs positions se rapprochent dans les derniers mois de leurs vies respectives."
+      en: "Malcolm X and Martin Luther King embodied two opposing strategies, separatist self-defense versus nonviolent integration, though their positions grew closer in the final months of both their lives."
+
+  - source-character: stokely-carmichael
+    target-character: martin-luther-king-jr
+    type: ideological-rival-of
+    description:
+      fr: "Le slogan « Black Power » lancé par Carmichael en 1966 marque une rupture publique avec la stratégie strictement non violente et intégrationniste de King."
+      en: "The \"Black Power\" slogan Carmichael launched in 1966 marked a public break from King's strictly nonviolent, integrationist strategy."
+
+  - source-character: elijah-muhammad
+    target-character: martin-luther-king-jr
+    type: ideological-rival-of
+    description:
+      fr: "Elijah Muhammad rejette la stratégie intégrationniste de King, prêchant à l'inverse le séparatisme racial et l'autonomie économique noire."
+      en: "Elijah Muhammad rejected King's integrationist strategy, preaching instead racial separatism and Black economic self-reliance."
+
+  - source-character: thurgood-marshall
+    target-character: martin-luther-king-jr
+    type: ideological-rival-of
+    description:
+      fr: "Marshall juge risquée pour la stratégie judiciaire du mouvement la désobéissance civile prônée par King, qui expose les militants à des arrestations et fragilise selon lui la légitimité légale des victoires obtenues devant les tribunaux."
+      en: "Marshall considered King's civil disobedience risky for the movement's legal strategy, exposing activists to arrest and, in his view, undermining the legal legitimacy of courtroom victories."
+
+  - source-character: ralph-abernathy
+    target-character: martin-luther-king-jr
+    type: successor-of
+    description:
+      fr: "Abernathy succède à King à la présidence de la SCLC après son assassinat en 1968."
+      en: "Abernathy succeeded King as SCLC president after his 1968 assassination."
+
+  - source-character: stokely-carmichael
+    target-character: john-lewis
+    type: successor-of
+    description:
+      fr: "Carmichael est élu président de la SNCC en 1966 à la place de Lewis, marquant le tournant de l'organisation vers le Black Power."
+      en: "Carmichael was elected SNCC chairman in 1966 in place of Lewis, marking the organization's turn toward Black Power."
+
+  - source-character: lyndon-b-johnson
+    target-character: john-f-kennedy
+    type: successor-of
+    description:
+      fr: "Johnson succède à Kennedy à la présidence après son assassinat en 1963 et fait adopter le Civil Rights Act que celui-ci avait présenté."
+      en: "Johnson succeeded Kennedy as president after his 1963 assassination and secured passage of the Civil Rights Act Kennedy had introduced."
+
+  - source-character: ruby-doris-smith-robinson
+    target-character: james-forman
+    type: successor-of
+    description:
+      fr: "Smith-Robinson succède à Forman au poste de secrétaire exécutive de la SNCC en 1966."
+      en: "Smith-Robinson succeeded Forman as the SNCC's executive secretary in 1966."
+
+  - source-character: j-edgar-hoover
+    target-character: martin-luther-king-jr
+    type: monitor-of
+    description:
+      fr: "Hoover fait autoriser la mise sur écoute de King, qu'il considère infiltré par des communistes, et alimente une campagne de harcèlement destinée à le discréditer."
+      en: "Hoover authorized the wiretapping of King, whom he considered infiltrated by communists, and fueled a harassment campaign meant to discredit him."
+
+  - source-character: j-edgar-hoover
+    target-character: malcolm-x
+    type: monitor-of
+    description:
+      fr: "Le FBI surveille étroitement Malcolm X tout au long de sa carrière publique, au sein de la Nation of Islam puis après sa rupture avec elle."
+      en: "The FBI closely monitored Malcolm X throughout his public career, both within the Nation of Islam and after his break with it."
+
+  - source-character: j-edgar-hoover
+    target-character: stokely-carmichael
+    type: monitor-of
+    description:
+      fr: "Le programme COINTELPRO cible particulièrement Carmichael après son virage vers le Black Power, jugé par Hoover comme une menace radicale."
+      en: "The COINTELPRO program specifically targeted Carmichael after his turn toward Black Power, which Hoover saw as a radical threat."
+
+  - source-character: j-edgar-hoover
+    target-character: elijah-muhammad
+    type: monitor-of
+    description:
+      fr: "Le FBI surveille la Nation of Islam et son dirigeant Elijah Muhammad dès les années 1950, les soupçonnant de subversion."
+      en: "The FBI surveilled the Nation of Islam and its leader Elijah Muhammad from the 1950s onward, suspecting them of subversion."
+
+  - source-character: rosa-parks
+    target-character: roy-wilkins
+    type: ally-of
+    description:
+      fr: "Parks et Wilkins militent tous deux au sein du NAACP, elle comme secrétaire locale à Montgomery, lui à la tête de l'organisation nationale."
+      en: "Parks and Wilkins were both NAACP activists, she as local secretary in Montgomery, he at the head of the national organization."
+
+  - source-character: thurgood-marshall
+    target-character: roy-wilkins
+    type: ally-of
+    description:
+      fr: "Marshall et Wilkins dirigent ensemble les deux principaux volets, judiciaire et institutionnel, de la stratégie du NAACP."
+      en: "Marshall and Wilkins together led the NAACP's two main fronts, legal and institutional."
+
+  - source-character: thurgood-marshall
+    target-character: medgar-evers
+    type: ally-of
+    description:
+      fr: "Marshall et Evers collaborent au sein du NAACP, l'un menant les batailles judiciaires nationales, l'autre l'organisation de terrain dans le Mississippi."
+      en: "Marshall and Evers worked together within the NAACP, one leading national legal battles, the other field organizing in Mississippi."
+
+  - source-character: medgar-evers
+    target-character: roy-wilkins
+    type: ally-of
+    description:
+      fr: "Evers rend compte régulièrement à Wilkins de la situation dans le Mississippi, l'un des terrains les plus dangereux pour le NAACP."
+      en: "Evers regularly reported to Wilkins on the situation in Mississippi, one of the most dangerous fronts for the NAACP."
+
+  - source-character: daisy-bates
+    target-character: roy-wilkins
+    type: ally-of
+    description:
+      fr: "Bates coordonne son action à Little Rock avec la direction nationale du NAACP que dirige Wilkins."
+      en: "Bates coordinated her work in Little Rock with the NAACP's national leadership under Wilkins."
+
+  - source-character: james-meredith
+    target-character: constance-baker-motley
+    type: ally-of
+    description:
+      fr: "Motley plaide la cause de Meredith devant les tribunaux fédéraux jusqu'à obtenir son admission à l'université du Mississippi."
+      en: "Motley argued Meredith's case in federal court until securing his admission to the University of Mississippi."
+
+  - source-character: john-f-kennedy
+    target-character: robert-f-kennedy
+    type: ally-of
+    description:
+      fr: "Les frères Kennedy forment un tandem politique étroit, Robert occupant le poste de procureur général sous la présidence de John."
+      en: "The Kennedy brothers formed a close political partnership, with Robert serving as Attorney General under John's presidency."
+
+  - source-character: ella-baker
+    target-character: bayard-rustin
+    type: ally-of
+    description:
+      fr: "Baker et Rustin, tous deux organisateurs chevronnés issus d'une génération antérieure, collaborent à plusieurs reprises dans les coulisses du mouvement."
+      en: "Baker and Rustin, both seasoned organizers from an earlier generation, repeatedly collaborated behind the scenes of the movement."
+
+  - source-character: daisy-bates
+    target-character: constance-baker-motley
+    type: ally-of
+    description:
+      fr: "Bates et Motley collaborent sur le dossier de l'intégration de Little Rock, l'une sur le terrain, l'autre devant les tribunaux."
+      en: "Bates and Motley worked together on the Little Rock integration case, one on the ground, the other in court."
+
+  - source-character: james-forman
+    target-character: stokely-carmichael
+    type: ally-of
+    description:
+      fr: "Forman et Carmichael dirigent ensemble la SNCC au moment de son tournant vers des positions plus radicales."
+      en: "Forman and Carmichael jointly led the SNCC at the moment of its turn toward more radical positions."
+
+  - source-character: james-forman
+    target-character: bob-moses
+    type: ally-of
+    description:
+      fr: "Forman et Moses organisent ensemble le projet de la SNCC dans le Mississippi, l'un à la logistique nationale, l'autre sur le terrain."
+      en: "Forman and Moses jointly ran the SNCC's Mississippi project, one handling national logistics, the other working on the ground."
+
+  - source-character: julian-bond
+    target-character: john-lewis
+    type: ally-of
+    description:
+      fr: "Bond et Lewis, cofondateurs de la SNCC, restent liés bien après la fin de l'organisation, poursuivant tous deux des carrières politiques en Géorgie."
+      en: "Bond and Lewis, SNCC co-founders, remained connected long after the organization's end, both going on to political careers in Georgia."
+
+  - source-character: myrlie-evers-williams
+    target-character: roy-wilkins
+    type: ally-of
+    description:
+      fr: "Evers-Williams poursuit son engagement au sein du NAACP dirigé par Wilkins après l'assassinat de son mari."
+      en: "Evers-Williams continued her involvement with the NAACP under Wilkins's leadership after her husband's assassination."
+
+  - source-character: mamie-till-mobley
+    target-character: medgar-evers
+    type: ally-of
+    description:
+      fr: "Evers enquête pour le NAACP sur le meurtre d'Emmett Till, épaulant le combat de sa mère pour que justice soit rendue."
+      en: "Evers investigated Emmett Till's murder for the NAACP, supporting his mother's fight for justice."
+
+  - source-character: andrew-young
+    target-character: martin-luther-king-jr
+    type: ally-of
+    description:
+      fr: "Young devient l'un des plus proches conseillers de King au sein de la SCLC et se trouve à ses côtés au moment de son assassinat."
+      en: "Young became one of King's closest advisers within the SCLC and was at his side at the moment of his assassination."
+
+  - source-character: jesse-jackson
+    target-character: martin-luther-king-jr
+    type: ally-of
+    description:
+      fr: "Jackson rejoint la SCLC de King au milieu des années 1960 et se trouve à l'hôtel Lorraine au moment de son assassinat en 1968."
+      en: "Jackson joined King's SCLC in the mid-1960s and was at the Lorraine Motel at the moment of his assassination in 1968."
+
+  - source-character: ct-vivian
+    target-character: martin-luther-king-jr
+    type: ally-of
+    description:
+      fr: "Vivian rejoint la direction de la SCLC de King comme responsable national de l'action directe."
+      en: "Vivian joined King's SCLC leadership as national director of affiliates and direct action."
+
+  - source-character: bull-connor
+    target-character: george-wallace
+    type: ally-of
+    description:
+      fr: "Connor et Wallace incarnent tous deux, à l'échelle locale et étatique, la résistance ségrégationniste la plus déterminée du Sud."
+      en: "Connor and Wallace both embodied, at the local and state level, the South's most determined segregationist resistance."
+
+  - source-character: lyndon-b-johnson
+    target-character: robert-f-kennedy
+    type: rival-of
+    description:
+      fr: "Johnson et Kennedy entretiennent une hostilité personnelle et politique durable, en dépit de leur appartenance commune au camp démocrate."
+      en: "Johnson and Kennedy maintained a lasting personal and political hostility, despite both belonging to the Democratic camp."
+
+  - source-character: bull-connor
+    target-character: fred-shuttlesworth
+    type: rival-of
+    description:
+      fr: "Connor cible personnellement Shuttlesworth pendant des années, sa police laissant sans suite plusieurs attentats à la bombe visant son domicile et son église."
+      en: "Connor personally targeted Shuttlesworth for years, his police failing to pursue several bombings aimed at his home and church."
+
+  - source-character: george-wallace
+    target-character: martin-luther-king-jr
+    type: rival-of
+    description:
+      fr: "Wallace, chantre national de la ségrégation, et King, son adversaire le plus visible, s'affrontent publiquement tout au long des années 1960."
+      en: "Wallace, segregation's leading national champion, and King, its most visible opponent, clashed publicly throughout the 1960s."
+
+  - source-character: j-edgar-hoover
+    target-character: robert-f-kennedy
+    type: rival-of
+    description:
+      fr: "Bien que Hoover soit nominalement subordonné à Kennedy comme procureur général, les deux hommes se vouent une méfiance et une hostilité réciproques."
+      en: "Though Hoover was nominally subordinate to Kennedy as Attorney General, the two men held each other in mutual suspicion and hostility."
+
+  - source-character: malcolm-x
+    target-character: louis-farrakhan
+    type: rival-of
+    description:
+      fr: "Farrakhan critique publiquement et sévèrement la rupture de Malcolm X avec la Nation of Islam, quelques semaines à peine avant son assassinat en 1965."
+      en: "Farrakhan publicly and harshly criticized Malcolm X's break with the Nation of Islam, just weeks before his 1965 assassination."
+
+  - source-character: john-lewis
+    target-character: diane-nash
+    type: friend-of
+    description:
+      fr: "Lewis et Nash, tous deux issus du mouvement étudiant de Nashville, restent des alliés proches tout au long des campagnes de la SNCC."
+      en: "Lewis and Nash, both products of the Nashville student movement, remained close allies throughout the SNCC's campaigns."
+
+  - source-character: whitney-young
+    target-character: martin-luther-king-jr
+    type: co-organizer-of
+    description:
+      fr: "Young et King comptent tous deux parmi les « Big Six » qui organisent la marche sur Washington de 1963."
+      en: "Young and King were both among the \"Big Six\" who organized the 1963 March on Washington."
+
+  - source-character: whitney-young
+    target-character: a-philip-randolph
+    type: co-organizer-of
+    description:
+      fr: "Young et Randolph comptent tous deux parmi les « Big Six » qui organisent la marche sur Washington de 1963."
+      en: "Young and Randolph were both among the \"Big Six\" who organized the 1963 March on Washington."
+
+  - source-character: james-lawson
+    target-character: diane-nash
+    type: mentor-of
+    description:
+      fr: "Lawson forme Diane Nash à la désobéissance civile lors de ses ateliers de Nashville, qui la préparent aux sit-in de 1960."
+      en: "Lawson trained Diane Nash in civil disobedience at his Nashville workshops, preparing her for the 1960 sit-ins."
+
+  - source-character: james-lawson
+    target-character: john-lewis
+    type: mentor-of
+    description:
+      fr: "Lawson forme John Lewis à la non-violence à Nashville, une discipline que Lewis applique tout au long de sa carrière militante."
+      en: "Lawson trained John Lewis in nonviolence in Nashville, a discipline Lewis applied throughout his activist career."
+
+  - source-character: james-lawson
+    target-character: james-bevel
+    type: mentor-of
+    description:
+      fr: "Lawson forme James Bevel à Nashville ; les deux hommes, tous deux pasteurs, restent proches dans leur approche stratégique de la non-violence."
+      en: "Lawson trained James Bevel in Nashville; both ministers, the two men remained close in their strategic approach to nonviolence."
+
+  - source-character: james-lawson
+    target-character: ct-vivian
+    type: mentor-of
+    description:
+      fr: "Lawson forme C.T. Vivian à Nashville, où celui-ci devient l'un des porte-voix les plus éloquents de la doctrine non violente qu'il y a apprise."
+      en: "Lawson trained C.T. Vivian in Nashville, where he became one of the most eloquent voices for the nonviolent doctrine he learned there."
+
+  - source-character: james-chaney
+    target-character: michael-schwerner
+    type: co-organizer-of
+    description:
+      fr: "Chaney et Schwerner travaillent ensemble au bureau du CORE de Meridian et enquêtent conjointement sur l'incendie de l'église de Mount Zion, le jour de leur assassinat."
+      en: "Chaney and Schwerner worked together at CORE's Meridian office and jointly investigated the Mount Zion church burning on the day they were murdered."
+
+  - source-character: michael-schwerner
+    target-character: andrew-goodman
+    type: co-organizer-of
+    description:
+      fr: "Schwerner accueille Goodman à peine arrivé dans le Mississippi et l'emmène dès le lendemain enquêter sur l'incendie de l'église, où tous deux trouvent la mort."
+      en: "Schwerner welcomed Goodman just after his arrival in Mississippi and took him the very next day to investigate the church burning, where both men were killed."
+
+  - source-character: james-chaney
+    target-character: andrew-goodman
+    type: co-organizer-of
+    description:
+      fr: "Chaney et Goodman enquêtent ensemble, aux côtés de Schwerner, sur l'incendie de l'église de Longdale le jour de leur mort commune."
+      en: "Chaney and Goodman investigated the Longdale church burning together, alongside Schwerner, on the day they died together."
+
+  - source-character: michael-schwerner
+    target-character: james-farmer
+    type: ally-of
+    description:
+      fr: "Schwerner dirige le bureau de terrain du CORE à Meridian, sous l'autorité nationale de Farmer."
+      en: "Schwerner ran CORE's Meridian field office, under Farmer's national leadership."
+
+  - source-character: michael-schwerner
+    target-character: bob-moses
+    type: ally-of
+    description:
+      fr: "Schwerner organise l'inscription des électeurs dans le Mississippi sous l'égide du COFO, la coalition que dirige Moses pour Freedom Summer."
+      en: "Schwerner organized voter registration in Mississippi under COFO, the coalition Moses led for Freedom Summer."
+
+  - source-character: jimmie-lee-jackson
+    target-character: james-bevel
+    type: ally-of
+    description:
+      fr: "La mort de Jackson, abattu lors d'une marche nocturne à Marion, pousse directement Bevel à concevoir la marche de Selma à Montgomery en réponse."
+      en: "Jackson's death, shot during a night march in Marion, directly pushed Bevel to conceive the Selma to Montgomery march in response."
+
+  - source-character: coretta-scott-king
+    target-character: rosa-parks
+    type: ally-of
+    description:
+      fr: "Coretta Scott King et Rosa Parks, unies par le souvenir de Montgomery, se soutiennent mutuellement pendant des décennies lors des commémorations du mouvement."
+      en: "Coretta Scott King and Rosa Parks, bound by the memory of Montgomery, supported each other for decades at the movement's commemorations."
+
+  - source-character: coretta-scott-king
+    target-character: ralph-abernathy
+    type: co-organizer-of
+    description:
+      fr: "Quatre jours après l'assassinat de son mari, Coretta Scott King marche aux côtés d'Abernathy à Memphis pour poursuivre la grève des éboueurs qu'il était venu soutenir."
+      en: "Four days after her husband's assassination, Coretta Scott King marched alongside Abernathy in Memphis to carry forward the sanitation workers' strike he had come to support."

@@ -1,0 +1,23 @@
+- slug: sclc
+  name:
+    fr: "Southern Christian Leadership Conference"
+    en: "Southern Christian Leadership Conference"
+  color: "#1b4d6b"
+
+- slug: sncc
+  name:
+    fr: "Student Nonviolent Coordinating Committee"
+    en: "Student Nonviolent Coordinating Committee"
+  color: "#c1440e"
+
+- slug: naacp
+  name:
+    fr: "NAACP"
+    en: "NAACP"
+  color: "#4a2545"
+
+- slug: nation-of-islam
+  name:
+    fr: "Nation of Islam"
+    en: "Nation of Islam"
+  color: "#7a1220"

@@ -1,0 +1,61 @@
+- slug: mentor-of
+  label:
+    fr:
+      masculine: "Mentor de"
+      feminine: "Mentore de"
+      neutral: "Mentor•e de"
+    en:
+      masculine: "Mentor of"
+      feminine: "Mentor of"
+      neutral: "Mentor of"
+  reverse-label:
+    fr:
+      masculine: "Protégé de"
+      feminine: "Protégée de"
+    en:
+      masculine: "Mentee of"
+      feminine: "Mentee of"
+  directed: true
+
+- slug: co-organizer-of
+  label:
+    fr:
+      masculine: "Coorganisateur de"
+      feminine: "Coorganisatrice de"
+      neutral: "Coorganisateur•rice de"
+    en:
+      masculine: "Co-organizer of"
+      feminine: "Co-organizer of"
+      neutral: "Co-organizer of"
+  directed: false
+
+- slug: ideological-rival-of
+  label:
+    fr:
+      masculine: "Rival idéologique de"
+      feminine: "Rivale idéologique de"
+      neutral: "Rival•e idéologique de"
+    en:
+      masculine: "Ideological rival of"
+      feminine: "Ideological rival of"
+      neutral: "Ideological rival of"
+  directed: false
+
+- slug: monitor-of
+  label:
+    fr:
+      masculine: "Surveillant de"
+      feminine: "Surveillante de"
+      neutral: "Surveillant•e de"
+    en:
+      masculine: "Monitor of"
+      feminine: "Monitor of"
+      neutral: "Monitor of"
+  reverse-label:
+    fr:
+      masculine: "Surveillé par"
+      feminine: "Surveillée par"
+    en:
+      masculine: "Monitored by"
+      feminine: "Monitored by"
+  directed: true

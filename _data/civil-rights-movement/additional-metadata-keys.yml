@@ -1,0 +1,11 @@
+- slug: role
+  label:
+    fr: "Rôle"
+    en: "Role"
+  localized: true
+
+- slug: campaign
+  label:
+    fr: "Campagne clé"
+    en: "Key campaign"
+  localized: true
