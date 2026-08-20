@@ -21,6 +21,7 @@
 
   const currentPath = window.location.pathname;
   const currentLang = isFrenchPath(currentPath) ? "fr" : DEFAULT_LANG;
+  const isHomePath = currentPath === "/" || currentPath === "/fr/";
   const storedLang = localStorage.getItem(STORAGE_KEY);
   const preferredLang = storedLang || detectBrowserLang();
 
@@ -28,7 +29,10 @@
     localStorage.setItem(STORAGE_KEY, preferredLang);
   }
 
-  if (preferredLang !== currentLang) {
+  // Browser-language detection only decides which home page a visitor lands
+  // on (see "Multilingue" in functional-specifications.md). A direct link to
+  // a specific page always shows that page's own language, never a redirect.
+  if (isHomePath && preferredLang !== currentLang) {
     const targetPath = pathForLang(currentPath, preferredLang);
     window.location.replace(targetPath + window.location.search + window.location.hash);
     return;
