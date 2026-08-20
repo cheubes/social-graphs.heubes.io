@@ -7,3 +7,9 @@
   label:
     fr: "Décès"
     en: "Died"
+
+- slug: cause-of-death
+  label:
+    fr: "Cause de la mort"
+    en: "Cause of death"
+  localized: true

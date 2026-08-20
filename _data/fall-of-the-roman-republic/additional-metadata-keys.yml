@@ -21,9 +21,3 @@
     fr: "Province gouvernée"
     en: "Governed province"
   localized: true
-
-- slug: cause-of-death
-  label:
-    fr: "Cause de la mort"
-    en: "Cause of death"
-  localized: true

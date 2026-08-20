@@ -40,22 +40,3 @@
       masculine: "Betrayed by"
       feminine: "Betrayed by"
   directed: true
-
-- slug: successor-of
-  label:
-    fr:
-      masculine: "Successeur de"
-      feminine: "Successeure de"
-      neutral: "Successeur•e de"
-    en:
-      masculine: "Successor of"
-      feminine: "Successor of"
-      neutral: "Successor of"
-  reverse-label:
-    fr:
-      masculine: "Prédécesseur de"
-      feminine: "Prédécesseure de"
-    en:
-      masculine: "Predecessor of"
-      feminine: "Predecessor of"
-  directed: true
