@@ -1,0 +1,463 @@
+relations:
+  - source-character: honda-tadakatsu
+    target-character: ii-naomasa
+    type: ally-of
+    description:
+      fr: "Honda Tadakatsu et Ii Naomasa comptent tous deux parmi les « Quatre Rois gardiens » (四天王) des Tokugawa, les généraux les plus anciens et les plus fidèles d'Ieyasu."
+      en: "Honda Tadakatsu and Ii Naomasa were both among the Tokugawa's 'Four Guardian Kings' (Shitennō), Ieyasu's oldest and most trusted generals."
+  - source-character: honda-tadakatsu
+    target-character: sakai-tadatsugu
+    type: ally-of
+    description:
+      fr: "Honda Tadakatsu et Sakai Tadatsugu comptent tous deux parmi les « Quatre Rois gardiens » des Tokugawa, ce dernier étant le plus âgé du groupe."
+      en: "Honda Tadakatsu and Sakai Tadatsugu were both among the Tokugawa's 'Four Guardian Kings', the latter being the eldest of the group."
+  - source-character: honda-tadakatsu
+    target-character: sakakibara-yasumasa
+    type: ally-of
+    description:
+      fr: "Honda Tadakatsu et Sakakibara Yasumasa comptent tous deux parmi les « Quatre Rois gardiens » des Tokugawa, ce dernier étant le plus jeune du groupe."
+      en: "Honda Tadakatsu and Sakakibara Yasumasa were both among the Tokugawa's 'Four Guardian Kings', the latter being the youngest of the group."
+  - source-character: tsukiyama-dono
+    target-character: matsudaira-nobuyasu
+    type: parent-of
+    description:
+      fr: "Tsukiyama-dono est la mère de Matsudaira Nobuyasu ; accusés ensemble de conspirer avec le clan Takeda, ils meurent tous deux en 1579, elle exécutée, lui contraint au seppuku."
+      en: "Tsukiyama-dono was the mother of Matsudaira Nobuyasu; accused together of conspiring with the Takeda clan, they both died in 1579, she executed, he forced into seppuku."
+  - source-character: oda-nobutada
+    target-character: takeda-katsuyori
+    type: rival-of
+    description:
+      fr: "En 1582, Nobutada dirige sur le terrain la campagne finale contre le clan Takeda, précipitant l'effondrement de Katsuyori et sa mort."
+      en: "In 1582, Nobutada commanded in the field the final campaign against the Takeda clan, precipitating Katsuyori's collapse and death."
+  - source-character: oda-nobunaga
+    target-character: imagawa-yoshimoto
+    type: rival-of
+    description:
+      fr: "Nobunaga écrase à la surprise générale l'armée bien plus nombreuse d'Imagawa Yoshimoto à Okehazama en 1560, une victoire fondatrice qui le fait connaître dans tout le Japon."
+      en: "Nobunaga stunningly crushed Imagawa Yoshimoto's far larger army at Okehazama in 1560, a founding victory that made his name known across Japan."
+  - source-character: oda-nobunaga
+    target-character: nohime
+    type: married-to
+    description:
+      fr: "Nobunaga épouse Nōhime vers 1549 pour sceller la paix entre les clans Oda et Saito ; le couple n'a pas d'enfant connu."
+      en: "Nobunaga married Nōhime around 1549 to seal peace between the Oda and Saito clans; the couple had no known children."
+  - source-character: oda-nobunaga
+    target-character: oda-nobutada
+    type: parent-of
+    description:
+      fr: "Nobunaga confie tôt à son fils aîné Nobutada le commandement de campagnes majeures et lui cède formellement la tête du clan de son vivant."
+      en: "Nobunaga entrusted his eldest son Nobutada with command of major campaigns early on and formally handed him leadership of the clan during his own lifetime."
+  - source-character: oda-nobunaga
+    target-character: oichi
+    type: ally-of
+    description:
+      fr: "Nobunaga marie sa sœur cadette Oichi à Azai Nagamasa en 1564 pour sceller une alliance stratégique, faisant d'elle un pilier de sa diplomatie familiale."
+      en: "Nobunaga married off his younger sister Oichi to Azai Nagamasa in 1564 to seal a strategic alliance, making her a pillar of his family diplomacy."
+  - source-character: oichi
+    target-character: azai-nagamasa
+    type: married-to
+    description:
+      fr: "Mariée à Azai Nagamasa en 1564 pour sceller l'alliance Oda-Azai, Oichi lui donne trois filles avant que leurs deux familles ne s'affrontent."
+      en: "Married to Azai Nagamasa in 1564 to seal the Oda-Azai alliance, Oichi bore him three daughters before their two families turned on each other."
+  - source-character: azai-nagamasa
+    target-character: oda-nobunaga
+    type: traitor-to
+    description:
+      fr: "Allié par son mariage avec Oichi, Nagamasa rompt avec Nobunaga en 1570 pour rester fidèle au clan Asakura, prenant son beau-frère à revers avant d'être anéanti par lui en 1573."
+      en: "Allied through his marriage to Oichi, Nagamasa broke with Nobunaga in 1570 to remain loyal to the Asakura clan, catching his brother-in-law off guard before being destroyed by him in 1573."
+  - source-character: azai-nagamasa
+    target-character: asakura-yoshikage
+    type: ally-of
+    description:
+      fr: "Nagamasa reste fidèle à l'alliance de longue date entre les clans Azai et Asakura, un choix qui scelle son destin en le mettant en conflit ouvert avec Nobunaga."
+      en: "Nagamasa remained loyal to the long-standing alliance between the Azai and Asakura clans, a choice that sealed his fate by putting him in open conflict with Nobunaga."
+  - source-character: oda-nobunaga
+    target-character: asakura-yoshikage
+    type: rival-of
+    description:
+      fr: "Nobunaga affronte le clan Asakura à la bataille d'Anegawa en 1570 puis l'anéantit en 1573, mettant fin au règne de Yoshikage sur la province d'Echizen."
+      en: "Nobunaga fought the Asakura clan at the Battle of Anegawa in 1570 and destroyed it in 1573, ending Yoshikage's rule over Echizen Province."
+  - source-character: ashikaga-yoshiaki
+    target-character: oda-nobunaga
+    type: traitor-to
+    description:
+      fr: "Installé comme shogun par Nobunaga en 1568, Yoshiaki s'irrite de son rôle de figurant et organise en secret une coalition anti-Nobunaga ; découvert, il est chassé de Kyoto en 1573, ce qui met fin au shogunat Ashikaga."
+      en: "Installed as shogun by Nobunaga in 1568, Yoshiaki grew resentful of his figurehead role and secretly organised an anti-Nobunaga coalition; discovered, he was driven out of Kyoto in 1573, ending the Ashikaga shogunate."
+  - source-character: akechi-mitsuhide
+    target-character: oda-nobunaga
+    type: retainer-of
+    description:
+      fr: "Entré au service de Nobunaga au début des années 1560, Mitsuhide gravit rapidement les échelons grâce à ses talents militaires et diplomatiques."
+      en: "Entering Nobunaga's service in the early 1560s, Mitsuhide rose quickly through the ranks thanks to his military and diplomatic talents."
+  - source-character: toyotomi-hideyoshi
+    target-character: oda-nobunaga
+    type: retainer-of
+    description:
+      fr: "Entré au service de Nobunaga comme simple porteur de sandales, Hideyoshi gravit par ses seuls talents tous les échelons de la hiérarchie Oda."
+      en: "Entering Nobunaga's service as a lowly sandal-bearer, Hideyoshi rose through every rank of the Oda hierarchy on talent alone."
+  - source-character: shibata-katsuie
+    target-character: oda-nobunaga
+    type: retainer-of
+    description:
+      fr: "L'un des plus anciens généraux du clan Oda, Katsuie se voit confier la conquête et le gouvernement de la province d'Echizen."
+      en: "One of the Oda clan's oldest generals, Katsuie was entrusted with the conquest and governance of Echizen Province."
+  - source-character: niwa-nagahide
+    target-character: oda-nobunaga
+    type: retainer-of
+    description:
+      fr: "Général de longue date de Nobunaga, Nagahide participe à la plupart des grandes campagnes du clan, de la construction du château d'Azuchi à la lutte contre les Ikko-ikki."
+      en: "A long-serving general of Nobunaga, Nagahide took part in most of the clan's major campaigns, from building Azuchi Castle to fighting the Ikko-ikki."
+  - source-character: maeda-toshiie
+    target-character: oda-nobunaga
+    type: retainer-of
+    description:
+      fr: "Entré comme page au service de Nobunaga, Toshiie devient l'un de ses généraux tout en nouant une amitié durable avec Hideyoshi."
+      en: "Entering Nobunaga's service as a page, Toshiie became one of his generals while forging a lasting friendship with Hideyoshi."
+  - source-character: tokugawa-ieyasu
+    target-character: oda-nobunaga
+    type: ally-of
+    description:
+      fr: "Libéré de sa vassalité envers les Imagawa après Okehazama, Ieyasu noue avec Nobunaga une alliance qui durera plus de vingt ans, jusqu'à l'assassinat de ce dernier."
+      en: "Freed from his vassalage to the Imagawa after Okehazama, Ieyasu forged an alliance with Nobunaga that would last more than twenty years, until the latter's assassination."
+  - source-character: takeda-shingen
+    target-character: uesugi-kenshin
+    type: rival-of
+    description:
+      fr: "Les deux seigneurs s'affrontent pendant plus d'une décennie lors des cinq batailles de Kawanakajima, une rivalité légendaire sans vainqueur décisif."
+      en: "The two lords fought each other for more than a decade in the five battles of Kawanakajima, a legendary rivalry with no decisive victor."
+  - source-character: takeda-shingen
+    target-character: tokugawa-ieyasu
+    type: rival-of
+    description:
+      fr: "Shingen inflige à Ieyasu l'une des pires défaites de sa carrière à la bataille de Mikatagahara en 1572, menaçant directement l'allié de celui-ci, Oda Nobunaga."
+      en: "Shingen inflicted one of the worst defeats of Ieyasu's career at the Battle of Mikatagahara in 1572, directly threatening Ieyasu's ally Oda Nobunaga."
+  - source-character: takeda-shingen
+    target-character: takeda-katsuyori
+    type: parent-of
+    description:
+      fr: "Katsuyori hérite en 1573 du puissant domaine de son père, mais aussi d'attentes considérables dans l'ombre d'un chef devenu légendaire."
+      en: "Katsuyori inherited his father's powerful domain in 1573, along with weighty expectations, living in the shadow of a leader who had become a legend."
+  - source-character: takeda-katsuyori
+    target-character: oda-nobunaga
+    type: rival-of
+    description:
+      fr: "En 1575, Katsuyori engage la cavalerie Takeda contre les positions fortifiées de Nobunaga à Nagashino ; l'usage massif de l'arquebuse y décime ses troupes."
+      en: "In 1575, Katsuyori committed the Takeda cavalry against Nobunaga's fortified positions at Nagashino; the massed use of the arquebus there decimated his troops."
+  - source-character: takeda-katsuyori
+    target-character: tokugawa-ieyasu
+    type: rival-of
+    description:
+      fr: "Affaibli après Nagashino, Katsuyori continue d'affronter Ieyasu jusqu'à l'effondrement final du clan Takeda en 1582, anéanti par une offensive conjointe d'Ieyasu et de Nobunaga."
+      en: "Weakened after Nagashino, Katsuyori kept fighting Ieyasu until the Takeda clan's final collapse in 1582, destroyed by a joint offensive from Ieyasu and Nobunaga."
+  - source-character: uesugi-kenshin
+    target-character: uesugi-kagekatsu
+    type: parent-of
+    description:
+      fr: "N'ayant pas d'enfant biologique, Kenshin adopte son neveu Kagekatsu comme héritier, qui doit s'imposer par la force à la tête du clan après sa mort en 1578."
+      en: "Having no biological children, Kenshin adopted his nephew Kagekatsu as heir, who had to fight his way to the head of the clan after Kenshin's death in 1578."
+  - source-character: uesugi-kagekatsu
+    target-character: tokugawa-ieyasu
+    type: rival-of
+    description:
+      fr: "Accusé par Ieyasu de préparer une révolte, Kagekatsu refuse de se justifier en personne, ce qui pousse Ieyasu à lancer contre lui la campagne d'Aizu en 1600, laissant le champ libre à Ishida Mitsunari pour soulever l'Ouest."
+      en: "Accused by Ieyasu of preparing a revolt, Kagekatsu refused to justify himself in person, prompting Ieyasu to launch the Aizu campaign against him in 1600, leaving the field open for Ishida Mitsunari to raise the west."
+  - source-character: mori-motonari
+    target-character: kikkawa-motoharu
+    type: parent-of
+    description:
+      fr: "Motonari place son second fils Motoharu à la tête de la maison Kikkawa, l'un des deux piliers militaires du système des « deux rivières »."
+      en: "Motonari placed his second son Motoharu at the head of the Kikkawa house, one of the two military pillars of the 'Two Rivers' system."
+  - source-character: mori-motonari
+    target-character: kobayakawa-takakage
+    type: parent-of
+    description:
+      fr: "Motonari place son troisième fils Takakage à la tête de la maison Kobayakawa, second pilier du système des « deux rivières » qui soutient le clan Mori."
+      en: "Motonari placed his third son Takakage at the head of the Kobayakawa house, the second pillar of the 'Two Rivers' system supporting the Mori clan."
+  - source-character: kikkawa-motoharu
+    target-character: kobayakawa-takakage
+    type: ally-of
+    description:
+      fr: "Les deux frères forment ensemble le système des « deux rivières » conçu par leur père, soutenant militairement la maison Mori restée aux mains de leur frère aîné."
+      en: "The two brothers together formed the 'Two Rivers' system devised by their father, militarily backing the Mori house that remained in their elder brother's hands."
+  - source-character: kobayakawa-takakage
+    target-character: kobayakawa-hideaki
+    type: parent-of
+    description:
+      fr: "Takakage adopte Hideaki, neveu de Toyotomi Hideyoshi, renforçant les liens entre le clan Mori et le régent."
+      en: "Takakage adopted Hideaki, a nephew of Toyotomi Hideyoshi, strengthening ties between the Mori clan and the regent."
+  - source-character: kobayakawa-takakage
+    target-character: toyotomi-hideyoshi
+    type: ally-of
+    description:
+      fr: "En 1582, Takakage négocie habilement la trêve entre le clan Mori et Hideyoshi après l'annonce de la mort de Nobunaga, ouvrant la voie à des relations durables entre les deux maisons."
+      en: "In 1582, Takakage skilfully negotiated the truce between the Mori clan and Hideyoshi after news of Nobunaga's death broke, opening the way to lasting ties between the two houses."
+  - source-character: akechi-mitsuhide
+    target-character: oda-nobunaga
+    type: traitor-to
+    description:
+      fr: "En juin 1582, Mitsuhide fait volte-face et encercle Nobunaga au temple Honno-ji à Kyoto, le contraignant au suicide dans la trahison la plus célèbre de l'histoire du Japon."
+      en: "In June 1582, Mitsuhide turned back and surrounded Nobunaga at the Honno-ji temple in Kyoto, forcing him to take his own life in the most famous betrayal in Japanese history."
+  - source-character: toyotomi-hideyoshi
+    target-character: akechi-mitsuhide
+    type: rival-of
+    description:
+      fr: "Informé de l'attaque du Honno-ji, Hideyoshi conclut en hâte une trêve avec les Mori et revient venger Nobunaga à Yamazaki, où Mitsuhide est vaincu et tué en fuyant."
+      en: "Learning of the attack on Honno-ji, Hideyoshi hastily struck a truce with the Mori and marched back to avenge Nobunaga at Yamazaki, where Mitsuhide was defeated and killed while fleeing."
+  - source-character: akechi-mitsuhide
+    target-character: hosokawa-gracia
+    type: parent-of
+    description:
+      fr: "Mitsuhide est le père de Tama, future Hosokawa Gracia, dont la vie bascule en 1582 lorsque son père assassine Nobunaga."
+      en: "Mitsuhide was the father of Tama, the future Hosokawa Gracia, whose life was upended in 1582 when her father assassinated Nobunaga."
+  - source-character: hosokawa-gracia
+    target-character: hosokawa-tadaoki
+    type: married-to
+    description:
+      fr: "Mariée à Hosokawa Tadaoki en 1578, Gracia est tenue recluse plusieurs années après la trahison de son père Akechi Mitsuhide, par prudence politique de son mari."
+      en: "Married to Hosokawa Tadaoki in 1578, Gracia was kept secluded for several years after her father Akechi Mitsuhide's betrayal, out of her husband's political caution."
+  - source-character: hosokawa-tadaoki
+    target-character: tokugawa-ieyasu
+    type: ally-of
+    description:
+      fr: "Tadaoki se range résolument aux côtés d'Ieyasu en 1600 et se distingue à la bataille de Sekigahara."
+      en: "Tadaoki firmly sided with Ieyasu in 1600 and distinguished himself at the Battle of Sekigahara."
+  - source-character: ishida-mitsunari
+    target-character: hosokawa-gracia
+    type: rival-of
+    description:
+      fr: "En 1600, Mitsunari tente de prendre Gracia en otage pour contraindre son mari à rejoindre la coalition de l'Ouest ; refusant de se rendre, elle se fait tuer par un serviteur plutôt que d'être capturée."
+      en: "In 1600, Mitsunari tried to take Gracia hostage to force her husband to join the Western coalition; refusing to surrender, she had a retainer kill her rather than be captured."
+  - source-character: shibata-katsuie
+    target-character: toyotomi-hideyoshi
+    type: rival-of
+    description:
+      fr: "Opposé à Hideyoshi lors du conseil de succession qui suit la mort de Nobunaga, Katsuie est vaincu à la bataille de Shizugatake en 1583."
+      en: "Opposed to Hideyoshi at the succession council following Nobunaga's death, Katsuie was defeated at the Battle of Shizugatake in 1583."
+  - source-character: shibata-katsuie
+    target-character: oichi
+    type: married-to
+    description:
+      fr: "Katsuie épouse la veuve Oichi en 1582 ; vaincus par Hideyoshi à Shizugatake l'année suivante, les deux époux se donnent la mort ensemble au château de Kitanosho."
+      en: "Katsuie married the widowed Oichi in 1582; defeated by Hideyoshi at Shizugatake the following year, the couple took their own lives together at Kitanosho Castle."
+  - source-character: niwa-nagahide
+    target-character: toyotomi-hideyoshi
+    type: ally-of
+    description:
+      fr: "Nagahide soutient Hideyoshi lors de la lutte de succession contre Shibata Katsuie, apportant un appui décisif à la victoire de Shizugatake."
+      en: "Nagahide backed Hideyoshi in the succession struggle against Shibata Katsuie, providing decisive support to the victory at Shizugatake."
+  - source-character: maeda-toshiie
+    target-character: toyotomi-hideyoshi
+    type: ally-of
+    description:
+      fr: "Toshiie soutient son vieil ami Hideyoshi lors de la lutte de succession et devient l'un de ses vassaux les plus proches, puis l'un des cinq grands régents désignés à sa mort."
+      en: "Toshiie backed his old friend Hideyoshi in the succession struggle and became one of his closest vassals, later one of the five great regents named on Hideyoshi's death."
+  - source-character: toyotomi-hideyoshi
+    target-character: tokugawa-ieyasu
+    type: rival-of
+    description:
+      fr: "Les deux hommes s'affrontent sans vainqueur net à la bataille de Komaki-Nagakute en 1584, avant de trouver un accord négocié."
+      en: "The two men fought to no clear victor at the Battle of Komaki-Nagakute in 1584, before reaching a negotiated settlement."
+  - source-character: tokugawa-ieyasu
+    target-character: toyotomi-hideyoshi
+    type: ally-of
+    description:
+      fr: "Après Komaki-Nagakute, Ieyasu se rallie prudemment à Hideyoshi, qui lui attribue les riches provinces du Kanto et le nomme plus tard l'un des cinq grands régents chargés de veiller sur son fils."
+      en: "After Komaki-Nagakute, Ieyasu cautiously fell in with Hideyoshi, who granted him the rich Kanto provinces and later named him one of the five great regents entrusted with watching over his son."
+  - source-character: ishida-mitsunari
+    target-character: toyotomi-hideyoshi
+    type: retainer-of
+    description:
+      fr: "Entré tout jeune au service de Hideyoshi, Mitsunari devient l'un de ses plus proches collaborateurs administratifs."
+      en: "Entering Hideyoshi's service at a young age, Mitsunari became one of his closest administrative aides."
+  - source-character: otani-yoshitsugu
+    target-character: toyotomi-hideyoshi
+    type: retainer-of
+    description:
+      fr: "Administrateur habile au service de Hideyoshi, Yoshitsugu partage avec Ishida Mitsunari une même ascension par la voie bureaucratique."
+      en: "A capable administrator in Hideyoshi's service, Yoshitsugu shared with Ishida Mitsunari the same rise through bureaucratic channels."
+  - source-character: otani-yoshitsugu
+    target-character: ishida-mitsunari
+    type: friend-of
+    description:
+      fr: "Liés par une amitié profonde, Yoshitsugu rejoint la cause de Mitsunari en 1600 par loyauté personnelle bien qu'il la juge vouée à l'échec, et se donne la mort à Sekigahara après sa défaite."
+      en: "Bound by deep friendship, Yoshitsugu joined Mitsunari's cause in 1600 out of personal loyalty even though he judged it doomed, and took his own life at Sekigahara after their defeat."
+  - source-character: kato-kiyomasa
+    target-character: toyotomi-hideyoshi
+    type: retainer-of
+    description:
+      fr: "Cousin éloigné et compagnon d'enfance de Hideyoshi, Kiyomasa se forge une réputation de guerrier redoutable à son service, notamment en Corée."
+      en: "A distant cousin and childhood companion of Hideyoshi, Kiyomasa built a reputation as a formidable warrior in his service, notably in Korea."
+  - source-character: fukushima-masanori
+    target-character: toyotomi-hideyoshi
+    type: retainer-of
+    description:
+      fr: "Cousin et compagnon d'armes de longue date de Hideyoshi, Masanori se distingue par sa bravoure lors des grandes campagnes du régent."
+      en: "A cousin and long-time companion-in-arms of Hideyoshi, Masanori distinguished himself through battlefield bravery across the regent's major campaigns."
+  - source-character: kuroda-kanbei
+    target-character: toyotomi-hideyoshi
+    type: retainer-of
+    description:
+      fr: "Stratège réputé, Kanbei devient l'un des conseillers militaires les plus écoutés de Hideyoshi."
+      en: "A renowned strategist, Kanbei became one of Hideyoshi's most trusted military advisers."
+  - source-character: kuroda-kanbei
+    target-character: kuroda-nagamasa
+    type: parent-of
+    description:
+      fr: "Kanbei élève son fils Nagamasa aux côtés de Hideyoshi, qui participera activement aux campagnes d'unification et aux invasions de la Corée."
+      en: "Kanbei raised his son Nagamasa alongside Hideyoshi, who would go on to actively take part in the unification campaigns and the invasions of Korea."
+  - source-character: kuroda-nagamasa
+    target-character: toyotomi-hideyoshi
+    type: retainer-of
+    description:
+      fr: "Formé aux côtés de Hideyoshi, Nagamasa commande sur le terrain lors des invasions de la Corée aux côtés de Kato Kiyomasa."
+      en: "Trained alongside Hideyoshi, Nagamasa commanded in the field during the invasions of Korea alongside Kato Kiyomasa."
+  - source-character: toyotomi-hideyoshi
+    target-character: yodo-dono
+    type: lover-of
+    description:
+      fr: "Recueillie par Hideyoshi après la mort de sa mère Oichi, Chacha devient sa concubine et lui donne en 1593 son unique héritier survivant."
+      en: "Taken in by Hideyoshi after her mother Oichi's death, Chacha became his concubine and bore him his only surviving heir in 1593."
+  - source-character: toyotomi-hideyoshi
+    target-character: toyotomi-hideyori
+    type: parent-of
+    description:
+      fr: "Né tardivement en 1593, Hideyori n'a que cinq ans à la mort de son père, qui le place sous la tutelle d'un conseil de cinq grands régents."
+      en: "Born late in 1593, Hideyori was only five when his father died, leaving him under the guardianship of a council of five great regents."
+  - source-character: yodo-dono
+    target-character: toyotomi-hideyori
+    type: parent-of
+    description:
+      fr: "Après la mort de Hideyoshi, Yodo-dono exerce une influence considérable comme mère et protectrice du jeune Hideyori, avant de mourir avec lui lors de la chute d'Osaka en 1615."
+      en: "After Hideyoshi's death, Yodo-dono wielded considerable influence as the young Hideyori's mother and protector, before dying with him when Osaka fell in 1615."
+  - source-character: kato-kiyomasa
+    target-character: ishida-mitsunari
+    type: rival-of
+    description:
+      fr: "La loyauté purement martiale de Kiyomasa s'oppose durablement à l'administrateur Mitsunari, qu'il tient pour responsable de tensions ayant coûté la vie à des généraux amis en Corée."
+      en: "Kiyomasa's purely martial brand of loyalty put him at lasting odds with the administrator Mitsunari, whom he blamed for tensions that cost the lives of fellow generals in Korea."
+  - source-character: fukushima-masanori
+    target-character: ishida-mitsunari
+    type: rival-of
+    description:
+      fr: "Comme Kiyomasa, Masanori s'oppose à l'administrateur Mitsunari, une fracture interne au clan Toyotomi que Tokugawa Ieyasu exploite après la mort de Hideyoshi."
+      en: "Like Kiyomasa, Masanori clashed with the administrator Mitsunari, an internal Toyotomi rift that Tokugawa Ieyasu exploited after Hideyoshi's death."
+  - source-character: kuroda-nagamasa
+    target-character: tokugawa-ieyasu
+    type: ally-of
+    description:
+      fr: "Nagamasa se rapproche d'Ieyasu après la mort de Hideyoshi et joue un rôle actif dans le ralliement d'autres seigneurs à sa cause avant Sekigahara."
+      en: "Nagamasa drew closer to Ieyasu after Hideyoshi's death and played an active role in winning other lords over to his cause before Sekigahara."
+  - source-character: kato-kiyomasa
+    target-character: tokugawa-ieyasu
+    type: ally-of
+    description:
+      fr: "Sa rivalité avec Mitsunari pousse Kiyomasa dans le camp d'Ieyasu, sans qu'il renie pour autant son attachement à la maison Toyotomi."
+      en: "His rivalry with Mitsunari pushed Kiyomasa into Ieyasu's camp, though without renouncing his attachment to the Toyotomi house."
+  - source-character: fukushima-masanori
+    target-character: tokugawa-ieyasu
+    type: ally-of
+    description:
+      fr: "Masanori joue un rôle de premier plan à Sekigahara, où ses troupes ouvrent les hostilités contre l'armée de l'Ouest, contribuant directement à la victoire d'Ieyasu."
+      en: "Masanori played a leading role at Sekigahara, where his troops opened hostilities against the Western army, directly contributing to Ieyasu's victory."
+  - source-character: ishida-mitsunari
+    target-character: tokugawa-ieyasu
+    type: rival-of
+    description:
+      fr: "En 1600, Mitsunari organise la coalition de l'Ouest pour contrer l'emprise croissante d'Ieyasu ; les deux armées s'affrontent à Sekigahara, où Mitsunari est finalement vaincu."
+      en: "In 1600, Mitsunari organised the Western coalition to counter Ieyasu's growing dominance; the two armies met at Sekigahara, where Mitsunari was ultimately defeated."
+  - source-character: kobayakawa-hideaki
+    target-character: ishida-mitsunari
+    type: traitor-to
+    description:
+      fr: "Officiellement rallié à la coalition de l'Ouest de Mitsunari, Hideaki négocie en secret avec Ieyasu et charge en plein combat les lignes de l'Ouest, faisant basculer l'issue de Sekigahara."
+      en: "Officially aligned with Mitsunari's Western coalition, Hideaki secretly negotiated with Ieyasu and charged the Western lines in the middle of the battle, tipping the outcome of Sekigahara."
+  - source-character: kobayakawa-hideaki
+    target-character: tokugawa-ieyasu
+    type: ally-of
+    description:
+      fr: "La défection de Hideaki en plein combat lui vaut un domaine agrandi de la part d'Ieyasu, mais une réputation durable de traître dans la mémoire populaire."
+      en: "Hideaki's mid-battle defection earned him an enlarged domain from Ieyasu, but a lasting reputation as a traitor in popular memory."
+  - source-character: sanada-yukimura
+    target-character: toyotomi-hideyori
+    type: retainer-of
+    description:
+      fr: "Sorti d'un exil de quinze ans, Yukimura rejoint la cause de Hideyori en 1614 et fait construire le bastion du Sanada-maru, qui repousse plusieurs assauts Tokugawa."
+      en: "Emerging from a fifteen-year exile, Yukimura joined Hideyori's cause in 1614 and built the Sanada-maru bastion, which repelled several Tokugawa assaults."
+  - source-character: sanada-yukimura
+    target-character: tokugawa-ieyasu
+    type: rival-of
+    description:
+      fr: "Lors du second siège d'Osaka en 1615, Yukimura mène une charge désespérée qui manque de peu d'atteindre la position même d'Ieyasu avant d'être tué au combat."
+      en: "During the second siege of Osaka in 1615, Yukimura led a desperate charge that came within a hair's breadth of reaching Ieyasu's own position before he was killed in battle."
+  - source-character: toyotomi-hideyori
+    target-character: tokugawa-ieyasu
+    type: rival-of
+    description:
+      fr: "Réduit au rang de simple seigneur d'Osaka après Sekigahara, Hideyori affronte les deux sièges du château d'Osaka lancés par Ieyasu en 1614-1615, qui mettent fin à la lignée Toyotomi."
+      en: "Reduced to the status of a mere lord of Osaka after Sekigahara, Hideyori faced the two sieges of Osaka Castle launched by Ieyasu in 1614-1615, which ended the Toyotomi line."
+  - source-character: yodo-dono
+    target-character: tokugawa-ieyasu
+    type: rival-of
+    description:
+      fr: "Yodo-dono codirige avec son fils Hideyori la dernière résistance armée à l'autorité des Tokugawa lors des sièges d'Osaka, avant de se donner la mort à la chute du château."
+      en: "Yodo-dono co-led the last armed resistance to Tokugawa authority alongside her son Hideyori during the sieges of Osaka, before taking her own life when the castle fell."
+  - source-character: honda-tadakatsu
+    target-character: tokugawa-ieyasu
+    type: retainer-of
+    description:
+      fr: "Vassal d'Ieyasu depuis l'enfance, Tadakatsu combat à ses côtés dans toutes les grandes batailles du clan pendant plus de cinquante ans, sans jamais y être sérieusement blessé."
+      en: "A vassal of Ieyasu since childhood, Tadakatsu fought at his side in every major battle of the clan for more than fifty years, never seriously wounded in any of them."
+  - source-character: ii-naomasa
+    target-character: tokugawa-ieyasu
+    type: retainer-of
+    description:
+      fr: "Recueilli enfant par Ieyasu, Naomasa devient l'un de ses généraux les plus flamboyants, à la tête de la « légion rouge »."
+      en: "Taken in as a child by Ieyasu, Naomasa became one of his most flamboyant generals, leading the 'Red Devils.'"
+  - source-character: sakai-tadatsugu
+    target-character: tokugawa-ieyasu
+    type: retainer-of
+    description:
+      fr: "Le plus âgé des « Quatre Rois gardiens », Tadatsugu sert Ieyasu depuis sa prime jeunesse et joue un rôle clé à la bataille de Nagashino en 1575."
+      en: "The eldest of the 'Four Guardian Kings,' Tadatsugu served Ieyasu from his earliest youth and played a key role at the Battle of Nagashino in 1575."
+  - source-character: sakakibara-yasumasa
+    target-character: tokugawa-ieyasu
+    type: retainer-of
+    description:
+      fr: "Le plus jeune des « Quatre Rois gardiens », Yasumasa se distingue dès Mikatagahara en 1572 et devient l'un des commandants de confiance d'Ieyasu."
+      en: "The youngest of the 'Four Guardian Kings,' Yasumasa distinguished himself as early as Mikatagahara in 1572 and became one of Ieyasu's trusted commanders."
+  - source-character: tokugawa-ieyasu
+    target-character: tsukiyama-dono
+    type: married-to
+    description:
+      fr: "Marié à Tsukiyama-dono en 1557 sur arrangement du clan Imagawa, Ieyasu la fait exécuter en 1579, accusée de conspirer avec le clan Takeda, sous la pression de son allié Nobunaga."
+      en: "Married to Tsukiyama-dono in 1557 through an Imagawa arrangement, Ieyasu had her executed in 1579, accused of conspiring with the Takeda clan, under pressure from his ally Nobunaga."
+  - source-character: tokugawa-ieyasu
+    target-character: matsudaira-nobuyasu
+    type: parent-of
+    description:
+      fr: "Fils aîné et héritier désigné d'Ieyasu, Nobuyasu est contraint au seppuku en 1579 à seulement vingt ans, accusé avec sa mère de conspirer avec le clan Takeda."
+      en: "Ieyasu's eldest son and designated heir, Nobuyasu was forced into seppuku in 1579 at only twenty, accused along with his mother of conspiring with the Takeda clan."
+  - source-character: tokugawa-ieyasu
+    target-character: imagawa-yoshimoto
+    type: retainer-of
+    description:
+      fr: "Le jeune Matsudaira Motoyasu, futur Ieyasu, sert comme otage puis vassal à la cour d'Imagawa Yoshimoto avant de recouvrer son indépendance à la mort de celui-ci à Okehazama en 1560."
+      en: "The young Matsudaira Motoyasu, the future Ieyasu, served as a hostage and then a vassal at Imagawa Yoshimoto's court before regaining his independence when Yoshimoto died at Okehazama in 1560."
+  - source-character: date-masamune
+    target-character: toyotomi-hideyoshi
+    type: retainer-of
+    description:
+      fr: "L'expansion de Masamune dans le nord du Japon se heurte à l'ultimatum de Hideyoshi lors du siège d'Odawara en 1590 ; il se soumet in extremis, évitant l'anéantissement de son clan."
+      en: "Masamune's expansion in northern Japan ran into Hideyoshi's ultimatum during the siege of Odawara in 1590; he submitted at the last moment, narrowly avoiding his clan's destruction."
+  - source-character: date-masamune
+    target-character: tokugawa-ieyasu
+    type: ally-of
+    description:
+      fr: "Après la mort de Hideyoshi, Masamune se rapproche d'Ieyasu, dont il devient un allié fidèle tout en poursuivant une politique étrangère ambitieuse et personnelle."
+      en: "After Hideyoshi's death, Masamune drew closer to Ieyasu, becoming a loyal ally while also pursuing an ambitious and personal foreign policy of his own."
+  - source-character: ashikaga-yoshiaki
+    target-character: toyotomi-hideyoshi
+    type: ally-of
+    description:
+      fr: "Réfugié auprès de divers seigneurs après sa chute, Yoshiaki renonce officiellement à son titre de shogun en 1588 sous la protection de Hideyoshi, dont il devient un client pensionné."
+      en: "Taking refuge with various lords after his fall, Yoshiaki formally renounced his title of shogun in 1588 under Hideyoshi's protection, becoming his pensioned client."

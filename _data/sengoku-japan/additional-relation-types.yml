@@ -1,0 +1,37 @@
+- slug: retainer-of
+  label:
+    fr:
+      masculine: "Vassal de"
+      feminine: "Vassale de"
+      neutral: "Vassal•e de"
+    en:
+      masculine: "Retainer of"
+      feminine: "Retainer of"
+      neutral: "Retainer of"
+  reverse-label:
+    fr:
+      masculine: "Suzerain de"
+      feminine: "Suzeraine de"
+    en:
+      masculine: "Lord of"
+      feminine: "Lord of"
+  directed: true
+
+- slug: traitor-to
+  label:
+    fr:
+      masculine: "Traître envers"
+      feminine: "Traîtresse envers"
+      neutral: "Traître•esse envers"
+    en:
+      masculine: "Traitor to"
+      feminine: "Traitor to"
+      neutral: "Traitor to"
+  reverse-label:
+    fr:
+      masculine: "Trahi par"
+      feminine: "Trahie par"
+    en:
+      masculine: "Betrayed by"
+      feminine: "Betrayed by"
+  directed: true

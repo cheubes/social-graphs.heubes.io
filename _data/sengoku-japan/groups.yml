@@ -1,0 +1,35 @@
+- slug: oda-clan
+  name:
+    fr: "Clan Oda"
+    en: "Oda Clan"
+  color: "#a6192e"
+
+- slug: toyotomi-clan
+  name:
+    fr: "Clan Toyotomi"
+    en: "Toyotomi Clan"
+  color: "#d4a017"
+
+- slug: tokugawa-clan
+  name:
+    fr: "Clan Tokugawa"
+    en: "Tokugawa Clan"
+  color: "#2c4870"
+
+- slug: takeda-clan
+  name:
+    fr: "Clan Takeda"
+    en: "Takeda Clan"
+  color: "#4b2e2e"
+
+- slug: uesugi-clan
+  name:
+    fr: "Clan Uesugi"
+    en: "Uesugi Clan"
+  color: "#1f5c4a"
+
+- slug: mori-clan
+  name:
+    fr: "Clan Mōri"
+    en: "Mōri Clan"
+  color: "#5c4a8a"

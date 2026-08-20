@@ -1,0 +1,313 @@
+- slug: oda-nobunaga
+  gender: masculine
+  group: oda-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Odanobunaga.jpg"
+  metadata:
+    birth: "1534"
+    death: "1582"
+
+- slug: oda-nobutada
+  gender: masculine
+  group: oda-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Oda_Nobutada3_(cropped).jpg"
+  metadata:
+    birth: "1557"
+    death: "1582"
+
+- slug: nohime
+  gender: feminine
+  group: oda-clan
+  portrait-source: "ai-generated"
+  metadata:
+    birth: "1535"
+    death: "1612"
+
+- slug: oichi
+  gender: feminine
+  group: oda-clan
+  portrait-source: "ai-generated"
+  metadata:
+    birth: "1547"
+    death: "1583"
+
+- slug: akechi-mitsuhide
+  gender: masculine
+  group: oda-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Akechi_Mitsuhide2.jpg"
+  metadata:
+    birth: "1528"
+    death: "1582"
+
+- slug: shibata-katsuie
+  gender: masculine
+  group: oda-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Shibata_Katsuie_large.jpg"
+  metadata:
+    birth: "1522"
+    death: "1583"
+
+- slug: niwa-nagahide
+  gender: masculine
+  group: oda-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Niwa_Nagahide2.jpg"
+  metadata:
+    birth: "1535"
+    death: "1585"
+
+- slug: toyotomi-hideyoshi
+  gender: masculine
+  group: toyotomi-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Toyotomi_Hideyoshi_c1598_Kodai-ji_Temple.png"
+  metadata:
+    birth: "1537"
+    death: "1598"
+
+- slug: toyotomi-hideyori
+  gender: masculine
+  group: toyotomi-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Hideyori_Toyotomi.jpg"
+  metadata:
+    birth: "1593"
+    death: "1615"
+
+- slug: yodo-dono
+  gender: feminine
+  group: toyotomi-clan
+  portrait-source: "ai-generated"
+  metadata:
+    birth: "1569"
+    death: "1615"
+
+- slug: ishida-mitsunari
+  gender: masculine
+  group: toyotomi-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Ishida_Mitsunari.jpg"
+  metadata:
+    birth: "1559"
+    death: "1600"
+
+- slug: otani-yoshitsugu
+  gender: masculine
+  group: toyotomi-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Ōtani_Yoshitsugu.jpg"
+  metadata:
+    birth: "1559"
+    death: "1600"
+
+- slug: kato-kiyomasa
+  gender: masculine
+  group: toyotomi-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Katō_Kiyomasa.jpg"
+  metadata:
+    birth: "1562"
+    death: "1611"
+
+- slug: fukushima-masanori
+  gender: masculine
+  group: toyotomi-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Fukushima_Masanori_2.jpg"
+  metadata:
+    birth: "1561"
+    death: "1624"
+
+- slug: kuroda-kanbei
+  gender: masculine
+  group: toyotomi-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Yoshitaka_Kuroda.jpg"
+  metadata:
+    birth: "1546"
+    death: "1604"
+
+- slug: kuroda-nagamasa
+  gender: masculine
+  group: toyotomi-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Kuroda_Nagamasa.jpg"
+  metadata:
+    birth: "1568"
+    death: "1623"
+
+- slug: maeda-toshiie
+  gender: masculine
+  group: toyotomi-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Maeda_Toshiie_otiai.jpg"
+  metadata:
+    birth: "1538"
+    death: "1599"
+
+- slug: tokugawa-ieyasu
+  gender: masculine
+  group: tokugawa-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Tokugawa_Ieyasu2.JPG"
+  metadata:
+    birth: "1543"
+    death: "1616"
+
+- slug: tsukiyama-dono
+  gender: feminine
+  group: tokugawa-clan
+  portrait-source: "ai-generated"
+  metadata:
+    birth: "1542"
+    death: "1579"
+
+- slug: matsudaira-nobuyasu
+  gender: masculine
+  group: tokugawa-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Matsudaira_Nobuyasu.jpg"
+  metadata:
+    birth: "1559"
+    death: "1579"
+
+- slug: honda-tadakatsu
+  gender: masculine
+  group: tokugawa-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Portrait-Honda-Tadakatsu.jpg"
+  metadata:
+    birth: "1548"
+    death: "1610"
+
+- slug: ii-naomasa
+  gender: masculine
+  group: tokugawa-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Ii_Naomasa.jpg"
+  metadata:
+    birth: "1561"
+    death: "1602"
+
+- slug: sakai-tadatsugu
+  gender: masculine
+  group: tokugawa-clan
+  portrait-source: "ai-generated"
+  metadata:
+    birth: "1527"
+    death: "1596"
+
+- slug: sakakibara-yasumasa
+  gender: masculine
+  group: tokugawa-clan
+  portrait-source: "ai-generated"
+  metadata:
+    birth: "1548"
+    death: "1606"
+
+- slug: hosokawa-tadaoki
+  gender: masculine
+  group: tokugawa-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Sansaihosokawa.jpg"
+  metadata:
+    birth: "1563"
+    death: "1646"
+
+- slug: hosokawa-gracia
+  gender: feminine
+  group: tokugawa-clan
+  portrait-source: "ai-generated"
+  metadata:
+    birth: "1563"
+    death: "1600"
+
+- slug: takeda-shingen
+  gender: masculine
+  group: takeda-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Takeda_Harunobu.jpg"
+  metadata:
+    birth: "1521"
+    death: "1573"
+
+- slug: takeda-katsuyori
+  gender: masculine
+  group: takeda-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Takeda_Katsuyori.jpg"
+  metadata:
+    birth: "1546"
+    death: "1582"
+
+- slug: uesugi-kenshin
+  gender: masculine
+  group: uesugi-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Uesugi_Kenshin_Portrait_from_Uesugi_Shrine.png"
+  metadata:
+    birth: "1530"
+    death: "1578"
+
+- slug: uesugi-kagekatsu
+  gender: masculine
+  group: uesugi-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Uesugi_Kagekatsu_Portrait_Yonezawa_City_Uesugi_Museum.png"
+  metadata:
+    birth: "1556"
+    death: "1623"
+
+- slug: mori-motonari
+  gender: masculine
+  group: mori-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Mori_Motonari.jpg"
+  metadata:
+    birth: "1497"
+    death: "1571"
+
+- slug: kikkawa-motoharu
+  gender: masculine
+  group: mori-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Kikkawa_Motoharu02.jpg"
+  metadata:
+    birth: "1530"
+    death: "1586"
+
+- slug: kobayakawa-takakage
+  gender: masculine
+  group: mori-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Kobayakawa_Takakage_(Beisanji_Mihara).jpg"
+  metadata:
+    birth: "1533"
+    death: "1597"
+
+- slug: kobayakawa-hideaki
+  gender: masculine
+  group: mori-clan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Kobayakawa_Hideaki_2.jpg"
+  metadata:
+    birth: "1582"
+    death: "1602"
+
+- slug: imagawa-yoshimoto
+  gender: masculine
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Imagawa-Yoshimoto-Ukiyo-e.jpg"
+  metadata:
+    birth: "1519"
+    death: "1560"
+
+- slug: azai-nagamasa
+  gender: masculine
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Azai_Nagamasa3.jpg"
+  metadata:
+    birth: "1545"
+    death: "1573"
+
+- slug: asakura-yoshikage
+  gender: masculine
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Asakura_Yoshikage2.jpg"
+  metadata:
+    birth: "1533"
+    death: "1573"
+
+- slug: date-masamune
+  gender: masculine
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Date_Masamune02.jpg"
+  metadata:
+    birth: "1567"
+    death: "1636"
+
+- slug: sanada-yukimura
+  gender: masculine
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Sanada_Yukimura.jpg"
+  metadata:
+    birth: "1567"
+    death: "1615"
+
+- slug: ashikaga-yoshiaki
+  gender: masculine
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Yoshiaki.jpg"
+  metadata:
+    birth: "1537"
+    death: "1597"
