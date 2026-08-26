@@ -226,11 +226,25 @@ small {
 
 /* flex: 0 0 auto so this fixed height is never overridden by flex-grow
    (see .card-body's flex: 1 1 auto in Bootstrap), keeping every tile the
-   same height regardless of description length; overflow-y scrolls the
-   excess instead of growing the tile or clipping it silently. */
+   same height regardless of description length. Column flex so the title
+   stays fixed and only .sg-universe-card-scroll below it scrolls. */
 .sg-universe-card .card-body {
   flex: 0 0 auto;
-  height: 9rem;
+  height: calc(9rem + 10px);
+  display: flex;
+  flex-direction: column;
+}
+
+.sg-universe-card .sg-card-title {
+  flex: 0 0 auto;
+}
+
+/* min-height: 0 overrides the flex item default (min-height: auto), which
+   would otherwise let this grow past its share and prevent overflow-y from
+   ever kicking in. */
+.sg-universe-card-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
   overflow-y: auto;
 }
 
