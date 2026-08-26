@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/claude-de-lorraine-aumale/
 lang: en
 character-name: "Claude, Duke of Aumale"
 external-link: "https://en.wikipedia.org/wiki/Claude,_Duke_of_Aumale"
+metadata:
+  religion: "Catholic"
+  title: "Duke of Aumale, Grand Huntsman of France"
 ---
 
 The third son of Antoinette de Bourbon and brother of François de Guise and the Cardinal of Lorraine, he grew up in the shadow of his elder brothers within a family that dominated the kingdom's Catholic politics.

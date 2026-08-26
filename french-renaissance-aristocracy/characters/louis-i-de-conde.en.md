@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/louis-i-de-conde/
 lang: en
 character-name: "Louis I, Prince of Condé"
 external-link: "https://en.wikipedia.org/wiki/Louis_I,_Prince_of_Cond%C3%A9"
+metadata:
+  religion: "Protestant"
+  title: "Prince of Condé"
 ---
 
 The younger brother of Antoine de Bourbon, he was implicated in the 1560 Amboise conspiracy against Guise influence, a plot that nearly cost him his life before he was saved by the death of Francis II.

@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/francois-de-guise/
 lang: fr
 character-name: "François de Guise"
 external-link: "https://fr.wikipedia.org/wiki/Fran%C3%A7ois_de_Guise"
+metadata:
+  religion: "Catholique"
+  title: "Duc de Guise"
 ---
 
 Surnommé "le Balafré" pour la blessure reçue au siège de Boulogne, il s'illustre en défendant victorieusement Metz contre Charles Quint en 1552 puis en reprenant Calais aux Anglais en 1558.

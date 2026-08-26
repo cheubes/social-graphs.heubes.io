@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/michel-de-l-hopital/
 lang: fr
 character-name: "Michel de l'Hôpital"
 external-link: "https://fr.wikipedia.org/wiki/Michel_de_l%27Hospital"
+metadata:
+  religion: "Catholique"
+  title: "Chancelier de France"
 ---
 
 Juriste de formation, il se distingue par des missions diplomatiques avant d'être nommé chancelier de France par Catherine de Médicis en 1560.

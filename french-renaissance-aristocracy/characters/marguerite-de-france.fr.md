@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/marguerite-de-france/
 lang: fr
 character-name: "Marguerite de France"
 external-link: "https://fr.wikipedia.org/wiki/Marguerite_de_France_(1553-1615)"
+metadata:
+  religion: "Catholique"
+  title: "Reine de Navarre, puis reine de France"
 ---
 
 Fille de Catherine de Médicis et sœur de trois rois de France, elle épouse Henri de Navarre en août 1572, quelques jours seulement avant que la noce ne serve de prétexte au massacre de la Saint-Barthélemy.

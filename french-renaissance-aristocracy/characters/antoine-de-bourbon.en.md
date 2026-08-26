@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/antoine-de-bourbon/
 lang: en
 character-name: "Antoine of Navarre"
 external-link: "https://en.wikipedia.org/wiki/Antoine_of_Navarre"
+metadata:
+  religion: "Catholic, briefly converted to Protestantism"
+  title: "King of Navarre"
 ---
 
 First Prince of the Blood as a direct descendant of Saint Louis, he became King of Navarre through his marriage to Jeanne d'Albret in 1548.

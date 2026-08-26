@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/gaspard-de-coligny/
 lang: en
 character-name: "Gaspard de Coligny"
 external-link: "https://en.wikipedia.org/wiki/Gaspard_II_de_Coligny"
+metadata:
+  religion: "Protestant, converted in the late 1550s"
+  title: "Admiral of France"
 ---
 
 A nephew of Anne de Montmorency, he converted to Protestantism in the late 1550s and became, alongside Louis I of Condé, the principal military and political leader of the Huguenots.

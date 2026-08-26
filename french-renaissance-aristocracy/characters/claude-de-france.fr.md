@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/claude-de-france/
 lang: fr
 character-name: "Claude de France"
 external-link: "https://fr.wikipedia.org/wiki/Claude_de_France_(1547-1575)"
+metadata:
+  religion: "Catholique"
+  title: "Duchesse de Lorraine"
 ---
 
 Seconde fille de Catherine de Médicis, elle épouse en 1559, à l'âge de onze ans, Charles III de Lorraine, resserrant les liens entre la couronne de France et le duché de Lorraine.

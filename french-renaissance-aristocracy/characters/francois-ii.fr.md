@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/francois-ii/
 lang: fr
 character-name: "François II"
 external-link: "https://fr.wikipedia.org/wiki/Fran%C3%A7ois_II_(roi_de_France)"
+metadata:
+  religion: "Catholique"
+  title: "Roi de France"
 ---
 
 Fils aîné de Catherine de Médicis et d'Henri II, il épouse en 1558 Marie Stuart, reine d'Écosse, avant de monter sur le trône de France l'année suivante à la mort accidentelle de son père.

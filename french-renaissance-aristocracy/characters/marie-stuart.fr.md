@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/marie-stuart/
 lang: fr
 character-name: "Marie Stuart"
 external-link: "https://fr.wikipedia.org/wiki/Marie_Stuart"
+metadata:
+  religion: "Catholique"
+  title: "Reine d'Écosse, reine de France par son mariage"
 ---
 
 Devenue reine d'Écosse à l'âge de six jours, elle est envoyée dès cinq ans à la cour de France, où elle grandit sous la tutelle de sa grand-mère Antoinette de Bourbon et de ses oncles Guise.

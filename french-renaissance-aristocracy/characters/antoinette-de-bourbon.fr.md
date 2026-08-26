@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/antoinette-de-bourbon/
 lang: fr
 character-name: "Antoinette de Bourbon"
 external-link: "https://fr.wikipedia.org/wiki/Antoinette_de_Bourbon"
+metadata:
+  religion: "Catholique"
+  title: "Duchesse de Guise"
 ---
 
 Épouse depuis 1513 de Claude de Lorraine, premier duc de Guise, elle donne naissance à une douzaine d'enfants et voit plusieurs d'entre eux, dont François de Guise et le cardinal de Lorraine, accéder aux plus hautes charges du royaume.

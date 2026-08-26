@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/charles-de-bourbon/
 lang: fr
 character-name: "Charles de Bourbon, cardinal de Bourbon"
 external-link: "https://fr.wikipedia.org/wiki/Charles_de_Bourbon_(1523-1590)"
+metadata:
+  religion: "Catholique"
+  title: "Cardinal ; proclamé roi de France sous le nom de Charles X"
 ---
 
 Frère cadet d'Antoine de Bourbon et oncle d'Henri de Navarre, archevêque de Rouen puis cardinal dès son plus jeune âge, il est choisi par la Ligue catholique comme figure de proue en raison de sa place, après Henri de Navarre, dans l'ordre de succession au trône, sans en partager les convictions protestantes.

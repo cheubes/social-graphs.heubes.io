@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/francois-de-france/
 lang: en
 character-name: "Francis, Duke of Anjou"
 external-link: "https://en.wikipedia.org/wiki/Francis,_Duke_of_Anjou"
+metadata:
+  religion: "Catholic"
+  title: "Duke of Anjou (previously Duke of Alençon)"
 ---
 
 The youngest of Catherine de' Medici's children, his face scarred by smallpox, he nursed a lasting rivalry with his elder brother Henry III.

@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/louise-de-lorraine/
 lang: en
 character-name: "Louise of Lorraine"
 external-link: "https://en.wikipedia.org/wiki/Louise_of_Lorraine"
+metadata:
+  religion: "Catholic"
+  title: "Queen of France, titular Queen of Poland"
 ---
 
 Descended from a cadet branch of the House of Lorraine, that of Vaudémont, she was chosen by Henry III, reportedly out of genuine affection rather than political calculation, and became Queen of France through their marriage in 1575.

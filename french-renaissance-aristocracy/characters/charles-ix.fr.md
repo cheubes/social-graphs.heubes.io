@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/charles-ix/
 lang: fr
 character-name: "Charles IX"
 external-link: "https://fr.wikipedia.org/wiki/Charles_IX_(roi_de_France)"
+metadata:
+  religion: "Catholique"
+  title: "Roi de France"
 ---
 
 Second fils de Catherine de Médicis à régner, il accède au trône à dix ans à la mort de son frère François II, sous la régence de sa mère jusqu'à sa majorité en 1563. Marié à Élisabeth d'Autriche en 1570, il gouverne pendant les premières guerres de Religion, tiraillé entre les conseils de conciliation de Michel de l'Hôpital et la pression des factions catholiques.

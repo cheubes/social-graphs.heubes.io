@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/diane-de-poitiers/
 lang: en
 character-name: "Diane de Poitiers"
 external-link: "https://en.wikipedia.org/wiki/Diane_de_Poitiers"
+metadata:
+  religion: "Catholic"
+  title: "Duchess of Valentinois"
 ---
 
 The widow of the Grand Seneschal of Normandy and twenty years Henry II's senior, she became his mentor and then his mistress while he was still an adolescent, retaining her hold over him even after his marriage to Catherine de' Medici.

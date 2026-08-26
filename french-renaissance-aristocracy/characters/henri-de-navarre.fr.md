@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/henri-de-navarre/
 lang: fr
 character-name: "Henri de Navarre"
 external-link: "https://fr.wikipedia.org/wiki/Henri_IV_(roi_de_France)"
+metadata:
+  religion: "Protestant, converti au catholicisme en 1593"
+  title: "Roi de Navarre, puis roi de France sous le nom d'Henri IV"
 ---
 
 Élevé en partie dans la foi protestante par sa mère Jeanne d'Albret, il devient roi de Navarre à sa mort en 1572, la même année où son mariage avec Marguerite de France sert de prétexte au massacre de la Saint-Barthélemy, auquel il échappe en abjurant sous la contrainte.

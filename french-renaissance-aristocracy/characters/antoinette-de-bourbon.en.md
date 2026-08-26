@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/antoinette-de-bourbon/
 lang: en
 character-name: "Antoinette of Bourbon"
 external-link: "https://en.wikipedia.org/wiki/Antoinette_of_Bourbon"
+metadata:
+  religion: "Catholic"
+  title: "Duchess of Guise"
 ---
 
 The wife, from 1513, of Claude of Lorraine, first Duke of Guise, she bore about a dozen children and saw several of them, including François de Guise and the Cardinal of Lorraine, rise to the highest offices of the kingdom.

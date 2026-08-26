@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/michel-de-l-hopital/
 lang: en
 character-name: "Michel de l'Hôpital"
 external-link: "https://en.wikipedia.org/wiki/Michel_de_l%27H%C3%B4pital"
+metadata:
+  religion: "Catholic"
+  title: "Chancellor of France"
 ---
 
 A trained jurist, he distinguished himself in diplomatic missions before being appointed Chancellor of France by Catherine de' Medici in 1560.

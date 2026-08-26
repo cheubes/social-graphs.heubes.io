@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/henri-de-montmorency-damvi
 lang: en
 character-name: "Henri I de Montmorency"
 external-link: "https://en.wikipedia.org/wiki/Henri_I_de_Montmorency"
+metadata:
+  religion: "Catholic"
+  title: "Governor of Languedoc, later Constable of France"
 ---
 
 The second son of Anne de Montmorency, he initially fought in the Catholic camp at the outset of the Wars of Religion before shifting toward a more moderate stance.

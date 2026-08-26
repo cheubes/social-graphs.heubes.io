@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/henri-de-montmorency-da
 lang: fr
 character-name: "Henri Ier de Montmorency-Damville"
 external-link: "https://fr.wikipedia.org/wiki/Henri_Ier_de_Montmorency"
+metadata:
+  religion: "Catholique"
+  title: "Gouverneur du Languedoc, puis connétable de France"
 ---
 
 Second fils d'Anne de Montmorency, il combat d'abord dans le camp catholique au début des guerres de Religion avant d'évoluer vers une position plus modérée.

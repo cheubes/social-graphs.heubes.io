@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/henri-iii/
 lang: fr
 character-name: "Henri III"
 external-link: "https://fr.wikipedia.org/wiki/Henri_III_(roi_de_France)"
+metadata:
+  religion: "Catholique"
+  title: "Roi de Pologne, puis roi de France"
 ---
 
 Fils préféré de Catherine de Médicis, il se distingue comme chef militaire dès dix-huit ans en remportant les batailles de Jarnac et de Moncontour contre les protestants en 1569.

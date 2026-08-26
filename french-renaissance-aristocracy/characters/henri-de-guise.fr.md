@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/henri-de-guise/
 lang: fr
 character-name: "Henri de Guise"
 external-link: "https://fr.wikipedia.org/wiki/Henri_Ier_de_Guise"
+metadata:
+  religion: "Catholique"
+  title: "Duc de Guise, chef de la Ligue catholique"
 ---
 
 Fils de François de Guise, il venge l'assassinat de son père en faisant tuer Gaspard de Coligny lors du massacre de la Saint-Barthélemy en 1572.

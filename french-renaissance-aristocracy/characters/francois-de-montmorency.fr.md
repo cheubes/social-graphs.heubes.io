@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/francois-de-montmorency
 lang: fr
 character-name: "François de Montmorency"
 external-link: "https://fr.wikipedia.org/wiki/Fran%C3%A7ois_de_Montmorency"
+metadata:
+  religion: "Catholique"
+  title: "Maréchal de France, gouverneur de Paris"
 ---
 
 Fils aîné d'Anne de Montmorency, maréchal de France et gouverneur de Paris, il défend, à la différence de nombreux membres de la haute noblesse catholique, une politique de modération religieuse pendant les guerres de Religion.

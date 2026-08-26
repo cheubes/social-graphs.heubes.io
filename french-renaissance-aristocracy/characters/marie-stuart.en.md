@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/marie-stuart/
 lang: en
 character-name: "Mary, Queen of Scots"
 external-link: "https://en.wikipedia.org/wiki/Mary,_Queen_of_Scots"
+metadata:
+  religion: "Catholic"
+  title: "Queen of Scots, Queen of France by marriage"
 ---
 
 Made Queen of Scots at six days old, she was sent to the French court at the age of five, where she grew up under the guardianship of her grandmother Antoinette de Bourbon and her Guise uncles.

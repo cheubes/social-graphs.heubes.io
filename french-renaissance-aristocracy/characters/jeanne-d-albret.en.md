@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/jeanne-d-albret/
 lang: en
 character-name: "Jeanne d'Albret"
 external-link: "https://en.wikipedia.org/wiki/Jeanne_d%27Albret"
+metadata:
+  religion: "Protestant (Calvinist), converted in 1560"
+  title: "Queen of Navarre"
 ---
 
 The daughter of Marguerite de Navarre and niece of Francis I, she inherited the throne of Navarre in 1555 and openly converted to Calvinism in 1560, which she imposed as the official religion in her lands of Béarn.

@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/elisabeth-d-autriche/
 lang: fr
 character-name: "Élisabeth d'Autriche"
 external-link: "https://fr.wikipedia.org/wiki/%C3%89lisabeth_d%27Autriche_(1554-1592)"
+metadata:
+  religion: "Catholique"
+  title: "Reine de France"
 ---
 
 Fille de l'empereur Maximilien II du Saint-Empire, cette archiduchesse de la maison de Habsbourg épouse Charles IX en 1570 par un mariage qui resserre les liens entre la France et l'Autriche en pleine guerre de Religion.

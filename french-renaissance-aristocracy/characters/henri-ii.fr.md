@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/henri-ii/
 lang: fr
 character-name: "Henri II"
 external-link: "https://fr.wikipedia.org/wiki/Henri_II_(roi_de_France)"
+metadata:
+  religion: "Catholique"
+  title: "Roi de France"
 ---
 
 Second fils de François Ier, il passe une partie de son enfance en otage en Espagne après la défaite de son père à Pavie, avant de devenir roi de France en 1547.

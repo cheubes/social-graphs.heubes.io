@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/henri-i-de-conde/
 lang: en
 character-name: "Henry I, Prince of Condé"
 external-link: "https://en.wikipedia.org/wiki/Henry_I,_Prince_of_Cond%C3%A9"
+metadata:
+  religion: "Protestant"
+  title: "Prince of Condé"
 ---
 
 The son of Louis I of Condé, he became Prince of Condé at seventeen after his father's execution following the Battle of Jarnac in 1569, immediately taking command of the Protestant armies alongside Gaspard de Coligny.

@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/anne-de-montmorency/
 lang: en
 character-name: "Anne de Montmorency"
 external-link: "https://en.wikipedia.org/wiki/Anne_de_Montmorency"
+metadata:
+  religion: "Catholic"
+  title: "Constable of France"
 ---
 
 A childhood companion of Francis I, he built a distinguished military career under that king and later Henry II, who made him Constable of France in 1538, the kingdom's highest military office.

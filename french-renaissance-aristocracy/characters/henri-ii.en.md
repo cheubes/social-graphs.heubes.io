@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/henri-ii/
 lang: en
 character-name: "Henry II"
 external-link: "https://en.wikipedia.org/wiki/Henry_II_of_France"
+metadata:
+  religion: "Catholic"
+  title: "King of France"
 ---
 
 The second son of Francis I, he spent part of his childhood as a hostage in Spain after his father's defeat at Pavia, before becoming King of France in 1547.

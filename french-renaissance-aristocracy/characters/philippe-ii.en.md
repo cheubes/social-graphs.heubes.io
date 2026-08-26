@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/philippe-ii/
 lang: en
 character-name: "Philip II of Spain"
 external-link: "https://en.wikipedia.org/wiki/Philip_II_of_Spain"
+metadata:
+  religion: "Catholic"
+  title: "King of Spain"
 ---
 
 The son of Charles V, he inherited a vast empire spanning Spain, the Netherlands, and territories in Italy and the New World, and cast himself as the champion of Catholic Counter-Reformation in Europe.

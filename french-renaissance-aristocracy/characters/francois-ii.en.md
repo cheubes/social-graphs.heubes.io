@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/francois-ii/
 lang: en
 character-name: "Francis II"
 external-link: "https://en.wikipedia.org/wiki/Francis_II_of_France"
+metadata:
+  religion: "Catholic"
+  title: "King of France"
 ---
 
 The eldest son of Catherine de' Medici and Henry II, he married Mary, Queen of Scots in 1558 before becoming King of France the following year after his father's accidental death.

@@ -1,0 +1,11 @@
+- slug: religion
+  label:
+    fr: "Religion"
+    en: "Religion"
+  localized: true
+
+- slug: title
+  label:
+    fr: "Titre"
+    en: "Title"
+  localized: true

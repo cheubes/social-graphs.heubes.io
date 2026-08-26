@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/louise-de-lorraine/
 lang: fr
 character-name: "Louise de Lorraine"
 external-link: "https://fr.wikipedia.org/wiki/Louise_de_Lorraine-Vaud%C3%A9mont"
+metadata:
+  religion: "Catholique"
+  title: "Reine de France, reine de Pologne de titre"
 ---
 
 Issue d'une branche cadette de la maison de Lorraine, celle de Vaudémont, elle est choisie par Henri III, dit-on, par affection réelle plutôt que par calcul politique, et devient reine de France par leur mariage en 1575.

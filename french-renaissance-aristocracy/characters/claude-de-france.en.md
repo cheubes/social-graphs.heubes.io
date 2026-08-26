@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/claude-de-france/
 lang: en
 character-name: "Claude of Valois"
 external-link: "https://en.wikipedia.org/wiki/Claude_of_Valois"
+metadata:
+  religion: "Catholic"
+  title: "Duchess of Lorraine"
 ---
 
 The second daughter of Catherine de' Medici, she married Charles III of Lorraine in 1559 at the age of eleven, strengthening ties between the French crown and the Duchy of Lorraine.

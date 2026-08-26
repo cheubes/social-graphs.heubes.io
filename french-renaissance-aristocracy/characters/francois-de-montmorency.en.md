@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/francois-de-montmorency/
 lang: en
 character-name: "François de Montmorency"
 external-link: "https://en.wikipedia.org/wiki/Fran%C3%A7ois_de_Montmorency"
+metadata:
+  religion: "Catholic"
+  title: "Marshal of France, Governor of Paris"
 ---
 
 The eldest son of Anne de Montmorency, Marshal of France and Governor of Paris, he pursued, unlike many members of the high Catholic nobility, a policy of religious moderation during the Wars of Religion.

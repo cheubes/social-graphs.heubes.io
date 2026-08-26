@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/charles-ix/
 lang: en
 character-name: "Charles IX"
 external-link: "https://en.wikipedia.org/wiki/Charles_IX_of_France"
+metadata:
+  religion: "Catholic"
+  title: "King of France"
 ---
 
 The second of Catherine de' Medici's sons to reign, he came to the throne at age ten upon the death of his brother Francis II, under his mother's regency until he came of age in 1563. Married to Elisabeth of Austria in 1570, he ruled through the early Wars of Religion, torn between Michel de l'Hôpital's counsel of conciliation and pressure from the Catholic faction.

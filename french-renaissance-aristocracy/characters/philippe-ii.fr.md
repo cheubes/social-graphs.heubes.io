@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/philippe-ii/
 lang: fr
 character-name: "Philippe II d'Espagne"
 external-link: "https://fr.wikipedia.org/wiki/Philippe_II_(roi_d%27Espagne)"
+metadata:
+  religion: "Catholique"
+  title: "Roi d'Espagne"
 ---
 
 Fils de Charles Quint, il hérite d'un vaste empire englobant l'Espagne, les Pays-Bas et des possessions en Italie et dans le Nouveau Monde, et se pose en champion de la Contre-Réforme catholique en Europe.

@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/henri-iii/
 lang: en
 character-name: "Henry III"
 external-link: "https://en.wikipedia.org/wiki/Henry_III_of_France"
+metadata:
+  religion: "Catholic"
+  title: "King of Poland, later King of France"
 ---
 
 Catherine de' Medici's favourite son, he distinguished himself as a military commander at just eighteen, winning the battles of Jarnac and Moncontour against the Protestants in 1569.

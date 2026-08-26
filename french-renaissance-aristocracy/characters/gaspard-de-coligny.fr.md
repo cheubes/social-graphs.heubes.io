@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/gaspard-de-coligny/
 lang: fr
 character-name: "Gaspard de Coligny"
 external-link: "https://fr.wikipedia.org/wiki/Gaspard_II_de_Coligny"
+metadata:
+  religion: "Protestant, converti à la fin des années 1550"
+  title: "Amiral de France"
 ---
 
 Neveu d'Anne de Montmorency, il se convertit au protestantisme à la fin des années 1550 et devient, aux côtés de Louis Ier de Condé, le principal chef militaire et politique des huguenots.

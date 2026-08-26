@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/diane-de-poitiers/
 lang: fr
 character-name: "Diane de Poitiers"
 external-link: "https://fr.wikipedia.org/wiki/Diane_de_Poitiers"
+metadata:
+  religion: "Catholique"
+  title: "Duchesse de Valentinois"
 ---
 
 Veuve du grand sénéchal de Normandie et de vingt ans l'aînée d'Henri II, elle devient sa mentor puis sa maîtresse dès l'adolescence du futur roi, et conserve son emprise sur lui malgré son mariage avec Catherine de Médicis.

@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/francois-de-guise/
 lang: en
 character-name: "Francis, Duke of Guise"
 external-link: "https://en.wikipedia.org/wiki/Francis,_Duke_of_Guise"
+metadata:
+  religion: "Catholic"
+  title: "Duke of Guise"
 ---
 
 Nicknamed "le Balafré" (the Scarred) for a wound received at the Siege of Boulogne, he distinguished himself by successfully defending Metz against Charles V in 1552 and recapturing Calais from the English in 1558.

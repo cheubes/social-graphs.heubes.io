@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/cardinal-de-lorraine/
 lang: fr
 character-name: "Charles de Lorraine, cardinal de Lorraine"
 external-link: "https://fr.wikipedia.org/wiki/Charles_de_Lorraine_(1524-1574)"
+metadata:
+  religion: "Catholique"
+  title: "Cardinal, archevêque de Reims"
 ---
 
 Frère cadet de François de Guise, archevêque de Reims dès son adolescence puis cardinal, il devient l'un des principaux artisans de la politique catholique du royaume et représente la France au concile de Trente.

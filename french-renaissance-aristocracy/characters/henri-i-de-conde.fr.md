@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/henri-i-de-conde/
 lang: fr
 character-name: "Henri Ier de Bourbon-Condé"
 external-link: "https://fr.wikipedia.org/wiki/Henri_Ier_de_Bourbon-Cond%C3%A9"
+metadata:
+  religion: "Protestant"
+  title: "Prince de Condé"
 ---
 
 Fils de Louis Ier de Condé, il devient prince de Condé à dix-sept ans après l'exécution de son père à la bataille de Jarnac en 1569, et reprend aussitôt la tête des armées protestantes aux côtés de Gaspard de Coligny.

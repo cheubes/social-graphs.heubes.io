@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/marguerite-de-france/
 lang: en
 character-name: "Margaret of Valois"
 external-link: "https://en.wikipedia.org/wiki/Margaret_of_Valois"
+metadata:
+  religion: "Catholic"
+  title: "Queen of Navarre, later Queen of France"
 ---
 
 A daughter of Catherine de' Medici and sister to three kings of France, she married Henri de Navarre in August 1572, only days before the wedding celebrations became the pretext for the St Bartholomew's Day Massacre.

@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/francois-de-france/
 lang: fr
 character-name: "François de France"
 external-link: "https://fr.wikipedia.org/wiki/Fran%C3%A7ois_de_France_(1555-1584)"
+metadata:
+  religion: "Catholique"
+  title: "Duc d'Anjou (auparavant duc d'Alençon)"
 ---
 
 Benjamin des enfants de Catherine de Médicis, le visage marqué par la petite vérole, il nourrit une rivalité durable avec son frère aîné Henri III.

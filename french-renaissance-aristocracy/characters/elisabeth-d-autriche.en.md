@@ -4,6 +4,9 @@ permalink: /french-renaissance-aristocracy/characters/elisabeth-d-autriche/
 lang: en
 character-name: "Elisabeth of Austria"
 external-link: "https://en.wikipedia.org/wiki/Elisabeth_of_Austria,_Queen_of_France"
+metadata:
+  religion: "Catholic"
+  title: "Queen of France"
 ---
 
 The daughter of Holy Roman Emperor Maximilian II, this Habsburg archduchess married Charles IX in 1570 in a match that strengthened ties between France and Austria in the midst of the Wars of Religion.

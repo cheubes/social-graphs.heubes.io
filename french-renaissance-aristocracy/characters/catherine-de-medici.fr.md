@@ -4,6 +4,9 @@ permalink: /fr/french-renaissance-aristocracy/characters/catherine-de-medici/
 lang: fr
 character-name: "Catherine de Médicis"
 external-link: "https://fr.wikipedia.org/wiki/Catherine_de_M%C3%A9dicis"
+metadata:
+  religion: "Catholique"
+  title: "Reine de France, puis reine mère et régente"
 ---
 
 Orpheline de ses deux parents dès sa naissance à Florence, elle est mariée à quatorze ans par le pape Clément VII, chef de sa famille, à Henri, second fils du roi de France, en 1533, un mariage qui tarde plusieurs années à lui donner une descendance avant la naissance de dix enfants.
