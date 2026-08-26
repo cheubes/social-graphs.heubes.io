@@ -3,6 +3,11 @@
     fr: "Histoire"
     en: "History"
 
+- slug: art-history
+  label:
+    fr: "Histoire de l'Art"
+    en: "Art History"
+
 - slug: fiction
   label:
     fr: "Fiction"

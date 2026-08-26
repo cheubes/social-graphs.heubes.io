@@ -23,7 +23,7 @@ L'image de couverture n'est pas un attribut : elle est associée à l'univers pa
 
 ### Type de source
 
-Catégorie indicative d'un univers (histoire, fiction, autre), utilisée pour regrouper les univers sur l'accueil du site (voir `home.md`). Contrairement au Groupe, un socle commun est partagé par tous les univers, sans extension locale : le nombre de catégories reste volontairement restreint.
+Catégorie indicative d'un univers (histoire, histoire de l'art, fiction, autre), utilisée pour regrouper les univers sur l'accueil du site (voir `home.md`). Contrairement au Groupe, un socle commun est partagé par tous les univers, sans extension locale : le nombre de catégories reste volontairement restreint.
 
 | Attribut | Localisé | Description |
 |---|---|---|
@@ -345,6 +345,11 @@ relations:
   label:
     fr: "Histoire"
     en: "History"
+
+- slug: art-history
+  label:
+    fr: "Histoire de l'Art"
+    en: "Art History"
 
 - slug: fiction
   label:
