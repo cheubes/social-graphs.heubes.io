@@ -1,7 +1,7 @@
 - slug: anne-de-montmorency
   gender: masculine
   group: house-of-montmorency
-  portrait-source: "https://en.wikipedia.org/wiki/Anne_de_Montmorency"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Clouet-montmorencyanne.jpg"
   metadata:
     birth: "1493"
     death: "1567"
@@ -9,7 +9,7 @@
 - slug: antoine-de-bourbon
   gender: masculine
   group: house-of-bourbon
-  portrait-source: "https://en.wikipedia.org/wiki/Antoine_of_Navarre"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Unknown_-_Portrait_of_Anthony_of_Bourbon_(1518%E2%80%931562),_King_of_Navarre_-_MNK_XII-294_-_National_Museum_Krak%C3%B3w.jpg"
   metadata:
     birth: "1518"
     death: "1562"
@@ -17,7 +17,7 @@
 - slug: antoinette-de-bourbon
   gender: feminine
   group: house-of-guise
-  portrait-source: "https://en.wikipedia.org/wiki/Antoinette_of_Bourbon"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Antoinette_de_Bourbon_Limousin.jpg"
   metadata:
     birth: "1494"
     death: "1583"
@@ -25,7 +25,7 @@
 - slug: cardinal-de-lorraine
   gender: masculine
   group: house-of-guise
-  portrait-source: "https://en.wikipedia.org/wiki/Charles,_Cardinal_of_Lorraine"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Cardinal_de_Lorraine.jpg"
   metadata:
     birth: "1524"
     death: "1574"
@@ -33,7 +33,7 @@
 - slug: catherine-de-medici
   gender: feminine
   group: house-of-valois
-  portrait-source: "https://en.wikipedia.org/wiki/Catherine_de%27_Medici"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Catherine_de_M%C3%A9dicis_-_entourage_de_Fran%C3%A7ois_Clouet.jpg"
   metadata:
     birth: "1519"
     death: "1589"
@@ -41,7 +41,7 @@
 - slug: charles-de-bourbon
   gender: masculine
   group: house-of-bourbon
-  portrait-source: "https://en.wikipedia.org/wiki/Charles,_Cardinal_de_Bourbon_(born_1523)"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Ch%C3%A2teau_de_Beauregard_-_Cardinal_Charles_de_Bourbon_(1523-1590).jpg"
   metadata:
     birth: "1523"
     death: "1590"
@@ -49,7 +49,7 @@
 - slug: charles-de-mayenne
   gender: masculine
   group: house-of-guise
-  portrait-source: "https://en.wikipedia.org/wiki/Charles,_Duke_of_Mayenne"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Mayenne-charles.jpg"
   metadata:
     birth: "1554"
     death: "1611"
@@ -57,7 +57,7 @@
 - slug: charles-ix
   gender: masculine
   group: house-of-valois
-  portrait-source: "https://en.wikipedia.org/wiki/Charles_IX_of_France"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Portrait_of_King_Charles_IX_of_France_(1550%E2%80%931574),_by_After_Fran%C3%A7ois_Clouet.jpg"
   metadata:
     birth: "1550"
     death: "1574"
@@ -65,7 +65,7 @@
 - slug: claude-de-france
   gender: feminine
   group: house-of-valois
-  portrait-source: "https://en.wikipedia.org/wiki/Claude_of_Valois"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Claude_of_Valois1.jpg"
   metadata:
     birth: "1547"
     death: "1575"
@@ -73,21 +73,21 @@
 - slug: claude-de-lorraine-aumale
   gender: masculine
   group: house-of-guise
-  portrait-source: "https://en.wikipedia.org/wiki/Claude,_Duke_of_Aumale"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Duc_d%27Aumale_,_Claude_de_Lorraine.jpg"
   metadata:
     birth: "1526"
     death: "1573"
 
 - slug: diane-de-poitiers
   gender: feminine
-  portrait-source: "https://en.wikipedia.org/wiki/Diane_de_Poitiers"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Jean_Clouet_009.jpg"
   metadata:
     birth: "1499"
     death: "1566"
 
 - slug: elisabeth-d-autriche
   gender: feminine
-  portrait-source: "https://en.wikipedia.org/wiki/Elisabeth_of_Austria,_Queen_of_France"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Elisabeth_of_Austria_Queen_of_France_by_Jooris_van_der_Straaten_-_1570s_.jpg"
   metadata:
     birth: "1554"
     death: "1592"
@@ -95,7 +95,7 @@
 - slug: elisabeth-de-france
   gender: feminine
   group: house-of-valois
-  portrait-source: "https://en.wikipedia.org/wiki/Elisabeth_of_Valois"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Isabel_de_Valois2..jpg"
   metadata:
     birth: "1545"
     death: "1568"
@@ -103,7 +103,7 @@
 - slug: francois-de-france
   gender: masculine
   group: house-of-valois
-  portrait-source: "https://en.wikipedia.org/wiki/Francis,_Duke_of_Anjou"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Fran%C3%A7ois,_Duke_of_Anjou_NGA.jpg"
   metadata:
     birth: "1555"
     death: "1584"
@@ -111,7 +111,7 @@
 - slug: francois-de-guise
   gender: masculine
   group: house-of-guise
-  portrait-source: "https://en.wikipedia.org/wiki/Francis,_Duke_of_Guise"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Portrait_of_Francis_de_Lorraine,_2nd_Duke_of_Guise_(1519%E2%80%931563),_by_Workshop_of_Fran%C3%A7ois_Clouet.jpg"
   metadata:
     birth: "1519"
     death: "1563"
@@ -119,7 +119,7 @@
 - slug: francois-de-montmorency
   gender: masculine
   group: house-of-montmorency
-  portrait-source: "https://en.wikipedia.org/wiki/Fran%C3%A7ois_de_Montmorency"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Clouet-montmorencyfran%C3%A7ois.jpg"
   metadata:
     birth: "1530"
     death: "1579"
@@ -127,7 +127,7 @@
 - slug: francois-ii
   gender: masculine
   group: house-of-valois
-  portrait-source: "https://en.wikipedia.org/wiki/Francis_II_of_France"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Portrait_du_roi_de_France_Fran%C3%A7ois_II.jpg"
   metadata:
     birth: "1544"
     death: "1560"
@@ -135,7 +135,7 @@
 - slug: gaspard-de-coligny
   gender: masculine
   group: house-of-montmorency
-  portrait-source: "https://en.wikipedia.org/wiki/Gaspard_II_de_Coligny"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Fran%C3%A7ois_Clouet_-_Admiral_Gaspard_II_de_Coligny_-_168-1925_-_Saint_Louis_Art_Museum.jpg"
   metadata:
     birth: "1519"
     death: "1572"
@@ -143,7 +143,7 @@
 - slug: henri-de-guise
   gender: masculine
   group: house-of-guise
-  portrait-source: "https://en.wikipedia.org/wiki/Henry_I,_Duke_of_Guise"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Guise.jpg"
   metadata:
     birth: "1550"
     death: "1588"
@@ -151,7 +151,7 @@
 - slug: henri-de-montmorency-damville
   gender: masculine
   group: house-of-montmorency
-  portrait-source: "https://en.wikipedia.org/wiki/Henri_I_de_Montmorency"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Fran%C3%A7ois_Clouet_(cercle_de)_-_Henri_1er,_Duc_de_Montmorency,_Seigneur_de_Damville.jpg"
   metadata:
     birth: "1534"
     death: "1614"
@@ -159,7 +159,7 @@
 - slug: henri-de-navarre
   gender: masculine
   group: house-of-bourbon
-  portrait-source: "https://en.wikipedia.org/wiki/Henry_IV_of_France"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Frans_Pourbus_the_Younger_(Antwerp_1569_-_Paris_1622)_-_Henri_IV,_King_of_France_(1553-1610)_-_RCIN_402972_-_Royal_Collection.jpg"
   metadata:
     birth: "1553"
     death: "1610"
@@ -167,7 +167,7 @@
 - slug: henri-i-de-conde
   gender: masculine
   group: house-of-bourbon
-  portrait-source: "https://en.wikipedia.org/wiki/Henry_I,_Prince_of_Cond%C3%A9"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Conde-henri.jpg"
   metadata:
     birth: "1552"
     death: "1588"
@@ -175,7 +175,7 @@
 - slug: henri-ii
   gender: masculine
   group: house-of-valois
-  portrait-source: "https://en.wikipedia.org/wiki/Henry_II_of_France"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Henry_II_of_France-Fran%C3%A7ois_Clouet_(altered).jpg"
   metadata:
     birth: "1519"
     death: "1559"
@@ -183,7 +183,7 @@
 - slug: henri-iii
   gender: masculine
   group: house-of-valois
-  portrait-source: "https://en.wikipedia.org/wiki/Henry_III_of_France"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Henri3France.jpg"
   metadata:
     birth: "1551"
     death: "1589"
@@ -191,7 +191,7 @@
 - slug: jeanne-d-albret
   gender: feminine
   group: house-of-bourbon
-  portrait-source: "https://en.wikipedia.org/wiki/Jeanne_d%27Albret"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Jeanne-albret-navarre.jpg"
   metadata:
     birth: "1528"
     death: "1572"
@@ -199,7 +199,7 @@
 - slug: louis-i-de-conde
   gender: masculine
   group: house-of-bourbon
-  portrait-source: "https://en.wikipedia.org/wiki/Louis_I,_Prince_of_Cond%C3%A9"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Louis_Ier_de_Bourbon,_1er_prince_de_Cond%C3%A9_(1530-1569).jpg"
   metadata:
     birth: "1530"
     death: "1569"
@@ -207,7 +207,7 @@
 - slug: louise-de-lorraine
   gender: feminine
   group: house-of-guise
-  portrait-source: "https://en.wikipedia.org/wiki/Louise_of_Lorraine"
+  portrait-source: "https://en.wikipedia.org/wiki/File:In_the_manner_of_Fran%C3%A7ois_Clouet_-_Louise_de_Lorraine_-_Google_Art_Project.jpg"
   metadata:
     birth: "1553"
     death: "1601"
@@ -215,7 +215,7 @@
 - slug: marguerite-de-france
   gender: feminine
   group: house-of-valois
-  portrait-source: "https://en.wikipedia.org/wiki/Margaret_of_Valois"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Marguerite_de_Valois_vers_1574.jpg"
   metadata:
     birth: "1553"
     death: "1615"
@@ -223,21 +223,21 @@
 - slug: marie-stuart
   gender: feminine
   group: house-of-guise
-  portrait-source: "https://en.wikipedia.org/wiki/Mary,_Queen_of_Scots"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Fran%C3%A7ois_Clouet_-_Mary,_Queen_of_Scots_(1542-87)_-_Google_Art_Project.jpg"
   metadata:
     birth: "1542"
     death: "1587"
 
 - slug: michel-de-l-hopital
   gender: masculine
-  portrait-source: "https://en.wikipedia.org/wiki/Michel_de_l%27H%C3%B4pital"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Michel-Hospital.jpg"
   metadata:
     birth: "1507"
     death: "1573"
 
 - slug: philippe-ii
   gender: masculine
-  portrait-source: "https://en.wikipedia.org/wiki/Philip_II_of_Spain"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Portrait_of_Philip_II_of_Spain_by_Sofonisba_Anguissola_-_002b.jpg"
   metadata:
     birth: "1527"
     death: "1598"

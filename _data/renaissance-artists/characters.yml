@@ -1,7 +1,7 @@
 - slug: alfonso-i-d-este
   gender: masculine
   group: ferrara-mantua
-  portrait-source: "https://en.wikipedia.org/wiki/Alfonso_I_d'Este"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Bemberg_Fondation_Toulouse_-_Portrait_d%27Alphonse_dEste_-_Titien_Inv.1053.jpg"
   metadata:
     birth: "1476"
     death: "1534"
@@ -9,7 +9,7 @@
 - slug: alfonso-lombardi
   gender: masculine
   group: bologna
-  portrait-source: "https://en.wikipedia.org/wiki/Alfonso_Lombardi"
+  portrait-source: "https://www.abebooks.co.uk/art-prints/Alfonso-Lombardi-Scultore-Ferrarese-c.1497-1537-Italian/31752211076/bd"
   metadata:
     birth: "1497"
     death: "1537"
@@ -25,7 +25,7 @@
 - slug: andrea-del-verrocchio
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Andrea_del_Verrocchio"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Andrea_del_Castagno,_portrait_de_Verrocchio,_vers_1470.jpg"
   metadata:
     birth: "1435"
     death: "1488"
@@ -33,7 +33,7 @@
 - slug: andrea-della-robbia
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Andrea_della_Robbia"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Andrea_del_sarto,_Devozione_dei_fiorentini_alle_reliquie_di_san_Filippo,_1510,_08_vecchio,_ritratto_di_andrea_della_robbia_-_dett.jpg"
   metadata:
     birth: "1435"
     death: "1525"
@@ -41,7 +41,7 @@
 - slug: andrea-mantegna
   gender: masculine
   group: ferrara-mantua
-  portrait-source: "https://en.wikipedia.org/wiki/Andrea_Mantegna"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Mantegna_Bronze_Bust_San_Andrea_Mantua.png"
   metadata:
     birth: "1431"
     death: "1506"
@@ -49,7 +49,7 @@
 - slug: angelo-poliziano
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Poliziano"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Angelo_Poliziano_-_Angel_Appearing_to_Zacharias_(detail).jpg"
   metadata:
     birth: "1454"
     death: "1494"
@@ -57,7 +57,7 @@
 - slug: antonio-da-sangallo-the-younger
   gender: masculine
   group: rome
-  portrait-source: "https://en.wikipedia.org/wiki/Antonio_da_Sangallo_the_Younger"
+  portrait-source: "https://www.britishmuseum.org/collection/object/P_1874-0613-1960"
   metadata:
     birth: "1484"
     death: "1546"
@@ -65,7 +65,7 @@
 - slug: antonio-del-pollaiuolo
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Antonio_del_Pollaiuolo"
+  portrait-source: "https://en.wikipedia.org/wiki/File:San_pietro_in_vincoli,_monumento_ai_fratelli_del_pollaiolo,_di_luigi_capponi,_antonio_(cropped).JPG"
   metadata:
     birth: "1429"
     death: "1498"
@@ -73,7 +73,7 @@
 - slug: baldassare-castiglione
   gender: masculine
   group: urbino
-  portrait-source: "https://en.wikipedia.org/wiki/Baldassare_Castiglione"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Baldassare_Castiglione,_by_Raffaello_Sanzio,_from_C2RMF_retouched.jpg"
   metadata:
     birth: "1478"
     death: "1529"
@@ -81,7 +81,7 @@
 - slug: baldassare-peruzzi
   gender: masculine
   group: rome
-  portrait-source: "https://en.wikipedia.org/wiki/Baldassare_Peruzzi"
+  portrait-source: "https://en.wikipedia.org/wiki/File:105_le_vite,_baldassarre_peruzzi.jpg"
   metadata:
     birth: "1481"
     death: "1536"
@@ -89,7 +89,7 @@
 - slug: beatrice-d-este
   gender: feminine
   group: milan
-  portrait-source: "https://en.wikipedia.org/wiki/Beatrice_d'Este"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Miniatura_di_Beatrice_d%27Este_contorno_ritagliato.jpg"
   metadata:
     birth: "1475"
     death: "1497"
@@ -97,7 +97,7 @@
 - slug: benozzo-gozzoli
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Benozzo_Gozzoli"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Benozzo_Gozzoli.jpg"
   metadata:
     birth: "1421"
     death: "1497"
@@ -105,7 +105,7 @@
 - slug: cimabue
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Cimabue"
+  portrait-source: "https://en.wikipedia.org/wiki/File:CimabueSantaMariaNovella.jpg"
   metadata:
     birth: "~1240"
     death: "~1302"
@@ -113,7 +113,7 @@
 - slug: correggio
   gender: masculine
   group: ferrara-mantua
-  portrait-source: "https://en.wikipedia.org/wiki/Antonio_da_Correggio"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Antonio_Allegri_da_Correggio.jpg"
   metadata:
     birth: "1489"
     death: "1534"
@@ -121,7 +121,7 @@
 - slug: cosimo-de-medici
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Cosimo_de'_Medici"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Cosimo_di_Medici_(Bronzino).jpg"
   metadata:
     birth: "1389"
     death: "1464"
@@ -129,7 +129,7 @@
 - slug: cosimo-rosselli
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Cosimo_Rosselli"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Cosimo-rosselli.jpg"
   metadata:
     birth: "1439"
     death: "1507"
@@ -137,7 +137,7 @@
 - slug: domenico-ghirlandaio
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Domenico_Ghirlandaio"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Domenico_Ghirlandaio_Self_Portrait.jpg"
   metadata:
     birth: "1448"
     death: "1494"
@@ -153,7 +153,7 @@
 - slug: donatello
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Donatello"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Donatello,_miracolo_della_mula,_1446-49_ca._(pd,_museo_antoniano)_37_uomo_che_si_allontana,_forse_autoritratto_(cropped).jpg"
   metadata:
     birth: "1386"
     death: "1466"
@@ -161,7 +161,7 @@
 - slug: donato-bramante
   gender: masculine
   group: rome
-  portrait-source: "https://en.wikipedia.org/wiki/Donato_Bramante"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Donato_Bramante.jpg"
   metadata:
     birth: "1444"
     death: "1514"
@@ -169,7 +169,7 @@
 - slug: federico-da-montefeltro
   gender: masculine
   group: urbino
-  portrait-source: "https://en.wikipedia.org/wiki/Federico_da_Montefeltro"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Federico_da_Montefeltro.jpg"
   metadata:
     birth: "1422"
     death: "1482"
@@ -177,7 +177,7 @@
 - slug: filippino-lippi
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Filippino_Lippi"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Filippino_Lippi_007.jpg"
   metadata:
     birth: "1457"
     death: "1504"
@@ -185,7 +185,7 @@
 - slug: filippo-brunelleschi
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Filippo_Brunelleschi"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Masaccio,_cappella_brancacci,_san_pietro_in_cattedra._ritratto_di_filippo_brunelleschi-184.jpg"
   metadata:
     birth: "1377"
     death: "1446"
@@ -193,7 +193,7 @@
 - slug: fra-angelico
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Fra_Angelico"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Fra_Angelico_portrait.jpg"
   metadata:
     birth: "1395"
     death: "1455"
@@ -201,7 +201,7 @@
 - slug: fra-filippo-lippi
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Filippo_Lippi"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Lippi_z13.jpg"
   metadata:
     birth: "1406"
     death: "1469"
@@ -209,7 +209,7 @@
 - slug: francesco-francia
   gender: masculine
   group: bologna
-  portrait-source: "https://en.wikipedia.org/wiki/Francesco_Francia"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Ritratto_di_Francesco_Francia.jpg"
   metadata:
     birth: "1447"
     death: "1517"
@@ -217,7 +217,7 @@
 - slug: giorgione
   gender: masculine
   group: venice
-  portrait-source: "https://en.wikipedia.org/wiki/Giorgione"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Self_portrait,_by_Giorgio_da_Castelfranco.jpg"
   metadata:
     birth: "~1477"
     death: "1510"
@@ -225,7 +225,7 @@
 - slug: giotto
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Giotto"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Giotto,_Santa_Maria_Novella.jpg"
   metadata:
     birth: "~1267"
     death: "1337"
@@ -233,7 +233,7 @@
 - slug: giovanni-bellini
   gender: masculine
   group: venice
-  portrait-source: "https://en.wikipedia.org/wiki/Giovanni_Bellini"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Giovanni_Bellini_Felt%C3%A9telezett%C3%96nark%C3%A9pKJ.jpg"
   metadata:
     birth: "~1430"
     death: "1516"
@@ -241,7 +241,7 @@
 - slug: giovanni-ii-bentivoglio
   gender: masculine
   group: bologna
-  portrait-source: "https://en.wikipedia.org/wiki/Giovanni_II_Bentivoglio"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Ercole_de%27_Roberti_001.jpg"
   metadata:
     birth: "1443"
     death: "1508"
@@ -249,7 +249,7 @@
 - slug: giulio-romano
   gender: masculine
   group: rome
-  portrait-source: "https://en.wikipedia.org/wiki/Giulio_Romano"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Titian_-_Portrait_of_Giulio_Romano_-_WGA22947.jpg"
   metadata:
     birth: "1499"
     death: "1546"
@@ -257,7 +257,7 @@
 - slug: isabella-d-este
   gender: feminine
   group: ferrara-mantua
-  portrait-source: "https://en.wikipedia.org/wiki/Isabella_d'Este"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Leonardo_da_Vinci,_Portrait_of_Isabella_d%27Este.jpg"
   metadata:
     birth: "1474"
     death: "1539"
@@ -265,7 +265,7 @@
 - slug: leon-battista-alberti
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Leon_Battista_Alberti"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Leon_Battista_Alberti,_Self-Portrait,_c._1435,_NGA_43845.jpg"
   metadata:
     birth: "1404"
     death: "1472"
@@ -273,7 +273,7 @@
 - slug: leonardo-da-vinci
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Leonardo_da_Vinci"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Francesco_Melzi_-_Portrait_of_Leonardo.png"
   metadata:
     birth: "1452"
     death: "1519"
@@ -281,7 +281,7 @@
 - slug: lorenzo-de-medici
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Lorenzo_de'_Medici"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Lorenzo_de_Medici.jpg"
   metadata:
     birth: "1449"
     death: "1492"
@@ -289,7 +289,7 @@
 - slug: lorenzo-ghiberti
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Lorenzo_Ghiberti"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Ghiberti.png"
   metadata:
     birth: "1378"
     death: "1455"
@@ -297,7 +297,7 @@
 - slug: luca-della-robbia
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Luca_della_Robbia"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Pincio_-_busti_-_Della_Robbia_1270989.JPG"
   metadata:
     birth: "1400"
     death: "1482"
@@ -305,7 +305,7 @@
 - slug: luca-signorelli
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Luca_Signorelli"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Signorelli,_Luca_-_selfportrait_alone.jpg"
   metadata:
     birth: "1441"
     death: "1523"
@@ -313,7 +313,7 @@
 - slug: ludovico-sforza
   gender: masculine
   group: milan
-  portrait-source: "https://en.wikipedia.org/wiki/Ludovico_Sforza"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Pala_Sforzesca_-_detail_01.jpg"
   metadata:
     birth: "1452"
     death: "1508"
@@ -321,7 +321,7 @@
 - slug: marsilio-ficino
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Marsilio_Ficino"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Marsilio_Ficino,_by_a_Tuscan_painter._1521-1552.jpg"
   metadata:
     birth: "1433"
     death: "1499"
@@ -329,7 +329,7 @@
 - slug: masaccio
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Masaccio"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Masaccio_Self_Portrait.jpg"
   metadata:
     birth: "1401"
     death: "1428"
@@ -337,7 +337,7 @@
 - slug: michelangelo
   gender: masculine
   group: rome
-  portrait-source: "https://en.wikipedia.org/wiki/Michelangelo"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Michelangelo_Daniele_da_Volterra_(dettaglio).jpg"
   metadata:
     birth: "1475"
     death: "1564"
@@ -345,7 +345,7 @@
 - slug: michelozzo
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Michelozzo"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Fra_Angelico_074.jpg"
   metadata:
     birth: "1396"
     death: "1472"
@@ -353,7 +353,7 @@
 - slug: paolo-uccello
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Paolo_Uccello"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Cinq_ma%C3%AEtres_de_la_Renaissance_florentine_-_Uccello_(Louvre).jpg"
   metadata:
     birth: "1397"
     death: "1475"
@@ -361,7 +361,7 @@
 - slug: paolo-veronese
   gender: masculine
   group: venice
-  portrait-source: "https://en.wikipedia.org/wiki/Paolo_Veronese"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Paolo_Veronese,_avtoportret.jpg"
   metadata:
     birth: "1528"
     death: "1588"
@@ -369,7 +369,7 @@
 - slug: pico-della-mirandola
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Giovanni_Pico_della_Mirandola"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Pico1.jpg"
   metadata:
     birth: "1463"
     death: "1494"
@@ -377,7 +377,7 @@
 - slug: piero-della-francesca
   gender: masculine
   group: urbino
-  portrait-source: "https://en.wikipedia.org/wiki/Piero_della_Francesca"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Delle_vite_de'_pi%C3%B9_eccellenti_pittori,_scultori,_et_architetti_(1648)_(14799608033).jpg"
   metadata:
     birth: "1415"
     death: "1492"
@@ -385,7 +385,7 @@
 - slug: pietro-aretino
   gender: masculine
   group: venice
-  portrait-source: "https://en.wikipedia.org/wiki/Pietro_Aretino"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Portrait_of_Pietro_Aretino_(by_Titian)_-_The_Frick_Collection.jpg"
   metadata:
     birth: "1492"
     death: "1556"
@@ -393,7 +393,7 @@
 - slug: pietro-perugino
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Pietro_Perugino"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Pietro_Perugino_031.jpg"
   metadata:
     birth: "1446"
     death: "1523"
@@ -401,7 +401,7 @@
 - slug: pinturicchio
   gender: masculine
   group: rome
-  portrait-source: "https://en.wikipedia.org/wiki/Pinturicchio"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Pinturicchio_self.jpg"
   metadata:
     birth: "1454"
     death: "1513"
@@ -409,7 +409,7 @@
 - slug: pope-alexander-vi
   gender: masculine
   group: rome
-  portrait-source: "https://en.wikipedia.org/wiki/Pope_Alexander_VI"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Portrait_of_Pope_Alexander_VI_Borgia_(Vatican_Museums_-_Musei_Vaticani,_Vatican).jpg"
   metadata:
     birth: "1431"
     death: "1503"
@@ -417,7 +417,7 @@
 - slug: pope-julius-ii
   gender: masculine
   group: rome
-  portrait-source: "https://en.wikipedia.org/wiki/Pope_Julius_II"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Pope_Julius_II.jpg"
   metadata:
     birth: "1443"
     death: "1513"
@@ -425,7 +425,7 @@
 - slug: pope-leo-x
   gender: masculine
   group: rome
-  portrait-source: "https://en.wikipedia.org/wiki/Pope_Leo_X"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Raffaello,_ritratto_di_papa_leone_X_tra_i_cardinali_luigi_de%27_rossi_e_giulio_de%27_medici,_1518,_03.jpg"
   metadata:
     birth: "1475"
     death: "1521"
@@ -433,7 +433,7 @@
 - slug: pope-sixtus-iv
   gender: masculine
   group: rome
-  portrait-source: "https://en.wikipedia.org/wiki/Pope_Sixtus_IV"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Pedro_Berruguete_-_Portrait_of_Pope_Sixtus_IV_della_Rovere_-_1916.815_-_Cleveland_Museum_of_ArtFXD.jpg"
   metadata:
     birth: "1414"
     death: "1484"
@@ -441,7 +441,7 @@
 - slug: properzia-de-rossi
   gender: feminine
   group: bologna
-  portrait-source: "https://en.wikipedia.org/wiki/Properzia_de'_Rossi"
+  portrait-source: "https://en.wikipedia.org/wiki/File:DUCIS_Louis_-_Properzia_de_Rossi_terminant_son_dernier_bas-relief_(1822,_Mus%C3%A9e_de_l%27%C3%89v%C3%AAch%C3%A9_de_Limoges).jpg"
   metadata:
     birth: "1490"
     death: "1530"
@@ -449,7 +449,7 @@
 - slug: raphael
   gender: masculine
   group: rome
-  portrait-source: "https://en.wikipedia.org/wiki/Raphael"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Raffaello_Sanzio.jpg"
   metadata:
     birth: "1483"
     death: "1520"
@@ -457,7 +457,7 @@
 - slug: sandro-botticelli
   gender: masculine
   group: florence
-  portrait-source: "https://en.wikipedia.org/wiki/Sandro_Botticelli"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Sandro_Botticelli_083.jpg"
   metadata:
     birth: "1445"
     death: "1510"
@@ -465,7 +465,7 @@
 - slug: tintoretto
   gender: masculine
   group: venice
-  portrait-source: "https://en.wikipedia.org/wiki/Tintoretto"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Tintoretto-selfport.jpg"
   metadata:
     birth: "1518"
     death: "1594"
@@ -473,7 +473,7 @@
 - slug: titian
   gender: masculine
   group: venice
-  portrait-source: "https://en.wikipedia.org/wiki/Titian"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Titian_-_Self-portrait_(Museo_del_Prado).jpg"
   metadata:
     birth: "~1488"
     death: "1576"
@@ -481,7 +481,7 @@
 - slug: vittore-carpaccio
   gender: masculine
   group: venice
-  portrait-source: "https://en.wikipedia.org/wiki/Vittore_Carpaccio"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Vittore_Carpaccio.jpg"
   metadata:
     birth: "~1465"
     death: "~1525"
@@ -489,7 +489,7 @@
 - slug: vittoria-colonna
   gender: feminine
   group: rome
-  portrait-source: "https://en.wikipedia.org/wiki/Vittoria_Colonna"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Sebastiano_del_Piombo_-_Vittoria_Colonna_(%3F)_-_Google_Art_Project.jpg"
   metadata:
     birth: "1490"
     death: "1547"
