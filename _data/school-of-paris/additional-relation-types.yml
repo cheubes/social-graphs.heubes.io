@@ -1,0 +1,99 @@
+- slug: art-dealer-of
+  label:
+    fr:
+      masculine: "Marchand de"
+      feminine: "Marchande de"
+      neutral: "Marchand·e de"
+    en:
+      masculine: "Art dealer of"
+      feminine: "Art dealer of"
+      neutral: "Art dealer of"
+  reverse-label:
+    fr:
+      masculine: "Représenté par"
+      feminine: "Représentée par"
+    en:
+      masculine: "Represented by"
+      feminine: "Represented by"
+  directed: true
+
+- slug: collector-of
+  label:
+    fr:
+      masculine: "Collectionneur de"
+      feminine: "Collectionneuse de"
+      neutral: "Collectionneur·euse de"
+    en:
+      masculine: "Collector of"
+      feminine: "Collector of"
+      neutral: "Collector of"
+  reverse-label:
+    fr:
+      masculine: "Collectionné par"
+      feminine: "Collectionnée par"
+    en:
+      masculine: "Collected by"
+      feminine: "Collected by"
+  directed: true
+
+- slug: promoter-of
+  label:
+    fr:
+      masculine: "Promoteur de"
+      feminine: "Promotrice de"
+      neutral: "Promoteur·rice de"
+    en:
+      masculine: "Promoter of"
+      feminine: "Promoter of"
+      neutral: "Promoter of"
+  reverse-label:
+    fr:
+      masculine: "Promu par"
+      feminine: "Promue par"
+    en:
+      masculine: "Promoted by"
+      feminine: "Promoted by"
+  directed: true
+
+- slug: muse-of
+  label:
+    fr:
+      masculine: "Muse de"
+      feminine: "Muse de"
+      neutral: "Muse de"
+    en:
+      masculine: "Muse of"
+      feminine: "Muse of"
+      neutral: "Muse of"
+  reverse-label:
+    fr:
+      masculine: "Inspiré par"
+      feminine: "Inspirée par"
+    en:
+      masculine: "Inspired by"
+      feminine: "Inspired by"
+  directed: true
+
+- slug: artistic-partner-of
+  label:
+    fr:
+      masculine: "Partenaire artistique de"
+      feminine: "Partenaire artistique de"
+      neutral: "Partenaire artistique de"
+    en:
+      masculine: "Artistic partner of"
+      feminine: "Artistic partner of"
+      neutral: "Artistic partner of"
+  directed: false
+
+- slug: studio-mate-of
+  label:
+    fr:
+      masculine: "Colocataire d'atelier de"
+      feminine: "Colocataire d'atelier de"
+      neutral: "Colocataire d'atelier de"
+    en:
+      masculine: "Studio mate of"
+      feminine: "Studio mate of"
+      neutral: "Studio mate of"
+  directed: false

@@ -1,0 +1,546 @@
+relations:
+  - source-character: kees-van-dongen
+    target-character: pablo-picasso
+    type: friend-of
+    description:
+      fr: "Van Dongen et Picasso se côtoient au Bateau-Lavoir à Montmartre, où ils logent tous deux au début des années 1900."
+      en: "Van Dongen and Picasso mix at the Bateau-Lavoir in Montmartre, where they both lodge in the early 1900s."
+
+  - source-character: kees-van-dongen
+    target-character: henri-matisse
+    type: artistic-partner-of
+    description:
+      fr: "Van Dongen expose aux côtés de Matisse au Salon d'automne de 1905, dans la salle qui donne naissance au fauvisme."
+      en: "Van Dongen exhibits alongside Matisse at the 1905 Salon d'Automne, in the room that gives birth to Fauvism."
+
+  - source-character: jules-pascin
+    target-character: tsuguharu-foujita
+    type: friend-of
+    description:
+      fr: "Pascin et Foujita fréquentent le même cercle bohème de Montparnasse, entre cafés et ateliers partagés."
+      en: "Pascin and Foujita move in the same Montparnasse bohemian circle, between cafés and shared studios."
+
+  - source-character: jules-pascin
+    target-character: moise-kisling
+    type: friend-of
+    description:
+      fr: "Pascin et Kisling comptent parmi les figures les plus sociables de la bohème montparnassienne, unies par une même vie nocturne."
+      en: "Pascin and Kisling are among the most sociable figures of Montparnasse bohemian life, united by a shared nightlife."
+
+  - source-character: suzanne-valadon
+    target-character: maurice-utrillo
+    type: parent-of
+    description:
+      fr: "Suzanne Valadon est la mère de Maurice Utrillo, dont elle encourage la vocation picturale pour l'aider à lutter contre l'alcoolisme."
+      en: "Suzanne Valadon is Maurice Utrillo's mother, and encourages his painting vocation as a way to help him fight alcoholism."
+
+  - source-character: maurice-utrillo
+    target-character: amedeo-modigliani
+    type: friend-of
+    description:
+      fr: "Utrillo et Modigliani sont deux habitués notoires des mêmes bars de Montmartre et Montparnasse, rivalisant dans leurs excès d'alcool autant que dans leur amitié."
+      en: "Utrillo and Modigliani are two notorious regulars of the same Montmartre and Montparnasse bars, rivalling each other in both their drinking and their friendship."
+
+  - source-character: robert-delaunay
+    target-character: sonia-delaunay
+    type: married-to
+    description:
+      fr: "Robert et Sonia Delaunay se marient en 1910 et développent ensemble l'orphisme, un art fondé sur le contraste des couleurs pures."
+      en: "Robert and Sonia Delaunay marry in 1910 and together develop Orphism, an art built on the contrast of pure colours."
+
+  - source-character: marc-chagall
+    target-character: bella-chagall
+    type: married-to
+    description:
+      fr: "Marc et Bella Chagall se marient en 1915 ; elle reste sa muse constante jusqu'à sa mort en 1944."
+      en: "Marc and Bella Chagall marry in 1915; she remains his constant muse until her death in 1944."
+
+  - source-character: gertrude-stein
+    target-character: alice-b-toklas
+    type: lover-of
+    description:
+      fr: "Gertrude Stein et Alice B. Toklas partagent leur vie pendant près de quatre décennies, de leur rencontre en 1907 à la mort de Stein en 1946."
+      en: "Gertrude Stein and Alice B. Toklas share their lives for nearly four decades, from their meeting in 1907 to Stein's death in 1946."
+
+  - source-character: amedeo-modigliani
+    target-character: jeanne-hebuterne
+    type: lover-of
+    description:
+      fr: "Modigliani et Jeanne Hébuterne deviennent compagnons en 1917 ; elle se donne la mort le lendemain de sa disparition en 1920."
+      en: "Modigliani and Jeanne Hébuterne become companions in 1917; she takes her own life the day after his death in 1920."
+
+  - source-character: man-ray
+    target-character: kiki-de-montparnasse
+    type: lover-of
+    description:
+      fr: "Man Ray et Kiki de Montparnasse forment un couple de 1921 à 1929, période durant laquelle il réalise ses photographies les plus célèbres d'elle."
+      en: "Man Ray and Kiki de Montparnasse are a couple from 1921 to 1929, the period during which he creates his most famous photographs of her."
+
+  - source-character: guillaume-apollinaire
+    target-character: marie-laurencin
+    type: lover-of
+    description:
+      fr: "Apollinaire et Marie Laurencin sont liés de 1907 à 1912 ; il défend son travail de peintre dans ses écrits critiques."
+      en: "Apollinaire and Marie Laurencin are involved from 1907 to 1912; he champions her work as a painter in his critical writings."
+
+  - source-character: pablo-picasso
+    target-character: georges-braque
+    type: artistic-partner-of
+    description:
+      fr: "Picasso et Braque élaborent ensemble le cubisme entre 1908 et 1914, au point de dire avoir travaillé « encordés comme des alpinistes »."
+      en: "Picasso and Braque jointly develop Cubism between 1908 and 1914, to the point of saying they worked \"roped together like mountaineers\"."
+
+  - source-character: henri-matisse
+    target-character: andre-derain
+    type: artistic-partner-of
+    description:
+      fr: "Matisse et Derain peignent côte à côte à Collioure durant l'été 1905, posant les bases du fauvisme."
+      en: "Matisse and Derain paint side by side in Collioure during the summer of 1905, laying the foundations of Fauvism."
+
+  - source-character: andre-derain
+    target-character: maurice-de-vlaminck
+    type: artistic-partner-of
+    description:
+      fr: "Derain et Vlaminck partagent un atelier à Chatou où naît, avec Matisse, le fauvisme."
+      en: "Derain and Vlaminck share a studio in Chatou, where Fauvism is born alongside Matisse."
+
+  - source-character: henri-matisse
+    target-character: maurice-de-vlaminck
+    type: artistic-partner-of
+    description:
+      fr: "Matisse et Vlaminck exposent ensemble au Salon d'automne de 1905 dans la salle qui vaut au groupe le surnom de « fauves »."
+      en: "Matisse and Vlaminck exhibit together at the 1905 Salon d'Automne, in the room that earns the group the nickname \"fauves\"."
+
+  - source-character: robert-delaunay
+    target-character: fernand-leger
+    type: artistic-partner-of
+    description:
+      fr: "Delaunay et Léger exposent ensemble au sein du groupe du Section d'Or en 1912, à la croisée du cubisme et de l'orphisme."
+      en: "Delaunay and Léger exhibit together within the Section d'Or group in 1912, at the crossing point of Cubism and Orphism."
+
+  - source-character: pablo-picasso
+    target-character: amedeo-modigliani
+    type: friend-of
+    description:
+      fr: "Picasso et Modigliani se croisent régulièrement à Montparnasse, unis par une estime mutuelle malgré des tempéraments opposés."
+      en: "Picasso and Modigliani regularly cross paths in Montparnasse, united by mutual esteem despite opposing temperaments."
+
+  - source-character: pablo-picasso
+    target-character: jean-cocteau
+    type: friend-of
+    description:
+      fr: "Picasso et Cocteau collaborent en 1917 au ballet Parade, dont le scandale marque l'irruption du cubisme sur scène."
+      en: "Picasso and Cocteau collaborate in 1917 on the ballet Parade, whose scandal marks Cubism's irruption onto the stage."
+
+  - source-character: amedeo-modigliani
+    target-character: chaim-soutine
+    type: friend-of
+    description:
+      fr: "Modigliani et Soutine deviennent proches à La Ruche ; Modigliani le fait connaître à son propre marchand, Zborowski."
+      en: "Modigliani and Soutine become close at La Ruche; Modigliani introduces him to his own dealer, Zborowski."
+
+  - source-character: amedeo-modigliani
+    target-character: moise-kisling
+    type: friend-of
+    description:
+      fr: "Modigliani et Kisling partagent un temps un atelier à Montparnasse et restent proches jusqu'à la mort du premier en 1920."
+      en: "Modigliani and Kisling share a studio in Montparnasse for a time and remain close until the former's death in 1920."
+
+  - source-character: amedeo-modigliani
+    target-character: tsuguharu-foujita
+    type: friend-of
+    description:
+      fr: "Modigliani et Foujita fréquentent le même cercle d'artistes à Montparnasse et se croquent mutuellement."
+      en: "Modigliani and Foujita frequent the same circle of artists in Montparnasse and sketch each other."
+
+  - source-character: amedeo-modigliani
+    target-character: chana-orloff
+    type: friend-of
+    description:
+      fr: "Modigliani peint le portrait de Chana Orloff, sculptrice avec laquelle il partage une amitié fidèle à Montparnasse."
+      en: "Modigliani paints Chana Orloff's portrait; the sculptor is a loyal friend of his in Montparnasse."
+
+  - source-character: marc-chagall
+    target-character: ossip-zadkine
+    type: friend-of
+    description:
+      fr: "Chagall et Zadkine, tous deux nés à Vitebsk, se retrouvent à La Ruche où ils fréquentent le même cercle d'artistes d'Europe de l'Est."
+      en: "Chagall and Zadkine, both born in Vitebsk, meet again at La Ruche, where they frequent the same circle of Eastern European artists."
+
+  - source-character: chaim-soutine
+    target-character: pinchus-kremegne
+    type: friend-of
+    description:
+      fr: "Soutine et Krémègne étudient ensemble à Vilnius avant de rejoindre Paris et La Ruche côte à côte."
+      en: "Soutine and Krémègne study together in Vilnius before moving to Paris and La Ruche side by side."
+
+  - source-character: tsuguharu-foujita
+    target-character: moise-kisling
+    type: friend-of
+    description:
+      fr: "Foujita et Kisling font partie du même cercle bohème de Montparnasse, dont l'atelier de Kisling est l'un des points de ralliement."
+      en: "Foujita and Kisling belong to the same Montparnasse bohemian circle, of which Kisling's studio is one of the gathering points."
+
+  - source-character: jean-cocteau
+    target-character: guillaume-apollinaire
+    type: friend-of
+    description:
+      fr: "Cocteau et Apollinaire fréquentent les mêmes cercles littéraires et artistiques parisiens de l'avant-guerre."
+      en: "Cocteau and Apollinaire frequent the same pre-war Parisian literary and artistic circles."
+
+  - source-character: alexander-archipenko
+    target-character: ossip-zadkine
+    type: friend-of
+    description:
+      fr: "Archipenko et Zadkine, tous deux sculpteurs venus de l'Empire russe, se croisent à La Ruche puis dans le cercle cubiste."
+      en: "Archipenko and Zadkine, both sculptors from the Russian Empire, cross paths at La Ruche and then within the Cubist circle."
+
+  - source-character: marevna
+    target-character: amedeo-modigliani
+    type: friend-of
+    description:
+      fr: "Marevna côtoie Modigliani dans le cercle cubiste de Montparnasse, une bohème qu'elle raconte dans ses mémoires."
+      en: "Marevna moves in Modigliani's Montparnasse Cubist circle, a bohemian world she recounts in her memoirs."
+
+  - source-character: marie-vassilieff
+    target-character: fernand-leger
+    type: friend-of
+    description:
+      fr: "Léger fréquente assidûment la cantine improvisée que Marie Vassilieff installe dans son académie pendant la guerre."
+      en: "Léger is a regular at the improvised canteen Marie Vassilieff sets up in her academy during the war."
+
+  - source-character: marie-vassilieff
+    target-character: ossip-zadkine
+    type: friend-of
+    description:
+      fr: "Zadkine compte parmi les habitués de la cantine de Marie Vassilieff, un des carrefours sociaux de Montparnasse pendant la guerre."
+      en: "Zadkine is a regular at Marie Vassilieff's canteen, one of Montparnasse's social hubs during the war."
+
+  - source-character: juan-gris
+    target-character: fernand-leger
+    type: friend-of
+    description:
+      fr: "Gris et Léger exposent ensemble au sein du groupe du Section d'Or en 1912."
+      en: "Gris and Léger exhibit together within the Section d'Or group in 1912."
+
+  - source-character: constantin-brancusi
+    target-character: amedeo-modigliani
+    type: friend-of
+    description:
+      fr: "Brâncuși initie brièvement Modigliani à la sculpture sur pierre et reste l'un de ses proches à Montparnasse."
+      en: "Brâncuși briefly introduces Modigliani to stone carving and remains one of his close friends in Montparnasse."
+
+  - source-character: constantin-brancusi
+    target-character: ossip-zadkine
+    type: friend-of
+    description:
+      fr: "Brâncuși influence durablement la génération de sculpteurs de Montparnasse, dont Zadkine."
+      en: "Brâncuși has a lasting influence on the generation of Montparnasse sculptors, including Zadkine."
+
+  - source-character: henri-matisse
+    target-character: pablo-picasso
+    type: rival-of
+    description:
+      fr: "Matisse et Picasso incarnent deux voies rivales de l'art du début du XXe siècle, le fauvisme et le cubisme, dans une rivalité mêlée d'admiration réciproque."
+      en: "Matisse and Picasso embody two rival paths of early twentieth-century art, Fauvism and Cubism, in a rivalry mixed with mutual admiration."
+
+  - source-character: leopold-zborowski
+    target-character: amedeo-modigliani
+    type: art-dealer-of
+    description:
+      fr: "Zborowski devient le marchand de Modigliani en 1916 et lui assure logement, atelier et revenu jusqu'à sa mort."
+      en: "Zborowski becomes Modigliani's dealer in 1916, providing him with lodging, a studio and an income until his death."
+
+  - source-character: leopold-zborowski
+    target-character: chaim-soutine
+    type: art-dealer-of
+    description:
+      fr: "Zborowski découvre Soutine sur la recommandation de Modigliani et devient son marchand."
+      en: "Zborowski discovers Soutine on Modigliani's recommendation and becomes his dealer."
+
+  - source-character: leopold-zborowski
+    target-character: moise-kisling
+    type: art-dealer-of
+    description:
+      fr: "Kisling fait partie des trois artistes que Zborowski défend inlassablement, avec Modigliani et Soutine."
+      en: "Kisling is one of the three artists Zborowski tirelessly champions, alongside Modigliani and Soutine."
+
+  - source-character: daniel-henry-kahnweiler
+    target-character: pablo-picasso
+    type: art-dealer-of
+    description:
+      fr: "Kahnweiler devient en 1907 le marchand attitré de Picasso, avec qui il signe un contrat d'exclusivité."
+      en: "Kahnweiler becomes Picasso's dedicated dealer in 1907, signing an exclusive contract with him."
+
+  - source-character: daniel-henry-kahnweiler
+    target-character: georges-braque
+    type: art-dealer-of
+    description:
+      fr: "Braque signe un contrat d'exclusivité avec Kahnweiler, qui devient le principal marchand du cubisme naissant."
+      en: "Braque signs an exclusive contract with Kahnweiler, who becomes the principal dealer of early Cubism."
+
+  - source-character: daniel-henry-kahnweiler
+    target-character: juan-gris
+    type: art-dealer-of
+    description:
+      fr: "Kahnweiler défend Juan Gris dès ses débuts cubistes, avant de reprendre son rôle de marchand après la guerre."
+      en: "Kahnweiler champions Juan Gris from his earliest Cubist works, resuming his role as dealer after the war."
+
+  - source-character: daniel-henry-kahnweiler
+    target-character: fernand-leger
+    type: art-dealer-of
+    description:
+      fr: "Kahnweiler représente également Fernand Léger, l'un des piliers de son écurie cubiste."
+      en: "Kahnweiler also represents Fernand Léger, one of the pillars of his Cubist stable."
+
+  - source-character: daniel-henry-kahnweiler
+    target-character: andre-derain
+    type: art-dealer-of
+    description:
+      fr: "Kahnweiler représente aussi Derain à ses débuts, avant que celui-ci ne s'éloigne du cubisme naissant."
+      en: "Kahnweiler also represents Derain in his early years, before Derain moves away from emerging Cubism."
+
+  - source-character: ambroise-vollard
+    target-character: pablo-picasso
+    type: art-dealer-of
+    description:
+      fr: "Vollard organise en 1901 la première exposition parisienne d'un Picasso encore inconnu."
+      en: "Vollard organises in 1901 the first Paris exhibition of a still-unknown Picasso."
+
+  - source-character: ambroise-vollard
+    target-character: andre-derain
+    type: art-dealer-of
+    description:
+      fr: "Vollard achète et expose les toiles fauves de Derain à ses débuts."
+      en: "Vollard buys and exhibits Derain's early Fauvist canvases."
+
+  - source-character: ambroise-vollard
+    target-character: maurice-de-vlaminck
+    type: art-dealer-of
+    description:
+      fr: "Vollard soutient également Vlaminck lors de ses débuts fauves."
+      en: "Vollard also supports Vlaminck during his early Fauvist years."
+
+  - source-character: paul-guillaume
+    target-character: amedeo-modigliani
+    type: art-dealer-of
+    description:
+      fr: "Paul Guillaume devient l'un des premiers soutiens de Modigliani, avant que Zborowski ne prenne le relais."
+      en: "Paul Guillaume becomes one of Modigliani's earliest supporters, before Zborowski takes over."
+
+  - source-character: paul-guillaume
+    target-character: chaim-soutine
+    type: art-dealer-of
+    description:
+      fr: "Paul Guillaume met Soutine en relation avec le collectionneur américain Albert Barnes en 1922-1923, un tournant pour sa carrière."
+      en: "Paul Guillaume introduces Soutine to the American collector Albert Barnes in 1922-1923, a turning point in his career."
+
+  - source-character: gertrude-stein
+    target-character: pablo-picasso
+    type: collector-of
+    description:
+      fr: "Gertrude Stein devient l'une des toutes premières collectionneuses de Picasso, dont elle achète des œuvres dès 1905."
+      en: "Gertrude Stein becomes one of the very first collectors of Picasso, buying his works as early as 1905."
+
+  - source-character: gertrude-stein
+    target-character: henri-matisse
+    type: collector-of
+    description:
+      fr: "Avec son frère Leo, elle achète en 1905 La Femme au chapeau, provoquant le scandale du Salon d'automne."
+      en: "With her brother Leo, she buys Woman with a Hat in 1905, causing the scandal of the Salon d'Automne."
+
+  - source-character: gertrude-stein
+    target-character: juan-gris
+    type: collector-of
+    description:
+      fr: "Gertrude Stein soutient financièrement Juan Gris pendant l'exil de son marchand Kahnweiler durant la guerre."
+      en: "Gertrude Stein financially supports Juan Gris during his dealer Kahnweiler's wartime exile."
+
+  - source-character: guillaume-apollinaire
+    target-character: pablo-picasso
+    type: promoter-of
+    description:
+      fr: "Apollinaire devient le principal défenseur littéraire de Picasso et du cubisme naissant."
+      en: "Apollinaire becomes the principal literary champion of Picasso and early Cubism."
+
+  - source-character: guillaume-apollinaire
+    target-character: georges-braque
+    type: promoter-of
+    description:
+      fr: "Apollinaire théorise le cubisme de Braque dans son essai Les Peintres cubistes (1913)."
+      en: "Apollinaire theorises Braque's Cubism in his essay The Cubist Painters (1913)."
+
+  - source-character: guillaume-apollinaire
+    target-character: marie-laurencin
+    type: promoter-of
+    description:
+      fr: "Apollinaire défend l'œuvre de Marie Laurencin dans ses écrits critiques, la présentant comme peintre à part entière."
+      en: "Apollinaire champions Marie Laurencin's work in his critical writings, presenting her as a painter in her own right."
+
+  - source-character: kiki-de-montparnasse
+    target-character: tsuguharu-foujita
+    type: muse-of
+    description:
+      fr: "Kiki de Montparnasse pose pour le nu couché de Foujita qui fait sensation au Salon d'automne de 1922."
+      en: "Kiki de Montparnasse poses for Foujita's reclining nude, which causes a sensation at the 1922 Salon d'Automne."
+
+  - source-character: kiki-de-montparnasse
+    target-character: moise-kisling
+    type: muse-of
+    description:
+      fr: "Kisling peint plusieurs portraits de Kiki de Montparnasse, alors modèle vedette du quartier."
+      en: "Kisling paints several portraits of Kiki de Montparnasse, then the district's star model."
+
+  - source-character: kiki-de-montparnasse
+    target-character: man-ray
+    type: muse-of
+    description:
+      fr: "Kiki de Montparnasse devient la muse photographique de Man Ray, posant pour ses images les plus célèbres dont Le Violon d'Ingres."
+      en: "Kiki de Montparnasse becomes Man Ray's photographic muse, posing for his most famous images including Le Violon d'Ingres."
+
+  - source-character: jeanne-hebuterne
+    target-character: amedeo-modigliani
+    type: muse-of
+    description:
+      fr: "Jeanne Hébuterne devient le modèle privilégié de Modigliani, peinte dans une longue série de portraits."
+      en: "Jeanne Hébuterne becomes Modigliani's favoured model, painted in a long series of portraits."
+
+  - source-character: amedeo-modigliani
+    target-character: moise-kisling
+    type: studio-mate-of
+    description:
+      fr: "Modigliani et Kisling partagent un temps le même atelier à Montparnasse."
+      en: "Modigliani and Kisling share the same Montparnasse studio for a time."
+
+  - source-character: marc-chagall
+    target-character: ossip-zadkine
+    type: studio-mate-of
+    description:
+      fr: "Chagall et Zadkine logent tous deux à La Ruche, la cité d'artistes où se croisent de nombreux émigrés d'Europe de l'Est."
+      en: "Chagall and Zadkine both live at La Ruche, the artists' colony where many Eastern European émigrés cross paths."
+
+  - source-character: chaim-soutine
+    target-character: pinchus-kremegne
+    type: studio-mate-of
+    description:
+      fr: "Soutine et Krémègne logent tous deux à La Ruche à leur arrivée à Paris."
+      en: "Soutine and Krémègne both live at La Ruche when they first arrive in Paris."
+
+  - source-character: chaim-soutine
+    target-character: michel-kikoine
+    type: friend-of
+    description:
+      fr: "Soutine et Kikoïne se connaissent depuis l'enfance à Minsk et restent amis toute leur vie."
+      en: "Soutine and Kikoïne have known each other since childhood in Minsk and remain friends throughout their lives."
+
+  - source-character: michel-kikoine
+    target-character: pinchus-kremegne
+    type: friend-of
+    description:
+      fr: "Kikoïne et Krémègne forment avec Soutine un trio d'amis inséparables depuis leur jeunesse à Minsk."
+      en: "Kikoïne and Krémègne form, with Soutine, an inseparable trio of friends since their youth in Minsk."
+
+  - source-character: sonia-delaunay
+    target-character: serge-poliakoff
+    type: friend-of
+    description:
+      fr: "Sonia et Robert Delaunay initient Poliakoff à l'abstraction dans les années 1930, une rencontre déterminante pour sa peinture."
+      en: "Sonia and Robert Delaunay introduce Poliakoff to abstraction in the 1930s, a meeting decisive for his painting."
+
+  - source-character: robert-delaunay
+    target-character: serge-poliakoff
+    type: friend-of
+    description:
+      fr: "Robert Delaunay, comme sa femme Sonia, initie Poliakoff à l'abstraction dans les années 1930."
+      en: "Robert Delaunay, like his wife Sonia, introduces Poliakoff to abstraction in the 1930s."
+
+  - source-character: berthe-weill
+    target-character: pablo-picasso
+    type: art-dealer-of
+    description:
+      fr: "Berthe Weill expose Picasso dès 1902, parmi les toutes premières à croire en lui."
+      en: "Berthe Weill exhibits Picasso as early as 1902, among the very first to believe in him."
+
+  - source-character: berthe-weill
+    target-character: amedeo-modigliani
+    type: art-dealer-of
+    description:
+      fr: "Berthe Weill organise en 1917 l'unique exposition personnelle de Modigliani de son vivant, fermée par la police."
+      en: "Berthe Weill organises in 1917 Modigliani's only solo exhibition during his lifetime, shut down by the police."
+
+  - source-character: berthe-weill
+    target-character: henri-matisse
+    type: art-dealer-of
+    description:
+      fr: "Berthe Weill compte Matisse parmi les artistes qu'elle expose avant que sa réputation ne soit établie."
+      en: "Berthe Weill counts Matisse among the artists she exhibits before his reputation is established."
+
+  - source-character: albert-barnes
+    target-character: chaim-soutine
+    type: collector-of
+    description:
+      fr: "Barnes achète d'un coup des dizaines de toiles de Soutine en 1923, sur la recommandation de Paul Guillaume, offrant au peintre la première reconnaissance de sa carrière."
+      en: "Barnes buys dozens of Soutine's canvases at once in 1923, on Paul Guillaume's recommendation, giving the painter the first recognition of his career."
+
+  - source-character: albert-barnes
+    target-character: amedeo-modigliani
+    type: collector-of
+    description:
+      fr: "Barnes acquiert de nombreuses toiles de Modigliani, qui figurent aujourd'hui parmi les pièces maîtresses de la Barnes Foundation."
+      en: "Barnes acquires numerous Modigliani canvases, which today rank among the centrepieces of the Barnes Foundation."
+
+  - source-character: chana-orloff
+    target-character: ossip-zadkine
+    type: friend-of
+    description:
+      fr: "Orloff et Zadkine, tous deux sculpteurs émigrés de l'Empire russe, se croisent dans le même cercle d'artistes de Montparnasse."
+      en: "Orloff and Zadkine, both sculptors who emigrated from the Russian Empire, move in the same Montparnasse artists' circle."
+
+  - source-character: chana-orloff
+    target-character: marie-vassilieff
+    type: friend-of
+    description:
+      fr: "Orloff fréquente la cantine improvisée de Marie Vassilieff, l'un des carrefours sociaux de Montparnasse pendant la guerre."
+      en: "Orloff frequents Marie Vassilieff's improvised canteen, one of Montparnasse's social hubs during the war."
+
+  - source-character: suzanne-valadon
+    target-character: kees-van-dongen
+    type: friend-of
+    description:
+      fr: "Valadon et van Dongen sont tous deux des figures de la bohème montmartroise d'avant-guerre, cette scène misérable et créative des ateliers de la Butte."
+      en: "Valadon and van Dongen are both figures of the pre-war Montmartre bohemia, that impoverished and creative scene of studios on the Butte."
+
+  - source-character: alexander-archipenko
+    target-character: fernand-leger
+    type: friend-of
+    description:
+      fr: "Archipenko expose aux côtés de Léger au sein du groupe du Section d'Or en 1912."
+      en: "Archipenko exhibits alongside Léger within the Section d'Or group in 1912."
+
+  - source-character: alice-b-toklas
+    target-character: pablo-picasso
+    type: friend-of
+    description:
+      fr: "Toklas reste personnellement proche de Picasso, habitué de longue date du salon qu'elle tient avec Gertrude Stein rue de Fleurus."
+      en: "Toklas remains personally close to Picasso, a longtime regular of the salon she runs with Gertrude Stein on Rue de Fleurus."
+
+  - source-character: marevna
+    target-character: ossip-zadkine
+    type: friend-of
+    description:
+      fr: "Marevna décrit dans ses mémoires sa proximité avec Zadkine, l'un des habitués du cercle cubiste de Montparnasse qu'elle fréquente."
+      en: "Marevna describes in her memoirs her closeness with Zadkine, one of the regulars of the Montparnasse Cubist circle she frequents."
+
+  - source-character: guillaume-apollinaire
+    target-character: sonia-delaunay
+    type: promoter-of
+    description:
+      fr: "Apollinaire théorise et baptise « orphisme » l'art de la couleur pure développé par Sonia et Robert Delaunay."
+      en: "Apollinaire theorises and names \"Orphism\" the art of pure colour developed by Sonia and Robert Delaunay."
+
+  - source-character: bella-chagall
+    target-character: marc-chagall
+    type: muse-of
+    description:
+      fr: "Bella est omniprésente dans l'œuvre peinte de Chagall, qui la représente dans des dizaines de tableaux tout au long de leur vie commune."
+      en: "Bella is a constant presence in Chagall's painted work, appearing in dozens of paintings throughout their life together."

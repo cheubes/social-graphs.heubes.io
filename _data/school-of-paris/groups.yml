@@ -1,0 +1,65 @@
+- slug: france
+  name:
+    fr: "France"
+    en: "France"
+  color: "#1c3f6e"
+
+- slug: russian-empire
+  name:
+    fr: "Empire russe"
+    en: "Russian Empire"
+  color: "#7a1f2b"
+
+- slug: poland
+  name:
+    fr: "Pologne"
+    en: "Poland"
+  color: "#b8860b"
+
+- slug: spain
+  name:
+    fr: "Espagne"
+    en: "Spain"
+  color: "#c1440e"
+
+- slug: italy
+  name:
+    fr: "Italie"
+    en: "Italy"
+  color: "#2f6b4f"
+
+- slug: bulgaria
+  name:
+    fr: "Bulgarie"
+    en: "Bulgaria"
+  color: "#1b6b6b"
+
+- slug: romania
+  name:
+    fr: "Roumanie"
+    en: "Romania"
+  color: "#6b3a1f"
+
+- slug: netherlands
+  name:
+    fr: "Pays-Bas"
+    en: "Netherlands"
+  color: "#d68a1f"
+
+- slug: germany
+  name:
+    fr: "Allemagne"
+    en: "Germany"
+  color: "#4a2545"
+
+- slug: united-states
+  name:
+    fr: "États-Unis"
+    en: "United States"
+  color: "#5c3a6e"
+
+- slug: japan
+  name:
+    fr: "Japon"
+    en: "Japan"
+  color: "#7a1220"

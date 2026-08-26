@@ -1,0 +1,333 @@
+- slug: georges-braque
+  gender: masculine
+  group: france
+  portrait-source: "https://commons.wikimedia.org/wiki/File:George_Braque_(sem_data).tiff"
+  metadata:
+    birth: "1882"
+    death: "1963"
+
+- slug: henri-matisse
+  gender: masculine
+  group: france
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Portrait_of_Henri_Matisse_1933_May_20.jpg"
+  metadata:
+    birth: "1869"
+    death: "1954"
+
+- slug: andre-derain
+  gender: masculine
+  group: france
+  portrait-source: "https://commons.wikimedia.org/wiki/File:André_Derain_1928.jpg"
+  metadata:
+    birth: "1880"
+    death: "1954"
+
+- slug: maurice-de-vlaminck
+  gender: masculine
+  group: france
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Portrait_of_Maurice_de_Vlaminck_(by_André_Derain)_–_Musée_des_Beaux-Arts_de_Chartres.jpg"
+  metadata:
+    birth: "1876"
+    death: "1958"
+
+- slug: fernand-leger
+  gender: masculine
+  group: france
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Fernand_léger,_autoritratto,_1906_(coll._maeght,_parigi).jpg"
+  metadata:
+    birth: "1881"
+    death: "1955"
+
+- slug: robert-delaunay
+  gender: masculine
+  group: france
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Robert_Delaunay_portrait_photograph.jpg"
+  metadata:
+    birth: "1885"
+    death: "1941"
+
+- slug: maurice-utrillo
+  gender: masculine
+  group: france
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Maurice_Utrillo_en_1910_-_André_Utter.jpg"
+  metadata:
+    birth: "1883"
+    death: "1955"
+
+- slug: suzanne-valadon
+  gender: feminine
+  group: france
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Suzanne_Valadon._Portrait_au_chapeau,_photographie,_vers_1885._Ville_de_Paris_Bibliothèque_Marguerite_Durand_(BMD).jpg"
+  metadata:
+    birth: "1865"
+    death: "1938"
+
+- slug: marie-laurencin
+  gender: feminine
+  group: france
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Marie_Laurencin,_c.1912,_Paris.jpg"
+  metadata:
+    birth: "1883"
+    death: "1956"
+
+- slug: guillaume-apollinaire
+  gender: masculine
+  group: france
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Guillaume_Apollinaire_foto.jpg"
+  metadata:
+    birth: "1880"
+    death: "1918"
+
+- slug: jean-cocteau
+  gender: masculine
+  group: france
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Jean_Cocteau_b_Meurisse_1923.jpg"
+  metadata:
+    birth: "1889"
+    death: "1963"
+
+- slug: ambroise-vollard
+  gender: masculine
+  group: france
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Ambroise_Vollard,_standing_in_front_of_Picasso%27s_Evocaci%C3%B3n._El_entierro_de_Casagemas.jpg"
+  metadata:
+    birth: "1866"
+    death: "1939"
+
+- slug: paul-guillaume
+  gender: masculine
+  group: france
+  portrait-source: "https://commons.wikimedia.org/wiki/File:André_derain,_ritratto_di_paul_guillaume,_1919.jpg"
+  metadata:
+    birth: "1891"
+    death: "1934"
+
+- slug: jeanne-hebuterne
+  gender: feminine
+  group: france
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Jeanne_hebuterne.jpg"
+  metadata:
+    birth: "1898"
+    death: "1920"
+
+- slug: kiki-de-montparnasse
+  gender: feminine
+  group: france
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Moïse_Kisling_-_Kiki_de_Montparnasse_au_chandail_rouge_et_foulard_bleu.jpg"
+  metadata:
+    birth: "1901"
+    death: "1953"
+
+- slug: marc-chagall
+  gender: masculine
+  group: russian-empire
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Shagal_Choumoff.jpg"
+  metadata:
+    birth: "1887"
+    death: "1985"
+
+- slug: bella-chagall
+  gender: feminine
+  group: russian-empire
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Bella_Chagall_by_Hugo_Erfurth_1923_(cropped).jpg"
+  metadata:
+    birth: "1889"
+    death: "1944"
+
+- slug: chaim-soutine
+  gender: masculine
+  group: russian-empire
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Amedeo_Modigliani_-_Chaim_Soutine_(1917).jpg"
+  metadata:
+    birth: "1893"
+    death: "1943"
+
+- slug: ossip-zadkine
+  gender: masculine
+  group: russian-empire
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Beeldhouwer_Ossip_Zadkine_(cropped).jpg"
+  metadata:
+    birth: "1888"
+    death: "1967"
+
+- slug: pinchus-kremegne
+  gender: masculine
+  group: russian-empire
+  portrait-source: "https://commons.wikimedia.org/wiki/File:L'artiste_peintre_Pinchus_Krémègne_en_1963_près_de_la_baie_Ouest_de_son_atelier_rue_des_Capucins_à_Céret.jpg"
+  metadata:
+    birth: "1890"
+    death: "1981"
+
+- slug: alexander-archipenko
+  gender: masculine
+  group: russian-empire
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Alexander_Archipenko.jpg"
+  metadata:
+    birth: "1887"
+    death: "1964"
+
+- slug: chana-orloff
+  gender: feminine
+  group: russian-empire
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Chana_Orloff_israel_05.jpg"
+  metadata:
+    birth: "1888"
+    death: "1968"
+
+- slug: sonia-delaunay
+  gender: feminine
+  group: russian-empire
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Sonia_Delaunay_portrait_photograph.jpg"
+  metadata:
+    birth: "1885"
+    death: "1979"
+
+- slug: marevna
+  gender: feminine
+  group: russian-empire
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Marevna_1983.jpg"
+  metadata:
+    birth: "1892"
+    death: "1984"
+
+- slug: marie-vassilieff
+  gender: feminine
+  group: russian-empire
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Modigliani_-_Marie_Vassilieff.jpg"
+  metadata:
+    birth: "1884"
+    death: "1957"
+
+- slug: moise-kisling
+  gender: masculine
+  group: poland
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Moïse_Kisling.jpg"
+  metadata:
+    birth: "1891"
+    death: "1953"
+
+- slug: leopold-zborowski
+  gender: masculine
+  group: poland
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Amedeo-modigliani-leopold-zborowski-rue-joseph-bara-3-paris-soutine-door.jpg"
+  metadata:
+    birth: "1889"
+    death: "1932"
+
+- slug: pablo-picasso
+  gender: masculine
+  group: spain
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Pablo_Picasso,_1904,_Paris,_photograph_by_Ricard_Canals_i_Llambí_cut.jpg"
+  metadata:
+    birth: "1881"
+    death: "1973"
+
+- slug: juan-gris
+  gender: masculine
+  group: spain
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Juan_Gris,_portrait_photograph,_published_in_Les_Peintres_Cubistes,_1913.jpg"
+  metadata:
+    birth: "1887"
+    death: "1927"
+
+- slug: amedeo-modigliani
+  gender: masculine
+  group: italy
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Amedeo_Modigliani_1918_restored.jpg"
+  metadata:
+    birth: "1884"
+    death: "1920"
+
+- slug: jules-pascin
+  gender: masculine
+  group: bulgaria
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Jules_Pascin_im_Café_du_Dôme,_Paris_1910.png"
+  metadata:
+    birth: "1885"
+    death: "1930"
+
+- slug: constantin-brancusi
+  gender: masculine
+  group: romania
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Edward_Steichen_-_Brancusi.jpg"
+  metadata:
+    birth: "1876"
+    death: "1957"
+
+- slug: kees-van-dongen
+  gender: masculine
+  group: netherlands
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Kees_van_Dongen_1923.jpg"
+  metadata:
+    birth: "1877"
+    death: "1968"
+
+- slug: daniel-henry-kahnweiler
+  gender: masculine
+  group: germany
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Juan_Gris,_Daniel-Henry_Kahnweiler,_1921.jpg"
+  metadata:
+    birth: "1884"
+    death: "1979"
+
+- slug: gertrude-stein
+  gender: feminine
+  group: united-states
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Gertrude_Stein_1934_(facecrop).jpg"
+  metadata:
+    birth: "1874"
+    death: "1946"
+
+- slug: alice-b-toklas
+  gender: feminine
+  group: united-states
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Alice_B._Toklas,_by_Carl_Van_Vechten_-_1949.jpg"
+  metadata:
+    birth: "1877"
+    death: "1967"
+
+- slug: man-ray
+  gender: masculine
+  group: united-states
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Man_Ray_Paris_1934.jpg"
+  metadata:
+    birth: "1890"
+    death: "1976"
+
+- slug: tsuguharu-foujita
+  gender: masculine
+  group: japan
+  portrait-source: "https://commons.wikimedia.org/wiki/File:1930_Tsuguharu_Fujita.jpg"
+  metadata:
+    birth: "1886"
+    death: "1968"
+
+- slug: michel-kikoine
+  gender: masculine
+  group: russian-empire
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Michel_Kikoine,_Faibish-Schraga_Zarfin_and_their_friends.jpg"
+  metadata:
+    birth: "1892"
+    death: "1968"
+
+- slug: serge-poliakoff
+  gender: masculine
+  group: russian-empire
+  metadata:
+    birth: "1900"
+    death: "1969"
+
+- slug: berthe-weill
+  gender: feminine
+  group: france
+  metadata:
+    birth: "1865"
+    death: "1951"
+
+- slug: albert-barnes
+  gender: masculine
+  group: united-states
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Portrait_of_Albert_C._Barnes_LCCN2004662569.jpg"
+  metadata:
+    birth: "1872"
+    death: "1951"
