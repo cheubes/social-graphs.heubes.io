@@ -1,0 +1,511 @@
+relations:
+  - source-character: richard-of-york
+    target-character: edward-iv
+    type: parent-of
+    description:
+      fr: "Édouard est l'aîné des quatre fils de Richard d'York à survivre à l'enfance."
+      en: "Edward is the eldest of Richard of York's four sons to survive childhood."
+  - source-character: richard-of-york
+    target-character: edmund-of-rutland
+    type: parent-of
+    description:
+      fr: "Edmond, second fils survivant, n'a que dix-sept ans quand il accompagne son père à Wakefield."
+      en: "Edmund, the second surviving son, is only seventeen when he accompanies his father to Wakefield."
+  - source-character: richard-of-york
+    target-character: george-of-clarence
+    type: parent-of
+    description:
+      fr: "George est le troisième fils de Richard d'York à survivre à l'enfance."
+      en: "George is the third of Richard of York's sons to survive childhood."
+  - source-character: richard-of-york
+    target-character: richard-iii
+    type: parent-of
+    description:
+      fr: "Benjamin de la famille, Richard n'a que huit ans à la mort de son père à Wakefield."
+      en: "The youngest of the family, Richard is only eight when his father dies at Wakefield."
+  - source-character: cecily-neville
+    target-character: edward-iv
+    type: parent-of
+    description:
+      fr: "Édouard est l'aîné des enfants de Cecily Neville à devenir roi."
+      en: "Edward is the elder of Cecily Neville's sons to become king."
+  - source-character: cecily-neville
+    target-character: edmund-of-rutland
+    type: parent-of
+    description:
+      fr: "Edmond meurt à dix-sept ans, tué après la bataille de Wakefield."
+      en: "Edmund dies at seventeen, killed after the Battle of Wakefield."
+  - source-character: cecily-neville
+    target-character: george-of-clarence
+    type: parent-of
+    description:
+      fr: "George se retourne à deux reprises contre son frère Édouard IV, avant d'être exécuté sur son ordre."
+      en: "George turns against his brother Edward IV twice, before being executed on his orders."
+  - source-character: cecily-neville
+    target-character: richard-iii
+    type: parent-of
+    description:
+      fr: "Richard est le dernier des fils de Cecily Neville à monter sur le trône."
+      en: "Richard is the last of Cecily Neville's sons to take the throne."
+  - source-character: edward-iv
+    target-character: elizabeth-of-york
+    type: parent-of
+    description:
+      fr: "Elizabeth, fille aînée d'Édouard IV, épouse Henri Tudor en 1486 et réunit les deux maisons rivales."
+      en: "Elizabeth, Edward IV's eldest daughter, marries Henry Tudor in 1486, reuniting the two rival houses."
+  - source-character: edward-iv
+    target-character: edward-v
+    type: parent-of
+    description:
+      fr: "Édouard V n'a que douze ans quand la mort soudaine de son père le fait roi."
+      en: "Edward V is only twelve when his father's sudden death makes him king."
+  - source-character: edward-iv
+    target-character: richard-of-shrewsbury
+    type: parent-of
+    description:
+      fr: "Second fils d'Édouard IV, Richard rejoint son frère à la Tour de Londres en 1483."
+      en: "Edward IV's second son, Richard joins his brother in the Tower of London in 1483."
+  - source-character: elizabeth-woodville
+    target-character: elizabeth-of-york
+    type: parent-of
+    description:
+      fr: "Elizabeth Woodville négocie en secret le mariage de sa fille avec Henri Tudor pendant l'usurpation de Richard III."
+      en: "Elizabeth Woodville secretly negotiates her daughter's marriage to Henry Tudor during Richard III's usurpation."
+  - source-character: elizabeth-woodville
+    target-character: edward-v
+    type: parent-of
+    description:
+      fr: "Elizabeth Woodville confie l'éducation de son fils aîné à son propre frère, Anthony Woodville."
+      en: "Elizabeth Woodville entrusts her eldest son's upbringing to her own brother, Anthony Woodville."
+  - source-character: elizabeth-woodville
+    target-character: richard-of-shrewsbury
+    type: parent-of
+    description:
+      fr: "Elizabeth Woodville ne cède qu'à contrecœur aux pressions de Richard III pour laisser partir son second fils."
+      en: "Elizabeth Woodville gives in only reluctantly to Richard III's pressure to let her younger son go."
+  - source-character: henry-vi
+    target-character: edward-of-westminster
+    type: parent-of
+    description:
+      fr: "La naissance d'Édouard, peu après le premier accès de folie d'Henri VI, alimente des rumeurs sur sa légitimité."
+      en: "Edward's birth, shortly after Henry VI's first bout of madness, fuels rumours about his legitimacy."
+  - source-character: margaret-of-anjou
+    target-character: edward-of-westminster
+    type: parent-of
+    description:
+      fr: "Marguerite d'Anjou mène la guerre civile pour préserver le trône de son fils unique."
+      en: "Margaret of Anjou wages civil war to preserve her only son's throne."
+  - source-character: richard-woodville
+    target-character: elizabeth-woodville
+    type: parent-of
+    description:
+      fr: "Le mariage secret d'Elizabeth avec Édouard IV en 1464 propulse toute la famille Woodville au premier rang de la cour."
+      en: "Elizabeth's secret marriage to Edward IV in 1464 propels the entire Woodville family to the forefront of the court."
+  - source-character: richard-woodville
+    target-character: anthony-woodville
+    type: parent-of
+    description:
+      fr: "Anthony hérite du titre de comte Rivers à la mort de son père, exécuté en 1469."
+      en: "Anthony inherits the title of Earl Rivers on his father's death, executed in 1469."
+  - source-character: richard-neville-salisbury
+    target-character: richard-neville-warwick
+    type: parent-of
+    description:
+      fr: "Warwick hérite de son père l'alliance étroite avec la maison d'York."
+      en: "Warwick inherits from his father the close alliance with the House of York."
+  - source-character: richard-neville-salisbury
+    target-character: john-neville-montagu
+    type: parent-of
+    description:
+      fr: "John Neville sert d'abord fidèlement la cause yorkiste comme son père et son frère aîné."
+      en: "John Neville at first faithfully serves the Yorkist cause like his father and elder brother."
+  - source-character: richard-neville-salisbury
+    target-character: george-neville
+    type: parent-of
+    description:
+      fr: "George doit à son nom autant qu'à ses talents une ascension ecclésiastique fulgurante."
+      en: "George owes his meteoric rise through the church as much to his name as to his talents."
+  - source-character: anne-beauchamp
+    target-character: isabel-neville
+    type: parent-of
+    description:
+      fr: "Isabelle, fille aînée d'Anne Beauchamp, épouse George de Clarence en 1469."
+      en: "Isabel, Anne Beauchamp's elder daughter, marries George of Clarence in 1469."
+  - source-character: anne-beauchamp
+    target-character: anne-neville
+    type: parent-of
+    description:
+      fr: "Anne, cadette d'Anne Beauchamp, épouse successivement un prince lancastrien puis un roi yorkiste."
+      en: "Anne, Anne Beauchamp's younger daughter, marries first a Lancastrian prince and then a Yorkist king."
+  - source-character: richard-neville-warwick
+    target-character: isabel-neville
+    type: parent-of
+    description:
+      fr: "Warwick marie sa fille aînée à George de Clarence contre l'avis d'Édouard IV."
+      en: "Warwick marries his elder daughter to George of Clarence against Edward IV's wishes."
+  - source-character: richard-neville-warwick
+    target-character: anne-neville
+    type: parent-of
+    description:
+      fr: "Warwick marie sa cadette au prince lancastrien Édouard de Westminster pour sceller son revirement de 1470."
+      en: "Warwick marries his younger daughter to the Lancastrian prince Edward of Westminster to seal his 1470 volte-face."
+  - source-character: owen-tudor
+    target-character: edmund-tudor
+    type: parent-of
+    description:
+      fr: "Reconnu par son demi-frère Henri VI, Edmond est anobli comte de Richmond en 1452."
+      en: "Acknowledged by his half-brother Henry VI, Edmund is ennobled Earl of Richmond in 1452."
+  - source-character: owen-tudor
+    target-character: jasper-tudor
+    type: parent-of
+    description:
+      fr: "Jasper hérite de son père une fidélité inébranlable à la cause lancastrienne."
+      en: "Jasper inherits from his father an unshakeable loyalty to the Lancastrian cause."
+  - source-character: edmund-tudor
+    target-character: henry-vii
+    type: parent-of
+    description:
+      fr: "Henri naît quelques mois après la mort de son père en captivité."
+      en: "Henry is born a few months after his father's death in captivity."
+  - source-character: margaret-beaufort
+    target-character: henry-vii
+    type: parent-of
+    description:
+      fr: "Margaret Beaufort n'a que treize ans quand elle donne naissance à son unique enfant."
+      en: "Margaret Beaufort is only thirteen when she gives birth to her only child."
+
+  - source-character: henry-vi
+    target-character: margaret-of-anjou
+    type: married-to
+    description:
+      fr: "Mariée à quinze ans à Henri VI en 1445 dans le cadre d'une paix fragile avec la France, Marguerite se révèle bien plus déterminée que son époux."
+      en: "Married at fifteen to Henry VI in 1445 as part of a fragile peace with France, Margaret proves far more determined than her husband."
+  - source-character: richard-of-york
+    target-character: cecily-neville
+    type: married-to
+    description:
+      fr: "Leur mariage en 1429 scelle l'alliance entre les maisons d'York et de Neville."
+      en: "Their 1429 marriage seals the alliance between the Houses of York and Neville."
+  - source-character: edward-iv
+    target-character: elizabeth-woodville
+    type: married-to
+    description:
+      fr: "Le mariage secret d'Édouard IV avec la roturière Elizabeth Woodville en 1464 indispose son plus fidèle soutien, le comte de Warwick."
+      en: "Edward IV's secret 1464 marriage to the commoner Elizabeth Woodville alienates his staunchest supporter, the Earl of Warwick."
+  - source-character: richard-iii
+    target-character: anne-neville
+    type: married-to
+    description:
+      fr: "Richard épouse en 1472 la veuve du prince lancastrien Édouard de Westminster, avec laquelle il partage l'administration du nord du royaume."
+      en: "Richard marries the widowed Lancastrian princess Anne Neville in 1472, sharing with her the administration of the north of the kingdom."
+  - source-character: george-of-clarence
+    target-character: isabel-neville
+    type: married-to
+    description:
+      fr: "Ce mariage de 1469, conclu contre l'avis d'Édouard IV, scelle l'alliance de Clarence avec son beau-père Warwick contre le roi."
+      en: "This 1469 marriage, made against Edward IV's wishes, seals Clarence's alliance with his father-in-law Warwick against the king."
+  - source-character: anne-neville
+    target-character: edward-of-westminster
+    type: married-to
+    description:
+      fr: "Ce mariage de 1470 scelle la spectaculaire alliance de Warwick avec les Lancastre ; Édouard meurt l'année suivante à Tewkesbury."
+      en: "This 1470 marriage seals Warwick's spectacular alliance with the Lancastrians; Edward dies the following year at Tewkesbury."
+  - source-character: richard-neville-warwick
+    target-character: anne-beauchamp
+    type: married-to
+    description:
+      fr: "Ce mariage apporte à Warwick le comté et les immenses possessions qui font de lui le pair le plus puissant du royaume."
+      en: "This marriage brings Warwick the earldom and the immense estates that make him the most powerful peer in the kingdom."
+  - source-character: edmund-tudor
+    target-character: margaret-beaufort
+    type: married-to
+    description:
+      fr: "Henri VI accorde à son demi-frère la main de la très jeune héritière Margaret Beaufort."
+      en: "Henry VI grants his half-brother the hand of the very young heiress Margaret Beaufort."
+  - source-character: henry-vii
+    target-character: elizabeth-of-york
+    type: married-to
+    description:
+      fr: "Leur union en 1486, tenue depuis 1483, réunit symboliquement les maisons d'York et de Lancastre et fonde la dynastie Tudor."
+      en: "Their 1486 union, pledged since 1483, symbolically reunites the Houses of York and Lancaster and founds the Tudor dynasty."
+  - source-character: thomas-stanley
+    target-character: margaret-beaufort
+    type: married-to
+    description:
+      fr: "Ce remariage vers 1472 fait de Stanley le beau-père du prétendant lancastrien exilé Henri Tudor."
+      en: "This remarriage around 1472 makes Stanley the stepfather of the exiled Lancastrian claimant Henry Tudor."
+
+  - source-character: edward-iv
+    target-character: henry-vi
+    type: successor-of
+    description:
+      fr: "Vainqueur à Towton en 1461, Édouard dépose Henri VI et se fait couronner roi."
+      en: "Victorious at Towton in 1461, Edward deposes Henry VI and has himself crowned king."
+  - source-character: henry-vi
+    target-character: edward-iv
+    type: successor-of
+    description:
+      fr: "Restauré un temps en 1470 lors de la \"Réadeption\" grâce au revirement de Warwick, Henri VI reprend brièvement le trône avant d'être détrôné de nouveau l'année suivante."
+      en: "Briefly restored in 1470 during the \"Readeption,\" thanks to Warwick's about-face, Henry VI retakes the throne only to be overthrown again the following year."
+  - source-character: richard-iii
+    target-character: edward-v
+    type: successor-of
+    description:
+      fr: "Invoquant l'illégitimité du mariage d'Édouard IV, Richard se fait proclamer roi à la place de son neveu, déclaré illégitime."
+      en: "Citing the illegitimacy of Edward IV's marriage, Richard has himself proclaimed king in place of his nephew, declared illegitimate."
+  - source-character: henry-vii
+    target-character: richard-iii
+    type: successor-of
+    description:
+      fr: "Henri Tudor vainc et tue Richard III à la bataille de Bosworth en 1485, fondant la dynastie Tudor."
+      en: "Henry Tudor defeats and kills Richard III at the Battle of Bosworth in 1485, founding the Tudor dynasty."
+
+  - source-character: edward-iv
+    target-character: henry-beaufort-third-duke-of-somerset
+    type: orders-execution-of
+    description:
+      fr: "Capturé après la bataille d'Hexham en 1464, Somerset est exécuté sur-le-champ, sa seconde défection ne lui étant pas pardonnée."
+      en: "Captured after the Battle of Hexham in 1464, Somerset is executed on the spot, his second defection unforgiven."
+  - source-character: edward-iv
+    target-character: edmund-beaufort-fourth-duke-of-somerset
+    type: orders-execution-of
+    description:
+      fr: "Arraché au droit d'asile de l'abbaye de Tewkesbury, Somerset est exécuté deux jours après la bataille."
+      en: "Dragged from the sanctuary of Tewkesbury Abbey, Somerset is executed two days after the battle."
+  - source-character: edward-iv
+    target-character: owen-tudor
+    type: orders-execution-of
+    description:
+      fr: "Capturé après Mortimer's Cross en 1461, Owen Tudor est exécuté sur ordre du jeune Édouard, alors comte de March."
+      en: "Captured after Mortimer's Cross in 1461, Owen Tudor is executed on the orders of the young Edward, then Earl of March."
+  - source-character: edward-iv
+    target-character: george-of-clarence
+    type: orders-execution-of
+    description:
+      fr: "Édouard IV ne pardonne pas à son propre frère sa nouvelle trahison et le fait exécuter en 1478."
+      en: "Edward IV does not forgive his own brother's fresh betrayal and has him executed in 1478."
+  - source-character: richard-neville-warwick
+    target-character: richard-woodville
+    type: orders-execution-of
+    description:
+      fr: "Lors de sa révolte de 1469 contre Édouard IV, Warwick fait exécuter Richard Woodville sans procès."
+      en: "During his 1469 revolt against Edward IV, Warwick has Richard Woodville executed without trial."
+  - source-character: richard-iii
+    target-character: anthony-woodville
+    type: orders-execution-of
+    description:
+      fr: "Arrêté avec l'entourage du jeune Édouard V, Anthony Woodville est exécuté sans procès à Pontefract."
+      en: "Arrested along with young Edward V's household, Anthony Woodville is executed without trial at Pontefract."
+  - source-character: richard-iii
+    target-character: william-hastings
+    type: orders-execution-of
+    description:
+      fr: "Opposé à la dépossession du jeune Édouard V, Hastings est arrêté lors d'un conseil à la Tour et exécuté sur-le-champ."
+      en: "Opposed to young Edward V being stripped of the crown, Hastings is arrested at a council in the Tower and executed on the spot."
+  - source-character: richard-iii
+    target-character: henry-stafford
+    type: orders-execution-of
+    description:
+      fr: "Après l'échec de sa rébellion à l'automne 1483, Buckingham est capturé et exécuté sans procès."
+      en: "After his rebellion fails in autumn 1483, Buckingham is captured and executed without trial."
+  - source-character: henry-vii
+    target-character: perkin-warbeck
+    type: orders-execution-of
+    description:
+      fr: "Capturé en 1497, le prétendant est exécuté en 1499 après une tentative d'évasion."
+      en: "Captured in 1497, the pretender is executed in 1499 after an escape attempt."
+  - source-character: john-clifford
+    target-character: edmund-of-rutland
+    type: orders-execution-of
+    description:
+      fr: "Clifford tue de sa main le jeune Rutland après Wakefield, en représailles pour la mort de son propre père à St Albans."
+      en: "Clifford personally kills the young Rutland after Wakefield, in revenge for his own father's death at St Albans."
+
+  - source-character: richard-of-york
+    target-character: richard-neville-salisbury
+    type: ally-of
+    description:
+      fr: "Beau-frère de Richard d'York, Salisbury épouse sa cause dès 1455."
+      en: "Richard of York's brother-in-law, Salisbury embraces his cause as early as 1455."
+  - source-character: richard-of-york
+    target-character: richard-neville-warwick
+    type: ally-of
+    description:
+      fr: "Warwick met sa fortune et ses forces au service de la revendication d'York au trône."
+      en: "Warwick places his fortune and forces at the service of York's claim to the throne."
+  - source-character: richard-neville-warwick
+    target-character: edward-iv
+    type: ally-of
+    description:
+      fr: "Artisan décisif de l'accession d'Édouard IV au trône en 1461, Warwick espère gouverner à travers lui."
+      en: "The decisive architect of Edward IV's accession in 1461, Warwick hopes to govern through him."
+  - source-character: richard-neville-warwick
+    target-character: margaret-of-anjou
+    type: ally-of
+    description:
+      fr: "En 1470, Warwick scelle sa spectaculaire volte-face par une alliance avec Marguerite d'Anjou, son ennemie de toujours."
+      en: "In 1470, Warwick seals his spectacular about-face with an alliance with Margaret of Anjou, his enemy of old."
+  - source-character: richard-neville-warwick
+    target-character: george-of-clarence
+    type: ally-of
+    description:
+      fr: "Warwick espère un temps voir son gendre Clarence monter sur le trône à la place d'Édouard IV."
+      en: "Warwick briefly hopes to see his son-in-law Clarence placed on the throne instead of Edward IV."
+  - source-character: john-neville-montagu
+    target-character: edward-iv
+    type: ally-of
+    description:
+      fr: "Montagu sert d'abord fidèlement Édouard IV comme l'un de ses meilleurs commandants dans le nord."
+      en: "Montagu at first faithfully serves Edward IV as one of his ablest commanders in the north."
+  - source-character: john-neville-montagu
+    target-character: richard-neville-warwick
+    type: ally-of
+    description:
+      fr: "Vexé d'avoir perdu le comté de Northumberland, Montagu rejoint son frère Warwick dans sa rébellion de 1470."
+      en: "Feeling cheated after losing the earldom of Northumberland, Montagu joins his brother Warwick's 1470 rebellion."
+  - source-character: henry-stafford
+    target-character: richard-iii
+    type: ally-of
+    description:
+      fr: "Buckingham aide activement Richard de Gloucester à écarter les Woodville et à s'emparer du trône en 1483."
+      en: "Buckingham actively helps Richard of Gloucester sideline the Woodvilles and seize the throne in 1483."
+  - source-character: anthony-woodville
+    target-character: edward-v
+    type: ally-of
+    description:
+      fr: "Nommé gouverneur du jeune prince, Anthony Woodville l'élève à Ludlow et l'escorte vers Londres en 1483."
+      en: "Appointed the young prince's governor, Anthony Woodville raises him at Ludlow and escorts him to London in 1483."
+  - source-character: thomas-stanley
+    target-character: henry-vii
+    type: ally-of
+    description:
+      fr: "L'intervention de Stanley à Bosworth, à un moment critique du combat, fausse la bataille en faveur de son beau-fils."
+      en: "Stanley's intervention at Bosworth, at a critical moment in the battle, tips it in favour of his stepson."
+  - source-character: jasper-tudor
+    target-character: henry-vii
+    type: ally-of
+    description:
+      fr: "Oncle et protecteur, Jasper accompagne Henri Tudor en exil puis combat à ses côtés à Bosworth."
+      en: "Uncle and protector, Jasper accompanies Henry Tudor into exile and fights at his side at Bosworth."
+  - source-character: margaret-beaufort
+    target-character: henry-stafford
+    type: ally-of
+    description:
+      fr: "Margaret Beaufort et Buckingham conspirent ensemble en 1483 en faveur d'Henri Tudor."
+      en: "Margaret Beaufort and Buckingham conspire together in 1483 in favour of Henry Tudor."
+  - source-character: elizabeth-woodville
+    target-character: margaret-beaufort
+    type: ally-of
+    description:
+      fr: "Réfugiées face à Richard III, les deux femmes s'allient pour organiser le mariage de leurs enfants et le retour d'Henri Tudor."
+      en: "Facing Richard III, the two women ally to arrange their children's marriage and Henry Tudor's return."
+  - source-character: francis-lovell
+    target-character: john-de-la-pole
+    type: ally-of
+    description:
+      fr: "Les deux hommes rejoignent ensemble la rébellion de Lambert Simnel en 1487."
+      en: "The two men jointly join the Lambert Simnel rebellion in 1487."
+  - source-character: george-neville
+    target-character: richard-neville-warwick
+    type: ally-of
+    description:
+      fr: "Chancelier d'Angleterre, George Neville met son influence au service de la cause de son frère Warwick."
+      en: "As Chancellor of England, George Neville places his influence at the service of his brother Warwick's cause."
+  - source-character: william-de-la-pole
+    target-character: henry-vi
+    type: ally-of
+    description:
+      fr: "Principal ministre du roi, Suffolk négocie en 1445 le mariage d'Henri VI avec Marguerite d'Anjou."
+      en: "The king's leading minister, Suffolk negotiates Henry VI's 1445 marriage to Margaret of Anjou."
+  - source-character: edmund-beaufort-second-duke-of-somerset
+    target-character: margaret-of-anjou
+    type: ally-of
+    description:
+      fr: "Favori de la cour, Somerset est un pilier de la faction que Marguerite d'Anjou rassemble autour du roi."
+      en: "A royal favourite, Somerset is a pillar of the faction Margaret of Anjou gathers around the king."
+  - source-character: henry-beaufort-third-duke-of-somerset
+    target-character: margaret-of-anjou
+    type: ally-of
+    description:
+      fr: "Comme son père avant lui, Somerset combat pour la cause lancastrienne rassemblée autour de la reine."
+      en: "Like his father before him, Somerset fights for the Lancastrian cause rallied around the queen."
+  - source-character: henry-beaufort-third-duke-of-somerset
+    target-character: edward-iv
+    type: ally-of
+    description:
+      fr: "Fait rarissime, Somerset se réconcilie brièvement avec Édouard IV en 1462 et devient un temps son compagnon de tournoi."
+      en: "In a rare turn, Somerset briefly reconciles with Edward IV in 1462 and becomes for a time his tournament companion."
+  - source-character: edmund-beaufort-fourth-duke-of-somerset
+    target-character: margaret-of-anjou
+    type: ally-of
+    description:
+      fr: "Dernier duc de Somerset, Edmond commande l'aile lancastrienne à Tewkesbury sous les ordres de Marguerite d'Anjou."
+      en: "The last Duke of Somerset, Edmund commands the Lancastrian wing at Tewkesbury under Margaret of Anjou."
+  - source-character: henry-percy-third-earl-of-northumberland
+    target-character: margaret-of-anjou
+    type: ally-of
+    description:
+      fr: "Chef de la puissante famille Percy, Northumberland reste un loyaliste lancastrien jusqu'à sa mort à Towton."
+      en: "Head of the powerful Percy family, Northumberland remains a Lancastrian loyalist until his death at Towton."
+  - source-character: john-clifford
+    target-character: margaret-of-anjou
+    type: ally-of
+    description:
+      fr: "Clifford met sa haine des York au service de la cause lancastrienne rassemblée par la reine."
+      en: "Clifford places his hatred of the Yorkists at the service of the Lancastrian cause rallied by the queen."
+
+  - source-character: william-hastings
+    target-character: edward-iv
+    type: friend-of
+    description:
+      fr: "Compagnon d'armes de la première heure, Hastings devient le chambellan et le confident le plus proche d'Édouard IV."
+      en: "A companion-in-arms from the very start, Hastings becomes Edward IV's chamberlain and closest confidant."
+  - source-character: francis-lovell
+    target-character: richard-iii
+    type: friend-of
+    description:
+      fr: "Élevé aux côtés de Richard de Gloucester, Lovell reste jusqu'au bout son ami le plus proche et son plus fidèle serviteur."
+      en: "Raised alongside Richard of Gloucester, Lovell remains to the end his closest friend and most loyal servant."
+
+  - source-character: richard-of-york
+    target-character: margaret-of-anjou
+    type: rival-of
+    description:
+      fr: "Marguerite d'Anjou devient la nemesis politique de Richard d'York dès que la maladie d'Henri VI ouvre la voie à ses prétentions."
+      en: "Margaret of Anjou becomes Richard of York's political nemesis as soon as Henry VI's illness opens the way to his ambitions."
+  - source-character: richard-of-york
+    target-character: edmund-beaufort-second-duke-of-somerset
+    type: rival-of
+    description:
+      fr: "Leur rivalité personnelle dégénère en 1455 à la première bataille de St Albans, premier engagement armé de la guerre."
+      en: "Their personal feud erupts in 1455 at the First Battle of St Albans, the war's opening engagement."
+  - source-character: richard-of-york
+    target-character: henry-vi
+    type: rival-of
+    description:
+      fr: "L'Acte d'Accord de 1460 fait d'York l'héritier désigné d'Henri VI, au détriment du propre fils du roi."
+      en: "The 1460 Act of Accord makes York Henry VI's designated heir, at the expense of the king's own son."
+  - source-character: richard-neville-salisbury
+    target-character: henry-percy-third-earl-of-northumberland
+    type: rival-of
+    description:
+      fr: "Voisins dans le nord de l'Angleterre, Neville et Percy transforment une querelle de préséance en affrontement armé."
+      en: "Neighbours in the north of England, the Neville and Percy families turn a dispute over precedence into an armed feud."
+  - source-character: margaret-of-anjou
+    target-character: richard-neville-warwick
+    type: rival-of
+    description:
+      fr: "Marguerite d'Anjou et Warwick se combattent sans relâche pendant plus d'une décennie, avant leur improbable réconciliation de 1470."
+      en: "Margaret of Anjou and Warwick fight each other relentlessly for over a decade, before their improbable 1470 reconciliation."
+  - source-character: richard-neville-warwick
+    target-character: edward-iv
+    type: rival-of
+    description:
+      fr: "Vexé par l'indépendance croissante d'Édouard IV, Warwick se retourne contre lui en 1470 avant d'être défait et tué à Barnet en 1471."
+      en: "Piqued by Edward IV's growing independence, Warwick turns against him in 1470 before being defeated and killed at Barnet in 1471."
+  - source-character: william-de-la-pole
+    target-character: richard-of-york
+    type: rival-of
+    description:
+      fr: "York tient Suffolk pour responsable des désastres militaires en France qui ruinent son autorité."
+      en: "York blames Suffolk for the military disasters in France that ruin his standing."

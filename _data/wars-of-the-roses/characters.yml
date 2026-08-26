@@ -1,0 +1,311 @@
+- slug: henry-vi
+  gender: masculine
+  group: house-of-lancaster
+  portrait-source: "https://commons.wikimedia.org/wiki/File:King_Henry_VI_from_NPG.jpg"
+  metadata:
+    birth: "1421"
+    death: "1471"
+
+- slug: margaret-of-anjou
+  gender: feminine
+  group: house-of-lancaster
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Queen_Margaret_of_Anjou.jpg"
+  metadata:
+    birth: "1430"
+    death: "1482"
+
+- slug: edward-of-westminster
+  gender: masculine
+  group: house-of-lancaster
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Edward_of_Westminster.jpg"
+  metadata:
+    birth: "1453"
+    death: "1471"
+
+- slug: william-de-la-pole
+  gender: masculine
+  group: house-of-lancaster
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Sir_William_de_la_Pole,_4th_Earl_of_Suffolk,_KG.png"
+  metadata:
+    birth: "1396"
+    death: "1450"
+
+- slug: edmund-beaufort-second-duke-of-somerset
+  gender: masculine
+  group: house-of-lancaster
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Edmund_Beaufort_at_Rouen_-_Jean_de_Wavrin_Anciennes_Chroniques_d%27Angleterre_vol_6.jpeg"
+  metadata:
+    birth: "1406"
+    death: "1455"
+
+- slug: henry-beaufort-third-duke-of-somerset
+  gender: masculine
+  group: house-of-lancaster
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Beaufort_Arms_(France_modern).svg"
+  metadata:
+    birth: "1436"
+    death: "1464"
+
+- slug: edmund-beaufort-fourth-duke-of-somerset
+  gender: masculine
+  group: house-of-lancaster
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Beheading_duke_somerset.jpg"
+  metadata:
+    birth: "1438"
+    death: "1471"
+
+- slug: henry-percy-third-earl-of-northumberland
+  gender: masculine
+  group: house-of-lancaster
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Seal_of_Henry_Percy,_3rd_Earl_of_Northumberland_in_1435.jpg"
+  metadata:
+    birth: "1421"
+    death: "1461"
+
+- slug: john-clifford
+  gender: masculine
+  group: house-of-lancaster
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Arms_of_Clifford.svg"
+  metadata:
+    birth: "1435"
+    death: "1461"
+
+- slug: richard-of-york
+  gender: masculine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Richard_Plantagenet,_3rd_Duke_of_York.jpg"
+  metadata:
+    birth: "1411"
+    death: "1460"
+
+- slug: cecily-neville
+  gender: feminine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Cecily_Neville,_duchess_of_York.jpg"
+  metadata:
+    birth: "1415"
+    death: "1495"
+
+- slug: edward-iv
+  gender: masculine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:King_Edward_IV.jpg"
+  metadata:
+    birth: "1442"
+    death: "1483"
+
+- slug: elizabeth-woodville
+  gender: feminine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Elizabeth_woodville.jpg"
+  metadata:
+    birth: "1437"
+    death: "1492"
+
+- slug: edmund-of-rutland
+  gender: masculine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Arms_of_Edmund,_Earl_of_Rutland.svg"
+  metadata:
+    birth: "1443"
+    death: "1460"
+
+- slug: george-of-clarence
+  gender: masculine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:George_Plantagenet,_Duke_of_Clarence.jpg"
+  metadata:
+    birth: "1449"
+    death: "1478"
+
+- slug: richard-iii
+  gender: masculine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Richard_III_of_England.jpg"
+  metadata:
+    birth: "1452"
+    death: "1485"
+
+- slug: isabel-neville
+  gender: feminine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Isabel_Neville,_Duchess_of_Clarence.png"
+  metadata:
+    birth: "1451"
+    death: "1476"
+
+- slug: anne-neville
+  gender: feminine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Anne_Neville_portrait.jpg"
+  metadata:
+    birth: "1456"
+    death: "1485"
+
+- slug: elizabeth-of-york
+  gender: feminine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Elizabeth_of_York_from_Kings_and_Queens_of_England.jpg"
+  metadata:
+    birth: "1466"
+    death: "1503"
+
+- slug: edward-v
+  gender: masculine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:The_Princes_in_the_Tower_by_John_Everett_Millais_(1878).png"
+  metadata:
+    birth: "1470"
+    death: "1483"
+
+- slug: richard-of-shrewsbury
+  gender: masculine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:The_Princes_in_the_Tower_by_John_Everett_Millais_(1878).png"
+  metadata:
+    birth: "1473"
+    death: "1483"
+
+- slug: anthony-woodville
+  gender: masculine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Rivers_%26_Caxton_Presenting_book_to_Edward_IV.JPG"
+  metadata:
+    birth: "1440"
+    death: "1483"
+
+- slug: richard-woodville
+  gender: masculine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Sir_Richard_Wydeville,_1st_Earl_Rivers,_KG.png"
+  metadata:
+    birth: "1405"
+    death: "1469"
+
+- slug: william-hastings
+  gender: masculine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Sir_William_Hastings,_1st_Baron_Hastings,_KG.png"
+  metadata:
+    birth: "1431"
+    death: "1483"
+
+- slug: henry-stafford
+  gender: masculine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_Henry_Stafford,_2nd_Duke_of_Buckingham.svg"
+  metadata:
+    birth: "1455"
+    death: "1483"
+
+- slug: francis-lovell
+  gender: masculine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Sir_Francis_Lovell,_1st_Viscount_Lovell,_KG.png"
+  metadata:
+    birth: "1456"
+    death: "1487"
+
+- slug: john-de-la-pole
+  gender: masculine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_John_de_la_Pole_Earl_of_Lincoln.svg"
+  metadata:
+    birth: "1462"
+    death: "1487"
+
+- slug: perkin-warbeck
+  gender: masculine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Perkin_Warbeck.jpg"
+  metadata:
+    birth: "1474"
+    death: "1499"
+
+- slug: richard-neville-salisbury
+  gender: masculine
+  group: house-of-neville
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Richard_Neville,_5th_Earl_of_Salisbury_seule.jpg"
+  metadata:
+    birth: "1400"
+    death: "1460"
+
+- slug: richard-neville-warwick
+  gender: masculine
+  group: house-of-neville
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Richard_Neville.jpg"
+  metadata:
+    birth: "1428"
+    death: "1471"
+
+- slug: john-neville-montagu
+  gender: masculine
+  group: house-of-neville
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_Sir_John_Nevill,_1st_Baron_Montagu,_KG.png"
+  metadata:
+    birth: "1431"
+    death: "1471"
+
+- slug: george-neville
+  gender: masculine
+  group: house-of-neville
+  portrait-source: "https://commons.wikimedia.org/wiki/File:GeorgeNeville_ArchbishopYork_Dedication.png"
+  metadata:
+    birth: "1432"
+    death: "1476"
+
+- slug: anne-beauchamp
+  gender: feminine
+  group: house-of-neville
+  portrait-source: "https://commons.wikimedia.org/wiki/File:AnneWarwick1483.jpg"
+  metadata:
+    birth: "1426"
+    death: "1492"
+
+- slug: owen-tudor
+  gender: masculine
+  group: house-of-tudor
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Arms_of_Owen_Tudor.svg"
+  metadata:
+    birth: "1400"
+    death: "1461"
+
+- slug: edmund-tudor
+  gender: masculine
+  group: house-of-tudor
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Edmund_Tudor_St_David%27s_Cathedral.jpg"
+  metadata:
+    birth: "1430"
+    death: "1456"
+
+- slug: jasper-tudor
+  gender: masculine
+  group: house-of-tudor
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Cardiff_castle_-_Eingangshalle_1b_Erkerfenster.jpg"
+  metadata:
+    birth: "1431"
+    death: "1495"
+
+- slug: henry-vii
+  gender: masculine
+  group: house-of-tudor
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Enrique_VII_de_Inglaterra,_por_un_artista_an%C3%B3nimo.jpg"
+  metadata:
+    birth: "1457"
+    death: "1509"
+
+- slug: margaret-beaufort
+  gender: feminine
+  group: house-of-tudor
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Margaret_Beaufort_Wewyck_Portrait.png"
+  metadata:
+    birth: "1443"
+    death: "1509"
+
+- slug: thomas-stanley
+  gender: masculine
+  group: house-of-tudor
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Thomas-Stanley-1st-Earl-of-Derby.jpg"
+  metadata:
+    birth: "1433"
+    death: "1504"

@@ -1,0 +1,5 @@
+- slug: noble-title
+  label:
+    fr: "Titre"
+    en: "Title"
+  localized: true

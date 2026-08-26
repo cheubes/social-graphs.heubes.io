@@ -1,0 +1,23 @@
+- slug: house-of-lancaster
+  name:
+    fr: "Maison de Lancastre"
+    en: "House of Lancaster"
+  color: "#7a1f2b"
+
+- slug: house-of-york
+  name:
+    fr: "Maison d'York"
+    en: "House of York"
+  color: "#3d4f3d"
+
+- slug: house-of-neville
+  name:
+    fr: "Maison de Neville"
+    en: "House of Neville"
+  color: "#4a4a8a"
+
+- slug: house-of-tudor
+  name:
+    fr: "Maison Tudor"
+    en: "House of Tudor"
+  color: "#0f6b4a"

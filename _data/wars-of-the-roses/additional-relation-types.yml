@@ -1,0 +1,18 @@
+- slug: orders-execution-of
+  label:
+    fr:
+      masculine: "Fait exécuter"
+      feminine: "Fait exécuter"
+      neutral: "Fait exécuter"
+    en:
+      masculine: "Orders the execution of"
+      feminine: "Orders the execution of"
+      neutral: "Orders the execution of"
+  reverse-label:
+    fr:
+      masculine: "Exécuté sur ordre de"
+      feminine: "Exécutée sur ordre de"
+    en:
+      masculine: "Executed on the orders of"
+      feminine: "Executed on the orders of"
+  directed: true
