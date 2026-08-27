@@ -10,6 +10,8 @@ metadata:
   cause-of-death: "Assassiné par le Ku Klux Klan près de Philadelphia, dans le Mississippi"
 ---
 
-Jeune Afro-Américain originaire de Meridian, dans le Mississippi, il rejoint le CORE comme volontaire et participe à l'organisation de Freedom Summer en 1964, campagne d'inscription des électeurs noirs menée conjointement par le CORE et la SNCC sous la bannière du COFO.
+Né James Earl Chaney le 30 mai 1943 à Meridian, dans le Mississippi, deuxième d'une fratrie de cinq enfants de Ben, plâtrier, et Fannie Lee Chaney, il fréquente l'école catholique jusqu'en neuvième année et devient un soutien précoce de la cause des droits civiques, jusqu'à être suspendu de l'école pour avoir porté un badge de la NAACP. Après avoir quitté le Harris Junior College, il travaille comme apprenti plâtrier auprès de son père.
 
-Le 21 juin 1964, il se rend avec Michael Schwerner et Andrew Goodman enquêter sur l'incendie d'une église noire dans le comté de Neshoba. Arrêtés puis relâchés de nuit par le shérif adjoint, les trois hommes sont interceptés et exécutés par des membres du Ku Klux Klan ; leurs corps ne sont retrouvés que six semaines plus tard.
+Il commence à militer fin 1963 et rejoint le CORE à Meridian comme volontaire, où il aide à organiser des cours d'éducation civique, met en relation les permanents du CORE avec les responsables religieux locaux et facilite leurs déplacements dans les comtés environnants. Il participe à l'organisation de Freedom Summer en 1964, campagne d'inscription des électeurs noirs menée conjointement par le CORE et la SNCC sous la bannière du COFO.
+
+Le 21 juin 1964, il se rend avec Michael Schwerner et Andrew Goodman enquêter sur l'incendie d'une église noire dans le comté de Neshoba. Arrêtés puis relâchés de nuit par le shérif adjoint, les trois hommes sont interceptés et exécutés par des membres du Ku Klux Klan ; leurs corps ne sont retrouvés que six semaines plus tard. Les trois militants reçoivent à titre posthume la Médaille présidentielle de la Liberté en 2014.

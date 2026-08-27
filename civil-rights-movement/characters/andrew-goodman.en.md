@@ -10,6 +10,8 @@ metadata:
   cause-of-death: "Murdered by the Ku Klux Klan near Philadelphia, Mississippi"
 ---
 
-A New York student recruited during COFO's training sessions in Ohio, he arrived in Mississippi on June 20, 1964, to take part in Freedom Summer, the state's Black voter registration campaign.
+Born on 23 November 1943 on Manhattan's Upper West Side, into an accomplished intellectual family, he begins activism at fifteen and later joins CORE while studying at Queens College. A New York student recruited during COFO's training sessions in Ohio, he arrived in Mississippi on 20 June 1964 to take part in Freedom Summer, the state's Black voter registration campaign, alongside Michael Schwerner, where they are joined by local activist James Chaney.
 
-The very day after his arrival, he accompanied James Chaney and Michael Schwerner to investigate a church burning in Longdale; the three men were murdered that same evening by the Ku Klux Klan, a killing that helped galvanize national opinion behind the Civil Rights Act of 1964.
+The very day after his arrival, he accompanied James Chaney and Michael Schwerner to investigate a church burning in Longdale; the three men are arrested on 21 June by Ku Klux Klan members, including a county deputy sheriff, then murdered that same evening, Goodman and Schwerner shot dead, Chaney beaten to death. The FBI recovers their bodies on 4 August, a killing that helped galvanize national opinion behind the Civil Rights Act of 1964.
+
+Simon and Garfunkel dedicate a song to the three activists that same year, and President Obama posthumously awards all three the Presidential Medal of Freedom in 2014.

@@ -10,6 +10,8 @@ metadata:
   cause-of-death: "Assassinated in Dallas"
 ---
 
-Initially cautious on racial issues for fear of alienating Southern Democrats, he was forced to act after the riots triggered by James Meredith's admission to the University of Mississippi in 1962, and then by the crackdown on the Birmingham campaign.
+Born on 29 May 1917 in Brookline, Massachusetts, to an Irish Catholic family, he represents Massachusetts in the House (1947-1953) and then the Senate (1953-1960), taking a cautious stance on racial issues for fear of alienating Southern Democrats.
 
-In June 1963, he delivered a televised address framing civil rights as a moral issue, and introduced the bill that would become the Civil Rights Act. He was assassinated in Dallas that November, leaving his successor Lyndon Johnson to see it through to passage.
+He is forced to act, sending in federal forces, after the riots triggered by James Meredith's admission to the University of Mississippi in 1962, and then by the crackdown on the Birmingham campaign in 1963.
+
+In June 1963, he delivered a televised address framing civil rights as a moral issue, and introduced the bill that would become the Civil Rights Act. He was assassinated in Dallas on 22 November that year, aged forty-six, leaving his successor Lyndon Johnson to see it through to passage.

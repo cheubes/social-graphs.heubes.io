@@ -9,6 +9,8 @@ metadata:
   campaign: "Leadership of the Harlem temple after Malcolm X"
 ---
 
-A calypso singer converted to the Nation of Islam in the mid-1950s, he became one of Elijah Muhammad's protégés, who appointed him to lead the Harlem temple after Malcolm X's departure, a break with the organization he publicly and harshly criticized.
+Born Louis Eugene Walcott on 11 May 1933 in the Bronx, New York, he grows up in Boston's Roxbury neighborhood within a Caribbean immigrant family and shows early talent as a violinist. He records calypso albums in the 1950s under the stage names "The Charmer" and "Calypso Gene", before giving up music on joining the Nation of Islam.
 
-When Elijah Muhammad died in 1975, leadership of the Nation of Islam passed to his son Warith Deen Mohammed, who steered the organization toward orthodox Sunni Islam; Farrakhan split off in 1978 to found a new Nation of Islam faithful to the original doctrine.
+Converted to Islam in 1955, under the influence of Malcolm X, whom he meets while performing in Chicago, he adopts the name Louis X and then Louis Farrakhan, granted to him by Elijah Muhammad. He becomes one of the latter's protégés, who appoints him to lead the Harlem temple after Malcolm X's departure, a break with the organization he publicly and harshly criticized.
+
+When Elijah Muhammad died in 1975, leadership of the Nation of Islam passed to his son Warith Deen Mohammed, who steered the organization toward orthodox Sunni Islam; Farrakhan reorganizes dissenting members from 1978 who remain loyal to the original doctrine, officially restoring the Nation of Islam in 1981, of which he becomes the fourth leader. He holds the position for more than four decades, still active at ninety-one.

@@ -10,6 +10,8 @@ metadata:
   cause-of-death: "Assassinated by James Earl Ray in Memphis"
 ---
 
-A Baptist minister trained in theology at Boston University, he became the spokesman of the Montgomery bus boycott in 1955 after Rosa Parks's arrest, a successful campaign that thrust him to the forefront of the emerging movement. The following year he co-founded the Southern Christian Leadership Conference (SCLC), making it the spearhead of a strategy of nonviolent civil disobedience inspired by Gandhi.
+Born on 15 January 1929 in Atlanta, Georgia, into a family of Baptist ministers spanning several generations, he studies at Morehouse College and then Crozer Theological Seminary, earning a doctorate in theology from Boston University in 1955; he marries Coretta Scott in 1953, with whom he has four children.
 
-He organized or supported the decade's major campaigns, from Birmingham to Selma, and delivered his "I Have a Dream" speech before the Lincoln Memorial in 1963, which remains the movement's most enduring image. Awarded the Nobel Peace Prize in 1964, he broadened his fight to poverty and the Vietnam War before being assassinated in Memphis in 1968, where he had come to support a sanitation workers' strike.
+A Baptist minister, he became the spokesman of the Montgomery bus boycott in 1955 after Rosa Parks's arrest, a successful campaign that thrust him to the forefront of the emerging movement. The following year he co-founded the Southern Christian Leadership Conference (SCLC), making it the spearhead of a strategy of nonviolent civil disobedience inspired by Gandhi.
+
+He organized or supported the decade's major campaigns, from Birmingham to Selma, and delivered his "I Have a Dream" speech before the Lincoln Memorial on 28 August 1963, followed by more than two hundred and fifty thousand people and remaining the movement's most enduring image. The youngest-ever winner of the Nobel Peace Prize in 1964, he broadened his fight to poverty and the Vietnam War before being assassinated on 4 April 1968 in Memphis, where he had come to support a sanitation workers' strike.
