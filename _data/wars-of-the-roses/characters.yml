@@ -70,6 +70,14 @@
     birth: "1435"
     death: "1461"
 
+- slug: john-de-vere
+  gender: masculine
+  group: house-of-lancaster
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_John_de_Vere,_13th_Earl_of_Oxford.svg"
+  metadata:
+    birth: "1442"
+    death: "1513"
+
 - slug: richard-of-york
   gender: masculine
   group: house-of-york
@@ -125,6 +133,14 @@
   metadata:
     birth: "1452"
     death: "1485"
+
+- slug: margaret-of-york
+  gender: feminine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Margaret_of_York.jpg"
+  metadata:
+    birth: "1446"
+    death: "1503"
 
 - slug: isabel-neville
   gender: feminine
@@ -198,6 +214,14 @@
     birth: "1455"
     death: "1483"
 
+- slug: john-howard
+  gender: masculine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:John_Howard,_1st_Duke_of_Norfolk.jpg"
+  metadata:
+    birth: "1425"
+    death: "1485"
+
 - slug: francis-lovell
   gender: masculine
   group: house-of-york
@@ -221,6 +245,13 @@
   metadata:
     birth: "1474"
     death: "1499"
+
+- slug: lambert-simnel
+  gender: masculine
+  group: house-of-york
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Lambert_Simnel,_Pretender_to_the_English_Throne,_Riding_on_Supporters_in_Ireland.gif"
+  metadata:
+    birth: "1477"
 
 - slug: richard-neville-salisbury
   gender: masculine

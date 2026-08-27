@@ -308,6 +308,12 @@ relations:
     description:
       fr: "Après l'échec de sa rébellion à l'automne 1483, Buckingham est capturé et exécuté sans procès."
       en: "After his rebellion fails in autumn 1483, Buckingham is captured and executed without trial."
+  - source-character: perkin-warbeck
+    target-character: henry-vii
+    type: rival-of
+    description:
+      fr: "Se faisant passer pour Richard de Shrewsbury, Warbeck tente à plusieurs reprises d'envahir l'Angleterre pour renverser Henri VII, entre 1495 et 1497."
+      en: "Posing as Richard of Shrewsbury, Warbeck makes several attempts to invade England and overthrow Henry VII, between 1495 and 1497."
   - source-character: henry-vii
     target-character: perkin-warbeck
     type: orders-execution-of
@@ -399,6 +405,12 @@ relations:
     description:
       fr: "Réfugiées face à Richard III, les deux femmes s'allient pour organiser le mariage de leurs enfants et le retour d'Henri Tudor."
       en: "Facing Richard III, the two women ally to arrange their children's marriage and Henry Tudor's return."
+  - source-character: john-de-la-pole
+    target-character: henry-vii
+    type: rival-of
+    description:
+      fr: "Écarté de la succession par la victoire d'Henri VII à Bosworth, Lincoln lève une armée de mercenaires en 1487 pour le renverser, et meurt à Stoke Field."
+      en: "Displaced from the succession by Henry VII's victory at Bosworth, Lincoln raises a mercenary army in 1487 to overthrow him, and dies at Stoke Field."
   - source-character: francis-lovell
     target-character: john-de-la-pole
     type: ally-of
@@ -509,3 +521,97 @@ relations:
     description:
       fr: "York tient Suffolk pour responsable des désastres militaires en France qui ruinent son autorité."
       en: "York blames Suffolk for the military disasters in France that ruin his standing."
+
+  - source-character: edward-iv
+    target-character: john-de-vere
+    type: rival-of
+    description:
+      fr: "Édouard IV fait emprisonner Oxford plus de dix ans au château de Hammes après sa capitulation au Mont-Saint-Michel de Cornouailles en 1473."
+      en: "Edward IV has Oxford imprisoned for over ten years at Hammes Castle after his surrender at St Michael's Mount in Cornwall in 1473."
+  - source-character: john-de-vere
+    target-character: richard-neville-warwick
+    type: ally-of
+    description:
+      fr: "Oxford combat aux côtés de Warwick à la bataille de Barnet en 1471, lors de la Réadeption d'Henri VI."
+      en: "Oxford fights alongside Warwick at the Battle of Barnet in 1471, during Henry VI's Readeption."
+  - source-character: john-de-vere
+    target-character: richard-iii
+    type: rival-of
+    description:
+      fr: "Évadé de sa captivité en 1484, Oxford rejoint Henri Tudor et commande l'avant-garde qui affronte les troupes de Richard III à Bosworth."
+      en: "Having escaped captivity in 1484, Oxford joins Henry Tudor and commands the vanguard that faces Richard III's troops at Bosworth."
+  - source-character: john-de-vere
+    target-character: henry-vii
+    type: ally-of
+    description:
+      fr: "Oxford met au service d'Henri Tudor en exil une expérience militaire décisive, couronnée par la victoire de Bosworth en 1485."
+      en: "Oxford places at the exiled Henry Tudor's service a decisive military experience, crowned by the victory at Bosworth in 1485."
+  - source-character: john-de-vere
+    target-character: john-howard
+    type: rival-of
+    description:
+      fr: "À Bosworth, l'avant-garde d'Oxford affronte directement celle de Norfolk, dans l'engagement le plus disputé de la bataille."
+      en: "At Bosworth, Oxford's vanguard directly faces Norfolk's, in the most hard-fought engagement of the battle."
+
+  - source-character: richard-iii
+    target-character: john-howard
+    type: ally-of
+    description:
+      fr: "Richard III accorde à Howard le duché de Norfolk convoité depuis des années, s'assurant en retour une loyauté sans faille jusqu'à Bosworth."
+      en: "Richard III grants Howard the dukedom of Norfolk he had coveted for years, securing in return unwavering loyalty all the way to Bosworth."
+  - source-character: john-howard
+    target-character: henry-vii
+    type: rival-of
+    description:
+      fr: "Commandant l'avant-garde royale à Bosworth, Howard meurt au combat en défendant la cause de Richard III face à Henri Tudor."
+      en: "Commanding the royal vanguard at Bosworth, Howard dies fighting in defence of Richard III's cause against Henry Tudor."
+
+  - source-character: richard-of-york
+    target-character: margaret-of-york
+    type: parent-of
+    description:
+      fr: "Margaret est la septième enfant de Richard d'York et de Cecily Neville."
+      en: "Margaret is the seventh child of Richard of York and Cecily Neville."
+  - source-character: cecily-neville
+    target-character: margaret-of-york
+    type: parent-of
+    description:
+      fr: "Margaret est la septième enfant de Richard d'York et de Cecily Neville."
+      en: "Margaret is the seventh child of Richard of York and Cecily Neville."
+  - source-character: margaret-of-york
+    target-character: edward-iv
+    type: ally-of
+    description:
+      fr: "Devenue duchesse de Bourgogne, Margaret accueille et soutient son frère Édouard IV lors de son exil de 1470-71."
+      en: "Now Duchess of Burgundy, Margaret welcomes and supports her brother Edward IV during his 1470-71 exile."
+  - source-character: margaret-of-york
+    target-character: henry-vii
+    type: rival-of
+    description:
+      fr: "Opposante acharnée à la nouvelle dynastie, Margaret finance depuis la Bourgogne toutes les tentatives de restauration yorkiste contre Henri VII."
+      en: "A fierce opponent of the new dynasty, Margaret funds every attempt at Yorkist restoration against Henry VII from Burgundy."
+  - source-character: margaret-of-york
+    target-character: lambert-simnel
+    type: ally-of
+    description:
+      fr: "Margaret reconnaît publiquement Lambert Simnel comme un prince authentique en 1487 et finance son armée de mercenaires."
+      en: "Margaret publicly acknowledges Lambert Simnel as a genuine prince in 1487 and funds his mercenary army."
+  - source-character: margaret-of-york
+    target-character: perkin-warbeck
+    type: ally-of
+    description:
+      fr: "Margaret accueille Perkin Warbeck et le présente comme son propre neveu, miraculeusement échappé de la Tour de Londres."
+      en: "Margaret welcomes Perkin Warbeck and presents him as her own nephew, miraculously escaped from the Tower of London."
+
+  - source-character: john-de-la-pole
+    target-character: lambert-simnel
+    type: ally-of
+    description:
+      fr: "Lincoln se rallie à l'imposture de Lambert Simnel et débarque avec lui au pays de Galles à la tête d'une armée de mercenaires."
+      en: "Lincoln embraces Lambert Simnel's imposture and lands with him in Wales at the head of a mercenary army."
+  - source-character: lambert-simnel
+    target-character: henry-vii
+    type: rival-of
+    description:
+      fr: "Couronné à Dublin sous le nom d'Édouard VI, Simnel est présenté comme un rival au trône avant d'être défait à Stoke Field en 1487."
+      en: "Crowned in Dublin as 'Edward VI', Simnel is put forward as a rival to the throne before being defeated at Stoke Field in 1487."
