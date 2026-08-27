@@ -6,6 +6,8 @@ character-name: "Guillaume Apollinaire"
 external-link: "https://fr.wikipedia.org/wiki/Guillaume_Apollinaire"
 ---
 
-Poète né à Rome d'une mère polonaise, il s'installe à Paris et devient le principal théoricien et défenseur du cubisme, qu'il fait connaître par ses articles et son essai Les Peintres cubistes (1913), ainsi que l'ami proche de Picasso et de nombreux artistes de Montparnasse.
+Né Guglielmo Alberto Wladimiro Alessandro Apollinare de Kostrowitzky le 26 août 1880 à Rome, d'une mère issue de la noblesse polonaise et d'un père dont l'identité reste incertaine, il s'installe à Paris vers 1900, où il connaît d'abord des difficultés financières avant de s'imposer comme journaliste littéraire et critique d'art.
 
-Il invente lui-même le terme « surréalisme » peu avant sa mort. Engagé volontaire puis blessé à la tête en 1916, il épouse Jacqueline Kolb quelques mois avant de mourir de la grippe espagnole, deux jours avant l'armistice de 1918.
+Ami proche de Picasso dès 1907, il devient le principal théoricien et défenseur du cubisme, qu'il fait connaître par ses articles et son essai Les Peintres cubistes (1913), fréquentant de nombreux artistes de Montparnasse. Il invente lui-même le terme « surréalisme », employé dans une lettre à Paul Dermée puis dans le programme du ballet Parade en 1917, peu avant sa mort.
+
+Naturalisé français en mars 1916, il est engagé volontaire et blessé à la tempe par un éclat d'obus le 17 mars de cette même année, ce qui lui vaut une trépanation en mai suivie de longs mois de convalescence. Il épouse Jacqueline Kolb le 2 mai 1918 et meurt de la grippe espagnole le 9 novembre 1918, deux jours avant l'armistice, officiellement « mort pour la France ».
