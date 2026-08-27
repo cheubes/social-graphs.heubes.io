@@ -233,7 +233,7 @@ de code. Si ce n'est pas le cas, c'est qu'une étape précédente a codé en dur
 propres au premier univers : à corriger avant de continuer.
 ```
 
-## 12. CI de validation
+## 12. CI de validation ✅
 
 Workflow GitHub Actions exécutant `scripts/validate.rb` sur chaque push/PR, sans toucher au déploiement GitHub Pages natif. Voir "Validation des données" dans `technical-specifications.md`.
 
