@@ -12,7 +12,7 @@ metadata:
   cause-of-death: "Executed without trial at Miletus, on Mark Antony's orders"
 ---
 
-The younger son of Pompey the Great, Sextus Pompey carried on his father's and brother's fight against Caesar's heirs after their successive defeats, notably at Munda in 45 BC. Taking refuge in Sicily, he built a de facto state there, relying on a formidable fleet manned by Sicilian sailors and freed slaves.
+The younger son of Pompey the Great and his third wife Mucia Tertia, Sextus Pompey carried on his father's and brother's fight against Caesar's heirs after their successive defeats, notably at Munda in 45 BC. He added the surnames Magnus and Pius to his name, proclaiming his filial devotion and the legitimacy he claimed within the republican camp. Taking refuge in Sicily, he built a de facto state there, relying on a formidable fleet manned by Sicilian sailors and freed slaves.
 
 Master of Sicily, Sardinia and Corsica, he blockaded Rome's grain supply and forced the Second Triumvirate to come to terms with him: the Pact of Misenum, in 39 BC, temporarily recognised his control of these territories and granted him the title of prefect of the fleet. Hostilities nonetheless resumed before long.
 
