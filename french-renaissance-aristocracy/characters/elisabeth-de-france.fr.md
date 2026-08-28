@@ -9,8 +9,8 @@ metadata:
   title: "Reine consort d'Espagne"
 ---
 
-Fille aînée d'Henri II et de Catherine de Médicis, elle est d'abord promise au fils de Philippe II, l'infant Don Carlos, avant que les termes du traité du Cateau-Cambrésis ne soient revus pour qu'elle épouse le roi d'Espagne lui-même en 1559.
+Née le 2 avril 1546 à Fontainebleau, fille aînée d'Henri II et de Catherine de Médicis, elle grandit à la cour aux côtés de Marie Stuart et est d'abord promise au fils de Philippe II, l'infant Don Carlos, avant que les termes du traité du Cateau-Cambrésis de 1559 ne soient revus pour qu'elle épouse le roi d'Espagne lui-même ; le mariage par procuration a lieu le 22 juin 1559, mais elle ne rencontre Philippe II que le 31 janvier 1560, celui-ci plaisantant, dit-on, en la voyant le dévisager : « Vous regardez si j'ai des cheveux blancs ? »
 
-Devenue troisième épouse de Philippe II et reine consort d'Espagne, elle lui donne deux filles et passe pour l'épouse la plus aimée du roi.
+Mariée à treize ans, l'union n'est consommée qu'en mai 1561, à quinze ans. Devenue troisième épouse de Philippe II, reine consort d'Espagne, de Naples et de Sicile, duchesse de Bourgogne et de Milan entre autres titres, elle lui donne deux filles survivantes, Isabelle-Claire-Eugénie en 1566 et Catherine-Michelle en 1567, après avoir perdu des jumeaux en 1564, et passe pour l'épouse la plus aimée du roi.
 
-Elle meurt à Madrid en 1568, à vingt-trois ans, des suites d'une fausse couche.
+Elle meurt à Madrid le 3 octobre 1568, à vingt-deux ans, des suites d'une fausse couche, enceinte de six mois d'une fille. Sa fille aînée sera plus tard considérée comme prétendante au trône de France.

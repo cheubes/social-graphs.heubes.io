@@ -9,8 +9,8 @@ metadata:
   title: "Prince de Condé"
 ---
 
-Fils de Louis Ier de Condé, il devient prince de Condé à dix-sept ans après l'exécution de son père à la bataille de Jarnac en 1569, et reprend aussitôt la tête des armées protestantes aux côtés de Gaspard de Coligny.
+Né le 29 décembre 1552 à La Ferté-sous-Jouarre, fils de Louis Ier de Condé, il est élevé dans une famille calviniste et devient prince de Condé à dix-sept ans après l'exécution de son père à la bataille de Jarnac en 1569, reprenant aussitôt la tête des armées protestantes aux côtés de Gaspard de Coligny.
 
-Cousin et compagnon d'armes d'Henri de Navarre, il commande avec lui les troupes huguenotes à la victoire de Coutras en 1587.
+Convictions protestantes militantes qui le distinguent de son cousin Henri de Navarre, il combat au siège de La Rochelle en 1573 et devient gouverneur de Picardie. Cousin et compagnon d'armes d'Henri de Navarre, il commande avec lui les troupes huguenotes à la victoire de Coutras en 1587.
 
-Il meurt subitement l'année suivante à Saint-Jean-d'Angély, une mort entourée de soupçons d'empoisonnement qui visent un temps son épouse enceinte, laquelle donne naissance après sa mort à un fils, futur Henri II de Condé.
+Il meurt subitement le 5 mars 1588 à Saint-Jean-d'Angély, à trente-cinq ans, une mort entourée de soupçons d'empoisonnement, formulés notamment par des médecins et par Henri de Navarre lui-même, qui visent un temps sa seconde épouse Charlotte-Catherine de La Trémoïlle, arrêtée et interrogée avant d'être finalement acquittée en 1596. Celle-ci donne naissance après sa mort, en septembre 1588, à un fils, futur Henri II de Condé.

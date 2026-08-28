@@ -9,8 +9,8 @@ metadata:
   title: "Duchess of Valentinois"
 ---
 
-The widow of the Grand Seneschal of Normandy and twenty years Henry II's senior, she became his mentor and then his mistress while he was still an adolescent, retaining her hold over him even after his marriage to Catherine de' Medici.
+Born on 3 September 1499 in Dauphiné, the daughter of Jean de Poitiers and Jeanne de Batarnay, she married at fifteen, on 16 April 1515, Louis de Brézé, Grand Seneschal of Normandy nearly forty years her senior, by whom she had two daughters, Françoise and Louise; widowed in 1531, she skilfully managed her financial affairs and kept her husband's titles.
 
-Made Duchess of Valentinois in 1548, she wielded considerable influence over the kingdom's affairs for more than twenty years, controlling access to the king and even court appointments.
+She formed a relationship with the future Henry II around 1536, when he was seventeen and she thirty-six, becoming his mentor and then his mistress, retaining her hold over him even after his marriage to Catherine de' Medici; their bond deepened further after he came to the throne in 1547. Made Duchess of Valentinois in 1548, she wielded considerable influence over the kingdom's affairs for more than twenty years, controlling access to the king and even court appointments, showered with lavish gifts including the Château de Chenonceau.
 
-On Henry II's death in 1559, her long-time rival Catherine de' Medici promptly drove her from court and forced her to exchange the Château de Chenonceau for the less prestigious Château de Chaumont. She then withdrew to her château at Anet, where she died in 1566.
+Fatally wounded in a jousting tournament on 30 June 1559, Henry II died without being allowed to see her again; she tactfully withdrew from court, driven out by her long-time rival Catherine de' Medici, who forced her to exchange Chenonceau for the less prestigious Château de Chaumont. She then withdrew to her château at Anet, where she died on 26 April 1566, likely poisoned by the gold elixir she drank daily, analysis of her remains having revealed gold levels two hundred and fifty times the normal concentration.

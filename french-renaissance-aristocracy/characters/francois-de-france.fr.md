@@ -9,8 +9,8 @@ metadata:
   title: "Duc d'Anjou (auparavant duc d'Alençon)"
 ---
 
-Benjamin des enfants de Catherine de Médicis, le visage marqué par la petite vérole, il nourrit une rivalité durable avec son frère aîné Henri III.
+Né Hercule le 18 mars 1555 à Fontainebleau, benjamin des enfants d'Henri II et de Catherine de Médicis, il prend le prénom de François lors de sa confirmation en 1565. Le visage marqué à vie par une petite vérole contractée dans l'enfance, il nourrit une rivalité durable avec son frère aîné Henri III.
 
-Duc d'Alençon puis duc d'Anjou, il prend la tête de la faction des Malcontents contre le roi pendant les guerres de Religion, avant de courtiser pendant plusieurs années, sans succès, la reine Élisabeth Ire d'Angleterre.
+Duc d'Alençon puis duc d'Anjou, il devient après le massacre de la Saint-Barthélemy de 1572 le chef de la faction des Malcontents, foyer de l'opposition à la cour ; après une évasion spectaculaire du Louvre en 1575, il négocie des conditions favorables qui lui valent les duchés d'Anjou et de Touraine. Il courtise à partir de 1572 la reine Élisabeth Ire d'Angleterre, sans qu'un mariage n'aboutisse, les négociations échouant définitivement en 1582.
 
-Il intervient ensuite aux Pays-Bas contre l'Espagne, où il est brièvement proclamé duc de Brabant, avant de mourir de maladie à Château-Thierry en 1584. Sa mort, laissant Henri III sans héritier direct, ouvre la voie dynastique à Henri de Navarre et précipite la formation de la Ligue catholique.
+Devenu la même année protecteur des libertés des Pays-Bas contre l'Espagne, il est couronné duc de Brabant en février 1582, mais son gouvernement s'y révèle désastreux, jusqu'à une attaque manquée contre Anvers en janvier 1583. Il meurt le 10 juin 1584 à Château-Thierry, de tuberculose et de paludisme, à vingt-neuf ans. Sa mort, laissant Henri III sans héritier direct, ouvre la voie dynastique à Henri de Navarre et précipite la formation de la Ligue catholique.

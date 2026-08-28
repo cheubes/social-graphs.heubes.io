@@ -9,8 +9,8 @@ metadata:
   title: "Roi de France"
 ---
 
-Fils aîné de Catherine de Médicis et d'Henri II, il épouse en 1558 Marie Stuart, reine d'Écosse, avant de monter sur le trône de France l'année suivante à la mort accidentelle de son père.
+Né le 19 janvier 1544 au château de Fontainebleau, fils aîné de Catherine de Médicis et d'Henri II, de santé fragile depuis l'enfance, il reçoit néanmoins une éducation soignée confiée à plusieurs précepteurs. Fiancé dès quatre ans à Marie Stuart, reine d'Écosse, il l'épouse le 24 avril 1558 à la cathédrale Notre-Dame de Paris.
 
-De santé fragile depuis l'enfance, il ne gouverne pas lui-même : le pouvoir revient aux oncles de sa jeune épouse, François de Guise et le cardinal de Lorraine, dont l'autorité provoque la conjuration d'Amboise en mars 1560.
+Il monte sur le trône de France le 10 juillet 1559, à quinze ans, à la mort accidentelle de son père ; théoriquement majeur, il délègue rapidement le pouvoir aux oncles de sa jeune épouse, François de Guise et le cardinal de Lorraine, dont l'autorité provoque la conjuration d'Amboise en mars 1560, tentative avortée de renverser les Guise, tandis que des troubles protestants éclatent dans plusieurs provinces.
 
-Son règne, dominé par les Guise, dure moins de dix-huit mois et s'achève par sa mort prématurée d'une infection de l'oreille, laissant la couronne à son frère cadet Charles IX.
+Son règne, dominé par les Guise, dure moins de dix-huit mois et s'achève par sa mort prématurée le 5 décembre 1560, à seize ans, probablement d'une mastoïdite ou d'une otite, laissant la couronne à son frère cadet Charles IX.
