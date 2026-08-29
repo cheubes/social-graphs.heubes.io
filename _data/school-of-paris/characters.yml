@@ -33,7 +33,7 @@
 - slug: fernand-leger
   gender: masculine
   group: france
-  portrait-source: "https://commons.wikimedia.org/wiki/File:Fernand_léger,_autoritratto,_1906_(coll._maeght,_parigi).jpg"
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Fernand_Léger.jpg"
   metadata:
     birth: "1881"
     death: "1955"
@@ -41,7 +41,7 @@
 - slug: robert-delaunay
   gender: masculine
   group: france
-  portrait-source: "https://commons.wikimedia.org/wiki/File:Robert_Delaunay_portrait_photograph.jpg"
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Robert_Delaunay,_Autoportrait_1905-1906.jpg"
   metadata:
     birth: "1885"
     death: "1941"
@@ -49,7 +49,7 @@
 - slug: maurice-utrillo
   gender: masculine
   group: france
-  portrait-source: "https://commons.wikimedia.org/wiki/File:Maurice_Utrillo_en_1910_-_André_Utter.jpg"
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Maurice_Utrillo,_ca._1915-1920.jpg"
   metadata:
     birth: "1883"
     death: "1955"
@@ -73,7 +73,7 @@
 - slug: guillaume-apollinaire
   gender: masculine
   group: france
-  portrait-source: "https://commons.wikimedia.org/wiki/File:Guillaume_Apollinaire_foto.jpg"
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Guillaume_Apollinaire_-_Septembre_1911.jpg"
   metadata:
     birth: "1880"
     death: "1918"
@@ -97,7 +97,7 @@
 - slug: paul-guillaume
   gender: masculine
   group: france
-  portrait-source: "https://commons.wikimedia.org/wiki/File:André_derain,_ritratto_di_paul_guillaume,_1919.jpg"
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Modigliani,_Amedeo_-_Paul_Guillaume._Nova_Pilota.jpg"
   metadata:
     birth: "1891"
     death: "1934"
@@ -129,7 +129,7 @@
 - slug: bella-chagall
   gender: feminine
   group: russian-empire
-  portrait-source: "https://commons.wikimedia.org/wiki/File:Bella_Chagall_by_Hugo_Erfurth_1923_(cropped).jpg"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Chagall_Bella.jpg"
   metadata:
     birth: "1889"
     death: "1944"
@@ -209,7 +209,7 @@
 - slug: leopold-zborowski
   gender: masculine
   group: poland
-  portrait-source: "https://commons.wikimedia.org/wiki/File:Amedeo-modigliani-leopold-zborowski-rue-joseph-bara-3-paris-soutine-door.jpg"
+  portrait-source: "https://commons.wikimedia.org/wiki/File:André_Derain_Portrait_du_marchand_Léopold_Zborowski_ca_1923_1924.jpg"
   metadata:
     birth: "1889"
     death: "1932"
@@ -225,7 +225,7 @@
 - slug: juan-gris
   gender: masculine
   group: spain
-  portrait-source: "https://commons.wikimedia.org/wiki/File:Juan_Gris,_portrait_photograph,_published_in_Les_Peintres_Cubistes,_1913.jpg"
+  portrait-source: "https://en.wikipedia.org/wiki/File:Juan_Gris,_1922,_photograph_by_Man_Ray,_Paris._Gelatin_silver_print.jpg"
   metadata:
     birth: "1887"
     death: "1927"
@@ -273,7 +273,7 @@
 - slug: gertrude-stein
   gender: feminine
   group: united-states
-  portrait-source: "https://commons.wikimedia.org/wiki/File:Gertrude_Stein_1934_(facecrop).jpg"
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Félix_Valloton,_Portrait_of_Gertrude_Stein_1907.jpg"
   metadata:
     birth: "1874"
     death: "1946"
@@ -313,6 +313,7 @@
 - slug: serge-poliakoff
   gender: masculine
   group: russian-empire
+  portrait-source: "ai-generated"
   metadata:
     birth: "1900"
     death: "1969"
@@ -320,6 +321,7 @@
 - slug: berthe-weill
   gender: feminine
   group: france
+  portrait-source: "ai-generated"
   metadata:
     birth: "1865"
     death: "1951"
@@ -327,7 +329,7 @@
 - slug: albert-barnes
   gender: masculine
   group: united-states
-  portrait-source: "https://commons.wikimedia.org/wiki/File:Portrait_of_Albert_C._Barnes_LCCN2004662569.jpg"
+  portrait-source: "https://commons.wikimedia.org/wiki/File:Albert_C._Barnes.jpg"
   metadata:
     birth: "1872"
     death: "1951"
