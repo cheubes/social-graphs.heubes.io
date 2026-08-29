@@ -3,7 +3,7 @@ layout: character
 permalink: /fr/school-of-paris/characters/albert-barnes/
 lang: fr
 character-name: "Albert C. Barnes"
-external-link: "https://fr.wikipedia.org/wiki/Albert_C._Barnes"
+external-link: "https://en.wikipedia.org/wiki/Albert_C._Barnes"
 ---
 
 Né le 2 janvier 1872, médecin et chimiste américain, il s'associe en 1899 au chimiste allemand Hermann Hille pour mettre au point l'Argyrol, un antiseptique à base de nitrate d'argent utilisé notamment pour prévenir la cécité des nouveau-nés ; la société qu'ils fondent ensemble en 1902 lui apporte une fortune considérable, la firme étant revendue en 1929.
