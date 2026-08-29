@@ -8,7 +8,7 @@ metadata:
   manner-of-death: "Seppuku lors de l'incendie du Honno-ji"
 ---
 
-Fils d'un daimyo mineur de la province d'Owari, Oda Nobunaga hérite d'un domaine fragile et se fait d'abord une réputation d'excentrique avant d'écraser ses rivaux internes puis, en 1560, l'armée bien supérieure d'Imagawa Yoshimoto à la bataille d'Okehazama, victoire surprise qui le lance sur la scène nationale.
+Né Kipposhi le 23 juin 1534, sans doute au château de Shobata dans la province d'Owari, fils du daimyo mineur Oda Nobuhide, mort inopinément en 1551, Oda Nobunaga passe une adolescence peu conventionnelle pour un héritier, adonnée à la chasse, l'équitation, le tir à l'arc et le maniement de l'arquebuse, et épouse vers 1548-1549 Nohime, fille de Saito Dosan, dans le cadre d'une alliance politique. Il hérite d'un domaine fragile et se fait d'abord une réputation d'excentrique avant d'écraser ses rivaux internes, y compris son propre frère Nobuyuki, assassiné en 1557, puis, en 1560, l'armée bien supérieure d'Imagawa Yoshimoto à la bataille d'Okehazama, victoire surprise qui le lance sur la scène nationale.
 
 Il installe le shogun Ashikaga Yoshiaki à Kyoto en 1568, avant de rompre avec lui lorsque celui-ci tente de fédérer une coalition contre lui ; l'expulsion de Yoshiaki en 1573 met fin de facto au shogunat Ashikaga. Nobunaga écrase ensuite les clans Azai et Asakura, puis inflige aux Takeda une défaite décisive à Nagashino en 1575 grâce à l'usage massif de l'arquebuse, tout en réprimant sans merci les ligues bouddhistes Ikko-ikki qui s'opposaient à lui.
 
