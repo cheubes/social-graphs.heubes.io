@@ -501,6 +501,32 @@ small {
   border-color: var(--sg-light-grey);
 }
 
+.sg-sort-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.sg-sort-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid var(--sg-grey);
+  color: var(--sg-dark-grey);
+  background-color: var(--sg-white);
+}
+
+.sg-sort-btn:hover,
+.sg-sort-btn:focus {
+  border-color: var(--sg-gold);
+  color: var(--sg-blue);
+}
+
+.sg-sort-btn-active {
+  border-color: var(--sg-gold);
+  color: var(--sg-blue);
+}
+
 .sg-filter-label {
   cursor: pointer;
 }

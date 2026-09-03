@@ -34,6 +34,22 @@
       <input type="search" class="form-control sg-search-input" id="sg-search-input"
         placeholder="{{ ui['search-placeholder'] }}" autocomplete="off">
     </div>
+
+    {% if include.show_sort %}
+      <div class="sg-sort-controls" role="group" aria-label="{{ ui['sort-criterion-label'] }}"
+        data-asc-label="{{ ui['sort-direction-asc'] }}" data-desc-label="{{ ui['sort-direction-desc'] }}">
+        <button type="button" class="btn sg-sort-btn" data-criterion="relation-count"
+          data-label="{{ ui['sort-criterion-relation-count'] }}" aria-pressed="true">
+          <i class="fa-solid fa-sort-down" aria-hidden="true"></i>
+          {{ ui["sort-criterion-relation-count"] }}
+        </button>
+        <button type="button" class="btn sg-sort-btn" data-criterion="character-name"
+          data-label="{{ ui['sort-criterion-character-name'] }}" aria-pressed="false">
+          <i class="fa-solid fa-sort" aria-hidden="true"></i>
+          {{ ui["sort-criterion-character-name"] }}
+        </button>
+      </div>
+    {% endif %}
   </div>
 
   {% if group_filter_count > 0 %}

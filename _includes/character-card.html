@@ -3,7 +3,8 @@
 {% assign portrait_src = "/" | append: universe_slug | append: "/characters/" | append: character_slug | append: ".jpg" | relative_url %}
 {% assign character_group = groups | where: "slug", char_data["group"] | first %}
 <a href="{{ character.url | relative_url }}" class="sg-card-link sg-character-link text-decoration-none"
-  data-character-name="{{ character["character-name"] }}" data-group="{{ char_data["group"] }}">
+  data-character-name="{{ character["character-name"] }}" data-group="{{ char_data["group"] }}"
+  data-relation-count="{{ include.relation_count }}">
   <div class="card sg-card sg-character-card h-100">
     <div class="sg-character-portrait-wrap">
       <img src="{{ portrait_src }}"
