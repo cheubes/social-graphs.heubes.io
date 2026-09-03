@@ -10,6 +10,7 @@ Cette vue partage l'en-tête (dont le switcher "Vue Mosaïque" / "Vue Graphe", v
 
 - Graphe interactif :
   - Un nœud par personnage disponible dans la langue courante (même règle de masquage que pour les univers non traduits, voir "Multilingue" dans `functional-specifications.md`), affichant son portrait et son `character-name`, ainsi qu'une bordure de la couleur de son groupe d'appartenance si renseigné (voir "Groupe" dans `data-model.md`), blanche sinon, et le logo de ce groupe, si renseigné, en bas à droite du nœud.
+  - Taille du nœud proportionnelle au nombre de connexions du personnage (nombre d'arêtes qui lui sont incidentes, chaque relation comptant pour une arête même entre deux mêmes personnages, voir ci-dessous), pour faire ressortir les personnages principaux de l'univers ; répartition et valeurs précises dans "Nœud du graphe" de `style-guide.md`. Ce nombre de connexions est calculé une seule fois sur le graphe complet de l'univers et reste stable quels que soient la recherche ou les filtres actifs : seule la visibilité des nœuds change avec eux (voir ci-dessous), jamais leur taille.
   - Une arête par relation entre deux personnages affichés. Quand deux personnages sont liés par plusieurs relations de types différents, chacune est une arête distincte.
   - Une arête d'un type dirigé est représentée avec un sens visuel (ex : flèche) ; une arête d'un type non dirigé n'en a pas.
   - Chaque type de relation a une couleur distincte, définie dans `style-guide.md` (ce n'est pas un attribut de données, voir `data-model.md`).

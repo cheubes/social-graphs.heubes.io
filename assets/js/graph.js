@@ -11,15 +11,21 @@ document.addEventListener("DOMContentLoaded", () => {
     (edge) => nodeById.has(edge.source) && nodeById.has(edge.target)
   );
 
-  const NODE_RADIUS = 24;
-  const GROUP_LOGO_RADIUS = 9;
-  const GROUP_LOGO_OFFSET = NODE_RADIUS * 0.62;
+  // Node radius scales with the character's number of connections (see graph-view.md,
+  // style-guide.md "Nœud du graphe"): five quintile buckets over the degree distribution
+  // of the universe's full graph, stable regardless of active filters/search.
+  const NODE_RADIUS_SCALE = [16, 20, 24, 30, 38];
+  const DEFAULT_NODE_RADIUS = 24;
+  const MIN_CHARACTERS_FOR_SIZE_SCALE = 15;
+  const GROUP_LOGO_RADIUS_RATIO = 9 / 24;
+  const GROUP_LOGO_OFFSET_RATIO = 0.62;
   const CURVE_SPACING = 24;
   const MIN_ZOOM = 0.2;
   const MAX_ZOOM = 4;
   const FIT_MAX_ZOOM = 1.5;
   const ZOOM_STEP = 1.3;
 
+  computeNodeRadii(nodesData, edgesData);
   computeParallelEdgeOffsets(edgesData);
 
   if (edgesData.length === 0) {
@@ -80,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .force("link", d3.forceLink(edgesData).id((d) => d.slug).distance(120))
     .force("charge", d3.forceManyBody().strength(-300))
     .force("center", d3.forceCenter(width / 2, height / 2))
-    .force("collide", d3.forceCollide(NODE_RADIUS + 16))
+    .force("collide", d3.forceCollide((d) => d.radius + 16))
     // forceCenter only re-centers the average position of all nodes; it does not pull a
     // disconnected component (a character with no relation to the rest) back toward the
     // others, so charge repulsion alone pushes it away indefinitely. These add a gentle,
@@ -143,20 +149,20 @@ document.addEventListener("DOMContentLoaded", () => {
     .append("clipPath")
     .attr("id", (d) => "sg-graph-clip-" + d.slug)
     .append("circle")
-    .attr("r", NODE_RADIUS);
+    .attr("r", (d) => d.radius);
 
   node
     .append("circle")
     .attr("class", "sg-graph-node-ring")
-    .attr("r", NODE_RADIUS);
+    .attr("r", (d) => d.radius);
 
   node
     .append("image")
     .attr("class", "sg-graph-node-portrait")
-    .attr("x", -NODE_RADIUS)
-    .attr("y", -NODE_RADIUS)
-    .attr("width", NODE_RADIUS * 2)
-    .attr("height", NODE_RADIUS * 2)
+    .attr("x", (d) => -d.radius)
+    .attr("y", (d) => -d.radius)
+    .attr("width", (d) => d.radius * 2)
+    .attr("height", (d) => d.radius * 2)
     .attr("preserveAspectRatio", "xMidYMid slice")
     .attr("clip-path", (d) => `url(#sg-graph-clip-${d.slug})`)
     .attr("href", (d) => d.portrait)
@@ -171,7 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
   node
     .append("circle")
     .attr("class", "sg-graph-node-border")
-    .attr("r", NODE_RADIUS);
+    .attr("r", (d) => d.radius);
 
   // Group logo badge, bottom-right of the node (see "Groupe" in data-model.md and
   // graph-view.md): only for nodes whose character belongs to a group. Overlaid
@@ -181,10 +187,10 @@ document.addEventListener("DOMContentLoaded", () => {
   groupNode
     .append("image")
     .attr("class", "sg-graph-node-group-logo")
-    .attr("x", GROUP_LOGO_OFFSET - GROUP_LOGO_RADIUS)
-    .attr("y", GROUP_LOGO_OFFSET - GROUP_LOGO_RADIUS)
-    .attr("width", GROUP_LOGO_RADIUS * 2)
-    .attr("height", GROUP_LOGO_RADIUS * 2)
+    .attr("x", (d) => d.groupLogoOffset - d.groupLogoRadius)
+    .attr("y", (d) => d.groupLogoOffset - d.groupLogoRadius)
+    .attr("width", (d) => d.groupLogoRadius * 2)
+    .attr("height", (d) => d.groupLogoRadius * 2)
     .attr("preserveAspectRatio", "xMidYMid meet")
     .attr("href", (d) => d.groupLogo);
 
@@ -219,7 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
   simulation.on("tick", draw);
 
   function fitToView() {
-    const padding = NODE_RADIUS + 20;
+    const padding = d3.max(nodesData, (d) => d.radius) + 20;
     const [minX, maxX] = d3.extent(nodesData, (d) => d.x);
     const [minY, maxY] = d3.extent(nodesData, (d) => d.y);
     const graphWidth = maxX - minX + padding * 2;
@@ -248,6 +254,31 @@ document.addEventListener("DOMContentLoaded", () => {
     hideTooltip();
   });
 
+  function computeNodeRadii(nodes, edges) {
+    const degreeBySlug = new Map(nodes.map((n) => [n.slug, 0]));
+    edges.forEach((edge) => {
+      degreeBySlug.set(edge.source, (degreeBySlug.get(edge.source) || 0) + 1);
+      degreeBySlug.set(edge.target, (degreeBySlug.get(edge.target) || 0) + 1);
+    });
+
+    // Quantile thresholds are computed over distinct degree values, not one entry per
+    // character: these universes' degree distributions are heavily tied (most characters
+    // sit at the same low degree, see graph-view.md/style-guide.md), so thresholds derived
+    // from the raw per-character list collide on repeated values and leave buckets empty.
+    const distinctDegrees = [...new Set(nodes.map((n) => degreeBySlug.get(n.slug)))];
+    const radiusScale =
+      nodes.length >= MIN_CHARACTERS_FOR_SIZE_SCALE
+        ? d3.scaleQuantile().domain(distinctDegrees).range(NODE_RADIUS_SCALE)
+        : () => DEFAULT_NODE_RADIUS;
+
+    nodes.forEach((n) => {
+      n.degree = degreeBySlug.get(n.slug) || 0;
+      n.radius = radiusScale(n.degree);
+      n.groupLogoRadius = n.radius * GROUP_LOGO_RADIUS_RATIO;
+      n.groupLogoOffset = n.radius * GROUP_LOGO_OFFSET_RATIO;
+    });
+  }
+
   function computeParallelEdgeOffsets(edges) {
     const pairGroups = new Map();
     edges.forEach((edge) => {
@@ -270,7 +301,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const dx = target.x - source.x;
     const dy = target.y - source.y;
     const distance = Math.sqrt(dx * dx + dy * dy) || 1;
-    const offset = NODE_RADIUS + 2;
+    const offset = target.radius + 2;
     return {
       x: target.x - (dx / distance) * offset,
       y: target.y - (dy / distance) * offset,

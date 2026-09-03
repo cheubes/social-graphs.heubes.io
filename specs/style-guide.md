@@ -109,6 +109,21 @@ Pas de grille ni d'échelle d'espacement custom : la grille et les classes utili
 - Tuile univers (accueil, voir `home.md`) uniquement : hauteur fixe, identique pour toutes les tuiles (couverture proportionnée à son ratio fixe, voir "Images", suivie d'une zone de texte à hauteur fixe pour le `title` et la `description`). Le `title` reste fixe en haut de cette zone ; en dessous, seule la `description` (avec la mention de crédit de la couverture, voir ci-dessous) défile si son contenu dépasse la hauteur disponible. La couverture au-dessus reste elle aussi fixe, hors du défilement. Mention de crédit de la couverture (`cover-source`, si renseigné, voir `data-model.md`) : texte secondaire italique en fin de contenu de cette zone, aligné à droite (même traitement que la mention de source du portrait de la fiche personnage, voir "Modale" ci-dessous) ; si c'est une URL, un lien suit la règle des liens de la modale ; si c'est la valeur spéciale `ai-generated`, texte simple sans lien.
 - Tuile personnage (voir `universe-home.md`) uniquement : hauteur fixe, identique pour toutes les tuiles (portrait proportionné à son ratio fixe, voir "Images", suivi d'une zone de texte à hauteur fixe pour le `character-name` et la `description`). Contrairement à la tuile univers ci-dessus, cette zone n'est pas défilable : la `description` y est tronquée dès que son contenu dépasse la hauteur disponible, à une limite de mot (jamais au milieu d'un mot), la marque de troncature ("...") étant précédée d'une espace insécable. Bordure de 10px entre le portrait et le corps de la tuile (nom, description), de la couleur du groupe d'appartenance du personnage si renseigné (voir "Groupe" dans `data-model.md`), blanche sinon ; logo de ce groupe, si renseigné, affiché dans le coin en bas à droite de la tuile.
 
+### Nœud du graphe
+
+- Taille proportionnelle au nombre de connexions du personnage (voir `graph-view.md`), pour faire ressortir les personnages principaux de l'univers : cinq paliers (quintiles), calculés sur la distribution du nombre de connexions de l'ensemble des personnages affichés, aux 20e, 40e, 60e et 80e percentiles.
+
+| Palier | Percentile | Rayon |
+|---|---|---|
+| 1 | 0-20 | 16px |
+| 2 | 20-40 | 20px |
+| 3 | 40-60 | 24px |
+| 4 | 60-80 | 30px |
+| 5 | 80-100 | 38px |
+
+- Sous 15 personnages affichés, l'échantillon est trop réduit pour des percentiles fiables (paliers vides ou seuils confondus) : tous les nœuds partagent alors un rayon fixe de 24px.
+- Le logo de groupe (voir "Couleur de groupe" ci-dessus et "Groupe" dans `data-model.md`), affiché en bas à droite du nœud, garde ses proportions actuelles par rapport au nœud (rayon et décalage du centre) quel que soit le palier.
+
 ### Modale (fiche personnage)
 
 - Modale Bootstrap standard. Fond `--sg-white`, `character-name` en titre `--sg-dark-grey`, corps `--sg-grey` justifié, libellés de relation `--sg-blue`.
