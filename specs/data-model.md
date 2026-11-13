@@ -1,175 +1,175 @@
-# Modèle de données
+# Data model
 
-## Entités
+## Entities
 
-### Univers
+### Universe
 
-Un univers regroupe un ensemble de personnages et les relations qui les lient. Il correspond à une URL dédiée du site (`/univers-x/`).
+A universe groups a set of characters and the relations that link them. It maps to a dedicated URL on the site (`/universe-x/`).
 
-| Attribut | Localisé | Description |
+| Attribute | Localized | Description |
 |---|---|---|
-| `slug` | Non | Identifiant unique, construit à partir du nom anglais, utilisé dans l'URL (ex : `renaissance-artists`) |
-| `lang` | Non | Langue de ce document (`fr` ou `en`) ; permet d'associer les deux documents d'un même univers |
-| `title` | Oui | Nom affiché de l'univers |
-| `description` | Oui | Texte de présentation, affiché sur la tuile d'accueil (voir `home.md`) ; non affiché sur les pages de l'univers lui-même (voir `universe-home.md`) |
-| `source-type` | Non | slug référençant un type de source (voir "Type de source" ci-dessous), utilisé pour regrouper les univers sur l'accueil du site (voir `home.md`). Ne varie pas d'une langue à l'autre : comme `gender`, `group` et `portrait-source` pour un personnage, il n'est pas porté par le frontmatter de `mosaic.fr.md`/`mosaic.en.md` mais par `_data/<slug-universe>/universe.yml` (voir "Organisation des fichiers") |
-| `cover-source` | Non | Soit une URL optionnelle vers la source de l'image de couverture (ex : page Wikipédia de l'image), soit la valeur spéciale `ai-generated` quand la couverture est générée par IA faute de source réelle à créditer ; affichée en crédit sur la tuile d'accueil (voir `home.md`). Distincte de `source-type` malgré la proximité de nom : l'une est la catégorie de l'univers, l'autre la source de son image. Comme `source-type`, ne varie pas d'une langue à l'autre : portée par `_data/<slug-universe>/universe.yml`, pas par le frontmatter. Distincte aussi d'`image-credits.yml` (voir "Images" et "Organisation des fichiers"), qui porte le détail structuré du crédit plutôt qu'un simple lien vers la source |
-| `characters` | — | Liste des personnages de l'univers |
-| `relations` | — | Liste des relations entre ces personnages |
-| `additional-relation-types` | — | Extensions locales à la taxonomie commune (voir "Type de relation") |
-| `groups` | — | Liste des groupes de personnages de l'univers, facultatif (voir "Groupe") |
+| `slug` | No | Unique identifier, built from the English name, used in the URL (e.g. `renaissance-artists`) |
+| `lang` | No | Language of this document (`fr` or `en`); used to pair the two documents of the same universe |
+| `title` | Yes | Displayed name of the universe |
+| `description` | Yes | Introduction text, displayed on the home card (see `home.md`); not displayed on the universe's own pages (see `universe-home.md`) |
+| `source-type` | No | slug referencing a source type (see "Source type" below), used to group universes on the site home (see `home.md`). Does not vary from one language to another: like `gender`, `group` and `portrait-source` for a character, it is not carried by the frontmatter of `mosaic.fr.md`/`mosaic.en.md` but by `_data/<slug-universe>/universe.yml` (see "File organization") |
+| `cover-source` | No | Either an optional URL to the source of the cover image (e.g. the image's Wikipedia page), or the special value `ai-generated` when the cover is AI-generated for lack of a real source to credit; displayed as a credit on the home card (see `home.md`). Distinct from `source-type` despite the similar name: one is the universe's category, the other the source of its image. Like `source-type`, does not vary from one language to another: carried by `_data/<slug-universe>/universe.yml`, not by the frontmatter. Also distinct from `image-credits.yml` (see "Images" and "File organization"), which carries the structured credit details rather than a simple link to the source |
+| `characters` | - | List of the universe's characters |
+| `relations` | - | List of the relations between these characters |
+| `additional-relation-types` | - | Local extensions to the common taxonomy (see "Relation type") |
+| `groups` | - | List of the universe's character groups, optional (see "Group") |
 
-L'image de couverture n'est pas un attribut : elle est associée à l'univers par convention de nommage (voir "Images"). Sa source, si renseignée, est portée par l'attribut `cover-source`.
+The cover image is not an attribute: it is associated with the universe by naming convention (see "Images"). Its source, if provided, is carried by the `cover-source` attribute.
 
-### Type de source
+### Source type
 
-Catégorie indicative d'un univers (histoire, histoire de l'art, fiction, autre), utilisée pour regrouper les univers sur l'accueil du site (voir `home.md`). Contrairement au Groupe, un socle commun est partagé par tous les univers, sans extension locale : le nombre de catégories reste volontairement restreint.
+Indicative category of a universe (history, art history, fiction, other), used to group universes on the site home (see `home.md`). Unlike the Group, a common base is shared by all universes, with no local extension: the number of categories is deliberately kept small.
 
-| Attribut | Localisé | Description |
+| Attribute | Localized | Description |
 |---|---|---|
-| `slug` | Non | Identifiant stable, référencé depuis l'attribut `source-type` d'un univers |
-| `label` | Oui | Libellé affiché, notamment en titre de section sur l'accueil du site (voir `home.md`) |
+| `slug` | No | Stable identifier, referenced from a universe's `source-type` attribute |
+| `label` | Yes | Displayed label, notably as a section title on the site home (see `home.md`) |
 
-Porté par `_data/source-types.yml` (voir "Organisation des fichiers"). L'ordre de déclaration dans ce fichier détermine l'ordre des sections sur l'accueil du site (voir `home.md`), pas un tri alphabétique.
+Carried by `_data/source-types.yml` (see "File organization"). The declaration order in this file determines the order of the sections on the site home (see `home.md`), not an alphabetical sort.
 
-### Personnage
+### Character
 
-| Attribut | Localisé | Description |
+| Attribute | Localized | Description |
 |---|---|---|
-| `slug` | Non | Identifiant unique au sein de l'univers, construit à partir du nom anglais, utilisé dans l'URL de la fiche personnage (peut être réutilisé d'un univers à l'autre) |
-| `lang` | Non | Langue de ce document (`fr` ou `en`) ; permet d'associer les deux documents d'un même personnage |
-| `character-name` | Oui | Nom affiché. Nommé `character-name` plutôt que `name` : ce dernier est un attribut réservé de la classe `Page` de Jekyll (au même titre que `content`, `dir`, `excerpt`, `path`, `url`), toujours réécrit par Jekyll avant l'accès en template, ce qui rend un attribut de front matter du même nom illisible depuis Liquid (vérifié empiriquement) |
-| `gender` | Non | Genre grammatical du personnage : `masculine` ou `feminine`. Utilisé pour accorder les libellés de relation à l'affichage (voir "Type de relation"). Optionnel : en son absence, les libellés retombent sur leur forme `masculine`. Porté par `_data/<slug-universe>/characters.yml`, pas par le front matter (voir "Organisation des fichiers") |
-| `group` | Non | slug optionnel du groupe d'appartenance du personnage au sein de l'univers (voir "Groupe" ci-dessous) ; facultatif, un personnage n'appartient qu'à un seul groupe au plus. Porté par `_data/<slug-universe>/characters.yml` |
-| `description` | Oui | Texte biographique affiché sur la fiche personnage, structuré en plusieurs paragraphes (contexte et origines, parcours et rôle dans l'univers, postérité ou fin de vie) plutôt qu'un simple résumé d'une ou deux phrases ; sur la tuile de la Vue Mosaïque, où l'espace est limité, il est tronqué à une limite de mot (voir "Tuiles" dans `style-guide.md`) |
-| `metadata` | Selon le champ | Champs libres optionnels selon l'univers (ex : dates de naissance/mort pour un personnage historique). Chaque clé utilisée doit être déclarée dans la taxonomie des clés de metadata (voir "Clé de metadata"), qui porte son libellé affiché et indique si la clé est localisée. La valeur d'une clé non localisée (le cas par défaut) est portée par `_data/<slug-universe>/characters.yml` ; celle d'une clé explicitement localisée reste dans le front matter du personnage |
-| `external-link` | Oui | URL optionnelle, peut différer par langue (ex : page Wikipédia FR ou EN) |
-| `portrait-source` | Non | Soit une URL optionnelle vers la source du portrait (ex : page Wikipédia de l'image), soit la valeur spéciale `ai-generated` quand le portrait est généré par IA faute de source réelle à créditer (voir "Légende de portrait" dans `style-guide.md`). Le portrait étant un fichier unique partagé par toutes les langues (voir "Images"), sa source ne varie pas non plus : valeur unique, portée par `_data/<slug-universe>/characters.yml`. Distinct d'`external-link` : la source du portrait n'est pas nécessairement la même page que le lien externe du personnage. Distinct aussi d'`image-credits.yml` (voir "Images" et "Organisation des fichiers"), qui porte le détail structuré du crédit plutôt qu'un simple lien vers la source |
+| `slug` | No | Unique identifier within the universe, built from the English name, used in the character sheet URL (can be reused from one universe to another) |
+| `lang` | No | Language of this document (`fr` or `en`); used to pair the two documents of the same character |
+| `character-name` | Yes | Displayed name. Named `character-name` rather than `name`: the latter is a reserved attribute of Jekyll's `Page` class (like `content`, `dir`, `excerpt`, `path`, `url`), always rewritten by Jekyll before template access, which makes a front matter attribute of the same name unreadable from Liquid (verified empirically) |
+| `gender` | No | Grammatical gender of the character: `masculine` or `feminine`. Used to agree relation labels at display time (see "Relation type"). Optional: when absent, labels fall back to their `masculine` form. Carried by `_data/<slug-universe>/characters.yml`, not by the front matter (see "File organization") |
+| `group` | No | Optional slug of the group the character belongs to within the universe (see "Group" below); optional, a character belongs to at most one group. Carried by `_data/<slug-universe>/characters.yml` |
+| `description` | Yes | Biographical text displayed on the character sheet, structured in several paragraphs (background and origins, path and role in the universe, legacy or end of life) rather than a simple one- or two-sentence summary; on the Mosaic view card, where space is limited, it is truncated at a word boundary (see "Cards" in `style-guide.md`) |
+| `metadata` | Depends on the field | Optional free fields depending on the universe (e.g. birth/death dates for a historical character). Each key used must be declared in the metadata key taxonomy (see "Metadata key"), which carries its displayed label and states whether the key is localized. The value of a non-localized key (the default case) is carried by `_data/<slug-universe>/characters.yml`; the value of an explicitly localized key stays in the character's front matter |
+| `external-link` | Yes | Optional URL, can differ by language (e.g. French or English Wikipedia page) |
+| `portrait-source` | No | Either an optional URL to the source of the portrait (e.g. the image's Wikipedia page), or the special value `ai-generated` when the portrait is AI-generated for lack of a real source to credit (see "Modal (character sheet)" in `style-guide.md`). Since the portrait is a single file shared by all languages (see "Images"), its source does not vary either: single value, carried by `_data/<slug-universe>/characters.yml`. Distinct from `external-link`: the portrait's source is not necessarily the same page as the character's external link. Also distinct from `image-credits.yml` (see "Images" and "File organization"), which carries the structured credit details rather than a simple link to the source |
 
-Le portrait (l'image) n'est pas un attribut : il est associé au personnage par convention de nommage (voir "Images"). Sa source, si renseignée, est portée par l'attribut `portrait-source`.
+The portrait (the image) is not an attribute: it is associated with the character by naming convention (see "Images"). Its source, if provided, is carried by the `portrait-source` attribute.
 
-Les attributs `gender`, `group`, `portrait-source` et les clés non localisées de `metadata` ne varient pas d'une langue à l'autre pour un même personnage : plutôt que d'être répétés à l'identique dans `.fr.md` et `.en.md`, ils sont portés une seule fois par `_data/<slug-universe>/characters.yml` (voir "Organisation des fichiers"). Le front matter d'un personnage ne porte donc que ses attributs réellement localisés (`character-name`, `external-link`) et, le cas échéant, ses clés de metadata explicitement localisées.
+The `gender`, `group`, `portrait-source` attributes and the non-localized `metadata` keys do not vary from one language to another for the same character: rather than being repeated identically in `.fr.md` and `.en.md`, they are carried once by `_data/<slug-universe>/characters.yml` (see "File organization"). A character's front matter therefore only carries its truly localized attributes (`character-name`, `external-link`) and, where applicable, its explicitly localized metadata keys.
 
-### Groupe
+### Group
 
-Un regroupement de personnages au sein d'un univers : faction, groupe politique, nationalité, espèce, etc. Contrairement aux types de relation ou aux clés de metadata, il n'existe pas de socle commun de groupes partagé entre univers : chaque univers déclare les siens, propres à son contexte.
+A grouping of characters within a universe: faction, political group, nationality, species, etc. Unlike relation types or metadata keys, there is no common base of groups shared between universes: each universe declares its own, specific to its context.
 
-| Attribut | Localisé | Description |
+| Attribute | Localized | Description |
 |---|---|---|
-| `slug` | Non | Identifiant stable du groupe, construit à partir de son nom anglais, référencé depuis l'attribut `group` d'un personnage ; unique au sein de l'univers |
-| `name` | Oui | Nom affiché du groupe |
-| `color` | Non | Couleur associée au groupe, valeur hexadécimale libre choisie à l'ajout du contenu ; comme les images, elle n'appartient pas à la charte graphique et n'est soumise à aucune palette imposée (voir "Couleur de groupe" dans `style-guide.md`) |
+| `slug` | No | Stable identifier of the group, built from its English name, referenced from a character's `group` attribute; unique within the universe |
+| `name` | Yes | Displayed name of the group |
+| `color` | No | Color associated with the group, free hexadecimal value chosen when adding the content; like images, it is not part of the style guide and is not subject to any imposed palette (see "Group color" in `style-guide.md`) |
 
-Le logo du groupe n'est pas un attribut : comme les autres images de contenu, il est associé au groupe par convention de nommage (voir "Images").
+The group logo is not an attribute: like other content images, it is associated with the group by naming convention (see "Images").
 
 ### Relation
 
-Un lien entre deux personnages d'un même univers.
+A link between two characters of the same universe.
 
-| Attribut | Localisé | Description |
+| Attribute | Localized | Description |
 |---|---|---|
-| `source-character` | Non | slug du personnage d'origine |
-| `target-character` | Non | slug du personnage lié |
-| `type` | Non | Référence au `slug` d'un type de relation (voir ci-dessous) |
-| `description` | Oui | Texte optionnel précisant le contexte du lien (ex : "se sont rencontrés lors du siège de ...") |
+| `source-character` | No | slug of the origin character |
+| `target-character` | No | slug of the linked character |
+| `type` | No | Reference to the `slug` of a relation type (see below) |
+| `description` | Yes | Optional text giving the context of the link (e.g. "met during the siege of ...") |
 
-Le caractère dirigé ou non de la relation n'est pas porté par la relation elle-même mais par son type.
+Whether the relation is directed or not is not carried by the relation itself but by its type.
 
-### Type de relation
+### Relation type
 
-| Attribut | Localisé | Description |
+| Attribute | Localized | Description |
 |---|---|---|
-| `slug` | Non | Identifiant stable du type de relation, construit à partir de son nom anglais, référencé depuis l'attribut `type` d'une relation |
-| `label` | Oui | Libellé affiché quand le personnage décrit est la source de la relation, décliné en trois formes par langue : `masculine` et `feminine`, accordées au genre du personnage (voir "Accord de genre" ci-dessous), et `neutral`, utilisée hors contexte de personnage |
-| `reverse-label` | Oui | Libellé affiché quand le personnage décrit est la cible de la relation, décliné en deux formes par langue, `masculine` et `feminine` ; renseigné uniquement si `directed` est vrai |
-| `directed` | Non | Indique si le lien est dirigé (source → cible) ou non dirigé (symétrique) |
+| `slug` | No | Stable identifier of the relation type, built from its English name, referenced from a relation's `type` attribute |
+| `label` | Yes | Label displayed when the described character is the source of the relation, declined in three forms per language: `masculine` and `feminine`, agreed with the character's gender (see "Gender agreement" below), and `neutral`, used outside of a character context |
+| `reverse-label` | Yes | Label displayed when the described character is the target of the relation, declined in two forms per language, `masculine` and `feminine`; provided only if `directed` is true |
+| `directed` | No | Whether the link is directed (source → target) or undirected (symmetric) |
 
-Une relation n'est saisie qu'une fois, dans un seul sens (voir `Relation`). Pour un type dirigé, le sens retour (ex : "Fille de" à partir de "Père de"/"Mère de") n'est pas une relation distincte : il est dérivé automatiquement du `reverse-label` du type au moment de l'affichage, quand le personnage décrit est la cible plutôt que la source. Pour un type non dirigé, le `label` est utilisé dans les deux sens et `reverse-label` n'est pas renseigné.
+A relation is entered only once, in a single direction (see `Relation`). For a directed type, the reverse direction (e.g. "Daughter of" from "Father of"/"Mother of") is not a separate relation: it is automatically derived from the type's `reverse-label` at display time, when the described character is the target rather than the source. For an undirected type, the `label` is used in both directions and `reverse-label` is not provided.
 
-**Accord de genre.** Le libellé affiché sur la fiche d'un personnage (`label` s'il est la source, `reverse-label` s'il est la cible, ou `label` pour un type non dirigé) est accordé au genre de ce personnage, celui dont on décrit la fiche, jamais à celui de l'autre personnage de la relation. Ainsi, à la fiche d'Henri III, la relation avec Catherine de Médicis affiche "Fils de" (accordé au genre d'Henri III, la cible) et non une forme accordée à Catherine. Si le personnage décrit n'a pas de `gender` renseigné, la forme `masculine` est utilisée par défaut. Dans un contexte qui n'est rattaché à aucun personnage particulier (légende de la Vue Graphe, filtres, voir `graph-view.md` et `search-filter.md`), c'est la forme `neutral` du `label` qui est utilisée. Cette forme neutre n'existe que pour `label` : `reverse-label` n'apparaît jamais hors contexte de personnage, et n'a donc pas besoin d'en définir une.
+**Gender agreement.** The label displayed on a character's sheet (`label` if they are the source, `reverse-label` if they are the target, or `label` for an undirected type) agrees with the gender of that character, the one whose sheet is being described, never with that of the other character in the relation. So, on Henri III's sheet, the relation with Catherine de' Medici displays "Son of" ("Fils de" in French; agreed with the gender of Henri III, the target) and not a form agreed with Catherine. If the described character has no `gender` provided, the `masculine` form is used by default. In a context not tied to any particular character (Graph view legend, filters, see `graph-view.md` and `search-filter.md`), the `neutral` form of the `label` is used. This neutral form only exists for `label`: `reverse-label` never appears outside of a character context, and therefore does not need to define one.
 
-Un socle de types communs est partagé par tous les univers ; un univers peut déclarer des types additionnels propres à son contexte.
+A base of common types is shared by all universes; a universe can declare additional types specific to its context.
 
-Exemples de types communs (liste à affiner, donnée ici à titre d'illustration) :
+Examples of common types (list to be refined, given here for illustration):
 
-| Slug | Label FR (masc. / fém. / neutre) | Label EN (masc. / fém. / neutre) | Sens inverse FR (masc. / fém.) | Sens inverse EN (masc. / fém.) | Dirigé | Exemple |
+| Slug | FR label (masc. / fem. / neutral) | EN label (masc. / fem. / neutral) | FR reverse (masc. / fem.) | EN reverse (masc. / fem.) | Directed | Example |
 |---|---|---|---|---|---|---|
-| `parent-of` | Père de / Mère de / Parent de | Father of / Mother of / Parent of | Fils de / Fille de | Son of / Daughter of | Oui | Catherine de Médicis → Henri III |
-| `married-to` | Marié à / Mariée à / Marié•e à | Married to | — | — | Non | Henri III ↔ Louise de Lorraine |
-| `friend-of` | Ami de / Amie de / Ami•e de | Friend of | — | — | Non | — |
-| `rival-of` | Rival de / Rivale de / Rival•e de | Rival of | — | — | Non | — |
-| `ally-of` | Allié de / Alliée de / Allié•e de | Ally of | — | — | Non | — |
+| `parent-of` | Père de / Mère de / Parent de | Father of / Mother of / Parent of | Fils de / Fille de | Son of / Daughter of | Yes | Catherine de' Medici → Henri III |
+| `married-to` | Marié à / Mariée à / Marié•e à | Married to | - | - | No | Henri III ↔ Louise of Lorraine |
+| `friend-of` | Ami de / Amie de / Ami•e de | Friend of | - | - | No | - |
+| `rival-of` | Rival de / Rivale de / Rival•e de | Rival of | - | - | No | - |
+| `ally-of` | Allié de / Alliée de / Allié•e de | Ally of | - | - | No | - |
 
-En anglais, les formes `masculine` et `feminine` sont le plus souvent identiques, et `neutral` reprend alors la même valeur ; elles sont néanmoins toutes répétées telles quelles dans le fichier de données (voir "Formats et conventions des fichiers de données" ci-dessous), la structure par langue étant systématique.
+In English, the `masculine` and `feminine` forms are most often identical, and `neutral` then takes the same value; they are nonetheless all repeated as is in the data file (see "Data file formats and conventions" below), the per-language structure being systematic.
 
-### Clé de metadata
+### Metadata key
 
-| Attribut | Localisé | Description |
+| Attribute | Localized | Description |
 |---|---|---|
-| `slug` | Non | Identifiant stable de la clé, référencé depuis les clés de l'attribut `metadata` d'un personnage |
-| `label` | Oui | Libellé affiché en regard de la valeur, sur la fiche personnage |
-| `localized` | Non | Indique si la valeur de cette clé, pour un personnage donné, peut différer d'une langue à l'autre. `false` par défaut (attribut omis) : la valeur est alors unique, portée par `_data/<slug-universe>/characters.yml` (voir "Organisation des fichiers"). À `true`, elle est portée par le front matter de chaque fichier de langue du personnage, comme ses autres attributs localisés |
+| `slug` | No | Stable identifier of the key, referenced from the keys of a character's `metadata` attribute |
+| `label` | Yes | Label displayed next to the value, on the character sheet |
+| `localized` | No | Whether the value of this key, for a given character, can differ from one language to another. `false` by default (attribute omitted): the value is then single, carried by `_data/<slug-universe>/characters.yml` (see "File organization"). When `true`, it is carried by the front matter of each of the character's language files, like its other localized attributes |
 
-Un socle de clés communes est partagé par tous les univers ; un univers peut déclarer des clés additionnelles propres à son contexte. Contrairement au `label` d'un type de relation, celui d'une clé de metadata n'est pas décliné par genre : ce sont des noms de champs (ex : "Naissance"), qui ne s'accordent pas au genre du personnage.
+A base of common keys is shared by all universes; a universe can declare additional keys specific to its context. Unlike a relation type's `label`, a metadata key's label is not declined by gender: these are field names (e.g. "Born"), which do not agree with the character's gender.
 
-Exemples de clés communes (liste à affiner, donnée ici à titre d'illustration) :
+Examples of common keys (list to be refined, given here for illustration):
 
 | Slug | Label (FR) | Label (EN) |
 |---|---|---|
 | `birth` | Naissance | Born |
 | `death` | Décès | Died |
 
-## Formats et conventions des fichiers de données
+## Data file formats and conventions
 
-### Conventions générales
+### General conventions
 
-- Les noms d'attributs (clés de frontmatter et de fichiers YAML) sont en anglais.
-- Les clés utilisent des tirets (`-`) plutôt que des underscores (`_`) : kebab-case.
-- Les fichiers YAML utilisent l'extension `.yml`.
-- Les slugs (identifiants d'univers, de personnage, de type de relation) sont construits à partir du nom anglais de l'entité.
-- Un slug est en minuscules ASCII, sans accents ni espaces, mots séparés par des tirets (ex : `renaissance-artists`, pas `Renaissance_Artists` ni `renaissance artists`).
-- Le site est multilingue (français et anglais pour commencer). Le `slug` d'une entité est partagé entre les langues : seule sa traduction varie, pas son URL.
+- Attribute names (frontmatter keys and YAML file keys) are in English.
+- Keys use hyphens (`-`) rather than underscores (`_`): kebab-case.
+- YAML files use the `.yml` extension.
+- Slugs (universe, character, relation type identifiers) are built from the entity's English name.
+- A slug is lowercase ASCII, with no accents or spaces, words separated by hyphens (e.g. `renaissance-artists`, not `Renaissance_Artists` or `renaissance artists`).
+- The site is multilingual (French and English to begin with). An entity's `slug` is shared between languages: only its translation varies, not its URL.
 
 ### Images
 
-Les images ne sont pas portées par des attributs : elles sont associées à leur entité par convention de nommage et d'emplacement, aux côtés des fichiers de contenu, plutôt que référencées dans un frontmatter.
+Images are not carried by attributes: they are associated with their entity by naming and location convention, alongside the content files, rather than referenced in a frontmatter.
 
-- Image de couverture d'un univers : `<slug-universe>/cover.jpg`.
-- Portrait d'un personnage : `<slug-universe>/characters/<slug-character>.jpg`.
-- Logo d'un groupe : `<slug-universe>/groups/<slug-group>.png`. Format PNG plutôt que `.jpg` comme les autres images de contenu, pour conserver la transparence : le logo est superposé à d'autres éléments (vignette, nœud du graphe, modale) plutôt qu'affiché seul (voir les écrans concernés et `style-guide.md`).
+- Cover image of a universe: `<slug-universe>/cover.jpg`.
+- Portrait of a character: `<slug-universe>/characters/<slug-character>.jpg`.
+- Logo of a group: `<slug-universe>/groups/<slug-group>.png`. PNG format rather than `.jpg` like the other content images, to preserve transparency: the logo is overlaid on other elements (thumbnail, graph node, modal) rather than displayed alone (see the relevant screens and `style-guide.md`).
 
-Un seul fichier image par entité, partagé par toutes ses langues (pas de déclinaison par locale). Format, dimensions et ratios recommandés : voir "Images" dans `style-guide.md`.
+A single image file per entity, shared by all its languages (no per-locale variant). Recommended format, dimensions and ratios: see "Images" in `style-guide.md`.
 
-Les couvertures et portraits (pas les logos de groupe) portent des métadonnées EXIF/XMP de crédit embarquées dans le fichier lui-même : `Title`, `Creator`/`By-line`, `CopyrightNotice`, `Rights`, `Credit`, `Source`, `WebStatement`, `UsageTerms`, `Marked`, `Description`/`Caption-Abstract`. Deux politiques de valeurs selon l'origine de l'image :
+Covers and portraits (not group logos) carry EXIF/XMP credit metadata embedded in the file itself: `Title`, `Creator`/`By-line`, `CopyrightNotice`, `Rights`, `Credit`, `Source`, `WebStatement`, `UsageTerms`, `Marked`, `Description`/`Caption-Abstract`. Two value policies depending on the origin of the image:
 
-- Générée par IA (`cover-source`/`portrait-source` valant `ai-generated`) : Creator/By-line/Credit = "Christophe Heubès", Rights = "Christophe Heubès - CC BY-NC-SA 4.0", UsageTerms = "CC BY-NC-SA 4.0", Marked = "True", Source = "AI generated".
-- Source externe réelle : Creator = l'auteur identifié (ou "Unknown"/"Unknown artist" s'il ne peut être établi avec certitude), Rights/UsageTerms reflètent la licence réellement constatée sur la page consultée (domaine public simple, ou licence CC avec Credit nommant le photographe quand la reproduction porte sa propre licence distincte de l'œuvre), Source/WebStatement = l'URL de la fiche précise consultée (Wikimedia Commons ou équivalent), pas nécessairement celle de `portrait-source`/`cover-source`.
+- AI-generated (`cover-source`/`portrait-source` set to `ai-generated`): Creator/By-line/Credit = "Christophe Heubès", CopyrightNotice = "CC0 Christophe Heubès", Rights = "Christophe Heubès - CC0 1.0", UsageTerms = "CC0 1.0", WebStatement = `https://creativecommons.org/publicdomain/zero/1.0/deed.fr`, Marked = "False" (public domain dedication), Source = "AI generated".
+- Real external source: Creator = the identified author (or "Unknown"/"Unknown artist" if it cannot be established with certainty), Rights/UsageTerms reflect the license actually found on the consulted page (plain public domain, or a CC license with Credit naming the photographer when the reproduction carries its own license distinct from the artwork), Source/WebStatement = the URL of the specific page consulted (Wikimedia Commons or equivalent), not necessarily that of `portrait-source`/`cover-source`.
 
-Ces métadonnées sont dupliquées dans `_data/<slug-universe>/image-credits.yml` (voir "Organisation des fichiers") à des fins de réutilisation en JSON-LD ; l'EXIF/XMP du fichier image reste la source de vérité, `image-credits.yml` en est un export.
+This metadata is duplicated in `_data/<slug-universe>/image-credits.yml` (see "File organization") for reuse in JSON-LD; the image file's EXIF/XMP remains the source of truth, `image-credits.yml` is an export of it.
 
-### Organisation des fichiers
+### File organization
 
-Le site est généré avec Jekyll (voir `technical-specifications.md`). Chaque univers a son propre dossier à la racine du site (`/<slug-universe>/`), qui regroupe l'ensemble de son contenu textuel et de ses images ; les données structurées (YAML) vivent à part, dans `_data/`.
+The site is generated with Jekyll (see `technical-specifications.md`). Each universe has its own folder at the site root (`/<slug-universe>/`), which groups all of its text content and images; structured data (YAML) lives separately, in `_data/`.
 
-- `/<slug-universe>/mosaic.fr.md`, `mosaic.en.md` : présentation de l'univers (Vue Mosaïque), un fichier par langue. Frontmatter : `lang`, `title`. Corps de texte : `description`.
-- `/<slug-universe>/graph.fr.md`, `graph.en.md` : Vue Graphe, un fichier par langue. Réutilise les données de présentation du `mosaic.*.md` du même dossier plutôt que de les dupliquer.
-- `/<slug-universe>/cover.jpg` : image de couverture (voir "Images").
-- `/<slug-universe>/groups/`, optionnel : un sous-dossier contenant le logo de chaque groupe déclaré par l'univers (`<slug-group>.png`, voir "Images").
-- `/<slug-universe>/characters/` : un sous-dossier contenant, pour chaque personnage, `<slug-character>.fr.md`, `<slug-character>.en.md` (frontmatter : `lang`, `character-name`, `external-link`, et les clés de `metadata` explicitement localisées le cas échéant ; corps de texte : `description`) et son portrait `<slug-character>.jpg` (voir "Images"). Le sous-dossier lui-même associe chaque personnage à son univers ; aucun attribut ne porte cette référence.
-- `_data/<slug-universe>/universe.yml` : les attributs non localisés propres à l'univers lui-même (`source-type`, `cover-source`), sur le même principe que `characters.yml` pour les attributs non localisés d'un personnage.
-- `_data/<slug-universe>/image-credits.yml` : les métadonnées de crédit (auteur, mention de crédit, copyright, licence) de la couverture et de chaque portrait de l'univers, une entrée par image identifiée par son slug de personnage (ou `cover`). Reflète les métadonnées EXIF/XMP embarquées dans les fichiers image eux-mêmes (source de vérité), utilisé pour enrichir le JSON-LD (voir "SEO" dans `technical-specifications.md`).
-- `_data/<slug-universe>/characters.yml` : les attributs non localisés de chaque personnage de l'univers (`gender`, `group`, `portrait-source`, et les clés de `metadata` non explicitement localisées), une entrée par personnage identifiée par son `slug`.
-- `_data/<slug-universe>/relations.yml` : l'ensemble des relations de l'univers ; le champ localisé (`description`) y est porté par des clés imbriquées par langue, plutôt que par des fichiers séparés.
-- `_data/<slug-universe>/additional-relation-types.yml`, optionnel : les types de relations additionnels propres à l'univers, avec la même structure que la taxonomie commune (clés imbriquées par langue puis par genre grammatical pour `label` et `reverse-label`, voir "Type de relation").
-- `_data/relation-types.yml` : la taxonomie de base des types de relations, partagée par tous les univers.
-- `_data/<slug-universe>/additional-metadata-keys.yml`, optionnel : les clés de metadata additionnelles propres à l'univers, avec la même structure que la taxonomie commune (clés imbriquées par langue pour `label`, voir "Clé de metadata").
-- `_data/metadata-keys.yml` : la taxonomie de base des clés de metadata, partagée par tous les univers.
-- `_data/<slug-universe>/groups.yml`, optionnel : les groupes de personnages propres à l'univers, avec leur `name` localisé (clés imbriquées par langue) et leur `color` (voir "Groupe"). Contrairement aux types de relation et aux clés de metadata, il n'existe pas de fichier de taxonomie commune : les groupes sont toujours propres à un univers.
-- `_data/source-types.yml` : la taxonomie des types de source (voir "Type de source"), avec leur `label` localisé, partagée par tous les univers, sans extension locale possible.
+- `/<slug-universe>/mosaic.fr.md`, `mosaic.en.md`: introduction of the universe (Mosaic view), one file per language. Frontmatter: `lang`, `title`. Body text: `description`.
+- `/<slug-universe>/graph.fr.md`, `graph.en.md`: Graph view, one file per language. Reuses the introduction data from the `mosaic.*.md` in the same folder rather than duplicating it.
+- `/<slug-universe>/cover.jpg`: cover image (see "Images").
+- `/<slug-universe>/groups/`, optional: a subfolder containing the logo of each group declared by the universe (`<slug-group>.png`, see "Images").
+- `/<slug-universe>/characters/`: a subfolder containing, for each character, `<slug-character>.fr.md`, `<slug-character>.en.md` (frontmatter: `lang`, `character-name`, `external-link`, and the explicitly localized `metadata` keys where applicable; body text: `description`) and its portrait `<slug-character>.jpg` (see "Images"). The subfolder itself associates each character with its universe; no attribute carries this reference.
+- `_data/<slug-universe>/universe.yml`: the non-localized attributes specific to the universe itself (`source-type`, `cover-source`), on the same principle as `characters.yml` for a character's non-localized attributes.
+- `_data/<slug-universe>/image-credits.yml`: the credit metadata (author, credit line, copyright, license) of the cover and of each portrait of the universe, one entry per image identified by its character slug (or `cover`). Mirrors the EXIF/XMP metadata embedded in the image files themselves (source of truth), used to enrich the JSON-LD (see "SEO" in `technical-specifications.md`).
+- `_data/<slug-universe>/characters.yml`: the non-localized attributes of each character of the universe (`gender`, `group`, `portrait-source`, and the `metadata` keys that are not explicitly localized), one entry per character identified by its `slug`.
+- `_data/<slug-universe>/relations.yml`: all the relations of the universe; the localized field (`description`) is carried there by keys nested by language, rather than by separate files.
+- `_data/<slug-universe>/additional-relation-types.yml`, optional: the additional relation types specific to the universe, with the same structure as the common taxonomy (keys nested by language then by grammatical gender for `label` and `reverse-label`, see "Relation type").
+- `_data/relation-types.yml`: the base taxonomy of relation types, shared by all universes.
+- `_data/<slug-universe>/additional-metadata-keys.yml`, optional: the additional metadata keys specific to the universe, with the same structure as the common taxonomy (keys nested by language for `label`, see "Metadata key").
+- `_data/metadata-keys.yml`: the base taxonomy of metadata keys, shared by all universes.
+- `_data/<slug-universe>/groups.yml`, optional: the character groups specific to the universe, with their localized `name` (keys nested by language) and their `color` (see "Group"). Unlike relation types and metadata keys, there is no common taxonomy file: groups are always specific to a universe.
+- `_data/source-types.yml`: the taxonomy of source types (see "Source type"), with their localized `label`, shared by all universes, with no possible local extension.
 
-### Exemples
+### Examples
 
-**Structure de dossier** (extrait) :
+**Folder structure** (excerpt):
 
 ```
 french-renaissance-aristocracy/
@@ -198,7 +198,7 @@ _data/
     groups.yml
 ```
 
-**Univers** (`french-renaissance-aristocracy/mosaic.fr.md`) :
+**Universe** (`french-renaissance-aristocracy/mosaic.fr.md`):
 
 ```yaml
 ---
@@ -209,14 +209,14 @@ title: "Les aristocrates français à l'époque de Catherine de Médicis"
 À la cour des Valois, alliances, rivalités et intrigues nouent les grandes familles du royaume de France.
 ```
 
-**Univers, attributs non localisés** (`_data/french-renaissance-aristocracy/universe.yml`) :
+**Universe, non-localized attributes** (`_data/french-renaissance-aristocracy/universe.yml`):
 
 ```yaml
 source-type: history
 cover-source: ai-generated
 ```
 
-**Types de relations additionnels** (`_data/french-renaissance-aristocracy/additional-relation-types.yml`) :
+**Additional relation types** (`_data/french-renaissance-aristocracy/additional-relation-types.yml`):
 
 ```yaml
 - slug: vassal-of
@@ -258,7 +258,7 @@ cover-source: ai-generated
   directed: true
 ```
 
-**Groupes** (`_data/french-renaissance-aristocracy/groups.yml`) :
+**Groups** (`_data/french-renaissance-aristocracy/groups.yml`):
 
 ```yaml
 - slug: house-of-valois
@@ -268,9 +268,9 @@ cover-source: ai-generated
   color: "#7a1f2b"
 ```
 
-Le logo de ce groupe est son image associée par convention de nommage : `french-renaissance-aristocracy/groups/house-of-valois.png`.
+This group's logo is its image associated by naming convention: `french-renaissance-aristocracy/groups/house-of-valois.png`.
 
-**Personnage** (`french-renaissance-aristocracy/characters/catherine-de-medici.fr.md`) :
+**Character** (`french-renaissance-aristocracy/characters/catherine-de-medici.fr.md`):
 
 ```yaml
 ---
@@ -282,7 +282,7 @@ external-link: "https://fr.wikipedia.org/wiki/Catherine_de_M%C3%A9dicis"
 Reine de France par son mariage avec Henri II, elle exerce une influence considérable sur la politique du royaume comme régente puis reine mère.
 ```
 
-**Personnage, attributs non localisés** (`_data/french-renaissance-aristocracy/characters.yml`) :
+**Character, non-localized attributes** (`_data/french-renaissance-aristocracy/characters.yml`):
 
 ```yaml
 - slug: catherine-de-medici
@@ -294,7 +294,7 @@ Reine de France par son mariage avec Henri II, elle exerce une influence consid�
     death: "1589"
 ```
 
-**Relations** (`_data/french-renaissance-aristocracy/relations.yml`) :
+**Relations** (`_data/french-renaissance-aristocracy/relations.yml`):
 
 ```yaml
 relations:
@@ -303,10 +303,10 @@ relations:
     type: parent-of
     description:
       fr: "Catherine de Médicis est la mère d'Henri III."
-      en: "Catherine de Médicis is Henri III's mother."
+      en: "Catherine de' Medici is Henri III's mother."
 ```
 
-**Taxonomie des types de relation** (`_data/relation-types.yml`) :
+**Relation type taxonomy** (`_data/relation-types.yml`):
 
 ```yaml
 - slug: parent-of
@@ -329,7 +329,7 @@ relations:
   directed: true
 ```
 
-**Taxonomie des clés de metadata** (`_data/metadata-keys.yml`) :
+**Metadata key taxonomy** (`_data/metadata-keys.yml`):
 
 ```yaml
 - slug: birth
@@ -338,7 +338,7 @@ relations:
     en: "Born"
 ```
 
-**Taxonomie des types de source** (`_data/source-types.yml`) :
+**Source type taxonomy** (`_data/source-types.yml`):
 
 ```yaml
 - slug: history
@@ -362,40 +362,40 @@ relations:
     en: "Other"
 ```
 
-### Workflow d'ajout d'un univers
+### Workflow for adding a universe
 
-1. Choisir le `slug` de l'univers (construit à partir de son nom anglais) et créer son dossier `/<slug>/`.
-2. Créer `mosaic.fr.md` et `mosaic.en.md`, puis `graph.fr.md` et `graph.en.md`, et déclarer son `source-type` dans `_data/<slug>/universe.yml` (voir "Type de source").
-3. Ajouter l'image de couverture (`cover.jpg`).
-4. Déclarer, si besoin, les types de relations et les clés de metadata additionnels (`_data/<slug>/additional-relation-types.yml`, `_data/<slug>/additional-metadata-keys.yml`), ainsi que les groupes de l'univers (`_data/<slug>/groups.yml` et leurs logos dans `<slug>/groups/`).
-5. Créer, dans `characters/`, les fichiers de chaque personnage (markdown et portrait) pour chaque langue, et déclarer leurs attributs non localisés dans `_data/<slug>/characters.yml`.
-6. Lister les relations dans `_data/<slug>/relations.yml`, avec leurs descriptions localisées, en réutilisant les types communs ou les types additionnels déclarés.
-7. Valider les données (voir les contraintes du modèle de données).
-8. Publier.
+1. Choose the universe's `slug` (built from its English name) and create its `/<slug>/` folder.
+2. Create `mosaic.fr.md` and `mosaic.en.md`, then `graph.fr.md` and `graph.en.md`, and declare its `source-type` in `_data/<slug>/universe.yml` (see "Source type").
+3. Add the cover image (`cover.jpg`).
+4. Declare, if needed, the additional relation types and metadata keys (`_data/<slug>/additional-relation-types.yml`, `_data/<slug>/additional-metadata-keys.yml`), as well as the universe's groups (`_data/<slug>/groups.yml` and their logos in `<slug>/groups/`).
+5. Create, in `characters/`, each character's files (markdown and portrait) for each language, and declare their non-localized attributes in `_data/<slug>/characters.yml`.
+6. List the relations in `_data/<slug>/relations.yml`, with their localized descriptions, reusing the common types or the declared additional types.
+7. Validate the data (see the data model constraints).
+8. Publish.
 
-## Contraintes et règles de validation
+## Validation constraints and rules
 
-- Le `slug` d'une entité (univers, personnage, type de relation) est identique pour toutes ses traductions.
-- Un `slug` de personnage est unique au sein de son univers (il peut être réutilisé d'un univers à l'autre).
-- Chaque personnage a exactement une entrée dans `characters.yml` de son univers, identifiée par son `slug`, qui doit correspondre à un personnage existant (fichiers `characters/<slug>.*.md`).
-- Un `slug` de type de relation est unique globalement : un univers ne peut pas déclarer un type additionnel dont le slug existe déjà dans la taxonomie commune ou dans les extensions d'un autre univers.
-- Une relation référence deux personnages existants du même univers (pas de relation inter-univers).
-- Un personnage ne peut pas être en relation avec lui-même.
-- Le `type` d'une relation doit exister dans la taxonomie commune ou dans les extensions déclarées par l'univers.
-- Un type de relation dirigé (`directed: true`) doit définir un `reverse-label` ; un type non dirigé n'en définit pas.
-- Un `label`, quand il est renseigné, décline les trois formes `masculine`, `feminine` et `neutral` pour chaque langue du site, même quand certaines formes sont identiques ; un `reverse-label` décline les deux formes `masculine` et `feminine` (voir "Accord de genre" dans "Type de relation").
-- Deux personnages ne peuvent pas être reliés deux fois par le même type de relation (mais peuvent l'être par plusieurs types différents, ex : "ami de" et "rival de"). Pour un type non dirigé, `(A, B, type)` et `(B, A, type)` comptent comme la même relation et ne peuvent pas coexister.
-- Une clé de `metadata` renseignée dans le front matter d'un personnage doit être déclarée `localized: true` dans la taxonomie (commune ou extension locale) ; une clé non localisée (`localized` absent ou `false`) ne doit apparaître que dans `characters.yml`, jamais dans le front matter.
-- Un slug de clé de metadata est unique globalement : un univers ne peut pas déclarer une clé additionnelle dont le slug existe déjà dans la taxonomie commune ou dans les extensions d'un autre univers.
-- Chaque clé de l'attribut `metadata` d'un personnage (dans `characters.yml` ou dans le front matter, selon son `localized`) doit exister dans la taxonomie commune des clés de metadata ou dans les extensions déclarées par l'univers.
-- L'attribut `gender` d'un personnage, dans `characters.yml`, quand il est renseigné, vaut `masculine` ou `feminine`.
-- L'attribut `portrait-source` d'un personnage, dans `characters.yml`, quand il est renseigné, vaut soit `ai-generated`, soit une URL.
-- L'attribut `cover-source` d'un univers, dans `universe.yml`, quand il est renseigné, vaut soit `ai-generated`, soit une URL.
-- L'attribut `lang` d'un fichier d'univers ou de personnage doit correspondre au suffixe de langue de son nom de fichier (`.fr.md` → `fr`, `.en.md` → `en`).
-- Pour une langue donnée, `mosaic.<lang>.md` et `graph.<lang>.md` existent ensemble ou pas du tout : un univers ne peut pas être disponible, dans une langue, sur une seule de ses deux vues.
-- Un `slug` de groupe est unique au sein de son univers (deux univers différents peuvent réutiliser le même slug de groupe, à la différence des types de relation et des clés de metadata).
-- L'attribut `group` d'un personnage, dans `characters.yml`, quand il est renseigné, doit référencer un groupe existant dans `groups.yml` de son univers.
-- Le `name` d'un groupe définit une valeur pour chaque langue déclarée par l'univers.
-- Un `slug` de type de source est unique dans `_data/source-types.yml` (pas d'extension locale par univers, à la différence des types de relation et des clés de metadata).
-- Le `source-type` d'un univers, dans `_data/<slug-universe>/universe.yml`, doit référencer un type de source existant dans `_data/source-types.yml`.
-- Le `label` d'un type de source définit une valeur pour chaque langue déclarée par le site.
+- An entity's `slug` (universe, character, relation type) is identical for all its translations.
+- A character `slug` is unique within its universe (it can be reused from one universe to another).
+- Each character has exactly one entry in its universe's `characters.yml`, identified by its `slug`, which must match an existing character (`characters/<slug>.*.md` files).
+- A relation type `slug` is globally unique: a universe cannot declare an additional type whose slug already exists in the common taxonomy or in another universe's extensions.
+- A relation references two existing characters of the same universe (no cross-universe relation).
+- A character cannot be in a relation with themselves.
+- A relation's `type` must exist in the common taxonomy or in the extensions declared by the universe.
+- A directed relation type (`directed: true`) must define a `reverse-label`; an undirected type does not define one.
+- A `label`, when provided, declines the three forms `masculine`, `feminine` and `neutral` for each language of the site, even when some forms are identical; a `reverse-label` declines the two forms `masculine` and `feminine` (see "Gender agreement" in "Relation type").
+- Two characters cannot be linked twice by the same relation type (but can be by several different types, e.g. "friend of" and "rival of"). For an undirected type, `(A, B, type)` and `(B, A, type)` count as the same relation and cannot coexist.
+- A `metadata` key provided in a character's front matter must be declared `localized: true` in the taxonomy (common or local extension); a non-localized key (`localized` absent or `false`) must only appear in `characters.yml`, never in the front matter.
+- A metadata key slug is globally unique: a universe cannot declare an additional key whose slug already exists in the common taxonomy or in another universe's extensions.
+- Each key of a character's `metadata` attribute (in `characters.yml` or in the front matter, depending on its `localized`) must exist in the common metadata key taxonomy or in the extensions declared by the universe.
+- A character's `gender` attribute, in `characters.yml`, when provided, is `masculine` or `feminine`.
+- A character's `portrait-source` attribute, in `characters.yml`, when provided, is either `ai-generated` or a URL.
+- A universe's `cover-source` attribute, in `universe.yml`, when provided, is either `ai-generated` or a URL.
+- The `lang` attribute of a universe or character file must match the language suffix of its file name (`.fr.md` → `fr`, `.en.md` → `en`).
+- For a given language, `mosaic.<lang>.md` and `graph.<lang>.md` exist together or not at all: a universe cannot be available, in a language, on only one of its two views.
+- A group `slug` is unique within its universe (two different universes can reuse the same group slug, unlike relation types and metadata keys).
+- A character's `group` attribute, in `characters.yml`, when provided, must reference an existing group in its universe's `groups.yml`.
+- A group's `name` defines a value for each language declared by the universe.
+- A source type `slug` is unique in `_data/source-types.yml` (no local extension per universe, unlike relation types and metadata keys).
+- A universe's `source-type`, in `_data/<slug-universe>/universe.yml`, must reference an existing source type in `_data/source-types.yml`.
+- A source type's `label` defines a value for each language declared by the site.

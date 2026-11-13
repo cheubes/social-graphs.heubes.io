@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   // Node radius scales with the character's number of connections (see graph-view.md,
-  // style-guide.md "Nœud du graphe"): five quintile buckets over the degree distribution
+  // style-guide.md "Graph node"): five quintile buckets over the degree distribution
   // of the universe's full graph, stable regardless of active filters/search.
   const NODE_RADIUS_SCALE = [16, 20, 24, 30, 38];
   const DEFAULT_NODE_RADIUS = 24;
@@ -173,13 +173,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // Visible group-color border, drawn on top of the portrait (unlike
   // .sg-graph-node-ring below it, which stays an opaque white backdrop masking
   // link start-points under the node): white when the character has no group
-  // (see "Groupe" in data-model.md and graph-view.md).
+  // (see "Group" in data-model.md and graph-view.md).
   node
     .append("circle")
     .attr("class", "sg-graph-node-border")
     .attr("r", (d) => d.radius);
 
-  // Group logo badge, bottom-right of the node (see "Groupe" in data-model.md and
+  // Group logo badge, bottom-right of the node (see "Group" in data-model.md and
   // graph-view.md): only for nodes whose character belongs to a group. Overlaid
   // directly on the portrait, no backdrop shape behind it (see style-guide.md).
   const groupNode = node.filter((d) => d.groupLogo);

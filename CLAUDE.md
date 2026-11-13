@@ -1,41 +1,41 @@
 # social-graphs.heubes.io
 
-Site présentant des "univers" (les personnages d'une œuvre, un groupe historique, etc.) sous forme de graphes interactifs de personnages et de leurs relations. Site statique, multilingue (français / anglais), généré avec Jekyll et hébergé sur GitHub Pages.
+Site presenting "universes" (the characters of a work, a historical group, etc.) as interactive graphs of characters and their relations. Static, multilingual site (French / English), generated with Jekyll and hosted on GitHub Pages.
 
-## État du projet
+## Project status
 
-L'implémentation suit `BUILD-PLAN.md`, qui définit l'ordre en étapes incrémentales. `specs/` reste la source de vérité pour toute décision de conception : avant d'écrire ou de modifier du code, lire les fichiers de specs concernés par la tâche.
+Implementation follows `BUILD-PLAN.md`, which defines the order in incremental steps. `specs/` remains the source of truth for any design decision: before writing or modifying code, read the spec files relevant to the task.
 
-## Structure de `specs/`
+## Structure of `specs/`
 
-- **`functional-specifications.md`** : périmètre du projet, utilisateurs cibles, parcours utilisateurs, règles transverses (multilingue, navigation), hors périmètre.
-- **`data-model.md`** : entités (Univers, Personnage, Relation, Type de relation), leurs attributs, et le format des fichiers qui les portent (organisation Jekyll, conventions de nommage, contraintes de validation).
-- **`technical-specifications.md`** : stack technique, hébergement/déploiement, architecture (rendu, routing), performance, accessibilité, SEO.
-- **`style-guide.md`** : charte graphique (couleurs, typographie, espacements), composants UI de base (en-tête, pied de page, tuiles, modale...), iconographie.
-- **`screens/`** : une spécification fonctionnelle par écran (objectif, contenu, interactions, états, responsive) :
-  - `home.md` — accueil du site (mosaïque d'univers)
-  - `universe-home.md` — accueil d'un univers (Vue Mosaïque de ses personnages)
-  - `graph-view.md` — Vue Graphe interactif d'un univers
-  - `character-sheet.md` — fiche personnage (modale)
-  - `search-filter.md` — recherche et filtrage
+- **`functional-specifications.md`**: project scope, target users, user journeys, cross-cutting rules (multilingual, navigation), out of scope.
+- **`data-model.md`**: entities (Universe, Character, Relation, Relation type), their attributes, and the format of the files that hold them (Jekyll organization, naming conventions, validation constraints).
+- **`technical-specifications.md`**: tech stack, hosting/deployment, architecture (rendering, routing), performance, accessibility, SEO.
+- **`style-guide.md`**: visual identity (colors, typography, spacing), basic UI components (header, footer, cards, modal...), iconography.
+- **`screens/`**: one functional specification per screen (goal, content, interactions, states, responsive):
+  - `home.md`: site home (universe mosaic)
+  - `universe-home.md`: universe home (Mosaic view of its characters)
+  - `graph-view.md`: interactive Graph view of a universe
+  - `character-sheet.md`: character sheet (modal)
+  - `search-filter.md`: search and filtering
 
-## Quand et comment utiliser ces specs
+## When and how to use these specs
 
-- **Avant toute implémentation**, lire le ou les fichiers concernés par la tâche. Les quatre specs transverses (`functional-specifications.md`, `data-model.md`, `technical-specifications.md`, `style-guide.md`) s'appliquent à tous les écrans ; chaque fichier de `screens/` complète avec ce qui est propre à cet écran.
-- **Les fichiers se référencent constamment entre eux** ("voir `X.md`") plutôt que de dupliquer l'information. Suivre ces renvois plutôt que de deviner : si un écran mentionne une règle définie ailleurs (le comportement multilingue, une couleur de la charte...), la source de vérité est le fichier référencé, pas l'écran qui le cite.
-- **En cas de modification d'une spec**, chercher les autres fichiers qui la référencent (`grep` du nom de fichier dans `specs/`) et vérifier qu'ils restent cohérents avec le changement. C'est la source la plus fréquente d'incohérence dans ce projet.
-- **En cas de doute ou de silence des specs** sur un point nécessaire à l'implémentation, demander plutôt que de supposer : ce sont des choix de conception, pas des détails d'implémentation libres.
-- **En cas de contradiction** entre le code (existant ou en cours d'écriture) et une spec, la spec fait foi ; si l'implémentation révèle qu'une spec doit changer, mettre à jour la spec et expliquer pourquoi, plutôt que de s'en écarter silencieusement dans le code.
+- **Before any implementation**, read the file or files relevant to the task. The four cross-cutting specs (`functional-specifications.md`, `data-model.md`, `technical-specifications.md`, `style-guide.md`) apply to all screens; each file in `screens/` adds what is specific to that screen.
+- **Files constantly reference each other** ("see `X.md`") rather than duplicating information. Follow these references rather than guessing: if a screen mentions a rule defined elsewhere (the multilingual behavior, a color from the style guide...), the source of truth is the referenced file, not the screen citing it.
+- **When modifying a spec**, look for the other files that reference it (`grep` the file name in `specs/`) and check that they stay consistent with the change. This is the most frequent source of inconsistency in this project.
+- **When in doubt, or when the specs are silent** on a point needed for implementation, ask rather than assume: these are design choices, not implementation details left open.
+- **In case of contradiction** between the code (existing or being written) and a spec, the spec prevails; if the implementation reveals that a spec must change, update the spec and explain why, rather than silently diverging from it in the code.
 
-## Avant chaque commit
+## Before each commit
 
-- **Vérifier l'ensemble des fichiers de `specs/`** pour cohérence, pas seulement ceux directement modifiés par ce commit.
-- **Si une ou plusieurs specs doivent être ajustées** (pour rester cohérentes entre elles, ou avec le changement en cours), bloquer le commit : proposer les mises à jour nécessaires et attendre validation avant de les appliquer, puis de committer.
-- **Mettre à jour `BUILD-PLAN.md`** si nécessaire (état d'avancement).
-- **Mettre à jour `README.md`** si nécessaire.
+- **Check all files in `specs/`** for consistency, not only those directly modified by this commit.
+- **If one or more specs need adjusting** (to stay consistent with each other, or with the change in progress), block the commit: propose the necessary updates and wait for approval before applying them, then commit.
+- **Update `BUILD-PLAN.md`** if needed (progress status).
+- **Update `README.md`** if needed.
 
-## Conventions établies
+## Established conventions
 
-- Le contenu des specs (`specs/`, `BUILD-PLAN.md`, ce fichier) est en français : ce sont des documents de conception, pas de la documentation au sens des règles globales. `README.md` reste en anglais, comme toute documentation générique de dépôt.
-- Les noms de fichiers, dossiers, attributs de données, classes CSS et identifiants techniques sont en anglais, en kebab-case (ex : `source-type`, `additional-relation-types.yml`, `.sg-card`).
-- Les couleurs et composants de la charte graphique sont définis une seule fois, dans `style-guide.md` : ne pas introduire de nouvelles valeurs de couleur ou de nouveaux styles de composants ailleurs sans les y ajouter d'abord.
+- All project content is in English, including `specs/`, `BUILD-PLAN.md`, this file, `README.md`, code and comments. The only exception is the site's French-locale content (`.fr.md` files, `fr:` values in `_data/`, `_data/ui.fr.yml`), which stays in French since the site is multilingual.
+- File names, folders, data attributes, CSS classes and technical identifiers are in English, in kebab-case (e.g. `source-type`, `additional-relation-types.yml`, `.sg-card`).
+- The style guide's colors and components are defined only once, in `style-guide.md`: do not introduce new color values or new component styles elsewhere without adding them there first.

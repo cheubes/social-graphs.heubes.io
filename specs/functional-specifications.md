@@ -1,55 +1,55 @@
-# Spécifications fonctionnelles générales
+# General functional specifications
 
-## Contexte et objectifs
+## Context and goals
 
-Le site présente des "univers" : des groupes de personnages, ou de personnes réelles, et les relations qui les lient, sous forme de graphe interactif. Un univers peut être les personnages d'un roman, d'une série, un groupe d'artistes, une période historique, etc.
+The site presents "universes": groups of characters, or of real people, and the relations that connect them, as an interactive graph. A universe can be the characters of a novel, of a TV series, a group of artists, a historical period, etc.
 
-L'objectif est de permettre à un visiteur d'explorer visuellement le réseau de relations d'un univers : parcourir les personnages, comprendre qui est lié à qui et de quelle façon, et approfondir un personnage ou une relation en particulier.
+The goal is to let a visitor visually explore the relation network of a universe: browse the characters, understand who is connected to whom and how, and dig deeper into a specific character or relation.
 
-## Périmètre du projet
+## Project scope
 
-Dans le périmètre :
+In scope:
 
-- Consultation de la liste des univers disponibles, depuis la page d'accueil du site.
-- Consultation, pour chaque univers, de sa page de présentation et de son graphe interactif de personnages et relations.
-- Consultation de la fiche détaillée d'un personnage.
-- Recherche et filtrage des personnages et relations au sein d'un univers.
-- Site multilingue (français, anglais pour commencer).
+- Browsing the list of available universes, from the site home page.
+- Browsing, for each universe, its presentation page and its interactive graph of characters and relations.
+- Browsing the detailed sheet of a character.
+- Searching and filtering characters and relations within a universe.
+- Multilingual site (French and English to begin with).
 
-Voir aussi "Hors périmètre" ci-dessous.
+See also "Out of scope" below.
 
-## Utilisateurs cibles
+## Target users
 
-Le site s'adresse à des visiteurs qui souhaitent découvrir ou explorer un univers de personnages : lecteurs, spectateurs, curieux d'histoire, etc. Il n'y a pas de distinction de rôle côté visiteur : pas de compte, pas d'espace personnel, pas de contenu personnalisé.
+The site is aimed at visitors who want to discover or explore a universe of characters: readers, viewers, history enthusiasts, etc. There is no role distinction on the visitor side: no account, no personal space, no personalized content.
 
-Le contenu (univers, personnages, relations) est produit par l'auteur du site directement dans les fichiers sources (voir `data-model.md`), pas via une interface d'administration.
+The content (universes, characters, relations) is produced by the site author directly in the source files (see `data-model.md`), not through an administration interface.
 
-## Parcours utilisateurs principaux
+## Main user journeys
 
-1. Un visiteur arrive sur la page d'accueil du site, parcourt la mosaïque d'univers, et choisit celui qui l'intéresse.
-2. Il arrive sur la page d'accueil de cet univers (Vue Mosaïque), qui le présente ainsi que ses personnages, et peut basculer vers la Vue Graphe pour une exploration plus visuelle des relations.
-3. Depuis l'une ou l'autre de ces vues, il repère un personnage qui l'intéresse et ouvre sa fiche détaillée, affichée en superposition sans quitter la vue courante.
-4. Depuis la fiche personnage, il peut naviguer vers les personnages liés par une relation.
-5. À tout moment dans un univers, il peut rechercher ou filtrer les personnages et relations affichés.
-6. Un visiteur peut aussi arriver directement sur la page d'un univers ou d'un personnage via un lien partagé, sans passer par l'accueil.
+1. A visitor lands on the site home page, browses the universe mosaic, and picks the one they are interested in.
+2. They land on the home page of that universe (Mosaic view), which presents it along with its characters, and can switch to the Graph view for a more visual exploration of the relations.
+3. From either of these views, they spot a character they are interested in and open its detailed sheet, displayed as an overlay without leaving the current view.
+4. From the character sheet, they can navigate to the characters connected by a relation.
+5. At any time within a universe, they can search or filter the displayed characters and relations.
+6. A visitor can also land directly on the page of a universe or of a character through a shared link, without going through the home page.
 
-## Règles transverses
+## Cross-cutting rules
 
-### Multilingue
+### Multilingual
 
-- Le site est disponible en français et en anglais.
-- Au premier accès, la langue est déterminée par celle du navigateur ; si le navigateur indique une autre langue que le français ou l'anglais, le site démarre en anglais. Un changement manuel de langue via le sélecteur est mémorisé pour les visites suivantes.
-- Un sélecteur de langue, accessible depuis toutes les pages, permet de basculer d'une langue à l'autre. Il conserve le contexte de navigation quand le contenu existe dans l'autre langue ; sinon, la page affiche un message indiquant que ce contenu n'est pas encore disponible dans cette langue.
-- Un univers non traduit dans la langue courante n'apparaît pas dans la mosaïque d'accueil de cette langue.
-- Un personnage non traduit dans la langue courante n'apparaît pas dans le graphe, les listes ni la recherche de cette langue ; les relations qui le concernent sont masquées avec lui.
+- The site is available in French and English.
+- On first visit, the language is determined by the browser's; if the browser reports a language other than French or English, the site starts in English. A manual language change through the selector is remembered for subsequent visits.
+- A language selector, available from every page, lets the visitor switch from one language to the other. It keeps the navigation context when the content exists in the other language; otherwise, the page displays a message stating that this content is not yet available in that language.
+- A universe not translated into the current language does not appear in the home mosaic for that language.
+- A character not translated into the current language does not appear in the graph, the lists or the search for that language; the relations involving it are hidden along with it.
 
 ### Navigation
 
-- Chaque page permet de revenir à l'accueil du site et à l'accueil de l'univers courant (quand applicable).
+- Every page lets the visitor go back to the site home page and to the home page of the current universe (when applicable).
 
-## Hors périmètre
+## Out of scope
 
-- Comptes utilisateurs, authentification.
-- Édition de contenu via une interface web : le contenu est créé et modifié directement dans les fichiers sources (voir `data-model.md`).
-- Contenu généré par les visiteurs (commentaires, notes, contributions).
-- Recherche globale inter-univers : la recherche est limitée à un univers (voir `search-filter.md`).
+- User accounts, authentication.
+- Content editing through a web interface: content is created and edited directly in the source files (see `data-model.md`).
+- Visitor-generated content (comments, ratings, contributions).
+- Global cross-universe search: search is limited to one universe (see `search-filter.md`).

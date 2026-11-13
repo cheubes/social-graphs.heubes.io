@@ -6,8 +6,8 @@ A site presenting "universes" (the characters of a novel, a TV series, a histori
 
 Specifications are complete in [`specs/`](specs/); implementation follows [`BUILD-PLAN.md`](BUILD-PLAN.md)'s incremental steps (✅ 12/12).
 
-- [`CLAUDE.md`](CLAUDE.md) — how the specs are organized and how to use them.
-- [`BUILD-PLAN.md`](BUILD-PLAN.md) — the incremental implementation plan, with a ready-to-use prompt per step.
+- [`CLAUDE.md`](CLAUDE.md): how the specs are organized and how to use them.
+- [`BUILD-PLAN.md`](BUILD-PLAN.md): the incremental implementation plan, with a ready-to-use prompt per step.
 
 ## Stack
 
@@ -15,4 +15,6 @@ Static site generated with Jekyll and hosted on GitHub Pages. Bootstrap for layo
 
 ## License
 
-Universe content (characters, relationships, descriptions) is licensed under [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). No license has been chosen yet for the code itself.
+The code and the content of this site (universes, characters, relationships, descriptions, AI-generated images) are dedicated to the public domain under [CC0 1.0 Universal](LICENSE).
+
+Third-party images (photographs and reproductions of artworks, mostly from Wikimedia Commons) are not covered by this dedication: each keeps its own license, credited in its embedded metadata and in `_data/<universe>/image-credits.yml`.

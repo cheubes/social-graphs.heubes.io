@@ -180,7 +180,7 @@ small {
   object-fit: cover;
 }
 
-/* Character card only (see style-guide.md, Tuiles): border between the portrait
+/* Character card only (see style-guide.md, Cards): border between the portrait
    and the card body, and bottom-right badge for the character's group, white/
    absent when the character has no group. Fixed-height text zone, same
    principle as .sg-universe-card below, but the description is truncated
@@ -207,7 +207,7 @@ small {
   object-fit: contain;
 }
 
-/* Universe card only (home page, see style-guide.md, Tuiles): fixed-height,
+/* Universe card only (home page, see style-guide.md, Cards): fixed-height,
    scrollable text zone below a fixed cover. Keeps every tile the same height
    regardless of description length. */
 .sg-universe-card-cover-wrap {
@@ -619,7 +619,7 @@ small {
 }
 
 /* Group border color, set per node via --sg-node-ring-color (see graph.js);
-   white when the character has no group (see "Groupe" in data-model.md). */
+   white when the character has no group (see "Group" in data-model.md). */
 .sg-graph-node-border {
   fill: none;
   stroke: var(--sg-node-ring-color, var(--sg-white));
@@ -724,7 +724,7 @@ small {
 }
 
 /* Group filters use the group's own logo as their visual identifier instead of a
-   color swatch (see "Barre de recherche / filtres" in style-guide.md). */
+   color swatch (see "Search bar / filters" in style-guide.md). */
 .sg-legend-logo {
   width: 1.1rem;
   height: 1.1rem;

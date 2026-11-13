@@ -15,7 +15,7 @@ layout: default
     {% comment %}
       Nodes: one per character available in the current language, each carrying its
       group's border color and logo (empty strings when the character has no group,
-      see "Groupe" in data-model.md and graph-view.md).
+      see "Group" in data-model.md and graph-view.md).
     {% endcomment %}
     {% assign nodes_json = "" %}
     {% for character in characters %}
@@ -63,7 +63,7 @@ layout: default
           {% comment %}
             Edge label is read source → target (see graph.js's showEdgeTooltip), so it's
             accorded to the source character's own gender, same rule as the "source" case
-            of "Accord de genre" in data-model.md. Lowercased on first letter: unlike the
+            of "Gender agreement" in data-model.md. Lowercased on first letter: unlike the
             character sheet's heading use of this same label, here it sits mid-sentence
             ("X {label} Y").
           {% endcomment %}

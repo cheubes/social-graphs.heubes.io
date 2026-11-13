@@ -1,38 +1,38 @@
-# Écran : vue graphe interactif
+# Screen: interactive graph view
 
-## Objectif
+## Goal
 
-Permettre au visiteur d'explorer visuellement le réseau de personnages d'un univers et leurs relations : repérer les personnages centraux, comprendre qui est lié à qui et de quelle façon, et accéder au détail d'un personnage ou d'une relation.
+Let the visitor visually explore the network of characters of a universe and their relations: spot the central characters, understand who is linked to whom and how, and access the details of a character or a relation.
 
-## Contenu et structure
+## Content and structure
 
-Cette vue partage l'en-tête (dont le switcher "Vue Mosaïque" / "Vue Graphe", voir `style-guide.md`) et le pied de page avec `universe-home.md` ; seul le contenu principal ci-dessous lui est propre.
+This view shares the header (including the "Mosaic view" / "Graph view" switcher, see `style-guide.md`) and the footer with `universe-home.md`; only the main content below is specific to it.
 
-- Graphe interactif :
-  - Un nœud par personnage disponible dans la langue courante (même règle de masquage que pour les univers non traduits, voir "Multilingue" dans `functional-specifications.md`), affichant son portrait et son `character-name`, ainsi qu'une bordure de la couleur de son groupe d'appartenance si renseigné (voir "Groupe" dans `data-model.md`), blanche sinon, et le logo de ce groupe, si renseigné, en bas à droite du nœud.
-  - Taille du nœud proportionnelle au nombre de connexions du personnage (nombre d'arêtes qui lui sont incidentes, chaque relation comptant pour une arête même entre deux mêmes personnages, voir ci-dessous), pour faire ressortir les personnages principaux de l'univers ; répartition et valeurs précises dans "Nœud du graphe" de `style-guide.md`. Ce nombre de connexions est calculé une seule fois sur le graphe complet de l'univers et reste stable quels que soient la recherche ou les filtres actifs : seule la visibilité des nœuds change avec eux (voir ci-dessous), jamais leur taille.
-  - Une arête par relation entre deux personnages affichés. Quand deux personnages sont liés par plusieurs relations de types différents, chacune est une arête distincte.
-  - Une arête d'un type dirigé est représentée avec un sens visuel (ex : flèche) ; une arête d'un type non dirigé n'en a pas.
-  - Chaque type de relation a une couleur distincte, définie dans `style-guide.md` (ce n'est pas un attribut de données, voir `data-model.md`).
-- Légende couleur → type de relation, affichée en permanence sur cette vue, sous le graphe (voir `style-guide.md` : la distinction par couleur seule n'est pas garantie au-delà de trois types affichés simultanément). Chaque entrée affiche la couleur du type et son `label` (forme `neutral`, aucun personnage particulier n'étant associé à cette légende, voir "Accord de genre" dans "Type de relation" de `data-model.md`). Elle ne duplique pas les filtres de type de relation de `search-filter.md` : c'est la même liste, au même emplacement, chaque filtre affichant déjà la couleur de son type (voir `style-guide.md`).
-- Barre de recherche et filtres de groupe (persistants sur cette vue et sur la Vue Mosaïque), entre le switcher et le graphe comme sur la Vue Mosaïque (voir `universe-home.md`). Les filtres de type de relation, propres à cette vue, sont affichés séparément, sous le graphe (voir `search-filter.md` pour leur contenu et leur comportement détaillés). Sur cette vue, la recherche met en évidence ou masque les nœuds correspondants, les filtres de type masquent les arêtes des types désactivés, et les filtres de groupe masquent les nœuds (et les arêtes qui leur sont associées) des personnages du groupe désactivé. Ces filtres, affichant chacun le logo du groupe concerné, servent aussi de légende bordure/logo → groupe, sur le même principe que la légende couleur → type de relation ci-dessus.
+- Interactive graph:
+  - One node per character available in the current language (same hiding rule as for untranslated universes, see "Multilingual" in `functional-specifications.md`), displaying their portrait and `character-name`, along with a border in the color of their group if set (see "Group" in `data-model.md`), white otherwise, and that group's logo, if set, at the bottom right of the node.
+  - Node size proportional to the character's number of connections (number of edges incident to them, each relation counting as one edge even between the same two characters, see below), to bring out the universe's main characters; distribution and exact values in "Graph node" of `style-guide.md`. This number of connections is computed once on the universe's full graph and stays stable whatever the active search or filters: only node visibility changes with them (see below), never their size.
+  - One edge per relation between two displayed characters. When two characters are linked by several relations of different types, each is a separate edge.
+  - An edge of a directed type is shown with a visual direction (e.g. an arrow); an edge of an undirected type has none.
+  - Each relation type has a distinct color, defined in `style-guide.md` (it is not a data attribute, see `data-model.md`).
+- Color → relation type legend, permanently displayed on this view, below the graph (see `style-guide.md`: distinction by color alone is not guaranteed beyond three types displayed simultaneously). Each entry displays the type's color and its `label` (`neutral` form, since no particular character is associated with this legend, see "Gender agreement" in "Relation type" of `data-model.md`). It does not duplicate the relation type filters of `search-filter.md`: it is the same list, at the same location, each filter already displaying its type's color (see `style-guide.md`).
+- Search bar and group filters (persistent on this view and on the Mosaic view), between the switcher and the graph as on the Mosaic view (see `universe-home.md`). The relation type filters, specific to this view, are displayed separately, below the graph (see `search-filter.md` for their detailed content and behavior). On this view, the search highlights or hides the matching nodes, the type filters hide the edges of disabled types, and the group filters hide the nodes (and their associated edges) of the characters of the disabled group. These filters, each displaying the logo of the group concerned, also serve as a border/logo → group legend, on the same principle as the color → relation type legend above.
 
 ## Interactions
 
-- Clic sur un nœud : ouvre la fiche de ce personnage en modale, superposée à la vue courante, sans navigation vers une nouvelle page (voir `character-sheet.md`), comme pour une tuile en Vue Mosaïque.
-- Survol ou clic sur une arête : affiche le détail de la relation (le libellé dans le bon sens selon l'extrémité concernée, et sa `description` si renseignée ; voir "Type de relation" dans `data-model.md`).
-- Zoom et déplacement (pan) dans le graphe.
-- Recherche/filtre : met en évidence ou masque les éléments correspondants (détail dans `search-filter.md`).
-- Clic sur le switcher "Vue Mosaïque" : retourne à la vue mosaïque de cet univers (voir `universe-home.md`), seul l'état actif du switcher change dans l'en-tête, le reste restant inchangé.
-- Changement de langue via le sélecteur : réaffiche la vue dans la langue choisie si elle existe (voir "Multilingue" dans `functional-specifications.md`), sinon affiche le message d'indisponibilité.
+- Click on a node: opens that character's sheet in a modal, overlaid on the current view, without navigating to a new page (see `character-sheet.md`), as for a card in the Mosaic view.
+- Hover or click on an edge: displays the relation's details (the label in the right direction depending on the end concerned, and its `description` if set; see "Relation type" in `data-model.md`).
+- Zoom and pan in the graph.
+- Search/filter: highlights or hides the matching elements (details in `search-filter.md`).
+- Click on the "Mosaic view" switcher: returns to this universe's mosaic view (see `universe-home.md`), only the switcher's active state changes in the header, the rest remaining unchanged.
+- Language change via the selector: redisplays the view in the chosen language if it exists (see "Multilingual" in `functional-specifications.md`), otherwise displays the unavailability message.
 
-## États (chargement, erreur, vide, indisponible)
+## States (loading, error, empty, unavailable)
 
-- Indisponible : l'univers n'est pas traduit dans la langue courante → message d'indisponibilité, même comportement que `universe-home.md`.
-- Vide : l'univers n'a aucune relation dans la langue courante → les nœuds des personnages s'affichent sans arête, avec un message le signalant.
-- Erreur : portrait manquant ou en échec de chargement pour un nœud → image de remplacement générique.
-- Chargement : le graphe étant interactif, un état de chargement est probable le temps de son initialisation ; son traitement précis relève de `technical-specifications.md`.
+- Unavailable: the universe is not translated into the current language → unavailability message, same behavior as `universe-home.md`.
+- Empty: the universe has no relation in the current language → the characters' nodes are displayed without edges, with a message pointing it out.
+- Error: portrait missing or failing to load for a node → generic placeholder image.
+- Loading: since the graph is interactive, a loading state is likely while it initializes; its exact handling belongs to `technical-specifications.md`.
 
 ## Responsive
 
-Le graphe reste utilisable au doigt sur petit écran (zoom, déplacement, sélection d'un nœud ou d'une arête) ; la barre de recherche/filtre (dont la légende, voir ci-dessus), le switcher et le pied de page fixe (voir `style-guide.md`) restent accessibles sans recouvrir le graphe.
+The graph remains usable by touch on small screens (zoom, pan, selecting a node or an edge); the search/filter bar (including the legend, see above), the switcher and the fixed footer (see `style-guide.md`) remain accessible without covering the graph.

@@ -1,47 +1,47 @@
-# Spécifications techniques
+# Technical specifications
 
-## Stack technique
+## Tech stack
 
-### Génération de site
+### Site generation
 
-- **Jekyll** : layouts, includes, front matter, `_data/`, pages (pas de collections, voir "Architecture").
-- Pas de plugins Jekyll non supportés par GitHub Pages.
-- **Ruby** : en plus de Jekyll, utilisé pour `scripts/validate.rb` (voir "Validation des données"). Aucun toolchain supplémentaire (pas de Node.js, pas de Python) pour ce script.
+- **Jekyll**: layouts, includes, front matter, `_data/`, pages (no collections, see "Architecture").
+- No Jekyll plugins unsupported by GitHub Pages.
+- **Ruby**: besides Jekyll, used for `scripts/validate.rb` (see "Data validation"). No additional toolchain (no Node.js, no Python) for this script.
 
 ### CSS / UI
 
-- **Bootstrap 5.3** (CDN jsDelivr, version figée) : grille, cartes (tuiles), modale (fiche personnage), composants de formulaire (recherche/filtre).
-- **Font Awesome Free 7.3** (CDN jsDelivr, version figée) : icônes (fermeture de modale, recherche, badge Creative Commons). Saut de version majeure par rapport à la 6.x ; à vérifier lors de l'implémentation que les icônes utilisées existent toujours sous le même nom. Le sélecteur de langue utilise des emoji drapeaux, pas d'icône Font Awesome (voir `style-guide.md`).
-- CSS natif avec variables custom (pas de SASS, pas de LESS).
-- Les valeurs de design (couleurs, typographie, espacements) sont définies dans `style-guide.md`, pas ici.
+- **Bootstrap 5.3** (jsDelivr CDN, pinned version): grid, cards, modal (character sheet), form components (search/filter).
+- **Font Awesome Free 7.3** (jsDelivr CDN, pinned version): icons (modal close, search, Creative Commons badge). Major version jump from 6.x; check during implementation that the icons used still exist under the same name. The language selector uses flag emoji, not a Font Awesome icon (see `style-guide.md`).
+- Native CSS with custom properties (no SASS, no LESS).
+- Design values (colors, typography, spacing) are defined in `style-guide.md`, not here.
 
 ### JavaScript
 
-- **Vanilla JS** pour les interactions globales (sélecteur de langue, détection et mémorisation de la préférence).
-- **D3.js v7** pour le graphe interactif (nœuds, arêtes, zoom, déplacement), chargé uniquement sur les pages Vue Graphe.
-- Le JS de la modale (Bootstrap) pour la fiche personnage.
-- Pas de framework JS (pas de React, Vue, Angular).
+- **Vanilla JS** for global interactions (language selector, preference detection and storage).
+- **D3.js v7** for the interactive graph (nodes, edges, zoom, panning), loaded only on Graph view pages.
+- The modal JS (Bootstrap) for the character sheet.
+- No JS framework (no React, Vue, Angular).
 
-### Ce qu'on n'utilise pas
+### What we don't use
 
-- Node.js en runtime (Jekyll uniquement en build).
-- Base de données.
-- Backend ou API propre.
-- Cookies ou tracking. La préférence de langue (voir "Multilingue" dans `functional-specifications.md`) est mémorisée via `localStorage` : stockage local au navigateur, aucune donnée envoyée à un serveur, ce n'est pas un cookie.
-
----
-
-## Hébergement et déploiement
-
-- **Hébergeur :** GitHub Pages
-- **Repository :** `https://github.com/cheubes/social-graphs.heubes.io`
-- **Domaine :** `social-graphs.heubes.io` (fichier `CNAME` à la racine)
-- **Déploiement :** manuel, sur push sur la branche `gh-pages`
-- **Générateur :** Jekyll (intégration native GitHub Pages, pas de GitHub Actions nécessaire)
+- Node.js at runtime (Jekyll at build time only).
+- Database.
+- Backend or custom API.
+- Cookies or tracking. The language preference (see "Multilingual" in `functional-specifications.md`) is stored via `localStorage`: storage local to the browser, no data sent to a server, it is not a cookie.
 
 ---
 
-## Dépendances CDN (versions figées)
+## Hosting and deployment
+
+- **Host:** GitHub Pages
+- **Repository:** `https://github.com/cheubes/social-graphs.heubes.io`
+- **Domain:** `social-graphs.heubes.io` (`CNAME` file at the root)
+- **Deployment:** manual, on push to the `gh-pages` branch
+- **Generator:** Jekyll (native GitHub Pages integration, no GitHub Actions needed)
+
+---
+
+## CDN dependencies (pinned versions)
 
 ```html
 <!-- Bootstrap 5.3.8 -->
@@ -61,64 +61,64 @@
   integrity="sha384-qrALq7+6jBOZIQsNnT6xGkMDru64qD6uTlDra39xrt2SoXl4pO3FX6Roz/RpR/BS"
   crossorigin="anonymous">
 
-<!-- Police de caractères : voir style-guide.md pour le choix, avec rel="preconnect" sur Google Fonts si retenu -->
+<!-- Font: see style-guide.md for the choice, with rel="preconnect" on Google Fonts if selected -->
 
-<!-- D3.js v7.9.0 (chargé uniquement sur les pages Vue Graphe) -->
+<!-- D3.js v7.9.0 (loaded only on Graph view pages) -->
 <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" defer></script>
 ```
 
-Versions vérifiées comme les dernières stables disponibles sur jsDelivr à la date de rédaction ; à reconfirmer au moment de l'implémentation.
+Versions checked as the latest stable ones available on jsDelivr at the time of writing; to be reconfirmed at implementation time.
 
 ---
 
-## Structure des fichiers
+## File structure
 
 ```
 /
 ├── _config.yml
 ├── CNAME
-├── 404.md                        # message d'indisponibilité, voir "Architecture"
-├── index.fr.md                   # accueil du site (FR)
-├── index.en.md                   # accueil du site (EN)
+├── 404.md                        # unavailability message, see "Architecture"
+├── index.fr.md                   # site home (FR)
+├── index.en.md                   # site home (EN)
 │
 ├── _layouts/
-│   ├── default.html             # layout de base : <head>, header, footer
-│   ├── home.html                # accueil du site (mosaïque d'univers)
-│   ├── universe.html            # Vue Mosaïque d'un univers
-│   ├── universe-graph.html      # Vue Graphe d'un univers
-│   └── character.html           # fiche personnage (accès direct) : réutilise universe.html + modale ouverte
+│   ├── default.html             # base layout: <head>, header, footer
+│   ├── home.html                # site home (mosaic of universes)
+│   ├── universe.html            # Mosaic view of a universe
+│   ├── universe-graph.html      # Graph view of a universe
+│   └── character.html           # character sheet (direct access): reuses universe.html + open modal
 │
 ├── _includes/
 │   ├── head.html
-│   ├── header.html               # identité du site ou de l'univers, switcher, sélecteur de langue
+│   ├── header.html               # site or universe identity, switcher, language selector
 │   ├── footer.html
-│   ├── universe-card.html        # tuile univers (accueil du site)
-│   ├── character-card.html       # tuile personnage (Vue Mosaïque)
-│   ├── character-modal.html      # contenu de la modale fiche personnage
-│   ├── view-switcher.html        # switcher Vue Mosaïque / Vue Graphe
-│   └── search-filter.html        # barre de recherche / filtres
+│   ├── universe-card.html        # universe card (site home)
+│   ├── character-card.html       # character card (Mosaic view)
+│   ├── character-modal.html      # content of the character sheet modal
+│   ├── view-switcher.html        # Mosaic view / Graph view switcher
+│   └── search-filter.html        # search bar / filters
 │
 ├── _data/
-│   ├── relation-types.yml        # taxonomie commune des types de relation
-│   ├── source-types.yml          # taxonomie commune des types de source
-│   ├── ui.fr.yml                 # textes d'interface en FR (labels, messages, dont le message d'indisponibilité)
-│   ├── ui.en.yml                 # textes d'interface en EN (labels, messages, dont le message d'indisponibilité)
+│   ├── relation-types.yml        # common relation type taxonomy
+│   ├── source-types.yml          # common source type taxonomy
+│   ├── ui.fr.yml                 # UI strings in FR (labels, messages, including the unavailability message)
+│   ├── ui.en.yml                 # UI strings in EN (labels, messages, including the unavailability message)
 │   └── <slug-universe>/
-│       ├── universe.yml                    # attribut non localisé de l'univers (source-type)
-│       ├── characters.yml                  # attributs non localisés des personnages
+│       ├── universe.yml                    # non-localized attribute of the universe (source-type)
+│       ├── characters.yml                  # non-localized attributes of the characters
 │       ├── relations.yml
-│       ├── additional-relation-types.yml   # optionnel
-│       └── groups.yml                      # optionnel
+│       ├── additional-relation-types.yml   # optional
+│       └── groups.yml                      # optional
 │
 ├── <slug-universe>/
 │   ├── cover.jpg
-│   ├── mosaic.fr.md              # Vue Mosaïque
+│   ├── mosaic.fr.md              # Mosaic view
 │   ├── mosaic.en.md
-│   ├── graph.fr.md               # Vue Graphe
+│   ├── graph.fr.md               # Graph view
 │   ├── graph.en.md
-│   ├── groups/                   # logos des groupes, optionnel
+│   ├── groups/                   # group logos, optional
 │   │   └── <slug-group>.png
-│   └── characters/               # fiches personnage
+│   └── characters/               # character sheets
 │       ├── <slug-character>.fr.md
 │       ├── <slug-character>.en.md
 │       └── <slug-character>.jpg
@@ -127,26 +127,26 @@ Versions vérifiées comme les dernières stables disponibles sur jsDelivr à la
 │   ├── css/
 │   │   └── main.css
 │   ├── js/
-│   │   ├── main.js                # sélecteur de langue, utilitaires partagés
-│   │   ├── graph.js               # rendu D3 du graphe interactif
-│   │   ├── character-modal.js     # ouverture/fermeture de la modale, synchronisation d'URL
-│   │   └── search-filter.js       # recherche et filtres
-│   └── img/                       # images pour l'interface (pas le contenu des univers)
+│   │   ├── main.js                # language selector, shared utilities
+│   │   ├── graph.js               # D3 rendering of the interactive graph
+│   │   ├── character-modal.js     # modal open/close, URL sync
+│   │   └── search-filter.js       # search and filters
+│   └── img/                       # images for the interface (not universe content)
 │
 └── scripts/
-    └── validate.rb                # validation du contenu, voir "Validation des données"
+    └── validate.rb                # content validation, see "Data validation"
 ```
 
 ### Configuration (`_config.yml`)
 
 ```yaml
-title: "Social Graphs"          # à ajuster avec la tagline retenue (voir "En-tête" dans style-guide.md)
+title: "Social Graphs"          # to adjust with the chosen tagline (see "Header" in style-guide.md)
 description: "Explore the characters of a universe and their relationships as an interactive graph."
 url: "https://social-graphs.heubes.io"
 baseurl: ""
-lang: en                        # valeur de repli ; chaque page définit son propre lang (voir data-model.md), qui prime dans le layout
+lang: en                        # fallback value; each page defines its own lang (see data-model.md), which takes precedence in the layout
 markdown: kramdown
-permalink: pretty                # filet de sécurité ; en pratique, chaque page a son propre permalink explicite (voir "Génération des pages")
+permalink: pretty                # safety net; in practice, each page has its own explicit permalink (see "Page generation")
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -160,159 +160,159 @@ exclude:
   - Gemfile.lock
 ```
 
-`specs/`, `scripts/`, `CLAUDE.md` et `BUILD-PLAN.md` doivent être exclus du build : ce sont des fichiers de travail du dépôt, pas du contenu du site, et Jekyll les publierait sinon tels quels sous `_site/`.
+`specs/`, `scripts/`, `CLAUDE.md` and `BUILD-PLAN.md` must be excluded from the build: they are repository working files, not site content, and Jekyll would otherwise publish them as is under `_site/`.
 
 ---
 
-## Architecture (rendu, routing)
+## Architecture (rendering, routing)
 
-### Rendu
+### Rendering
 
-Le site est entièrement statique, généré au build par Jekyll. Aucun rendu dynamique côté serveur, aucune API propre (cohérent avec GitHub Pages).
+The site is fully static, generated at build time by Jekyll. No dynamic server-side rendering, no custom API (consistent with GitHub Pages).
 
-### Structure des URLs
+### URL structure
 
-- `/` : accueil du site (anglais, langue par défaut)
-- `/fr/` : accueil du site (français)
-- `/<slug-universe>/` : Vue Mosaïque d'un univers (EN)
-- `/fr/<slug-universe>/` : Vue Mosaïque (FR)
-- `/<slug-universe>/graph/` : Vue Graphe d'un univers (EN)
-- `/fr/<slug-universe>/graph/` : Vue Graphe (FR)
-- `/<slug-universe>/characters/<slug-character>/` : fiche personnage, pour l'accès direct (EN)
-- `/fr/<slug-universe>/characters/<slug-character>/` : idem (FR)
+- `/`: site home (English, default language)
+- `/fr/`: site home (French)
+- `/<slug-universe>/`: Mosaic view of a universe (EN)
+- `/fr/<slug-universe>/`: Mosaic view (FR)
+- `/<slug-universe>/graph/`: Graph view of a universe (EN)
+- `/fr/<slug-universe>/graph/`: Graph view (FR)
+- `/<slug-universe>/characters/<slug-character>/`: character sheet, for direct access (EN)
+- `/fr/<slug-universe>/characters/<slug-character>/`: same (FR)
 
-L'anglais, langue par défaut, n'a pas de préfixe ; le français est préfixé par `/fr/`.
+English, the default language, has no prefix; French is prefixed with `/fr/`.
 
-### Génération des pages
+### Page generation
 
-Chaque univers vit dans son propre dossier à la racine du site (`/<slug-universe>/`) et ses pages sont des pages Jekyll classiques (pas de collection), chacune avec un permalink explicite en frontmatter pour appliquer le préfixe de langue.
+Each universe lives in its own folder at the site root (`/<slug-universe>/`) and its pages are regular Jekyll pages (no collection), each with an explicit permalink in the front matter to apply the language prefix.
 
-- `mosaic.fr.md` / `mosaic.en.md` génèrent la Vue Mosaïque (`/fr/<slug-universe>/` en FR, `/<slug-universe>/` en EN).
-- `graph.fr.md` / `graph.en.md` génèrent la Vue Graphe (`/fr/<slug-universe>/graph/` en FR, `/<slug-universe>/graph/` en EN). Leur layout réutilise les données de présentation du `mosaic.*.md` du même dossier (même `lang`) plutôt que de les dupliquer.
-- Chaque fichier de `characters/<slug-character>.fr.md` / `.en.md` génère la page de fiche personnage (`/<slug-universe>/characters/<slug-character>/`) ; son layout affiche la Vue Mosaïque de son univers avec la modale de ce personnage ouverte au chargement (voir `character-sheet.md`).
-- Un univers ou personnage non traduit dans une langue n'a tout simplement pas de fichier pour cette langue, donc pas de page générée à cette URL.
+- `mosaic.fr.md` / `mosaic.en.md` generate the Mosaic view (`/fr/<slug-universe>/` in FR, `/<slug-universe>/` in EN).
+- `graph.fr.md` / `graph.en.md` generate the Graph view (`/fr/<slug-universe>/graph/` in FR, `/<slug-universe>/graph/` in EN). Their layout reuses the presentation data from the `mosaic.*.md` in the same folder (same `lang`) rather than duplicating it.
+- Each `characters/<slug-character>.fr.md` / `.en.md` file generates the character sheet page (`/<slug-universe>/characters/<slug-character>/`); its layout displays the Mosaic view of its universe with that character's modal open on load (see `character-sheet.md`).
+- A universe or character not translated into a language simply has no file for that language, so no page is generated at that URL.
 
-### Switcher Vue Mosaïque / Vue Graphe
+### Mosaic view / Graph view switcher
 
-Le switcher (voir `universe-home.md`, `graph-view.md`) est un lien entre deux pages statiques distinctes, pas une bascule en JavaScript sans rechargement : chaque clic est une navigation complète, cohérente avec le choix de deux pages séparées. La structure de page identique entre les deux vues (même en-tête) limite le changement visuel perçu au rechargement.
+The switcher (see `universe-home.md`, `graph-view.md`) is a link between two distinct static pages, not a JavaScript toggle without reload: each click is a full navigation, consistent with the choice of two separate pages. The identical page structure between the two views (same header) limits the visual change perceived on reload.
 
-### Modale fiche personnage et synchronisation d'URL
+### Character sheet modal and URL sync
 
-Le portrait, le `character-name` et la `description` tronquée d'un personnage sont déjà présents sur la page Vue Mosaïque (tuile) et Vue Graphe (nœud) de son univers, pour leur propre affichage. Le clic sur une tuile ou un nœud (voir `universe-home.md`, `graph-view.md`) déclenche un `fetch()` de l'URL déjà générée de la fiche personnage (`/<slug-universe>/characters/<slug-character>/`), dont le contenu manquant (description complète, métadonnées, lien externe, liste des relations) est injecté dans la modale, sans navigation ni rechargement de page ; l'URL est mise à jour vers celle de cette page via l'API History du navigateur (`pushState`). La fermeture de la modale restaure l'URL de la vue sous-jacente via `pushState`, sans rechargement non plus.
+A character's portrait, `character-name` and truncated `description` are already present on the Mosaic view (card) and Graph view (node) page of its universe, for their own display. Clicking a card or a node (see `universe-home.md`, `graph-view.md`) triggers a `fetch()` of the already generated character sheet URL (`/<slug-universe>/characters/<slug-character>/`), whose missing content (full description, metadata, external link, list of relations) is injected into the modal, without navigation or page reload; the URL is updated to that page's URL via the browser History API (`pushState`). Closing the modal restores the URL of the underlying view via `pushState`, also without reload.
 
-L'accès direct à l'URL d'une fiche personnage (lien partagé, ou rechargement de la page) charge sa page générée, qui affiche directement la Vue Mosaïque avec la modale déjà ouverte.
+Direct access to a character sheet URL (shared link, or page reload) loads its generated page, which directly displays the Mosaic view with the modal already open.
 
-### Contenu non traduit ("message d'indisponibilité")
+### Untranslated content ("unavailability message")
 
-Puisqu'une langue sans traduction ne génère pas de page, l'accès à une URL non traduite (univers ou personnage) déclenche le mécanisme de 404 natif de GitHub Pages. Un fichier `404.md` personnalisé, à la racine du site, sert de "message d'indisponibilité" (voir "Multilingue" dans `functional-specifications.md`) : il détecte la langue depuis le préfixe de l'URL demandée (`/fr/...` ou non) pour afficher le message dans la bonne langue, plutôt que la page 404 générique de GitHub Pages.
+Since a language without a translation generates no page, accessing an untranslated URL (universe or character) triggers the native GitHub Pages 404 mechanism. A custom `404.md` file, at the site root, serves as the "unavailability message" (see "Multilingual" in `functional-specifications.md`): it detects the language from the prefix of the requested URL (`/fr/...` or not) to display the message in the right language, rather than the generic GitHub Pages 404 page.
 
-### Textes d'interface
+### UI strings
 
-Les textes d'interface (labels, messages dont le message d'indisponibilité, placeholder de recherche) sont centralisés dans `_data/ui.fr.yml` et `_data/ui.en.yml`. Ils sont distincts du contenu des univers et personnages, qui suit le format documenté dans `data-model.md`.
+UI strings (labels, messages including the unavailability message, search placeholder) are centralized in `_data/ui.fr.yml` and `_data/ui.en.yml`. They are distinct from universe and character content, which follows the format documented in `data-model.md`.
 
 ---
 
-## Validation des données
+## Data validation
 
-Un script vérifie, avant publication, que le contenu de tous les univers respecte les contraintes de validation de `data-model.md`. Il ne modifie rien : il rapporte les problèmes trouvés et échoue s'il y a au moins une erreur.
+A script checks, before publication, that the content of all universes complies with the validation constraints of `data-model.md`. It modifies nothing: it reports the problems found and fails if there is at least one error.
 
-- **Langage :** Ruby, déjà une dépendance du projet via Jekyll (pas de nouveau toolchain), et son parseur YAML natif (`require 'yaml'`, aucune gem supplémentaire).
-- **Emplacement :** `scripts/validate.rb`, exclu du build Jekyll (voir "Configuration").
-- **Invocation manuelle :** `ruby scripts/validate.rb`.
-- **Invocation en CI :** un workflow GitHub Actions (`.github/workflows/validate.yml`), déclenché sur chaque push et pull request, exécute le script et fait échouer la CI en cas d'erreur. Il ne remplace ni ne modifie le déploiement GitHub Pages natif (voir "Hébergement et déploiement"), qui reste inchangé : cette CI ne sert qu'à la validation.
-- **Sortie :** liste des problèmes trouvés (fichier concerné, règle, détail), classés en erreurs et avertissements. Code de sortie non nul s'il y a au moins une erreur ; les avertissements seuls ne le font pas échouer.
+- **Language:** Ruby, already a project dependency through Jekyll (no new toolchain), and its native YAML parser (`require 'yaml'`, no additional gem).
+- **Location:** `scripts/validate.rb`, excluded from the Jekyll build (see "Configuration").
+- **Manual invocation:** `ruby scripts/validate.rb`.
+- **CI invocation:** a GitHub Actions workflow (`.github/workflows/validate.yml`), triggered on every push and pull request, runs the script and fails the CI on error. It neither replaces nor modifies the native GitHub Pages deployment (see "Hosting and deployment"), which remains unchanged: this CI is only used for validation.
+- **Output:** list of problems found (file concerned, rule, detail), classified as errors and warnings. Non-zero exit code if there is at least one error; warnings alone do not make it fail.
 
-Règles vérifiées, dans l'ordre de "Contraintes et règles de validation" de `data-model.md`, plus une règle de format issue de ses "Conventions générales" :
+Rules checked, in the order of "Validation constraints and rules" in `data-model.md`, plus a format rule from its "General conventions":
 
-- *Format d'un slug* (Conventions générales) : erreur si un `slug` (nom de dossier d'univers, de fichier personnage ou de type de relation) contient autre chose que des minuscules ASCII et des tirets.
-- *Slug identique pour toutes les traductions d'une entité* et *slug de personnage unique au sein de son univers* : rien à vérifier, garanti par construction (le slug est le nom de fichier ; deux fichiers ne peuvent pas porter le même nom dans le même dossier).
-- *Personnage présent dans `characters.yml`* : erreur si un personnage (fichiers `characters/<slug>.*.md`) n'a pas d'entrée correspondante dans le `characters.yml` de son univers, ou si `characters.yml` contient une entrée dont le slug ne correspond à aucun personnage.
-- *Slug de type de relation unique globalement* : erreur si un même slug apparaît plus d'une fois entre `_data/relation-types.yml` et l'ensemble des `_data/<slug-universe>/additional-relation-types.yml`.
-- *Relation référence deux personnages existants du même univers* : erreur si `source-character` ou `target-character` ne correspond à aucun fichier de `characters/` dans cet univers.
-- *Personnage pas en relation avec lui-même* : erreur si `source-character` = `target-character`.
-- *Type de relation existant* : erreur si le `type` d'une relation n'est ni dans `relation-types.yml` ni dans le `additional-relation-types.yml` de l'univers.
-- *`reverse-label` cohérent avec `directed`* : erreur si absent alors que `directed: true`, ou présent alors que `directed: false`.
-- *Formes de `label`/`reverse-label` complètes* : erreur si un `label` (taxonomie commune ou extension locale) ne définit pas ses trois formes (`masculine`, `feminine`, `neutral`) pour une langue déclarée, ou si un `reverse-label` ne définit pas ses deux formes (`masculine`, `feminine`).
-- *Pas de relation dupliquée* : erreur si deux entrées partagent le même triplet (source, cible, type) ; pour un type non dirigé, `(A, B)` et `(B, A)` comptent comme la même paire.
-- *`lang` cohérent avec le nom de fichier* : erreur si `.fr.md` ne porte pas `lang: fr`, ou `.en.md` `lang: en`.
-- *`mosaic`/`graph` présents ensemble par langue* : erreur si l'un existe sans l'autre, pour une langue donnée d'un univers.
-- *Localisation de `metadata` cohérente avec la taxonomie* : erreur si une clé du front matter d'un personnage n'est pas déclarée `localized: true` dans `metadata-keys.yml` ou le `additional-metadata-keys.yml` de l'univers, ou si une clé déclarée `localized: true` apparaît dans `characters.yml` au lieu du front matter (et réciproquement pour une clé non localisée).
-- *Slug de clé de metadata unique globalement* : erreur si un même slug apparaît plus d'une fois entre `_data/metadata-keys.yml` et l'ensemble des `_data/<slug-universe>/additional-metadata-keys.yml`.
-- *Clé de metadata existante* : erreur si une clé de l'attribut `metadata` d'un personnage (dans `characters.yml` ou le front matter) n'est ni dans `metadata-keys.yml` ni dans le `additional-metadata-keys.yml` de l'univers.
-- *`label` complet pour une clé de metadata* : erreur si le `label` d'une clé de metadata (taxonomie commune ou extension locale) ne définit pas de valeur pour une langue déclarée.
-- *`gender` valide* : erreur si l'attribut `gender` d'un personnage, dans `characters.yml`, quand il est renseigné, n'est ni `masculine` ni `feminine`.
-- *Slug de groupe unique au sein de l'univers* : erreur si un même slug apparaît plus d'une fois dans `_data/<slug-universe>/groups.yml`.
-- *Groupe existant* : erreur si l'attribut `group` d'un personnage, dans `characters.yml`, ne correspond à aucun slug déclaré dans le `groups.yml` de son univers.
-- *`name` complet pour un groupe* : erreur si le `name` d'un groupe ne définit pas de valeur pour une langue déclarée par l'univers.
-- *Slug de type de source unique* : erreur si un même slug apparaît plus d'une fois dans `_data/source-types.yml`.
-- *`source-type` existant* : erreur si le `source-type` d'un univers, dans `_data/<slug-universe>/universe.yml`, ne correspond à aucun slug déclaré dans `_data/source-types.yml`.
-- *`label` complet pour un type de source* : erreur si le `label` d'un type de source ne définit pas de valeur pour une langue déclarée par le site.
+- *Slug format* (General conventions): error if a `slug` (universe folder name, character file name or relation type name) contains anything other than lowercase ASCII letters and hyphens.
+- *Same slug for all translations of an entity* and *character slug unique within its universe*: nothing to check, guaranteed by construction (the slug is the file name; two files cannot have the same name in the same folder).
+- *Character present in `characters.yml`*: error if a character (`characters/<slug>.*.md` files) has no matching entry in its universe's `characters.yml`, or if `characters.yml` contains an entry whose slug matches no character.
+- *Relation type slug globally unique*: error if the same slug appears more than once across `_data/relation-types.yml` and all `_data/<slug-universe>/additional-relation-types.yml` files.
+- *Relation references two existing characters of the same universe*: error if `source-character` or `target-character` matches no file in `characters/` in that universe.
+- *Character not related to itself*: error if `source-character` = `target-character`.
+- *Existing relation type*: error if a relation's `type` is neither in `relation-types.yml` nor in the universe's `additional-relation-types.yml`.
+- *`reverse-label` consistent with `directed`*: error if missing while `directed: true`, or present while `directed: false`.
+- *Complete `label`/`reverse-label` forms*: error if a `label` (common taxonomy or local extension) does not define its three forms (`masculine`, `feminine`, `neutral`) for a declared language, or if a `reverse-label` does not define its two forms (`masculine`, `feminine`).
+- *No duplicate relation*: error if two entries share the same (source, target, type) triplet; for an undirected type, `(A, B)` and `(B, A)` count as the same pair.
+- *`lang` consistent with the file name*: error if `.fr.md` does not have `lang: fr`, or `.en.md` `lang: en`.
+- *`mosaic`/`graph` present together per language*: error if one exists without the other, for a given language of a universe.
+- *`metadata` localization consistent with the taxonomy*: error if a key in a character's front matter is not declared `localized: true` in `metadata-keys.yml` or the universe's `additional-metadata-keys.yml`, or if a key declared `localized: true` appears in `characters.yml` instead of the front matter (and conversely for a non-localized key).
+- *Metadata key slug globally unique*: error if the same slug appears more than once across `_data/metadata-keys.yml` and all `_data/<slug-universe>/additional-metadata-keys.yml` files.
+- *Existing metadata key*: error if a key of a character's `metadata` attribute (in `characters.yml` or the front matter) is neither in `metadata-keys.yml` nor in the universe's `additional-metadata-keys.yml`.
+- *Complete `label` for a metadata key*: error if the `label` of a metadata key (common taxonomy or local extension) does not define a value for a declared language.
+- *Valid `gender`*: error if a character's `gender` attribute, in `characters.yml`, when set, is neither `masculine` nor `feminine`.
+- *Group slug unique within the universe*: error if the same slug appears more than once in `_data/<slug-universe>/groups.yml`.
+- *Existing group*: error if a character's `group` attribute, in `characters.yml`, matches no slug declared in its universe's `groups.yml`.
+- *Complete `name` for a group*: error if a group's `name` does not define a value for a language declared by the universe.
+- *Source type slug unique*: error if the same slug appears more than once in `_data/source-types.yml`.
+- *Existing `source-type`*: error if a universe's `source-type`, in `_data/<slug-universe>/universe.yml`, matches no slug declared in `_data/source-types.yml`.
+- *Complete `label` for a source type*: error if a source type's `label` does not define a value for a language declared by the site.
 
 ---
 
 ## Performance
 
-- Images de couverture et portraits en lazy loading (voir `home.md`, `universe-home.md`) via l'attribut natif `loading="lazy"`, sans bibliothèque dédiée.
-- D3.js chargé uniquement sur les pages Vue Graphe qui en ont besoin.
-- JavaScript non bloquant (`defer` sur tous les scripts).
-- Images optimisées à l'ajout de contenu : JPEG encodé en 4:2:0 (sous-échantillonnage chroma standard web), qualité ~82, progressif, table de Huffman optimisée ; PNG recompressé sans perte. Dimensions au plus proche des minimums recommandés dans `style-guide.md` plutôt que livrées surdimensionnées par rapport à leur usage réel (ex : un logo de groupe n'est jamais affiché à plus de quelques dizaines de pixels). Pas de WebP : le format JPEG/PNG est imposé par `data-model.md` et `style-guide.md`.
-- `rel="preconnect"` sur Google Fonts, si une police externe est retenue dans `style-guide.md`.
-- Pas de cookies, pas de tracking, pas d'analytics.
+- Cover images and portraits lazy loaded (see `home.md`, `universe-home.md`) via the native `loading="lazy"` attribute, without a dedicated library.
+- D3.js loaded only on the Graph view pages that need it.
+- Non-blocking JavaScript (`defer` on all scripts).
+- Images optimized when adding content: JPEG encoded in 4:2:0 (standard web chroma subsampling), quality ~82, progressive, optimized Huffman table; PNG losslessly recompressed. Dimensions as close as possible to the recommended minimums in `style-guide.md` rather than delivered oversized relative to their actual use (e.g. a group logo is never displayed at more than a few dozen pixels). No WebP: the JPEG/PNG format is required by `data-model.md` and `style-guide.md`.
+- `rel="preconnect"` on Google Fonts, if an external font is selected in `style-guide.md`.
+- No cookies, no tracking, no analytics.
 
 ---
 
-## Accessibilité
+## Accessibility
 
-- **Navigateurs cibles :** dernières versions stables de Chrome, Firefox, Safari, Edge. Pas de support IE.
-- Couples texte/fond conformes au contraste WCAG AA (4,5:1 pour le texte courant, 3:1 pour le grand texte et les éléments d'UI), y compris pour les couples de la palette de marque : c'est pour cette raison que `--sg-light-grey` est réservé aux bordures dans `style-guide.md`, son contraste sur blanc ne le permettant pas comme texte.
-- Modale (fiche personnage) : focus piégé à l'intérieur pendant son ouverture, fermeture au clavier (touche Échap, voir `character-sheet.md`), attributs ARIA de dialogue (`role="dialog"`, `aria-modal`), portés nativement par le composant modale de Bootstrap.
-- Texte alternatif sur les images (portraits, couvertures).
-- HTML sémantique pour la structure des pages et des listes (mosaïques, listes de relations).
-- Limite connue : le graphe interactif (SVG généré par D3.js) n'est pas nativement navigable au clavier ni par lecteur d'écran ; ce point reste à traiter spécifiquement si besoin, au-delà de cette version du site.
+- **Target browsers:** latest stable versions of Chrome, Firefox, Safari, Edge. No IE support.
+- Text/background pairs compliant with WCAG AA contrast (4.5:1 for body text, 3:1 for large text and UI elements), including for brand palette pairs: this is why `--sg-light-grey` is reserved for borders in `style-guide.md`, as its contrast on white does not allow it as text.
+- Modal (character sheet): focus trapped inside while it is open, keyboard close (Escape key, see `character-sheet.md`), dialog ARIA attributes (`role="dialog"`, `aria-modal`), natively provided by the Bootstrap modal component.
+- Alternative text on images (portraits, covers).
+- Semantic HTML for the structure of pages and lists (mosaics, relation lists).
+- Known limitation: the interactive graph (SVG generated by D3.js) is not natively navigable by keyboard or screen reader; this point remains to be addressed specifically if needed, beyond this version of the site.
 
 ---
 
 ## SEO
 
-- Rendu statique : chaque page existe indépendamment au moment du crawl, sans dépendre de JavaScript pour son contenu principal (à l'exception du graphe interactif lui-même et de la modale).
-- Chaque univers et chaque personnage a sa propre URL indexable (voir "Structure des URLs").
-- Liens `hreflang` / alternate entre les versions FR et EN d'une même page.
-- `jekyll-seo-tag` (plugin supporté nativement par GitHub Pages) pour les balises meta et Open Graph de base.
-- `jekyll-sitemap` (plugin supporté nativement par GitHub Pages) pour un `sitemap.xml` généré automatiquement, utile vu le nombre de pages générées (univers, personnages, deux langues). Le plugin ne permettant pas d'y ajouter les alternates `hreflang` par URL, un `sitemap.xml` propre au projet (racine du dépôt) remplace celui du plugin (mécanisme natif du plugin, qui ne génère le sien qu'en l'absence d'un fichier existant) pour les y inclure ; le plugin reste actif pour `robots.txt`.
-- Le sitemap inclut, via l'extension Google Image (`xmlns:image`), la couverture de chaque page Vue Mosaïque, le portrait de chaque fiche personnage, et le logo du site sur l'accueil. Les logos de groupe et le placeholder de couverture en sont exclus.
-- Un bloc JSON-LD `ImageObject` (distinct de celui généré par `jekyll-seo-tag`) est ajouté sur ces mêmes pages, enrichi de l'auteur, de la mention de crédit, du copyright et de la licence de l'image (voir `_data/<slug-universe>/image-credits.yml` dans `data-model.md`).
+- Static rendering: each page exists independently at crawl time, without depending on JavaScript for its main content (except for the interactive graph itself and the modal).
+- Each universe and each character has its own indexable URL (see "URL structure").
+- `hreflang` / alternate links between the FR and EN versions of the same page.
+- `jekyll-seo-tag` (plugin natively supported by GitHub Pages) for basic meta and Open Graph tags.
+- `jekyll-sitemap` (plugin natively supported by GitHub Pages) for an automatically generated `sitemap.xml`, useful given the number of generated pages (universes, characters, two languages). Since the plugin does not allow adding per-URL `hreflang` alternates, a project-specific `sitemap.xml` (repository root) replaces the plugin's one (native plugin mechanism, which only generates its own when no file exists) to include them; the plugin remains active for `robots.txt`.
+- The sitemap includes, via the Google Image extension (`xmlns:image`), the cover of each Mosaic view page, the portrait of each character sheet, and the site logo on the home page. Group logos and the cover placeholder are excluded.
+- A JSON-LD `ImageObject` block (distinct from the one generated by `jekyll-seo-tag`) is added on these same pages, enriched with the image's author, credit text, copyright and license (see `_data/<slug-universe>/image-credits.yml` in `data-model.md`).
 
 ---
 
-## Conventions de nommage
+## Naming conventions
 
-| Élément | Convention | Exemple |
+| Element | Convention | Example |
 |---|---|---|
-| Slugs (univers, personnage, type de relation) | kebab-case anglais | `renaissance-artists`, `parent-of` |
-| Fichiers | kebab-case | `graph.js`, `main.css` |
-| Classes CSS custom | `.sg-` + kebab-case | `.sg-card`, `.sg-modal` |
-| Variables JS | camelCase | `loadGraph()`, `characterModal` |
-| Constantes JS | UPPER_SNAKE_CASE | `DEFAULT_LANG` |
+| Slugs (universe, character, relation type) | English kebab-case | `renaissance-artists`, `parent-of` |
+| Files | kebab-case | `graph.js`, `main.css` |
+| Custom CSS classes | `.sg-` + kebab-case | `.sg-card`, `.sg-modal` |
+| JS variables | camelCase | `loadGraph()`, `characterModal` |
+| JS constants | UPPER_SNAKE_CASE | `DEFAULT_LANG` |
 
 ---
 
-## CSS : conventions
+## CSS: conventions
 
-- Préfixe `.sg-` pour toutes les classes custom.
-- Un seul fichier global `assets/css/main.css`.
-- Variables CSS custom pour les valeurs de design (couleurs, typographie, espacements), définies dans `style-guide.md`.
-- Pas de SASS, pas de LESS.
+- `.sg-` prefix for all custom classes.
+- A single global file `assets/css/main.css`.
+- Custom CSS properties for design values (colors, typography, spacing), defined in `style-guide.md`.
+- No SASS, no LESS.
 
 ---
 
-## JavaScript : conventions
+## JavaScript: conventions
 
-- Vanilla JS ES6+, `defer` sur tous les scripts.
-- `main.js` : sélecteur de langue (détection initiale, mémorisation via `localStorage`), utilitaires partagés.
-- `graph.js` : rendu D3 du graphe interactif, chargé uniquement sur les pages Vue Graphe.
-- `character-modal.js` : ouverture/fermeture de la modale fiche personnage, synchronisation d'URL.
-- `search-filter.js` : recherche et filtres, chargé sur les pages Vue Mosaïque et Vue Graphe.
-- Nommage :
-  - Variables et fonctions : `camelCase`
-  - Constantes : `UPPER_SNAKE_CASE`
-  - Fichiers : `kebab-case`
+- Vanilla JS ES6+, `defer` on all scripts.
+- `main.js`: language selector (initial detection, storage via `localStorage`), shared utilities.
+- `graph.js`: D3 rendering of the interactive graph, loaded only on Graph view pages.
+- `character-modal.js`: open/close of the character sheet modal, URL sync.
+- `search-filter.js`: search and filters, loaded on Mosaic view and Graph view pages.
+- Naming:
+  - Variables and functions: `camelCase`
+  - Constants: `UPPER_SNAKE_CASE`
+  - Files: `kebab-case`
