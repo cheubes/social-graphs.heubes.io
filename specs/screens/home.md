@@ -1,33 +1,33 @@
-# Écran : accueil du site
+# Screen: site home
 
-## Objectif
+## Goal
 
-Permettre au visiteur de découvrir les univers disponibles et d'accéder à celui qui l'intéresse.
+Let the visitor discover the available universes and access the one that interests them.
 
-## Contenu et structure
+## Content and structure
 
-- En-tête : logo et tagline du site, sélecteur de langue (voir `functional-specifications.md` et `style-guide.md`).
-- Une section par type de source (voir "Type de source" dans `data-model.md`) ayant au moins un univers disponible dans la langue courante, titrée avec le `label` de ce type dans la langue courante ; une section sans univers disponible dans cette langue n'apparaît pas.
-  - Ordre des sections : ordre de déclaration des types de source dans `_data/source-types.yml`, pas un tri alphabétique (qui varierait d'une langue à l'autre selon le `label`).
-  - À l'intérieur d'une section, mosaïque de tuiles, une tuile par univers de ce type de source disponible dans la langue courante (un univers non traduit dans cette langue n'apparaît pas, voir "Multilingue" dans `functional-specifications.md`).
-- Chaque tuile affiche l'image de couverture, le `title`, la `description` de l'univers, et une mention de crédit de la couverture si `cover-source` est renseigné (voir `data-model.md`).
-  - Toutes les tuiles ont exactement la même hauteur (voir `style-guide.md`). Le `title` et la `description` ne sont pas tronqués : si leur contenu dépasse la hauteur disponible sous la couverture, cette zone devient défilable, la couverture restant fixe.
-  - Le crédit de la couverture, si renseigné, s'affiche en fin de contenu de la tuile, aligné à droite (voir `style-guide.md`) : un lien qui ouvre `cover-source` dans un nouvel onglet si c'est une URL, ou une mention indiquant que la couverture est générée par IA si `cover-source` vaut `ai-generated` (voir "Univers" dans `data-model.md`).
-  - L'image de couverture se charge en lazy loading (chargée uniquement à l'approche de la zone visible de l'écran), pour limiter le poids initial de la page ; son traitement précis relève de `technical-specifications.md`.
-- Dans chaque section, les tuiles sont triées par ordre alphabétique de `title`, dans la langue courante.
-- Pied de page : badge Creative Commons et mention de réalisation, communs à toutes les pages (voir `style-guide.md`).
+- Header: site logo and tagline, language selector (see `functional-specifications.md` and `style-guide.md`).
+- One section per source type (see "Source type" in `data-model.md`) having at least one universe available in the current language, titled with that type's `label` in the current language; a section with no universe available in that language does not appear.
+  - Section order: declaration order of the source types in `_data/source-types.yml`, not an alphabetical sort (which would vary from one language to another depending on the `label`).
+  - Within a section, a mosaic of cards, one card per universe of that source type available in the current language (a universe not translated into that language does not appear, see "Multilingual" in `functional-specifications.md`).
+- Each card displays the universe's cover image, `title`, `description`, and a credit for the cover if `cover-source` is set (see `data-model.md`).
+  - All cards have exactly the same height (see `style-guide.md`). The `title` and `description` are not truncated: if their content exceeds the height available below the cover, that area becomes scrollable, the cover staying fixed.
+  - The cover credit, if set, is displayed at the end of the card's content, right-aligned (see `style-guide.md`): a link that opens `cover-source` in a new tab if it is a URL, or a note stating that the cover is AI-generated if `cover-source` is `ai-generated` (see "Universe" in `data-model.md`).
+  - The cover image is lazy loaded (loaded only when approaching the visible area of the screen), to limit the page's initial weight; its exact handling belongs to `technical-specifications.md`.
+- Within each section, cards are sorted alphabetically by `title`, in the current language.
+- Footer: Creative Commons badge and authorship credit, common to all pages (see `style-guide.md`).
 
 ## Interactions
 
-- Clic sur une tuile : navigue vers la page d'accueil de l'univers correspondant.
-- Changement de langue via le sélecteur : réaffiche la mosaïque dans la langue choisie, avec les sections, le tri et la liste d'univers recalculés pour cette langue.
+- Click on a card: navigates to the home page of the corresponding universe.
+- Language change via the selector: redisplays the mosaic in the chosen language, with the sections, sort and list of universes recomputed for that language.
 
-## États (chargement, erreur, vide)
+## States (loading, error, empty)
 
-- Vide : aucun univers disponible dans la langue courante (aucune section à afficher). Un message l'indique ; s'il existe des univers dans l'autre langue, le message invite à changer de langue.
-- Erreur : image de couverture manquante ou en échec de chargement pour une tuile → image de remplacement générique, le reste de la tuile s'affiche normalement.
-- Chargement : la liste des univers elle-même n'a pas d'état de chargement propre si la page est générée statiquement (à revoir si `technical-specifications.md` retient un rendu dynamique) ; les images de couverture, elles, se chargent individuellement en lazy loading, indépendamment du mode de rendu de la page.
+- Empty: no universe available in the current language (no section to display). A message says so; if universes exist in the other language, the message invites the visitor to switch language.
+- Error: cover image missing or failing to load for a card → generic placeholder image, the rest of the card displays normally.
+- Loading: the list of universes itself has no loading state of its own if the page is statically generated (to be revisited if `technical-specifications.md` opts for dynamic rendering); the cover images, however, are lazy loaded individually, regardless of the page's rendering mode.
 
 ## Responsive
 
-Au sein de chaque section, la mosaïque s'adapte à la largeur de l'écran (une colonne sur mobile, plusieurs colonnes au-delà), sans nombre de colonnes fixe imposé ici.
+Within each section, the mosaic adapts to the screen width (one column on mobile, several columns beyond), with no fixed number of columns imposed here.

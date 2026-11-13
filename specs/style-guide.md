@@ -1,17 +1,17 @@
-# Charte graphique
+# Style guide
 
-## Couleurs
+## Colors
 
-### Palette de marque
+### Brand palette
 
-| Rôle | Variable | Hex |
+| Role | Variable | Hex |
 |---|---|---|
-| Couleur principale, en-tête, accents forts | `--sg-blue` | `#2C374C` |
-| Accents secondaires, survols, mise en évidence | `--sg-gold` | `#C7B299` |
-| Bordures, éléments décoratifs (pas de texte, contraste insuffisant : voir `technical-specifications.md` § Accessibilité) | `--sg-light-grey` | `#ACB2B8` |
-| Corps de texte courant | `--sg-grey` | `#666666` |
-| Titres, textes forts | `--sg-dark-grey` | `#444444` |
-| Fond général | `--sg-white` | `#FFFFFF` |
+| Primary color, header, strong accents | `--sg-blue` | `#2C374C` |
+| Secondary accents, hovers, highlighting | `--sg-gold` | `#C7B299` |
+| Borders, decorative elements (no text, insufficient contrast: see `technical-specifications.md` § Accessibility) | `--sg-light-grey` | `#ACB2B8` |
+| Regular body text | `--sg-grey` | `#666666` |
+| Headings, strong text | `--sg-dark-grey` | `#444444` |
+| General background | `--sg-white` | `#FFFFFF` |
 
 ```css
 :root {
@@ -24,96 +24,96 @@
 }
 ```
 
-Préfixe `--sg-`, en écho au préfixe `.sg-` des classes (voir `technical-specifications.md`), pour ne pas se confondre avec les variables `--bs-*` de Bootstrap.
+`--sg-` prefix, echoing the `.sg-` class prefix (see `technical-specifications.md`), so as not to be confused with Bootstrap's `--bs-*` variables.
 
-### Palette du graphe (types de relation)
+### Graph palette (relation types)
 
-La palette de marque n'a pas vocation à coder des catégories : `--sg-blue` et `--sg-gold` sont les deux seuls accents, les gris sont pensés pour le texte et les bordures. Le graphe utilise donc une palette catégorielle dédiée, distincte de la charte, choisie pour rester lisible en cas de daltonisme plutôt qu'assemblée à l'œil.
+The brand palette is not meant to encode categories: `--sg-blue` and `--sg-gold` are the only two accents, and the greys are designed for text and borders. The graph therefore uses a dedicated categorical palette, separate from the style guide, chosen to remain readable for colorblind users rather than assembled by eye.
 
-| Ordre | Teinte | Hex |
+| Order | Hue | Hex |
 |---|---|---|
-| 1 | Bleu | `#2a78d6` |
+| 1 | Blue | `#2a78d6` |
 | 2 | Orange | `#eb6834` |
 | 3 | Turquoise | `#1baf7a` |
-| 4 | Jaune | `#eda100` |
+| 4 | Yellow | `#eda100` |
 | 5 | Magenta | `#e87ba4` |
-| 6 | Vert | `#008300` |
-| 7 | Violet | `#4a3aa7` |
-| 8 | Rouge | `#e34948` |
+| 6 | Green | `#008300` |
+| 7 | Purple | `#4a3aa7` |
+| 8 | Red | `#e34948` |
 
-L'assignation couleur → type de relation se fait par univers (la taxonomie disponible n'étant pas la même partout), dans l'ordre alphabétique du `slug` du type, pour un résultat stable et reproductible d'un rendu à l'autre.
+Colors are assigned to relation types per universe (since the available taxonomy is not the same everywhere), in alphabetical order of the type's `slug`, for a stable and reproducible result from one render to the next.
 
-Cette palette est validée pour la lecture en daltonisme quand les couleurs apparaissent dans un ordre fixe et que seules les voisines se touchent (ex : une légende, un empilement). Un graphe en disposition dynamique n'a pas cet ordre : deux arêtes de n'importe quelle couleur peuvent se croiser n'importe où. Dans ce cas plus strict, seules les trois premières teintes (bleu, orange, turquoise) restent garanties distinguables deux à deux. Au-delà de trois types affichés simultanément, la distinction s'appuie aussi sur :
+This palette is validated for colorblind reading when the colors appear in a fixed order and only neighbors touch (e.g. a legend, a stack). A graph with a dynamic layout has no such order: two edges of any color can cross anywhere. In this stricter case, only the first three hues (blue, orange, turquoise) remain guaranteed pairwise distinguishable. Beyond three types displayed at once, distinction also relies on:
 
-- une légende couleur → type, affichée en permanence sur la Vue Graphe : c'est la liste des filtres de type de relation de `search-filter.md`, chaque filtre portant déjà la couleur de son type (voir `graph-view.md`) ;
-- le survol ou le clic d'une arête, qui affiche déjà son type en toutes lettres (voir `graph-view.md`) ;
-- le sens visuel (flèche ou non) des types dirigés, indépendant de la couleur ;
-- le filtre par type de `search-filter.md`, qui permet d'isoler un type à la fois.
+- a color → type legend, permanently displayed on the Graph view: it is the list of relation type filters from `search-filter.md`, each filter already carrying its type's color (see `graph-view.md`);
+- hovering or clicking an edge, which already displays its type in full (see `graph-view.md`);
+- the visual direction (arrow or not) of directed types, independent of color;
+- the type filter from `search-filter.md`, which isolates one type at a time.
 
-Chiffres établis avec la méthode et la palette de référence du skill dataviz (surface `#fcfcfb`). Vérifié sur notre fond `#FFFFFF` : le turquoise, le jaune et le magenta (teintes 3, 4, 5) tombent sous 3:1 comme simple trait fin sur blanc, contre une surface plus grise où ils passaient. Un trait un peu plus épais que la normale pour ces trois teintes en particulier compense en partie ; la légende et le survol (ci-dessus) restent la garantie principale de lisibilité, indépendamment de l'épaisseur du trait.
+Figures established with the dataviz skill's method and reference palette (surface `#fcfcfb`). Checked against our `#FFFFFF` background: turquoise, yellow and magenta (hues 3, 4, 5) fall below 3:1 as a plain thin stroke on white, whereas they passed against a greyer surface. A slightly thicker stroke than normal for these three hues in particular partly compensates; the legend and hover (above) remain the main readability guarantee, regardless of stroke thickness.
 
-### Couleur de groupe
+### Group color
 
-La couleur d'un groupe de personnages (voir "Groupe" dans `data-model.md`) est une donnée de contenu, pas un ingrédient de la charte graphique : comme les images, elle est choisie librement à l'ajout du contenu, propre à chaque groupe, sans palette imposée ni contrainte de contraste garantie. Elle sert uniquement de bordure décorative (tuile, nœud du graphe, modale ; voir "Tuiles" et "Modale" ci-dessous), jamais de fond de texte.
+The color of a character group (see "Group" in `data-model.md`) is content data, not a style guide ingredient: like images, it is chosen freely when adding content, specific to each group, with no imposed palette and no guaranteed contrast constraint. It is only used as a decorative border (card, graph node, modal; see "Cards" and "Modal" below), never as a text background.
 
-## Typographie
+## Typography
 
-- **Police** : Ubuntu (Google Fonts), graisses 300 / 400 / 500 / 700.
-- `font-family: "Ubuntu", sans-serif;` sur `body`.
+- **Font**: Ubuntu (Google Fonts), weights 300 / 400 / 500 / 700.
+- `font-family: "Ubuntu", sans-serif;` on `body`.
 
-| Usage | Graisse | Couleur |
+| Usage | Weight | Color |
 |---|---|---|
-| Titres (`h1`-`h3`) | 700 | `--sg-dark-grey` |
-| Sous-titres, libellés forts | 500 | `--sg-dark-grey` |
-| Corps de texte | 400 | `--sg-grey` |
-| Texte secondaire, légendes, métadonnées | 300 | `--sg-grey` |
+| Headings (`h1`-`h3`) | 700 | `--sg-dark-grey` |
+| Subheadings, strong labels | 500 | `--sg-dark-grey` |
+| Body text | 400 | `--sg-grey` |
+| Secondary text, captions, metadata | 300 | `--sg-grey` |
 
-L'échelle de tailles (`h1` à `h6`, corps, petit texte) reprend celle de Bootstrap par défaut, sans surcharge, pour rester cohérente avec le reste des composants.
+The size scale (`h1` to `h6`, body, small text) uses Bootstrap's default, without overrides, to stay consistent with the rest of the components.
 
-## Espacements et grille
+## Spacing and grid
 
-Pas de grille ni d'échelle d'espacement custom : la grille et les classes utilitaires d'espacement de Bootstrap 5.3 (`container`, `row`/`col-*`, `m-*`/`p-*`) sont utilisées telles quelles (voir `technical-specifications.md`).
+No custom grid or spacing scale: Bootstrap 5.3's grid and spacing utility classes (`container`, `row`/`col-*`, `m-*`/`p-*`) are used as is (see `technical-specifications.md`).
 
-## Composants UI de base
+## Basic UI components
 
-### En-tête
+### Header
 
-- **Accueil et pages génériques** (ex : message d'indisponibilité) :
-  - **Gauche** : logo (`assets/img/logo.png`, voir "Images"), puis tagline du site sur l'accueil.
-  - **Droite** : sélecteur de langue.
-- **Pages univers** (Vue Mosaïque, Vue Graphe, fiche personnage) :
-  - **Gauche** : couverture de l'univers courant (coins arrondis, voir "Images"), puis son `title` avec le switcher Vue Mosaïque / Vue Graphe (voir ci-dessous) juste en dessous. Ni `source-type` ni `description` de l'univers ne sont repris dans l'en-tête.
-  - **Droite** : logo du site, en lien vers l'accueil, puis sélecteur de langue.
-- Sélecteur de langue : deux drapeaux 🇫🇷 / 🇬🇧, chacun avec un `aria-label` explicite ("Français" / "English") puisqu'un emoji seul n'est pas toujours annoncé de façon fiable par un lecteur d'écran.
-- Fond `--sg-blue`, texte `--sg-white`, bordure basse `--sg-gold`.
-- En-tête collant (`position: sticky`) en haut de page, pour rester accessible sur les pages longues (Vue Mosaïque, Vue Graphe), en écho au pied de page fixe.
-- Reste au-dessus de la modale fiche personnage (voir `character-sheet.md`) dans l'empilement visuel, pour que le sélecteur de langue reste utilisable modale ouverte.
+- **Home and generic pages** (e.g. unavailability message):
+  - **Left**: logo (`assets/img/logo.png`, see "Images"), then the site tagline on the home page.
+  - **Right**: language selector.
+- **Universe pages** (Mosaic view, Graph view, character sheet):
+  - **Left**: cover of the current universe (rounded corners, see "Images"), then its `title` with the Mosaic view / Graph view switcher (see below) just underneath. Neither the universe's `source-type` nor its `description` is shown in the header.
+  - **Right**: site logo, linking to the home page, then language selector.
+- Language selector: two flags 🇫🇷 / 🇬🇧, each with an explicit `aria-label` ("Français" / "English") since an emoji alone is not always reliably announced by a screen reader.
+- `--sg-blue` background, `--sg-white` text, `--sg-gold` bottom border.
+- Sticky header (`position: sticky`) at the top of the page, to remain accessible on long pages (Mosaic view, Graph view), echoing the fixed footer.
+- Stays above the character sheet modal (see `character-sheet.md`) in the visual stacking order, so that the language selector remains usable while the modal is open.
 
-### Pied de page
+### Footer
 
-- Fixe (`position: fixed`, bas de l'écran) : une hauteur doit donc être réservée en bas de chaque page pour ne rien recouvrir, y compris la Vue Graphe (voir `graph-view.md`). Hauteur portée par une variable, ex. `--sg-footer-height`.
-- **Gauche** : badge Creative Commons. Quatre icônes Font Awesome Brands (`fa-creative-commons`, `fa-creative-commons-by`, `fa-creative-commons-nc-eu`, `fa-creative-commons-sa`) suivies du texte "CC BY-NC-SA 4.0", lien vers `https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr` ou `.../deed.en` selon la langue courante.
-- **Droite** : mention "Réalisée par Christophe Heubès" (FR) / "Created by Christophe Heubès" (EN), le nom en lien vers `https://christophe.heubes.org`.
-- Fond `--sg-dark-grey`, texte `--sg-white`, bordure haute `--sg-light-grey`, liens en `--sg-gold` au survol.
+- Fixed (`position: fixed`, bottom of the screen): a height must therefore be reserved at the bottom of every page so that nothing is covered, including the Graph view (see `graph-view.md`). Height carried by a variable, e.g. `--sg-footer-height`.
+- **Left**: Creative Commons badge. Four Font Awesome Brands icons (`fa-creative-commons`, `fa-creative-commons-by`, `fa-creative-commons-nc-eu`, `fa-creative-commons-sa`) followed by the text "CC BY-NC-SA 4.0", linking to `https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr` or `.../deed.en` depending on the current language.
+- **Right**: credit "Réalisée par Christophe Heubès" (FR) / "Created by Christophe Heubès" (EN), the name linking to `https://christophe.heubes.org`.
+- `--sg-dark-grey` background, `--sg-white` text, `--sg-light-grey` top border, links in `--sg-gold` on hover.
 
-### Titre de section (accueil)
+### Section title (home)
 
-- Un titre par section de l'accueil (voir "Type de source" dans `data-model.md` et `home.md`), au-dessus de la mosaïque de tuiles du type de source correspondant.
-- `h2`, style repris de l'échelle typographique standard (voir "Typographie" ci-dessus), sans surcharge de couleur ou de graisse propre.
+- One title per home page section (see "Source type" in `data-model.md` and `home.md`), above the card mosaic of the corresponding source type.
+- `h2`, style taken from the standard typographic scale (see "Typography" above), with no specific color or weight override.
 
-### Tuiles (mosaïques)
+### Cards (mosaics)
 
-- Carte Bootstrap : image (couverture ou portrait) en lazy loading (voir `home.md`, `universe-home.md`), `title`/`character-name` en titre, `description` en corps (tronquée, sauf tuile univers de l'accueil, voir ci-dessous).
-- Fond `--sg-white`, titre `--sg-dark-grey`, texte `--sg-grey` justifié, bordure `--sg-light-grey`.
-- Survol : légère élévation (ombre) et bordure `--sg-gold`.
-- Tuile univers (accueil, voir `home.md`) uniquement : hauteur fixe, identique pour toutes les tuiles (couverture proportionnée à son ratio fixe, voir "Images", suivie d'une zone de texte à hauteur fixe pour le `title` et la `description`). Le `title` reste fixe en haut de cette zone ; en dessous, seule la `description` (avec la mention de crédit de la couverture, voir ci-dessous) défile si son contenu dépasse la hauteur disponible. La couverture au-dessus reste elle aussi fixe, hors du défilement. Mention de crédit de la couverture (`cover-source`, si renseigné, voir `data-model.md`) : texte secondaire italique en fin de contenu de cette zone, aligné à droite (même traitement que la mention de source du portrait de la fiche personnage, voir "Modale" ci-dessous) ; si c'est une URL, un lien suit la règle des liens de la modale ; si c'est la valeur spéciale `ai-generated`, texte simple sans lien.
-- Tuile personnage (voir `universe-home.md`) uniquement : hauteur fixe, identique pour toutes les tuiles (portrait proportionné à son ratio fixe, voir "Images", suivi d'une zone de texte à hauteur fixe pour le `character-name` et la `description`). Contrairement à la tuile univers ci-dessus, cette zone n'est pas défilable : la `description` y est tronquée dès que son contenu dépasse la hauteur disponible, à une limite de mot (jamais au milieu d'un mot), la marque de troncature ("...") étant précédée d'une espace insécable. Bordure de 10px entre le portrait et le corps de la tuile (nom, description), de la couleur du groupe d'appartenance du personnage si renseigné (voir "Groupe" dans `data-model.md`), blanche sinon ; logo de ce groupe, si renseigné, affiché dans le coin en bas à droite de la tuile.
+- Bootstrap card: image (cover or portrait) lazy-loaded (see `home.md`, `universe-home.md`), `title`/`character-name` as heading, `description` as body (truncated, except for the home page universe card, see below).
+- `--sg-white` background, `--sg-dark-grey` heading, justified `--sg-grey` text, `--sg-light-grey` border.
+- Hover: slight elevation (shadow) and `--sg-gold` border.
+- Universe card (home page, see `home.md`) only: fixed height, identical for all cards (cover sized to its fixed ratio, see "Images", followed by a fixed-height text area for the `title` and the `description`). The `title` stays fixed at the top of this area; below it, only the `description` (with the cover credit, see below) scrolls if its content exceeds the available height. The cover above also stays fixed, outside the scrolling. Cover credit (`cover-source`, if set, see `data-model.md`): italic secondary text at the end of this area's content, right-aligned (same treatment as the portrait source credit of the character sheet, see "Modal" below); if it is a URL, a link follows the modal's link rule; if it is the special value `ai-generated`, plain text with no link.
+- Character card (see `universe-home.md`) only: fixed height, identical for all cards (portrait sized to its fixed ratio, see "Images", followed by a fixed-height text area for the `character-name` and the `description`). Unlike the universe card above, this area does not scroll: the `description` is truncated as soon as its content exceeds the available height, at a word boundary (never mid-word), the truncation mark ("...") being preceded by a non-breaking space. 10px border between the portrait and the card body (name, description), in the color of the character's group if set (see "Group" in `data-model.md`), white otherwise; that group's logo, if set, displayed in the bottom-right corner of the card.
 
-### Nœud du graphe
+### Graph node
 
-- Taille proportionnelle au nombre de connexions du personnage (voir `graph-view.md`), pour faire ressortir les personnages principaux de l'univers : cinq paliers (quintiles), calculés sur la distribution du nombre de connexions de l'ensemble des personnages affichés, aux 20e, 40e, 60e et 80e percentiles.
+- Size proportional to the character's number of connections (see `graph-view.md`), to make the universe's main characters stand out: five tiers (quintiles), computed over the distribution of the number of connections of all displayed characters, at the 20th, 40th, 60th and 80th percentiles.
 
-| Palier | Percentile | Rayon |
+| Tier | Percentile | Radius |
 |---|---|---|
 | 1 | 0-20 | 16px |
 | 2 | 20-40 | 20px |
@@ -121,56 +121,56 @@ Pas de grille ni d'échelle d'espacement custom : la grille et les classes utili
 | 4 | 60-80 | 30px |
 | 5 | 80-100 | 38px |
 
-- Sous 15 personnages affichés, l'échantillon est trop réduit pour des percentiles fiables (paliers vides ou seuils confondus) : tous les nœuds partagent alors un rayon fixe de 24px.
-- Le logo de groupe (voir "Couleur de groupe" ci-dessus et "Groupe" dans `data-model.md`), affiché en bas à droite du nœud, garde ses proportions actuelles par rapport au nœud (rayon et décalage du centre) quel que soit le palier.
+- Below 15 displayed characters, the sample is too small for reliable percentiles (empty tiers or merged thresholds): all nodes then share a fixed 24px radius.
+- The group logo (see "Group color" above and "Group" in `data-model.md`), displayed at the bottom right of the node, keeps its current proportions relative to the node (radius and offset from the center) regardless of the tier.
 
-### Modale (fiche personnage)
+### Modal (character sheet)
 
-- Modale Bootstrap standard. Fond `--sg-white`, `character-name` en titre `--sg-dark-grey`, corps `--sg-grey` justifié, libellés de relation `--sg-blue`.
-- Liens de la fiche (personnage lié, lien externe, source du portrait) : `--sg-gold` de base, `--sg-grey` au survol, jamais soulignés. Le lien externe inclut son icône (voir "Iconographie").
-- Mention de source du portrait (`portrait-source`, si renseigné) : texte secondaire italique en fin de fiche, aligné à droite (graisse 300, `--sg-grey`, voir "Typographie") ; si c'est une URL, un lien suit la règle ci-dessus ; si c'est la valeur spéciale `ai-generated` (voir `data-model.md`), texte simple sans lien.
-- Bordure haute de 10px, de la couleur du groupe d'appartenance du personnage si renseigné (voir "Groupe" dans `data-model.md`), blanche sinon ; logo de ce groupe, si renseigné, affiché dans le coin en haut à gauche de la modale.
-- Bouton de fermeture : icône Font Awesome (`fa-xmark`).
+- Standard Bootstrap modal. `--sg-white` background, `character-name` as a `--sg-dark-grey` heading, justified `--sg-grey` body, `--sg-blue` relation labels.
+- Sheet links (related character, external link, portrait source): `--sg-gold` by default, `--sg-grey` on hover, never underlined. The external link includes its icon (see "Iconography").
+- Portrait source credit (`portrait-source`, if set): italic secondary text at the end of the sheet, right-aligned (weight 300, `--sg-grey`, see "Typography"); if it is a URL, a link follows the rule above; if it is the special value `ai-generated` (see `data-model.md`), plain text with no link.
+- 10px top border, in the color of the character's group if set (see "Group" in `data-model.md`), white otherwise; that group's logo, if set, displayed in the top-left corner of the modal.
+- Close button: Font Awesome icon (`fa-xmark`).
 
-### Switcher Vue Mosaïque / Vue Graphe
+### Mosaic view / Graph view switcher
 
-- Groupe de deux boutons (`btn-group` Bootstrap), logé dans l'en-tête sous le `title` de l'univers (voir "En-tête" ci-dessus) : ses couleurs sont donc pensées pour le fond `--sg-blue` de l'en-tête, pas pour un fond blanc. Vue active : fond `--sg-gold`, texte `--sg-blue`. Vue inactive : texte `--sg-white`, fond transparent, bordure blanche atténuée ; au survol, texte et bordure `--sg-gold`.
+- Group of two buttons (Bootstrap `btn-group`), placed in the header under the universe's `title` (see "Header" above): its colors are therefore designed for the header's `--sg-blue` background, not for a white background. Active view: `--sg-gold` background, `--sg-blue` text. Inactive view: `--sg-white` text, transparent background, dimmed white border; on hover, `--sg-gold` text and border.
 
-### Barre de recherche / filtres
+### Search bar / filters
 
-- Champ de recherche Bootstrap standard, icône `fa-magnifying-glass`.
-- Boutons de tri (Vue Mosaïque uniquement, voir `search-filter.md`) : un bouton par critère, icône `fa-sort` précédant son libellé. Bouton du critère inactif : bordure `--sg-grey`, texte et icône `--sg-dark-grey` (même traitement que `sg-btn-outline-neutral`, voir "Boutons" ci-dessous). Bouton du critère actif : bordure `--sg-gold`, texte et icône `--sg-blue` (reprend le même traitement qu'au survol des boutons, mais à l'état stable ; `--sg-gold` n'est jamais utilisé en couleur de texte ou d'icône, son contraste sur blanc ne le permettant pas, voir "Palette de marque" ci-dessus), icône remplacée par `fa-sort-up` (croissant) ou `fa-sort-down` (décroissant) selon le sens actif.
-- Filtres de groupe : cases à cocher ou "chips" à fond neutre (`--sg-white`) et texte `--sg-grey`/`--sg-dark-grey`, chacun précédé du logo du groupe plutôt que d'une pastille de couleur, celui-ci étant déjà l'identifiant visuel du groupe (voir "Groupe" dans `data-model.md`).
-- Filtres de type de relation : même principe, chacun précédé d'une pastille de la couleur de son type dans la palette du graphe (voir ci-dessus). La couleur reste un repère visuel à côté du texte, jamais le fond du texte : aucune couleur de texte unique ne passe le contraste AA sur les huit teintes de cette palette à la fois (vérifié).
-- Disposition : boutons de tri à droite du champ de recherche, sur la même ligne, en Vue Mosaïque ; filtres de groupe sur leur propre ligne, en dessous, sur les deux vues. En Vue Graphe, les filtres de type de relation forment un bloc séparé sous le graphe plutôt que d'accompagner le champ de recherche (voir emplacement exact dans `graph-view.md`) ; comme les filtres de groupe, les boutons de tri et les filtres de groupe se replient sur plusieurs lignes (un ou plusieurs éléments passent à la ligne suivante) si l'espace manque, plutôt que le bloc dans son ensemble.
-- Pas de bouton de réinitialisation dédié : vider le champ de recherche, recocher les cases et recliquer sur le tri par défaut se fait directement sur ces contrôles.
+- Standard Bootstrap search field, `fa-magnifying-glass` icon.
+- Sort buttons (Mosaic view only, see `search-filter.md`): one button per criterion, `fa-sort` icon preceding its label. Inactive criterion button: `--sg-grey` border, `--sg-dark-grey` text and icon (same treatment as `sg-btn-outline-neutral`, see "Buttons" below). Active criterion button: `--sg-gold` border, `--sg-blue` text and icon (same treatment as button hover, but as a stable state; `--sg-gold` is never used as a text or icon color, as its contrast on white does not allow it, see "Brand palette" above), icon replaced by `fa-sort-up` (ascending) or `fa-sort-down` (descending) depending on the active direction.
+- Group filters: checkboxes or "chips" with a neutral background (`--sg-white`) and `--sg-grey`/`--sg-dark-grey` text, each preceded by the group's logo rather than a color dot, since the logo is already the group's visual identifier (see "Group" in `data-model.md`).
+- Relation type filters: same principle, each preceded by a dot in its type's color from the graph palette (see above). The color remains a visual cue next to the text, never the text background: no single text color passes AA contrast on all eight hues of this palette at once (checked).
+- Layout: sort buttons to the right of the search field, on the same row, in the Mosaic view; group filters on their own row, below, in both views. In the Graph view, the relation type filters form a separate block below the graph rather than accompanying the search field (see exact placement in `graph-view.md`); like the group filters, the sort buttons and group filters wrap onto several rows (one or more items move to the next row) when space runs out, rather than the block as a whole.
+- No dedicated reset button: clearing the search field, re-checking the boxes and clicking the default sort again is done directly on these controls.
 
-### Boutons
+### Buttons
 
-- Primaire : fond `--sg-blue`, texte `--sg-white` ; au survol, fond `--sg-gold` et texte `--sg-blue` (`--sg-white` sur `--sg-gold` ne passe pas le contraste minimal : 2,05:1, vérifié).
-- Secondaire : bordure `--sg-grey`, texte `--sg-dark-grey`, fond transparent.
+- Primary: `--sg-blue` background, `--sg-white` text; on hover, `--sg-gold` background and `--sg-blue` text (`--sg-white` on `--sg-gold` does not pass minimum contrast: 2.05:1, checked).
+- Secondary: `--sg-grey` border, `--sg-dark-grey` text, transparent background.
 
 ## Images
 
-Format `.jpg` (voir `data-model.md`) pour les images de contenu (couvertures, portraits). Dimensions et ratios recommandés à l'ajout de contenu ; `object-fit: cover` en CSS pour absorber les écarts plutôt que d'imposer un recadrage strict.
+`.jpg` format (see `data-model.md`) for content images (covers, portraits). Recommended dimensions and ratios when adding content; `object-fit: cover` in CSS to absorb discrepancies rather than imposing strict cropping.
 
-| Image | Ratio | Dimensions minimales |
+| Image | Ratio | Minimum dimensions |
 |---|---|---|
-| Couverture d'univers | 16:9 | 1200 × 675 px |
-| Portrait de personnage | 1:1 (carré) | 600 × 600 px |
-| Logo de groupe | 1:1 (carré) | 128 × 128 px |
+| Universe cover | 16:9 | 1200 × 675 px |
+| Character portrait | 1:1 (square) | 600 × 600 px |
+| Group logo | 1:1 (square) | 128 × 128 px |
 
-Le portrait est carré pour rester correct une fois recadré en cercle (nœud du graphe, voir `graph-view.md`), en tuile (voir `universe-home.md`) ou dans la modale (voir `character-sheet.md`), sans traitement différent selon le contexte d'affichage.
+The portrait is square so that it remains correct once cropped into a circle (graph node, see `graph-view.md`), in a card (see `universe-home.md`) or in the modal (see `character-sheet.md`), with no different treatment depending on the display context.
 
-Le logo d'un groupe est au format PNG plutôt que `.jpg`, pour conserver la transparence : il est superposé à d'autres éléments (tuile, nœud du graphe, modale) plutôt qu'affiché seul (voir "Images" dans `data-model.md`).
+A group's logo is in PNG format rather than `.jpg`, to preserve transparency: it is overlaid on other elements (card, graph node, modal) rather than displayed on its own (see "Images" in `data-model.md`).
 
-Le logo du site (`assets/img/logo.png`, PNG, 256 × 256 px) est un asset d'interface distinct du contenu des univers : affiché à 48px de haut dans l'en-tête, et réutilisé tel quel comme favicon (pas de génération de variantes ni de format `.ico`).
+The site logo (`assets/img/logo.png`, PNG, 256 × 256 px) is an interface asset separate from universe content: displayed 48px high in the header, and reused as is as the favicon (no generation of variants or `.ico` format).
 
-## Iconographie
+## Iconography
 
-- Font Awesome Free 7.3 (voir `technical-specifications.md`), sous-ensemble Brands pour les icônes Creative Commons.
-- Sélecteur de langue : emoji drapeaux 🇫🇷 / 🇬🇧, pas d'icône Font Awesome.
-- Fermeture de modale : `fa-xmark`.
-- Recherche : `fa-magnifying-glass`.
-- Lien externe (`external-link` d'un personnage) : `fa-arrow-up-right-from-square`, devant le libellé.
-- Creative Commons : `fa-creative-commons`, `fa-creative-commons-by`, `fa-creative-commons-nc-eu`, `fa-creative-commons-sa`.
+- Font Awesome Free 7.3 (see `technical-specifications.md`), Brands subset for the Creative Commons icons.
+- Language selector: flag emojis 🇫🇷 / 🇬🇧, no Font Awesome icon.
+- Modal close: `fa-xmark`.
+- Search: `fa-magnifying-glass`.
+- External link (a character's `external-link`): `fa-arrow-up-right-from-square`, before the label.
+- Creative Commons: `fa-creative-commons`, `fa-creative-commons-by`, `fa-creative-commons-nc-eu`, `fa-creative-commons-sa`.

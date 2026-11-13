@@ -1,38 +1,38 @@
-# Écran : fiche personnage
+# Screen: character sheet
 
-## Objectif
+## Goal
 
-Présenter le détail d'un personnage (biographie, informations complémentaires, relations) et permettre au visiteur de naviguer vers les personnages qui lui sont liés, sans quitter la Vue Mosaïque ou la Vue Graphe sur laquelle il se trouvait.
+Present the details of a character (biography, additional information, relations) and let the visitor navigate to the characters linked to them, without leaving the Mosaic view or Graph view they were on.
 
-## Contenu et structure
+## Content and structure
 
-Modale superposée à la Vue Mosaïque ou à la Vue Graphe (voir `universe-home.md` et `graph-view.md`), qui reste visible en arrière-plan.
+Modal overlaid on the Mosaic view or the Graph view (see `universe-home.md` and `graph-view.md`), which remains visible in the background.
 
-- Portrait et `character-name` du personnage.
-- Logo du groupe d'appartenance du personnage, si renseigné, affiché dans le coin en haut à gauche de la modale ; bordure haute de la modale de la couleur de ce groupe, blanche sinon (voir "Groupe" dans `data-model.md` et `style-guide.md`).
-- `description` (texte biographique).
-- `metadata`, si renseigné : affiché en liste clé/valeur ; chaque clé affiche son libellé localisé (voir "Clé de metadata" dans `data-model.md`), pas la clé brute.
-- `external-link`, si renseigné : lien sortant vers une source externe.
-- Liste des relations de ce personnage, regroupées par type : chaque groupe est identifié par le libellé accordé au genre de ce personnage (`label` si ce personnage est la source, `reverse-label` s'il est la cible, ou `label` pour un type non dirigé ; voir "Accord de genre" dans "Type de relation" de `data-model.md`). Un type dirigé pour lequel ce personnage est à la fois source de certaines relations et cible d'autres forme deux groupes distincts, l'un sous `label`, l'autre sous `reverse-label`. Les groupes sont ordonnés selon l'ordre de déclaration de leur type dans la taxonomie (types communs de `relation-types.yml`, puis extensions locales de l'univers) plutôt qu'alphabétiquement : le libellé variant avec le genre du personnage affiché, un tri alphabétique changerait d'ordre d'un personnage à l'autre. Dans chaque groupe, un personnage lié par ligne, triés par ordre alphabétique de leur `character-name`, avec la `description` de la relation si renseignée. Cette liste est complète : elle n'est pas affectée par la recherche ou les filtres actifs de la vue sous-jacente (voir `search-filter.md`).
-- `portrait-source`, si renseigné : mention de la source du portrait (ou, pour la valeur spéciale `ai-generated`, mention indiquant que le portrait est généré par IA), en fin de fiche alignée à droite (voir `style-guide.md` et "Personnage" dans `data-model.md`).
-- Bouton de fermeture.
+- Portrait and `character-name` of the character.
+- Logo of the character's group, if set, displayed in the top-left corner of the modal; top border of the modal in that group's color, white otherwise (see "Group" in `data-model.md` and `style-guide.md`).
+- `description` (biographical text).
+- `metadata`, if set: displayed as a key/value list; each key displays its localized label (see "Metadata key" in `data-model.md`), not the raw key.
+- `external-link`, if set: outbound link to an external source.
+- List of this character's relations, grouped by type: each group is identified by the label matching this character's gender (`label` if this character is the source, `reverse-label` if they are the target, or `label` for an undirected type; see "Gender agreement" in "Relation type" of `data-model.md`). A directed type for which this character is both the source of some relations and the target of others forms two separate groups, one under `label`, the other under `reverse-label`. Groups are ordered by the declaration order of their type in the taxonomy (common types from `relation-types.yml`, then the universe's local extensions) rather than alphabetically: since the label varies with the displayed character's gender, an alphabetical sort would change order from one character to another. Within each group, one linked character per line, sorted alphabetically by their `character-name`, with the relation's `description` if set. This list is complete: it is not affected by the search or active filters of the underlying view (see `search-filter.md`).
+- `portrait-source`, if set: credit for the portrait's source (or, for the special value `ai-generated`, a note stating that the portrait is AI-generated), at the end of the sheet, right-aligned (see `style-guide.md` and "Character" in `data-model.md`).
+- Close button.
 
-L'ouverture de la modale, quelle que soit son origine (clic sur une tuile, un nœud, ou accès direct), met à jour l'URL pour refléter le personnage affiché ; cette URL reste partageable telle quelle (voir le parcours "lien partagé" dans `functional-specifications.md`).
+Opening the modal, whatever its origin (click on a card, on a node, or direct access), updates the URL to reflect the displayed character; this URL remains shareable as is (see the "shared link" journey in `functional-specifications.md`).
 
 ## Interactions
 
-- Clic sur le bouton de fermeture, sur l'arrière-plan, ou touche Échap : ferme la modale, retour à la vue sous-jacente inchangée.
-- Clic sur un personnage lié, dans la liste des relations : remplace le contenu de la modale par la fiche de ce personnage, sans fermer/rouvrir la modale ni changer la vue sous-jacente.
-- Accès direct par lien partagé : ouvre la modale par-dessus la Vue Mosaïque de l'univers concerné (voir `universe-home.md`).
-- Changement de langue via le sélecteur : si le personnage existe dans l'autre langue, réaffiche sa fiche dans cette langue ; sinon, affiche le message d'indisponibilité (voir "Multilingue" dans `functional-specifications.md`).
+- Click on the close button, on the backdrop, or Escape key: closes the modal, returns to the unchanged underlying view.
+- Click on a linked character, in the relations list: replaces the modal's content with that character's sheet, without closing/reopening the modal or changing the underlying view.
+- Direct access via shared link: opens the modal over the Mosaic view of the universe concerned (see `universe-home.md`).
+- Language change via the selector: if the character exists in the other language, redisplays their sheet in that language; otherwise, displays the unavailability message (see "Multilingual" in `functional-specifications.md`).
 
-## États (chargement, erreur, vide, indisponible)
+## States (loading, error, empty, unavailable)
 
-- Indisponible : le personnage n'est pas traduit dans la langue courante, que ce soit par accès direct ou par changement de langue → message d'indisponibilité, aucun contenu du personnage affiché.
-- Vide : le personnage n'a aucune relation dans l'univers → la liste des relations est absente, le reste de la fiche s'affiche normalement.
-- Erreur : portrait manquant ou en échec de chargement → image de remplacement générique.
-- Chargement : possible le temps de charger le contenu du personnage dans la modale ; son traitement précis relève de `technical-specifications.md`.
+- Unavailable: the character is not translated into the current language, whether through direct access or a language change → unavailability message, no character content displayed.
+- Empty: the character has no relation in the universe → the relations list is absent, the rest of the sheet displays normally.
+- Error: portrait missing or failing to load → generic placeholder image.
+- Loading: possible while the character's content loads into the modal; its exact handling belongs to `technical-specifications.md`.
 
 ## Responsive
 
-Sur petit écran, la modale occupe l'écran sous l'en-tête, qui reste visible et accessible (notamment pour le sélecteur de langue, voir `style-guide.md`), plutôt qu'une fenêtre superposée partielle.
+On small screens, the modal fills the screen below the header, which remains visible and accessible (notably for the language selector, see `style-guide.md`), rather than a partial overlay window.

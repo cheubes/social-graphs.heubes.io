@@ -422,7 +422,7 @@ universe_slugs.each do |uslug|
     end
   end
 
-  # groups: no common taxonomy (see "Groupe" in data-model.md), so slug uniqueness
+  # groups: no common taxonomy (see "Group" in data-model.md), so slug uniqueness
   # is checked within this universe's own groups.yml only, not globally.
   groups_path = File.join(DATA_DIR, uslug, 'groups.yml')
   known_groups = {}

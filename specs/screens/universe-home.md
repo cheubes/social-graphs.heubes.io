@@ -1,35 +1,35 @@
-# Écran : accueil d'un univers
+# Screen: universe home
 
-## Objectif
+## Goal
 
-Présenter l'univers au visiteur (de quoi s'agit-il, quel est son contexte), et lui permettre de basculer entre une vue mosaïque de ses personnages et une vue graphe interactif de ses relations (voir `graph-view.md`) : deux vues au contenu principal différent, mais partageant la même structure de page.
+Present the universe to the visitor (what it is about, what its context is), and let them switch between a mosaic view of its characters and an interactive graph view of its relations (see `graph-view.md`): two views with different main content, but sharing the same page structure.
 
-## Contenu et structure
+## Content and structure
 
-- En-tête : couverture et `title` de l'univers courant (voir `data-model.md`), switcher "Vue Mosaïque" / "Vue Graphe" sous le titre, logo du site en lien de retour vers l'accueil, sélecteur de langue (voir `style-guide.md`). Ni `source-type` ni `description` de l'univers n'y sont affichés.
-- Switcher "Vue Mosaïque" / "Vue Graphe" : bascule le contenu principal ci-dessous entre les deux vues, sans changer le reste de l'en-tête (couverture, titre, logo, sélecteur de langue). Présent et identique dans les deux vues, seul son état actif diffère ; chaque vue reste une page à part entière, l'URL diffère entre les deux (voir `technical-specifications.md`), mais la bascule se comporte comme un changement d'onglet plutôt que comme une navigation vers un contenu différent.
-- Barre de recherche et filtres de groupe, présents sur les deux vues. Les filtres de type de relation, propres à la Vue Graphe, ne sont pas affichés ici : voir leur emplacement, sous le graphe, dans `graph-view.md` (contenu et comportement détaillés dans `search-filter.md`).
-- Contenu principal, en Vue Mosaïque : mosaïque des personnages de l'univers, une tuile par personnage disponible dans la langue courante (même règle de masquage que pour les univers non traduits, voir "Multilingue" dans `functional-specifications.md`). Chaque tuile affiche le portrait, le `character-name` et la `description` du personnage, ainsi que, si le personnage appartient à un groupe (voir "Groupe" dans `data-model.md`), le logo de ce groupe en bas à droite du portrait et une bordure épaisse entre le portrait et le nom, de la couleur de ce groupe (blanche pour un personnage sans groupe ; voir "Tuiles" dans `style-guide.md`). Toutes les tuiles ont exactement la même hauteur (voir `style-guide.md`).
-  - La `description` est tronquée (avec une marque de troncature, ex : "...") au-delà d'une certaine longueur ; la valeur précise relève du design (voir `style-guide.md`).
-  - Le portrait se charge en lazy loading, même principe que pour l'image de couverture des univers sur `home.md`.
-  - Tri des personnages, modifiable par l'utilisateur via les boutons de tri placés à côté de la barre de recherche (voir `search-filter.md`). Par défaut, tri par nombre de relations décroissant (le nombre de relations d'un personnage, entrantes et sortantes confondues, est calculé à partir de `relations.yaml`, ce n'est pas un attribut stocké), à nombre égal par `character-name` croissant, pour un ordre stable. Ce tri reste basé sur l'ensemble des relations du personnage, indépendamment de la recherche ou des filtres actifs.
-- Le contenu principal de la Vue Graphe est documenté dans `graph-view.md`.
-- Pied de page : badge Creative Commons et mention de réalisation, communs à toutes les pages (voir `style-guide.md`).
+- Header: cover and `title` of the current universe (see `data-model.md`), "Mosaic view" / "Graph view" switcher below the title, site logo as a link back to the home page, language selector (see `style-guide.md`). Neither the universe's `source-type` nor its `description` is displayed there.
+- "Mosaic view" / "Graph view" switcher: switches the main content below between the two views, without changing the rest of the header (cover, title, logo, language selector). Present and identical in both views, only its active state differs; each view remains a page in its own right, the URL differs between the two (see `technical-specifications.md`), but switching behaves like changing tabs rather than navigating to different content.
+- Search bar and group filters, present on both views. The relation type filters, specific to the Graph view, are not displayed here: see their location, below the graph, in `graph-view.md` (detailed content and behavior in `search-filter.md`).
+- Main content, in the Mosaic view: mosaic of the universe's characters, one card per character available in the current language (same hiding rule as for untranslated universes, see "Multilingual" in `functional-specifications.md`). Each card displays the character's portrait, `character-name` and `description`, along with, if the character belongs to a group (see "Group" in `data-model.md`), that group's logo at the bottom right of the portrait and a thick border between the portrait and the name, in that group's color (white for a character without a group; see "Cards" in `style-guide.md`). All cards have exactly the same height (see `style-guide.md`).
+  - The `description` is truncated (with a truncation mark, e.g. "...") beyond a certain length; the exact value belongs to the design (see `style-guide.md`).
+  - The portrait is lazy loaded, same principle as for the universes' cover image on `home.md`.
+  - Character sort, changeable by the user via the sort buttons placed next to the search bar (see `search-filter.md`). Default: sort by number of relations descending (a character's number of relations, incoming and outgoing combined, is computed from `relations.yaml`, it is not a stored attribute), with ties broken by `character-name` ascending, for a stable order. This sort remains based on all of the character's relations, regardless of the active search or filters.
+- The Graph view's main content is documented in `graph-view.md`.
+- Footer: Creative Commons badge and authorship credit, common to all pages (see `style-guide.md`).
 
 ## Interactions
 
-- Clic sur le switcher "Vue Graphe" : bascule vers la vue graphe interactif de cet univers (voir `graph-view.md`), seul l'état actif du switcher change dans l'en-tête, le reste restant inchangé.
-- Clic sur une tuile de personnage : ouvre la fiche de ce personnage en modale, superposée à la vue courante, sans navigation vers une nouvelle page (voir `character-sheet.md`).
-- Changement de langue via le sélecteur : réaffiche la page dans la langue choisie si elle existe (voir "Multilingue" dans `functional-specifications.md`), sinon affiche le message d'indisponibilité.
-- Clic sur le lien de retour : navigue vers l'accueil du site.
+- Click on the "Graph view" switcher: switches to this universe's interactive graph view (see `graph-view.md`), only the switcher's active state changes in the header, the rest remaining unchanged.
+- Click on a character card: opens that character's sheet in a modal, overlaid on the current view, without navigating to a new page (see `character-sheet.md`).
+- Language change via the selector: redisplays the page in the chosen language if it exists (see "Multilingual" in `functional-specifications.md`), otherwise displays the unavailability message.
+- Click on the back link: navigates to the site home page.
 
-## États (chargement, erreur, vide, indisponible)
+## States (loading, error, empty, unavailable)
 
-- Indisponible : l'univers n'est pas traduit dans la langue courante, que ce soit par accès direct ou par changement de langue → message d'indisponibilité, aucun contenu de l'univers affiché.
-- Vide : l'univers est traduit dans la langue courante mais n'a aucun personnage disponible dans cette langue (Vue Mosaïque) → message l'indiquant, avec une invitation à changer de langue s'il en existe dans l'autre.
-- Erreur : image de couverture ou portrait manquant ou en échec de chargement → image de remplacement générique.
-- Chargement : le contenu de la page lui-même n'a pas d'état de chargement propre si elle est générée statiquement (à revoir si `technical-specifications.md` retient un rendu dynamique) ; l'image de couverture et les portraits, eux, se chargent individuellement en lazy loading, indépendamment du mode de rendu de la page.
+- Unavailable: the universe is not translated into the current language, whether through direct access or a language change → unavailability message, no universe content displayed.
+- Empty: the universe is translated into the current language but has no character available in that language (Mosaic view) → message saying so, with an invitation to switch language if some exist in the other one.
+- Error: cover image or portrait missing or failing to load → generic placeholder image.
+- Loading: the page's content itself has no loading state of its own if it is statically generated (to be revisited if `technical-specifications.md` opts for dynamic rendering); the cover image and the portraits, however, are lazy loaded individually, regardless of the page's rendering mode.
 
 ## Responsive
 
-Le comportement responsive de l'en-tête (couverture, titre, switcher, logo, sélecteur de langue) est défini dans `style-guide.md`. Le contenu principal (mosaïque de personnages) s'adapte à la largeur de l'écran (une colonne sur mobile, plusieurs colonnes au-delà), comme celle des univers sur l'accueil du site.
+The responsive behavior of the header (cover, title, switcher, logo, language selector) is defined in `style-guide.md`. The main content (character mosaic) adapts to the screen width (one column on mobile, several columns beyond), like the universe mosaic on the site home page.

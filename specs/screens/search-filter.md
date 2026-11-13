@@ -1,31 +1,31 @@
-# Écran : recherche / filtre
+# Screen: search / filter
 
-## Objectif
+## Goal
 
-Permettre au visiteur de retrouver rapidement un personnage par son nom, dans la Vue Mosaïque comme dans la Vue Graphe (voir `universe-home.md` et `graph-view.md`), de filtrer les personnages affichés par groupe d'appartenance dans les deux vues, de filtrer les relations affichées par type dans la Vue Graphe, et de trier les personnages affichés en Vue Mosaïque.
+Let the visitor quickly find a character by name, in the Mosaic view as well as in the Graph view (see `universe-home.md` and `graph-view.md`), filter the displayed characters by group in both views, filter the displayed relations by type in the Graph view, and sort the characters displayed in the Mosaic view.
 
-## Contenu et structure
+## Content and structure
 
-- Barre de recherche texte ("Filtrer par nom..."), cherchant parmi les `character-name` des personnages de l'univers, dans la langue courante. Présente sur les deux vues.
-- Boutons de tri, à droite de la barre de recherche, sur la même ligne (voir `style-guide.md`) : un bouton par critère (`character-name` et nombre de relations), chacun cliquable indépendamment pour l'activer ou, s'il est déjà actif, en inverser le sens. Présents uniquement en Vue Mosaïque, la Vue Graphe n'affichant pas de liste ordonnée. Par défaut : nombre de relations décroissant, ce qui reprend le tri historique de la Vue Mosaïque (voir `universe-home.md`). Activer un critère jusque-là inactif applique son sens par défaut (`character-name` : croissant ; nombre de relations : décroissant) plutôt que de conserver le sens précédemment affiché sur l'autre critère. À nombre de relations égal, le tri secondaire reste toujours par `character-name` croissant, quel que soit le sens choisi, pour un ordre stable.
-- Liste de filtres par groupe, sur sa propre ligne, en dessous de la barre de recherche (voir `style-guide.md`), un par groupe présent dans l'univers (voir "Groupe" dans `data-model.md`), chacun activable/désactivable indépendamment. Tous les groupes sont actifs par défaut. Présente sur les deux vues. Un personnage sans groupe n'est concerné par aucun de ces filtres : il reste affiché quel que soit leur état, de la même façon qu'un personnage sans relation n'est concerné par aucun filtre de type de relation.
-- Liste de filtres par type de relation, affichée en bloc séparé sous le graphe plutôt qu'aux côtés de la barre de recherche (voir emplacement exact dans `graph-view.md`), un par type présent dans l'univers (taxonomie commune et extensions locales, voir "Type de relation" dans `data-model.md`), chacun activable/désactivable indépendamment. Tous les types sont actifs par défaut. Présente uniquement en Vue Graphe : la Vue Mosaïque n'affiche aucune relation sur ses tuiles, un filtre par type n'y aurait pas d'effet visuellement justifié (voir `universe-home.md`).
-- État de recherche partagé entre la Vue Mosaïque et la Vue Graphe : il n'est pas réinitialisé en basculant de l'une à l'autre via le switcher. L'état des filtres de groupe, partagé de la même façon entre les deux vues, celui des filtres de type, propre à la Vue Graphe, et celui du tri, propre à la Vue Mosaïque, persistent de la même façon. Pas de contrôle de réinitialisation dédié (voir `style-guide.md`).
+- Text search bar ("Filter by name..."), searching among the `character-name` of the universe's characters, in the current language. Present on both views.
+- Sort buttons, to the right of the search bar, on the same line (see `style-guide.md`): one button per criterion (`character-name` and number of relations), each independently clickable to activate it or, if already active, reverse its direction. Present only in the Mosaic view, since the Graph view does not display an ordered list. Default: number of relations descending, which matches the Mosaic view's historical sort (see `universe-home.md`). Activating a previously inactive criterion applies its default direction (`character-name`: ascending; number of relations: descending) rather than keeping the direction previously displayed on the other criterion. For an equal number of relations, the secondary sort always remains by `character-name` ascending, whatever the chosen direction, for a stable order.
+- List of group filters, on its own line, below the search bar (see `style-guide.md`), one per group present in the universe (see "Group" in `data-model.md`), each independently toggleable. All groups are active by default. Present on both views. A character without a group is not affected by any of these filters: they stay displayed whatever their state, in the same way that a character without relations is not affected by any relation type filter.
+- List of relation type filters, displayed as a separate block below the graph rather than next to the search bar (see exact location in `graph-view.md`), one per type present in the universe (common taxonomy and local extensions, see "Relation type" in `data-model.md`), each independently toggleable. All types are active by default. Present only in the Graph view: the Mosaic view displays no relation on its cards, so a type filter would have no visually justified effect there (see `universe-home.md`).
+- Search state shared between the Mosaic view and the Graph view: it is not reset when switching from one to the other via the switcher. The state of the group filters, shared in the same way between both views, that of the type filters, specific to the Graph view, and that of the sort, specific to the Mosaic view, persist in the same way. No dedicated reset control (see `style-guide.md`).
 
 ## Interactions
 
-- Clic sur un bouton de tri, en Vue Mosaïque : active son critère (à son sens par défaut) s'il ne l'était pas déjà, ou inverse son sens s'il l'était déjà ; réordonne les tuiles affichées en conséquence.
-- Saisie dans la barre de recherche, en Vue Mosaïque : masque les tuiles des personnages dont le `character-name` ne correspond pas.
-- Saisie dans la barre de recherche, en Vue Graphe : met en évidence les nœuds correspondants, atténue les autres sans les retirer du graphe.
-- Désactivation d'un filtre de groupe, en Vue Mosaïque : masque les tuiles des personnages de ce groupe.
-- Désactivation d'un filtre de groupe, en Vue Graphe : masque les nœuds des personnages de ce groupe, ainsi que les arêtes qui leur sont associées (à la différence d'un filtre de type de relation, qui ne masque que des arêtes en laissant les nœuds affichés).
-- Désactivation d'un type de relation, en Vue Graphe : masque les arêtes de ce type ; les nœuds restent affichés même sans arête visible.
+- Click on a sort button, in the Mosaic view: activates its criterion (in its default direction) if it was not already active, or reverses its direction if it was; reorders the displayed cards accordingly.
+- Typing in the search bar, in the Mosaic view: hides the cards of characters whose `character-name` does not match.
+- Typing in the search bar, in the Graph view: highlights the matching nodes, dims the others without removing them from the graph.
+- Disabling a group filter, in the Mosaic view: hides the cards of that group's characters.
+- Disabling a group filter, in the Graph view: hides the nodes of that group's characters, along with their associated edges (unlike a relation type filter, which only hides edges and leaves the nodes displayed).
+- Disabling a relation type, in the Graph view: hides the edges of that type; nodes stay displayed even without a visible edge.
 
-## États (chargement, erreur, vide)
+## States (loading, error, empty)
 
-- Vide : aucun personnage ne correspond à la recherche et aux filtres actifs (groupe, et type de relation en Vue Graphe) → message l'indiquant.
-- Chargement et erreur : sans objet, la recherche opère sur les données déjà chargées de la vue courante.
+- Empty: no character matches the search and active filters (group, and relation type in the Graph view) → message saying so.
+- Loading and error: not applicable, the search operates on the data already loaded by the current view.
 
 ## Responsive
 
-La barre de recherche, les boutons de tri et les filtres restent directement affichés sur petit écran, sans repli ni contrôle dédié : la disposition reste celle décrite ci-dessus, qui s'adapte déjà à la largeur disponible.
+The search bar, sort buttons and filters stay directly displayed on small screens, with no collapsing or dedicated control: the layout remains the one described above, which already adapts to the available width.

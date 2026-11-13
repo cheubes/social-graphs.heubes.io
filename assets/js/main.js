@@ -30,7 +30,7 @@
   }
 
   // Browser-language detection only decides which home page a visitor lands
-  // on (see "Multilingue" in functional-specifications.md). A direct link to
+  // on (see "Multilingual" in functional-specifications.md). A direct link to
   // a specific page always shows that page's own language, never a redirect.
   if (isHomePath && preferredLang !== currentLang) {
     const targetPath = pathForLang(currentPath, preferredLang);
