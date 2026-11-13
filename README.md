@@ -15,4 +15,6 @@ Static site generated with Jekyll and hosted on GitHub Pages. Bootstrap for layo
 
 ## License
 
-Universe content (characters, relationships, descriptions) is licensed under [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). No license has been chosen yet for the code itself.
+The code and the content of this site (universes, characters, relationships, descriptions, AI-generated images) are dedicated to the public domain under [CC0 1.0 Universal](LICENSE).
+
+Third-party images (photographs and reproductions of artworks, mostly from Wikimedia Commons) are not covered by this dedication: each keeps its own license, credited in its embedded metadata and in `_data/<universe>/image-credits.yml`.

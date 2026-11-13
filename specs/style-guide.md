@@ -92,7 +92,7 @@ No custom grid or spacing scale: Bootstrap 5.3's grid and spacing utility classe
 ### Footer
 
 - Fixed (`position: fixed`, bottom of the screen): a height must therefore be reserved at the bottom of every page so that nothing is covered, including the Graph view (see `graph-view.md`). Height carried by a variable, e.g. `--sg-footer-height`.
-- **Left**: Creative Commons badge. Four Font Awesome Brands icons (`fa-creative-commons`, `fa-creative-commons-by`, `fa-creative-commons-nc-eu`, `fa-creative-commons-sa`) followed by the text "CC BY-NC-SA 4.0", linking to `https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr` or `.../deed.en` depending on the current language.
+- **Left**: Creative Commons badge. Two Font Awesome Brands icons (`fa-creative-commons`, `fa-creative-commons-zero`) followed by the text "CC0 1.0", linking to `https://creativecommons.org/publicdomain/zero/1.0/deed.fr` or `.../deed.en` depending on the current language.
 - **Right**: credit "Réalisée par Christophe Heubès" (FR) / "Created by Christophe Heubès" (EN), the name linking to `https://christophe.heubes.org`.
 - `--sg-dark-grey` background, `--sg-white` text, `--sg-light-grey` top border, links in `--sg-gold` on hover.
 
@@ -173,4 +173,4 @@ The site logo (`assets/img/logo.png`, PNG, 256 × 256 px) is an interface asset 
 - Modal close: `fa-xmark`.
 - Search: `fa-magnifying-glass`.
 - External link (a character's `external-link`): `fa-arrow-up-right-from-square`, before the label.
-- Creative Commons: `fa-creative-commons`, `fa-creative-commons-by`, `fa-creative-commons-nc-eu`, `fa-creative-commons-sa`.
+- Creative Commons: `fa-creative-commons`, `fa-creative-commons-zero`.

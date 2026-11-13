@@ -142,7 +142,7 @@ A single image file per entity, shared by all its languages (no per-locale varia
 
 Covers and portraits (not group logos) carry EXIF/XMP credit metadata embedded in the file itself: `Title`, `Creator`/`By-line`, `CopyrightNotice`, `Rights`, `Credit`, `Source`, `WebStatement`, `UsageTerms`, `Marked`, `Description`/`Caption-Abstract`. Two value policies depending on the origin of the image:
 
-- AI-generated (`cover-source`/`portrait-source` set to `ai-generated`): Creator/By-line/Credit = "Christophe Heubès", Rights = "Christophe Heubès - CC BY-NC-SA 4.0", UsageTerms = "CC BY-NC-SA 4.0", Marked = "True", Source = "AI generated".
+- AI-generated (`cover-source`/`portrait-source` set to `ai-generated`): Creator/By-line/Credit = "Christophe Heubès", CopyrightNotice = "CC0 Christophe Heubès", Rights = "Christophe Heubès - CC0 1.0", UsageTerms = "CC0 1.0", WebStatement = `https://creativecommons.org/publicdomain/zero/1.0/deed.fr`, Marked = "False" (public domain dedication), Source = "AI generated".
 - Real external source: Creator = the identified author (or "Unknown"/"Unknown artist" if it cannot be established with certainty), Rights/UsageTerms reflect the license actually found on the consulted page (plain public domain, or a CC license with Credit naming the photographer when the reproduction carries its own license distinct from the artwork), Source/WebStatement = the URL of the specific page consulted (Wikimedia Commons or equivalent), not necessarily that of `portrait-source`/`cover-source`.
 
 This metadata is duplicated in `_data/<slug-universe>/image-credits.yml` (see "File organization") for reuse in JSON-LD; the image file's EXIF/XMP remains the source of truth, `image-credits.yml` is an export of it.
